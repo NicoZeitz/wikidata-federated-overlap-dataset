@@ -1,0 +1,32 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT
+  ?province
+  (wd:Q148               AS ?country)
+  (SAMPLE(?name_v)        AS ?name)
+  (SAMPLE(?coords_v)      AS ?coords)
+  (SAMPLE(?area_v)        AS ?area_km2)
+  (SAMPLE(?population_v)  AS ?population)
+  (SAMPLE(?capital_v)     AS ?capital)
+  (SAMPLE(?inception_v)   AS ?inception)
+  (SAMPLE(?iso_v)         AS ?iso_code)
+  (SAMPLE(?website_v)     AS ?website)
+WHERE {
+  ?province wdt:P31/wdt:P279* wd:Q1615742 .  # instance of province of China
+  ?province wdt:P17 wd:Q148 .                # country = China
+
+  ?province rdfs:label ?name_v .
+  FILTER(LANG(?name_v) = "zh")
+
+  OPTIONAL { ?province wdt:P625  ?coords_v }
+  OPTIONAL { ?province wdt:P2046 ?area_v }
+  OPTIONAL { ?province wdt:P1082 ?population_v }
+  OPTIONAL { ?province wdt:P36   ?capital_v }
+  OPTIONAL { ?province wdt:P571  ?inception_v }
+  OPTIONAL { ?province wdt:P300  ?iso_v }
+  OPTIONAL { ?province wdt:P856  ?website_v }
+}
+GROUP BY ?province
+ORDER BY ?name

@@ -1,0 +1,40 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT
+?game
+?country
+?team1 ?team1Label
+?team2 ?team2Label
+?winnerLabel
+?venueLabel
+?date
+?attendance
+?seasonLabel
+WHERE {
+?game wdt:P31 wd:Q18431960 .
+?game wdt:P361 ?season .
+?season wdt:P3450 wd:Q155223 .
+
+?game rdfs:label ?label . FILTER(LANG(?label) = "en")
+?season rdfs:label ?seasonLabel . FILTER(LANG(?seasonLabel) = "en")
+
+?game wdt:P1923 ?team1 .
+?game wdt:P1923 ?team2 .
+FILTER(?team1 < ?team2)
+
+?team1 rdfs:label ?team1Label . FILTER(LANG(?team1Label) = "en")
+?team2 rdfs:label ?team2Label . FILTER(LANG(?team2Label) = "en")
+
+OPTIONAL { ?game wdt:P585  ?date }
+OPTIONAL { ?game wdt:P1346 ?winner .
+           ?winner rdfs:label ?winnerLabel .
+           FILTER(LANG(?winnerLabel) = "en") }
+OPTIONAL { ?game wdt:P276  ?venue .
+           ?venue rdfs:label ?venueLabel .
+           FILTER(LANG(?venueLabel) = "en")
+           OPTIONAL { ?venue wdt:P17 ?country } }
+OPTIONAL { ?game wdt:P1110 ?attendance }
+}
+ORDER BY DESC(?date)

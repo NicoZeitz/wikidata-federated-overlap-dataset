@@ -1,0 +1,41 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT
+?match
+(SAMPLE(?matchLabel_v)  AS ?matchLabel)
+(SAMPLE(?season_v)      AS ?season)
+(SAMPLE(?seasonLabel_v) AS ?seasonLabel)
+(SAMPLE(?date_v)        AS ?date)
+(SAMPLE(?venue_v)       AS ?venue)
+(MIN(?team_v)           AS ?team1)
+(MAX(?team_v)           AS ?team2)
+(SAMPLE(?winner_v)      AS ?winner)
+(SAMPLE(?attendance_v)  AS ?attendance)
+(SAMPLE(?referee_v)     AS ?referee)
+WHERE {
+?match wdt:P31 wd:Q109623729 .
+?match wdt:P361 ?season_v .
+?season_v wdt:P31 wd:Q123724352 .
+
+?match rdfs:label ?matchLabel_v .
+FILTER(LANG(?matchLabel_v) = "en")
+
+?season_v rdfs:label ?seasonLabel_v .
+FILTER(LANG(?seasonLabel_v) = "en")
+
+?match wdt:P1923 ?team_v .
+
+OPTIONAL { ?match wdt:P585  ?date_v }
+OPTIONAL { ?match wdt:P276  ?venue_v }
+OPTIONAL { ?match wdt:P1346 ?winner_v }
+OPTIONAL { ?match wdt:P1110 ?attendance_v }
+OPTIONAL {
+  ?match wdt:P1652 ?referee_v .
+  ?referee_v wdt:P31 wd:Q5 .
+  FILTER EXISTS { { ?referee_v wdt:P27 ?_rc . } UNION { ?referee_v wdt:P19 ?_rbp . } }
+}
+}
+GROUP BY ?match
+ORDER BY DESC(?date)

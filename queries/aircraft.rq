@@ -1,0 +1,61 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT
+  ?aircraft
+  (SAMPLE(?name_v)         AS ?name)
+  (SAMPLE(?operator_v)     AS ?operator)
+  (SAMPLE(?country_v)      AS ?country)
+  (GROUP_CONCAT(DISTINCT ?model_v; SEPARATOR=", ") AS ?model)
+  (SAMPLE(?manufacturer_v) AS ?manufacturer)
+  (SAMPLE(?first_flight_v) AS ?first_flight)
+  (SAMPLE(?max_pax_v)      AS ?max_passengers)
+  (SAMPLE(?speed_v)        AS ?cruise_speed_kmh)
+  (SAMPLE(?wingspan_v)     AS ?wingspan_m)
+  (SAMPLE(?length_v)       AS ?length_m)
+  (SAMPLE(?mtow_v)         AS ?max_takeoff_weight_kg)
+WHERE {
+  ?aircraft wdt:P31/wdt:P279* wd:Q11436 .
+  ?aircraft wdt:P137 ?operator_v .
+  ?operator_v wdt:P31/wdt:P279* wd:Q46970 .
+  FILTER NOT EXISTS { ?operator_v wdt:P576 ?opdiss . }
+  ?operator_v rdfs:label ?oplabel .
+  FILTER(lang(?oplabel) = "en")
+
+  ?aircraft rdfs:label ?name_v .
+  FILTER(lang(?name_v) = "en")
+
+  {
+    SELECT ?aircraft (SAMPLE(?c) AS ?country_v) WHERE {
+      { ?aircraft wdt:P17 ?c . }
+      UNION
+      { ?aircraft wdt:P137 ?op . ?op wdt:P17 ?c . }
+      ?c wdt:P31/wdt:P279* wd:Q3624078 .
+      ?c wdt:P297 ?ciso2 .
+      FILTER NOT EXISTS { ?c wdt:P576 ?cdiss . }
+      FILTER NOT EXISTS { ?c wdt:P31 wd:Q3024240 . }
+    } GROUP BY ?aircraft
+  }
+
+  OPTIONAL {
+    ?aircraft wdt:P31 ?modelEntity .
+    ?modelEntity wdt:P279+ wd:Q11436 .
+    ?modelEntity rdfs:label ?model_v .
+    FILTER(lang(?model_v) = "en")
+  }
+
+  OPTIONAL {
+    ?aircraft wdt:P176 ?mfrEntity .
+    ?mfrEntity rdfs:label ?manufacturer_v .
+    FILTER(lang(?manufacturer_v) = "en")
+  }
+
+  OPTIONAL { ?aircraft wdt:P606  ?first_flight_v . }
+  OPTIONAL { ?aircraft wdt:P1083 ?max_pax_v . }
+  OPTIONAL { ?aircraft wdt:P2217 ?speed_v . }
+  OPTIONAL { ?aircraft wdt:P2050 ?wingspan_v . }
+  OPTIONAL { ?aircraft wdt:P2043 ?length_v . }
+  OPTIONAL { ?aircraft wdt:P2067 ?mtow_v . }
+}
+GROUP BY ?aircraft

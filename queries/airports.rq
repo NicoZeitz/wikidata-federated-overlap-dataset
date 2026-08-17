@@ -1,0 +1,84 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+  ?airport
+  (SAMPLE(?name_v)             AS ?name)
+  (SAMPLE(?iata_v)             AS ?iata_code)
+  (SAMPLE(?icao_v)             AS ?icao_code)
+  (SAMPLE(?elevation_v)        AS ?elevation_m)
+  (SAMPLE(?coords_v)           AS ?coords)
+  (SAMPLE(?inception_v)        AS ?inception)
+  (SAMPLE(?airport_area_v)     AS ?airport_area_km2)
+  (SAMPLE(?timezone_offset_v)  AS ?timezone_offset)
+  (SAMPLE(?passengers_v)       AS ?passengers)
+  (SAMPLE(?city_v)             AS ?city)
+  (SAMPLE(?country_v)          AS ?country)
+WHERE {
+  ?airport wdt:P31/wdt:P279* wd:Q1248784 .
+  ?airport wdt:P238 ?iata_v .
+  FILTER NOT EXISTS { ?airport wdt:P576 ?dissolved . }
+
+  ?airport rdfs:label ?name_v .
+  FILTER(lang(?name_v) = "en")
+
+  {
+    SELECT ?airport (SAMPLE(?c) AS ?country_v) WHERE {
+      { ?airport wdt:P931 ?loc . ?loc wdt:P17 ?c . }
+      UNION
+      { ?airport wdt:P17 ?c . }
+      ?c wdt:P31/wdt:P279* wd:Q3624078 .
+      ?c wdt:P297 ?ciso2 .
+      FILTER NOT EXISTS { ?c wdt:P576 ?cdiss . }
+      FILTER NOT EXISTS { ?c wdt:P31 wd:Q3024240 . }
+    } GROUP BY ?airport
+  }
+
+  OPTIONAL {
+    SELECT ?airport (SAMPLE(?cc) AS ?city_v) WHERE {
+      ?airport wdt:P931 ?cc .
+      ?cc wdt:P31/wdt:P279* wd:Q486972 .
+      ?cc rdfs:label ?cclabel .
+      FILTER(lang(?cclabel) = "en")
+    } GROUP BY ?airport
+  }
+
+  OPTIONAL { ?airport wdt:P239  ?icao_v . }
+  OPTIONAL { ?airport wdt:P2044 ?elevation_v . }
+  OPTIONAL { ?airport wdt:P625  ?coords_v . }
+  OPTIONAL { ?airport wdt:P2046 ?airport_area_v . }
+
+  OPTIONAL {
+    ?airport wdt:P421 ?tzEntity .
+    ?tzEntity wdt:P2907 ?timezone_offset_v .
+  }
+
+  OPTIONAL {
+    ?airport wdt:P571 ?inception_v .
+    FILTER(
+      DATATYPE(?inception_v) = xsd:dateTime ||
+      DATATYPE(?inception_v) = xsd:gYear    ||
+      DATATYPE(?inception_v) = xsd:date
+    )
+  }
+
+  OPTIONAL {
+    {
+      SELECT ?airport (MAX(?pasDate) AS ?latestPasDate) WHERE {
+        ?airport p:P3872 ?pasStmt .
+        ?pasStmt pq:P585 ?pasDate .
+      } GROUP BY ?airport
+    }
+    ?airport p:P3872 ?pasStmt .
+    ?pasStmt ps:P3872 ?passengers_v ;
+             pq:P585 ?latestPasDate .
+    FILTER(isNumeric(?passengers_v))
+  }
+
+}
+GROUP BY ?airport

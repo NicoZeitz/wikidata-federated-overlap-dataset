@@ -1,0 +1,2001 @@
+# Merged column configuration: descriptions, synonyms, and table roles.
+# Format:
+#   entity:
+#     __meta__:
+#       split_col: <column used for geographic splitting, or null>
+#       description: "Table description."
+#       synonyms:
+#         synonym_table_name: "Description when table is renamed to this synonym."
+#       required: [columns always included]
+#     column:
+#       description: "Description when column keeps its source name."
+#       synonyms:
+#         synonym_name: "Description when column is renamed to this synonym."
+
+accidents:
+  __meta__:
+    primary_key: accident
+    split_col: country
+    description: Aviation accidents involving commercial airlines.
+    synonyms:
+      crashes: Table of aviation crashes involving commercial airlines.
+      incidents: Table of aviation incidents involving commercial airlines.
+      aviation_accidents: Table of aviation accidents.
+    foreign_keys:
+      country: countries
+      airline: airlines
+    required:
+    - name
+    - date
+    - fatalities
+    - survivors
+  accident:
+    description: Identifier for the aviation accident.
+    synonyms:
+      accident_id: Unique identifier for the accident.
+  name:
+    description: Name or description of the accident.
+    synonyms:
+      accident_name: Name of the accident.
+      label: Label of the accident.
+  airline:
+    description: Airline involved in the accident.
+    synonyms:
+      carrier: Airline carrier involved.
+      operator: Operator involved in the accident.
+  country:
+    description: Country where the accident occurred.
+    synonyms:
+      nation: Country where the accident took place.
+      location_country: Country of the accident location.
+  date:
+    description: Date of the accident.
+    synonyms:
+      accident_date: Date of the accident.
+      crash_date: Date of the crash.
+  fatalities:
+    description: Number of fatalities in the accident.
+    synonyms:
+      deaths: Number of deaths.
+      killed: Number of people killed.
+      casualties: Number of casualties.
+  survivors:
+    description: Number of survivors.
+    synonyms:
+      survived: Number of people who survived.
+  flight_number:
+    description: Flight number of the aircraft involved.
+    synonyms:
+      flight_no: Flight number.
+      flight: Flight designation.
+aircraft:
+  __meta__:
+    primary_key: aircraft
+    split_col: country
+    description: Individual aircraft operated by commercial airlines.
+    synonyms:
+      planes: Table of individual aircraft operated by commercial airlines.
+      airplanes: Table of airplanes operated by commercial airlines.
+      fleet: Table of aircraft fleet operated by commercial airlines.
+    foreign_keys:
+      country: countries
+    required:
+    - name
+    - operator
+    - model
+    - manufacturer
+    - first_flight
+    - max_passengers
+    - length_m
+    - max_takeoff_weight_kg
+  aircraft:
+    description: Identifier for the aircraft.
+    synonyms:
+      aircraft_id: Unique identifier for the aircraft.
+  name:
+    description: Name or registration of the aircraft.
+    synonyms:
+      aircraft_name: Name or registration of the aircraft.
+      label: Label of the aircraft.
+  operator:
+    description: Airline operating the aircraft.
+    synonyms:
+      airline: Airline that operates the aircraft.
+      operating_airline: Airline operating this aircraft.
+  country:
+    description: Country of the operating airline.
+    synonyms:
+      nation: Country the operating airline is registered in.
+  model:
+    description: Aircraft model type (e.g. Boeing 737-800).
+    synonyms:
+      aircraft_type: Type of aircraft.
+      aircraft_model: Model of the aircraft.
+  manufacturer:
+    description: Manufacturer of the aircraft.
+    synonyms:
+      maker: Manufacturer of the aircraft.
+      builder: Company that built the aircraft.
+  first_flight:
+    description: Date of the aircraft's first flight.
+    synonyms:
+      maiden_flight: Date of the maiden flight.
+  max_passengers:
+    description: Maximum passenger capacity.
+    synonyms:
+      capacity: Passenger capacity.
+      seats: Number of seats.
+      passenger_capacity: Maximum number of passengers.
+  cruise_speed_kmh:
+    description: Cruise speed in kilometres per hour.
+    synonyms:
+      speed_kmh: Speed in kilometres per hour.
+      cruising_speed: Cruising speed of the aircraft.
+  wingspan_m:
+    description: Wingspan in metres.
+    synonyms:
+      wingspan: Wingspan of the aircraft.
+  length_m:
+    description: Length of the aircraft in metres.
+    synonyms:
+      length: Length of the aircraft.
+  max_takeoff_weight_kg:
+    description: Maximum takeoff weight in kilograms.
+    synonyms:
+      mtow_kg: Maximum takeoff weight in kilograms.
+      max_weight_kg: Maximum weight of the aircraft in kilograms.
+airlines:
+  __meta__:
+    primary_key: airline
+    split_col: country
+    description: Commercial airlines with founding date, fleet size, employees, and revenue.
+    synonyms:
+      carriers: Table of commercial airline carriers.
+      air_carriers: Table of commercial air carriers.
+      air_operators: Table of commercial air operators.
+    foreign_keys:
+      country: countries
+      hub_airport: airports
+      parent_company: airlines
+    required:
+    - name
+    - inception
+    - employees
+    - revenue_usd
+    - iata_code
+    - icao_code
+    - headquarters
+    - website
+  airline:
+    description: Identifier for the airline.
+    synonyms:
+      airline_id: Unique identifier for the airline.
+  name:
+    description: Name of the airline.
+    synonyms:
+      airline_name: Name of the airline.
+      carrier_name: Name of the carrier.
+      label: Label of the airline.
+  country:
+    description: Country where the airline is headquartered.
+    synonyms:
+      nation: Country the airline is headquartered in.
+  inception:
+    description: Date the airline was founded.
+    synonyms:
+      founded: Year or date the airline was founded.
+      established: Date the airline was established.
+      founding_date: Founding date of the airline.
+  employees:
+    description: Number of employees (most recent reported value).
+    synonyms:
+      staff_count: Number of staff members employed by the airline.
+      workforce_size: Total workforce size of the airline.
+      headcount: Total headcount of the airline.
+  revenue_usd:
+    description: Annual revenue in US dollars (most recent reported value).
+    synonyms:
+      revenue: Annual revenue of the airline.
+      annual_revenue_usd: Annual revenue of the airline in US dollars.
+      turnover_usd: Annual turnover of the airline in US dollars.
+  fleet_size:
+    description: Number of aircraft in the fleet.
+    synonyms:
+      aircraft_count: Number of aircraft operated by the airline.
+      number_of_aircraft: Total number of aircraft in the airline's fleet.
+  parent_company:
+    description: Parent company or holding group.
+    synonyms:
+      parent: Parent company.
+      parent_organization: Parent organization of the airline.
+  iata_code:
+    description: IATA airline designator code (2-letter).
+    synonyms:
+      iata: IATA code of the airline.
+  icao_code:
+    description: ICAO airline designator code (3-letter).
+    synonyms:
+      icao: ICAO code of the airline.
+  headquarters:
+    description: City or location where the airline is headquartered.
+    synonyms:
+      hq_city: Headquarters city of the airline.
+      hq_location: Headquarters location of the airline.
+  website:
+    description: Official website of the airline.
+    synonyms:
+      url: URL of the airline's website.
+      official_website: Official website URL.
+  hub_airport:
+    description: A hub airport of the airline.
+    synonyms:
+      hub: Hub airport of the airline.
+      home_airport: Home airport of the airline.
+airports:
+  __meta__:
+    primary_key: airport
+    split_col: country
+    description: Public civil airports worldwide with IATA codes, elevation, passenger
+      counts, and geographic location.
+    synonyms:
+      airfields: Table of public civil airfields and airports.
+      terminals: Table of airport terminals worldwide.
+      aerodromes: Table of civil aerodromes worldwide.
+    foreign_keys:
+      country: countries
+      city: cities
+    required:
+    - name
+    - iata_code
+    - elevation_m
+    - passengers
+    - timezone_offset
+    - coords
+  airport:
+    description: Identifier for the airport.
+    synonyms:
+      airport_id: Unique identifier for the airport.
+  name:
+    description: Name of the airport.
+    synonyms:
+      airport_name: Name of the airport.
+      label: Label of the airport.
+  iata_code:
+    description: IATA three-letter airport code.
+    synonyms:
+      iata: IATA three-letter code of the airport.
+      iata_identifier: IATA identifier of the airport.
+  icao_code:
+    description: ICAO four-letter airport code.
+    synonyms:
+      icao: ICAO four-letter code of the airport.
+      icao_identifier: ICAO identifier of the airport.
+  elevation_m:
+    description: Elevation of the airport above sea level in metres.
+    synonyms:
+      altitude_m: Altitude of the airport above sea level in metres.
+      height_metres: Height of the airport above sea level in metres.
+      elevation_metres: Elevation of the airport above sea level in metres.
+      elevation_above_sea_level_m: Elevation of the airport above sea level in metres.
+  passengers:
+    description: Annual passenger count (most recent reported value).
+    synonyms:
+      annual_passengers: Annual number of passengers handled by the airport.
+      passenger_count: Total passenger count at the airport (most recent reported
+        value).
+      pax: Annual passenger traffic at the airport.
+  airport_area_km2:
+    description: Total area of the airport in square kilometres.
+    synonyms:
+      area_km2: Area of the airport in square kilometres.
+      airport_area: Total area of the airport.
+  timezone_offset:
+    description: UTC offset of the airport's timezone in hours.
+    synonyms:
+      utc_offset: UTC offset of the airport's timezone in hours.
+      tz_offset: Timezone offset from UTC in hours.
+  inception:
+    description: Date the airport was opened or established.
+    synonyms:
+      founded: Year or date the airport was founded.
+      opening_date: Date the airport was opened.
+      established: Date the airport was established.
+  coords:
+    description: Geographic coordinates of the airport.
+    synonyms:
+      coordinates: Geographic coordinates of the airport.
+      location: Geographic location of the airport.
+  city:
+    description: City the airport serves.
+    synonyms:
+      served_city: City served by the airport.
+      city_id: City associated with the airport.
+  country:
+    description: Country the airport is located in.
+    synonyms:
+      nation: Nation the airport is located in.
+awards:
+  __meta__:
+    primary_key: award
+    split_col: country
+    description: Major international awards with country of origin, inception date, and awarding organisation.
+    synonyms:
+      prizes: Table of major international prizes and awards.
+      honors: Table of major international honors and awards.
+      distinctions: Table of major international distinctions.
+    foreign_keys:
+      country: countries
+    required:
+    - name
+    - inception
+  award:
+    description: Identifier for the award.
+    synonyms:
+      award_id: Unique identifier for the award.
+  name:
+    description: Name of the award.
+    synonyms:
+      award_name: Name of the award.
+      prize_name: Name of the prize.
+      label: Label of the award.
+  country:
+    description: Country the award originates from.
+    synonyms:
+      nation: Country the award originates from.
+      origin_country: Country of origin of the award.
+  inception:
+    description: Year the award was first presented.
+    synonyms:
+      founded: Year the award was first given.
+      first_awarded: Year the award was first presented.
+      established: Year the award was established.
+  conferred_by:
+    description: Organisation that confers the award.
+    synonyms:
+      awarding_body: Organisation that awards the prize.
+      granting_organisation: Organisation that grants the award.
+  named_after:
+    description: Person or entity the award is named after.
+    synonyms:
+      namesake: Person or entity the award is named for.
+      eponym: Eponym of the award.
+  official_website:
+    description: Official website URL of the award.
+    synonyms:
+      website: Official website of the award.
+      url: URL of the award's official website.
+cities:
+  __meta__:
+    primary_key: city
+    split_col: country
+    description: Cities and human settlements worldwide.
+    synonyms:
+      towns: Table of cities and towns worldwide.
+      municipalities: Table of municipalities and cities worldwide.
+      settlements: Table of human settlements worldwide.
+    foreign_keys:
+      country: countries
+    required:
+    - name
+    - population
+    - coords
+    - area_km2
+    - elevation_m
+    - inception
+    - per_capita_income_usd
+  city:
+    description: Identifier for the city.
+    synonyms:
+      city_id: Unique identifier for the city.
+  name:
+    description: Name of the city.
+    synonyms:
+      city_name: Name of the city.
+      label: Label of the city.
+      locality: Name of the locality.
+  country:
+    description: Country the city is located in.
+    synonyms:
+      nation: Country the city is located in.
+  population:
+    description: Population of the city (most recent estimate).
+    synonyms:
+      pop: Population of the city.
+      inhabitants: Number of inhabitants in the city.
+  coords:
+    description: Geographic coordinates of the city.
+    synonyms:
+      coordinates: Geographic coordinates of the city.
+      location: Geographic location of the city.
+  inception:
+    description: Date or year the city was founded or first recorded.
+    synonyms:
+      founded: Year or date the city was founded.
+      founding_year: Year the city was founded.
+      established: Year or date the city was established.
+  nickname:
+    description: Comma-separated informal names or nicknames of the city.
+    synonyms:
+      alias: Comma-separated aliases or informal names of the city.
+      informal_name: Comma-separated informal names used for the city.
+  postal_code:
+    description: Postal or ZIP code of the city.
+    synonyms:
+      zip_code: ZIP or postal code of the city.
+      postcode: Postcode of the city.
+  demonym:
+    description: Comma-separated adjectives or nouns used to describe inhabitants
+      of the city.
+    synonyms:
+      gentilic: Comma-separated gentilic terms for inhabitants of the city.
+      inhabitant_name: Comma-separated names used for inhabitants of the city.
+  gdp_usd:
+    description: Nominal GDP of the city in US dollars.
+    synonyms:
+      gross_domestic_product: Gross domestic product of the city in US dollars.
+      city_gdp: GDP of the city in US dollars.
+  per_capita_income_usd:
+    description: Per capita income of the city in US dollars.
+    synonyms:
+      income_per_capita: Income per capita of the city in US dollars.
+      average_income_usd: Average income per person in the city in US dollars.
+  elevation_m:
+    description: Elevation of the city above sea level in metres.
+    synonyms:
+      altitude_m: Altitude of the city above sea level in metres.
+      height_m: Height of the city above sea level in metres.
+  area_km2:
+    description: Total area of the city in square kilometres.
+    synonyms:
+      surface_area_km2: Surface area of the city in square kilometres.
+      city_area_km2: Area of the city in square kilometres.
+  vehicles_per_thousand:
+    description: Number of registered motor vehicles per thousand inhabitants.
+    synonyms:
+      cars_per_thousand: Number of registered cars per thousand inhabitants.
+      motor_vehicles_per_1000: Number of motor vehicles per 1000 inhabitants.
+provinces:
+  __meta__:
+    primary_key: province
+    split_col: country
+    description: Administrative divisions of China with area, population, capital, and geographic coordinates.
+    synonyms:
+      china_provinces: Table of Chinese provinces and administrative regions.
+      china_states: Table of Chinese administrative regions and provinces.
+      chinese_provinces: Table of the administrative provinces and regions of China.
+    foreign_keys:
+      country: countries
+      capital: cities
+    required:
+    - name
+    - coords
+    - area_km2
+    - population
+    - inception
+  province:
+    description: Identifier for the Chinese province or administrative region.
+    synonyms:
+      province_id: Unique identifier for the province.
+  country:
+    description: Country the province belongs to.
+    synonyms:
+      nation: Country the province belongs to.
+  name:
+    description: Name of the Chinese province or administrative region.
+    synonyms:
+      province_name: Name of the province.
+      label: Label of the province.
+  coords:
+    description: Geographic coordinates of the province centroid.
+    synonyms:
+      coordinates: Geographic coordinates of the province centroid.
+      location: Geographic location of the province centroid.
+  area_km2:
+    description: Total area of the province in square kilometres.
+    synonyms:
+      area: Total area of the province.
+      surface_area_km2: Surface area of the province in square kilometres.
+  population:
+    description: Population of the province (most recent estimate).
+    synonyms:
+      pop: Population of the province.
+      inhabitants: Number of inhabitants in the province.
+  capital:
+    description: Capital city of the province.
+    synonyms:
+      capital_city: Capital city of the province.
+      province_capital: Capital of the province.
+  inception:
+    description: Date the province was established.
+    synonyms:
+      founded: Date the province was founded.
+      established: Date the province was established.
+  iso_code:
+    description: ISO 3166-2 code of the province (e.g. CN-HE).
+    synonyms:
+      iso: ISO 3166-2 code.
+      province_code: ISO province code with CN prefix.
+  website:
+    description: Official website of the provincial government.
+    synonyms:
+      url: URL of the provincial government website.
+      official_website: Official website of the province.
+companies:
+  __meta__:
+    primary_key: company
+    split_col: country
+    description: Business enterprises with financial metrics, industry classification,
+      and headquarters.
+    synonyms:
+      firms: Table of business firms with financial metrics.
+      businesses: Table of businesses with financial metrics.
+      enterprises: Table of business enterprises with financial metrics.
+    foreign_keys:
+      country: countries
+      ceo_person: persons
+    required:
+    - name
+    - types
+    - inception
+    - city
+    - employees
+    - revenue_usd
+    - net_income_usd
+    - total_assets_usd
+    - industries
+  company:
+    description: Identifier for the company.
+    synonyms:
+      company_id: Unique identifier for the company.
+  name:
+    description: Name of the company.
+    synonyms:
+      company_name: Name of the company.
+      label: Label of the company.
+      firm_name: Name of the firm.
+  country:
+    description: Country where the company is headquartered.
+    synonyms:
+      nation: Country the company is headquartered in.
+  types:
+    description: Types or classifications of the company (comma-separated).
+    synonyms:
+      company_types: Comma-separated types of the company.
+      entity_types: Comma-separated entity type classifications of the company.
+  industries:
+    description: Industries the company operates in (comma-separated).
+    synonyms:
+      industry: Industry or sector the company operates in.
+      sector: Sector the company operates in.
+  legal_form:
+    description: Legal form or structure of the company.
+    synonyms:
+      legal_structure: Legal structure of the company.
+      company_form: Legal form of the company.
+  inception:
+    description: Date the company was founded.
+    synonyms:
+      founded: Year or date the company was founded.
+      established: Date the company was established.
+      founding_date: Founding date of the company.
+  website:
+    description: Official website URL of the company.
+    synonyms:
+      url: Official website URL of the company.
+      homepage: Homepage URL of the company.
+  city:
+    description: City where the company is headquartered.
+    synonyms:
+      hq_city: Headquarters city.
+      headquarters_city: City where the headquarters is located.
+  ceo_person:
+    description: Current chief executive officer.
+    synonyms:
+      ceo: CEO of the company.
+      chief_executive: Chief executive of the company.
+  employees:
+    description: Number of employees (most recent reported value).
+    synonyms:
+      staff_count: Number of staff members employed by the company.
+      workforce_size: Total workforce size of the company.
+      headcount: Total headcount of the company.
+  revenue_usd:
+    description: Annual revenue in US dollars (most recent reported value).
+    synonyms:
+      revenue: Annual revenue of the company.
+      annual_revenue_usd: Annual revenue of the company in US dollars.
+      turnover_usd: Annual turnover of the company in US dollars.
+  net_income_usd:
+    description: Net income in US dollars (most recent reported value).
+    synonyms:
+      net_profit_usd: Net profit of the company in US dollars.
+      profit_usd: Profit of the company in US dollars.
+      earnings_usd: Earnings of the company in US dollars.
+  total_assets_usd:
+    description: Total assets in US dollars (most recent reported value).
+    synonyms:
+      assets_usd: Total assets of the company in US dollars.
+      total_assets: Total assets of the company.
+  operating_income_usd:
+    description: Operating income in US dollars (most recent reported value).
+    synonyms:
+      operating_profit_usd: Operating profit of the company in US dollars.
+      ebit_usd: Earnings before interest and taxes (EBIT) in US dollars.
+  market_cap_usd:
+    description: Market capitalisation in US dollars (most recent reported value).
+    synonyms:
+      market_capitalization_usd: Market capitalisation of the company in US dollars.
+      market_value_usd: Market value of the company in US dollars.
+continents:
+  __meta__:
+    primary_key: continent
+    split_col: null
+    description: The 7 continents with area, population, and coordinates.
+    synonyms:
+      landmasses: Table of the 7 major landmasses of the world.
+      world_regions: Table of major world regions by landmass.
+    required:
+    - name
+    - area_km2
+    - population
+    - coords
+    - highest_point
+    - highest_point_m
+    - lowest_point
+    - lowest_point_m
+    - most_populous_urban_area
+    - out_of_school_children
+    - m49_code
+    - demonym
+    - northernmost_point
+    - southernmost_point
+    - easternmost_point
+    - westernmost_point
+  continent:
+    description: Identifier for the continent.
+    synonyms:
+      identifier: Unique identifier for the continent.
+      id: Unique ID for the continent.
+      continent_id: Unique identifier for the continent.
+  name:
+    description: Name of the continent.
+    synonyms:
+      continent_name: Name of the continent.
+      label: Label of the continent.
+  area_km2:
+    description: Total land area of the continent in square kilometres.
+    synonyms:
+      area: Total land area of the continent.
+      surface_area_km2: Surface area of the continent in square kilometres.
+      land_area_km2: Land area of the continent in square kilometres.
+  population:
+    description: Total population of the continent (most recent estimate).
+    synonyms:
+      pop: Total population of the continent.
+      inhabitants: Number of inhabitants on the continent.
+      total_population: Total population of the continent (most recent estimate).
+  coords:
+    description: Geographic coordinates of the continent centroid.
+    synonyms:
+      coordinates: Geographic coordinates of the continent centroid.
+      location: Geographic location of the continent centroid.
+  highest_point:
+    description: Name of the highest geographical point on the continent.
+    synonyms:
+      highest_peak: Name of the highest peak on the continent.
+      summit: Name of the highest summit on the continent.
+      tallest_point: Name of the tallest geographical point on the continent.
+  highest_point_m:
+    description: Elevation of the highest point above sea level in metres.
+    synonyms:
+      highest_elevation_m: Elevation of the highest point above sea level in metres.
+      summit_elevation_m: Elevation of the highest summit above sea level in metres.
+      peak_height_m: Height of the highest peak above sea level in metres.
+  lowest_point:
+    description: Name of the lowest geographical point on the continent.
+    synonyms:
+      lowest_elevation: Name of the lowest elevation point on the continent.
+      depression: Name of the lowest depression on the continent.
+      nadir: Name of the lowest geographical point on the continent.
+  lowest_point_m:
+    description: Elevation of the lowest point above sea level in metres (negative
+      if below sea level).
+    synonyms:
+      lowest_elevation_m: Elevation of the lowest point above sea level in metres.
+      depression_depth_m: Depth of the lowest depression in metres (negative if below
+        sea level).
+      nadir_elevation_m: Elevation of the nadir point above sea level in metres.
+  most_populous_urban_area:
+    description: Most populous urban area on the continent.
+    synonyms:
+      largest_city: Largest city on the continent by population.
+      biggest_city: Most populous city on the continent.
+      most_populated_city: Most populated urban area on the continent.
+  out_of_school_children:
+    description: Estimated number of school-age children not enrolled in school.
+    synonyms:
+      children_out_of_school: Number of school-age children not attending school.
+      unenrolled_children: Number of children not enrolled in any school.
+  m49_code:
+    description: UN M49 numeric region code assigned to the continent.
+    synonyms:
+      un_m49: UN M49 numeric code for the continent.
+      un_region_code: UN numeric region code for the continent.
+  demonym:
+    description: Comma-separated adjectives or nouns used to describe inhabitants
+      of the continent.
+    synonyms:
+      gentilic: Comma-separated gentilic terms for inhabitants of the continent.
+      inhabitant_name: Comma-separated names used for inhabitants of the continent.
+  northernmost_point:
+    description: Geographic coordinates of the northernmost point of the continent.
+    synonyms:
+      northmost_coords: Coordinates of the northernmost point of the continent.
+      northern_extreme: Coordinates of the northern extreme of the continent.
+  southernmost_point:
+    description: Geographic coordinates of the southernmost point of the continent.
+    synonyms:
+      southmost_coords: Coordinates of the southernmost point of the continent.
+      southern_extreme: Coordinates of the southern extreme of the continent.
+  easternmost_point:
+    description: Geographic coordinates of the easternmost point of the continent.
+    synonyms:
+      eastmost_coords: Coordinates of the easternmost point of the continent.
+      eastern_extreme: Coordinates of the eastern extreme of the continent.
+  westernmost_point:
+    description: Geographic coordinates of the westernmost point of the continent.
+    synonyms:
+      westmost_coords: Coordinates of the westernmost point of the continent.
+      western_extreme: Coordinates of the western extreme of the continent.
+countries:
+  __meta__:
+    primary_key: country
+    split_col: country
+    description: Sovereign countries with ISO codes, geography, demographics, and
+      economic indicators.
+    synonyms:
+      nations: Table of sovereign nations with geographic and economic data.
+    foreign_keys:
+      continent: continents
+      capital: cities
+      head_of_state: persons
+      head_of_government: persons
+    required:
+    - name
+    - area_km2
+    - population
+    - population_male
+    - population_female
+    - gdp_usd
+    - currency_name
+    - coords
+    - inception
+    - life_expectancy
+    - human_development_index
+    - unemployment_rate
+    - gini_coefficient
+    - birth_rate
+    - death_rate
+    - suicide_rate
+    - democracy_index
+    - central_bank
+    - highest_point
+    - highest_point_m
+    - lowest_point
+    - lowest_point_m
+    - northernmost_point
+    - southernmost_point
+    - easternmost_point
+    - westernmost_point
+  country:
+    description: Identifier for the country.
+    synonyms:
+      country_id: Unique identifier for the country.
+  name:
+    description: Name of the country.
+    synonyms:
+      country_name: Name of the country.
+      label: Label of the country.
+      nation: Name of the nation.
+  iso2:
+    description: ISO 3166-1 alpha-2 two-letter country code.
+    synonyms:
+      iso_alpha2: ISO 3166-1 alpha-2 two-letter code for the country.
+      country_code: Two-letter country code (ISO 3166-1 alpha-2).
+      alpha2: ISO alpha-2 two-letter code for the country.
+  iso3:
+    description: ISO 3166-1 alpha-3 three-letter country code.
+    synonyms:
+      iso_alpha3: ISO 3166-1 alpha-3 three-letter code for the country.
+      alpha3: ISO alpha-3 three-letter code for the country.
+  continent:
+    description: Continent the country belongs to.
+    synonyms:
+      continent_id: Identifier of the continent the country belongs to.
+  area_km2:
+    description: Total area of the country in square kilometres.
+    synonyms:
+      area: Total area of the country.
+      surface_area_km2: Surface area of the country in square kilometres.
+      land_area_km2: Land area of the country in square kilometres.
+  population:
+    description: Population of the country (most recent estimate).
+    synonyms:
+      pop: Population of the country.
+      inhabitants: Number of inhabitants in the country.
+      total_population: Total population of the country (most recent estimate).
+  gdp_usd:
+    description: Nominal GDP of the country in US dollars (most recent reported value).
+    synonyms:
+      gdp: Gross domestic product of the country.
+      gross_domestic_product: Nominal gross domestic product of the country in US
+        dollars.
+      gdp_nominal_usd: Nominal GDP of the country in US dollars.
+  capital:
+    description: Capital city.
+    synonyms:
+      capital_city: Capital city of the country.
+  currency_name:
+    description: Name of the official currency.
+    synonyms:
+      currency: Name of the official currency of the country.
+  coords:
+    description: Geographic coordinates of the country centroid.
+    synonyms:
+      coordinates: Geographic coordinates of the country centroid.
+      location: Geographic location of the country centroid.
+  inception:
+    description: Date the country was founded or became independent.
+    synonyms:
+      founded: Year or date the country was founded.
+      independence_date: Date of independence.
+      established: Year or date the country was established.
+  official_name:
+    description: Official name of the country in English.
+    synonyms:
+      formal_name: Formal official name of the country.
+      full_name: Full official name of the country.
+  telephone_code:
+    description: International telephone dialling code (e.g. +49).
+    synonyms:
+      calling_code: International calling code for the country.
+      dial_code: International dial code for the country.
+      country_code_phone: International phone country code.
+  population_male:
+    description: Male population count (most recent estimate).
+    synonyms:
+      male_population: Male population of the country.
+      men_population: Number of male inhabitants.
+  population_female:
+    description: Female population count (most recent estimate).
+    synonyms:
+      female_population: Female population of the country.
+      women_population: Number of female inhabitants.
+  life_expectancy:
+    description: Average life expectancy at birth in years.
+    synonyms:
+      life_exp: Life expectancy at birth in years.
+      average_lifespan: Average lifespan in years.
+  human_development_index:
+    description: Human Development Index score (0–1).
+    synonyms:
+      hdi: Human Development Index of the country.
+      hdi_score: HDI score of the country.
+  unemployment_rate:
+    description: Unemployment rate as a percentage of the labour force.
+    synonyms:
+      jobless_rate: Percentage of the labour force that is unemployed.
+      unemployment_pct: Unemployment percentage.
+  gini_coefficient:
+    description: Gini coefficient measuring income inequality (0–1).
+    synonyms:
+      gini: Gini coefficient of the country.
+      income_inequality: Income inequality measure (Gini coefficient).
+  total_fertility_rate:
+    description: Average number of children born per woman.
+    synonyms:
+      fertility_rate: Average number of children born per woman.
+      tfr: Total fertility rate of the country.
+  birth_rate:
+    description: Number of live births per 1000 inhabitants per year.
+    synonyms:
+      births_per_thousand: Live births per 1000 inhabitants per year.
+      crude_birth_rate: Crude birth rate per 1000 inhabitants.
+  death_rate:
+    description: Number of deaths per 1000 inhabitants per year.
+    synonyms:
+      deaths_per_thousand: Deaths per 1000 inhabitants per year.
+      crude_death_rate: Crude death rate per 1000 inhabitants.
+  suicide_rate:
+    description: Suicide rate per 100,000 inhabitants per year.
+    synonyms:
+      suicides_per_100k: Suicide rate per 100,000 inhabitants per year.
+      suicide_mortality_rate: Suicide mortality rate per 100,000 inhabitants.
+  median_income_usd:
+    description: Median household or personal income in US dollars.
+    synonyms:
+      median_income: Median income in the country.
+      average_household_income_usd: Average household income in US dollars.
+  democracy_index:
+    description: Democracy Index score (0–10) from the Economist Intelligence Unit.
+    synonyms:
+      eiu_democracy_index: EIU Democracy Index score of the country.
+      political_freedom_score: Political freedom score of the country.
+  central_bank:
+    description: Name of the central bank.
+    synonyms:
+      central_bank_name: Name of the country's central bank.
+      reserve_bank: Name of the reserve or central bank.
+  highest_point:
+    description: Name of the highest geographical point in the country.
+    synonyms:
+      highest_peak: Name of the highest peak in the country.
+      summit: Name of the highest summit in the country.
+  highest_point_m:
+    description: Elevation of the highest point above sea level in metres.
+    synonyms:
+      highest_elevation_m: Elevation of the highest point in metres.
+      peak_height_m: Height of the highest peak in metres.
+  lowest_point:
+    description: Name of the lowest geographical point in the country.
+    synonyms:
+      lowest_elevation: Name of the lowest elevation point in the country.
+      depression: Name of the lowest depression in the country.
+  lowest_point_m:
+    description: Elevation of the lowest point above sea level in metres (negative
+      if below sea level).
+    synonyms:
+      lowest_elevation_m: Elevation of the lowest point in metres.
+      nadir_elevation_m: Elevation of the nadir point in metres.
+  northernmost_point:
+    description: Geographic coordinates of the northernmost point of the country.
+    synonyms:
+      northmost_coords: Coordinates of the northernmost point of the country.
+      northern_extreme: Coordinates of the northern extreme of the country.
+  southernmost_point:
+    description: Geographic coordinates of the southernmost point of the country.
+    synonyms:
+      southmost_coords: Coordinates of the southernmost point of the country.
+      southern_extreme: Coordinates of the southern extreme of the country.
+  easternmost_point:
+    description: Geographic coordinates of the easternmost point of the country.
+    synonyms:
+      eastmost_coords: Coordinates of the easternmost point of the country.
+      eastern_extreme: Coordinates of the eastern extreme of the country.
+  westernmost_point:
+    description: Geographic coordinates of the westernmost point of the country.
+    synonyms:
+      westmost_coords: Coordinates of the westernmost point of the country.
+      western_extreme: Coordinates of the western extreme of the country.
+  demonym:
+    description: Comma-separated adjectives or nouns used to describe inhabitants
+      of the country.
+    synonyms:
+      gentilic: Comma-separated gentilic terms for inhabitants of the country.
+      inhabitant_name: Comma-separated names used for inhabitants of the country.
+  languages:
+    description: Comma-separated official languages of the country.
+    synonyms:
+      official_languages: Comma-separated official languages spoken in the country.
+      spoken_languages: Comma-separated languages spoken in the country.
+  head_of_state:
+    description: Current head of state of the country.
+    synonyms:
+      president: Current president or head of state.
+      chief_of_state: Current chief of state.
+  head_of_government:
+    description: Current head of government of the country.
+    synonyms:
+      prime_minister: Current prime minister or head of government.
+      premier: Current premier or head of government.
+matches:
+  __meta__:
+    primary_key: match
+    split_col: venue
+    description: FIFA World Cup matches with date, teams, scores, stage, venue, attendance,
+      and referee.
+    synonyms:
+      games: Table of FIFA World Cup games.
+      fixtures: Table of FIFA World Cup fixtures.
+      world_cup_matches: Table of FIFA World Cup match results.
+    foreign_keys:
+      tournament: tournaments
+      venue: venues
+      team1: teams
+      team2: teams
+      winner: teams
+      referee: persons
+    required:
+    - date
+    - name
+    - stage_type
+    - team1_score
+    - team2_score
+    - winner
+    - attendance
+    - referee
+  match:
+    description: Identifier for the FIFA World Cup match.
+    synonyms:
+      match_id: Unique identifier for the match.
+  name:
+    description: Name or label of the match.
+    synonyms:
+      match_name: Name of the match.
+      fixture_name: Name of the fixture.
+      label: Label of the match.
+  date:
+    description: Date the match was played.
+    synonyms:
+      match_date: Date the match was played.
+      played_on: Date on which the match was played.
+      fixture_date: Date of the fixture.
+  tournament:
+    description: Tournament this match belongs to.
+    synonyms:
+      competition: Tournament this match is part of.
+      cup_edition: Edition of the cup this match belongs to.
+  stage_type:
+    description: Stage of the tournament (e.g. group stage, quarterfinal, final).
+    synonyms:
+      round: Round of the tournament this match was played in.
+      stage: Stage of the tournament.
+      phase: Phase of the tournament.
+  venue:
+    description: Venue where the match was played.
+    synonyms:
+      stadium: Stadium where the match was played.
+      ground: Ground where the match was played.
+  team1:
+    description: First participating team.
+    synonyms:
+      home_team: First participating team.
+      first_team: First participating team.
+  team1_score:
+    description: Goals scored by team1.
+    synonyms:
+      score_team1: Score of the first team.
+      goals_team1: Goals scored by the first team.
+      team1_goals: Number of goals scored by team1.
+  team2:
+    description: Second participating team.
+    synonyms:
+      away_team: Second participating team.
+      second_team: Second participating team.
+  team2_score:
+    description: Goals scored by team2.
+    synonyms:
+      score_team2: Score of the second team.
+      goals_team2: Goals scored by the second team.
+      team2_goals: Number of goals scored by team2.
+  winner:
+    description: Winning team (null for draws).
+    synonyms:
+      winning_team: Team that won the match (null for draws).
+      victor: Winning team (null for draws).
+  attendance:
+    description: Number of spectators in attendance.
+    synonyms:
+      crowd_size: Size of the crowd at the match.
+      spectators: Number of spectators who attended the match.
+      audience: Audience size at the match.
+  referee:
+    description: Person who refereed the match.
+    synonyms:
+      match_referee: Person who officiated the match.
+      official: Person who refereed the match.
+person_awards:
+  __meta__:
+    primary_key: null
+    split_col: person
+    description: Records linking persons to awards they received, with optional year.
+    foreign_keys:
+      person: persons
+      award: awards
+    required:
+    - award_year
+  person:
+    description: Person who received the award.
+    synonyms:
+      person_id: Identifier of the person who received the award.
+      recipient: Person who received the award.
+  award:
+    description: Award received by the person.
+    synonyms:
+      award_id: Identifier of the award received.
+      prize: Award received by the person.
+  award_year:
+    description: Year the award was received.
+    synonyms:
+      year_awarded: Year in which the award was given.
+      year_won: Year the person won the award.
+      prize_year: Year the prize was awarded.
+persons:
+  __meta__:
+    primary_key: person
+    split_col: country
+    description: Persons from award winners, FIFA World Cup venue architects, current
+      team coaches/captains, match referees, and current heads of state/government.
+    synonyms:
+      people: Table of notable people.
+      individuals: Table of notable individuals.
+      notable_persons: Table of notable persons from various domains.
+    foreign_keys:
+      citizenship: countries
+      birth_country: countries
+      country: countries
+    required:
+    - name
+    - sex
+    - birth_date
+    - death_date
+    - given_name
+    - family_name
+    - number_of_siblings
+  person:
+    description: Identifier for the person.
+    synonyms:
+      person_id: Unique identifier for the person.
+  name:
+    description: Full name of the person.
+    synonyms:
+      full_name: Full name of the person.
+      person_name: Name of the person.
+      label: Label of the person.
+  sex:
+    description: Sex of the person.
+    synonyms:
+      gender: Gender of the person.
+  birth_date:
+    description: Date of birth.
+    synonyms:
+      date_of_birth: Date of birth of the person.
+      born: Date the person was born.
+      dob: Date of birth (DOB) of the person.
+  death_date:
+    description: Date of death (null if still living or unknown).
+    synonyms:
+      date_of_death: Date of death of the person.
+      died: Date the person died.
+      dod: Date of death (DOD) of the person.
+  given_name:
+    description: Given (first) name of the person.
+    synonyms:
+      first_name: First name of the person.
+      forename: Forename of the person.
+  family_name:
+    description: Family (last) name of the person.
+    synonyms:
+      last_name: Last name of the person.
+      surname: Surname of the person.
+  citizenship:
+    description: Country of citizenship.
+    synonyms:
+      nationality: Country of citizenship of the person.
+      country_of_citizenship: Country of citizenship of the person.
+  birth_country:
+    description: Country of birth.
+    synonyms:
+      country_of_birth: Country where the person was born.
+      birthplace_country: Country of the person's birthplace.
+  country:
+    description: Country associated with the person (citizenship if known, otherwise country of birth).
+    synonyms:
+      nation: Country of the person.
+  educated_at:
+    description: Name of institution where the person studied.
+    synonyms:
+      alma_mater: Name of the alma mater of the person.
+      university: Name of the university or institution the person attended.
+  height_cm:
+    description: Height of the person in metres.
+    synonyms:
+      height: Height of the person.
+      height_metres: Height of the person in metres.
+      stature: Stature of the person in metres.
+  number_of_children:
+    description: Number of children the person has.
+    synonyms:
+      children: Number of children.
+      child_count: Number of children of the person.
+  number_of_siblings:
+    description: Number of siblings the person has.
+    synonyms:
+      siblings: Number of siblings.
+      sibling_count: Number of siblings of the person.
+teams:
+  __meta__:
+    primary_key: team
+    split_col: country
+    description: National football teams that participated in FIFA World Cup matches.
+    synonyms:
+      squads: Table of national football squads.
+      national_teams: Table of national football teams.
+      football_teams: Table of national football teams in the FIFA World Cup.
+    foreign_keys:
+      country: countries
+      head_coach: persons
+      captain: persons
+    required:
+    - name
+    - inception
+    - ranking
+    - competition_class
+  team:
+    description: Identifier for the national football team.
+    synonyms:
+      team_id: Unique identifier for the football team.
+  name:
+    description: Name of the team.
+    synonyms:
+      team_name: Name of the football team.
+      label: Label of the team.
+      squad_name: Name of the squad.
+  country:
+    description: Country the team represents.
+    synonyms:
+      nation: Country the team represents.
+  inception:
+    description: Year the team was founded.
+    synonyms:
+      founded: Year or date the team was founded.
+      founding_year: Year the team was founded.
+      established: Year or date the team was established.
+  native_label:
+    description: Official name of the team in its native language.
+    synonyms:
+      local_name: Name of the team in its local language.
+      official_name: Official name of the team.
+  nickname:
+    description: Comma-separated nicknames of the team.
+    synonyms:
+      alias: Comma-separated aliases of the team.
+      informal_name: Comma-separated informal names of the team.
+  ranking:
+    description: FIFA world ranking of the team.
+    synonyms:
+      fifa_ranking: FIFA world ranking of the team.
+      world_ranking: World ranking of the team.
+  competition_class:
+    description: Competition class or league the team participates in.
+    synonyms:
+      league: League or competition class of the team.
+      division: Division or class the team competes in.
+  head_coach:
+    description: Current head coach of the team.
+    synonyms:
+      coach: Current coach of the team.
+      manager: Current manager of the team.
+  captain:
+    description: Current team captain.
+    synonyms:
+      team_captain: Current captain of the team.
+      skipper: Current skipper of the team.
+tournaments:
+  __meta__:
+    primary_key: tournament
+    split_col: country
+    description: FIFA World Cup tournaments from 1930 to 2022.
+    synonyms:
+      competitions: Table of FIFA World Cup competition editions.
+      cups: Table of FIFA World Cup editions.
+      world_cups: Table of FIFA World Cup tournament editions.
+    foreign_keys:
+      country: countries
+      winner: teams
+    required:
+    - name
+    - year
+    - edition_number
+    - participants
+    - winner
+    - matches_played
+    - goals_scored
+  tournament:
+    description: Identifier for the FIFA World Cup tournament edition.
+    synonyms:
+      tournament_id: Unique identifier for the tournament.
+  name:
+    description: Name of the tournament (e.g. 1966 FIFA World Cup).
+    synonyms:
+      tournament_name: Name of the tournament.
+      competition_name: Name of the competition.
+      label: Label of the tournament.
+  year:
+    description: Year the tournament was held.
+    synonyms:
+      edition_year: Year of the tournament edition.
+      tournament_year: Year the tournament took place.
+  country:
+    description: Host country of the tournament.
+    synonyms:
+      host_country: Country that hosted the tournament.
+      nation: Nation that hosted the tournament.
+  edition_number:
+    description: Ordinal edition number of the tournament (e.g. 23 for the 23rd World Cup).
+    synonyms:
+      edition: Edition number of the tournament.
+      edition_no: Ordinal number of the edition.
+  mascot:
+    description: Official mascot of the tournament.
+    synonyms:
+      tournament_mascot: Mascot of the tournament.
+  participants:
+    description: Number of teams participating in the tournament.
+    synonyms:
+      teams: Number of participating teams.
+      participating_teams: Number of teams in the tournament.
+      num_participants: Number of participants.
+  winner:
+    description: Winning team of the tournament.
+    synonyms:
+      champion: Champion of the tournament.
+      winning_team: Team that won the tournament.
+  matches_played:
+    description: Total number of matches played in the tournament.
+    synonyms:
+      games_played: Total games played.
+      num_matches: Number of matches in the tournament.
+  goals_scored:
+    description: Total number of goals scored across all matches.
+    synonyms:
+      total_goals: Total goals in the tournament.
+      goals: Number of goals scored.
+venues:
+  __meta__:
+    primary_key: venue
+    split_col: country
+    description: Stadiums and arenas that hosted FIFA World Cup matches.
+    synonyms:
+      stadiums: Table of stadiums that hosted FIFA World Cup matches.
+      arenas: Table of arenas that hosted FIFA World Cup matches.
+      grounds: Table of grounds that hosted FIFA World Cup matches.
+    foreign_keys:
+      country: countries
+      architect: persons
+    required:
+    - name
+    - capacity
+    - coords
+    - inception
+    - city
+  venue:
+    description: Identifier for the venue.
+    synonyms:
+      venue_id: Unique identifier for the venue.
+  name:
+    description: Name of the venue or stadium.
+    synonyms:
+      venue_name: Name of the venue.
+      stadium_name: Name of the stadium.
+      label: Label of the venue.
+  country:
+    description: Country the venue is located in.
+    synonyms:
+      nation: Country the venue is located in.
+  capacity:
+    description: Maximum seating capacity of the venue.
+    synonyms:
+      seating_capacity: Seating capacity of the venue.
+      max_capacity: Maximum capacity of the venue.
+      stadium_capacity: Capacity of the stadium.
+  coords:
+    description: Geographic coordinates of the venue.
+    synonyms:
+      coordinates: Geographic coordinates of the venue.
+      location: Geographic location of the venue.
+  inception:
+    description: Date the venue was officially opened.
+    synonyms:
+      opening_date: Date the venue officially opened.
+      opened: Year the venue was opened.
+  city:
+    description: City or municipality the venue is located in.
+    synonyms:
+      municipality: Municipality the venue is located in.
+      host_city: City hosting the venue.
+  occupant:
+    description: Teams or organizations that regularly use the venue.
+    synonyms:
+      home_team: Home team of the venue.
+      tenants: Tenants of the venue.
+  architect:
+    description: Architect who designed the venue.
+    synonyms:
+      designer: Person who designed the venue.
+      venue_architect: Architect of the venue.
+german_states:
+  __meta__:
+    primary_key: german_state
+    split_col: country
+    description: The 16 German federal states (Bundesländer) with area, population, capital, and geographic coordinates.
+    synonyms:
+      bundeslaender: Table of the 16 German federal states (Bundesländer).
+      laender: Table of German Länder with area and population.
+      german_bundeslaender: Table of German federal states.
+    foreign_keys:
+      country: countries
+      capital: cities
+    required:
+    - name
+    - coords
+    - area_km2
+    - population
+    - inception
+  german_state:
+    description: Identifier for the German federal state.
+    synonyms:
+      state_id: Unique identifier for the state.
+      bundesland_id: Unique identifier for the Bundesland.
+  country:
+    description: Country the federal state belongs to.
+    synonyms:
+      nation: Country the state belongs to.
+  name:
+    description: Name of the German federal state.
+    synonyms:
+      state_name: Name of the state.
+      bundesland: Name of the Bundesland.
+      label: Label of the state.
+  coords:
+    description: Geographic coordinates of the state centroid.
+    synonyms:
+      coordinates: Geographic coordinates of the state centroid.
+      location: Geographic location of the state centroid.
+  area_km2:
+    description: Total area of the state in square kilometres.
+    synonyms:
+      area: Total area of the state.
+      surface_area_km2: Surface area of the state in square kilometres.
+  population:
+    description: Population of the state (most recent estimate).
+    synonyms:
+      pop: Population of the state.
+      inhabitants: Number of inhabitants in the state.
+  capital:
+    description: Capital city of the state.
+    synonyms:
+      capital_city: Capital city of the state.
+      state_capital: Capital of the state.
+      landeshauptstadt: Capital of the Bundesland.
+  inception:
+    description: Date the state was established or re-established.
+    synonyms:
+      founded: Date the state was founded.
+      established: Date the state was established.
+  iso_code:
+    description: ISO 3166-2 code of the state (e.g. DE-BY).
+    synonyms:
+      iso: ISO 3166-2 code.
+      state_code: ISO state code with DE prefix.
+  website:
+    description: Official website of the state government.
+    synonyms:
+      url: URL of the state government website.
+      official_website: Official website of the state.
+states:
+  __meta__:
+    primary_key: state
+    split_col: country
+    description: The 50 US states with area, population, capital, and geographic coordinates.
+    synonyms:
+      us_states: Table of the 50 US states with area and population.
+      american_states: Table of American states with geographic data.
+    foreign_keys:
+      country: countries
+      capital: cities
+    required:
+    - name
+    - coords
+    - area_km2
+    - population
+    - inception
+    - iso_code
+  state:
+    description: Identifier for the US state.
+    synonyms:
+      state_id: Unique identifier for the state.
+  country:
+    description: Country the state belongs to.
+    synonyms:
+      nation: Country the state belongs to.
+  name:
+    description: Name of the US state.
+    synonyms:
+      state_name: Name of the state.
+      label: Label of the state.
+  coords:
+    description: Geographic coordinates of the state centroid.
+    synonyms:
+      coordinates: Geographic coordinates of the state centroid.
+      location: Geographic location of the state centroid.
+  area_km2:
+    description: Total area of the state in square kilometres.
+    synonyms:
+      area: Total area of the state.
+      surface_area_km2: Surface area of the state in square kilometres.
+  population:
+    description: Population of the state (most recent estimate).
+    synonyms:
+      pop: Population of the state.
+      inhabitants: Number of inhabitants in the state.
+  capital:
+    description: Capital city of the state.
+    synonyms:
+      capital_city: Capital city of the state.
+      state_capital: Capital of the state.
+  inception:
+    description: Date the state was admitted to the Union.
+    synonyms:
+      statehood_date: Date of statehood.
+      admitted: Date admitted to the Union.
+  iso_code:
+    description: ISO 3166-2 code of the state (e.g. US-CA).
+    synonyms:
+      iso: ISO 3166-2 code.
+      state_code: Two-letter state abbreviation with US prefix.
+  nickname:
+    description: Nickname of the state.
+    synonyms:
+      alias: Informal name of the state.
+      state_nickname: Nickname of the state.
+  website:
+    description: Official website of the state government.
+    synonyms:
+      url: URL of the state government website.
+      official_website: Official website of the state.
+ucl_clubs:
+  __meta__:
+    primary_key: team
+    split_col: country
+    description: Football clubs that participated in recent UEFA Champions League seasons.
+    synonyms:
+      ucl_teams: Table of clubs that participated in recent UEFA Champions League seasons.
+      cl_clubs: Table of UEFA Champions League clubs.
+      champions_league_clubs: Table of clubs in the UEFA Champions League.
+    foreign_keys:
+      country: countries
+    required:
+    - name
+    - founded
+    - league
+    - leagueTitles
+    - socialFollowers
+  team:
+    description: Identifier for the football club.
+    synonyms:
+      team_id: Unique identifier for the football club.
+      club_id: Unique identifier for the club.
+  name:
+    description: Full name of the football club.
+    synonyms:
+      club_name: Name of the football club.
+      label: Label of the football club.
+  league:
+    description: Name of the domestic league the club competes in.
+    synonyms:
+      domestic_league: Domestic league the club plays in.
+      division: Division or league the club competes in.
+  country:
+    description: Country the club is based in.
+    synonyms:
+      nation: Country the football club is based in.
+      home_country: Home country of the football club.
+  founded:
+    description: Date or year the club was founded.
+    synonyms:
+      inception: Date the club was established.
+      founding_date: Founding date of the club.
+      established: Year the club was established.
+  stadium:
+    description: Name of the club's home stadium.
+    synonyms:
+      home_ground: Home ground of the club.
+      home_stadium: Name of the home stadium.
+      ground: Stadium or ground used by the club.
+  coach:
+    description: Name of the current head coach or manager.
+    synonyms:
+      head_coach: Current head coach of the club.
+      manager: Current manager of the club.
+  owner:
+    description: Name of the current owner or ownership group.
+    synonyms:
+      club_owner: Owner of the football club.
+      ownership: Ownership of the football club.
+  nickname:
+    description: Nickname or informal name of the club.
+    synonyms:
+      alias: Informal alias of the club.
+      informal_name: Informal name used for the club.
+  leagueTitles:
+    description: Number of domestic league titles won by the club.
+    synonyms:
+      league_titles: Number of domestic league championships won.
+      championships: Number of league championships.
+      title_count: Total number of league titles.
+  socialFollowers:
+    description: Number of social media followers of the club.
+    synonyms:
+      social_media_followers: Number of followers on social media.
+      followers: Total social media follower count.
+  website:
+    description: Official website URL of the club.
+    synonyms:
+      url: URL of the club's official website.
+      official_website: Official website of the football club.
+  shortName:
+    description: Short or abbreviated name of the club.
+    synonyms:
+      abbreviation: Abbreviated name of the club.
+      short_name: Short name of the club.
+  founder:
+    description: Name of the person or entity who founded the club.
+    synonyms:
+      club_founder: Founder of the football club.
+      founding_person: Person who founded the club.
+ucl_venues:
+  __meta__:
+    primary_key: venue
+    split_col: country
+    description: Stadiums and arenas that hosted UEFA Champions League matches.
+    synonyms:
+      ucl_stadiums: Table of stadiums that hosted UEFA Champions League matches.
+      cl_venues: Table of UEFA Champions League match venues.
+      champions_league_venues: Table of venues used in the UEFA Champions League.
+    foreign_keys:
+      country: countries
+      architect: persons
+    required:
+    - name
+    - capacity
+    - coords
+    - inception
+    - city
+  venue:
+    description: Identifier for the venue.
+    synonyms:
+      venue_id: Unique identifier for the venue.
+  name:
+    description: Name of the venue or stadium.
+    synonyms:
+      venue_name: Name of the venue.
+      stadium_name: Name of the stadium.
+      label: Label of the venue.
+  country:
+    description: Country the venue is located in.
+    synonyms:
+      nation: Country the venue is located in.
+  capacity:
+    description: Maximum seating capacity of the venue.
+    synonyms:
+      seating_capacity: Seating capacity of the venue.
+      max_capacity: Maximum capacity of the venue.
+      stadium_capacity: Capacity of the stadium.
+  coords:
+    description: Geographic coordinates of the venue.
+    synonyms:
+      coordinates: Geographic coordinates of the venue.
+      location: Geographic location of the venue.
+  inception:
+    description: Date the venue was officially opened.
+    synonyms:
+      opening_date: Date the venue officially opened.
+      opened: Year the venue was opened.
+  city:
+    description: City or municipality the venue is located in.
+    synonyms:
+      municipality: Municipality the venue is located in.
+      host_city: City hosting the venue.
+  occupant:
+    description: Teams or organizations that regularly use the venue.
+    synonyms:
+      home_team: Home team of the venue.
+      tenants: Tenants of the venue.
+  architect:
+    description: Architect who designed the venue.
+    synonyms:
+      designer: Person who designed the venue.
+      venue_architect: Architect of the venue.
+football_clubs:
+  __meta__:
+    primary_key: team
+    split_col: country
+    description: Football clubs that participate in domestic and international competitions.
+    synonyms:
+      clubs: Table of football clubs.
+      soccer_clubs: Table of soccer clubs.
+      club_teams: Table of football club teams.
+    foreign_keys:
+      country: countries
+    required:
+    - name
+    - founded
+    - league
+    - leagueTitles
+    - socialFollowers
+  team:
+    description: Identifier for the football club.
+    synonyms:
+      team_id: Unique identifier for the football club.
+      club_id: Unique identifier for the club.
+  name:
+    description: Full name of the football club.
+    synonyms:
+      club_name: Name of the football club.
+      label: Label of the football club.
+  league:
+    description: Name of the domestic league the club competes in.
+    synonyms:
+      domestic_league: Domestic league the club plays in.
+      division: Division or league the club competes in.
+  country:
+    description: Country the club is based in.
+    synonyms:
+      nation: Country the football club is based in.
+      home_country: Home country of the football club.
+  founded:
+    description: Date or year the club was founded.
+    synonyms:
+      inception: Date the club was established.
+      founding_date: Founding date of the club.
+      established: Year the club was established.
+  stadium:
+    description: Name of the club's home stadium.
+    synonyms:
+      home_ground: Home ground of the club.
+      home_stadium: Name of the home stadium.
+      ground: Stadium or ground used by the club.
+  coach:
+    description: Name of the current head coach or manager.
+    synonyms:
+      head_coach: Current head coach of the club.
+      manager: Current manager of the club.
+  owner:
+    description: Name of the current owner or ownership group.
+    synonyms:
+      club_owner: Owner of the football club.
+      ownership: Ownership of the football club.
+  nickname:
+    description: Nickname or informal name of the club.
+    synonyms:
+      alias: Informal alias of the club.
+      informal_name: Informal name used for the club.
+  leagueTitles:
+    description: Number of domestic league titles won by the club.
+    synonyms:
+      league_titles: Number of domestic league championships won.
+      championships: Number of league championships.
+      title_count: Total number of league titles.
+  socialFollowers:
+    description: Number of social media followers of the club.
+    synonyms:
+      social_media_followers: Number of followers on social media.
+      followers: Total social media follower count.
+  website:
+    description: Official website URL of the club.
+    synonyms:
+      url: URL of the club's official website.
+      official_website: Official website of the football club.
+  shortName:
+    description: Short or abbreviated name of the club.
+    synonyms:
+      abbreviation: Abbreviated name of the club.
+      short_name: Short name of the club.
+  founder:
+    description: Name of the person or entity who founded the club.
+    synonyms:
+      club_founder: Founder of the football club.
+      founding_person: Person who founded the club.
+nba_teams:
+  __meta__:
+    primary_key: team
+    split_col: country
+    description: NBA basketball teams with location, founding date, and roster details.
+    synonyms:
+      basketball_teams: Table of NBA basketball teams.
+      nba_franchises: Table of NBA franchises.
+    foreign_keys:
+      country: countries
+      city: cities
+      state: states
+    required:
+    - name
+    - founded
+    - followers
+  team:
+    description: Identifier for the NBA team.
+    synonyms:
+      team_id: Unique identifier for the NBA team.
+  name:
+    description: Full name of the NBA team.
+    synonyms:
+      team_name: Name of the NBA team.
+      label: Label of the team.
+  country:
+    description: Country the team is based in.
+    synonyms:
+      nation: Country the NBA team is based in.
+  city:
+    description: City the team is based in.
+    synonyms:
+      home_city: Home city of the team.
+      location: City where the team plays.
+  cityLabel:
+    description: Name of the city the team is based in.
+    synonyms:
+      city_name: Name of the home city.
+  state:
+    description: US state or province the team is based in.
+    synonyms:
+      province: Province or state of the team's location.
+  founded:
+    description: Year the team was founded or established.
+    synonyms:
+      inception: Date the team was established.
+      founding_year: Year the team was founded.
+  venue:
+    description: Home arena or venue of the team.
+    synonyms:
+      arena: Home arena of the NBA team.
+      home_arena: Home arena of the team.
+  coach:
+    description: Current head coach of the team.
+    synonyms:
+      head_coach: Current head coach.
+      manager: Current manager of the team.
+  owner:
+    description: Name of the current owner or ownership group.
+    synonyms:
+      team_owner: Owner of the NBA team.
+  website:
+    description: Official website URL of the team.
+    synonyms:
+      url: URL of the team's official website.
+      official_website: Official website of the NBA team.
+  followers:
+    description: Number of social media followers of the team.
+    synonyms:
+      social_media_followers: Number of followers on social media.
+      socialFollowers: Total social media follower count.
+nba_matches:
+  __meta__:
+    primary_key: game
+    split_col: country
+    description: NBA basketball games with participating teams, result, venue, date, and attendance.
+    synonyms:
+      nba_games: Table of NBA basketball games.
+      basketball_matches: Table of NBA basketball match results.
+    foreign_keys:
+      country: countries
+      team1: nba_teams
+      team2: nba_teams
+    required:
+    - date
+    - attendance
+    - seasonLabel
+  game:
+    description: Identifier for the NBA game.
+    synonyms:
+      game_id: Unique identifier for the game.
+      match_id: Identifier for the match.
+  country:
+    description: Country the game was played in (always United States).
+    synonyms:
+      nation: Country the game was played in.
+  team1:
+    description: First participating team.
+    synonyms:
+      home_team: First participating team.
+      first_team: First team in the game.
+  team1Label:
+    description: Name of the first participating team.
+    synonyms:
+      team1_name: Name of the first team.
+      home_team_name: Name of the home team.
+  team2:
+    description: Second participating team.
+    synonyms:
+      away_team: Second participating team.
+      second_team: Second team in the game.
+  team2Label:
+    description: Name of the second participating team.
+    synonyms:
+      team2_name: Name of the second team.
+      away_team_name: Name of the away team.
+  winnerLabel:
+    description: Name of the winning team.
+    synonyms:
+      winner: Winning team of the game.
+      winning_team: Team that won the game.
+  venueLabel:
+    description: Name of the venue where the game was played.
+    synonyms:
+      venue_name: Name of the venue.
+      arena_name: Name of the arena.
+  date:
+    description: Date the game was played.
+    synonyms:
+      game_date: Date the game was played.
+      played_on: Date on which the game was played.
+  attendance:
+    description: Number of spectators in attendance.
+    synonyms:
+      crowd_size: Size of the crowd at the game.
+      spectators: Number of spectators who attended.
+  seasonLabel:
+    description: Name or label of the NBA season the game belongs to.
+    synonyms:
+      season: Season the game was played in.
+      season_name: Name of the season.
+ucl_matches:
+  __meta__:
+    primary_key: match
+    split_col: venue
+    description: UEFA Champions League matches with teams, venue, date, attendance, and referee.
+    synonyms:
+      ucl_games: Table of UEFA Champions League games.
+      champions_league_matches: Table of UEFA Champions League match results.
+    foreign_keys:
+      venue: ucl_venues
+      team1: ucl_clubs
+      team2: ucl_clubs
+      winner: ucl_clubs
+      referee: persons
+    required:
+    - date
+    - attendance
+    - matchLabel
+  match:
+    description: Identifier for the UEFA Champions League match.
+    synonyms:
+      match_id: Unique identifier for the match.
+      game_id: Unique identifier for the game.
+  matchLabel:
+    description: Name or label of the match.
+    synonyms:
+      match_name: Name of the match.
+      label: Label of the match.
+  season:
+    description: Season the match was played in.
+    synonyms:
+      season_id: Identifier for the season.
+  seasonLabel:
+    description: Name or label of the season.
+    synonyms:
+      season_name: Name of the season.
+  date:
+    description: Date the match was played.
+    synonyms:
+      match_date: Date the match was played.
+      played_on: Date on which the match was played.
+  venue:
+    description: Venue where the match was played.
+    synonyms:
+      stadium: Stadium where the match was played.
+      ground: Ground where the match was played.
+  team1:
+    description: First participating club.
+    synonyms:
+      home_team: First participating club.
+      first_team: First club in the match.
+  team2:
+    description: Second participating club.
+    synonyms:
+      away_team: Second participating club.
+      second_team: Second club in the match.
+  winner:
+    description: Winning club (null for draws).
+    synonyms:
+      winning_team: Club that won the match.
+      victor: Winning club.
+  attendance:
+    description: Number of spectators in attendance.
+    synonyms:
+      crowd_size: Size of the crowd at the match.
+      spectators: Number of spectators who attended.
+  referee:
+    description: Person who refereed the match.
+    synonyms:
+      match_referee: Person who officiated the match.
+      official: Person who refereed the match.

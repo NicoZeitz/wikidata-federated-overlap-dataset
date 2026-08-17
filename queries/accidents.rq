@@ -1,0 +1,48 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT
+  ?accident
+  (SAMPLE(?name_v)       AS ?name)
+  (SAMPLE(?airline_v)    AS ?airline)
+  (SAMPLE(?country_v)    AS ?country)
+  (SAMPLE(?date_v)       AS ?date)
+  (SAMPLE(?fatalities_v) AS ?fatalities)
+  (SAMPLE(?survivors_v)  AS ?survivors)
+  (SAMPLE(?flight_no_v)  AS ?flight_number)
+WHERE {
+  ?accident wdt:P31 wd:Q744913 .
+
+  ?accident rdfs:label ?name_v .
+  FILTER(lang(?name_v) = "en")
+
+  OPTIONAL {
+    ?accident wdt:P137 ?airline_v .
+    ?airline_v wdt:P31/wdt:P279* wd:Q46970 .
+    FILTER NOT EXISTS { ?airline_v wdt:P576 ?adiss . }
+    ?airline_v rdfs:label ?alabel .
+    FILTER(lang(?alabel) = "en")
+    ?airline_v wdt:P17/wdt:P17? ?_ac .
+    ?_ac wdt:P31/wdt:P279* wd:Q3624078 .
+    ?_ac wdt:P297 ?_aciso .
+    FILTER NOT EXISTS { ?_ac wdt:P576 ?_acdiss . }
+    FILTER NOT EXISTS { ?_ac wdt:P31 wd:Q3024240 . }
+  }
+  OPTIONAL { ?accident wdt:P585 ?date_v . }
+  OPTIONAL { ?accident wdt:P1120 ?fatalities_v . }
+  OPTIONAL { ?accident wdt:P1561 ?survivors_v . }
+  OPTIONAL { ?accident wdt:P3090 ?flight_no_v . }
+
+  {
+    SELECT ?accident (SAMPLE(?c) AS ?country_v) WHERE {
+      ?accident wdt:P276 ?loc .
+      ?loc wdt:P17 ?c .
+      ?c wdt:P31/wdt:P279* wd:Q3624078 .
+      ?c wdt:P297 ?ciso2 .
+      FILTER NOT EXISTS { ?c wdt:P576 ?cdiss . }
+      FILTER NOT EXISTS { ?c wdt:P31 wd:Q3024240 . }
+    } GROUP BY ?accident
+  }
+}
+GROUP BY ?accident

@@ -1,0 +1,51 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT
+?team
+(SAMPLE(?_country)    AS ?country)
+(SAMPLE(?_label)      AS ?name)
+(SAMPLE(?_city)       AS ?city)
+(SAMPLE(?_cityLabel)  AS ?cityLabel)
+(SAMPLE(?_state)      AS ?state)
+(SAMPLE(?_founded)    AS ?founded)
+(SAMPLE(?_venueLabel) AS ?venue)
+(SAMPLE(?_coachLabel) AS ?coach)
+(SAMPLE(?_ownerLabel) AS ?owner)
+(SAMPLE(?_website)    AS ?website)
+(SAMPLE(?_followers)  AS ?followers)
+WHERE {
+{ SELECT DISTINCT ?team WHERE {
+  ?game wdt:P31 wd:Q18431960 .
+  ?game wdt:P361 ?season .
+  ?season wdt:P3450 wd:Q155223 .
+  ?game wdt:P1923 ?team .
+}}
+
+?team rdfs:label ?_label . FILTER(LANG(?_label) = "en")
+
+OPTIONAL {
+  ?team wdt:P17/wdt:P17? ?_country .
+  ?_country wdt:P31/wdt:P279* wd:Q3624078 .
+  FILTER NOT EXISTS { ?_country wdt:P576 ?_cdiss . }
+  FILTER NOT EXISTS { ?_country wdt:P31 wd:Q3024240 . }
+}
+
+OPTIONAL { ?team wdt:P159 ?_city .
+           ?_city wdt:P31/wdt:P279* wd:Q486972 .
+           ?_city rdfs:label ?_cityLabel . FILTER(LANG(?_cityLabel) = "en") }
+OPTIONAL { ?team wdt:P115 ?_venue .
+           ?_venue rdfs:label ?_venueLabel . FILTER(LANG(?_venueLabel) = "en")
+           OPTIONAL { ?_venue wdt:P131+ ?_state .
+                      ?_state wdt:P31 wd:Q35657 . } }
+OPTIONAL { ?team wdt:P571 ?_founded }
+OPTIONAL { ?team wdt:P286 ?_coach .
+           ?_coach rdfs:label ?_coachLabel . FILTER(LANG(?_coachLabel) = "en") }
+OPTIONAL { ?team wdt:P127 ?_owner .
+           ?_owner rdfs:label ?_ownerLabel . FILTER(LANG(?_ownerLabel) = "en") }
+OPTIONAL { ?team wdt:P856  ?_website }
+OPTIONAL { ?team wdt:P8687 ?_followers }
+}
+GROUP BY ?team
+ORDER BY ?name

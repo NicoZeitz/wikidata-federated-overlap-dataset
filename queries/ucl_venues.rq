@@ -1,0 +1,59 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT
+  ?venue
+  (SAMPLE(?name_v)      AS ?name)
+  (SAMPLE(?coords_v)    AS ?coords)
+  (SAMPLE(?capacity_v)  AS ?capacity)
+  (SAMPLE(?inception_v) AS ?inception)
+  (SAMPLE(?city_v)      AS ?city)
+  (SAMPLE(?country_v)      AS ?country)
+  (SAMPLE(?architect_v)    AS ?architect)
+  (GROUP_CONCAT(DISTINCT ?occupant_v; SEPARATOR=", ") AS ?occupant)
+WHERE {
+  { SELECT DISTINCT ?venue WHERE {
+    ?match wdt:P31 wd:Q109623729 .
+    ?match wdt:P361 ?season .
+    ?season wdt:P31 wd:Q123724352 .
+    ?match wdt:P276 ?venue .
+  }}
+
+  ?venue rdfs:label ?name_v .
+  FILTER(lang(?name_v) = "en")
+
+  {
+    SELECT ?venue (SAMPLE(?country_mapped) AS ?country_v) WHERE {
+      { ?venue wdt:P17 ?c . }
+      UNION
+      { ?venue wdt:P131 ?loc . ?loc wdt:P17 ?c . }
+      BIND(IF(?c = wd:Q55, wd:Q29999, ?c) AS ?country_mapped)
+    } GROUP BY ?venue
+  }
+
+  OPTIONAL { ?venue wdt:P625  ?coords_v . }
+  OPTIONAL { ?venue wdt:P1083 ?capacity_v . }
+  OPTIONAL { ?venue wdt:P571  ?inception_v . }
+  OPTIONAL {
+    ?venue wdt:P84 ?architect_v .
+    ?architect_v wdt:P31 wd:Q5 .
+    FILTER EXISTS {
+      { ?architect_v wdt:P27 ?_ac . FILTER NOT EXISTS { ?_ac wdt:P576 ?_ad . } }
+      UNION
+      { ?architect_v wdt:P19 ?_abp . ?_abp wdt:P17 ?_abc . FILTER NOT EXISTS { ?_abc wdt:P576 ?_abcd . } }
+    }
+  }
+  OPTIONAL {
+    SELECT ?venue (SAMPLE(?c) AS ?city_v) WHERE {
+      ?venue wdt:P131+ ?c .
+      ?c wdt:P31/wdt:P279* wd:Q486972 .
+    } GROUP BY ?venue
+  }
+  OPTIONAL {
+    ?venue wdt:P466 ?occupantEntity .
+    ?occupantEntity rdfs:label ?occupant_v .
+    FILTER(lang(?occupant_v) = "en")
+  }
+}
+GROUP BY ?venue

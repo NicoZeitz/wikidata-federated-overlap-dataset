@@ -1,0 +1,193 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# Persons from: award winners, FIFA WC venue architects, current team head
+# coaches and captains, FIFA WC match referees, and current heads of
+# state/government of all sovereign countries.
+SELECT
+  ?person
+  (SAMPLE(?name_v)          AS ?name)
+  (SAMPLE(?sex_v)           AS ?sex)
+  (SAMPLE(?birth_date_v)    AS ?birth_date)
+  (SAMPLE(?death_date_v)    AS ?death_date)
+  (SAMPLE(?given_name_v)    AS ?given_name)
+  (SAMPLE(?family_name_v)   AS ?family_name)
+  (SAMPLE(?citizenship_v)   AS ?citizenship)
+  (SAMPLE(?birth_country_v) AS ?birth_country)
+  (SAMPLE(COALESCE(?citizenship_v, ?birth_country_v)) AS ?country)
+  (SAMPLE(?educated_at_v)   AS ?educated_at)
+  (SAMPLE(?height_v)        AS ?height_cm)
+  (SAMPLE(?children_v)      AS ?number_of_children)
+  (COUNT(DISTINCT ?sibling) AS ?number_of_siblings)
+WHERE {
+  {
+    # Award winners (22 major international awards)
+    VALUES ?aw {
+      wd:Q38104  wd:Q44585  wd:Q80061  wd:Q35637  wd:Q37922  wd:Q47170
+      wd:Q185667 wd:Q179808 wd:Q28835  wd:Q46525  wd:Q160082 wd:Q133160
+      wd:Q188184
+      wd:Q166177 wd:Q41254  wd:Q19020  wd:Q209459 wd:Q603631 wd:Q284500
+      wd:Q921415 wd:Q739936 wd:Q658444
+    }
+    ?person wdt:P31 wd:Q5 .
+    ?person wdt:P166 ?aw .
+  } UNION {
+    # Architects of FIFA World Cup venues (P84)
+    ?fmatch wdt:P31 wd:Q17315159 .
+    ?fmatch wdt:P361 ?fstage .
+    ?fstage wdt:P361 ?ftournament .
+    VALUES ?fcomp { wd:Q19317 wd:Q19323 }
+    ?ftournament wdt:P3450 ?fcomp .
+    ?fmatch wdt:P276 ?fvenue .
+    ?fvenue wdt:P84 ?person .
+    ?person wdt:P31 wd:Q5 .
+  } UNION {
+    # Current head coaches of FIFA World Cup teams (P286, no end date)
+    ?cmatch wdt:P31 wd:Q17315159 .
+    ?cmatch wdt:P361 ?cstage .
+    ?cstage wdt:P361 ?ctournament .
+    VALUES ?ccomp { wd:Q19317 wd:Q19323 }
+    ?ctournament wdt:P3450 ?ccomp .
+    ?cmatch wdt:P1923 ?cteam .
+    ?cteam p:P286 ?coachStmt .
+    ?coachStmt ps:P286 ?person .
+    FILTER NOT EXISTS { ?coachStmt pq:P582 ?coachEnd . }
+    ?person wdt:P31 wd:Q5 .
+  } UNION {
+    # Current captains of FIFA World Cup teams (P634, no end date)
+    ?pmatch wdt:P31 wd:Q17315159 .
+    ?pmatch wdt:P361 ?pstage .
+    ?pstage wdt:P361 ?ptournament .
+    VALUES ?pcomp { wd:Q19317 wd:Q19323 }
+    ?ptournament wdt:P3450 ?pcomp .
+    ?pmatch wdt:P1923 ?pteam .
+    ?pteam p:P634 ?captainStmt .
+    ?captainStmt ps:P634 ?person .
+    FILTER NOT EXISTS { ?captainStmt pq:P582 ?captainEnd . }
+    ?person wdt:P31 wd:Q5 .
+  } UNION {
+    # Referees of FIFA World Cup matches (P1652)
+    ?rmatch wdt:P31 wd:Q17315159 .
+    ?rmatch wdt:P361 ?rstage .
+    ?rstage wdt:P361 ?rtournament .
+    VALUES ?rcomp { wd:Q19317 wd:Q19323 }
+    ?rtournament wdt:P3450 ?rcomp .
+    ?rmatch wdt:P1652 ?person .
+    ?person wdt:P31 wd:Q5 .
+  } UNION {
+    # Current heads of state of sovereign countries (P35)
+    ?hoscountry wdt:P31/wdt:P279* wd:Q3624078 .
+    ?hoscountry wdt:P297 ?hosiso2 .
+    FILTER NOT EXISTS { ?hoscountry wdt:P576 ?hosDiss . }
+    ?hoscountry wdt:P35 ?person .
+    ?person wdt:P31 wd:Q5 .
+  } UNION {
+    # Current heads of government of sovereign countries (P6)
+    ?hogcountry wdt:P31/wdt:P279* wd:Q3624078 .
+    ?hogcountry wdt:P297 ?hogiso2 .
+    FILTER NOT EXISTS { ?hogcountry wdt:P576 ?hogDiss . }
+    ?hogcountry wdt:P6 ?person .
+    ?person wdt:P31 wd:Q5 .
+  } UNION {
+    # Referees of UEFA Champions League matches (P1652)
+    ?uclref wdt:P31 wd:Q109623729 .
+    ?uclref wdt:P361 ?uclrefseason .
+    ?uclrefseason wdt:P31 wd:Q123724352 .
+    ?uclref wdt:P1652 ?person .
+    ?person wdt:P31 wd:Q5 .
+  } UNION {
+    # Architects of UEFA Champions League venues (P84)
+    ?uclarch wdt:P31 wd:Q109623729 .
+    ?uclarch wdt:P361 ?uclarchseason .
+    ?uclarchseason wdt:P31 wd:Q123724352 .
+    ?uclarch wdt:P276 ?uclarchvenue .
+    ?uclarchvenue wdt:P84 ?person .
+    ?person wdt:P31 wd:Q5 .
+  } UNION {
+    # CEOs of business enterprises (P169)
+    ?ceocompany wdt:P31 wd:Q4830453 .
+    FILTER NOT EXISTS { ?ceocompany wdt:P576 ?ceocodiss . }
+    ?ceocompany wdt:P169 ?person .
+    ?person wdt:P31 wd:Q5 .
+  }
+
+  OPTIONAL { ?person rdfs:label ?name_v . FILTER(lang(?name_v) = "en") }
+
+  OPTIONAL {
+    ?person wdt:P21 ?sexEntity .
+    ?sexEntity rdfs:label ?sex_v .
+    FILTER(lang(?sex_v) = "en")
+  }
+
+  OPTIONAL {
+    ?person wdt:P569 ?birth_date_v .
+    FILTER(DATATYPE(?birth_date_v) = xsd:dateTime)
+    FILTER(YEAR(?birth_date_v) >= 1800)
+  }
+
+  OPTIONAL {
+    ?person wdt:P570 ?death_date_v .
+    FILTER(DATATYPE(?death_date_v) = xsd:dateTime)
+  }
+
+  OPTIONAL {
+    ?person wdt:P735 ?gnEntity .
+    ?gnEntity rdfs:label ?given_name_v .
+    FILTER(lang(?given_name_v) = "en")
+  }
+
+  OPTIONAL {
+    ?person wdt:P734 ?fnEntity .
+    ?fnEntity rdfs:label ?family_name_v .
+    FILTER(lang(?family_name_v) = "en")
+  }
+
+  OPTIONAL {
+    ?person wdt:P27 ?cBase .
+    BIND(COALESCE(
+      IF(?cBase = wd:Q21,        wd:Q145,  ?_un),
+      IF(?cBase = wd:Q22,        wd:Q145,  ?_un),
+      IF(?cBase = wd:Q23635,     wd:Q145,  ?_un),
+      IF(?cBase = wd:Q25,        wd:Q145,  ?_un),
+      IF(?cBase = wd:Q26,        wd:Q145,  ?_un),
+      IF(?cBase = wd:Q4628,      wd:Q35,   ?_un),
+      IF(?cBase = wd:Q756617,    wd:Q35,   ?_un),
+      IF(?cBase = wd:Q34754,     wd:Q1045, ?_un),
+      IF(?cBase = wd:Q139711891, wd:Q1033, ?_un),
+      ?cBase
+    ) AS ?citizenshipEff)
+    ?citizenshipEff wdt:P31/wdt:P279* wd:Q3624078 .
+    ?citizenshipEff wdt:P297 ?iso2check .
+    FILTER NOT EXISTS { ?citizenshipEff wdt:P576 ?cdiss . }
+    FILTER NOT EXISTS { ?citizenshipEff wdt:P31 wd:Q3024240 . }
+    BIND(?citizenshipEff AS ?citizenship_v)
+  }
+
+  OPTIONAL {
+    ?person wdt:P19 ?birthPlace .
+    ?birthPlace wdt:P17/wdt:P17? ?birthCountryEntity .
+    ?birthCountryEntity wdt:P31/wdt:P279* wd:Q3624078 .
+    ?birthCountryEntity wdt:P297 ?bciso2 .
+    FILTER NOT EXISTS { ?birthCountryEntity wdt:P576 ?bcdiss . }
+    FILTER NOT EXISTS { ?birthCountryEntity wdt:P31 wd:Q3024240 . }
+    BIND(?birthCountryEntity AS ?birth_country_v)
+  }
+
+  FILTER(BOUND(?citizenship_v) || BOUND(?birth_country_v))
+
+  OPTIONAL {
+    ?person wdt:P69 ?educatedAtEntity .
+    ?educatedAtEntity rdfs:label ?educated_at_v .
+    FILTER(lang(?educated_at_v) = "en")
+  }
+
+  OPTIONAL { ?person wdt:P2048 ?height_v . }
+  OPTIONAL { ?person wdt:P1971 ?children_v . }
+  OPTIONAL { ?person wdt:P3373 ?sibling . }
+}
+GROUP BY ?person

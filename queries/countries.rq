@@ -1,0 +1,133 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+
+SELECT
+  ?country
+  (SAMPLE(?name_v)                AS ?name)
+  (SAMPLE(?official_name_v)       AS ?official_name)
+  (SAMPLE(?iso2_v)                AS ?iso2)
+  (SAMPLE(?iso3_v)                AS ?iso3)
+  (SAMPLE(?continent_v)           AS ?continent)
+  (SAMPLE(?area_v)                AS ?area_km2)
+  (SAMPLE(?coords_v)              AS ?coords)
+  (SAMPLE(?capital_v)             AS ?capital)
+  (SAMPLE(?currency_v)            AS ?currency_name)
+  (SAMPLE(?pop_v)                 AS ?population)
+  (SAMPLE(?pop_male_v)            AS ?population_male)
+  (SAMPLE(?pop_female_v)          AS ?population_female)
+  (SAMPLE(?gdp_v)                 AS ?gdp_usd)
+  (SAMPLE(?inception_v)           AS ?inception)
+  (SAMPLE(?life_exp_v)            AS ?life_expectancy)
+  (SAMPLE(?hdi_v)                 AS ?human_development_index)
+  (SAMPLE(?unemployment_v)        AS ?unemployment_rate)
+  (SAMPLE(?gini_v)                AS ?gini_coefficient)
+  (SAMPLE(?fertility_v)           AS ?total_fertility_rate)
+  (SAMPLE(?birth_rate_v)          AS ?birth_rate)
+  (SAMPLE(?death_rate_v)          AS ?death_rate)
+  (SAMPLE(?suicide_rate_v)        AS ?suicide_rate)
+  (SAMPLE(?median_income_v)       AS ?median_income_usd)
+  (SAMPLE(?democracy_index_v)     AS ?democracy_index)
+  (SAMPLE(?phone_code_v)          AS ?telephone_code)
+  (SAMPLE(?central_bank_v)        AS ?central_bank)
+  (SAMPLE(?highest_point_v)       AS ?highest_point)
+  (SAMPLE(?highest_point_m_v)     AS ?highest_point_m)
+  (SAMPLE(?lowest_point_v)        AS ?lowest_point)
+  (SAMPLE(?lowest_point_m_v)      AS ?lowest_point_m)
+  (SAMPLE(?northmost_v)           AS ?northernmost_point)
+  (SAMPLE(?southmost_v)           AS ?southernmost_point)
+  (SAMPLE(?eastmost_v)            AS ?easternmost_point)
+  (SAMPLE(?westmost_v)            AS ?westernmost_point)
+  (GROUP_CONCAT(DISTINCT ?demonym_v;  SEPARATOR=", ") AS ?demonym)
+  (GROUP_CONCAT(DISTINCT ?lang_v;     SEPARATOR=", ") AS ?languages)
+  (SAMPLE(?head_of_state_v)      AS ?head_of_state)
+  (SAMPLE(?head_of_government_v) AS ?head_of_government)
+WHERE {
+  ?country wdt:P31/wdt:P279* wd:Q3624078 .
+  FILTER NOT EXISTS { ?country wdt:P576 ?dissolved . }
+
+  ?country wdt:P297 ?iso2_v .
+
+  ?country rdfs:label ?name_v .
+  FILTER(lang(?name_v) = "en")
+
+  OPTIONAL { ?country wdt:P298  ?iso3_v . }
+  OPTIONAL {
+    ?country wdt:P30 ?continent_v .
+    VALUES ?continent_v { wd:Q15 wd:Q18 wd:Q46 wd:Q48 wd:Q49 wd:Q51 wd:Q55643 }
+  }
+  OPTIONAL { ?country wdt:P2046 ?area_v . }
+  OPTIONAL { ?country wdt:P625  ?coords_v . }
+  OPTIONAL { ?country wdt:P36 ?capital_v . }
+  OPTIONAL { ?country wdt:P571  ?inception_v . }
+  OPTIONAL { ?country wdt:P474  ?phone_code_v . }
+  OPTIONAL { ?country wdt:P1082 ?pop_v . }
+  OPTIONAL { ?country wdt:P1540 ?pop_male_v . }
+  OPTIONAL { ?country wdt:P1539 ?pop_female_v . }
+  OPTIONAL { ?country wdt:P2131 ?gdp_v . }
+  OPTIONAL { ?country wdt:P2250 ?life_exp_v . }
+  OPTIONAL { ?country wdt:P1081 ?hdi_v . }
+  OPTIONAL { ?country wdt:P1198 ?unemployment_v . }
+  OPTIONAL { ?country wdt:P1125 ?gini_v . }
+  OPTIONAL { ?country wdt:P4010 ?fertility_v . }
+  OPTIONAL { ?country wdt:P8763 ?birth_rate_v . }
+  OPTIONAL { ?country wdt:P10091 ?death_rate_v . }
+  OPTIONAL { ?country wdt:P3864 ?suicide_rate_v . }
+  OPTIONAL { ?country wdt:P3529 ?median_income_v . }
+  OPTIONAL { ?country wdt:P8328 ?democracy_index_v . }
+  OPTIONAL { ?country wdt:P1332 ?northmost_v . }
+  OPTIONAL { ?country wdt:P1333 ?southmost_v . }
+  OPTIONAL { ?country wdt:P1334 ?eastmost_v . }
+  OPTIONAL { ?country wdt:P1335 ?westmost_v . }
+
+  OPTIONAL {
+    ?country wdt:P1448 ?official_name_v .
+    FILTER(lang(?official_name_v) = "en")
+  }
+
+  OPTIONAL {
+    ?country wdt:P38 ?currencyEntity .
+    ?currencyEntity rdfs:label ?currency_v .
+    FILTER(lang(?currency_v) = "en")
+  }
+
+  OPTIONAL {
+    ?country wdt:P1304 ?centralBankEntity .
+    ?centralBankEntity rdfs:label ?central_bank_v .
+    FILTER(lang(?central_bank_v) = "en")
+  }
+
+  OPTIONAL {
+    ?country p:P610 ?hpStmt .
+    ?hpStmt ps:P610 ?hpEntity .
+    ?hpEntity rdfs:label ?highest_point_v .
+    FILTER(lang(?highest_point_v) = "en")
+    OPTIONAL { ?hpStmt pq:P2044 ?highest_point_m_v . }
+  }
+
+  OPTIONAL {
+    ?country p:P1589 ?lpStmt .
+    ?lpStmt ps:P1589 ?lpEntity .
+    ?lpEntity rdfs:label ?lowest_point_v .
+    FILTER(lang(?lowest_point_v) = "en")
+    OPTIONAL { ?lpStmt pq:P2044 ?lowest_point_m_v . }
+  }
+
+  OPTIONAL {
+    ?country wdt:P1549 ?demonym_v .
+    FILTER(lang(?demonym_v) = "en")
+  }
+
+  OPTIONAL {
+    ?country wdt:P37 ?langEntity .
+    ?langEntity rdfs:label ?lang_v .
+    FILTER(lang(?lang_v) = "en")
+  }
+
+  OPTIONAL { ?country wdt:P35 ?head_of_state_v . ?head_of_state_v wdt:P31 wd:Q5 . FILTER EXISTS { { ?head_of_state_v wdt:P27 ?_sc . } UNION { ?head_of_state_v wdt:P19 ?_sbp . } } }
+  OPTIONAL { ?country wdt:P6 ?head_of_government_v . ?head_of_government_v wdt:P31 wd:Q5 . FILTER EXISTS { { ?head_of_government_v wdt:P27 ?_gc . } UNION { ?head_of_government_v wdt:P19 ?_gbp . } } }
+}
+GROUP BY ?country

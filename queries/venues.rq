@@ -1,0 +1,55 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT
+  ?venue
+  (SAMPLE(?name_v)      AS ?name)
+  (SAMPLE(?coords_v)    AS ?coords)
+  (SAMPLE(?capacity_v)  AS ?capacity)
+  (SAMPLE(?inception_v) AS ?inception)
+  (SAMPLE(?city_v)      AS ?city)
+  (SAMPLE(?country_v)   AS ?country)
+  (SAMPLE(?architect_v) AS ?architect)
+  (GROUP_CONCAT(DISTINCT ?occupant_v; SEPARATOR=", ") AS ?occupant)
+WHERE {
+  # Venues that hosted matches in any FIFA World Cup (men's, women's, youth)
+  ?match wdt:P31 wd:Q17315159 .
+  ?match wdt:P361 ?stage .
+  ?stage wdt:P361 ?tournament .
+  VALUES ?competition { wd:Q19317 wd:Q19323 }
+  ?tournament wdt:P3450 ?competition .
+  ?match wdt:P276 ?venue .
+
+  ?venue rdfs:label ?name_v .
+  FILTER(lang(?name_v) = "en")
+
+  {
+    SELECT ?venue (SAMPLE(?c) AS ?country_v) WHERE {
+      { ?venue wdt:P17 ?c . }
+      UNION
+      { ?venue wdt:P131 ?loc . ?loc wdt:P17 ?c . }
+    } GROUP BY ?venue
+  }
+
+  OPTIONAL { ?venue wdt:P625  ?coords_v . }
+  OPTIONAL { ?venue wdt:P1083 ?capacity_v . }
+  OPTIONAL { ?venue wdt:P571  ?inception_v . }
+  OPTIONAL {
+    ?venue wdt:P84 ?architect_v .
+    ?architect_v wdt:P31 wd:Q5 .
+  }
+  OPTIONAL {
+    SELECT ?venue (SAMPLE(?c) AS ?city_v) WHERE {
+      ?venue wdt:P131+ ?c .
+      ?c wdt:P31/wdt:P279* wd:Q486972 .
+    } GROUP BY ?venue
+  }
+
+  OPTIONAL {
+    ?venue wdt:P466 ?occupantEntity .
+    ?occupantEntity rdfs:label ?occupant_v .
+    FILTER(lang(?occupant_v) = "en")
+  }
+}
+GROUP BY ?venue

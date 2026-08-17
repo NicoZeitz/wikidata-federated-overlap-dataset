@@ -1,0 +1,113 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+  ?airline
+  (SAMPLE(?name_v)            AS ?name)
+  (SAMPLE(?inception_v)       AS ?inception)
+  (SAMPLE(?iata_v)            AS ?iata_code)
+  (SAMPLE(?icao_v)            AS ?icao_code)
+  (SAMPLE(?country_v)         AS ?country)
+  (SAMPLE(?headquarters_v)    AS ?headquarters)
+  (SAMPLE(?parent_company_v)  AS ?parent_company)
+  (SAMPLE(?fleet_size_v)      AS ?fleet_size)
+  (SAMPLE(?employees_v)       AS ?employees)
+  (SAMPLE(?revenue_v)         AS ?revenue_usd)
+  (SAMPLE(?website_v)         AS ?website)
+  (SAMPLE(?hub_v)             AS ?hub_airport)
+WHERE {
+  ?airline wdt:P31/wdt:P279* wd:Q46970 .
+  FILTER NOT EXISTS { ?airline wdt:P576 ?dissolved . }
+
+  ?airline rdfs:label ?name_v .
+  FILTER(lang(?name_v) = "en")
+
+  ?airline wdt:P17/wdt:P17? ?country_v .
+  ?country_v wdt:P31/wdt:P279* wd:Q3624078 .
+  ?country_v wdt:P297 ?ciso2 .
+  FILTER NOT EXISTS { ?country_v wdt:P576 ?cdiss . }
+  FILTER NOT EXISTS { ?country_v wdt:P31 wd:Q3024240 . }
+
+  OPTIONAL { ?airline wdt:P229  ?iata_v . }
+  OPTIONAL { ?airline wdt:P230  ?icao_v . }
+  OPTIONAL { ?airline wdt:P749  ?parent_company_v .
+    ?parent_company_v wdt:P31/wdt:P279* wd:Q46970 .
+    FILTER NOT EXISTS { ?parent_company_v wdt:P576 ?pdiss . }
+    ?parent_company_v rdfs:label ?pclabel .
+    FILTER(lang(?pclabel) = "en")
+  }
+  OPTIONAL {
+    ?airline wdt:P159 ?headquarters_v .
+    ?headquarters_v wdt:P31/wdt:P279* wd:Q486972 .
+    ?headquarters_v rdfs:label ?hqlabel .
+    FILTER(lang(?hqlabel) = "en")
+  }
+  OPTIONAL { ?airline wdt:P3153 ?fleet_size_v . }
+  OPTIONAL { ?airline wdt:P856  ?website_v . }
+
+  OPTIONAL {
+    ?airline wdt:P113 ?hub_v .
+    ?hub_v wdt:P31/wdt:P279* wd:Q1248784 .
+    ?hub_v wdt:P238 ?hubiata .
+    FILTER NOT EXISTS { ?hub_v wdt:P576 ?hubdiss . }
+    ?hub_v rdfs:label ?hublabel .
+    FILTER(lang(?hublabel) = "en")
+    {
+      SELECT ?hub_v (SAMPLE(?hc) AS ?hubcity) WHERE {
+        ?hub_v wdt:P931 ?hc .
+      } GROUP BY ?hub_v
+    }
+    {
+      SELECT ?hubcity (SAMPLE(?hco) AS ?hubcountry) WHERE {
+        ?hubcity wdt:P17 ?hco .
+        ?hco wdt:P31/wdt:P279* wd:Q3624078 .
+        ?hco wdt:P297 ?hciso2 .
+        FILTER NOT EXISTS { ?hco wdt:P576 ?hcodiss . }
+        FILTER NOT EXISTS { ?hco wdt:P31 wd:Q3024240 . }
+      } GROUP BY ?hubcity
+    }
+    FILTER NOT EXISTS { ?hubcountry wdt:P576 ?hubcdiss . }
+    FILTER NOT EXISTS { ?hubcountry wdt:P31 wd:Q3024240 . }
+  }
+
+  OPTIONAL {
+    ?airline wdt:P571 ?inception_v .
+    FILTER(
+      DATATYPE(?inception_v) = xsd:dateTime ||
+      DATATYPE(?inception_v) = xsd:gYear    ||
+      DATATYPE(?inception_v) = xsd:date
+    )
+  }
+
+  OPTIONAL {
+    {
+      SELECT ?airline (MAX(?empDate) AS ?latestEmpDate) WHERE {
+        ?airline p:P1128 ?empStmt .
+        ?empStmt pq:P585 ?empDate .
+      } GROUP BY ?airline
+    }
+    ?airline p:P1128 ?empStmt .
+    ?empStmt ps:P1128 ?employees_v ;
+             pq:P585 ?latestEmpDate .
+    FILTER(isNumeric(?employees_v))
+  }
+
+  OPTIONAL {
+    {
+      SELECT ?airline (MAX(?revDate) AS ?latestRevDate) WHERE {
+        ?airline p:P2139 ?revStmt .
+        ?revStmt pq:P585 ?revDate .
+      } GROUP BY ?airline
+    }
+    ?airline p:P2139 ?revStmt .
+    ?revStmt ps:P2139 ?revenue_v ;
+             pq:P585 ?latestRevDate .
+    FILTER(isNumeric(?revenue_v))
+  }
+}
+GROUP BY ?airline
