@@ -614,7 +614,7 @@ def _write_comments_yaml(db_dir: Path, spec: DbSpec, gathered: list[_GatheredTab
         "__database__": f"Database covering {label} with tables: {table_names}{suffix}.",
     }
     for g in gathered:
-        entry: dict = {"__table__": g.spec.description or g.spec.chosen_name}
+        entry: dict = {"__table__": (g.spec.description or g.spec.chosen_name).replace("{{REGION}}", label)}
         for cs in g.valid_col_specs:
             entry[cs.chosen_name] = cs.description or cs.chosen_name
         doc[g.spec.chosen_name] = entry

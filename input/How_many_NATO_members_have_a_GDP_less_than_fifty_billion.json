@@ -1,0 +1,5354 @@
+{
+    "extra": {
+        "relevant_data_agents": [
+            "A22",
+            "A30",
+            "A32",
+            "A36",
+            "A37",
+            "A40",
+            "A69",
+            "A70",
+            "A72",
+            "A73",
+            "A74",
+            "A76",
+            "A93",
+            "A94",
+            "A97",
+            "A113",
+            "A114",
+            "A116",
+            "A117",
+            "A138",
+            "A143",
+            "A156",
+            "A157",
+            "A185",
+            "A186",
+            "A192",
+            "A195",
+            "A197",
+            "A203",
+            "A206",
+            "A207",
+            "A208",
+            "A209",
+            "A210",
+            "A213",
+            "A220",
+            "A221",
+            "A222",
+            "A226",
+            "A245",
+            "A246",
+            "A247",
+            "A253",
+            "A254",
+            "A255",
+            "A256",
+            "A270",
+            "A275",
+            "A276",
+            "A282",
+            "A283",
+            "A286",
+            "A289",
+            "A300",
+            "A302",
+            "A303",
+            "A305",
+            "A306",
+            "A307",
+            "A309",
+            "A310",
+            "A313",
+            "A315",
+            "A316",
+            "A317",
+            "A319",
+            "A327",
+            "A329",
+            "A330",
+            "A340",
+            "A342",
+            "A344",
+            "A345",
+            "A349",
+            "A350",
+            "A378",
+            "A382",
+            "A384",
+            "A411",
+            "A412",
+            "A438",
+            "A453",
+            "A456",
+            "A457",
+            "A458",
+            "A460",
+            "A469",
+            "A486",
+            "A487",
+            "A491",
+            "A494",
+            "A533",
+            "A539",
+            "A544",
+            "A545",
+            "A546",
+            "A547",
+            "A553",
+            "A554",
+            "A556",
+            "A560",
+            "A563",
+            "A564",
+            "A590",
+            "A591",
+            "A593",
+            "A595",
+            "A599",
+            "A605",
+            "A608",
+            "A609",
+            "A611",
+            "A623",
+            "A641",
+            "A642",
+            "A664",
+            "A665",
+            "A667",
+            "A668",
+            "A670",
+            "A671",
+            "A682",
+            "A707",
+            "A708",
+            "A709",
+            "A710",
+            "A713",
+            "A737",
+            "A738",
+            "A741",
+            "A742",
+            "A743",
+            "A745",
+            "A773",
+            "A774",
+            "A794",
+            "A795",
+            "A811",
+            "A812",
+            "A814",
+            "A844",
+            "A845",
+            "A860",
+            "A864",
+            "A865",
+            "A866",
+            "A867",
+            "A871",
+            "A873",
+            "A886",
+            "A907",
+            "A909",
+            "A910",
+            "A912",
+            "A913",
+            "A915",
+            "A917",
+            "A918",
+            "A980",
+            "A982",
+            "A988",
+            "A989",
+            "A991"
+        ],
+        "full_answer": 6,
+        "sql_query": "SELECT COUNT(*) AS country_amount FROM countries WHERE countries.name IN ('Albania', 'Belgium', 'Bulgaria', 'Croatia', 'Czech Republic', 'Denmark', 'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Iceland', 'Italy', 'Latvia', 'Lithuania', 'Luxembourg', 'Montenegro', 'Netherlands', 'North Macedonia', 'Norway', 'Poland', 'Portugal', 'Romania', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'Thuringia', 'United Kingdom', 'Kingdom of Denmark', 'Kingdom of the Netherlands', 'Canada', 'United States', 'Turkey') AND countries.gdp_usd < 50000000000",
+        "query_plan": {
+            "query": "How many NATO members have a GDP less than fifty billion?",
+            "steps": [
+                {
+                    "id": "s1",
+                    "query": "Return all countries that are NATO members with a GDP less than fifty billion?",
+                    "to_agent": [
+                        "A22",
+                        "A30",
+                        "A32",
+                        "A36",
+                        "A37",
+                        "A40",
+                        "A69",
+                        "A70",
+                        "A72",
+                        "A73",
+                        "A74",
+                        "A76",
+                        "A93",
+                        "A94",
+                        "A97",
+                        "A113",
+                        "A114",
+                        "A116",
+                        "A117",
+                        "A138",
+                        "A143",
+                        "A156",
+                        "A157",
+                        "A185",
+                        "A186",
+                        "A192",
+                        "A195",
+                        "A197",
+                        "A203",
+                        "A206",
+                        "A207",
+                        "A208",
+                        "A209",
+                        "A210",
+                        "A213",
+                        "A220",
+                        "A221",
+                        "A222",
+                        "A226",
+                        "A245",
+                        "A246",
+                        "A247",
+                        "A253",
+                        "A254",
+                        "A255",
+                        "A256",
+                        "A270",
+                        "A275",
+                        "A276",
+                        "A282",
+                        "A283",
+                        "A286",
+                        "A289",
+                        "A300",
+                        "A302",
+                        "A303",
+                        "A305",
+                        "A306",
+                        "A307",
+                        "A309",
+                        "A310",
+                        "A313",
+                        "A315",
+                        "A316",
+                        "A317",
+                        "A319",
+                        "A327",
+                        "A329",
+                        "A330",
+                        "A340",
+                        "A342",
+                        "A344",
+                        "A345",
+                        "A349",
+                        "A350",
+                        "A378",
+                        "A382",
+                        "A384",
+                        "A411",
+                        "A412",
+                        "A438",
+                        "A453",
+                        "A456",
+                        "A457",
+                        "A458",
+                        "A460",
+                        "A469",
+                        "A486",
+                        "A487",
+                        "A491",
+                        "A494",
+                        "A533",
+                        "A539",
+                        "A544",
+                        "A545",
+                        "A546",
+                        "A547",
+                        "A553",
+                        "A554",
+                        "A556",
+                        "A560",
+                        "A563",
+                        "A564",
+                        "A590",
+                        "A591",
+                        "A593",
+                        "A595",
+                        "A599",
+                        "A605",
+                        "A608",
+                        "A609",
+                        "A611",
+                        "A623",
+                        "A641",
+                        "A642",
+                        "A664",
+                        "A665",
+                        "A667",
+                        "A668",
+                        "A670",
+                        "A671",
+                        "A682",
+                        "A707",
+                        "A708",
+                        "A709",
+                        "A710",
+                        "A713",
+                        "A737",
+                        "A738",
+                        "A741",
+                        "A742",
+                        "A743",
+                        "A745",
+                        "A773",
+                        "A774",
+                        "A794",
+                        "A795",
+                        "A811",
+                        "A812",
+                        "A814",
+                        "A844",
+                        "A845",
+                        "A860",
+                        "A864",
+                        "A865",
+                        "A866",
+                        "A867",
+                        "A871",
+                        "A873",
+                        "A886",
+                        "A907",
+                        "A909",
+                        "A910",
+                        "A912",
+                        "A913",
+                        "A915",
+                        "A917",
+                        "A918",
+                        "A980",
+                        "A982",
+                        "A988",
+                        "A989",
+                        "A991"
+                    ],
+                    "dependencies": [],
+                    "merge_task": "Deduplicate by country. Count the amount.",
+                    "answer": null
+                }
+            ]
+        }
+    },
+    "value": {
+        "__type__": "CollaborativeQueryAnswering",
+        "query": "How many NATO members have a GDP less than fifty billion?",
+        "data_agents": [
+            {
+                "type": "sql",
+                "name": "A1",
+                "path": "dataset/afghanistan_01/afghanistan_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A2",
+                "path": "dataset/afghanistan_02/afghanistan_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A3",
+                "path": "dataset/afghanistan_03/afghanistan_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A4",
+                "path": "dataset/afghanistan_04/afghanistan_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A5",
+                "path": "dataset/africa_01/africa_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A6",
+                "path": "dataset/africa_02/africa_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A7",
+                "path": "dataset/africa_03/africa_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A8",
+                "path": "dataset/africa_04/africa_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A9",
+                "path": "dataset/africa_05/africa_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A10",
+                "path": "dataset/africa_region_01/africa_region_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A11",
+                "path": "dataset/africa_region_02/africa_region_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A12",
+                "path": "dataset/africa_region_03/africa_region_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A13",
+                "path": "dataset/africa_region_04/africa_region_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A14",
+                "path": "dataset/africa_region_05/africa_region_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A15",
+                "path": "dataset/africa_region_06/africa_region_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A16",
+                "path": "dataset/africa_region_07/africa_region_07.db"
+            },
+            {
+                "type": "sql",
+                "name": "A17",
+                "path": "dataset/africa_region_08/africa_region_08.db"
+            },
+            {
+                "type": "sql",
+                "name": "A18",
+                "path": "dataset/africa_region_09/africa_region_09.db"
+            },
+            {
+                "type": "sql",
+                "name": "A19",
+                "path": "dataset/afrotropic_01/afrotropic_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A20",
+                "path": "dataset/albania_01/albania_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A21",
+                "path": "dataset/albania_02/albania_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A22",
+                "path": "dataset/albania_03/albania_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A23",
+                "path": "dataset/albania_04/albania_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A24",
+                "path": "dataset/algeria_01/algeria_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A25",
+                "path": "dataset/algeria_02/algeria_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A26",
+                "path": "dataset/algeria_03/algeria_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A27",
+                "path": "dataset/algeria_04/algeria_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A28",
+                "path": "dataset/algeria_05/algeria_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A29",
+                "path": "dataset/americas_01/americas_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A30",
+                "path": "dataset/americas_02/americas_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A31",
+                "path": "dataset/americas_03/americas_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A32",
+                "path": "dataset/americas_region_01/americas_region_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A33",
+                "path": "dataset/americas_region_02/americas_region_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A34",
+                "path": "dataset/americas_region_03/americas_region_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A35",
+                "path": "dataset/americas_region_04/americas_region_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A36",
+                "path": "dataset/americas_region_05/americas_region_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A37",
+                "path": "dataset/americas_region_06/americas_region_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A38",
+                "path": "dataset/andorra_01/andorra_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A39",
+                "path": "dataset/anglophone_01/anglophone_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A40",
+                "path": "dataset/anglophone_02/anglophone_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A41",
+                "path": "dataset/angola_01/angola_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A42",
+                "path": "dataset/angola_02/angola_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A43",
+                "path": "dataset/angola_03/angola_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A44",
+                "path": "dataset/antarctica_01/antarctica_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A45",
+                "path": "dataset/antigua_and_barbuda_01/antigua_and_barbuda_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A46",
+                "path": "dataset/antigua_and_barbuda_02/antigua_and_barbuda_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A47",
+                "path": "dataset/antigua_and_barbuda_03/antigua_and_barbuda_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A48",
+                "path": "dataset/antigua_and_barbuda_04/antigua_and_barbuda_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A49",
+                "path": "dataset/arab_league_01/arab_league_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A50",
+                "path": "dataset/arab_league_02/arab_league_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A51",
+                "path": "dataset/arab_league_03/arab_league_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A52",
+                "path": "dataset/arab_league_04/arab_league_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A53",
+                "path": "dataset/arab_league_05/arab_league_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A54",
+                "path": "dataset/arab_league_06/arab_league_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A55",
+                "path": "dataset/arab_league_07/arab_league_07.db"
+            },
+            {
+                "type": "sql",
+                "name": "A56",
+                "path": "dataset/arab_league_08/arab_league_08.db"
+            },
+            {
+                "type": "sql",
+                "name": "A57",
+                "path": "dataset/argentina_01/argentina_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A58",
+                "path": "dataset/argentina_02/argentina_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A59",
+                "path": "dataset/argentina_03/argentina_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A60",
+                "path": "dataset/argentina_04/argentina_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A61",
+                "path": "dataset/argentina_05/argentina_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A62",
+                "path": "dataset/arid_01/arid_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A63",
+                "path": "dataset/arid_02/arid_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A64",
+                "path": "dataset/arid_03/arid_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A65",
+                "path": "dataset/armenia_01/armenia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A66",
+                "path": "dataset/armenia_02/armenia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A67",
+                "path": "dataset/asean_01/asean_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A68",
+                "path": "dataset/asean_02/asean_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A69",
+                "path": "dataset/asia_01/asia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A70",
+                "path": "dataset/asia_02/asia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A71",
+                "path": "dataset/asia_03/asia_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A72",
+                "path": "dataset/asia_04/asia_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A73",
+                "path": "dataset/asia_05/asia_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A74",
+                "path": "dataset/asia_06/asia_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A75",
+                "path": "dataset/asia_07/asia_07.db"
+            },
+            {
+                "type": "sql",
+                "name": "A76",
+                "path": "dataset/asia_08/asia_08.db"
+            },
+            {
+                "type": "sql",
+                "name": "A77",
+                "path": "dataset/asia_region_01/asia_region_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A78",
+                "path": "dataset/asia_region_02/asia_region_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A79",
+                "path": "dataset/asia_region_03/asia_region_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A80",
+                "path": "dataset/asia_region_04/asia_region_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A81",
+                "path": "dataset/asia_region_05/asia_region_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A82",
+                "path": "dataset/australasia_01/australasia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A83",
+                "path": "dataset/australasia_02/australasia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A84",
+                "path": "dataset/australia_01/australia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A85",
+                "path": "dataset/australia_new_zealand_01/australia_new_zealand_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A86",
+                "path": "dataset/austria_01/austria_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A87",
+                "path": "dataset/austria_02/austria_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A88",
+                "path": "dataset/austria_03/austria_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A89",
+                "path": "dataset/azerbaijan_01/azerbaijan_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A90",
+                "path": "dataset/azerbaijan_02/azerbaijan_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A91",
+                "path": "dataset/bahrain_01/bahrain_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A92",
+                "path": "dataset/bahrain_02/bahrain_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A93",
+                "path": "dataset/balkans_01/balkans_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A94",
+                "path": "dataset/balkans_02/balkans_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A95",
+                "path": "dataset/balkans_03/balkans_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A96",
+                "path": "dataset/balkans_04/balkans_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A97",
+                "path": "dataset/baltic_states_01/baltic_states_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A98",
+                "path": "dataset/baltic_states_02/baltic_states_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A99",
+                "path": "dataset/bangladesh_01/bangladesh_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A100",
+                "path": "dataset/bangladesh_02/bangladesh_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A101",
+                "path": "dataset/bangladesh_03/bangladesh_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A102",
+                "path": "dataset/bangladesh_04/bangladesh_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A103",
+                "path": "dataset/bangladesh_05/bangladesh_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A104",
+                "path": "dataset/bangladesh_06/bangladesh_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A105",
+                "path": "dataset/barbados_01/barbados_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A106",
+                "path": "dataset/barbados_02/barbados_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A107",
+                "path": "dataset/belarus_01/belarus_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A108",
+                "path": "dataset/belarus_02/belarus_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A109",
+                "path": "dataset/belarus_03/belarus_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A110",
+                "path": "dataset/belgium_01/belgium_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A111",
+                "path": "dataset/belgium_02/belgium_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A112",
+                "path": "dataset/belgium_03/belgium_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A113",
+                "path": "dataset/belgium_04/belgium_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A114",
+                "path": "dataset/belgium_05/belgium_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A115",
+                "path": "dataset/belize_01/belize_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A116",
+                "path": "dataset/benelux_01/benelux_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A117",
+                "path": "dataset/benelux_02/benelux_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A118",
+                "path": "dataset/benin_01/benin_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A119",
+                "path": "dataset/bhutan_01/bhutan_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A120",
+                "path": "dataset/bolivia_01/bolivia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A121",
+                "path": "dataset/bolivia_02/bolivia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A122",
+                "path": "dataset/bolivia_03/bolivia_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A123",
+                "path": "dataset/bosnia_and_herzegovina_01/bosnia_and_herzegovina_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A124",
+                "path": "dataset/bosnia_and_herzegovina_02/bosnia_and_herzegovina_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A125",
+                "path": "dataset/bosnia_and_herzegovina_03/bosnia_and_herzegovina_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A126",
+                "path": "dataset/bosnia_and_herzegovina_04/bosnia_and_herzegovina_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A127",
+                "path": "dataset/botswana_01/botswana_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A128",
+                "path": "dataset/botswana_02/botswana_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A129",
+                "path": "dataset/brazil_01/brazil_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A130",
+                "path": "dataset/brazil_02/brazil_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A131",
+                "path": "dataset/brics_01/brics_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A132",
+                "path": "dataset/brics_02/brics_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A133",
+                "path": "dataset/brics_03/brics_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A134",
+                "path": "dataset/brics_04/brics_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A135",
+                "path": "dataset/british_isles_01/british_isles_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A136",
+                "path": "dataset/british_isles_02/british_isles_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A137",
+                "path": "dataset/british_isles_03/british_isles_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A138",
+                "path": "dataset/british_isles_04/british_isles_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A139",
+                "path": "dataset/brunei_01/brunei_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A140",
+                "path": "dataset/brunei_02/brunei_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A141",
+                "path": "dataset/buddhist_01/buddhist_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A142",
+                "path": "dataset/buddhist_02/buddhist_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A143",
+                "path": "dataset/bulgaria_01/bulgaria_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A144",
+                "path": "dataset/burkina_faso_01/burkina_faso_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A145",
+                "path": "dataset/burkina_faso_02/burkina_faso_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A146",
+                "path": "dataset/burkina_faso_03/burkina_faso_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A147",
+                "path": "dataset/burundi_01/burundi_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A148",
+                "path": "dataset/burundi_02/burundi_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A149",
+                "path": "dataset/cambodia_01/cambodia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A150",
+                "path": "dataset/cambodia_02/cambodia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A151",
+                "path": "dataset/cambodia_03/cambodia_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A152",
+                "path": "dataset/cambodia_04/cambodia_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A153",
+                "path": "dataset/cameroon_01/cameroon_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A154",
+                "path": "dataset/cameroon_02/cameroon_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A155",
+                "path": "dataset/cameroon_03/cameroon_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A156",
+                "path": "dataset/canada_01/canada_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A157",
+                "path": "dataset/canada_02/canada_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A158",
+                "path": "dataset/canada_03/canada_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A159",
+                "path": "dataset/cape_verde_01/cape_verde_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A160",
+                "path": "dataset/cape_verde_02/cape_verde_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A161",
+                "path": "dataset/caribbean_01/caribbean_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A162",
+                "path": "dataset/caribbean_02/caribbean_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A163",
+                "path": "dataset/caribbean_03/caribbean_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A164",
+                "path": "dataset/caucasus_01/caucasus_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A165",
+                "path": "dataset/caucasus_02/caucasus_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A166",
+                "path": "dataset/caucasus_03/caucasus_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A167",
+                "path": "dataset/caucasus_04/caucasus_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A168",
+                "path": "dataset/central_africa_01/central_africa_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A169",
+                "path": "dataset/central_africa_02/central_africa_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A170",
+                "path": "dataset/central_africa_03/central_africa_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A171",
+                "path": "dataset/central_africa_04/central_africa_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A172",
+                "path": "dataset/central_african_republic_01/central_african_republic_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A173",
+                "path": "dataset/central_african_republic_02/central_african_republic_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A174",
+                "path": "dataset/central_america_01/central_america_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A175",
+                "path": "dataset/central_america_02/central_america_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A176",
+                "path": "dataset/central_america_03/central_america_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A177",
+                "path": "dataset/central_america_04/central_america_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A178",
+                "path": "dataset/central_america_05/central_america_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A179",
+                "path": "dataset/central_america_06/central_america_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A180",
+                "path": "dataset/central_asia_01/central_asia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A181",
+                "path": "dataset/central_asia_02/central_asia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A182",
+                "path": "dataset/central_asia_03/central_asia_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A183",
+                "path": "dataset/central_asia_04/central_asia_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A184",
+                "path": "dataset/central_europe_01/central_europe_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A185",
+                "path": "dataset/central_europe_02/central_europe_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A186",
+                "path": "dataset/central_europe_03/central_europe_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A187",
+                "path": "dataset/chad_01/chad_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A188",
+                "path": "dataset/chad_02/chad_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A189",
+                "path": "dataset/chad_03/chad_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A190",
+                "path": "dataset/chile_01/chile_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A191",
+                "path": "dataset/chile_02/chile_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A192",
+                "path": "dataset/christian_01/christian_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A193",
+                "path": "dataset/christian_02/christian_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A194",
+                "path": "dataset/christian_03/christian_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A195",
+                "path": "dataset/christian_04/christian_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A196",
+                "path": "dataset/christian_05/christian_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A197",
+                "path": "dataset/christian_06/christian_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A198",
+                "path": "dataset/colombia_01/colombia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A199",
+                "path": "dataset/colombia_02/colombia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A200",
+                "path": "dataset/colombia_03/colombia_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A201",
+                "path": "dataset/commonwealth_01/commonwealth_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A202",
+                "path": "dataset/commonwealth_02/commonwealth_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A203",
+                "path": "dataset/commonwealth_03/commonwealth_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A204",
+                "path": "dataset/comoros_01/comoros_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A205",
+                "path": "dataset/continental_01/continental_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A206",
+                "path": "dataset/continental_02/continental_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A207",
+                "path": "dataset/continental_03/continental_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A208",
+                "path": "dataset/continental_04/continental_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A209",
+                "path": "dataset/continental_05/continental_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A210",
+                "path": "dataset/continental_06/continental_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A211",
+                "path": "dataset/costa_rica_01/costa_rica_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A212",
+                "path": "dataset/croatia_01/croatia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A213",
+                "path": "dataset/croatia_02/croatia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A214",
+                "path": "dataset/cuba_01/cuba_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A215",
+                "path": "dataset/cuba_02/cuba_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A216",
+                "path": "dataset/cuba_03/cuba_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A217",
+                "path": "dataset/cyprus_01/cyprus_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A218",
+                "path": "dataset/czech_republic_01/czech_republic_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A219",
+                "path": "dataset/czech_republic_02/czech_republic_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A220",
+                "path": "dataset/czech_republic_03/czech_republic_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A221",
+                "path": "dataset/dach_01/dach_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A222",
+                "path": "dataset/dach_02/dach_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A223",
+                "path": "dataset/dach_03/dach_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A224",
+                "path": "dataset/democratic_republic_of_the_congo_01/democratic_republic_of_the_congo_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A225",
+                "path": "dataset/democratic_republic_of_the_congo_02/democratic_republic_of_the_congo_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A226",
+                "path": "dataset/denmark_01/denmark_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A227",
+                "path": "dataset/denmark_02/denmark_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A228",
+                "path": "dataset/djibouti_01/djibouti_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A229",
+                "path": "dataset/dominica_01/dominica_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A230",
+                "path": "dataset/dominican_republic_01/dominican_republic_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A231",
+                "path": "dataset/dominican_republic_02/dominican_republic_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A232",
+                "path": "dataset/dominican_republic_03/dominican_republic_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A233",
+                "path": "dataset/double_landlocked_01/double_landlocked_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A234",
+                "path": "dataset/double_landlocked_02/double_landlocked_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A235",
+                "path": "dataset/double_landlocked_03/double_landlocked_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A236",
+                "path": "dataset/east_africa_01/east_africa_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A237",
+                "path": "dataset/east_africa_02/east_africa_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A238",
+                "path": "dataset/east_africa_03/east_africa_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A239",
+                "path": "dataset/east_asia_01/east_asia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A240",
+                "path": "dataset/east_asia_02/east_asia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A241",
+                "path": "dataset/east_asia_03/east_asia_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A242",
+                "path": "dataset/east_asia_04/east_asia_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A243",
+                "path": "dataset/east_asia_05/east_asia_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A244",
+                "path": "dataset/east_asia_06/east_asia_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A245",
+                "path": "dataset/eastern_europe_01/eastern_europe_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A246",
+                "path": "dataset/eastern_europe_02/eastern_europe_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A247",
+                "path": "dataset/eastern_europe_03/eastern_europe_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A248",
+                "path": "dataset/eastern_europe_04/eastern_europe_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A249",
+                "path": "dataset/eastern_europe_05/eastern_europe_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A250",
+                "path": "dataset/ecuador_01/ecuador_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A251",
+                "path": "dataset/ecuador_02/ecuador_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A252",
+                "path": "dataset/ecuador_03/ecuador_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A253",
+                "path": "dataset/eea_01/eea_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A254",
+                "path": "dataset/eea_02/eea_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A255",
+                "path": "dataset/eea_03/eea_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A256",
+                "path": "dataset/eea_04/eea_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A257",
+                "path": "dataset/egypt_01/egypt_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A258",
+                "path": "dataset/egypt_02/egypt_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A259",
+                "path": "dataset/egypt_03/egypt_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A260",
+                "path": "dataset/egypt_04/egypt_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A261",
+                "path": "dataset/el_salvador_01/el_salvador_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A262",
+                "path": "dataset/el_salvador_02/el_salvador_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A263",
+                "path": "dataset/equatorial_guinea_01/equatorial_guinea_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A264",
+                "path": "dataset/equatorial_guinea_02/equatorial_guinea_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A265",
+                "path": "dataset/equatorial_guinea_03/equatorial_guinea_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A266",
+                "path": "dataset/equatorial_guinea_04/equatorial_guinea_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A267",
+                "path": "dataset/equatorial_guinea_05/equatorial_guinea_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A268",
+                "path": "dataset/eritrea_01/eritrea_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A269",
+                "path": "dataset/eritrea_02/eritrea_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A270",
+                "path": "dataset/estonia_01/estonia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A271",
+                "path": "dataset/estonia_02/estonia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A272",
+                "path": "dataset/estonia_03/estonia_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A273",
+                "path": "dataset/estonia_04/estonia_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A274",
+                "path": "dataset/estonia_05/estonia_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A275",
+                "path": "dataset/estonia_06/estonia_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A276",
+                "path": "dataset/estonia_07/estonia_07.db"
+            },
+            {
+                "type": "sql",
+                "name": "A277",
+                "path": "dataset/eswatini_01/eswatini_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A278",
+                "path": "dataset/ethiopia_01/ethiopia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A279",
+                "path": "dataset/ethiopia_02/ethiopia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A280",
+                "path": "dataset/ethiopia_03/ethiopia_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A281",
+                "path": "dataset/eu_candidate_01/eu_candidate_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A282",
+                "path": "dataset/eu_candidate_02/eu_candidate_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A283",
+                "path": "dataset/eu_candidate_03/eu_candidate_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A284",
+                "path": "dataset/europe_01/europe_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A285",
+                "path": "dataset/europe_02/europe_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A286",
+                "path": "dataset/europe_03/europe_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A287",
+                "path": "dataset/europe_04/europe_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A288",
+                "path": "dataset/europe_05/europe_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A289",
+                "path": "dataset/european_microstates_01/european_microstates_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A290",
+                "path": "dataset/european_union_01/european_union_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A291",
+                "path": "dataset/european_union_02/european_union_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A292",
+                "path": "dataset/european_union_03/european_union_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A293",
+                "path": "dataset/european_union_04/european_union_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A294",
+                "path": "dataset/european_union_05/european_union_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A295",
+                "path": "dataset/european_union_06/european_union_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A296",
+                "path": "dataset/federated_states_of_micronesia_01/federated_states_of_micronesia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A297",
+                "path": "dataset/fiji_01/fiji_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A298",
+                "path": "dataset/fiji_02/fiji_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A299",
+                "path": "dataset/finland_01/finland_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A300",
+                "path": "dataset/finland_02/finland_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A301",
+                "path": "dataset/finland_03/finland_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A302",
+                "path": "dataset/finland_04/finland_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A303",
+                "path": "dataset/five_eyes_01/five_eyes_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A304",
+                "path": "dataset/five_eyes_02/five_eyes_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A305",
+                "path": "dataset/five_eyes_03/five_eyes_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A306",
+                "path": "dataset/five_eyes_04/five_eyes_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A307",
+                "path": "dataset/france_01/france_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A308",
+                "path": "dataset/france_02/france_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A309",
+                "path": "dataset/france_03/france_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A310",
+                "path": "dataset/francophonie_01/francophonie_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A311",
+                "path": "dataset/francophonie_02/francophonie_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A312",
+                "path": "dataset/francophonie_03/francophonie_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A313",
+                "path": "dataset/g20_01/g20_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A314",
+                "path": "dataset/g20_02/g20_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A315",
+                "path": "dataset/g20_03/g20_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A316",
+                "path": "dataset/g20_04/g20_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A317",
+                "path": "dataset/g20_05/g20_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A318",
+                "path": "dataset/g7_01/g7_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A319",
+                "path": "dataset/g7_02/g7_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A320",
+                "path": "dataset/g7_03/g7_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A321",
+                "path": "dataset/g7_04/g7_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A322",
+                "path": "dataset/gabon_01/gabon_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A323",
+                "path": "dataset/gabon_02/gabon_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A324",
+                "path": "dataset/gabon_03/gabon_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A325",
+                "path": "dataset/georgia_01/georgia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A326",
+                "path": "dataset/georgia_02/georgia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A327",
+                "path": "dataset/germany_01/germany_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A328",
+                "path": "dataset/germany_02/germany_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A329",
+                "path": "dataset/germany_03/germany_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A330",
+                "path": "dataset/germany_04/germany_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A331",
+                "path": "dataset/germany_05/germany_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A332",
+                "path": "dataset/germany_06/germany_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A333",
+                "path": "dataset/ghana_01/ghana_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A334",
+                "path": "dataset/ghana_02/ghana_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A335",
+                "path": "dataset/ghana_03/ghana_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A336",
+                "path": "dataset/gibraltar_01/gibraltar_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A337",
+                "path": "dataset/global_north_01/global_north_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A338",
+                "path": "dataset/global_north_02/global_north_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A339",
+                "path": "dataset/global_north_03/global_north_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A340",
+                "path": "dataset/global_north_04/global_north_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A341",
+                "path": "dataset/global_north_05/global_north_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A342",
+                "path": "dataset/global_north_06/global_north_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A343",
+                "path": "dataset/global_north_07/global_north_07.db"
+            },
+            {
+                "type": "sql",
+                "name": "A344",
+                "path": "dataset/global_north_08/global_north_08.db"
+            },
+            {
+                "type": "sql",
+                "name": "A345",
+                "path": "dataset/global_north_09/global_north_09.db"
+            },
+            {
+                "type": "sql",
+                "name": "A346",
+                "path": "dataset/global_south_01/global_south_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A347",
+                "path": "dataset/global_south_02/global_south_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A348",
+                "path": "dataset/global_south_03/global_south_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A349",
+                "path": "dataset/global_south_04/global_south_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A350",
+                "path": "dataset/greece_01/greece_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A351",
+                "path": "dataset/greece_02/greece_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A352",
+                "path": "dataset/greece_03/greece_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A353",
+                "path": "dataset/grenada_01/grenada_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A354",
+                "path": "dataset/guatemala_01/guatemala_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A355",
+                "path": "dataset/guatemala_02/guatemala_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A356",
+                "path": "dataset/guatemala_03/guatemala_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A357",
+                "path": "dataset/guatemala_04/guatemala_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A358",
+                "path": "dataset/guinea_01/guinea_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A359",
+                "path": "dataset/guinea_02/guinea_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A360",
+                "path": "dataset/guinea_03/guinea_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A361",
+                "path": "dataset/guinea_bissau_01/guinea_bissau_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A362",
+                "path": "dataset/guinea_bissau_02/guinea_bissau_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A363",
+                "path": "dataset/gulf_states_01/gulf_states_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A364",
+                "path": "dataset/gulf_states_02/gulf_states_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A365",
+                "path": "dataset/gulf_states_03/gulf_states_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A366",
+                "path": "dataset/gulf_states_04/gulf_states_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A367",
+                "path": "dataset/gulf_states_05/gulf_states_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A368",
+                "path": "dataset/guyana_01/guyana_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A369",
+                "path": "dataset/guyana_02/guyana_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A370",
+                "path": "dataset/haiti_01/haiti_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A371",
+                "path": "dataset/haiti_02/haiti_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A372",
+                "path": "dataset/haiti_03/haiti_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A373",
+                "path": "dataset/haiti_04/haiti_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A374",
+                "path": "dataset/haiti_05/haiti_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A375",
+                "path": "dataset/hindu_01/hindu_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A376",
+                "path": "dataset/hindu_02/hindu_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A377",
+                "path": "dataset/hispanophone_01/hispanophone_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A378",
+                "path": "dataset/hispanophone_02/hispanophone_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A379",
+                "path": "dataset/hispanophone_03/hispanophone_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A380",
+                "path": "dataset/honduras_01/honduras_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A381",
+                "path": "dataset/honduras_02/honduras_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A382",
+                "path": "dataset/hungary_01/hungary_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A383",
+                "path": "dataset/hungary_02/hungary_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A384",
+                "path": "dataset/hungary_03/hungary_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A385",
+                "path": "dataset/iceland_01/iceland_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A386",
+                "path": "dataset/iceland_02/iceland_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A387",
+                "path": "dataset/iceland_03/iceland_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A388",
+                "path": "dataset/iceland_04/iceland_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A389",
+                "path": "dataset/india_01/india_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A390",
+                "path": "dataset/india_02/india_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A391",
+                "path": "dataset/india_03/india_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A392",
+                "path": "dataset/india_04/india_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A393",
+                "path": "dataset/india_05/india_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A394",
+                "path": "dataset/india_06/india_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A395",
+                "path": "dataset/india_07/india_07.db"
+            },
+            {
+                "type": "sql",
+                "name": "A396",
+                "path": "dataset/indomalaya_01/indomalaya_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A397",
+                "path": "dataset/indomalaya_02/indomalaya_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A398",
+                "path": "dataset/indomalaya_03/indomalaya_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A399",
+                "path": "dataset/indonesia_01/indonesia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A400",
+                "path": "dataset/indonesia_02/indonesia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A401",
+                "path": "dataset/indonesia_03/indonesia_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A402",
+                "path": "dataset/indonesia_04/indonesia_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A403",
+                "path": "dataset/indonesia_05/indonesia_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A404",
+                "path": "dataset/iran_01/iran_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A405",
+                "path": "dataset/iran_02/iran_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A406",
+                "path": "dataset/iran_03/iran_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A407",
+                "path": "dataset/iraq_01/iraq_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A408",
+                "path": "dataset/iraq_02/iraq_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A409",
+                "path": "dataset/ireland_01/ireland_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A410",
+                "path": "dataset/ireland_02/ireland_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A411",
+                "path": "dataset/island_nation_01/island_nation_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A412",
+                "path": "dataset/island_nation_02/island_nation_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A413",
+                "path": "dataset/israel_01/israel_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A414",
+                "path": "dataset/israel_02/israel_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A415",
+                "path": "dataset/italy_01/italy_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A416",
+                "path": "dataset/italy_02/italy_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A417",
+                "path": "dataset/ivory_coast_01/ivory_coast_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A418",
+                "path": "dataset/ivory_coast_02/ivory_coast_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A419",
+                "path": "dataset/jamaica_01/jamaica_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A420",
+                "path": "dataset/japan_01/japan_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A421",
+                "path": "dataset/japan_02/japan_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A422",
+                "path": "dataset/japan_03/japan_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A423",
+                "path": "dataset/jewish_01/jewish_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A424",
+                "path": "dataset/jewish_02/jewish_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A425",
+                "path": "dataset/jordan_01/jordan_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A426",
+                "path": "dataset/jordan_02/jordan_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A427",
+                "path": "dataset/kazakhstan_01/kazakhstan_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A428",
+                "path": "dataset/kazakhstan_02/kazakhstan_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A429",
+                "path": "dataset/kazakhstan_03/kazakhstan_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A430",
+                "path": "dataset/kazakhstan_04/kazakhstan_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A431",
+                "path": "dataset/kenya_01/kenya_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A432",
+                "path": "dataset/kenya_02/kenya_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A433",
+                "path": "dataset/kenya_03/kenya_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A434",
+                "path": "dataset/kenya_04/kenya_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A435",
+                "path": "dataset/kingdom_of_denmark_01/kingdom_of_denmark_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A436",
+                "path": "dataset/kingdom_of_denmark_02/kingdom_of_denmark_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A437",
+                "path": "dataset/kingdom_of_denmark_03/kingdom_of_denmark_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A438",
+                "path": "dataset/kingdom_of_the_netherlands_01/kingdom_of_the_netherlands_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A439",
+                "path": "dataset/kingdom_of_the_netherlands_02/kingdom_of_the_netherlands_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A440",
+                "path": "dataset/kingdom_of_the_netherlands_03/kingdom_of_the_netherlands_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A441",
+                "path": "dataset/kingdom_of_the_netherlands_04/kingdom_of_the_netherlands_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A442",
+                "path": "dataset/kiribati_01/kiribati_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A443",
+                "path": "dataset/kosovo_01/kosovo_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A444",
+                "path": "dataset/kosovo_02/kosovo_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A445",
+                "path": "dataset/kuwait_01/kuwait_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A446",
+                "path": "dataset/kuwait_02/kuwait_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A447",
+                "path": "dataset/kuwait_03/kuwait_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A448",
+                "path": "dataset/kyrgyzstan_01/kyrgyzstan_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A449",
+                "path": "dataset/kyrgyzstan_02/kyrgyzstan_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A450",
+                "path": "dataset/kyrgyzstan_03/kyrgyzstan_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A451",
+                "path": "dataset/kyrgyzstan_04/kyrgyzstan_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A452",
+                "path": "dataset/kyrgyzstan_05/kyrgyzstan_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A453",
+                "path": "dataset/landlocked_01/landlocked_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A454",
+                "path": "dataset/landlocked_02/landlocked_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A455",
+                "path": "dataset/landlocked_03/landlocked_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A456",
+                "path": "dataset/landlocked_04/landlocked_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A457",
+                "path": "dataset/landlocked_05/landlocked_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A458",
+                "path": "dataset/landlocked_06/landlocked_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A459",
+                "path": "dataset/landlocked_07/landlocked_07.db"
+            },
+            {
+                "type": "sql",
+                "name": "A460",
+                "path": "dataset/landlocked_08/landlocked_08.db"
+            },
+            {
+                "type": "sql",
+                "name": "A461",
+                "path": "dataset/laos_01/laos_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A462",
+                "path": "dataset/laos_02/laos_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A463",
+                "path": "dataset/laos_03/laos_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A464",
+                "path": "dataset/laos_04/laos_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A465",
+                "path": "dataset/latin_america_01/latin_america_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A466",
+                "path": "dataset/latin_america_02/latin_america_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A467",
+                "path": "dataset/latin_america_03/latin_america_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A468",
+                "path": "dataset/latvia_01/latvia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A469",
+                "path": "dataset/latvia_02/latvia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A470",
+                "path": "dataset/lebanon_01/lebanon_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A471",
+                "path": "dataset/lebanon_02/lebanon_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A472",
+                "path": "dataset/lebanon_03/lebanon_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A473",
+                "path": "dataset/lesotho_01/lesotho_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A474",
+                "path": "dataset/lesotho_02/lesotho_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A475",
+                "path": "dataset/liberia_01/liberia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A476",
+                "path": "dataset/liberia_02/liberia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A477",
+                "path": "dataset/liberia_03/liberia_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A478",
+                "path": "dataset/liberia_04/liberia_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A479",
+                "path": "dataset/libya_01/libya_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A480",
+                "path": "dataset/libya_02/libya_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A481",
+                "path": "dataset/libya_03/libya_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A482",
+                "path": "dataset/libya_04/libya_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A483",
+                "path": "dataset/liechtenstein_01/liechtenstein_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A484",
+                "path": "dataset/liechtenstein_02/liechtenstein_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A485",
+                "path": "dataset/liechtenstein_03/liechtenstein_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A486",
+                "path": "dataset/lithuania_01/lithuania_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A487",
+                "path": "dataset/lithuania_02/lithuania_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A488",
+                "path": "dataset/lithuania_03/lithuania_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A489",
+                "path": "dataset/lithuania_04/lithuania_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A490",
+                "path": "dataset/lusophone_01/lusophone_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A491",
+                "path": "dataset/lusophone_02/lusophone_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A492",
+                "path": "dataset/lusophone_03/lusophone_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A493",
+                "path": "dataset/luxembourg_01/luxembourg_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A494",
+                "path": "dataset/luxembourg_02/luxembourg_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A495",
+                "path": "dataset/madagascar_01/madagascar_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A496",
+                "path": "dataset/madagascar_02/madagascar_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A497",
+                "path": "dataset/madagascar_03/madagascar_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A498",
+                "path": "dataset/maghreb_01/maghreb_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A499",
+                "path": "dataset/maghreb_02/maghreb_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A500",
+                "path": "dataset/maghreb_03/maghreb_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A501",
+                "path": "dataset/maghreb_04/maghreb_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A502",
+                "path": "dataset/maghreb_05/maghreb_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A503",
+                "path": "dataset/maghreb_06/maghreb_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A504",
+                "path": "dataset/malawi_01/malawi_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A505",
+                "path": "dataset/malawi_02/malawi_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A506",
+                "path": "dataset/malawi_03/malawi_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A507",
+                "path": "dataset/malaysia_01/malaysia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A508",
+                "path": "dataset/malaysia_02/malaysia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A509",
+                "path": "dataset/malaysia_03/malaysia_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A510",
+                "path": "dataset/malaysia_04/malaysia_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A511",
+                "path": "dataset/maldives_01/maldives_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A512",
+                "path": "dataset/maldives_02/maldives_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A513",
+                "path": "dataset/mali_01/mali_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A514",
+                "path": "dataset/mali_02/mali_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A515",
+                "path": "dataset/mali_03/mali_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A516",
+                "path": "dataset/malta_01/malta_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A517",
+                "path": "dataset/malta_02/malta_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A518",
+                "path": "dataset/marshall_islands_01/marshall_islands_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A519",
+                "path": "dataset/mauritania_01/mauritania_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A520",
+                "path": "dataset/mauritania_02/mauritania_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A521",
+                "path": "dataset/mauritania_03/mauritania_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A522",
+                "path": "dataset/mauritania_04/mauritania_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A523",
+                "path": "dataset/mauritius_01/mauritius_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A524",
+                "path": "dataset/mauritius_02/mauritius_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A525",
+                "path": "dataset/mercosur_01/mercosur_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A526",
+                "path": "dataset/mercosur_02/mercosur_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A527",
+                "path": "dataset/mexico_01/mexico_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A528",
+                "path": "dataset/mexico_02/mexico_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A529",
+                "path": "dataset/mexico_03/mexico_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A530",
+                "path": "dataset/middle_east_01/middle_east_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A531",
+                "path": "dataset/middle_east_02/middle_east_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A532",
+                "path": "dataset/middle_east_03/middle_east_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A533",
+                "path": "dataset/middle_east_04/middle_east_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A534",
+                "path": "dataset/moldova_01/moldova_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A535",
+                "path": "dataset/monaco_01/monaco_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A536",
+                "path": "dataset/monaco_02/monaco_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A537",
+                "path": "dataset/mongolia_01/mongolia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A538",
+                "path": "dataset/montenegro_01/montenegro_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A539",
+                "path": "dataset/montenegro_02/montenegro_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A540",
+                "path": "dataset/morocco_01/morocco_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A541",
+                "path": "dataset/mozambique_01/mozambique_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A542",
+                "path": "dataset/mozambique_02/mozambique_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A543",
+                "path": "dataset/mozambique_03/mozambique_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A544",
+                "path": "dataset/muslim_01/muslim_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A545",
+                "path": "dataset/muslim_02/muslim_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A546",
+                "path": "dataset/muslim_03/muslim_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A547",
+                "path": "dataset/muslim_04/muslim_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A548",
+                "path": "dataset/myanmar_01/myanmar_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A549",
+                "path": "dataset/myanmar_02/myanmar_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A550",
+                "path": "dataset/namibia_01/namibia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A551",
+                "path": "dataset/namibia_02/namibia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A552",
+                "path": "dataset/nato_01/nato_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A553",
+                "path": "dataset/nato_02/nato_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A554",
+                "path": "dataset/nato_03/nato_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A555",
+                "path": "dataset/nato_04/nato_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A556",
+                "path": "dataset/nato_05/nato_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A557",
+                "path": "dataset/nato_06/nato_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A558",
+                "path": "dataset/nauru_01/nauru_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A559",
+                "path": "dataset/nauru_02/nauru_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A560",
+                "path": "dataset/nearctic_01/nearctic_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A561",
+                "path": "dataset/nearctic_02/nearctic_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A562",
+                "path": "dataset/nearctic_03/nearctic_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A563",
+                "path": "dataset/nearctic_04/nearctic_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A564",
+                "path": "dataset/nearctic_05/nearctic_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A565",
+                "path": "dataset/nearctic_06/nearctic_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A566",
+                "path": "dataset/nearctic_07/nearctic_07.db"
+            },
+            {
+                "type": "sql",
+                "name": "A567",
+                "path": "dataset/neotropic_01/neotropic_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A568",
+                "path": "dataset/neotropic_02/neotropic_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A569",
+                "path": "dataset/neotropic_03/neotropic_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A570",
+                "path": "dataset/nepal_01/nepal_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A571",
+                "path": "dataset/nepal_02/nepal_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A572",
+                "path": "dataset/nepal_03/nepal_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A573",
+                "path": "dataset/nepal_04/nepal_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A574",
+                "path": "dataset/new_zealand_01/new_zealand_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A575",
+                "path": "dataset/new_zealand_02/new_zealand_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A576",
+                "path": "dataset/new_zealand_03/new_zealand_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A577",
+                "path": "dataset/new_zealand_04/new_zealand_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A578",
+                "path": "dataset/new_zealand_05/new_zealand_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A579",
+                "path": "dataset/nicaragua_01/nicaragua_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A580",
+                "path": "dataset/nicaragua_02/nicaragua_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A581",
+                "path": "dataset/nicaragua_03/nicaragua_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A582",
+                "path": "dataset/niger_01/niger_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A583",
+                "path": "dataset/niger_02/niger_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A584",
+                "path": "dataset/niger_03/niger_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A585",
+                "path": "dataset/nigeria_01/nigeria_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A586",
+                "path": "dataset/nordic_countries_01/nordic_countries_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A587",
+                "path": "dataset/north_africa_01/north_africa_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A588",
+                "path": "dataset/north_africa_02/north_africa_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A589",
+                "path": "dataset/north_africa_03/north_africa_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A590",
+                "path": "dataset/north_america_01/north_america_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A591",
+                "path": "dataset/north_america_02/north_america_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A592",
+                "path": "dataset/north_america_03/north_america_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A593",
+                "path": "dataset/north_america_04/north_america_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A594",
+                "path": "dataset/north_america_05/north_america_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A595",
+                "path": "dataset/north_america_06/north_america_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A596",
+                "path": "dataset/north_korea_01/north_korea_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A597",
+                "path": "dataset/north_korea_02/north_korea_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A598",
+                "path": "dataset/north_korea_03/north_korea_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A599",
+                "path": "dataset/north_macedonia_01/north_macedonia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A600",
+                "path": "dataset/north_macedonia_02/north_macedonia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A601",
+                "path": "dataset/northern_europe_01/northern_europe_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A602",
+                "path": "dataset/northern_europe_02/northern_europe_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A603",
+                "path": "dataset/northern_europe_03/northern_europe_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A604",
+                "path": "dataset/norway_01/norway_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A605",
+                "path": "dataset/norway_02/norway_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A606",
+                "path": "dataset/norway_03/norway_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A607",
+                "path": "dataset/norway_04/norway_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A608",
+                "path": "dataset/nuclear_weapons_state_01/nuclear_weapons_state_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A609",
+                "path": "dataset/nuclear_weapons_state_02/nuclear_weapons_state_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A610",
+                "path": "dataset/nuclear_weapons_state_03/nuclear_weapons_state_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A611",
+                "path": "dataset/nuclear_weapons_state_04/nuclear_weapons_state_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A612",
+                "path": "dataset/nuclear_weapons_state_05/nuclear_weapons_state_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A613",
+                "path": "dataset/oceania_01/oceania_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A614",
+                "path": "dataset/oceania_02/oceania_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A615",
+                "path": "dataset/oceania_03/oceania_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A616",
+                "path": "dataset/oceania_ecozone_01/oceania_ecozone_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A617",
+                "path": "dataset/oceania_region_01/oceania_region_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A618",
+                "path": "dataset/oceania_region_02/oceania_region_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A619",
+                "path": "dataset/oceania_region_03/oceania_region_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A620",
+                "path": "dataset/oceania_region_04/oceania_region_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A621",
+                "path": "dataset/oceania_region_05/oceania_region_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A622",
+                "path": "dataset/oecd_01/oecd_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A623",
+                "path": "dataset/oecd_02/oecd_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A624",
+                "path": "dataset/oman_01/oman_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A625",
+                "path": "dataset/oman_02/oman_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A626",
+                "path": "dataset/opec_01/opec_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A627",
+                "path": "dataset/opec_02/opec_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A628",
+                "path": "dataset/opec_03/opec_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A629",
+                "path": "dataset/pacific_islands_01/pacific_islands_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A630",
+                "path": "dataset/pacific_islands_02/pacific_islands_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A631",
+                "path": "dataset/pacific_islands_03/pacific_islands_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A632",
+                "path": "dataset/pacific_islands_04/pacific_islands_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A633",
+                "path": "dataset/pakistan_01/pakistan_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A634",
+                "path": "dataset/pakistan_02/pakistan_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A635",
+                "path": "dataset/pakistan_03/pakistan_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A636",
+                "path": "dataset/pakistan_04/pakistan_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A637",
+                "path": "dataset/pakistan_05/pakistan_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A638",
+                "path": "dataset/palau_01/palau_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A639",
+                "path": "dataset/palau_02/palau_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A640",
+                "path": "dataset/palau_03/palau_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A641",
+                "path": "dataset/palearctic_01/palearctic_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A642",
+                "path": "dataset/palearctic_02/palearctic_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A643",
+                "path": "dataset/palestine_01/palestine_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A644",
+                "path": "dataset/palestine_02/palestine_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A645",
+                "path": "dataset/panama_01/panama_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A646",
+                "path": "dataset/panama_02/panama_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A647",
+                "path": "dataset/panama_03/panama_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A648",
+                "path": "dataset/papua_new_guinea_01/papua_new_guinea_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A649",
+                "path": "dataset/papua_new_guinea_02/papua_new_guinea_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A650",
+                "path": "dataset/papua_new_guinea_03/papua_new_guinea_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A651",
+                "path": "dataset/paraguay_01/paraguay_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A652",
+                "path": "dataset/paraguay_02/paraguay_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A653",
+                "path": "dataset/paraguay_03/paraguay_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A654",
+                "path": "dataset/paraguay_04/paraguay_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A655",
+                "path": "dataset/people_s_republic_of_china_01/people_s_republic_of_china_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A656",
+                "path": "dataset/people_s_republic_of_china_02/people_s_republic_of_china_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A657",
+                "path": "dataset/people_s_republic_of_china_03/people_s_republic_of_china_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A658",
+                "path": "dataset/peru_01/peru_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A659",
+                "path": "dataset/peru_02/peru_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A660",
+                "path": "dataset/peru_03/peru_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A661",
+                "path": "dataset/philippines_01/philippines_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A662",
+                "path": "dataset/philippines_02/philippines_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A663",
+                "path": "dataset/philippines_03/philippines_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A664",
+                "path": "dataset/poland_01/poland_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A665",
+                "path": "dataset/poland_02/poland_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A666",
+                "path": "dataset/poland_03/poland_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A667",
+                "path": "dataset/poland_04/poland_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A668",
+                "path": "dataset/poland_05/poland_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A669",
+                "path": "dataset/polar_01/polar_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A670",
+                "path": "dataset/portugal_01/portugal_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A671",
+                "path": "dataset/portugal_02/portugal_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A672",
+                "path": "dataset/portugal_03/portugal_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A673",
+                "path": "dataset/qatar_01/qatar_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A674",
+                "path": "dataset/qatar_02/qatar_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A675",
+                "path": "dataset/qatar_03/qatar_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A676",
+                "path": "dataset/qatar_04/qatar_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A677",
+                "path": "dataset/qatar_05/qatar_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A678",
+                "path": "dataset/qatar_06/qatar_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A679",
+                "path": "dataset/republic_of_the_congo_01/republic_of_the_congo_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A680",
+                "path": "dataset/republic_of_the_congo_02/republic_of_the_congo_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A681",
+                "path": "dataset/romania_01/romania_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A682",
+                "path": "dataset/romania_02/romania_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A683",
+                "path": "dataset/russia_01/russia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A684",
+                "path": "dataset/russia_02/russia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A685",
+                "path": "dataset/russia_03/russia_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A686",
+                "path": "dataset/russia_04/russia_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A687",
+                "path": "dataset/russia_05/russia_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A688",
+                "path": "dataset/rwanda_01/rwanda_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A689",
+                "path": "dataset/rwanda_02/rwanda_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A690",
+                "path": "dataset/s_o_tom_and_pr_ncipe_01/s_o_tom_and_pr_ncipe_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A691",
+                "path": "dataset/s_o_tom_and_pr_ncipe_02/s_o_tom_and_pr_ncipe_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A692",
+                "path": "dataset/sahel_01/sahel_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A693",
+                "path": "dataset/sahel_02/sahel_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A694",
+                "path": "dataset/saint_kitts_and_nevis_01/saint_kitts_and_nevis_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A695",
+                "path": "dataset/saint_kitts_and_nevis_02/saint_kitts_and_nevis_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A696",
+                "path": "dataset/saint_lucia_01/saint_lucia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A697",
+                "path": "dataset/saint_vincent_and_the_grenadines_01/saint_vincent_and_the_grenadines_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A698",
+                "path": "dataset/saint_vincent_and_the_grenadines_02/saint_vincent_and_the_grenadines_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A699",
+                "path": "dataset/saint_vincent_and_the_grenadines_03/saint_vincent_and_the_grenadines_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A700",
+                "path": "dataset/samoa_01/samoa_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A701",
+                "path": "dataset/san_marino_01/san_marino_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A702",
+                "path": "dataset/san_marino_02/san_marino_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A703",
+                "path": "dataset/saudi_arabia_01/saudi_arabia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A704",
+                "path": "dataset/saudi_arabia_02/saudi_arabia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A705",
+                "path": "dataset/saudi_arabia_03/saudi_arabia_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A706",
+                "path": "dataset/saudi_arabia_04/saudi_arabia_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A707",
+                "path": "dataset/scandinavia_01/scandinavia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A708",
+                "path": "dataset/scandinavia_02/scandinavia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A709",
+                "path": "dataset/schengen_01/schengen_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A710",
+                "path": "dataset/schengen_02/schengen_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A711",
+                "path": "dataset/schengen_03/schengen_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A712",
+                "path": "dataset/schengen_04/schengen_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A713",
+                "path": "dataset/schengen_05/schengen_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A714",
+                "path": "dataset/senegal_01/senegal_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A715",
+                "path": "dataset/senegal_02/senegal_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A716",
+                "path": "dataset/senegal_03/senegal_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A717",
+                "path": "dataset/senegal_04/senegal_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A718",
+                "path": "dataset/serbia_01/serbia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A719",
+                "path": "dataset/serbia_02/serbia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A720",
+                "path": "dataset/serbia_03/serbia_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A721",
+                "path": "dataset/serbia_04/serbia_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A722",
+                "path": "dataset/serbia_05/serbia_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A723",
+                "path": "dataset/seychelles_01/seychelles_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A724",
+                "path": "dataset/sierra_leone_01/sierra_leone_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A725",
+                "path": "dataset/sierra_leone_02/sierra_leone_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A726",
+                "path": "dataset/sierra_leone_03/sierra_leone_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A727",
+                "path": "dataset/sierra_leone_04/sierra_leone_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A728",
+                "path": "dataset/singapore_01/singapore_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A729",
+                "path": "dataset/singapore_02/singapore_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A730",
+                "path": "dataset/singapore_03/singapore_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A731",
+                "path": "dataset/sinophone_01/sinophone_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A732",
+                "path": "dataset/sinophone_02/sinophone_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A733",
+                "path": "dataset/sinophone_03/sinophone_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A734",
+                "path": "dataset/sinophone_04/sinophone_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A735",
+                "path": "dataset/sinophone_05/sinophone_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A736",
+                "path": "dataset/sinophone_06/sinophone_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A737",
+                "path": "dataset/slavic_countries_01/slavic_countries_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A738",
+                "path": "dataset/slavic_countries_02/slavic_countries_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A739",
+                "path": "dataset/slavic_countries_03/slavic_countries_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A740",
+                "path": "dataset/slavic_countries_04/slavic_countries_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A741",
+                "path": "dataset/slavic_countries_05/slavic_countries_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A742",
+                "path": "dataset/slovakia_01/slovakia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A743",
+                "path": "dataset/slovakia_02/slovakia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A744",
+                "path": "dataset/slovakia_03/slovakia_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A745",
+                "path": "dataset/slovakia_04/slovakia_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A746",
+                "path": "dataset/slovenia_01/slovenia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A747",
+                "path": "dataset/slovenia_02/slovenia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A748",
+                "path": "dataset/small_island_states_01/small_island_states_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A749",
+                "path": "dataset/small_island_states_02/small_island_states_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A750",
+                "path": "dataset/small_island_states_03/small_island_states_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A751",
+                "path": "dataset/small_island_states_04/small_island_states_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A752",
+                "path": "dataset/solomon_islands_01/solomon_islands_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A753",
+                "path": "dataset/somalia_01/somalia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A754",
+                "path": "dataset/somalia_02/somalia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A755",
+                "path": "dataset/somalia_03/somalia_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A756",
+                "path": "dataset/south_africa_01/south_africa_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A757",
+                "path": "dataset/south_africa_02/south_africa_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A758",
+                "path": "dataset/south_america_01/south_america_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A759",
+                "path": "dataset/south_america_02/south_america_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A760",
+                "path": "dataset/south_america_03/south_america_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A761",
+                "path": "dataset/south_asia_01/south_asia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A762",
+                "path": "dataset/south_asia_02/south_asia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A763",
+                "path": "dataset/south_asia_03/south_asia_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A764",
+                "path": "dataset/south_asia_04/south_asia_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A765",
+                "path": "dataset/south_korea_01/south_korea_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A766",
+                "path": "dataset/south_sudan_01/south_sudan_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A767",
+                "path": "dataset/south_sudan_02/south_sudan_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A768",
+                "path": "dataset/southeast_asia_01/southeast_asia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A769",
+                "path": "dataset/southeast_asia_02/southeast_asia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A770",
+                "path": "dataset/southeast_asia_03/southeast_asia_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A771",
+                "path": "dataset/southern_africa_01/southern_africa_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A772",
+                "path": "dataset/southern_africa_02/southern_africa_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A773",
+                "path": "dataset/southern_europe_01/southern_europe_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A774",
+                "path": "dataset/southern_europe_02/southern_europe_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A775",
+                "path": "dataset/southern_europe_03/southern_europe_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A776",
+                "path": "dataset/southern_europe_04/southern_europe_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A777",
+                "path": "dataset/spain_01/spain_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A778",
+                "path": "dataset/spain_02/spain_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A779",
+                "path": "dataset/sri_lanka_01/sri_lanka_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A780",
+                "path": "dataset/sri_lanka_02/sri_lanka_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A781",
+                "path": "dataset/sri_lanka_03/sri_lanka_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A782",
+                "path": "dataset/sri_lanka_04/sri_lanka_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A783",
+                "path": "dataset/subsaharan_africa_01/subsaharan_africa_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A784",
+                "path": "dataset/subsaharan_africa_02/subsaharan_africa_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A785",
+                "path": "dataset/subsaharan_africa_03/subsaharan_africa_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A786",
+                "path": "dataset/successor_states_of_yugoslavia_01/successor_states_of_yugoslavia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A787",
+                "path": "dataset/successor_states_of_yugoslavia_02/successor_states_of_yugoslavia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A788",
+                "path": "dataset/sudan_01/sudan_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A789",
+                "path": "dataset/sudan_02/sudan_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A790",
+                "path": "dataset/sudan_03/sudan_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A791",
+                "path": "dataset/suriname_01/suriname_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A792",
+                "path": "dataset/suriname_02/suriname_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A793",
+                "path": "dataset/suriname_03/suriname_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A794",
+                "path": "dataset/sweden_01/sweden_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A795",
+                "path": "dataset/sweden_02/sweden_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A796",
+                "path": "dataset/switzerland_01/switzerland_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A797",
+                "path": "dataset/switzerland_02/switzerland_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A798",
+                "path": "dataset/syria_01/syria_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A799",
+                "path": "dataset/syria_02/syria_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A800",
+                "path": "dataset/syria_03/syria_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A801",
+                "path": "dataset/syria_04/syria_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A802",
+                "path": "dataset/syria_05/syria_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A803",
+                "path": "dataset/taiwan_01/taiwan_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A804",
+                "path": "dataset/taiwan_02/taiwan_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A805",
+                "path": "dataset/taiwan_03/taiwan_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A806",
+                "path": "dataset/tajikistan_01/tajikistan_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A807",
+                "path": "dataset/tanzania_01/tanzania_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A808",
+                "path": "dataset/tanzania_02/tanzania_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A809",
+                "path": "dataset/tanzania_03/tanzania_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A810",
+                "path": "dataset/tanzania_04/tanzania_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A811",
+                "path": "dataset/temperate_01/temperate_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A812",
+                "path": "dataset/temperate_02/temperate_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A813",
+                "path": "dataset/temperate_03/temperate_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A814",
+                "path": "dataset/temperate_04/temperate_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A815",
+                "path": "dataset/temperate_05/temperate_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A816",
+                "path": "dataset/temperate_06/temperate_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A817",
+                "path": "dataset/thailand_01/thailand_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A818",
+                "path": "dataset/thailand_02/thailand_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A819",
+                "path": "dataset/thailand_03/thailand_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A820",
+                "path": "dataset/the_bahamas_01/the_bahamas_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A821",
+                "path": "dataset/the_bahamas_02/the_bahamas_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A822",
+                "path": "dataset/the_bahamas_03/the_bahamas_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A823",
+                "path": "dataset/the_gambia_01/the_gambia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A824",
+                "path": "dataset/the_gambia_02/the_gambia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A825",
+                "path": "dataset/timor_leste_01/timor_leste_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A826",
+                "path": "dataset/timor_leste_02/timor_leste_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A827",
+                "path": "dataset/timor_leste_03/timor_leste_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A828",
+                "path": "dataset/togo_01/togo_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A829",
+                "path": "dataset/togo_02/togo_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A830",
+                "path": "dataset/togo_03/togo_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A831",
+                "path": "dataset/tonga_01/tonga_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A832",
+                "path": "dataset/tonga_02/tonga_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A833",
+                "path": "dataset/trinidad_and_tobago_01/trinidad_and_tobago_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A834",
+                "path": "dataset/tropical_01/tropical_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A835",
+                "path": "dataset/tropical_02/tropical_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A836",
+                "path": "dataset/tropical_03/tropical_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A837",
+                "path": "dataset/tropical_04/tropical_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A838",
+                "path": "dataset/tropical_05/tropical_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A839",
+                "path": "dataset/tunisia_01/tunisia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A840",
+                "path": "dataset/tunisia_02/tunisia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A841",
+                "path": "dataset/tunisia_03/tunisia_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A842",
+                "path": "dataset/turkey_01/turkey_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A843",
+                "path": "dataset/turkey_02/turkey_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A844",
+                "path": "dataset/turkey_03/turkey_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A845",
+                "path": "dataset/turkey_04/turkey_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A846",
+                "path": "dataset/turkey_05/turkey_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A847",
+                "path": "dataset/turkey_06/turkey_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A848",
+                "path": "dataset/turkmenistan_01/turkmenistan_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A849",
+                "path": "dataset/turkmenistan_02/turkmenistan_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A850",
+                "path": "dataset/tuvalu_01/tuvalu_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A851",
+                "path": "dataset/tuvalu_02/tuvalu_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A852",
+                "path": "dataset/uganda_01/uganda_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A853",
+                "path": "dataset/uganda_02/uganda_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A854",
+                "path": "dataset/uganda_03/uganda_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A855",
+                "path": "dataset/uganda_04/uganda_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A856",
+                "path": "dataset/ukraine_01/ukraine_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A857",
+                "path": "dataset/united_arab_emirates_01/united_arab_emirates_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A858",
+                "path": "dataset/united_arab_emirates_02/united_arab_emirates_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A859",
+                "path": "dataset/united_arab_emirates_03/united_arab_emirates_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A860",
+                "path": "dataset/united_kingdom_01/united_kingdom_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A861",
+                "path": "dataset/united_kingdom_02/united_kingdom_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A862",
+                "path": "dataset/united_kingdom_03/united_kingdom_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A863",
+                "path": "dataset/united_states_01/united_states_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A864",
+                "path": "dataset/united_states_02/united_states_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A865",
+                "path": "dataset/united_states_03/united_states_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A866",
+                "path": "dataset/united_states_04/united_states_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A867",
+                "path": "dataset/united_states_05/united_states_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A868",
+                "path": "dataset/uruguay_01/uruguay_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A869",
+                "path": "dataset/uruguay_02/uruguay_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A870",
+                "path": "dataset/utc_0_01/utc_0_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A871",
+                "path": "dataset/utc_0_02/utc_0_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A872",
+                "path": "dataset/utc_0_03/utc_0_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A873",
+                "path": "dataset/utc_0_04/utc_0_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A874",
+                "path": "dataset/utc_0_05/utc_0_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A875",
+                "path": "dataset/utc_0_06/utc_0_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A876",
+                "path": "dataset/utc_minus_1_01/utc_minus_1_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A877",
+                "path": "dataset/utc_minus_3_01/utc_minus_3_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A878",
+                "path": "dataset/utc_minus_3_02/utc_minus_3_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A879",
+                "path": "dataset/utc_minus_3_03/utc_minus_3_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A880",
+                "path": "dataset/utc_minus_3_04/utc_minus_3_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A881",
+                "path": "dataset/utc_minus_4_01/utc_minus_4_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A882",
+                "path": "dataset/utc_minus_4_02/utc_minus_4_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A883",
+                "path": "dataset/utc_minus_4_03/utc_minus_4_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A884",
+                "path": "dataset/utc_minus_5_01/utc_minus_5_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A885",
+                "path": "dataset/utc_minus_5_02/utc_minus_5_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A886",
+                "path": "dataset/utc_minus_5_03/utc_minus_5_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A887",
+                "path": "dataset/utc_minus_6_01/utc_minus_6_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A888",
+                "path": "dataset/utc_minus_6_02/utc_minus_6_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A889",
+                "path": "dataset/utc_plus_10_01/utc_plus_10_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A890",
+                "path": "dataset/utc_plus_10_02/utc_plus_10_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A891",
+                "path": "dataset/utc_plus_11_01/utc_plus_11_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A892",
+                "path": "dataset/utc_plus_11_02/utc_plus_11_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A893",
+                "path": "dataset/utc_plus_11_03/utc_plus_11_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A894",
+                "path": "dataset/utc_plus_11_04/utc_plus_11_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A895",
+                "path": "dataset/utc_plus_11_05/utc_plus_11_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A896",
+                "path": "dataset/utc_plus_12_01/utc_plus_12_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A897",
+                "path": "dataset/utc_plus_12_02/utc_plus_12_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A898",
+                "path": "dataset/utc_plus_12_03/utc_plus_12_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A899",
+                "path": "dataset/utc_plus_12_04/utc_plus_12_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A900",
+                "path": "dataset/utc_plus_12_05/utc_plus_12_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A901",
+                "path": "dataset/utc_plus_13_01/utc_plus_13_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A902",
+                "path": "dataset/utc_plus_13_02/utc_plus_13_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A903",
+                "path": "dataset/utc_plus_13_03/utc_plus_13_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A904",
+                "path": "dataset/utc_plus_13_04/utc_plus_13_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A905",
+                "path": "dataset/utc_plus_1_01/utc_plus_1_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A906",
+                "path": "dataset/utc_plus_1_02/utc_plus_1_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A907",
+                "path": "dataset/utc_plus_1_03/utc_plus_1_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A908",
+                "path": "dataset/utc_plus_1_04/utc_plus_1_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A909",
+                "path": "dataset/utc_plus_1_05/utc_plus_1_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A910",
+                "path": "dataset/utc_plus_2_01/utc_plus_2_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A911",
+                "path": "dataset/utc_plus_2_02/utc_plus_2_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A912",
+                "path": "dataset/utc_plus_2_03/utc_plus_2_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A913",
+                "path": "dataset/utc_plus_2_04/utc_plus_2_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A914",
+                "path": "dataset/utc_plus_2_05/utc_plus_2_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A915",
+                "path": "dataset/utc_plus_3_01/utc_plus_3_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A916",
+                "path": "dataset/utc_plus_3_02/utc_plus_3_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A917",
+                "path": "dataset/utc_plus_3_03/utc_plus_3_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A918",
+                "path": "dataset/utc_plus_3_04/utc_plus_3_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A919",
+                "path": "dataset/utc_plus_3_30_01/utc_plus_3_30_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A920",
+                "path": "dataset/utc_plus_3_30_02/utc_plus_3_30_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A921",
+                "path": "dataset/utc_plus_3_30_03/utc_plus_3_30_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A922",
+                "path": "dataset/utc_plus_3_30_04/utc_plus_3_30_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A923",
+                "path": "dataset/utc_plus_3_30_05/utc_plus_3_30_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A924",
+                "path": "dataset/utc_plus_4_01/utc_plus_4_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A925",
+                "path": "dataset/utc_plus_4_02/utc_plus_4_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A926",
+                "path": "dataset/utc_plus_4_30_01/utc_plus_4_30_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A927",
+                "path": "dataset/utc_plus_4_30_02/utc_plus_4_30_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A928",
+                "path": "dataset/utc_plus_4_30_03/utc_plus_4_30_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A929",
+                "path": "dataset/utc_plus_5_01/utc_plus_5_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A930",
+                "path": "dataset/utc_plus_5_02/utc_plus_5_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A931",
+                "path": "dataset/utc_plus_5_03/utc_plus_5_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A932",
+                "path": "dataset/utc_plus_5_04/utc_plus_5_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A933",
+                "path": "dataset/utc_plus_5_05/utc_plus_5_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A934",
+                "path": "dataset/utc_plus_5_30_01/utc_plus_5_30_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A935",
+                "path": "dataset/utc_plus_5_30_02/utc_plus_5_30_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A936",
+                "path": "dataset/utc_plus_5_30_03/utc_plus_5_30_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A937",
+                "path": "dataset/utc_plus_5_30_04/utc_plus_5_30_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A938",
+                "path": "dataset/utc_plus_5_30_05/utc_plus_5_30_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A939",
+                "path": "dataset/utc_plus_5_30_06/utc_plus_5_30_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A940",
+                "path": "dataset/utc_plus_5_45_01/utc_plus_5_45_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A941",
+                "path": "dataset/utc_plus_5_45_02/utc_plus_5_45_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A942",
+                "path": "dataset/utc_plus_5_45_03/utc_plus_5_45_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A943",
+                "path": "dataset/utc_plus_6_01/utc_plus_6_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A944",
+                "path": "dataset/utc_plus_6_02/utc_plus_6_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A945",
+                "path": "dataset/utc_plus_6_03/utc_plus_6_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A946",
+                "path": "dataset/utc_plus_6_04/utc_plus_6_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A947",
+                "path": "dataset/utc_plus_6_05/utc_plus_6_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A948",
+                "path": "dataset/utc_plus_6_30_01/utc_plus_6_30_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A949",
+                "path": "dataset/utc_plus_6_30_02/utc_plus_6_30_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A950",
+                "path": "dataset/utc_plus_6_30_03/utc_plus_6_30_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A951",
+                "path": "dataset/utc_plus_6_30_04/utc_plus_6_30_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A952",
+                "path": "dataset/utc_plus_6_30_05/utc_plus_6_30_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A953",
+                "path": "dataset/utc_plus_6_30_06/utc_plus_6_30_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A954",
+                "path": "dataset/utc_plus_7_01/utc_plus_7_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A955",
+                "path": "dataset/utc_plus_7_02/utc_plus_7_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A956",
+                "path": "dataset/utc_plus_7_03/utc_plus_7_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A957",
+                "path": "dataset/utc_plus_8_01/utc_plus_8_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A958",
+                "path": "dataset/utc_plus_8_02/utc_plus_8_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A959",
+                "path": "dataset/utc_plus_8_03/utc_plus_8_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A960",
+                "path": "dataset/utc_plus_8_04/utc_plus_8_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A961",
+                "path": "dataset/utc_plus_8_05/utc_plus_8_05.db"
+            },
+            {
+                "type": "sql",
+                "name": "A962",
+                "path": "dataset/utc_plus_8_06/utc_plus_8_06.db"
+            },
+            {
+                "type": "sql",
+                "name": "A963",
+                "path": "dataset/utc_plus_9_01/utc_plus_9_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A964",
+                "path": "dataset/utc_plus_9_02/utc_plus_9_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A965",
+                "path": "dataset/utc_plus_9_03/utc_plus_9_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A966",
+                "path": "dataset/utc_plus_9_04/utc_plus_9_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A967",
+                "path": "dataset/uzbekistan_01/uzbekistan_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A968",
+                "path": "dataset/uzbekistan_02/uzbekistan_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A969",
+                "path": "dataset/uzbekistan_03/uzbekistan_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A970",
+                "path": "dataset/uzbekistan_04/uzbekistan_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A971",
+                "path": "dataset/vanuatu_01/vanuatu_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A972",
+                "path": "dataset/vatican_city_01/vatican_city_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A973",
+                "path": "dataset/venezuela_01/venezuela_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A974",
+                "path": "dataset/venezuela_02/venezuela_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A975",
+                "path": "dataset/venezuela_03/venezuela_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A976",
+                "path": "dataset/vietnam_01/vietnam_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A977",
+                "path": "dataset/vietnam_02/vietnam_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A978",
+                "path": "dataset/vietnam_03/vietnam_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A979",
+                "path": "dataset/visegrad_01/visegrad_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A980",
+                "path": "dataset/visegrad_02/visegrad_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A981",
+                "path": "dataset/visegrad_03/visegrad_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A982",
+                "path": "dataset/visegrad_04/visegrad_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A983",
+                "path": "dataset/west_africa_01/west_africa_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A984",
+                "path": "dataset/west_africa_02/west_africa_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A985",
+                "path": "dataset/west_africa_03/west_africa_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A986",
+                "path": "dataset/western_asia_01/western_asia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A987",
+                "path": "dataset/western_asia_02/western_asia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A988",
+                "path": "dataset/western_asia_03/western_asia_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A989",
+                "path": "dataset/western_asia_04/western_asia_04.db"
+            },
+            {
+                "type": "sql",
+                "name": "A990",
+                "path": "dataset/western_europe_01/western_europe_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A991",
+                "path": "dataset/western_europe_02/western_europe_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A992",
+                "path": "dataset/western_europe_03/western_europe_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A993",
+                "path": "dataset/yemen_01/yemen_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A994",
+                "path": "dataset/yemen_02/yemen_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A995",
+                "path": "dataset/zambia_01/zambia_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A996",
+                "path": "dataset/zambia_02/zambia_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A997",
+                "path": "dataset/zambia_03/zambia_03.db"
+            },
+            {
+                "type": "sql",
+                "name": "A998",
+                "path": "dataset/zimbabwe_01/zimbabwe_01.db"
+            },
+            {
+                "type": "sql",
+                "name": "A999",
+                "path": "dataset/zimbabwe_02/zimbabwe_02.db"
+            },
+            {
+                "type": "sql",
+                "name": "A1000",
+                "path": "dataset/zimbabwe_03/zimbabwe_03.db"
+            }
+        ]
+    }
+}

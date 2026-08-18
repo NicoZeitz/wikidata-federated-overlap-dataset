@@ -55,7 +55,7 @@ def _build_from_clause(sql: str) -> str:
 
 def _table_aliases(sql: str, table: str) -> list[str]:
     """Return all aliases used for `table` in the SQL, e.g. teams → ['t1', 't2']."""
-    pattern = rf'\b{re.escape(table)}\s+(?:AS\s+)?([a-zA-Z_][a-zA-Z0-9_]*)\b'
+    pattern = rf"\b{re.escape(table)}\s+(?:AS\s+)?([a-zA-Z_][a-zA-Z0-9_]*)\b"
     return list(dict.fromkeys(re.findall(pattern, sql, re.IGNORECASE)))
 
 
@@ -310,7 +310,7 @@ def run_script(args: argparse.Namespace) -> None:
             sys.exit(f"Error: {msg}")
         print(f"Warning: {msg}", file=sys.stderr)
 
-    print(f"Relevant agents:    {len(relevant_agents)}/{len(agents)}")
+    print(f"Relevant agents:   {len(relevant_agents)}/{len(agents)}")
     if args.verbose:
         for agent_name, folder_name, matched_tables, matched_countries in relevant_agents:
             tables_str = sorted(matched_tables)
@@ -343,14 +343,19 @@ def run_script(args: argparse.Namespace) -> None:
         },
     }
 
+    if args.skip:
+        print(f"Relevant agents:   {json.dumps(relevant_agent_names)}")
+        return
+
     args.input_dir.mkdir(parents=True, exist_ok=True)
     safe_name = re.sub(r"[^\w\s-]", "", args.nl_query).strip()
     safe_name = re.sub(r"\s+", "_", safe_name)[:80]
     out_path = args.input_dir / f"{safe_name}.json"
     if out_path.exists() and not args.overwrite:
         sys.exit(f"Error: {out_path} already exists. Use --overwrite to replace.")
-    out_path.write_text(json.dumps(output, indent=2, ensure_ascii=False))
+    out_path.write_text(json.dumps(output, indent=4, ensure_ascii=False))
     print(f"Written: {out_path}")
+
 
 def _parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Create a query input file for the wikidata2 dataset.")
@@ -419,6 +424,11 @@ def _parse_args() -> argparse.Namespace:
         "--verbose",
         action="store_true",
         help="Print each relevant agent with matched tables and countries",
+    )
+    parser.add_argument(
+        "--skip",
+        action="store_true",
+        help="Skip outputting the output file, only logs to console",
     )
     return parser.parse_args()
 

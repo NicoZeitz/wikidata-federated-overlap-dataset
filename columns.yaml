@@ -11,16 +11,15 @@
 #       description: "Description when column keeps its source name."
 #       synonyms:
 #         synonym_name: "Description when column is renamed to this synonym."
-
 accidents:
   __meta__:
     primary_key: accident
     split_col: country
-    description: Aviation accidents involving commercial airlines.
+    description: Aviation accidents involving airlines that occurred in {{REGION}}.
     synonyms:
-      crashes: Table of aviation crashes involving commercial airlines.
-      incidents: Table of aviation incidents involving commercial airlines.
-      aviation_accidents: Table of aviation accidents.
+      crashes: Table of aviation crashes involving airlines that occurred in {{REGION}}.
+      incidents: Table of aviation incidents involving airlines that occurred in {{REGION}}.
+      aviation_accidents: Table of aviation accidents that occurred in {{REGION}}.
     foreign_keys:
       country: countries
       airline: airlines
@@ -72,11 +71,11 @@ aircraft:
   __meta__:
     primary_key: aircraft
     split_col: country
-    description: Individual aircraft operated by commercial airlines.
+    description: Individual aircraft operated by airlines based in {{REGION}}.
     synonyms:
-      planes: Table of individual aircraft operated by commercial airlines.
-      airplanes: Table of airplanes operated by commercial airlines.
-      fleet: Table of aircraft fleet operated by commercial airlines.
+      planes: Table of individual aircraft operated by airlines based in {{REGION}}.
+      airplanes: Table of airplanes operated by airlines based in {{REGION}}.
+      fleet: Table of aircraft fleet operated by airlines based in {{REGION}}.
     foreign_keys:
       country: countries
     required:
@@ -148,11 +147,11 @@ airlines:
   __meta__:
     primary_key: airline
     split_col: country
-    description: Commercial airlines with founding date, fleet size, employees, and revenue.
+    description: Airlines headquartered in {{REGION}}.
     synonyms:
-      carriers: Table of commercial airline carriers.
-      air_carriers: Table of commercial air carriers.
-      air_operators: Table of commercial air operators.
+      carriers: Table of airline carriers headquartered in {{REGION}}.
+      air_carriers: Table of air carriers headquartered in {{REGION}}.
+      air_operators: Table of air operators headquartered in {{REGION}}.
     foreign_keys:
       country: countries
       hub_airport: airports
@@ -235,12 +234,11 @@ airports:
   __meta__:
     primary_key: airport
     split_col: country
-    description: Public civil airports worldwide with IATA codes, elevation, passenger
-      counts, and geographic location.
+    description: Airports located in {{REGION}}.
     synonyms:
-      airfields: Table of public civil airfields and airports.
-      terminals: Table of airport terminals worldwide.
-      aerodromes: Table of civil aerodromes worldwide.
+      airfields: Table of airfields and airports located in {{REGION}}.
+      terminals: Table of airport terminals located in {{REGION}}.
+      aerodromes: Table of aerodromes located in {{REGION}}.
     foreign_keys:
       country: countries
       city: cities
@@ -318,11 +316,11 @@ awards:
   __meta__:
     primary_key: award
     split_col: country
-    description: Major international awards with country of origin, inception date, and awarding organisation.
+    description: Awards from {{REGION}}.
     synonyms:
-      prizes: Table of major international prizes and awards.
-      honors: Table of major international honors and awards.
-      distinctions: Table of major international distinctions.
+      prizes: Table of prizes and awards from {{REGION}}.
+      honors: Table of honors and awards from {{REGION}}.
+      distinctions: Table of distinctions from {{REGION}}.
     foreign_keys:
       country: countries
     required:
@@ -368,11 +366,11 @@ cities:
   __meta__:
     primary_key: city
     split_col: country
-    description: Cities and human settlements worldwide.
+    description: Cities and human settlements located in {{REGION}}.
     synonyms:
-      towns: Table of cities and towns worldwide.
-      municipalities: Table of municipalities and cities worldwide.
-      settlements: Table of human settlements worldwide.
+      towns: Table of cities and towns located in {{REGION}}.
+      municipalities: Table of municipalities and cities located in {{REGION}}.
+      settlements: Table of human settlements located in {{REGION}}.
     foreign_keys:
       country: countries
     required:
@@ -458,7 +456,7 @@ provinces:
   __meta__:
     primary_key: province
     split_col: country
-    description: Administrative divisions of China with area, population, capital, and geographic coordinates.
+    description: Administrative divisions of China.
     synonyms:
       china_provinces: Table of Chinese provinces and administrative regions.
       china_states: Table of Chinese administrative regions and provinces.
@@ -524,12 +522,11 @@ companies:
   __meta__:
     primary_key: company
     split_col: country
-    description: Business enterprises with financial metrics, industry classification,
-      and headquarters.
+    description: Business enterprises headquartered in {{REGION}}.
     synonyms:
-      firms: Table of business firms with financial metrics.
-      businesses: Table of businesses with financial metrics.
-      enterprises: Table of business enterprises with financial metrics.
+      firms: Table of business firms headquartered in {{REGION}}.
+      businesses: Table of businesses headquartered in {{REGION}}.
+      enterprises: Table of business enterprises headquartered in {{REGION}}.
     foreign_keys:
       country: countries
       ceo_person: persons
@@ -630,10 +627,10 @@ continents:
   __meta__:
     primary_key: continent
     split_col: null
-    description: The 7 continents with area, population, and coordinates.
+    description: Continents covering {{REGION}}.
     synonyms:
-      landmasses: Table of the 7 major landmasses of the world.
-      world_regions: Table of major world regions by landmass.
+      landmasses: Table of major landmasses covering {{REGION}}.
+      world_regions: Table of major world regions covering {{REGION}}.
     required:
     - name
     - area_km2
@@ -751,10 +748,9 @@ countries:
   __meta__:
     primary_key: country
     split_col: country
-    description: Sovereign countries with ISO codes, geography, demographics, and
-      economic indicators.
+    description: Sovereign countries in {{REGION}}.
     synonyms:
-      nations: Table of sovereign nations with geographic and economic data.
+      nations: Table of sovereign nations in {{REGION}}.
     foreign_keys:
       continent: continents
       capital: cities
@@ -992,12 +988,11 @@ matches:
   __meta__:
     primary_key: match
     split_col: venue
-    description: FIFA World Cup matches with date, teams, scores, stage, venue, attendance,
-      and referee.
+    description: FIFA World Cup matches played in {{REGION}}.
     synonyms:
-      games: Table of FIFA World Cup games.
-      fixtures: Table of FIFA World Cup fixtures.
-      world_cup_matches: Table of FIFA World Cup match results.
+      games: Table of FIFA World Cup games played in {{REGION}}.
+      fixtures: Table of FIFA World Cup fixtures played in {{REGION}}.
+      world_cup_matches: Table of FIFA World Cup match results from {{REGION}}.
     foreign_keys:
       tournament: tournaments
       venue: venues
@@ -1088,7 +1083,7 @@ person_awards:
   __meta__:
     primary_key: null
     split_col: person
-    description: Records linking persons to awards they received, with optional year.
+    description: Records linking persons from {{REGION}} to awards they received.
     foreign_keys:
       person: persons
       award: awards
@@ -1114,12 +1109,11 @@ persons:
   __meta__:
     primary_key: person
     split_col: country
-    description: Persons from award winners, FIFA World Cup venue architects, current
-      team coaches/captains, match referees, and current heads of state/government.
+    description: Persons from {{REGION}}.
     synonyms:
-      people: Table of notable people.
-      individuals: Table of notable individuals.
-      notable_persons: Table of notable persons from various domains.
+      people: Table of notable people from {{REGION}}.
+      individuals: Table of notable individuals from {{REGION}}.
+      notable_persons: Table of notable persons from {{REGION}}.
     foreign_keys:
       citizenship: countries
       birth_country: countries
@@ -1179,7 +1173,8 @@ persons:
       country_of_birth: Country where the person was born.
       birthplace_country: Country of the person's birthplace.
   country:
-    description: Country associated with the person (citizenship if known, otherwise country of birth).
+    description: Country associated with the person (citizenship if known, otherwise
+      country of birth).
     synonyms:
       nation: Country of the person.
   educated_at:
@@ -1207,11 +1202,12 @@ teams:
   __meta__:
     primary_key: team
     split_col: country
-    description: National football teams that participated in FIFA World Cup matches.
+    description: National football teams from {{REGION}}.
     synonyms:
-      squads: Table of national football squads.
-      national_teams: Table of national football teams.
-      football_teams: Table of national football teams in the FIFA World Cup.
+      squads: Table of national football squads from {{REGION}}.
+      national_teams: Table of national football teams from {{REGION}}.
+      football_teams: Table of national football teams in the FIFA World Cup from
+        {{REGION}}.
     foreign_keys:
       country: countries
       head_coach: persons
@@ -1275,11 +1271,11 @@ tournaments:
   __meta__:
     primary_key: tournament
     split_col: country
-    description: FIFA World Cup tournaments from 1930 to 2022.
+    description: FIFA World Cup tournaments held in {{REGION}}.
     synonyms:
-      competitions: Table of FIFA World Cup competition editions.
-      cups: Table of FIFA World Cup editions.
-      world_cups: Table of FIFA World Cup tournament editions.
+      competitions: Table of FIFA World Cup competition editions held in {{REGION}}.
+      cups: Table of FIFA World Cup editions held in {{REGION}}.
+      world_cups: Table of FIFA World Cup tournament editions held in {{REGION}}.
     foreign_keys:
       country: countries
       winner: teams
@@ -1312,7 +1308,8 @@ tournaments:
       host_country: Country that hosted the tournament.
       nation: Nation that hosted the tournament.
   edition_number:
-    description: Ordinal edition number of the tournament (e.g. 23 for the 23rd World Cup).
+    description: Ordinal edition number of the tournament (e.g. 23 for the 23rd World
+      Cup).
     synonyms:
       edition: Edition number of the tournament.
       edition_no: Ordinal number of the edition.
@@ -1345,11 +1342,11 @@ venues:
   __meta__:
     primary_key: venue
     split_col: country
-    description: Stadiums and arenas that hosted FIFA World Cup matches.
+    description: Stadiums and arenas in {{REGION}} that hosted FIFA World Cup matches.
     synonyms:
-      stadiums: Table of stadiums that hosted FIFA World Cup matches.
-      arenas: Table of arenas that hosted FIFA World Cup matches.
-      grounds: Table of grounds that hosted FIFA World Cup matches.
+      stadiums: Table of stadiums in {{REGION}} that hosted FIFA World Cup matches.
+      arenas: Table of arenas in {{REGION}} that hosted FIFA World Cup matches.
+      grounds: Table of grounds in {{REGION}} that hosted FIFA World Cup matches.
     foreign_keys:
       country: countries
       architect: persons
@@ -1408,10 +1405,10 @@ german_states:
   __meta__:
     primary_key: german_state
     split_col: country
-    description: The 16 German federal states (Bundesländer) with area, population, capital, and geographic coordinates.
+    description: The 16 German federal states (Bundesländer).
     synonyms:
       bundeslaender: Table of the 16 German federal states (Bundesländer).
-      laender: Table of German Länder with area and population.
+      laender: Table of German Länder.
       german_bundeslaender: Table of German federal states.
     foreign_keys:
       country: countries
@@ -1477,10 +1474,10 @@ states:
   __meta__:
     primary_key: state
     split_col: country
-    description: The 50 US states with area, population, capital, and geographic coordinates.
+    description: The 50 US states.
     synonyms:
-      us_states: Table of the 50 US states with area and population.
-      american_states: Table of American states with geographic data.
+      us_states: Table of the 50 US states.
+      american_states: Table of American states.
     foreign_keys:
       country: countries
       capital: cities
@@ -1548,11 +1545,14 @@ ucl_clubs:
   __meta__:
     primary_key: team
     split_col: country
-    description: Football clubs that participated in recent UEFA Champions League seasons.
+    description: Football clubs based in {{REGION}} that participated in the UEFA
+      Champions League.
     synonyms:
-      ucl_teams: Table of clubs that participated in recent UEFA Champions League seasons.
-      cl_clubs: Table of UEFA Champions League clubs.
-      champions_league_clubs: Table of clubs in the UEFA Champions League.
+      ucl_teams: Table of clubs based in {{REGION}} that participated in the UEFA
+        Champions League.
+      cl_clubs: Table of UEFA Champions League clubs based in {{REGION}}.
+      champions_league_clubs: Table of clubs in the UEFA Champions League based in
+        {{REGION}}.
     foreign_keys:
       country: countries
     required:
@@ -1638,11 +1638,14 @@ ucl_venues:
   __meta__:
     primary_key: venue
     split_col: country
-    description: Stadiums and arenas that hosted UEFA Champions League matches.
+    description: Stadiums and arenas in {{REGION}} that hosted UEFA Champions League
+      matches.
     synonyms:
-      ucl_stadiums: Table of stadiums that hosted UEFA Champions League matches.
-      cl_venues: Table of UEFA Champions League match venues.
-      champions_league_venues: Table of venues used in the UEFA Champions League.
+      ucl_stadiums: Table of stadiums in {{REGION}} that hosted UEFA Champions League
+        matches.
+      cl_venues: Table of UEFA Champions League match venues in {{REGION}}.
+      champions_league_venues: Table of venues in {{REGION}} used in the UEFA Champions
+        League.
     foreign_keys:
       country: countries
       architect: persons
@@ -1701,11 +1704,11 @@ football_clubs:
   __meta__:
     primary_key: team
     split_col: country
-    description: Football clubs that participate in domestic and international competitions.
+    description: Football clubs based in {{REGION}}.
     synonyms:
-      clubs: Table of football clubs.
-      soccer_clubs: Table of soccer clubs.
-      club_teams: Table of football club teams.
+      clubs: Table of football clubs based in {{REGION}}.
+      soccer_clubs: Table of soccer clubs based in {{REGION}}.
+      club_teams: Table of football club teams based in {{REGION}}.
     foreign_keys:
       country: countries
     required:
@@ -1791,10 +1794,10 @@ nba_teams:
   __meta__:
     primary_key: team
     split_col: country
-    description: NBA basketball teams with location, founding date, and roster details.
+    description: NBA basketball teams based in {{REGION}}.
     synonyms:
-      basketball_teams: Table of NBA basketball teams.
-      nba_franchises: Table of NBA franchises.
+      basketball_teams: Table of NBA basketball teams based in {{REGION}}.
+      nba_franchises: Table of NBA franchises based in {{REGION}}.
     foreign_keys:
       country: countries
       city: cities
@@ -1862,10 +1865,10 @@ nba_matches:
   __meta__:
     primary_key: game
     split_col: country
-    description: NBA basketball games with participating teams, result, venue, date, and attendance.
+    description: NBA basketball games played in {{REGION}}.
     synonyms:
-      nba_games: Table of NBA basketball games.
-      basketball_matches: Table of NBA basketball match results.
+      nba_games: Table of NBA basketball games played in {{REGION}}.
+      basketball_matches: Table of NBA basketball match results from {{REGION}}.
     foreign_keys:
       country: countries
       team1: nba_teams
@@ -1932,10 +1935,11 @@ ucl_matches:
   __meta__:
     primary_key: match
     split_col: venue
-    description: UEFA Champions League matches with teams, venue, date, attendance, and referee.
+    description: UEFA Champions League matches played in {{REGION}}.
     synonyms:
-      ucl_games: Table of UEFA Champions League games.
-      champions_league_matches: Table of UEFA Champions League match results.
+      ucl_games: Table of UEFA Champions League games played in {{REGION}}.
+      champions_league_matches: Table of UEFA Champions League match results from
+        {{REGION}}.
     foreign_keys:
       venue: ucl_venues
       team1: ucl_clubs
