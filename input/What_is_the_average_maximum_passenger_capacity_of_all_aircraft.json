@@ -306,6 +306,17 @@
         ],
         "full_answer": 86.26666666666667,
         "sql_query": "SELECT AVG(aircraft.max_passengers) AS avg_max_passengers FROM aircraft",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT aircraft.aircraft, aircraft.max_passengers FROM aircraft",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["avg"],
+                    "keys": ["aircraft"],
+                    "value_column": "max_passengers",
+                    "columns": ["aircraft", "max_passengers"]
+                }
+            }
+        },
         "query_plan": {
             "query": "What is the average maximum passenger capacity of all aircraft?",
             "steps": [

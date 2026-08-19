@@ -41,6 +41,17 @@
         ],
         "full_answer": "\u9ed1\u9f99\u6c5f\u7701",
         "sql_query": "SELECT provinces.name FROM provinces ORDER BY CAST( SUBSTR( provinces.coords, INSTR(provinces.coords, ' ') + 1, INSTR(provinces.coords, ')') - INSTR(provinces.coords, ' ') - 1 ) AS REAL ) DESC LIMIT 1",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT provinces.name, provinces.coords FROM provinces",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["max"],
+                    "keys": ["name"],
+                    "value_column": "coords",
+                    "columns": ["name", "coords"]
+                }
+            }
+        },
         "query_plan": {
             "query": "Which province is the northernmost province in China?",
             "steps": [

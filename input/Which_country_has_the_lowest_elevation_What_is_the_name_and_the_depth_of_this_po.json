@@ -509,6 +509,17 @@
             }
         ],
         "sql_query": "SELECT countries.name, countries.lowest_point, countries.lowest_point_m FROM countries WHERE countries.lowest_point_m = ( SELECT MIN(countries.lowest_point_m) FROM countries )",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT countries.name, countries.lowest_point, countries.lowest_point_m FROM countries",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["min"],
+                    "keys": ["name"],
+                    "value_column": "lowest_point_m",
+                    "columns": ["name", "lowest_point", "lowest_point_m"]
+                }
+            }
+        },
         "query_plan": {
             "query": "Which country has the lowest elevation? What is the name and the depth of this point?",
             "steps": [

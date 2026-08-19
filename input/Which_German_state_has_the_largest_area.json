@@ -50,6 +50,17 @@
         ],
         "full_answer": "Bayern",
         "sql_query": "SELECT german_states.name FROM german_states WHERE german_states.area_km2 = ( SELECT MAX(german_states.area_km2) FROM german_states )",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT german_states.name, german_states.area_km2 FROM german_states",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["max"],
+                    "keys": ["name"],
+                    "value_column": "area_km2",
+                    "columns": ["name", "area_km2"]
+                }
+            }
+        },
         "query_plan": {
             "query": "Which German state has the largest area?",
             "steps": [

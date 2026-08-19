@@ -50,6 +50,17 @@
         ],
         "full_answer": 4996029.1875,
         "sql_query": "SELECT AVG(german_states.population) AS avg_population FROM german_states",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT german_states.state, german_states.population FROM german_states",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["avg"],
+                    "keys": ["state"],
+                    "value_column": "population",
+                    "columns": ["state", "population"]
+                }
+            }
+        },
         "query_plan": {
             "query": "What is the average population of German states?",
             "steps": [

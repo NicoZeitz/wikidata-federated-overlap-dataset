@@ -511,6 +511,17 @@
         ],
         "full_answer": "Africa",
         "sql_query": "SELECT continents.name FROM continents WHERE continents.population = ( SELECT MAX(continents.population) FROM continents WHERE continents.population <> ( SELECT MAX(continents.population) FROM continents ) )",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT continents.name, continents.population FROM continents",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["max"],
+                    "keys": ["name"],
+                    "value_column": "population",
+                    "columns": ["name", "population"]
+                }
+            }
+        },
         "query_plan": {
             "query": "Which continent has the second largest total population?",
             "steps": [

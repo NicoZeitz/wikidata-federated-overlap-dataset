@@ -102,6 +102,17 @@
         ],
         "full_answer": 14882.156918549183,
         "sql_query": "SELECT AVG(nba_matches.attendance) AS avg_attendance FROM nba_matches",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT nba_matches.game, nba_matches.attendance FROM nba_matches",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["avg"],
+                    "keys": ["game"],
+                    "value_column": "attendance",
+                    "columns": ["game", "attendance"]
+                }
+            }
+        },
         "query_plan": {
             "query": "What is the average attendance of NBA matches?",
             "steps": [

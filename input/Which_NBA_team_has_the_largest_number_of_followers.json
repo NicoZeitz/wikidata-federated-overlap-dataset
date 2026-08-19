@@ -55,6 +55,17 @@
         ],
         "full_answer": "Los Angeles Lakers",
         "sql_query": "SELECT nba_teams.name FROM nba_teams WHERE nba_teams.followers = ( SELECT MAX(nba_teams.followers) FROM nba_teams )",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT nba_teams.name, nba_teams.followers FROM nba_teams",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["max"],
+                    "keys": ["name"],
+                    "value_column": "followers",
+                    "columns": ["name", "followers"]
+                }
+            }
+        },
         "query_plan": {
             "query": "Which NBA team has the largest number of followers?",
             "steps": [

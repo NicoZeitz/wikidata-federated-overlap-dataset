@@ -490,6 +490,17 @@
         ],
         "full_answer": 145446500.0,
         "sql_query": "SELECT SUM(continents.area_km2) AS combined_area FROM continents",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT continents.continent, continents.area_km2 FROM continents",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["sum"],
+                    "keys": ["continent"],
+                    "value_column": "area_km2",
+                    "columns": ["continent", "area_km2"]
+                }
+            }
+        },
         "query_plan": {
             "query": "What is the combined area of all continents in square kilometers?",
             "steps": [

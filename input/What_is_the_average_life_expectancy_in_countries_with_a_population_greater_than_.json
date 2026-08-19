@@ -503,6 +503,17 @@
         ],
         "full_answer": 73.2780582142857,
         "sql_query": "SELECT AVG(countries.life_expectancy) AS avg_life_expectancy FROM countries WHERE countries.population > 50000000",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT countries.country, countries.life_expectancy FROM countries WHERE countries.population > 50000000",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["avg"],
+                    "keys": ["country"],
+                    "value_column": "life_expectancy",
+                    "columns": ["country", "life_expectancy"]
+                }
+            }
+        },
         "query_plan": {
             "query": "What is the average life expectancy in countries with a population greater than 50 million?",
             "steps": [

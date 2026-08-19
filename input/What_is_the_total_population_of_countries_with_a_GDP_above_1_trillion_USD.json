@@ -503,6 +503,17 @@
         ],
         "full_answer": 4405176160.0,
         "sql_query": "SELECT SUM(countries.population) AS total_population FROM countries WHERE countries.gdp_usd > 1000000000000",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT countries.country, countries.population FROM countries WHERE countries.gdp_usd > 1000000000000",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["sum"],
+                    "keys": ["country"],
+                    "value_column": "population",
+                    "columns": ["country", "population"]
+                }
+            }
+        },
         "query_plan": {
             "query": "What is the total population of countries with a GDP above 1 trillion USD?",
             "steps": [

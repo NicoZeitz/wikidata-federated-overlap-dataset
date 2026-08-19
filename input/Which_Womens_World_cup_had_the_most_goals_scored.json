@@ -214,6 +214,17 @@
         ],
         "full_answer": "2023 FIFA Women's World Cup",
         "sql_query": "SELECT tournaments.name FROM tournaments WHERE tournaments.name LIKE '%women%' AND tournaments.goals_scored = ( SELECT MAX(goals_scored) FROM tournaments WHERE tournaments.name LIKE '%women%' )",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT tournaments.name, tournaments.goals_scored FROM tournaments WHERE tournaments.name LIKE '%women%'",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["max"],
+                    "keys": ["name"],
+                    "value_column": "goals_scored",
+                    "columns": ["name", "goals_scored"]
+                }
+            }
+        },
         "query_plan": {
             "query": "Which Women's World cup had the most goals scored?",
             "steps": [

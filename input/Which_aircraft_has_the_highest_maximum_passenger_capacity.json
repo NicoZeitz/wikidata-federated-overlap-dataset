@@ -306,6 +306,17 @@
         ],
         "full_answer": "F-GSQF",
         "sql_query": "SELECT aircraft.name FROM aircraft WHERE aircraft.max_passengers = ( SELECT MAX(max_passengers) FROM aircraft )",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT aircraft.aircraft, aircraft.max_passengers FROM aircraft",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["max"],
+                    "keys": ["aircraft"],
+                    "value_column": "max_passengers",
+                    "columns": ["aircraft", "max_passengers"]
+                }
+            }
+        },
         "query_plan": {
             "query": "Which aircraft has the highest maximum passenger capacity?",
             "steps": [

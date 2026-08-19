@@ -42,6 +42,17 @@
         ],
         "full_answer": 117.88235294117646,
         "sql_query": "SELECT AVG(strftime('%Y', '2032-02-20') - strftime('%Y', football_clubs.founded)) AS average_years_existing FROM football_clubs WHERE football_clubs.league = 'Bundesliga'",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT football_clubs.team, football_clubs.founded FROM football_clubs WHERE football_clubs.league = 'Bundesliga'",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["avg"],
+                    "keys": ["team"],
+                    "value_column": "founded",
+                    "columns": ["team", "founded"]
+                }
+            }
+        },
         "query_plan": {
             "query": "Since how many years do bundesliga clubs exist on average? Today is the 20.02.2032.",
             "steps": [

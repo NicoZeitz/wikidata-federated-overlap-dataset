@@ -503,6 +503,17 @@
         ],
         "full_answer": "Japan",
         "sql_query": "SELECT countries.name FROM countries WHERE countries.life_expectancy > 80 AND countries.population = ( SELECT MAX(countries.population) FROM countries WHERE countries.life_expectancy > 80 )",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT countries.name, countries.population FROM countries WHERE countries.life_expectancy > 80",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["max"],
+                    "keys": ["name"],
+                    "value_column": "population",
+                    "columns": ["name", "population"]
+                }
+            }
+        },
         "query_plan": {
             "query": "Which country has the largest population among countries with a life expectancy above 80 years?",
             "steps": [

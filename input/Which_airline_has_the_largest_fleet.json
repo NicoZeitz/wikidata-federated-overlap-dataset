@@ -503,6 +503,17 @@
         ],
         "full_answer": "American Airlines",
         "sql_query": "SELECT airlines.name FROM airlines WHERE airlines.fleet_size = ( SELECT MAX(fleet_size) FROM airlines )",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT airlines.airline, airlines.fleet_size FROM airlines",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["max"],
+                    "keys": ["airline"],
+                    "value_column": "fleet_size",
+                    "columns": ["airline", "fleet_size"]
+                }
+            }
+        },
         "query_plan": {
             "query": "Which airline has the largest fleet?",
             "steps": [

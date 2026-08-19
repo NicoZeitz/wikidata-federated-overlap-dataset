@@ -214,6 +214,17 @@
         ],
         "full_answer": 23.391304347826086,
         "sql_query": "SELECT AVG(tournaments.participants) AS avg_participants FROM tournaments WHERE name NOT LIKE '%women%'",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT tournaments.tournament, tournaments.participants FROM tournaments WHERE name NOT LIKE '%women%'",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["avg"],
+                    "keys": ["tournament"],
+                    "value_column": "participants",
+                    "columns": ["tournament", "participants"]
+                }
+            }
+        },
         "query_plan": {
             "query": "What is the average number of participants in Men's FIFA World Cup?",
             "steps": [

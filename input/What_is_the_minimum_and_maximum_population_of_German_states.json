@@ -55,6 +55,17 @@
             }
         ],
         "sql_query": "SELECT MIN(german_states.population) AS min_population, MAX(german_states.population) AS max_population FROM german_states",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT german_states.german_state, german_states.population FROM german_states",
+                "aligned_schema_metadata": {
+                    "aggregation_type": ["min", "max"],
+                    "keys": ["german_state"],
+                    "value_column": "population",
+                    "columns": ["german_state", "population"]
+                }
+            }
+        },
         "query_plan": {
             "query": "What is the minimum and maximum population of German states?",
             "steps": [

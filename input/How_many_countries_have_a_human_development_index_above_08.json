@@ -503,12 +503,23 @@
         ],
         "full_answer": 67,
         "sql_query": "SELECT COUNT(*) AS country_amount FROM countries WHERE countries.human_development_index > 0.8",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT countries.country FROM countries WHERE countries.human_development_index > 0.8",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["count"],
+                    "keys": ["country"],
+                    "value_column": null,
+                    "columns": ["country"]
+                }
+            }
+        },
         "query_plan": {
             "query": "How many countries have a human development index above 0.8?",
             "steps": [
                 {
                     "id": "s1",
-                    "query": "Return all countries together with their human development index if their human development index is above 0.8?",
+                    "query": "Return all countries if their human development index is above 0.8?",
                     "to_agent": [
                         "A2",
                         "A4",

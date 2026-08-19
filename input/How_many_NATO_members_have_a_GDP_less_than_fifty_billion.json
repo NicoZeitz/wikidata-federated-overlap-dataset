@@ -167,6 +167,17 @@
         ],
         "full_answer": 6,
         "sql_query": "SELECT COUNT(*) AS country_amount FROM countries WHERE countries.name IN ('Albania', 'Belgium', 'Bulgaria', 'Croatia', 'Czech Republic', 'Denmark', 'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Iceland', 'Italy', 'Latvia', 'Lithuania', 'Luxembourg', 'Montenegro', 'Netherlands', 'North Macedonia', 'Norway', 'Poland', 'Portugal', 'Romania', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'Thuringia', 'United Kingdom', 'Kingdom of Denmark', 'Kingdom of the Netherlands', 'Canada', 'United States', 'Turkey') AND countries.gdp_usd < 50000000000",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT countries.country FROM countries WHERE countries.name IN ('Albania', 'Belgium', 'Bulgaria', 'Croatia', 'Czech Republic', 'Denmark', 'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Iceland', 'Italy', 'Latvia', 'Lithuania', 'Luxembourg', 'Montenegro', 'Netherlands', 'North Macedonia', 'Norway', 'Poland', 'Portugal', 'Romania', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'Thuringia', 'United Kingdom', 'Kingdom of Denmark', 'Kingdom of the Netherlands', 'Canada', 'United States', 'Turkey') AND countries.gdp_usd < 50000000000",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["count"],
+                    "keys": ["country"],
+                    "value_column": null,
+                    "columns": ["country"]
+                }
+            }
+        },
         "query_plan": {
             "query": "How many NATO members have a GDP less than fifty billion?",
             "steps": [

@@ -61,6 +61,17 @@
             }
         ],
         "sql_query": "SELECT german_states.name, german_states.population, (SELECT MEDIAN(german_states.population) FROM german_states) AS median FROM german_states WHERE abs(german_states.population - median) = ( SELECT MIN(abs(german_states.population - median)) FROM german_states )",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT german_states.german_state, german_states.population FROM german_states",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["avg"],
+                    "keys": ["german_state"],
+                    "value_column": "population",
+                    "columns": ["german_state", "population"]
+                }
+            }
+        },
         "query_plan": {
             "query": "What is the median population of German states? Which state is the closest to it?",
             "steps": [

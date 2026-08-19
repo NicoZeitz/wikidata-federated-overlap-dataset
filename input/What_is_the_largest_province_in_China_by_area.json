@@ -41,6 +41,17 @@
         ],
         "full_answer": "\u9752\u6d77\u7701",
         "sql_query": "SELECT provinces.name FROM provinces WHERE provinces.area_km2 = (SELECT MAX(provinces.area_km2)     FROM provinces)",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT provinces.name, provinces.area_km2 FROM provinces",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["max"],
+                    "keys": ["name"],
+                    "value_column": "area_km2",
+                    "columns": ["name", "area_km2"]
+                }
+            }
+        },
         "query_plan": {
             "query": "What is the largest province in China by area?",
             "steps": [

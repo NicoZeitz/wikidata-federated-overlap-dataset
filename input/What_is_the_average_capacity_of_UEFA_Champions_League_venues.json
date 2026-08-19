@@ -128,6 +128,17 @@
         ],
         "full_answer": 47360.02040816326,
         "sql_query": "SELECT AVG(ucl_venues.capacity) AS avg_capacity FROM ucl_venues",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT ucl_venues.venue, ucl_venues.capacity FROM ucl_venues",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["avg"],
+                    "keys": ["venue"],
+                    "value_column": "capacity",
+                    "columns": ["venue", "capacity"]
+                }
+            }
+        },
         "query_plan": {
             "query": "What is the average capacity of UEFA Champions League venues?",
             "steps": [

@@ -167,6 +167,17 @@
         ],
         "full_answer": 974194786.0,
         "sql_query": "SELECT SUM(countries.population) AS total_population FROM countries WHERE countries.name IN ( 'Albania', 'Belgium', 'Bulgaria', 'Canada', 'Croatia', 'Czech Republic', 'Denmark', 'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Iceland', 'Italy', 'Kingdom of the Netherlands', 'Latvia', 'Lithuania', 'Luxembourg', 'Montenegro', 'North Macedonia', 'Norway', 'Poland', 'Portugal', 'Romania', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'Turkey', 'United Kingdom', 'United States' )",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT countries.country, countries.population FROM countries WHERE countries.name IN ( 'Albania', 'Belgium', 'Bulgaria', 'Canada', 'Croatia', 'Czech Republic', 'Denmark', 'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Iceland', 'Italy', 'Kingdom of the Netherlands', 'Latvia', 'Lithuania', 'Luxembourg', 'Montenegro', 'North Macedonia', 'Norway', 'Poland', 'Portugal', 'Romania', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'Turkey', 'United Kingdom', 'United States' )",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["sum"],
+                    "keys": ["country"],
+                    "value_column": "population",
+                    "columns": ["country", "population"]
+                }
+            }
+        },
         "query_plan": {
             "query": "What is the total population of all NATO member countries?",
             "steps": [

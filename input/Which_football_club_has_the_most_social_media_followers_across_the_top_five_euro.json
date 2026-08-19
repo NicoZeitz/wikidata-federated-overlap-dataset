@@ -76,6 +76,17 @@
             }
         ],
         "sql_query": "SELECT football_clubs.name, football_clubs.socialFollowers FROM football_clubs WHERE football_clubs.league IN ('Bundesliga', 'Serie A', 'Premier League', 'La Liga', 'Ligue 1') AND football_clubs.socialFollowers = (SELECT MAX(football_clubs.socialFollowers) FROM football_clubs WHERE football_clubs.league IN ('Bundesliga', 'Serie A', 'Premier League', 'La Liga', 'Ligue 1') )",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT football_clubs.name, football_clubs.socialFollowers FROM football_clubs WHERE football_clubs.league IN ('Bundesliga', 'Serie A', 'Premier League', 'La Liga', 'Ligue 1')",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["max"],
+                    "keys": ["name"],
+                    "value_column": "socialFollowers",
+                    "columns": ["name", "socialFollowers"]
+                }
+            }
+        },
         "query_plan": {
             "query": "Which football club has the most social media followers across the top five european leagues?",
             "steps": [

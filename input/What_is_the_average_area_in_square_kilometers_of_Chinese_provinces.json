@@ -41,6 +41,17 @@
         ],
         "full_answer": 223531.69565217392,
         "sql_query": "SELECT AVG(provinces.area_km2) AS avg_area FROM provinces",
+        "steps_metadata": {
+            "s1": {
+                "sql_query": "SELECT provinces.province, provinces.area_km2 FROM provinces",
+                "aligned_schema_metadata": {
+                    "aggregation_types": ["avg"],
+                    "keys": ["province"],
+                    "value_column": "area_km2",
+                    "columns": ["province", "area_km2"]
+                }
+            }
+        },
         "query_plan": {
             "query": "What is the average area in square kilometers of Chinese provinces?",
             "steps": [
