@@ -59,7 +59,7 @@
             "s1": {
                 "sql_query": "SELECT german_states.german_state, german_states.population FROM german_states",
                 "aligned_schema_metadata": {
-                    "aggregation_type": ["min", "max"],
+                    "aggregation_types": ["min", "max"],
                     "keys": ["german_state"],
                     "value_column": "population",
                     "columns": ["german_state", "population"]
