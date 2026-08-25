@@ -44,12 +44,12 @@
         "sql_query": "SELECT AVG(strftime('%Y', '2032-02-20') - strftime('%Y', football_clubs.founded)) AS average_years_existing FROM football_clubs WHERE football_clubs.league = 'Bundesliga'",
         "steps_metadata": {
             "s1": {
-                "sql_query": "SELECT football_clubs.team, football_clubs.founded FROM football_clubs WHERE football_clubs.league = 'Bundesliga'",
+                "sql_query": "SELECT football_clubs.team AS team, CAST(strftime('%Y','2032-02-20') - strftime('%Y', football_clubs.founded) AS REAL) AS years_existing FROM football_clubs WHERE football_clubs.league = 'Bundesliga'",
                 "aligned_schema_metadata": {
                     "aggregation_types": ["avg"],
                     "keys": ["team"],
-                    "value_column": "founded",
-                    "columns": ["team", "founded"]
+                    "value_column": "years_existing",
+                    "columns": ["team", "years_existing"]
                 }
             }
         },
@@ -58,7 +58,7 @@
             "steps": [
                 {
                     "id": "s1",
-                    "query": "Return all bundesliga clubs together with their founding years.",
+                    "query": "Return all bundesliga clubs together with how many years they have existed. Today is the 20.02.2032.",
                     "to_agent": [
                         "A184",
                         "A192",

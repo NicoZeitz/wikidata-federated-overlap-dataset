@@ -43,12 +43,12 @@
         "sql_query": "SELECT provinces.name FROM provinces ORDER BY CAST( SUBSTR( provinces.coords, INSTR(provinces.coords, ' ') + 1, INSTR(provinces.coords, ')') - INSTR(provinces.coords, ' ') - 1 ) AS REAL ) DESC LIMIT 1",
         "steps_metadata": {
             "s1": {
-                "sql_query": "SELECT provinces.name, provinces.coords FROM provinces",
+                "sql_query": "SELECT provinces.name AS name, CAST( SUBSTR(provinces.coords, INSTR(provinces.coords, ' ') + 1, INSTR(provinces.coords, ')') - INSTR(provinces.coords, ' ') - 1 ) AS REAL ) AS latitude FROM provinces",
                 "aligned_schema_metadata": {
                     "aggregation_types": ["max"],
                     "keys": ["name"],
-                    "value_column": "coords",
-                    "columns": ["name", "coords"]
+                    "value_column": "latitude",
+                    "columns": ["name", "latitude"]
                 }
             }
         },
@@ -57,7 +57,7 @@
             "steps": [
                 {
                     "id": "s1",
-                    "query": "Return all provinces in China and their coordinates.",
+                    "query": "Return all provinces in China together with their latitude.",
                     "to_agent": [
                         "A69",
                         "A72",
