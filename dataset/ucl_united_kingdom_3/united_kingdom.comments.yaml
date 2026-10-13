@@ -1,0 +1,56 @@
+__database__: UEFA Champions League database covering United Kingdom, including clubs,
+  matches, and venues.
+ucl_participants:
+  __table__: Football clubs based in United Kingdom that participated in the UEFA
+    Champions League.
+  club_id: Identifier for the football club.
+  title: Full name of the football club.
+  domestic_league: Name of the domestic league the club competes in.
+  nation: Country the club is based in.
+  founded: Date or year the club was founded.
+  home_stadium: Name of the club's home stadium.
+  coach: Name of the current head coach or manager.
+  investor: Name of the current owner or ownership group.
+  informal_name: Nickname or informal name of the club.
+  leagueTitles: Number of domestic league titles won by the club.
+  social_media_followers: Number of social media followers of the club.
+  website: Official website URL of the club.
+  club_abbreviation: Short or abbreviated name of the club.
+  established_by: Name of the person or entity who founded the club.
+champions_league_games:
+  __table__: UEFA Champions League matches played in United Kingdom.
+  match: Identifier for the UEFA Champions League match.
+  label: Name or label of the match.
+  ucl_season: Season the match was played in.
+  ucl_season_name: Name or label of the season.
+  match_date: Date the match was played.
+  arena: Venue where the match was played.
+  team_a: First participating club.
+  team2: Second participating club.
+  match_winner: Winning club (null for draws).
+  crowd: Number of spectators in attendance.
+  referee: Person who refereed the match.
+champions_league_stadiums:
+  __table__: Stadiums and arenas in United Kingdom that hosted UEFA Champions League
+    matches.
+  venue: Identifier for the venue.
+  title: Name of the venue or stadium.
+  nation: Country the venue is located in.
+  capacity: Maximum seating capacity of the venue.
+  position: Geographic coordinates of the venue.
+  inception: Date the venue was officially opened.
+  municipality: City or municipality the venue is located in.
+  venue_architect: Architect who designed the venue.
+soccer_clubs:
+  __table__: Football clubs based in United Kingdom.
+  team: Identifier for the football club.
+  name: Full name of the football club.
+  competition: Name of the domestic league the club competes in.
+  nation: Country the club is based in.
+  established: Date or year the club was founded.
+  home_ground: Name of the club's home stadium.
+  head_coach: Name of the current head coach or manager.
+  domestic_titles: Number of domestic league titles won by the club.
+  socialFollowers: Number of social media followers of the club.
+  homepage: Official website URL of the club.
+  founding_person: Name of the person or entity who founded the club.

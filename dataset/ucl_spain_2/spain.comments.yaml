@@ -1,0 +1,54 @@
+__database__: UEFA Champions League database covering Spain, including clubs, matches,
+  and venues.
+champions_league_clubs:
+  __table__: Football clubs based in Spain that participated in the UEFA Champions
+    League.
+  club_id: Identifier for the football club.
+  club_name: Full name of the football club.
+  home_league: Name of the domestic league the club competes in.
+  home_country: Country the club is based in.
+  founding_date: Date or year the club was founded.
+  ground: Name of the club's home stadium.
+  trainer: Name of the current head coach or manager.
+  owner: Name of the current owner or ownership group.
+  byname: Nickname or informal name of the club.
+  championships: Number of domestic league titles won by the club.
+  online_followers: Number of social media followers of the club.
+  founding_person: Name of the person or entity who founded the club.
+ucl_games:
+  __table__: UEFA Champions League matches played in Spain.
+  game_id: Identifier for the UEFA Champions League match.
+  game_name: Name or label of the match.
+  competition_season_id: Season the match was played in.
+  seasonLabel: Name or label of the season.
+  game_date: Date the match was played.
+  match_venue: Venue where the match was played.
+  team_a: First participating club.
+  team_b: Second participating club.
+  match_winner: Winning club (null for draws).
+  gate: Number of spectators in attendance.
+  arbiter: Person who refereed the match.
+ucl_venues:
+  __table__: Stadiums and arenas in Spain that hosted UEFA Champions League matches.
+  stadium_id: Identifier for the venue.
+  label: Name of the venue or stadium.
+  host_country: Country the venue is located in.
+  seats: Maximum seating capacity of the venue.
+  coordinates: Geographic coordinates of the venue.
+  built: Date the venue was officially opened.
+  venue_city: City or municipality the venue is located in.
+  designer: Architect who designed the venue.
+association_football_clubs:
+  __table__: Football clubs based in Spain.
+  team: Identifier for the football club.
+  team_name: Full name of the football club.
+  league: Name of the domestic league the club competes in.
+  base_country: Country the club is based in.
+  founding_year: Date or year the club was founded.
+  ground: Name of the club's home stadium.
+  tactician: Name of the current head coach or manager.
+  club_owner: Name of the current owner or ownership group.
+  championships: Number of domestic league titles won by the club.
+  socialFollowers: Number of social media followers of the club.
+  official_website: Official website URL of the club.
+  founding_person: Name of the person or entity who founded the club.

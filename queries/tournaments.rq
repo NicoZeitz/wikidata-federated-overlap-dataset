@@ -1,0 +1,43 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+  ?tournament
+  (SAMPLE(?name_v)         AS ?name)
+  (SAMPLE(?year_v)         AS ?year)
+  (SAMPLE(?country_v)      AS ?country)
+  (SAMPLE(?edition_v)      AS ?edition_number)
+  (GROUP_CONCAT(DISTINCT ?mascot_v; SEPARATOR=", ") AS ?mascot)
+  (SAMPLE(?participants_v) AS ?participants)
+  (SAMPLE(?winner_v)       AS ?winner)
+  (SAMPLE(?matches_v)      AS ?matches_played)
+  (SAMPLE(?goals_v)        AS ?goals_scored)
+WHERE {
+  VALUES ?competition { wd:Q19317 wd:Q19323 }
+  ?tournament wdt:P3450 ?competition .
+  ?tournament wdt:P31/wdt:P279* wd:Q27020041 .
+
+  ?tournament rdfs:label ?name_v .
+  FILTER(lang(?name_v) = "en")
+
+  OPTIONAL {
+    ?tournament wdt:P585 ?dateVal .
+    BIND(YEAR(?dateVal) AS ?year_v)
+  }
+
+  ?tournament wdt:P17 ?country_v .
+  OPTIONAL { ?tournament wdt:P393  ?edition_v . }
+  OPTIONAL { ?tournament wdt:P1132 ?participants_v . }
+  OPTIONAL { ?tournament wdt:P1346 ?winner_v . }
+  OPTIONAL { ?tournament wdt:P1350 ?matches_v . }
+  OPTIONAL { ?tournament wdt:P1351 ?goals_v . }
+
+  OPTIONAL {
+    ?mascotEntity wdt:P6291 ?tournament .
+    ?mascotEntity rdfs:label ?mascot_v .
+    FILTER(lang(?mascot_v) = "en")
+  }
+}
+GROUP BY ?tournament

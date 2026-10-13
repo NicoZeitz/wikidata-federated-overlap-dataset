@@ -1,0 +1,24 @@
+province,country,name,coords,area_km2,population,capital,inception,iso_code,website
+http://www.wikidata.org/entity/Q43194,http://www.wikidata.org/entity/Q148,云南省,POINT(102.708889 25.049444),394100.0,47209277.0,http://www.wikidata.org/entity/Q182852,,CN-YN,http://www.yn.gov.cn
+http://www.wikidata.org/entity/Q57251,http://www.wikidata.org/entity/Q148,台湾省,POINT(121.000000 23.700000),35581.0,23140000.0,,,CN-TW,
+http://www.wikidata.org/entity/Q45208,http://www.wikidata.org/entity/Q148,吉林省,POINT(125.308333 43.884167),187400.0,24073453.0,http://www.wikidata.org/entity/Q92161,,CN-JL,http://www.jl.gov.cn
+http://www.wikidata.org/entity/Q19770,http://www.wikidata.org/entity/Q148,四川省,POINT(103.000000 30.000000),485000.0,81100000.0,http://www.wikidata.org/entity/Q30002,1952-08-07T00:00:00Z,CN-SC,https://www.sc.gov.cn
+http://www.wikidata.org/entity/Q40956,http://www.wikidata.org/entity/Q148,安徽省,POINT(117.000000 31.833333),139000.0,59500510.0,http://www.wikidata.org/entity/Q185684,,CN-AH,http://www.ah.gov.cn
+http://www.wikidata.org/entity/Q43407,http://www.wikidata.org/entity/Q148,山東省,POINT(118.400000 36.400000),156700.0,95793065.0,http://www.wikidata.org/entity/Q170247,,CN-SD,http://www.sd.gov.cn
+http://www.wikidata.org/entity/Q46913,http://www.wikidata.org/entity/Q148,山西省,POINT(112.564444 37.873333),156000.0,34915616.0,http://www.wikidata.org/entity/Q72778,,CN-SX,http://www.shanxi.gov.cn
+http://www.wikidata.org/entity/Q15175,http://www.wikidata.org/entity/Q148,广东省,POINT(113.500000 23.400000),179800.0,126012510.0,http://www.wikidata.org/entity/Q16572,,CN-GD,http://www.gd.gov.cn/
+http://www.wikidata.org/entity/Q16963,http://www.wikidata.org/entity/Q148,江苏省,POINT(120.000000 33.000000),98285.0,84748016.0,http://www.wikidata.org/entity/Q16666,,CN-JS,http://www.jiangsu.gov.cn
+http://www.wikidata.org/entity/Q57052,http://www.wikidata.org/entity/Q148,江西省,POINT(116.000000 27.300000),166900.0,44567475.0,http://www.wikidata.org/entity/Q171943,,CN-JX,http://www.jiangxi.gov.cn/
+http://www.wikidata.org/entity/Q21208,http://www.wikidata.org/entity/Q148,河北省,POINT(114.508611 38.042222),187240.0,74610235.0,http://www.wikidata.org/entity/Q58401,,CN-HE,http://www.hebei.gov.cn
+http://www.wikidata.org/entity/Q43684,http://www.wikidata.org/entity/Q148,河南省,POINT(113.500000 33.900000),167000.0,94130000.0,http://www.wikidata.org/entity/Q30340,1949-01-01T00:00:00Z,CN-HA,http://www.henan.gov.cn
+http://www.wikidata.org/entity/Q16967,http://www.wikidata.org/entity/Q148,浙江省,POINT(120.150000 30.266667),101800.0,19959000.0,http://www.wikidata.org/entity/Q4970,,CN-ZJ,https://www.zj.gov.cn/
+http://www.wikidata.org/entity/Q42200,http://www.wikidata.org/entity/Q148,海南省,POINT(110.323980 20.033420),33920.0,8671518.0,http://www.wikidata.org/entity/Q189823,,CN-HI,https://en.hainan.gov.cn/
+http://www.wikidata.org/entity/Q46862,http://www.wikidata.org/entity/Q148,湖北省,POINT(112.300000 31.200000),185900.0,57752557.0,http://www.wikidata.org/entity/Q11746,,CN-HB,http://www.hubei.gov.cn
+http://www.wikidata.org/entity/Q45761,http://www.wikidata.org/entity/Q148,湖南省,POINT(111.800000 27.600000),211836.0,65683722.0,http://www.wikidata.org/entity/Q174091,,CN-HN,http://www.hunan.gov.cn
+http://www.wikidata.org/entity/Q42392,http://www.wikidata.org/entity/Q148,甘肃省,POINT(102.000000 38.000000),454000.0,25019831.0,http://www.wikidata.org/entity/Q183584,1929-01-01T00:00:00Z,CN-GS,http://www.gansu.gov.cn
+http://www.wikidata.org/entity/Q41705,http://www.wikidata.org/entity/Q148,福建省,POINT(118.300000 25.900000),121400.0,41540086.0,http://www.wikidata.org/entity/Q68481,,CN-FJ,http://www.fujian.gov.cn
+http://www.wikidata.org/entity/Q47097,http://www.wikidata.org/entity/Q148,贵州省,POINT(106.833333 26.833333),176167.0,38562148.0,http://www.wikidata.org/entity/Q192271,,CN-GZ,http://www.gzgov.gov.cn
+http://www.wikidata.org/entity/Q43934,http://www.wikidata.org/entity/Q148,辽宁省,POINT(123.425833 41.803889),145900.0,42591407.0,http://www.wikidata.org/entity/Q11720,1907-01-01T00:00:00Z,CN-LN,http://www.ln.gov.cn
+http://www.wikidata.org/entity/Q47974,http://www.wikidata.org/entity/Q148,陕西省,POINT(109.300000 35.600000),205800.0,37327378.0,http://www.wikidata.org/entity/Q5826,,CN-SN,http://www.shaanxi.gov.cn
+http://www.wikidata.org/entity/Q45833,http://www.wikidata.org/entity/Q148,青海省,POINT(96.000000 35.000000),696700.0,5923957.0,http://www.wikidata.org/entity/Q69060,1928-01-01T00:00:00Z,CN-QH,http://www.qh.gov.cn/
+http://www.wikidata.org/entity/Q19206,http://www.wikidata.org/entity/Q148,黑龙江省,POINT(129.000000 48.000000),454800.0,31850088.0,http://www.wikidata.org/entity/Q42956,1954-01-01T00:00:00Z,CN-HL,http://www.hlj.gov.cn

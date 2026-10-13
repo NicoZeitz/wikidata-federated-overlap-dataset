@@ -1,0 +1,74 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the average population of countries in Europe?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Return the continent id of Europe as soon as it is found.",
+          "query": "Return the continent id of Europe.",
+          "to_agent": {
+            "region": [
+              "europe"
+            ],
+            "table": "continents"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "Continent id of Europe.",
+              "step_id": "s1"
+            }
+          ],
+          "id": "s2",
+          "merge_task": "Deduplicate by country and return the average population of countries in Europe.",
+          "query": "Return the country in Europe and population.",
+          "to_agent": {
+            "region": [
+              "europe"
+            ],
+            "table": "countries"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT AVG(countries.population) AS avg_population FROM countries INNER JOIN continents ON continents.continent = countries.continent WHERE continents.name = 'Europe'",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "continent"
+          ],
+          "keys": [
+            "continent"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT continents.continent FROM continents WHERE continents.name = 'Europe'"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "avg"
+          ],
+          "columns": [
+            "country",
+            "population"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": "population"
+        },
+        "sql_query": "SELECT countries.country, countries.population FROM countries WHERE countries.continent = 46"
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+__database__: Geographic database covering Worldwide, including countries, continents,
+  and cities.
+countries:
+  __table__: Sovereign countries in Worldwide.
+  nation_id: Identifier for the country.
+  name: Name of the country.
+  country_code: ISO 3166-1 alpha-2 two-letter country code.
+  alpha3: ISO 3166-1 alpha-3 three-letter country code.
+  continent: Continent the country belongs to.
+  land_area_km2: Total area of the country in square kilometers.
+  pop: Population of the country (most recent estimate).
+  economic_output_usd: Nominal GDP of the country in US dollars (most recent reported
+    value).
+  capital_city_id: Capital city.
+  legal_tender: Name of the official currency.
+  location: Geographic coordinates of the country centroid.
+  independence_date: Date the country was founded or became independent.
+  long_name: Official name of the country in English.
+  phone_code: International telephone dialling code (e.g. +49).
+  number_of_males: Male population count (most recent estimate).
+  number_of_females: Female population count (most recent estimate).
+  life_expectancy: Average life expectancy at birth in years.
+  development_index: Human Development Index score (0–1).
+  out_of_work_rate: Unemployment rate as a percentage of the labour force.
+  gini_coefficient: Gini coefficient measuring income inequality (0–1).
+  children_per_woman: Average number of children born per woman.
+  births_per_thousand: Number of live births per 1000 inhabitants per year.
+  deaths_per_thousand: Number of deaths per 1000 inhabitants per year.
+  suicides_per_100k: Suicide rate per 100,000 inhabitants per year.
+  median_income: Median household or personal income in US dollars.
+  democracy_index: Democracy Index score (0–10) from the Economist Intelligence Unit.
+  central_bank_name: Name of the central bank.
+  highest_point: Name of the highest geographical point in the country.
+  max_elevation_m: Elevation of the highest point above sea level in meters.
+  lowest_elevation: Name of the lowest geographical point in the country.
+  nadir_elevation_m: Elevation of the lowest point above sea level in meters (negative
+    if below sea level).
+  northern_extreme: Geographic coordinates of the northernmost point of the country.
+  southernmost_coords: Geographic coordinates of the southernmost point of the country.
+  eastmost_coords: Geographic coordinates of the easternmost point of the country.
+  westernmost_coords: Geographic coordinates of the westernmost point of the country.
+  inhabitant_name: Comma-separated adjectives or nouns used to describe inhabitants
+    of the country.
+  spoken_languages: Comma-separated official languages of the country.
+  president: Current head of state of the country.
+  head_of_government_name: Current head of government of the country.
+geographic_regions:
+  __table__: Continents covering Worldwide.
+  id: Identifier for the continent.
+  label: Name of the continent.
+  area: Total land area of the continent in square kilometers.
+  inhabitants: Total population of the continent (most recent estimate).
+  location: Geographic coordinates of the continent centroid.
+  maximum_elevation_point: Name of the highest geographical point on the continent.
+  highest_elevation_m: Elevation of the highest point above sea level in meters.
+  minimum_elevation_point: Name of the lowest geographical point on the continent.
+  lowest_elevation_m: Elevation of the lowest point above sea level in meters (negative
+    if below sea level).
+  most_populous_urban_area: Most populous urban area on the continent.
+  school_dropout_children: Estimated number of school-age children not enrolled in
+    school.
+  un_code: UN M49 numeric region code assigned to the continent.
+  inhabitant_name: Comma-separated adjectives or nouns used to describe inhabitants
+    of the continent.
+  northernmost_point: Geographic coordinates of the northernmost point of the continent.
+  southern_extreme: Geographic coordinates of the southernmost point of the continent.
+  eastern_extreme: Geographic coordinates of the easternmost point of the continent.
+  western_extreme: Geographic coordinates of the westernmost point of the continent.
+urban_areas:
+  __table__: Cities and human settlements located in Worldwide.
+  city: Identifier for the city.
+  locality: Name of the city.
+  country: Country the city is located in.
+  city_population: Population of the city (most recent estimate).
+  coordinates: Geographic coordinates of the city.
+  founding_year: Date or year the city was founded or first recorded.
+  nickname: Comma-separated informal names or nicknames of the city.
+  total_output_usd: Nominal GDP of the city in US dollars.
+  per_capita_income_usd: Per capita income of the city in US dollars.
+  height_m: Elevation of the city above sea level in meters.
+  city_area_km2: Total area of the city in square kilometers.
+  vehicle_density: Number of registered motor vehicles per thousand inhabitants.

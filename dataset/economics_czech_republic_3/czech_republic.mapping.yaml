@@ -1,0 +1,18 @@
+entities:
+  source: companies
+  columns:
+    firm_id: company
+    title: name
+    headquarters_country: country
+    classification: types
+    field: industries
+    organizational_form: legal_form
+    inception: inception
+    url: website
+    city: city
+    top_executive: ceo_person
+    workers: employees
+    revenue_usd: revenue_usd
+    profit_usd: net_income_usd
+    total_assets_usd: total_assets_usd
+    market_cap_usd: market_cap_usd

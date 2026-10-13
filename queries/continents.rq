@@ -1,0 +1,83 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+
+SELECT
+  ?continent
+  (SAMPLE(?name_v)                      AS ?name)
+  (SAMPLE(?area_v)                      AS ?area_km2)
+  (SAMPLE(?coords_v)                    AS ?coords)
+  (SAMPLE(?pop_v)                       AS ?population)
+  (SAMPLE(?highest_point_v)             AS ?highest_point)
+  (SAMPLE(?highest_point_m_v)           AS ?highest_point_m)
+  (SAMPLE(?lowest_point_v)              AS ?lowest_point)
+  (SAMPLE(?lowest_point_m_v)            AS ?lowest_point_m)
+  (SAMPLE(?most_populous_urban_area_v)  AS ?most_populous_urban_area)
+  (SAMPLE(?out_of_school_children_v)    AS ?out_of_school_children)
+  (SAMPLE(?m49_code_v)                  AS ?m49_code)
+  (GROUP_CONCAT(DISTINCT ?demonym_v; SEPARATOR=", ") AS ?demonym)
+  (SAMPLE(?northernmost_point_v)        AS ?northernmost_point)
+  (SAMPLE(?southernmost_point_v)        AS ?southernmost_point)
+  (SAMPLE(?easternmost_point_v)         AS ?easternmost_point)
+  (SAMPLE(?westernmost_point_v)         AS ?westernmost_point)
+WHERE {
+  VALUES ?continent {
+    wd:Q15    # Africa
+    wd:Q48    # Asia
+    wd:Q46    # Europe
+    wd:Q49    # North America
+    wd:Q18    # South America
+    wd:Q55643 # Oceania
+    wd:Q51    # Antarctica
+  }
+
+  ?continent rdfs:label ?name_v .
+  FILTER(lang(?name_v) = "en")
+
+  OPTIONAL { ?continent wdt:P2046 ?area_v . }
+  OPTIONAL { ?continent wdt:P625  ?coords_v . }
+
+  OPTIONAL {
+    {
+      SELECT ?continent (MAX(?popDate) AS ?latestPopDate) WHERE {
+        ?continent p:P1082 ?popStmt .
+        ?popStmt pq:P585 ?popDate .
+      } GROUP BY ?continent
+    }
+    ?continent p:P1082 ?popStmt .
+    ?popStmt ps:P1082 ?pop_v ;
+             pq:P585 ?latestPopDate .
+  }
+
+  OPTIONAL {
+    ?continent wdt:P610 ?highestPointEntity .
+    ?highestPointEntity rdfs:label ?highest_point_v .
+    FILTER(lang(?highest_point_v) = "en")
+    OPTIONAL { ?highestPointEntity wdt:P2044 ?highest_point_m_v . }
+  }
+
+  OPTIONAL {
+    ?continent wdt:P1589 ?lowestPointEntity .
+    ?lowestPointEntity rdfs:label ?lowest_point_v .
+    FILTER(lang(?lowest_point_v) = "en")
+    OPTIONAL { ?lowestPointEntity wdt:P2044 ?lowest_point_m_v . }
+  }
+
+  OPTIONAL { ?continent wdt:P13574 ?most_populous_urban_area_v . }
+  OPTIONAL { ?continent wdt:P2573  ?out_of_school_children_v . }
+  OPTIONAL { ?continent wdt:P2082  ?m49_code_v . }
+
+  OPTIONAL {
+    ?continent wdt:P1549 ?demonym_v .
+    FILTER(lang(?demonym_v) = "en")
+  }
+
+  OPTIONAL { ?continent wdt:P1332 ?northernmost_point_v . }
+  OPTIONAL { ?continent wdt:P1333 ?southernmost_point_v . }
+  OPTIONAL { ?continent wdt:P1334 ?easternmost_point_v . }
+  OPTIONAL { ?continent wdt:P1335 ?westernmost_point_v . }
+}
+GROUP BY ?continent

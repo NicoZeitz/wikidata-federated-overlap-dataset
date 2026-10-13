@@ -1,0 +1,85 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# One row per match. team1/team2 assigned by ascending QID sort to ensure consistency.
+# team1_score / team2_score via P1923 (participating team) + P1351 (points scored).
+# referee stored as person URI (FK to persons).
+SELECT
+  ?match
+  (SAMPLE(?name_v)       AS ?name)
+  (SAMPLE(?date_v)       AS ?date)
+  (SAMPLE(?tournament_v) AS ?tournament)
+  (SAMPLE(?stage_type_v) AS ?stage_type)
+  (SAMPLE(?venue_v)      AS ?venue)
+  (SAMPLE(?team1_v)      AS ?team1)
+  (SAMPLE(?team1score_v) AS ?team1_score)
+  (SAMPLE(?team2_v)      AS ?team2)
+  (SAMPLE(?team2score_v) AS ?team2_score)
+  (SAMPLE(?winner_v)     AS ?winner)
+  (SAMPLE(?attendance_v) AS ?attendance)
+  (SAMPLE(?referee_v)    AS ?referee)
+WHERE {
+  ?match wdt:P31 wd:Q17315159 .
+  ?match wdt:P585 ?date_v .
+
+  ?match wdt:P361 ?stage .
+  ?stage wdt:P361 ?tournament_v .
+  VALUES ?competition { wd:Q19317 wd:Q19323 }
+  ?tournament_v wdt:P3450 ?competition .
+  ?tournament_v wdt:P31/wdt:P279* wd:Q27020041 .
+  ?tournament_v wdt:P17 ?tournament_country .
+
+  OPTIONAL { ?match rdfs:label ?name_v . FILTER(lang(?name_v) = "en") }
+  ?match wdt:P276 ?venue_v .
+
+  OPTIONAL {
+    ?stage wdt:P31 ?stageTypeEntity .
+    ?stageTypeEntity rdfs:label ?stage_type_v .
+    FILTER(lang(?stage_type_v) = "en")
+  }
+
+  OPTIONAL {
+    ?match wdt:P1346 ?winner_v .
+    ?winner_v wdt:P17 ?_wc .
+    FILTER NOT EXISTS { ?_wc wdt:P576 ?_wcdiss . }
+  }
+
+  OPTIONAL { ?match wdt:P1110 ?attendance_v . }
+
+  OPTIONAL {
+    ?match wdt:P1652 ?referee_v .
+    ?referee_v wdt:P31 wd:Q5 .
+    FILTER EXISTS { { ?referee_v wdt:P27 ?_rc . } UNION { ?referee_v wdt:P19 ?_rbp . } }
+  }
+
+  # team1: the participating team with the lexicographically smaller QID
+  # Both teams must have P17 pointing to a non-dissolved country (filters out historical teams)
+  OPTIONAL {
+    ?match wdt:P1923 ?teamA .
+    ?match wdt:P1923 ?teamB .
+    FILTER(STR(?teamA) < STR(?teamB))
+    ?teamA wdt:P17 ?_cA .
+    FILTER NOT EXISTS { ?_cA wdt:P576 ?_dcA . }
+    ?teamB wdt:P17 ?_cB .
+    FILTER NOT EXISTS { ?_cB wdt:P576 ?_dcB . }
+    BIND(?teamA AS ?team1_v)
+    BIND(?teamB AS ?team2_v)
+
+    OPTIONAL {
+      ?match p:P1923 ?scoreStmtA .
+      ?scoreStmtA ps:P1923 ?teamA ;
+                  pq:P1351 ?team1score_v .
+    }
+    OPTIONAL {
+      ?match p:P1923 ?scoreStmtB .
+      ?scoreStmtB ps:P1923 ?teamB ;
+                  pq:P1351 ?team2score_v .
+    }
+  }
+}
+GROUP BY ?match

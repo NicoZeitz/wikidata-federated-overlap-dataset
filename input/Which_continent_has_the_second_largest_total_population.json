@@ -1,0 +1,41 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "Which continent has the second largest total population?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by continent, return the continent with the second largest total population.",
+          "query": "Return all continents with their population.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "continents"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT continents.name FROM continents WHERE continents.population = ( SELECT MAX(continents.population) FROM continents WHERE continents.population <> ( SELECT MAX(continents.population) FROM continents ) )",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "max"
+          ],
+          "columns": [
+            "name",
+            "population"
+          ],
+          "keys": [
+            "name"
+          ],
+          "value_column": "population"
+        },
+        "sql_query": "SELECT continents.name, continents.population FROM continents"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+american_regions:
+  source: states
+  columns:
+    state_id: state
+    country: country
+    name: name
+    coords: coords
+    total_area_km2: area_km2
+    pop: population
+    administrative_center: capital
+    admission_date: inception
+    abbreviation: iso_code
+    alias: nickname
+    website: website

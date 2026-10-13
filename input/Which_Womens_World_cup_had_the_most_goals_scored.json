@@ -1,0 +1,41 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "Which Women's World cup had the most goals scored?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by world cup tournament, then find the one with the most goals scored.",
+          "query": "Return all Women's World cup tournaments and their goals scored.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "tournaments"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT tournaments.name FROM tournaments WHERE tournaments.name LIKE '%women%' AND tournaments.goals_scored = ( SELECT MAX(goals_scored) FROM tournaments WHERE tournaments.name LIKE '%women%' )",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "max"
+          ],
+          "columns": [
+            "name",
+            "goals_scored"
+          ],
+          "keys": [
+            "name"
+          ],
+          "value_column": "goals_scored"
+        },
+        "sql_query": "SELECT tournaments.name, tournaments.goals_scored FROM tournaments WHERE tournaments.name LIKE '%women%'"
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "Which Champions League venue has the highest capacity?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by venue, and return the venue with the highest capacity.",
+          "query": "Return all venues together with their capacities.",
+          "to_agent": {
+            "region": [
+              "europe",
+              "azerbaijan",
+              "kazakhstan"
+            ],
+            "table": "ucl_venues"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT ucl_venues.name FROM ucl_venues WHERE ucl_venues.capacity = ( SELECT MAX(ucl_venues.capacity) FROM ucl_venues )",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "max"
+          ],
+          "columns": [
+            "name",
+            "capacity"
+          ],
+          "keys": [
+            "name"
+          ],
+          "value_column": "capacity"
+        },
+        "sql_query": "SELECT ucl_venues.name, ucl_venues.capacity FROM ucl_venues"
+      }
+    }
+  }
+}

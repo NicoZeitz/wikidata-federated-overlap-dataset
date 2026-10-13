@@ -1,0 +1,74 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the average area of South American countries?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Return the continent id of South America as soon as it is found.",
+          "query": "Return the continent id of South America.",
+          "to_agent": {
+            "region": [
+              "south_america"
+            ],
+            "table": "continents"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "Continent id of South America",
+              "step_id": "s1"
+            }
+          ],
+          "id": "s2",
+          "merge_task": "Deduplicate by country, calculate the average area across all countries.",
+          "query": "Return countries with their area.",
+          "to_agent": {
+            "region": [
+              "south_america"
+            ],
+            "table": "countries"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT AVG(countries.area_km2) AS avg_area FROM countries INNER JOIN continents ON continents.continent = countries.continent WHERE continents.name = 'South America'",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "continent"
+          ],
+          "keys": [
+            "continent"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT continents.continent FROM continents WHERE continents.name = 'South America'"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "avg"
+          ],
+          "columns": [
+            "country",
+            "area_km2"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": "area_km2"
+        },
+        "sql_query": "SELECT countries.country, countries.area_km2 FROM countries WHERE countries.continent = 18"
+      }
+    }
+  }
+}

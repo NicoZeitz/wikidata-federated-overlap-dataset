@@ -1,0 +1,41 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the total population of countries with a GDP above 1 trillion USD?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by country, and sum to a total population.",
+          "query": "Return all countries with a GDP above 1 trillion USD. Also return their population.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "countries"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT SUM(countries.population) AS total_population FROM countries WHERE countries.gdp_usd > 1000000000000",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "sum"
+          ],
+          "columns": [
+            "country",
+            "population"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": "population"
+        },
+        "sql_query": "SELECT countries.country, countries.population FROM countries WHERE countries.gdp_usd > 1000000000000"
+      }
+    }
+  }
+}

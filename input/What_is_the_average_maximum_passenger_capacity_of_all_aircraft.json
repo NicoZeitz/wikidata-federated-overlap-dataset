@@ -1,0 +1,41 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the average maximum passenger capacity of all aircraft?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by aircraft, find the average maximum passenger capacity of all aircraft.",
+          "query": "Return all aircrafts together with their maximum passenger capacity.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "aircraft"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT AVG(aircraft.max_passengers) AS avg_max_passengers FROM aircraft",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "avg"
+          ],
+          "columns": [
+            "aircraft",
+            "max_passengers"
+          ],
+          "keys": [
+            "aircraft"
+          ],
+          "value_column": "max_passengers"
+        },
+        "sql_query": "SELECT aircraft.aircraft, aircraft.max_passengers FROM aircraft"
+      }
+    }
+  }
+}

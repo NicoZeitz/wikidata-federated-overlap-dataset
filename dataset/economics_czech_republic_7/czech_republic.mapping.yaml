@@ -1,0 +1,17 @@
+entities:
+  source: companies
+  columns:
+    company: company
+    title: name
+    home_country: country
+    company_types: types
+    sector: industries
+    company_form: legal_form
+    foundation_year: inception
+    base_city: city
+    chief_executive: ceo_person
+    headcount: employees
+    gross_revenue_usd: revenue_usd
+    earnings_usd: net_income_usd
+    assets_usd: total_assets_usd
+    trading_profit_usd: operating_income_usd

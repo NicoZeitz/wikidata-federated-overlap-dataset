@@ -1,0 +1,76 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the total number of passengers handled by airports in UK and France?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Return the country id of the United Kingdom and France as soon as they are found.",
+          "query": "Return the country id of the United Kingdom and France.",
+          "to_agent": {
+            "region": [
+              "france",
+              "united_kingdom"
+            ],
+            "table": "countries"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "The country ids of the United Kingdom and France.",
+              "step_id": "s1"
+            }
+          ],
+          "id": "s2",
+          "merge_task": "Deduplicate by airport, then sum the number of passengers across all airports for a total passenger amount.",
+          "query": "Return all airports located in either the United Kingdom or France with their passengers.",
+          "to_agent": {
+            "region": [
+              "france",
+              "united_kingdom"
+            ],
+            "table": "airports"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT SUM(airports.passengers) AS total_passengers FROM airports INNER JOIN countries ON countries.country = airports.country WHERE countries.name = 'France' OR countries.name = 'United Kingdom'",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "country"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT countries.country FROM countries WHERE countries.name IN ('United Kingdom', 'France')"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "sum"
+          ],
+          "columns": [
+            "airport",
+            "passengers"
+          ],
+          "keys": [
+            "airport"
+          ],
+          "value_column": "passengers"
+        },
+        "sql_query": "SELECT airports.airport, airports.passengers FROM airports WHERE airports.country IN (145, 142)"
+      }
+    }
+  }
+}

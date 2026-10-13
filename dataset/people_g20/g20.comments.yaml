@@ -1,0 +1,33 @@
+__database__: People database covering G20 countries, including persons, awards, and
+  prize records.
+individuals:
+  __table__: Persons from G20 countries.
+  individual_id: Identifier for the person.
+  label: Full name of the person.
+  biological_sex: Sex of the person.
+  dob: Date of birth.
+  dod: Date of death (null if still living or unknown).
+  given_name: Given (first) name of the person.
+  last: Family (last) name of the person.
+  passport_country: Country of citizenship.
+  country_of_birth: Country of birth.
+  nation: Country associated with the person (citizenship if known, otherwise country
+    of birth).
+  educated_at: Name of institution where the person studied.
+  height: Height of the person in centimeters.
+  number_of_children: Number of children the person has.
+  number_of_siblings: Number of siblings the person has.
+distinctions:
+  __table__: Awards from G20 countries.
+  prize_id: Identifier for the award.
+  prize_name: Name of the award.
+  awarding_country: Country the award originates from.
+  founding_year: Year the award was first presented.
+  granting_organization: Organization that confers the award.
+  namesake: Person or entity the award is named after.
+  url: Official website URL of the award.
+person_awards:
+  __table__: Records linking persons from G20 countries to awards they received.
+  honoree: Person who received the award.
+  honor: Award received by the person.
+  year_won: Year the award was received.

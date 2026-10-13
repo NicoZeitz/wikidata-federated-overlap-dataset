@@ -1,0 +1,54 @@
+geography:
+  tables:
+  - countries
+  - continents
+  - cities
+  description: Geographic database covering {{REGION}}, including countries, continents, and cities.
+aviation:
+  tables:
+  - airports
+  - airlines
+  - aircraft
+  - accidents
+  description: Aviation database covering {{REGION}}, including airports, airlines, aircraft, and accidents.
+economics:
+  tables:
+  - companies
+  description: Economics database covering {{REGION}}, including companies.
+football:
+  tables:
+  - matches
+  - teams
+  - venues
+  - tournaments
+  description: Football database covering {{REGION}}, including matches, teams, venues, and tournaments.
+ucl:
+  tables:
+  - ucl_clubs
+  - ucl_matches
+  - ucl_venues
+  - football_clubs
+  description: UEFA Champions League database covering {{REGION}}, including clubs, matches, and venues.
+basketball:
+  tables:
+  - nba_teams
+  - nba_matches
+  description: NBA basketball database covering {{REGION}}, including teams and games.
+people:
+  tables:
+  - persons
+  - awards
+  - person_awards
+  description: People database covering {{REGION}}, including persons, awards, and prize records.
+german_states:
+  tables:
+  - german_states
+  description: German states database covering {{REGION}}.
+states:
+  tables:
+  - states
+  description: US states database covering {{REGION}}.
+provinces:
+  tables:
+  - provinces
+  description: Provinces database covering {{REGION}}.

@@ -1,0 +1,42 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "Which country has the lowest elevation? What is the name and the depth of this point?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by country, return the country, name and depth of the lowest elevation.",
+          "query": "Return all countries together with the name and depth of their lowest elevation.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "countries"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT countries.name, countries.lowest_point, countries.lowest_point_m FROM countries WHERE countries.lowest_point_m = ( SELECT MIN(countries.lowest_point_m) FROM countries )",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "min"
+          ],
+          "columns": [
+            "name",
+            "lowest_point",
+            "lowest_point_m"
+          ],
+          "keys": [
+            "name"
+          ],
+          "value_column": "lowest_point_m"
+        },
+        "sql_query": "SELECT countries.name, countries.lowest_point, countries.lowest_point_m FROM countries"
+      }
+    }
+  }
+}

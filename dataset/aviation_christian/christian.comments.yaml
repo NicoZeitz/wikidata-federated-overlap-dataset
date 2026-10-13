@@ -1,0 +1,54 @@
+__database__: Aviation database covering Christian-majority countries, including airports,
+  airlines, aircraft, and accidents.
+airfields:
+  __table__: Airports located in Christian-majority countries.
+  airport: Identifier for the airport.
+  aerodrome_name: Name of the airport.
+  airport_code: IATA three-letter airport code.
+  elevation: Elevation of the airport above sea level in meters.
+  yearly_passengers: Annual passenger count (most recent reported value).
+  airport_area: Total area of the airport in square kilometers.
+  tz_offset: UTC offset of the airport's timezone in hours.
+  start_date: Date the airport was opened or established.
+  location: Geographic coordinates of the airport.
+  city: City the airport serves.
+  host_country: Country the airport is located in.
+passenger_airlines:
+  __table__: Airlines headquartered in Christian-majority countries.
+  airline_id: Identifier for the airline.
+  company_name: Name of the airline.
+  headquarters_country: Country where the airline is headquartered.
+  founding_date: Date the airline was founded.
+  headcount: Number of employees (most recent reported value).
+  total_revenue_usd: Annual revenue in US dollars (most recent reported value).
+  parent_company: Parent company or holding group.
+  iata: IATA airline designator code (2-letter).
+  airline_code_icao: ICAO airline designator code (3-letter).
+  hq_location: City or location where the airline is headquartered.
+  website: Official website of the airline.
+  base_airport: A hub airport of the airline.
+fleet:
+  __table__: Individual aircraft operated by airlines based in Christian-majority
+    countries.
+  aircraft: Identifier for the aircraft.
+  label: Name or registration of the aircraft.
+  carrier: Airline operating the aircraft.
+  nation: Country of the operating airline.
+  model_type: Aircraft model type (e.g. Boeing 737-800).
+  aircraft_manufacturer: Manufacturer of the aircraft.
+  delivery_date: Date of the aircraft's first flight.
+  seats: Maximum passenger capacity.
+  flight_speed_kmh: Cruise speed in kilometers per hour.
+  wingspan_m: Wingspan in meters.
+  length_m: Length of the aircraft in meters.
+  takeoff_weight_kg: Maximum takeoff weight in kilograms.
+flight_accidents:
+  __table__: Aviation accidents involving airlines that occurred in Christian-majority
+    countries.
+  accident_id: Identifier for the aviation accident.
+  name: Name or description of the accident.
+  airline: Airline involved in the accident.
+  nation: Country where the accident occurred.
+  event_date: Date of the accident.
+  fatalities: Number of fatalities in the accident.
+  survivors: Number of survivors.

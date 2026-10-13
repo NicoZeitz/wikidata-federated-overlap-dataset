@@ -1,0 +1,16 @@
+position,database,coverage_pct,total_rows,new_unique_rows
+0,united_states,28.0,14,14
+1,united_states,54.0,13,13
+2,united_states,80.0,13,13
+3,united_states,84.0,7,2
+4,united_states,86.0,7,1
+5,united_states,88.0,7,1
+6,united_states,92.0,7,2
+7,united_states,92.0,7,0
+8,united_states,92.0,7,0
+9,united_states,92.0,6,0
+10,united_states,94.0,6,1
+11,united_states,94.0,6,0
+12,united_states,96.0,6,1
+13,united_states,98.0,6,1
+14,united_states,100.0,6,1

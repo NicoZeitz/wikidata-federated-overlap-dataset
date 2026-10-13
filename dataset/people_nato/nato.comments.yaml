@@ -1,0 +1,31 @@
+__database__: People database covering NATO countries, including persons, awards,
+  and prize records.
+notable_persons:
+  __table__: Persons from NATO countries.
+  person: Identifier for the person.
+  label: Full name of the person.
+  sex: Sex of the person.
+  born: Date of birth.
+  death_date: Date of death (null if still living or unknown).
+  forename: Given (first) name of the person.
+  surname: Family (last) name of the person.
+  nationality: Country of citizenship.
+  birthplace_country: Country of birth.
+  home_country: Country associated with the person (citizenship if known, otherwise
+    country of birth).
+  educated_at: Name of institution where the person studied.
+  child_count: Number of children the person has.
+  number_of_siblings: Number of siblings the person has.
+trophies:
+  __table__: Awards from NATO countries.
+  honor_id: Identifier for the award.
+  label: Name of the award.
+  origin_country: Country the award originates from.
+  created: Year the award was first presented.
+  awarding_body: Organization that confers the award.
+  web_address: Official website URL of the award.
+person_awards:
+  __table__: Records linking persons from NATO countries to awards they received.
+  person_id: Person who received the award.
+  accolade: Award received by the person.
+  reception_year: Year the award was received.

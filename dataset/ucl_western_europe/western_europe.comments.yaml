@@ -1,0 +1,56 @@
+__database__: UEFA Champions League database covering Western Europe, including clubs,
+  matches, and venues.
+champions_league_teams:
+  __table__: Football clubs based in Western Europe that participated in the UEFA
+    Champions League.
+  organization_id: Identifier for the football club.
+  title: Full name of the football club.
+  domestic_league: Name of the domestic league the club competes in.
+  country: Country the club is based in.
+  founding_year: Date or year the club was founded.
+  home_arena: Name of the club's home stadium.
+  trainer: Name of the current head coach or manager.
+  informal_name: Nickname or informal name of the club.
+  championships: Number of domestic league titles won by the club.
+  social_media_followers: Number of social media followers of the club.
+  website: Official website URL of the club.
+  abbreviation: Short or abbreviated name of the club.
+  creator: Name of the person or entity who founded the club.
+european_football_matches:
+  __table__: UEFA Champions League matches played in Western Europe.
+  match: Identifier for the UEFA Champions League match.
+  match_name: Name or label of the match.
+  competition_season: Name or label of the season.
+  date: Date the match was played.
+  venue: Venue where the match was played.
+  team_a: First participating club.
+  team2: Second participating club.
+  winning_team: Winning club (null for draws).
+  spectators: Number of spectators in attendance.
+  arbiter: Person who refereed the match.
+champions_league_stadiums:
+  __table__: Stadiums and arenas in Western Europe that hosted UEFA Champions League
+    matches.
+  venue: Identifier for the venue.
+  arena_name: Name of the venue or stadium.
+  nation: Country the venue is located in.
+  stadium_capacity: Maximum seating capacity of the venue.
+  position: Geographic coordinates of the venue.
+  built: Date the venue was officially opened.
+  host_city: City or municipality the venue is located in.
+  primary_occupant: Teams or organizations that regularly use the venue.
+  venue_architect: Architect who designed the venue.
+soccer_teams:
+  __table__: Football clubs based in Western Europe.
+  club_id: Identifier for the football club.
+  club_name: Full name of the football club.
+  league: Name of the domestic league the club competes in.
+  nation: Country the club is based in.
+  established: Date or year the club was founded.
+  tactician: Name of the current head coach or manager.
+  ownership: Name of the current owner or ownership group.
+  informal_name: Nickname or informal name of the club.
+  championships: Number of domestic league titles won by the club.
+  social_media_followers: Number of social media followers of the club.
+  web_address: Official website URL of the club.
+  shortName: Short or abbreviated name of the club.

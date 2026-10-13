@@ -1,0 +1,19 @@
+companies_list:
+  source: companies
+  columns:
+    company_id: company
+    business_name: name
+    home_country: country
+    business_types: types
+    industry_sector: industries
+    entity_form: legal_form
+    established: inception
+    url: website
+    head_office_city: city
+    ceo_person: ceo_person
+    workers: employees
+    revenue: revenue_usd
+    after_tax_income_usd: net_income_usd
+    assets_usd: total_assets_usd
+    operating_profit_usd: operating_income_usd
+    valuation_usd: market_cap_usd

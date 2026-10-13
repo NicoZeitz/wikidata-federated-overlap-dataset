@@ -1,0 +1,880 @@
+{
+  "extra": {
+    "relevant_data_agents": [
+      "A46",
+      "A47",
+      "A48",
+      "A49",
+      "A50",
+      "A51",
+      "A52",
+      "A53",
+      "A54",
+      "A55",
+      "A56",
+      "A57",
+      "A58",
+      "A59",
+      "A60"
+    ],
+    "full_answer": [
+      {
+        "venue_name": "Maracan\u00e3 Stadium",
+        "attendance": 173850,
+        "date": "1950-07-16T00:00:00Z",
+        "name": "Uruguay v Brazil 1950"
+      }
+    ],
+    "sql_query": "SELECT venues.name AS venue_name, matches.attendance, matches.date, matches.name FROM matches INNER JOIN venues ON venues.venue = matches.venue WHERE matches.attendance = (SELECT MAX(attendance) FROM matches)",
+    "query_plan": {
+      "query": "When and where did the highest attendance at a FIFA world cup stadium occur and how many people attended?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate matches, then return only the match with the highest attendance.",
+          "query": "Find all matches with their attendance, date and venue.",
+          "to_agent": [
+            "A46",
+            "A47",
+            "A48",
+            "A49",
+            "A50",
+            "A51",
+            "A52",
+            "A53",
+            "A54",
+            "A55",
+            "A56",
+            "A57",
+            "A58",
+            "A59",
+            "A60"
+          ]
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "The FIFA world cup match with the highest attendance with attendance, date and venue.",
+              "step_id": "s1"
+            }
+          ],
+          "id": "s2",
+          "merge_task": "Return the given match with attendance, date and venue name and location as soon as it is found.",
+          "query": "Return the given match with attendance, date and venue name and location",
+          "to_agent": [
+            "A46",
+            "A47",
+            "A48",
+            "A49",
+            "A50",
+            "A51",
+            "A52",
+            "A53",
+            "A54",
+            "A55",
+            "A56",
+            "A57",
+            "A58",
+            "A59",
+            "A60"
+          ]
+        }
+      ]
+    },
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "max"
+          ],
+          "columns": [
+            "match",
+            "attendance",
+            "venue"
+          ],
+          "keys": [
+            "match"
+          ],
+          "value_column": "attendance"
+        },
+        "sql_query": "SELECT matches.match, matches.attendance, matches.venue FROM matches"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "venue",
+            "name",
+            "country"
+          ],
+          "keys": [
+            "venue"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT venues.venue, venues.name, venues.country FROM venues WHERE venues.venue = 155174"
+      }
+    }
+  },
+  "value": {
+    "__type__": "CollaborativeQueryAnswering",
+    "query": "When and where did the highest attendance at a FIFA world cup stadium occur and how many people attended?",
+    "data_agents": [
+      {
+        "type": "sql",
+        "name": "A1",
+        "path": "dataset/aviation_canada/canada.db"
+      },
+      {
+        "type": "sql",
+        "name": "A2",
+        "path": "dataset/aviation_canada_2/canada.db"
+      },
+      {
+        "type": "sql",
+        "name": "A3",
+        "path": "dataset/aviation_canada_3/canada.db"
+      },
+      {
+        "type": "sql",
+        "name": "A4",
+        "path": "dataset/aviation_christian/christian.db"
+      },
+      {
+        "type": "sql",
+        "name": "A5",
+        "path": "dataset/aviation_g7/g7.db"
+      },
+      {
+        "type": "sql",
+        "name": "A6",
+        "path": "dataset/aviation_global_north/global_north.db"
+      },
+      {
+        "type": "sql",
+        "name": "A7",
+        "path": "dataset/aviation_russia/russia.db"
+      },
+      {
+        "type": "sql",
+        "name": "A8",
+        "path": "dataset/aviation_russia_2/russia.db"
+      },
+      {
+        "type": "sql",
+        "name": "A9",
+        "path": "dataset/aviation_russia_3/russia.db"
+      },
+      {
+        "type": "sql",
+        "name": "A10",
+        "path": "dataset/aviation_united_states/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A11",
+        "path": "dataset/aviation_united_states_2/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A12",
+        "path": "dataset/aviation_united_states_3/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A13",
+        "path": "dataset/aviation_united_states_4/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A14",
+        "path": "dataset/aviation_worldwide/worldwide.db"
+      },
+      {
+        "type": "sql",
+        "name": "A15",
+        "path": "dataset/aviation_worldwide_2/worldwide.db"
+      },
+      {
+        "type": "sql",
+        "name": "A16",
+        "path": "dataset/basketball_canada_united_states/canada_united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A17",
+        "path": "dataset/basketball_canada_united_states_10/canada_united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A18",
+        "path": "dataset/basketball_canada_united_states_11/canada_united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A19",
+        "path": "dataset/basketball_canada_united_states_12/canada_united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A20",
+        "path": "dataset/basketball_canada_united_states_13/canada_united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A21",
+        "path": "dataset/basketball_canada_united_states_2/canada_united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A22",
+        "path": "dataset/basketball_canada_united_states_3/canada_united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A23",
+        "path": "dataset/basketball_canada_united_states_4/canada_united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A24",
+        "path": "dataset/basketball_canada_united_states_5/canada_united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A25",
+        "path": "dataset/basketball_canada_united_states_6/canada_united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A26",
+        "path": "dataset/basketball_canada_united_states_7/canada_united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A27",
+        "path": "dataset/basketball_canada_united_states_8/canada_united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A28",
+        "path": "dataset/basketball_canada_united_states_9/canada_united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A29",
+        "path": "dataset/basketball_united_states/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A30",
+        "path": "dataset/basketball_united_states_2/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A31",
+        "path": "dataset/economics_czech_republic/czech_republic.db"
+      },
+      {
+        "type": "sql",
+        "name": "A32",
+        "path": "dataset/economics_czech_republic_10/czech_republic.db"
+      },
+      {
+        "type": "sql",
+        "name": "A33",
+        "path": "dataset/economics_czech_republic_11/czech_republic.db"
+      },
+      {
+        "type": "sql",
+        "name": "A34",
+        "path": "dataset/economics_czech_republic_2/czech_republic.db"
+      },
+      {
+        "type": "sql",
+        "name": "A35",
+        "path": "dataset/economics_czech_republic_3/czech_republic.db"
+      },
+      {
+        "type": "sql",
+        "name": "A36",
+        "path": "dataset/economics_czech_republic_4/czech_republic.db"
+      },
+      {
+        "type": "sql",
+        "name": "A37",
+        "path": "dataset/economics_czech_republic_5/czech_republic.db"
+      },
+      {
+        "type": "sql",
+        "name": "A38",
+        "path": "dataset/economics_czech_republic_6/czech_republic.db"
+      },
+      {
+        "type": "sql",
+        "name": "A39",
+        "path": "dataset/economics_czech_republic_7/czech_republic.db"
+      },
+      {
+        "type": "sql",
+        "name": "A40",
+        "path": "dataset/economics_czech_republic_8/czech_republic.db"
+      },
+      {
+        "type": "sql",
+        "name": "A41",
+        "path": "dataset/economics_czech_republic_9/czech_republic.db"
+      },
+      {
+        "type": "sql",
+        "name": "A42",
+        "path": "dataset/economics_g7/g7.db"
+      },
+      {
+        "type": "sql",
+        "name": "A43",
+        "path": "dataset/economics_oecd/oecd.db"
+      },
+      {
+        "type": "sql",
+        "name": "A44",
+        "path": "dataset/economics_worldwide/worldwide.db"
+      },
+      {
+        "type": "sql",
+        "name": "A45",
+        "path": "dataset/economics_worldwide_2/worldwide.db"
+      },
+      {
+        "type": "sql",
+        "name": "A46",
+        "path": "dataset/football_brics/brics.db"
+      },
+      {
+        "type": "sql",
+        "name": "A47",
+        "path": "dataset/football_christian/christian.db"
+      },
+      {
+        "type": "sql",
+        "name": "A48",
+        "path": "dataset/football_france/france.db"
+      },
+      {
+        "type": "sql",
+        "name": "A49",
+        "path": "dataset/football_france_2/france.db"
+      },
+      {
+        "type": "sql",
+        "name": "A50",
+        "path": "dataset/football_france_3/france.db"
+      },
+      {
+        "type": "sql",
+        "name": "A51",
+        "path": "dataset/football_g20/g20.db"
+      },
+      {
+        "type": "sql",
+        "name": "A52",
+        "path": "dataset/football_germany/germany.db"
+      },
+      {
+        "type": "sql",
+        "name": "A53",
+        "path": "dataset/football_germany_2/germany.db"
+      },
+      {
+        "type": "sql",
+        "name": "A54",
+        "path": "dataset/football_germany_3/germany.db"
+      },
+      {
+        "type": "sql",
+        "name": "A55",
+        "path": "dataset/football_oecd/oecd.db"
+      },
+      {
+        "type": "sql",
+        "name": "A56",
+        "path": "dataset/football_united_states/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A57",
+        "path": "dataset/football_united_states_2/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A58",
+        "path": "dataset/football_united_states_3/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A59",
+        "path": "dataset/football_worldwide/worldwide.db"
+      },
+      {
+        "type": "sql",
+        "name": "A60",
+        "path": "dataset/football_worldwide_2/worldwide.db"
+      },
+      {
+        "type": "sql",
+        "name": "A61",
+        "path": "dataset/geography_temperate/temperate.db"
+      },
+      {
+        "type": "sql",
+        "name": "A62",
+        "path": "dataset/geography_united_states/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A63",
+        "path": "dataset/geography_worldwide/worldwide.db"
+      },
+      {
+        "type": "sql",
+        "name": "A64",
+        "path": "dataset/geography_worldwide_10/worldwide.db"
+      },
+      {
+        "type": "sql",
+        "name": "A65",
+        "path": "dataset/geography_worldwide_11/worldwide.db"
+      },
+      {
+        "type": "sql",
+        "name": "A66",
+        "path": "dataset/geography_worldwide_12/worldwide.db"
+      },
+      {
+        "type": "sql",
+        "name": "A67",
+        "path": "dataset/geography_worldwide_13/worldwide.db"
+      },
+      {
+        "type": "sql",
+        "name": "A68",
+        "path": "dataset/geography_worldwide_2/worldwide.db"
+      },
+      {
+        "type": "sql",
+        "name": "A69",
+        "path": "dataset/geography_worldwide_3/worldwide.db"
+      },
+      {
+        "type": "sql",
+        "name": "A70",
+        "path": "dataset/geography_worldwide_4/worldwide.db"
+      },
+      {
+        "type": "sql",
+        "name": "A71",
+        "path": "dataset/geography_worldwide_5/worldwide.db"
+      },
+      {
+        "type": "sql",
+        "name": "A72",
+        "path": "dataset/geography_worldwide_6/worldwide.db"
+      },
+      {
+        "type": "sql",
+        "name": "A73",
+        "path": "dataset/geography_worldwide_7/worldwide.db"
+      },
+      {
+        "type": "sql",
+        "name": "A74",
+        "path": "dataset/geography_worldwide_8/worldwide.db"
+      },
+      {
+        "type": "sql",
+        "name": "A75",
+        "path": "dataset/geography_worldwide_9/worldwide.db"
+      },
+      {
+        "type": "sql",
+        "name": "A76",
+        "path": "dataset/german_states_germany/germany.db"
+      },
+      {
+        "type": "sql",
+        "name": "A77",
+        "path": "dataset/german_states_germany_10/germany.db"
+      },
+      {
+        "type": "sql",
+        "name": "A78",
+        "path": "dataset/german_states_germany_11/germany.db"
+      },
+      {
+        "type": "sql",
+        "name": "A79",
+        "path": "dataset/german_states_germany_12/germany.db"
+      },
+      {
+        "type": "sql",
+        "name": "A80",
+        "path": "dataset/german_states_germany_13/germany.db"
+      },
+      {
+        "type": "sql",
+        "name": "A81",
+        "path": "dataset/german_states_germany_14/germany.db"
+      },
+      {
+        "type": "sql",
+        "name": "A82",
+        "path": "dataset/german_states_germany_15/germany.db"
+      },
+      {
+        "type": "sql",
+        "name": "A83",
+        "path": "dataset/german_states_germany_2/germany.db"
+      },
+      {
+        "type": "sql",
+        "name": "A84",
+        "path": "dataset/german_states_germany_3/germany.db"
+      },
+      {
+        "type": "sql",
+        "name": "A85",
+        "path": "dataset/german_states_germany_4/germany.db"
+      },
+      {
+        "type": "sql",
+        "name": "A86",
+        "path": "dataset/german_states_germany_5/germany.db"
+      },
+      {
+        "type": "sql",
+        "name": "A87",
+        "path": "dataset/german_states_germany_6/germany.db"
+      },
+      {
+        "type": "sql",
+        "name": "A88",
+        "path": "dataset/german_states_germany_7/germany.db"
+      },
+      {
+        "type": "sql",
+        "name": "A89",
+        "path": "dataset/german_states_germany_8/germany.db"
+      },
+      {
+        "type": "sql",
+        "name": "A90",
+        "path": "dataset/german_states_germany_9/germany.db"
+      },
+      {
+        "type": "sql",
+        "name": "A91",
+        "path": "dataset/people_france/france.db"
+      },
+      {
+        "type": "sql",
+        "name": "A92",
+        "path": "dataset/people_france_2/france.db"
+      },
+      {
+        "type": "sql",
+        "name": "A93",
+        "path": "dataset/people_france_3/france.db"
+      },
+      {
+        "type": "sql",
+        "name": "A94",
+        "path": "dataset/people_g20/g20.db"
+      },
+      {
+        "type": "sql",
+        "name": "A95",
+        "path": "dataset/people_germany/germany.db"
+      },
+      {
+        "type": "sql",
+        "name": "A96",
+        "path": "dataset/people_nato/nato.db"
+      },
+      {
+        "type": "sql",
+        "name": "A97",
+        "path": "dataset/people_p5/p5.db"
+      },
+      {
+        "type": "sql",
+        "name": "A98",
+        "path": "dataset/people_united_kingdom/united_kingdom.db"
+      },
+      {
+        "type": "sql",
+        "name": "A99",
+        "path": "dataset/people_united_kingdom_2/united_kingdom.db"
+      },
+      {
+        "type": "sql",
+        "name": "A100",
+        "path": "dataset/people_united_kingdom_3/united_kingdom.db"
+      },
+      {
+        "type": "sql",
+        "name": "A101",
+        "path": "dataset/people_united_states/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A102",
+        "path": "dataset/people_united_states_2/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A103",
+        "path": "dataset/people_united_states_3/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A104",
+        "path": "dataset/people_worldwide/worldwide.db"
+      },
+      {
+        "type": "sql",
+        "name": "A105",
+        "path": "dataset/people_worldwide_2/worldwide.db"
+      },
+      {
+        "type": "sql",
+        "name": "A106",
+        "path": "dataset/provinces_people_s_republic_of_china/people_s_republic_of_china.db"
+      },
+      {
+        "type": "sql",
+        "name": "A107",
+        "path": "dataset/provinces_people_s_republic_of_china_10/people_s_republic_of_china.db"
+      },
+      {
+        "type": "sql",
+        "name": "A108",
+        "path": "dataset/provinces_people_s_republic_of_china_11/people_s_republic_of_china.db"
+      },
+      {
+        "type": "sql",
+        "name": "A109",
+        "path": "dataset/provinces_people_s_republic_of_china_12/people_s_republic_of_china.db"
+      },
+      {
+        "type": "sql",
+        "name": "A110",
+        "path": "dataset/provinces_people_s_republic_of_china_13/people_s_republic_of_china.db"
+      },
+      {
+        "type": "sql",
+        "name": "A111",
+        "path": "dataset/provinces_people_s_republic_of_china_14/people_s_republic_of_china.db"
+      },
+      {
+        "type": "sql",
+        "name": "A112",
+        "path": "dataset/provinces_people_s_republic_of_china_15/people_s_republic_of_china.db"
+      },
+      {
+        "type": "sql",
+        "name": "A113",
+        "path": "dataset/provinces_people_s_republic_of_china_2/people_s_republic_of_china.db"
+      },
+      {
+        "type": "sql",
+        "name": "A114",
+        "path": "dataset/provinces_people_s_republic_of_china_3/people_s_republic_of_china.db"
+      },
+      {
+        "type": "sql",
+        "name": "A115",
+        "path": "dataset/provinces_people_s_republic_of_china_4/people_s_republic_of_china.db"
+      },
+      {
+        "type": "sql",
+        "name": "A116",
+        "path": "dataset/provinces_people_s_republic_of_china_5/people_s_republic_of_china.db"
+      },
+      {
+        "type": "sql",
+        "name": "A117",
+        "path": "dataset/provinces_people_s_republic_of_china_6/people_s_republic_of_china.db"
+      },
+      {
+        "type": "sql",
+        "name": "A118",
+        "path": "dataset/provinces_people_s_republic_of_china_7/people_s_republic_of_china.db"
+      },
+      {
+        "type": "sql",
+        "name": "A119",
+        "path": "dataset/provinces_people_s_republic_of_china_8/people_s_republic_of_china.db"
+      },
+      {
+        "type": "sql",
+        "name": "A120",
+        "path": "dataset/provinces_people_s_republic_of_china_9/people_s_republic_of_china.db"
+      },
+      {
+        "type": "sql",
+        "name": "A121",
+        "path": "dataset/states_united_states/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A122",
+        "path": "dataset/states_united_states_10/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A123",
+        "path": "dataset/states_united_states_11/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A124",
+        "path": "dataset/states_united_states_12/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A125",
+        "path": "dataset/states_united_states_13/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A126",
+        "path": "dataset/states_united_states_14/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A127",
+        "path": "dataset/states_united_states_15/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A128",
+        "path": "dataset/states_united_states_2/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A129",
+        "path": "dataset/states_united_states_3/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A130",
+        "path": "dataset/states_united_states_4/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A131",
+        "path": "dataset/states_united_states_5/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A132",
+        "path": "dataset/states_united_states_6/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A133",
+        "path": "dataset/states_united_states_7/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A134",
+        "path": "dataset/states_united_states_8/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A135",
+        "path": "dataset/states_united_states_9/united_states.db"
+      },
+      {
+        "type": "sql",
+        "name": "A136",
+        "path": "dataset/ucl_g7/g7.db"
+      },
+      {
+        "type": "sql",
+        "name": "A137",
+        "path": "dataset/ucl_germany/germany.db"
+      },
+      {
+        "type": "sql",
+        "name": "A138",
+        "path": "dataset/ucl_italy/italy.db"
+      },
+      {
+        "type": "sql",
+        "name": "A139",
+        "path": "dataset/ucl_italy_2/italy.db"
+      },
+      {
+        "type": "sql",
+        "name": "A140",
+        "path": "dataset/ucl_italy_3/italy.db"
+      },
+      {
+        "type": "sql",
+        "name": "A141",
+        "path": "dataset/ucl_nato/nato.db"
+      },
+      {
+        "type": "sql",
+        "name": "A142",
+        "path": "dataset/ucl_palearctic/palearctic.db"
+      },
+      {
+        "type": "sql",
+        "name": "A143",
+        "path": "dataset/ucl_spain/spain.db"
+      },
+      {
+        "type": "sql",
+        "name": "A144",
+        "path": "dataset/ucl_spain_2/spain.db"
+      },
+      {
+        "type": "sql",
+        "name": "A145",
+        "path": "dataset/ucl_spain_3/spain.db"
+      },
+      {
+        "type": "sql",
+        "name": "A146",
+        "path": "dataset/ucl_united_kingdom/united_kingdom.db"
+      },
+      {
+        "type": "sql",
+        "name": "A147",
+        "path": "dataset/ucl_united_kingdom_2/united_kingdom.db"
+      },
+      {
+        "type": "sql",
+        "name": "A148",
+        "path": "dataset/ucl_united_kingdom_3/united_kingdom.db"
+      },
+      {
+        "type": "sql",
+        "name": "A149",
+        "path": "dataset/ucl_western_europe/western_europe.db"
+      },
+      {
+        "type": "sql",
+        "name": "A150",
+        "path": "dataset/ucl_worldwide/worldwide.db"
+      }
+    ]
+  }
+}

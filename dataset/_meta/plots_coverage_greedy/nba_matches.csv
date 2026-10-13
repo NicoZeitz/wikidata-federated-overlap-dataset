@@ -1,0 +1,16 @@
+position,database,coverage_pct,total_rows,new_unique_rows
+0,united_states,26.67,17879,17879
+1,canada_united_states,53.33,17878,17878
+2,united_states,80.0,17878,17878
+3,canada_united_states,84.19,9436,2809
+4,canada_united_states,87.54,9423,2246
+5,canada_united_states,90.04,9398,1679
+6,canada_united_states,91.94,9407,1269
+7,canada_united_states,93.59,9414,1107
+8,canada_united_states,94.92,9403,891
+9,canada_united_states,96.08,9383,778
+10,canada_united_states,97.06,9383,660
+11,canada_united_states,97.95,9382,595
+12,canada_united_states,98.72,9377,516
+13,canada_united_states,99.42,9392,468
+14,canada_united_states,100.0,9341,391

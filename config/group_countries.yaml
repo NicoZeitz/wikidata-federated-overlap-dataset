@@ -1,0 +1,2325 @@
+africa:
+  label: Africa
+  countries:
+  - algeria
+  - angola
+  - benin
+  - botswana
+  - burkina_faso
+  - burundi
+  - cameroon
+  - cape_verde
+  - central_african_republic
+  - chad
+  - comoros
+  - democratic_republic_of_the_congo
+  - djibouti
+  - egypt
+  - equatorial_guinea
+  - eritrea
+  - eswatini
+  - ethiopia
+  - gabon
+  - the_gambia
+  - ghana
+  - guinea
+  - guinea_bissau
+  - ivory_coast
+  - kenya
+  - lesotho
+  - liberia
+  - libya
+  - madagascar
+  - malawi
+  - mali
+  - mauritania
+  - mauritius
+  - morocco
+  - mozambique
+  - namibia
+  - niger
+  - nigeria
+  - republic_of_the_congo
+  - rwanda
+  - sao_tome_and_principe
+  - senegal
+  - seychelles
+  - sierra_leone
+  - somalia
+  - south_africa
+  - south_sudan
+  - sudan
+  - tanzania
+  - togo
+  - tunisia
+  - uganda
+  - zambia
+  - zimbabwe
+afrotropic:
+  label: Afrotropic ecozone
+  countries:
+  - angola
+  - benin
+  - botswana
+  - burkina_faso
+  - burundi
+  - cameroon
+  - cape_verde
+  - central_african_republic
+  - chad
+  - comoros
+  - democratic_republic_of_the_congo
+  - djibouti
+  - equatorial_guinea
+  - eritrea
+  - eswatini
+  - ethiopia
+  - gabon
+  - the_gambia
+  - ghana
+  - guinea
+  - guinea_bissau
+  - ivory_coast
+  - kenya
+  - lesotho
+  - liberia
+  - madagascar
+  - malawi
+  - mali
+  - mauritius
+  - mozambique
+  - namibia
+  - niger
+  - nigeria
+  - republic_of_the_congo
+  - rwanda
+  - sao_tome_and_principe
+  - senegal
+  - seychelles
+  - sierra_leone
+  - somalia
+  - south_africa
+  - south_sudan
+  - sudan
+  - tanzania
+  - togo
+  - uganda
+  - zambia
+  - zimbabwe
+americas:
+  label: Americas
+  countries:
+  - antigua_and_barbuda
+  - argentina
+  - the_bahamas
+  - barbados
+  - belize
+  - bolivia
+  - brazil
+  - canada
+  - chile
+  - colombia
+  - costa_rica
+  - cuba
+  - dominica
+  - dominican_republic
+  - ecuador
+  - el_salvador
+  - grenada
+  - guatemala
+  - guyana
+  - haiti
+  - honduras
+  - jamaica
+  - mexico
+  - nicaragua
+  - panama
+  - paraguay
+  - peru
+  - saint_kitts_and_nevis
+  - saint_lucia
+  - saint_vincent_and_the_grenadines
+  - suriname
+  - trinidad_and_tobago
+  - united_states
+  - uruguay
+  - venezuela
+anglophone:
+  label: Anglophone countries
+  countries:
+  - antigua_and_barbuda
+  - australia
+  - the_bahamas
+  - barbados
+  - belize
+  - botswana
+  - canada
+  - dominica
+  - fiji
+  - the_gambia
+  - ghana
+  - grenada
+  - guyana
+  - india
+  - ireland
+  - jamaica
+  - kenya
+  - lesotho
+  - liberia
+  - malawi
+  - malaysia
+  - malta
+  - mauritius
+  - namibia
+  - new_zealand
+  - nigeria
+  - papua_new_guinea
+  - philippines
+  - saint_kitts_and_nevis
+  - saint_lucia
+  - saint_vincent_and_the_grenadines
+  - seychelles
+  - sierra_leone
+  - singapore
+  - solomon_islands
+  - south_africa
+  - tanzania
+  - trinidad_and_tobago
+  - uganda
+  - united_kingdom
+  - united_states
+  - zambia
+  - zimbabwe
+arab_league:
+  label: Arab League countries
+  countries:
+  - algeria
+  - bahrain
+  - egypt
+  - iraq
+  - jordan
+  - kuwait
+  - lebanon
+  - libya
+  - mauritania
+  - morocco
+  - oman
+  - palestine
+  - qatar
+  - saudi_arabia
+  - somalia
+  - sudan
+  - syria
+  - tunisia
+  - united_arab_emirates
+  - yemen
+arid:
+  label: arid/desert climate countries
+  countries:
+  - afghanistan
+  - algeria
+  - bahrain
+  - chad
+  - djibouti
+  - egypt
+  - eritrea
+  - iran
+  - iraq
+  - jordan
+  - kuwait
+  - libya
+  - mali
+  - mauritania
+  - namibia
+  - niger
+  - oman
+  - pakistan
+  - qatar
+  - saudi_arabia
+  - somalia
+  - sudan
+  - turkmenistan
+  - united_arab_emirates
+  - uzbekistan
+  - yemen
+asean:
+  label: ASEAN countries
+  countries:
+  - brunei
+  - cambodia
+  - indonesia
+  - laos
+  - malaysia
+  - myanmar
+  - philippines
+  - singapore
+  - thailand
+  - timor_leste
+  - vietnam
+asia:
+  label: Asia
+  countries:
+  - afghanistan
+  - armenia
+  - azerbaijan
+  - bahrain
+  - bangladesh
+  - bhutan
+  - brunei
+  - cambodia
+  - people_s_republic_of_china
+  - georgia
+  - india
+  - indonesia
+  - iran
+  - iraq
+  - israel
+  - japan
+  - jordan
+  - kazakhstan
+  - kuwait
+  - kyrgyzstan
+  - laos
+  - lebanon
+  - malaysia
+  - maldives
+  - mongolia
+  - myanmar
+  - nepal
+  - north_korea
+  - oman
+  - pakistan
+  - palestine
+  - philippines
+  - qatar
+  - russia
+  - saudi_arabia
+  - singapore
+  - south_korea
+  - sri_lanka
+  - syria
+  - taiwan
+  - tajikistan
+  - thailand
+  - timor_leste
+  - turkey
+  - turkmenistan
+  - united_arab_emirates
+  - uzbekistan
+  - vietnam
+  - yemen
+australasian:
+  label: Australasian ecozone
+  countries:
+  - australia
+  - fiji
+  - kiribati
+  - marshall_islands
+  - federated_states_of_micronesia
+  - nauru
+  - new_zealand
+  - palau
+  - papua_new_guinea
+  - samoa
+  - solomon_islands
+  - tonga
+  - tuvalu
+  - vanuatu
+balkans:
+  label: Balkans
+  countries:
+  - albania
+  - bosnia_and_herzegovina
+  - bulgaria
+  - croatia
+  - greece
+  - kosovo
+  - montenegro
+  - north_macedonia
+  - romania
+  - serbia
+baltic_states:
+  label: Baltic States
+  countries:
+  - estonia
+  - latvia
+  - lithuania
+benelux:
+  label: Benelux countries
+  countries:
+  - belgium
+  - luxembourg
+  - kingdom_of_the_netherlands
+brics:
+  label: BRICS countries
+  countries:
+  - brazil
+  - people_s_republic_of_china
+  - india
+  - russia
+  - south_africa
+buddhist:
+  label: Buddhist-majority countries
+  countries:
+  - bhutan
+  - cambodia
+  - people_s_republic_of_china
+  - japan
+  - laos
+  - mongolia
+  - myanmar
+  - south_korea
+  - sri_lanka
+  - taiwan
+  - thailand
+  - vietnam
+caribbean:
+  label: Caribbean
+  countries:
+  - antigua_and_barbuda
+  - the_bahamas
+  - barbados
+  - cuba
+  - dominica
+  - dominican_republic
+  - grenada
+  - haiti
+  - jamaica
+  - saint_kitts_and_nevis
+  - saint_lucia
+  - saint_vincent_and_the_grenadines
+  - trinidad_and_tobago
+central_america:
+  label: Central America
+  countries:
+  - belize
+  - costa_rica
+  - el_salvador
+  - guatemala
+  - honduras
+  - mexico
+  - nicaragua
+  - panama
+central_asia:
+  label: Central Asia
+  countries:
+  - kazakhstan
+  - kyrgyzstan
+  - tajikistan
+  - turkmenistan
+  - uzbekistan
+central_europe:
+  label: Central Europe
+  countries:
+  - austria
+  - czech_republic
+  - germany
+  - hungary
+  - liechtenstein
+  - poland
+  - slovakia
+  - slovenia
+  - switzerland
+christian:
+  label: Christian-majority countries
+  countries:
+  - andorra
+  - angola
+  - antigua_and_barbuda
+  - argentina
+  - armenia
+  - australia
+  - austria
+  - the_bahamas
+  - barbados
+  - belarus
+  - belgium
+  - belize
+  - benin
+  - bolivia
+  - bosnia_and_herzegovina
+  - botswana
+  - brazil
+  - bulgaria
+  - burundi
+  - cameroon
+  - canada
+  - cape_verde
+  - central_african_republic
+  - chile
+  - colombia
+  - costa_rica
+  - croatia
+  - cyprus
+  - czech_republic
+  - democratic_republic_of_the_congo
+  - denmark
+  - dominica
+  - dominican_republic
+  - ecuador
+  - el_salvador
+  - equatorial_guinea
+  - eritrea
+  - estonia
+  - eswatini
+  - ethiopia
+  - fiji
+  - finland
+  - france
+  - gabon
+  - georgia
+  - germany
+  - ghana
+  - greece
+  - grenada
+  - guatemala
+  - guyana
+  - haiti
+  - honduras
+  - hungary
+  - iceland
+  - ireland
+  - italy
+  - ivory_coast
+  - jamaica
+  - kenya
+  - kiribati
+  - latvia
+  - lebanon
+  - lesotho
+  - liberia
+  - liechtenstein
+  - lithuania
+  - luxembourg
+  - madagascar
+  - malawi
+  - malta
+  - marshall_islands
+  - mexico
+  - federated_states_of_micronesia
+  - moldova
+  - monaco
+  - montenegro
+  - mozambique
+  - namibia
+  - nauru
+  - kingdom_of_the_netherlands
+  - new_zealand
+  - nicaragua
+  - nigeria
+  - north_macedonia
+  - norway
+  - palau
+  - panama
+  - papua_new_guinea
+  - paraguay
+  - peru
+  - philippines
+  - poland
+  - portugal
+  - republic_of_the_congo
+  - romania
+  - russia
+  - rwanda
+  - saint_kitts_and_nevis
+  - saint_lucia
+  - saint_vincent_and_the_grenadines
+  - samoa
+  - san_marino
+  - sao_tome_and_principe
+  - serbia
+  - seychelles
+  - sierra_leone
+  - slovakia
+  - slovenia
+  - solomon_islands
+  - south_africa
+  - south_korea
+  - south_sudan
+  - spain
+  - suriname
+  - sweden
+  - switzerland
+  - tanzania
+  - timor_leste
+  - togo
+  - tonga
+  - trinidad_and_tobago
+  - tuvalu
+  - uganda
+  - ukraine
+  - united_kingdom
+  - united_states
+  - uruguay
+  - vanuatu
+  - vatican_city
+  - venezuela
+  - zambia
+  - zimbabwe
+commonwealth:
+  label: Commonwealth of Nations countries
+  countries:
+  - antigua_and_barbuda
+  - australia
+  - the_bahamas
+  - barbados
+  - belize
+  - botswana
+  - canada
+  - dominica
+  - eswatini
+  - fiji
+  - the_gambia
+  - ghana
+  - grenada
+  - guyana
+  - india
+  - jamaica
+  - kenya
+  - lesotho
+  - malawi
+  - malaysia
+  - mauritius
+  - namibia
+  - nauru
+  - new_zealand
+  - nigeria
+  - papua_new_guinea
+  - saint_kitts_and_nevis
+  - saint_lucia
+  - saint_vincent_and_the_grenadines
+  - seychelles
+  - sierra_leone
+  - singapore
+  - solomon_islands
+  - south_africa
+  - sri_lanka
+  - tanzania
+  - trinidad_and_tobago
+  - tuvalu
+  - uganda
+  - united_kingdom
+  - zambia
+  - zimbabwe
+dach:
+  label: DACH countries
+  countries:
+  - austria
+  - germany
+  - switzerland
+eastern_africa:
+  label: Eastern Africa
+  countries:
+  - burundi
+  - comoros
+  - djibouti
+  - eritrea
+  - ethiopia
+  - kenya
+  - madagascar
+  - malawi
+  - mauritius
+  - mozambique
+  - rwanda
+  - seychelles
+  - somalia
+  - south_sudan
+  - sudan
+  - tanzania
+  - uganda
+  - zambia
+  - zimbabwe
+eastern_asia:
+  label: Eastern Asia
+  countries:
+  - people_s_republic_of_china
+  - japan
+  - mongolia
+  - north_korea
+  - south_korea
+  - taiwan
+eastern_europe:
+  label: Eastern Europe
+  countries:
+  - belarus
+  - bulgaria
+  - moldova
+  - poland
+  - romania
+  - russia
+  - ukraine
+ecowas:
+  label: ECOWAS countries
+  countries:
+  - benin
+  - burkina_faso
+  - cape_verde
+  - the_gambia
+  - ghana
+  - guinea
+  - guinea_bissau
+  - ivory_coast
+  - liberia
+  - mali
+  - niger
+  - nigeria
+  - senegal
+  - sierra_leone
+  - togo
+eu_candidate:
+  label: EU candidate countries
+  countries:
+  - albania
+  - bosnia_and_herzegovina
+  - georgia
+  - kosovo
+  - moldova
+  - montenegro
+  - north_macedonia
+  - serbia
+europe:
+  label: Europe
+  countries:
+  - albania
+  - andorra
+  - austria
+  - belarus
+  - belgium
+  - bosnia_and_herzegovina
+  - bulgaria
+  - croatia
+  - cyprus
+  - czech_republic
+  - denmark
+  - estonia
+  - finland
+  - france
+  - germany
+  - greece
+  - hungary
+  - iceland
+  - ireland
+  - italy
+  - kosovo
+  - latvia
+  - liechtenstein
+  - lithuania
+  - luxembourg
+  - malta
+  - moldova
+  - monaco
+  - montenegro
+  - kingdom_of_the_netherlands
+  - north_macedonia
+  - norway
+  - poland
+  - portugal
+  - romania
+  - russia
+  - san_marino
+  - serbia
+  - slovakia
+  - slovenia
+  - spain
+  - sweden
+  - switzerland
+  - turkey
+  - ukraine
+  - united_kingdom
+  - vatican_city
+european_microstates:
+  label: European microstates
+  countries:
+  - andorra
+  - liechtenstein
+  - monaco
+  - san_marino
+  - vatican_city
+francophonie:
+  label: La Francophonie countries
+  countries:
+  - belgium
+  - benin
+  - burkina_faso
+  - burundi
+  - cameroon
+  - canada
+  - central_african_republic
+  - chad
+  - comoros
+  - democratic_republic_of_the_congo
+  - djibouti
+  - france
+  - gabon
+  - guinea
+  - haiti
+  - ivory_coast
+  - luxembourg
+  - madagascar
+  - mali
+  - monaco
+  - niger
+  - republic_of_the_congo
+  - rwanda
+  - senegal
+  - switzerland
+  - togo
+g20:
+  label: G20 countries
+  countries:
+  - argentina
+  - australia
+  - brazil
+  - canada
+  - people_s_republic_of_china
+  - egypt
+  - france
+  - germany
+  - india
+  - indonesia
+  - italy
+  - japan
+  - mexico
+  - nigeria
+  - russia
+  - saudi_arabia
+  - south_africa
+  - south_korea
+  - spain
+  - turkey
+  - united_kingdom
+  - united_states
+g7:
+  label: G7 countries
+  countries:
+  - canada
+  - france
+  - germany
+  - italy
+  - japan
+  - united_kingdom
+  - united_states
+gcc:
+  label: Gulf Cooperation Council countries
+  countries:
+  - bahrain
+  - kuwait
+  - oman
+  - qatar
+  - saudi_arabia
+  - united_arab_emirates
+global_north:
+  label: Global North
+  countries:
+  - albania
+  - andorra
+  - armenia
+  - australia
+  - austria
+  - azerbaijan
+  - bahrain
+  - belarus
+  - belgium
+  - bosnia_and_herzegovina
+  - bulgaria
+  - canada
+  - people_s_republic_of_china
+  - croatia
+  - cyprus
+  - czech_republic
+  - denmark
+  - djibouti
+  - egypt
+  - eritrea
+  - estonia
+  - finland
+  - france
+  - georgia
+  - germany
+  - greece
+  - hungary
+  - iceland
+  - iran
+  - iraq
+  - ireland
+  - israel
+  - italy
+  - japan
+  - jordan
+  - kazakhstan
+  - kosovo
+  - kuwait
+  - kyrgyzstan
+  - latvia
+  - lebanon
+  - libya
+  - liechtenstein
+  - lithuania
+  - luxembourg
+  - malta
+  - moldova
+  - monaco
+  - mongolia
+  - montenegro
+  - kingdom_of_the_netherlands
+  - new_zealand
+  - north_korea
+  - north_macedonia
+  - norway
+  - oman
+  - palau
+  - palestine
+  - poland
+  - portugal
+  - qatar
+  - romania
+  - russia
+  - san_marino
+  - saudi_arabia
+  - serbia
+  - slovakia
+  - slovenia
+  - south_korea
+  - spain
+  - sweden
+  - switzerland
+  - syria
+  - taiwan
+  - tajikistan
+  - tunisia
+  - turkey
+  - turkmenistan
+  - ukraine
+  - united_arab_emirates
+  - united_kingdom
+  - united_states
+  - uzbekistan
+  - vatican_city
+global_south:
+  label: Global South
+  countries:
+  - afghanistan
+  - algeria
+  - angola
+  - antigua_and_barbuda
+  - argentina
+  - the_bahamas
+  - bangladesh
+  - barbados
+  - belize
+  - benin
+  - bhutan
+  - bolivia
+  - botswana
+  - brazil
+  - brunei
+  - burkina_faso
+  - burundi
+  - cambodia
+  - cameroon
+  - cape_verde
+  - central_african_republic
+  - chad
+  - chile
+  - colombia
+  - comoros
+  - costa_rica
+  - cuba
+  - democratic_republic_of_the_congo
+  - dominica
+  - dominican_republic
+  - ecuador
+  - el_salvador
+  - equatorial_guinea
+  - eswatini
+  - ethiopia
+  - fiji
+  - gabon
+  - the_gambia
+  - ghana
+  - grenada
+  - guatemala
+  - guinea
+  - guinea_bissau
+  - guyana
+  - haiti
+  - honduras
+  - india
+  - indonesia
+  - ivory_coast
+  - jamaica
+  - kenya
+  - kiribati
+  - laos
+  - lesotho
+  - liberia
+  - madagascar
+  - malawi
+  - malaysia
+  - maldives
+  - mali
+  - marshall_islands
+  - mauritania
+  - mauritius
+  - mexico
+  - federated_states_of_micronesia
+  - morocco
+  - mozambique
+  - myanmar
+  - namibia
+  - nauru
+  - nepal
+  - nicaragua
+  - niger
+  - nigeria
+  - pakistan
+  - panama
+  - papua_new_guinea
+  - paraguay
+  - peru
+  - philippines
+  - republic_of_the_congo
+  - rwanda
+  - saint_kitts_and_nevis
+  - saint_lucia
+  - saint_vincent_and_the_grenadines
+  - samoa
+  - sao_tome_and_principe
+  - senegal
+  - seychelles
+  - sierra_leone
+  - singapore
+  - solomon_islands
+  - somalia
+  - south_africa
+  - south_sudan
+  - sri_lanka
+  - sudan
+  - suriname
+  - tanzania
+  - thailand
+  - timor_leste
+  - togo
+  - tonga
+  - trinidad_and_tobago
+  - tuvalu
+  - uganda
+  - uruguay
+  - vanuatu
+  - venezuela
+  - vietnam
+  - yemen
+  - zambia
+  - zimbabwe
+hindu:
+  label: Hindu-majority countries
+  countries:
+  - fiji
+  - india
+  - mauritius
+  - nepal
+hispanophone:
+  label: Hispanophone-speaking countries
+  countries:
+  - argentina
+  - bolivia
+  - chile
+  - colombia
+  - costa_rica
+  - cuba
+  - dominican_republic
+  - ecuador
+  - el_salvador
+  - guatemala
+  - honduras
+  - mexico
+  - nicaragua
+  - panama
+  - paraguay
+  - peru
+  - spain
+  - uruguay
+  - venezuela
+indomalayan:
+  label: Indomalayan ecozone
+  countries:
+  - bangladesh
+  - bhutan
+  - brunei
+  - cambodia
+  - india
+  - indonesia
+  - laos
+  - malaysia
+  - maldives
+  - myanmar
+  - nepal
+  - philippines
+  - singapore
+  - sri_lanka
+  - thailand
+  - timor_leste
+  - vietnam
+jewish:
+  label: Jewish-majority countries
+  countries:
+  - israel
+lusophone:
+  label: Lusophone-speaking countries
+  countries:
+  - angola
+  - brazil
+  - cape_verde
+  - guinea_bissau
+  - mozambique
+  - portugal
+  - sao_tome_and_principe
+mediterranean:
+  label: Mediterranean countries
+  countries:
+  - cyprus
+  - greece
+  - israel
+  - italy
+  - lebanon
+  - malta
+  - monaco
+  - morocco
+  - palestine
+  - portugal
+  - san_marino
+  - spain
+  - syria
+  - tunisia
+  - turkey
+  - vatican_city
+melanesia:
+  label: Melanesia
+  countries:
+  - fiji
+  - papua_new_guinea
+  - solomon_islands
+  - vanuatu
+mercosur:
+  label: Mercosur countries
+  countries:
+  - argentina
+  - brazil
+  - paraguay
+  - uruguay
+micronesia:
+  label: Micronesia
+  countries:
+  - kiribati
+  - marshall_islands
+  - federated_states_of_micronesia
+  - nauru
+  - palau
+middle_africa:
+  label: Central/Middle Africa
+  countries:
+  - angola
+  - cameroon
+  - central_african_republic
+  - chad
+  - democratic_republic_of_the_congo
+  - equatorial_guinea
+  - gabon
+  - republic_of_the_congo
+  - sao_tome_and_principe
+middle_east:
+  label: Middle East
+  countries:
+  - bahrain
+  - iran
+  - iraq
+  - israel
+  - jordan
+  - kuwait
+  - lebanon
+  - oman
+  - palestine
+  - qatar
+  - saudi_arabia
+  - syria
+  - united_arab_emirates
+  - yemen
+muslim:
+  label: Muslim-majority countries
+  countries:
+  - afghanistan
+  - albania
+  - algeria
+  - azerbaijan
+  - bahrain
+  - bangladesh
+  - benin
+  - bosnia_and_herzegovina
+  - brunei
+  - burkina_faso
+  - chad
+  - comoros
+  - djibouti
+  - egypt
+  - the_gambia
+  - guinea
+  - guinea_bissau
+  - indonesia
+  - iran
+  - iraq
+  - ivory_coast
+  - jordan
+  - kazakhstan
+  - kosovo
+  - kuwait
+  - kyrgyzstan
+  - lebanon
+  - libya
+  - malaysia
+  - maldives
+  - mali
+  - mauritania
+  - morocco
+  - niger
+  - nigeria
+  - oman
+  - pakistan
+  - palestine
+  - qatar
+  - saudi_arabia
+  - senegal
+  - sierra_leone
+  - somalia
+  - sudan
+  - syria
+  - tajikistan
+  - tanzania
+  - togo
+  - tunisia
+  - turkey
+  - turkmenistan
+  - united_arab_emirates
+  - uzbekistan
+  - yemen
+nato:
+  label: NATO countries
+  countries:
+  - albania
+  - belgium
+  - bulgaria
+  - canada
+  - croatia
+  - czech_republic
+  - denmark
+  - estonia
+  - finland
+  - france
+  - germany
+  - greece
+  - hungary
+  - iceland
+  - italy
+  - latvia
+  - lithuania
+  - luxembourg
+  - montenegro
+  - kingdom_of_the_netherlands
+  - north_macedonia
+  - norway
+  - poland
+  - portugal
+  - romania
+  - slovakia
+  - slovenia
+  - spain
+  - sweden
+  - turkey
+  - united_kingdom
+  - united_states
+nearctic:
+  label: Nearctic ecozone
+  countries:
+  - canada
+  - mexico
+  - united_states
+neotropic:
+  label: Neotropic ecozone
+  countries:
+  - antigua_and_barbuda
+  - argentina
+  - the_bahamas
+  - barbados
+  - belize
+  - bolivia
+  - brazil
+  - chile
+  - colombia
+  - costa_rica
+  - cuba
+  - dominica
+  - dominican_republic
+  - ecuador
+  - el_salvador
+  - grenada
+  - guatemala
+  - guyana
+  - haiti
+  - honduras
+  - jamaica
+  - mexico
+  - nicaragua
+  - panama
+  - paraguay
+  - peru
+  - saint_kitts_and_nevis
+  - saint_lucia
+  - saint_vincent_and_the_grenadines
+  - suriname
+  - trinidad_and_tobago
+  - uruguay
+  - venezuela
+non_religious:
+  label: non-religious majority countries
+  countries:
+  - cuba
+  - north_korea
+nordic_countries:
+  label: Nordic Countries
+  countries:
+  - denmark
+  - estonia
+  - finland
+  - iceland
+  - latvia
+  - lithuania
+  - norway
+  - sweden
+north_africa:
+  label: North Africa
+  countries:
+  - algeria
+  - egypt
+  - libya
+  - mauritania
+  - morocco
+  - tunisia
+north_america:
+  label: North America
+  countries:
+  - canada
+  - mexico
+  - united_states
+northern_africa:
+  label: Northern Africa
+  countries:
+  - algeria
+  - egypt
+  - libya
+  - mauritania
+  - morocco
+  - sudan
+  - tunisia
+northern_america:
+  label: Northern America
+  countries:
+  - canada
+  - united_states
+northern_asia:
+  label: Northern Asia
+  countries:
+  - russia
+northern_europe:
+  label: Northern Europe
+  countries:
+  - denmark
+  - estonia
+  - finland
+  - iceland
+  - ireland
+  - latvia
+  - lithuania
+  - norway
+  - sweden
+  - united_kingdom
+oceania:
+  label: Oceania
+  countries:
+  - australia
+  - fiji
+  - kiribati
+  - marshall_islands
+  - federated_states_of_micronesia
+  - nauru
+  - new_zealand
+  - palau
+  - papua_new_guinea
+  - samoa
+  - solomon_islands
+  - tonga
+  - tuvalu
+  - vanuatu
+p5:
+  label: UN Security Council P5
+  countries:
+  - people_s_republic_of_china
+  - france
+  - russia
+  - united_kingdom
+  - united_states
+palearctic:
+  label: Palearctic ecozone
+  countries:
+  - afghanistan
+  - albania
+  - algeria
+  - andorra
+  - armenia
+  - austria
+  - azerbaijan
+  - bahrain
+  - belarus
+  - belgium
+  - bosnia_and_herzegovina
+  - bulgaria
+  - people_s_republic_of_china
+  - croatia
+  - cyprus
+  - czech_republic
+  - denmark
+  - egypt
+  - estonia
+  - finland
+  - france
+  - georgia
+  - germany
+  - greece
+  - hungary
+  - iceland
+  - iran
+  - iraq
+  - ireland
+  - israel
+  - italy
+  - japan
+  - jordan
+  - kazakhstan
+  - kosovo
+  - kuwait
+  - kyrgyzstan
+  - latvia
+  - lebanon
+  - libya
+  - liechtenstein
+  - lithuania
+  - luxembourg
+  - malta
+  - mauritania
+  - moldova
+  - monaco
+  - mongolia
+  - montenegro
+  - morocco
+  - kingdom_of_the_netherlands
+  - north_korea
+  - north_macedonia
+  - norway
+  - oman
+  - pakistan
+  - palestine
+  - poland
+  - portugal
+  - qatar
+  - romania
+  - russia
+  - san_marino
+  - saudi_arabia
+  - serbia
+  - slovakia
+  - slovenia
+  - south_korea
+  - spain
+  - sweden
+  - switzerland
+  - syria
+  - taiwan
+  - tajikistan
+  - tunisia
+  - turkey
+  - turkmenistan
+  - ukraine
+  - united_arab_emirates
+  - united_kingdom
+  - uzbekistan
+  - vatican_city
+  - yemen
+polynesia:
+  label: Polynesia
+  countries:
+  - samoa
+  - tonga
+  - tuvalu
+saarc:
+  label: SAARC countries
+  countries:
+  - bangladesh
+  - bhutan
+  - india
+  - maldives
+  - nepal
+  - pakistan
+  - sri_lanka
+schengen:
+  label: Schengen Area countries
+  countries:
+  - austria
+  - belgium
+  - bulgaria
+  - croatia
+  - czech_republic
+  - denmark
+  - estonia
+  - finland
+  - france
+  - germany
+  - greece
+  - hungary
+  - iceland
+  - ireland
+  - italy
+  - latvia
+  - liechtenstein
+  - lithuania
+  - luxembourg
+  - malta
+  - kingdom_of_the_netherlands
+  - norway
+  - poland
+  - portugal
+  - romania
+  - slovakia
+  - slovenia
+  - spain
+  - sweden
+  - switzerland
+slavic_countries:
+  label: Slavic countries
+  countries:
+  - albania
+  - belarus
+  - bosnia_and_herzegovina
+  - bulgaria
+  - croatia
+  - czech_republic
+  - moldova
+  - montenegro
+  - north_macedonia
+  - poland
+  - romania
+  - russia
+  - serbia
+  - slovakia
+  - slovenia
+  - ukraine
+south_america:
+  label: South America
+  countries:
+  - argentina
+  - bolivia
+  - brazil
+  - chile
+  - colombia
+  - ecuador
+  - guyana
+  - panama
+  - paraguay
+  - peru
+  - suriname
+  - uruguay
+  - venezuela
+south_caucasus:
+  label: South Caucasus
+  countries:
+  - armenia
+  - azerbaijan
+  - georgia
+southeastern_asia:
+  label: Southeastern Asia
+  countries:
+  - brunei
+  - cambodia
+  - indonesia
+  - laos
+  - malaysia
+  - myanmar
+  - philippines
+  - singapore
+  - thailand
+  - timor_leste
+  - vietnam
+southern_africa:
+  label: Southern Africa
+  countries:
+  - angola
+  - botswana
+  - eswatini
+  - lesotho
+  - malawi
+  - mozambique
+  - namibia
+  - south_africa
+  - zambia
+  - zimbabwe
+southern_asia:
+  label: Southern Asia
+  countries:
+  - afghanistan
+  - bangladesh
+  - bhutan
+  - india
+  - maldives
+  - nepal
+  - pakistan
+  - sri_lanka
+southern_europe:
+  label: Southern Europe
+  countries:
+  - albania
+  - andorra
+  - bosnia_and_herzegovina
+  - croatia
+  - cyprus
+  - greece
+  - italy
+  - kosovo
+  - malta
+  - monaco
+  - montenegro
+  - north_macedonia
+  - portugal
+  - san_marino
+  - serbia
+  - slovenia
+  - spain
+  - turkey
+  - vatican_city
+temperate:
+  label: temperate climate countries
+  countries:
+  - albania
+  - andorra
+  - argentina
+  - armenia
+  - australia
+  - austria
+  - azerbaijan
+  - belarus
+  - belgium
+  - bosnia_and_herzegovina
+  - bulgaria
+  - canada
+  - chile
+  - people_s_republic_of_china
+  - croatia
+  - czech_republic
+  - denmark
+  - estonia
+  - finland
+  - france
+  - georgia
+  - germany
+  - hungary
+  - iceland
+  - ireland
+  - japan
+  - kazakhstan
+  - kosovo
+  - kyrgyzstan
+  - latvia
+  - liechtenstein
+  - lithuania
+  - luxembourg
+  - moldova
+  - mongolia
+  - montenegro
+  - kingdom_of_the_netherlands
+  - new_zealand
+  - north_korea
+  - north_macedonia
+  - norway
+  - poland
+  - romania
+  - russia
+  - serbia
+  - slovakia
+  - slovenia
+  - south_africa
+  - south_korea
+  - sweden
+  - switzerland
+  - taiwan
+  - tajikistan
+  - ukraine
+  - united_kingdom
+  - united_states
+  - uruguay
+tropical:
+  label: tropical climate countries
+  countries:
+  - angola
+  - antigua_and_barbuda
+  - the_bahamas
+  - bangladesh
+  - barbados
+  - belize
+  - benin
+  - bhutan
+  - bolivia
+  - botswana
+  - brazil
+  - brunei
+  - burkina_faso
+  - burundi
+  - cambodia
+  - cameroon
+  - cape_verde
+  - central_african_republic
+  - colombia
+  - comoros
+  - costa_rica
+  - cuba
+  - democratic_republic_of_the_congo
+  - dominica
+  - dominican_republic
+  - ecuador
+  - el_salvador
+  - equatorial_guinea
+  - eswatini
+  - ethiopia
+  - fiji
+  - gabon
+  - the_gambia
+  - ghana
+  - grenada
+  - guatemala
+  - guinea
+  - guinea_bissau
+  - guyana
+  - haiti
+  - honduras
+  - india
+  - indonesia
+  - ivory_coast
+  - jamaica
+  - kenya
+  - kiribati
+  - laos
+  - lesotho
+  - liberia
+  - madagascar
+  - malawi
+  - malaysia
+  - maldives
+  - marshall_islands
+  - mauritius
+  - mexico
+  - federated_states_of_micronesia
+  - mozambique
+  - myanmar
+  - nauru
+  - nepal
+  - nicaragua
+  - nigeria
+  - palau
+  - panama
+  - papua_new_guinea
+  - paraguay
+  - peru
+  - philippines
+  - republic_of_the_congo
+  - rwanda
+  - saint_kitts_and_nevis
+  - saint_lucia
+  - saint_vincent_and_the_grenadines
+  - samoa
+  - sao_tome_and_principe
+  - senegal
+  - seychelles
+  - sierra_leone
+  - singapore
+  - solomon_islands
+  - south_sudan
+  - sri_lanka
+  - suriname
+  - tanzania
+  - thailand
+  - timor_leste
+  - togo
+  - tonga
+  - trinidad_and_tobago
+  - tuvalu
+  - uganda
+  - vanuatu
+  - venezuela
+  - vietnam
+  - zambia
+  - zimbabwe
+utc_minus_1:
+  label: UTC-1 countries
+  countries:
+  - cape_verde
+utc_minus_3:
+  label: UTC-3 countries (Brazil / Argentina)
+  countries:
+  - argentina
+  - brazil
+  - suriname
+  - uruguay
+utc_minus_4:
+  label: UTC-4 countries (Atlantic / Eastern South America)
+  countries:
+  - antigua_and_barbuda
+  - barbados
+  - bolivia
+  - chile
+  - dominica
+  - dominican_republic
+  - grenada
+  - guyana
+  - paraguay
+  - saint_kitts_and_nevis
+  - saint_lucia
+  - saint_vincent_and_the_grenadines
+  - trinidad_and_tobago
+  - venezuela
+utc_minus_5:
+  label: UTC-5 countries (Eastern / Peru / Colombia)
+  countries:
+  - the_bahamas
+  - canada
+  - colombia
+  - cuba
+  - ecuador
+  - haiti
+  - jamaica
+  - panama
+  - peru
+  - united_states
+utc_minus_6:
+  label: UTC-6 countries (Central)
+  countries:
+  - belize
+  - costa_rica
+  - el_salvador
+  - guatemala
+  - honduras
+  - mexico
+  - nicaragua
+utc_plus_0:
+  label: UTC+0 countries (GMT / WET)
+  countries:
+  - burkina_faso
+  - the_gambia
+  - ghana
+  - guinea
+  - guinea_bissau
+  - iceland
+  - ireland
+  - ivory_coast
+  - liberia
+  - mali
+  - mauritania
+  - portugal
+  - sao_tome_and_principe
+  - senegal
+  - sierra_leone
+  - togo
+  - united_kingdom
+utc_plus_1:
+  label: UTC+1 countries (CET / West Africa)
+  countries:
+  - albania
+  - algeria
+  - andorra
+  - angola
+  - austria
+  - belgium
+  - benin
+  - bosnia_and_herzegovina
+  - cameroon
+  - central_african_republic
+  - chad
+  - croatia
+  - czech_republic
+  - democratic_republic_of_the_congo
+  - denmark
+  - equatorial_guinea
+  - france
+  - gabon
+  - germany
+  - hungary
+  - italy
+  - kosovo
+  - liechtenstein
+  - luxembourg
+  - malta
+  - monaco
+  - montenegro
+  - morocco
+  - kingdom_of_the_netherlands
+  - niger
+  - nigeria
+  - north_macedonia
+  - norway
+  - poland
+  - republic_of_the_congo
+  - san_marino
+  - serbia
+  - slovakia
+  - slovenia
+  - spain
+  - sweden
+  - switzerland
+  - tunisia
+  - vatican_city
+utc_plus_10:
+  label: UTC+10 countries (Australia East / Papua)
+  countries:
+  - australia
+  - papua_new_guinea
+utc_plus_11:
+  label: UTC+11 countries (Solomon Islands / Vanuatu)
+  countries:
+  - federated_states_of_micronesia
+  - solomon_islands
+  - vanuatu
+utc_plus_12:
+  label: UTC+12 countries (New Zealand / Pacific)
+  countries:
+  - fiji
+  - kiribati
+  - marshall_islands
+  - nauru
+  - new_zealand
+  - tuvalu
+utc_plus_13:
+  label: UTC+13 countries (Tonga / Samoa)
+  countries:
+  - samoa
+  - tonga
+utc_plus_2:
+  label: UTC+2 countries (EET / South Africa / Egypt)
+  countries:
+  - botswana
+  - bulgaria
+  - burundi
+  - cyprus
+  - egypt
+  - estonia
+  - eswatini
+  - finland
+  - greece
+  - israel
+  - jordan
+  - latvia
+  - lebanon
+  - lesotho
+  - libya
+  - lithuania
+  - malawi
+  - moldova
+  - mozambique
+  - namibia
+  - palestine
+  - romania
+  - rwanda
+  - south_africa
+  - south_sudan
+  - sudan
+  - syria
+  - ukraine
+  - zambia
+  - zimbabwe
+utc_plus_3:
+  label: UTC+3 countries (Moscow / East Africa / Arabia)
+  countries:
+  - bahrain
+  - belarus
+  - comoros
+  - djibouti
+  - eritrea
+  - ethiopia
+  - iraq
+  - kenya
+  - kuwait
+  - madagascar
+  - qatar
+  - russia
+  - saudi_arabia
+  - somalia
+  - tanzania
+  - turkey
+  - uganda
+  - yemen
+utc_plus_3_30:
+  label: UTC+3:30 countries (Iran)
+  countries:
+  - iran
+utc_plus_4:
+  label: UTC+4 countries (Gulf / Caucasus)
+  countries:
+  - armenia
+  - azerbaijan
+  - georgia
+  - mauritius
+  - oman
+  - seychelles
+  - united_arab_emirates
+utc_plus_4_30:
+  label: UTC+4:30 countries (Afghanistan)
+  countries:
+  - afghanistan
+utc_plus_5:
+  label: UTC+5 countries (Pakistan / Central Asia)
+  countries:
+  - kazakhstan
+  - maldives
+  - pakistan
+  - tajikistan
+  - turkmenistan
+  - uzbekistan
+utc_plus_5_30:
+  label: UTC+5:30 countries (India / Sri Lanka)
+  countries:
+  - india
+  - sri_lanka
+utc_plus_5_45:
+  label: UTC+5:45 countries (Nepal)
+  countries:
+  - nepal
+utc_plus_6:
+  label: UTC+6 countries (Bangladesh / Kazakhstan)
+  countries:
+  - bangladesh
+  - bhutan
+  - kyrgyzstan
+utc_plus_6_30:
+  label: UTC+6:30 countries (Myanmar)
+  countries:
+  - myanmar
+utc_plus_7:
+  label: UTC+7 countries (Indochina / Indonesia West)
+  countries:
+  - cambodia
+  - indonesia
+  - laos
+  - thailand
+  - vietnam
+utc_plus_8:
+  label: UTC+8 countries (China / SEA)
+  countries:
+  - brunei
+  - people_s_republic_of_china
+  - malaysia
+  - mongolia
+  - philippines
+  - singapore
+  - taiwan
+utc_plus_9:
+  label: UTC+9 countries (Japan / Korea)
+  countries:
+  - japan
+  - north_korea
+  - palau
+  - south_korea
+  - timor_leste
+visegrad:
+  label: Visegrád Group countries
+  countries:
+  - czech_republic
+  - hungary
+  - poland
+  - slovakia
+western_africa:
+  label: Western Africa
+  countries:
+  - benin
+  - burkina_faso
+  - cameroon
+  - cape_verde
+  - the_gambia
+  - ghana
+  - guinea
+  - guinea_bissau
+  - ivory_coast
+  - liberia
+  - mali
+  - mauritania
+  - niger
+  - nigeria
+  - senegal
+  - sierra_leone
+  - togo
+western_asia:
+  label: Western Asia
+  countries:
+  - armenia
+  - azerbaijan
+  - bahrain
+  - georgia
+  - iran
+  - iraq
+  - israel
+  - jordan
+  - kuwait
+  - lebanon
+  - oman
+  - palestine
+  - qatar
+  - saudi_arabia
+  - syria
+  - turkey
+  - united_arab_emirates
+  - yemen
+western_europe:
+  label: Western Europe
+  countries:
+  - andorra
+  - austria
+  - belgium
+  - france
+  - germany
+  - ireland
+  - liechtenstein
+  - luxembourg
+  - monaco
+  - kingdom_of_the_netherlands
+  - portugal
+  - spain
+  - switzerland
+  - united_kingdom
+european_union:
+  label: European Union
+  countries:
+  - austria
+  - belgium
+  - bulgaria
+  - croatia
+  - cyprus
+  - czech_republic
+  - denmark
+  - estonia
+  - finland
+  - france
+  - germany
+  - greece
+  - hungary
+  - ireland
+  - italy
+  - latvia
+  - lithuania
+  - luxembourg
+  - malta
+  - kingdom_of_the_netherlands
+  - poland
+  - portugal
+  - romania
+  - slovakia
+  - slovenia
+  - spain
+  - sweden
+opec:
+  label: OPEC
+  countries:
+  - algeria
+  - angola
+  - equatorial_guinea
+  - gabon
+  - indonesia
+  - iran
+  - iraq
+  - kuwait
+  - libya
+  - nigeria
+  - qatar
+  - republic_of_the_congo
+  - saudi_arabia
+  - united_arab_emirates
+  - venezuela
+oecd:
+  label: OECD
+  countries:
+  - australia
+  - austria
+  - belgium
+  - canada
+  - chile
+  - colombia
+  - costa_rica
+  - czech_republic
+  - denmark
+  - estonia
+  - finland
+  - france
+  - germany
+  - greece
+  - hungary
+  - iceland
+  - ireland
+  - israel
+  - italy
+  - japan
+  - kingdom_of_the_netherlands
+  - latvia
+  - lithuania
+  - luxembourg
+  - mexico
+  - new_zealand
+  - norway
+  - peru
+  - poland
+  - portugal
+  - slovakia
+  - slovenia
+  - south_korea
+  - spain
+  - sweden
+  - switzerland
+  - turkey
+  - united_kingdom
+  - united_states
+five_eyes:
+  label: Five Eyes
+  countries:
+  - australia
+  - canada
+  - new_zealand
+  - united_kingdom
+  - united_states
+eea:
+  label: European Economic Area
+  countries:
+  - austria
+  - belgium
+  - bulgaria
+  - croatia
+  - cyprus
+  - czech_republic
+  - denmark
+  - estonia
+  - finland
+  - france
+  - germany
+  - greece
+  - hungary
+  - iceland
+  - ireland
+  - italy
+  - kingdom_of_the_netherlands
+  - latvia
+  - liechtenstein
+  - lithuania
+  - luxembourg
+  - malta
+  - norway
+  - poland
+  - portugal
+  - romania
+  - slovakia
+  - slovenia
+  - spain
+  - sweden
+island_nation:
+  label: Island Nations
+  countries:
+  - antigua_and_barbuda
+  - bahrain
+  - barbados
+  - cape_verde
+  - comoros
+  - cuba
+  - cyprus
+  - dominica
+  - dominican_republic
+  - federated_states_of_micronesia
+  - fiji
+  - grenada
+  - haiti
+  - iceland
+  - ireland
+  - jamaica
+  - japan
+  - kiribati
+  - madagascar
+  - maldives
+  - malta
+  - marshall_islands
+  - mauritius
+  - new_zealand
+  - palau
+  - papua_new_guinea
+  - philippines
+  - saint_kitts_and_nevis
+  - saint_lucia
+  - saint_vincent_and_the_grenadines
+  - samoa
+  - sao_tome_and_principe
+  - seychelles
+  - singapore
+  - solomon_islands
+  - sri_lanka
+  - taiwan
+  - the_bahamas
+  - timor_leste
+  - tonga
+  - trinidad_and_tobago
+  - tuvalu
+  - united_kingdom
+  - vanuatu
+landlocked:
+  label: Landlocked Countries
+  countries:
+  - afghanistan
+  - armenia
+  - bhutan
+  - bolivia
+  - botswana
+  - burkina_faso
+  - burundi
+  - central_african_republic
+  - chad
+  - czech_republic
+  - eswatini
+  - ethiopia
+  - hungary
+  - kazakhstan
+  - kosovo
+  - kyrgyzstan
+  - laos
+  - lesotho
+  - liechtenstein
+  - luxembourg
+  - malawi
+  - mali
+  - moldova
+  - mongolia
+  - nepal
+  - niger
+  - north_macedonia
+  - paraguay
+  - rwanda
+  - san_marino
+  - serbia
+  - slovakia
+  - south_sudan
+  - switzerland
+  - tajikistan
+  - turkmenistan
+  - uganda
+  - uzbekistan
+  - vatican_city
+  - zambia
+  - zimbabwe
+
+antarctica:
+  label: Antarctica
+  countries: []

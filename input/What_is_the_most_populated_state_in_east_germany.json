@@ -1,0 +1,41 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the most populated state in east germany?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by state and return the state with the highest population.",
+          "query": "Return all states in east germany. Also return their population.",
+          "to_agent": {
+            "region": [
+              "germany"
+            ],
+            "table": "german_states"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT german_states.name FROM german_states WHERE german_states.population = (SELECT MAX(german_states.population) FROM german_states WHERE german_states.name IN ('Brandenburg', 'Mecklenburg-Vorpommern', 'Sachsen', 'Sachsen-Anhalt', 'Th\u00fcringen'))",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "max"
+          ],
+          "columns": [
+            "name",
+            "population"
+          ],
+          "keys": [
+            "name"
+          ],
+          "value_column": "population"
+        },
+        "sql_query": "SELECT german_states.name, german_states.population FROM german_states WHERE german_states.name IN ('Brandenburg', 'Mecklenburg-Vorpommern', 'Sachsen', 'Sachsen-Anhalt', 'Th\u00fcringen')"
+      }
+    }
+  }
+}

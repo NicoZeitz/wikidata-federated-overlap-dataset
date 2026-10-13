@@ -1,0 +1,77 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "How many mining companies are located either in USA, Canada or Mexico?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Return the country ids of USA, Canada and Mexico as soon as all of them are found.",
+          "query": "Return the country ids of USA, Canada, Mexico.",
+          "to_agent": {
+            "region": [
+              "canada",
+              "mexico",
+              "united_states"
+            ],
+            "table": "countries"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "Country ids of USA, Canada and Mexico.",
+              "step_id": "s1"
+            }
+          ],
+          "id": "s2",
+          "merge_task": "Deduplicate by company, return the amount of companies.",
+          "query": "Return all companies, that are mining companies and located either in USA, Canada or Mexico?",
+          "to_agent": {
+            "region": [
+              "canada",
+              "mexico",
+              "united_states"
+            ],
+            "table": "companies"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT COUNT(*) AS amount FROM companies INNER JOIN countries ON countries.country = companies.country WHERE countries.name IN ('United States', 'Canada', 'Mexico') AND companies.industries LIKE '%mining%'",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "country"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT countries.country FROM countries WHERE countries.name IN ('United States', 'Canada', 'Mexico')"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "company"
+          ],
+          "keys": [
+            "company"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT companies.company FROM companies WHERE companies.country IN (30, 16, 96) AND companies.industries LIKE '%mining%'"
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the name and the size of the capital of the chinese province with the biggest population?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by province. Then return the province with capital, that has the biggest population.",
+          "query": "Find chinese provinces with their capital and population.",
+          "to_agent": {
+            "region": [
+              "people_s_republic_of_china"
+            ],
+            "table": "provinces"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "The province with the biggest population and its capital.",
+              "step_id": "s1"
+            }
+          ],
+          "id": "s2",
+          "merge_task": "Return the capital name and size as soon as their found.",
+          "query": "Return the capital name and size that match the provided province's capital.",
+          "to_agent": {
+            "region": [
+              "people_s_republic_of_china"
+            ],
+            "table": "cities"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT cities.name, cities.area_km2 FROM provinces INNER JOIN cities ON cities.city = provinces.capital WHERE provinces.population = (SELECT MAX(population) FROM provinces)",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "max"
+          ],
+          "columns": [
+            "province",
+            "population",
+            "capital"
+          ],
+          "keys": [
+            "province"
+          ],
+          "value_column": "population"
+        },
+        "sql_query": "SELECT provinces.province, provinces.population, provinces.capital FROM provinces WHERE provinces.country = 148"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "city",
+            "name",
+            "area_km2"
+          ],
+          "keys": [
+            "city"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT cities.city, cities.name, cities.area_km2 FROM cities WHERE cities.city = 16572"
+      }
+    }
+  }
+}

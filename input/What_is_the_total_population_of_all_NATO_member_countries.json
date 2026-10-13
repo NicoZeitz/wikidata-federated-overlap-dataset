@@ -1,0 +1,41 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the total population of all NATO member countries?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by country, sum all populations to a total population.",
+          "query": "Return all countries, that are a member of NATO, together with their population.",
+          "to_agent": {
+            "region": [
+              "nato"
+            ],
+            "table": "countries"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT SUM(countries.population) AS total_population FROM countries WHERE countries.name IN ( 'Albania', 'Belgium', 'Bulgaria', 'Canada', 'Croatia', 'Czech Republic', 'Denmark', 'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Iceland', 'Italy', 'Kingdom of the Netherlands', 'Latvia', 'Lithuania', 'Luxembourg', 'Montenegro', 'North Macedonia', 'Norway', 'Poland', 'Portugal', 'Romania', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'Turkey', 'United Kingdom', 'United States' )",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "sum"
+          ],
+          "columns": [
+            "country",
+            "population"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": "population"
+        },
+        "sql_query": "SELECT countries.country, countries.population FROM countries WHERE countries.name IN ( 'Albania', 'Belgium', 'Bulgaria', 'Canada', 'Croatia', 'Czech Republic', 'Denmark', 'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Iceland', 'Italy', 'Kingdom of the Netherlands', 'Latvia', 'Lithuania', 'Luxembourg', 'Montenegro', 'North Macedonia', 'Norway', 'Poland', 'Portugal', 'Romania', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'Turkey', 'United Kingdom', 'United States' )"
+      }
+    }
+  }
+}

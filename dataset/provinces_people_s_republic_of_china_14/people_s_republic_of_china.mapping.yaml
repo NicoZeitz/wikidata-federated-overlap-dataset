@@ -1,0 +1,11 @@
+china_states:
+  source: provinces
+  columns:
+    administrative_unit_id: province
+    country: country
+    name: name
+    lat_lon: coords
+    area_km2: area_km2
+    pop: population
+    provincial_capital: capital
+    founded: inception

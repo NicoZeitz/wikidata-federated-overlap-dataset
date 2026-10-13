@@ -1,0 +1,14 @@
+united_states_states:
+  source: states
+  columns:
+    state: state
+    nation: country
+    label: name
+    location: coords
+    surface_area_km2: area_km2
+    number_of_inhabitants: population
+    administrative_center: capital
+    admission_date: inception
+    state_code: iso_code
+    informal_name: nickname
+    official_website: website

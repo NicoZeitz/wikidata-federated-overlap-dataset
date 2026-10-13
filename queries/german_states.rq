@@ -1,0 +1,32 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT
+  ?german_state
+  (wd:Q183               AS ?country)
+  (SAMPLE(?name_v)        AS ?name)
+  (SAMPLE(?coords_v)      AS ?coords)
+  (SAMPLE(?area_v)        AS ?area_km2)
+  (SAMPLE(?population_v)  AS ?population)
+  (SAMPLE(?capital_v)     AS ?capital)
+  (SAMPLE(?inception_v)   AS ?inception)
+  (SAMPLE(?iso_v)         AS ?iso_code)
+  (SAMPLE(?website_v)     AS ?website)
+WHERE {
+  ?german_state wdt:P31/wdt:P279* wd:Q1221156 .  # instance of German state (Land)
+  ?german_state wdt:P17 wd:Q183 .                # country = Germany
+
+  ?german_state rdfs:label ?name_v .
+  FILTER(LANG(?name_v) = "de")
+
+  OPTIONAL { ?german_state wdt:P625  ?coords_v }
+  OPTIONAL { ?german_state wdt:P2046 ?area_v }
+  OPTIONAL { ?german_state wdt:P1082 ?population_v }
+  OPTIONAL { ?german_state wdt:P36   ?capital_v }
+  OPTIONAL { ?german_state wdt:P571  ?inception_v }
+  OPTIONAL { ?german_state wdt:P300  ?iso_v }
+  OPTIONAL { ?german_state wdt:P856  ?website_v }
+}
+GROUP BY ?german_state
+ORDER BY ?name

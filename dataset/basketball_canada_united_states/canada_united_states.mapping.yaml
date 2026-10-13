@@ -1,0 +1,25 @@
+nba_teams:
+  source: nba_teams
+  columns:
+    team: team
+    full_team_name: name
+    home_country: country
+    team_city: city
+    city_name: cityLabel
+    province: state
+    founding_date: founded
+    homepage: website
+    fan_following: followers
+nba_contests:
+  source: nba_matches
+  columns:
+    game: game
+    country: country
+    team_a: team1
+    away_team: team2
+    away_team_name: team2Label
+    winnerLabel: winnerLabel
+    arena_name: venueLabel
+    played_on: date
+    crowd: attendance
+    nba_season: seasonLabel

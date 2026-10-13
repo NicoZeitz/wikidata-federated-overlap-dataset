@@ -1,0 +1,109 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "Which country hosted the most world cup matches?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by match id and return the id of the venue where the most matches were hosted",
+          "query": "Return all matches with id and their venue",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "matches"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "Venue id where the most matches were hosted",
+              "step_id": "s1"
+            }
+          ],
+          "id": "s2",
+          "merge_task": "Return as soon as the country id of the according venue id is found",
+          "query": "Find the according country id for the venue id where the most matches were hosted",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "venues"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "Country id where the most matches were hosted",
+              "step_id": "s2"
+            }
+          ],
+          "id": "s3",
+          "merge_task": "Return as soon as the name of the country is found",
+          "query": "Find the name of the country with the id of the country from the previous step",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "countries"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT c.name AS country, COUNT(*) AS matches_hosted FROM matches m INNER JOIN venues v ON m.venue = v.venue INNER JOIN countries c ON v.country = c.country GROUP BY c.country, c.name ORDER BY matches_hosted DESC LIMIT 1;",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "match",
+            "venue"
+          ],
+          "keys": [
+            "match"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT matches.match, matches.venue FROM matches"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "venue",
+            "country"
+          ],
+          "keys": [
+            "venue"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT venues.venue, venues.country FROM venues"
+      },
+      "s3": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "country",
+            "name"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT countries.country, countries.name FROM countries WHERE countries.country = 30"
+      }
+    }
+  }
+}

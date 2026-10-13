@@ -1,0 +1,78 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+
+SELECT
+  ?city
+  (SAMPLE(?name_v)                             AS ?name)
+  (SAMPLE(?coords_v)                           AS ?coords)
+  (SAMPLE(?country_v)                          AS ?country)
+  (SAMPLE(?pop_v)                              AS ?population)
+  (SAMPLE(?inception_v)                        AS ?inception)
+  (GROUP_CONCAT(DISTINCT ?nickname_v; SEPARATOR=", ") AS ?nickname)
+  (SAMPLE(?postal_code_v)                      AS ?postal_code)
+  (GROUP_CONCAT(DISTINCT ?demonym_v; SEPARATOR=", ") AS ?demonym)
+  (SAMPLE(?gdp_v)                              AS ?gdp_usd)
+  (SAMPLE(?per_capita_income_v)                AS ?per_capita_income_usd)
+  (SAMPLE(?elevation_v)                        AS ?elevation_m)
+  (SAMPLE(?area_v)                             AS ?area_km2)
+  (SAMPLE(?vehicles_v)                         AS ?vehicles_per_thousand)
+WHERE {
+  {
+    {
+      { ?city wdt:P31/wdt:P279* wd:Q486972 . }
+      UNION
+      { ?city wdt:P31/wdt:P279* wd:Q515 . }
+    }
+    ?city rdfs:label ?name_v .
+    FILTER(lang(?name_v) = "en")
+  }
+  UNION
+  {
+    # Capitals not reachable via Q486972/Q515 type chain or missing English label
+    VALUES (?city ?name_v) {
+      (wd:Q2807   "Madrid"@en)
+      (wd:Q36262  "Saint John's"@en)
+    }
+  }
+
+  OPTIONAL { ?city wdt:P625  ?coords_v . }
+  ?city wdt:P17/wdt:P17? ?country_v .
+  ?country_v wdt:P31/wdt:P279* wd:Q3624078 .
+  ?country_v wdt:P297 ?ciso2 .
+  FILTER NOT EXISTS { ?country_v wdt:P576 ?cdiss . }
+  FILTER NOT EXISTS { ?country_v wdt:P31 wd:Q3024240 . }
+  OPTIONAL { ?city wdt:P571  ?inception_v . }
+  OPTIONAL { ?city wdt:P281  ?postal_code_v . }
+  OPTIONAL { ?city wdt:P2131 ?gdp_v . }
+  OPTIONAL { ?city wdt:P10622 ?per_capita_income_v . }
+  OPTIONAL { ?city wdt:P2044 ?elevation_v . }
+  OPTIONAL { ?city wdt:P2046 ?area_v . }
+  OPTIONAL { ?city wdt:P5167 ?vehicles_v . }
+
+  OPTIONAL {
+    ?city wdt:P1449 ?nickname_v .
+    FILTER(lang(?nickname_v) = "en")
+  }
+
+  OPTIONAL {
+    ?city wdt:P1549 ?demonym_v .
+    FILTER(lang(?demonym_v) = "en")
+  }
+
+  OPTIONAL {
+    {
+      SELECT ?city (MAX(?popDate) AS ?latestPopDate) WHERE {
+        ?city p:P1082 ?popStmt .
+        ?popStmt pq:P585 ?popDate .
+      } GROUP BY ?city
+    }
+    ?city p:P1082 ?popStmt .
+    ?popStmt ps:P1082 ?pop_v ;
+             pq:P585 ?latestPopDate .
+  }
+}
+GROUP BY ?city

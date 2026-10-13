@@ -1,0 +1,41 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the average life expectancy in countries with a population greater than 50 million?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by country, then compute the average life expectancy.",
+          "query": "Return all countries with a population greater than 50 million. Also return their life expectancy.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "countries"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT AVG(countries.life_expectancy) AS avg_life_expectancy FROM countries WHERE countries.population > 50000000",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "avg"
+          ],
+          "columns": [
+            "country",
+            "life_expectancy"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": "life_expectancy"
+        },
+        "sql_query": "SELECT countries.country, countries.life_expectancy FROM countries WHERE countries.population > 50000000"
+      }
+    }
+  }
+}

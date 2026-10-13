@@ -1,0 +1,108 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "How many nations with a land mass smaller than Saarland are there in each continent?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by continent, return as soon as the list is complete.",
+          "query": "Return all continents with name and id.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "continents"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s2",
+          "merge_task": "Return the size of Saarland as soon as it is found.",
+          "query": "Return the size of Saarland.",
+          "to_agent": {
+            "region": [
+              "germany"
+            ],
+            "table": "german_states"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "Names and id of all continents.",
+              "step_id": "s1"
+            },
+            {
+              "dependency": "Size of Saarland.",
+              "step_id": "s2"
+            }
+          ],
+          "id": "s3",
+          "merge_task": "Deduplicate by country, then group by continent and return the country count.",
+          "query": "Return all countries with their continent that have a land mass smaller than Saarland.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "countries"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT continents.name, COUNT(*) AS countries FROM countries INNER JOIN continents ON continents.continent = countries.continent WHERE countries.area_km2 < ( SELECT german_states.area_km2 FROM german_states WHERE german_states.name = 'Saarland' ) GROUP BY continents.name",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "continent",
+            "name"
+          ],
+          "keys": [
+            "continent"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT continents.continent, continents.name FROM continents"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "german_state",
+            "area_km2"
+          ],
+          "keys": [
+            "german_state"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT german_states.german_state, german_states.area_km2 FROM german_states WHERE german_states.german_state = 1201"
+      },
+      "s3": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "country",
+            "continent"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT countries.country, countries.continent FROM countries WHERE countries.area_km2 < 2570.0"
+      }
+    }
+  }
+}

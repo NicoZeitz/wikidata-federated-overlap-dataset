@@ -1,0 +1,29 @@
+public_figures:
+  source: persons
+  columns:
+    human_id: person
+    display_name: name
+    sex_at_birth: sex
+    dob: birth_date
+    died: death_date
+    given_name: given_name
+    last_name: family_name
+    passport_country: citizenship
+    native_country: birth_country
+    home_country: country
+    number_of_children: number_of_children
+    siblings: number_of_siblings
+distinctions:
+  source: awards
+  columns:
+    award_id: award
+    prize_name: name
+    origin_country: country
+    inception: inception
+    named_after: named_after
+person_awards:
+  source: person_awards
+  columns:
+    awardee: person
+    award_id: award
+    award_year: award_year

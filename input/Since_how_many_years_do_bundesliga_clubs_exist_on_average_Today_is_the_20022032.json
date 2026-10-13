@@ -1,0 +1,41 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "Since how many years do bundesliga clubs exist on average? Today is the 20.02.2032.",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by club, then compute the average number of years since founding. Today is the 20.02.2032.",
+          "query": "Return all bundesliga clubs together with how many years they have existed. Today is the 20.02.2032.",
+          "to_agent": {
+            "region": [
+              "germany"
+            ],
+            "table": "football_clubs"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT AVG(strftime('%Y', '2032-02-20') - strftime('%Y', football_clubs.founded)) AS average_years_existing FROM football_clubs WHERE football_clubs.league = 'Bundesliga'",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "avg"
+          ],
+          "columns": [
+            "team",
+            "years_existing"
+          ],
+          "keys": [
+            "team"
+          ],
+          "value_column": "years_existing"
+        },
+        "sql_query": "SELECT football_clubs.team AS team, CAST(strftime('%Y','2032-02-20') - strftime('%Y', football_clubs.founded) AS REAL) AS years_existing FROM football_clubs WHERE football_clubs.league = 'Bundesliga'"
+      }
+    }
+  }
+}

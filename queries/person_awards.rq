@@ -1,0 +1,41 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+
+# One row per (person, award) pair with optional award year.
+SELECT
+  ?person
+  ?award
+  (SAMPLE(?year_v) AS ?award_year)
+WHERE {
+  VALUES ?award {
+    wd:Q38104  wd:Q44585  wd:Q80061  wd:Q35637  wd:Q37922  wd:Q47170
+    wd:Q185667 wd:Q179808 wd:Q28835  wd:Q46525  wd:Q160082 wd:Q133160
+    wd:Q188184
+    wd:Q166177  # Ballon d'Or             (France)
+    wd:Q41254   # Grammy Awards           (United States)
+    wd:Q19020   # Academy Awards          (United States)
+    wd:Q209459  # Golden Lion             (Italy)
+    wd:Q603631  # Templeton Prize         (United States)
+    wd:Q284500  # Turner Prize            (United Kingdom)
+    wd:Q921415  # Lasker Award            (United States)
+    wd:Q739936  # Wolf Prize              (Israel)
+    wd:Q658444  # Kyoto Prize             (Japan)
+  }
+
+  ?person wdt:P31 wd:Q5 .
+  ?person wdt:P166 ?award .
+  FILTER EXISTS { { ?person wdt:P27 ?_pc . } UNION { ?person wdt:P19 ?_pbp . } }
+
+  ?person p:P166 ?awardStmt .
+  ?awardStmt ps:P166 ?award .
+
+  OPTIONAL {
+    ?awardStmt pq:P585 ?awardDate .
+    BIND(YEAR(?awardDate) AS ?year_v)
+  }
+}
+GROUP BY ?person ?award

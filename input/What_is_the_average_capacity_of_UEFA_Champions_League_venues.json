@@ -1,0 +1,43 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the average capacity of UEFA Champions League venues?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by venue, then compute the average capacity.",
+          "query": "Return all venues together with their capacities.",
+          "to_agent": {
+            "region": [
+              "europe",
+              "azerbaijan",
+              "kazakhstan"
+            ],
+            "table": "ucl_venues"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT AVG(ucl_venues.capacity) AS avg_capacity FROM ucl_venues",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "avg"
+          ],
+          "columns": [
+            "venue",
+            "capacity"
+          ],
+          "keys": [
+            "venue"
+          ],
+          "value_column": "capacity"
+        },
+        "sql_query": "SELECT ucl_venues.venue, ucl_venues.capacity FROM ucl_venues"
+      }
+    }
+  }
+}

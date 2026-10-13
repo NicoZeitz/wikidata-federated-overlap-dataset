@@ -1,0 +1,74 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "Which city in Spain has the highest population?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Return the country id of Spain as soon as it is found.",
+          "query": "Return the country id of Spain.",
+          "to_agent": {
+            "region": [
+              "spain"
+            ],
+            "table": "countries"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "Country id of Spain.",
+              "step_id": "s1"
+            }
+          ],
+          "id": "s2",
+          "merge_task": "Deduplicate by city and return the city with the highest population.",
+          "query": "Return all cities that are in spain together with their population.",
+          "to_agent": {
+            "region": [
+              "spain"
+            ],
+            "table": "cities"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT cities.name FROM cities INNER JOIN countries ON countries.country = cities.country WHERE countries.name = 'Spain' AND cities.population = ( SELECT MAX(cities.population) FROM cities INNER JOIN countries ON countries.country = cities.country WHERE countries.name = 'Spain' )",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "country"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT countries.country FROM countries WHERE countries.name = 'Spain'"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "max"
+          ],
+          "columns": [
+            "city",
+            "population"
+          ],
+          "keys": [
+            "city"
+          ],
+          "value_column": "population"
+        },
+        "sql_query": "SELECT cities.city, cities.population FROM cities WHERE cities.country = 29"
+      }
+    }
+  }
+}

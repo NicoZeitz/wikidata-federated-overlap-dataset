@@ -1,0 +1,61 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT
+?team
+(SAMPLE(?_label)        AS ?name)
+(SAMPLE(?_leagueName)   AS ?league)
+(SAMPLE(?_country)      AS ?country)
+(SAMPLE(?_founded)      AS ?founded)
+(SAMPLE(?_stadiumLabel) AS ?stadium)
+(SAMPLE(?_coachLabel)   AS ?coach)
+(SAMPLE(?_ownerLabel)   AS ?owner)
+(SAMPLE(?_nickname)     AS ?nickname)
+(SAMPLE(?_titleCount)   AS ?leagueTitles)
+(SAMPLE(?_followers)    AS ?socialFollowers)
+(SAMPLE(?_website)      AS ?website)
+(SAMPLE(?_shortName)    AS ?shortName)
+(SAMPLE(?_founderLabel) AS ?founder)
+WHERE {
+{ SELECT DISTINCT ?team WHERE {
+  ?match wdt:P31 wd:Q109623729 .
+  ?match wdt:P361 ?season .
+  ?season wdt:P31 wd:Q123724352 .
+  ?match wdt:P1923 ?team .
+}}
+
+?team rdfs:label ?_label .
+FILTER(LANG(?_label) = "en")
+
+OPTIONAL {
+  ?team wdt:P118 ?_league .
+  ?_league rdfs:label ?_leagueName .
+  FILTER(LANG(?_leagueName) = "en")
+}
+OPTIONAL { ?team wdt:P571  ?_founded }
+?team wdt:P17/wdt:P17? ?_country .
+?_country wdt:P31/wdt:P279* wd:Q3624078 .
+?_country wdt:P297 ?_ciso2 .
+FILTER NOT EXISTS { ?_country wdt:P576 ?_cdiss . }
+FILTER NOT EXISTS { ?_country wdt:P31 wd:Q3024240 . }
+OPTIONAL { ?team wdt:P115  ?_stadium .
+           ?_stadium rdfs:label ?_stadiumLabel .
+           FILTER(LANG(?_stadiumLabel) = "en") }
+OPTIONAL { ?team wdt:P286  ?_coach .
+           ?_coach rdfs:label ?_coachLabel .
+           FILTER(LANG(?_coachLabel) = "en") }
+OPTIONAL { ?team wdt:P127  ?_owner .
+           ?_owner rdfs:label ?_ownerLabel .
+           FILTER(LANG(?_ownerLabel) = "en") }
+OPTIONAL { ?team wdt:P1449 ?_nickname }
+OPTIONAL { ?team wdt:P7351 ?_titleCount }
+OPTIONAL { ?team wdt:P8687 ?_followers }
+OPTIONAL { ?team wdt:P856  ?_website }
+OPTIONAL { ?team wdt:P1813 ?_shortName }
+OPTIONAL { ?team wdt:P112  ?_founder .
+           ?_founder rdfs:label ?_founderLabel .
+           FILTER(LANG(?_founderLabel) = "en") }
+}
+GROUP BY ?team
+ORDER BY ?name

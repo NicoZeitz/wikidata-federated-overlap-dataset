@@ -1,0 +1,72 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "Is the lowest point in Africa or the lowest point in Antarctica lower?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by continent, return Africa and Antarctica with their lowest points.",
+          "query": "Return all continents with their lowest points.",
+          "to_agent": {
+            "region": [
+              "africa",
+              "antarctica"
+            ],
+            "table": "continents"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "Africa and Antarctica with their lowest points.",
+              "step_id": "s1"
+            }
+          ],
+          "id": "s2",
+          "query": "Compare the lowest points of Africa and Antarctica and return the continent with the lower point.",
+          "to_agent": "Coordinator"
+        }
+      ]
+    },
+    "sql_query": "SELECT CASE WHEN c1.lowest_point_m < c2.lowest_point_m THEN c1.name ELSE c2.name END AS lower_continent FROM continents c1, continents c2 WHERE c1.name = 'Africa' AND c2.name = 'Antarctica'",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "min"
+          ],
+          "columns": [
+            "continent",
+            "lowest_point_m"
+          ],
+          "keys": [
+            "continent"
+          ],
+          "value_column": "lowest_point_m"
+        },
+        "sql_query": "SELECT continents.continent, continents.lowest_point_m FROM continents WHERE continents.name IN ('Africa', 'Antarctica')"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "min"
+          ],
+          "columns": [
+            "continent",
+            "name",
+            "lowest_point",
+            "lowest_point_m"
+          ],
+          "keys": [
+            "continent"
+          ],
+          "value_column": "lowest_point_m"
+        },
+        "sql_query": "SELECT continents.continent, continents.name, continents.lowest_point, continents.lowest_point_m FROM continents WHERE continents.continent IN (15, 51)"
+      }
+    }
+  }
+}

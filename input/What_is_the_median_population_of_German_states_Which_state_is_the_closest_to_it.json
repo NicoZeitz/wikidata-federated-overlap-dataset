@@ -1,0 +1,41 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the median population of German states? Which state is the closest to it?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by state. Return the median population and the state(s) closest to it with their populations.",
+          "query": "Return all german states with their population.",
+          "to_agent": {
+            "region": [
+              "germany"
+            ],
+            "table": "german_states"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT german_states.name, german_states.population, (SELECT MEDIAN(german_states.population) FROM german_states) AS median FROM german_states WHERE abs(german_states.population - median) = ( SELECT MIN(abs(german_states.population - median)) FROM german_states )",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "median"
+          ],
+          "columns": [
+            "german_state",
+            "population"
+          ],
+          "keys": [
+            "german_state"
+          ],
+          "value_column": "population"
+        },
+        "sql_query": "SELECT german_states.german_state, german_states.population FROM german_states"
+      }
+    }
+  }
+}

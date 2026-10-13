@@ -1,0 +1,16 @@
+position,database,coverage_pct,total_rows,new_unique_rows
+0,worldwide,57.07,113,113
+1,temperate,79.29,44,44
+2,worldwide,84.34,30,10
+3,worldwide,87.37,28,6
+4,worldwide,89.9,28,5
+5,worldwide,92.42,27,5
+6,worldwide,93.94,28,3
+7,worldwide,95.45,28,3
+8,worldwide,96.46,28,2
+9,worldwide,97.47,28,2
+10,worldwide,98.48,28,2
+11,worldwide,99.49,28,2
+12,worldwide,100.0,27,1
+13,united_states,100.0,1,0
+14,worldwide,100.0,26,0

@@ -1,0 +1,41 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "Which German state has the largest area?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by state, select the state with the maximum area.",
+          "query": "Return all german states together with their area.",
+          "to_agent": {
+            "region": [
+              "germany"
+            ],
+            "table": "german_states"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT german_states.name FROM german_states WHERE german_states.area_km2 = ( SELECT MAX(german_states.area_km2) FROM german_states )",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "max"
+          ],
+          "columns": [
+            "name",
+            "area_km2"
+          ],
+          "keys": [
+            "name"
+          ],
+          "value_column": "area_km2"
+        },
+        "sql_query": "SELECT german_states.name, german_states.area_km2 FROM german_states"
+      }
+    }
+  }
+}

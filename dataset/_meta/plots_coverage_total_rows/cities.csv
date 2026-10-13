@@ -1,0 +1,16 @@
+position,database,coverage_pct,total_rows,new_unique_rows
+0,worldwide,36.73,569045,569045
+1,temperate,72.24,550315,550315
+2,worldwide,77.32,216366,78702
+3,worldwide,81.49,216310,64520
+4,worldwide,84.31,216304,43724
+5,worldwide,86.2,216297,29299
+6,worldwide,88.55,216282,36324
+7,worldwide,90.13,216278,24620
+8,worldwide,91.91,216259,27434
+9,worldwide,93.07,216240,18113
+10,worldwide,94.16,216231,16789
+11,worldwide,95.23,216209,16594
+12,worldwide,96.12,216188,13840
+13,worldwide,96.93,216132,12489
+14,united_states,100.0,120159,47591

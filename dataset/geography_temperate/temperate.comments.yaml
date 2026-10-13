@@ -1,0 +1,82 @@
+__database__: Geographic database covering temperate climate countries, including
+  countries, continents, and cities.
+states:
+  __table__: Sovereign countries in temperate climate countries.
+  country_id: Identifier for the country.
+  title: Name of the country.
+  iso2: ISO 3166-1 alpha-2 two-letter country code.
+  three_letter_country_code: ISO 3166-1 alpha-3 three-letter country code.
+  geographic_region: Continent the country belongs to.
+  total_area_km2: Total area of the country in square kilometers.
+  total_population: Population of the country (most recent estimate).
+  gdp: Nominal GDP of the country in US dollars (most recent reported value).
+  governmental_center: Capital city.
+  official_currency: Name of the official currency.
+  coordinates: Geographic coordinates of the country centroid.
+  inception: Date the country was founded or became independent.
+  full_name: Official name of the country in English.
+  phone_code: International telephone dialling code (e.g. +49).
+  men_population: Male population count (most recent estimate).
+  population_female: Female population count (most recent estimate).
+  life_exp: Average life expectancy at birth in years.
+  human_development_index: Human Development Index score (0–1).
+  unemployment: Unemployment rate as a percentage of the labour force.
+  gini_index: Gini coefficient measuring income inequality (0–1).
+  total_fertility_rate: Average number of children born per woman.
+  birth_rate: Number of live births per 1000 inhabitants per year.
+  mortality_rate: Number of deaths per 1000 inhabitants per year.
+  suicides_per_100k: Suicide rate per 100,000 inhabitants per year.
+  democracy_index: Democracy Index score (0–10) from the Economist Intelligence Unit.
+  central_bank: Name of the central bank.
+  highest_point: Name of the highest geographical point in the country.
+  summit_height_m: Elevation of the highest point above sea level in meters.
+  depression: Name of the lowest geographical point in the country.
+  min_elevation_m: Elevation of the lowest point above sea level in meters (negative
+    if below sea level).
+  northernmost_point: Geographic coordinates of the northernmost point of the country.
+  southernmost_coords: Geographic coordinates of the southernmost point of the country.
+  eastern_extreme: Geographic coordinates of the easternmost point of the country.
+  westernmost_point: Geographic coordinates of the westernmost point of the country.
+  citizen_name: Comma-separated adjectives or nouns used to describe inhabitants of
+    the country.
+  official_languages: Comma-separated official languages of the country.
+  president: Current head of state of the country.
+  chancellor: Current head of government of the country.
+landmasses:
+  __table__: Continents covering temperate climate countries.
+  continent_id: Identifier for the continent.
+  region_name: Name of the continent.
+  area_km2: Total land area of the continent in square kilometers.
+  residents: Total population of the continent (most recent estimate).
+  coords: Geographic coordinates of the continent centroid.
+  highest_peak: Name of the highest geographical point on the continent.
+  max_elevation_m: Elevation of the highest point above sea level in meters.
+  lowest_depression: Name of the lowest geographical point on the continent.
+  nadir_elevation_m: Elevation of the lowest point above sea level in meters (negative
+    if below sea level).
+  most_populous_city: Most populous urban area on the continent.
+  children_out_of_school: Estimated number of school-age children not enrolled in
+    school.
+  un_code: UN M49 numeric region code assigned to the continent.
+  demonym: Comma-separated adjectives or nouns used to describe inhabitants of the
+    continent.
+  northmost_coords: Geographic coordinates of the northernmost point of the continent.
+  southmost_coords: Geographic coordinates of the southernmost point of the continent.
+  eastern_tip_coords: Geographic coordinates of the easternmost point of the continent.
+  western_extreme: Geographic coordinates of the westernmost point of the continent.
+urban_areas:
+  __table__: Cities and human settlements located in temperate climate countries.
+  settlement_id: Identifier for the city.
+  city_name: Name of the city.
+  city_country: Country the city is located in.
+  city_population: Population of the city (most recent estimate).
+  position: Geographic coordinates of the city.
+  founded: Date or year the city was founded or first recorded.
+  alias: Comma-separated informal names or nicknames of the city.
+  postal_code: Postal or ZIP code of the city.
+  citizen_name: Comma-separated adjectives or nouns used to describe inhabitants of
+    the city.
+  economic_output: Nominal GDP of the city in US dollars.
+  mean_income_usd: Per capita income of the city in US dollars.
+  height_m: Elevation of the city above sea level in meters.
+  area_km2: Total area of the city in square kilometers.

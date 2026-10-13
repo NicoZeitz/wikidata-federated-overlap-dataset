@@ -1,0 +1,31 @@
+__database__: People database covering Germany, including persons, awards, and prize
+  records.
+celebrities:
+  __table__: Persons from Germany.
+  human_id: Identifier for the person.
+  display_name: Full name of the person.
+  sex_at_birth: Sex of the person.
+  birth_date: Date of birth.
+  date_of_death: Date of death (null if still living or unknown).
+  first_name: Given (first) name of the person.
+  last: Family (last) name of the person.
+  citizenship: Country of citizenship.
+  birth_country: Country of birth.
+  nation: Country associated with the person (citizenship if known, otherwise country
+    of birth).
+  school: Name of institution where the person studied.
+  height_cm: Height of the person in centimeters.
+  kids: Number of children the person has.
+  siblings: Number of siblings the person has.
+prizes:
+  __table__: Awards from Germany.
+  honor_id: Identifier for the award.
+  distinction_name: Name of the award.
+  nation: Country the award originates from.
+  founding_year: Year the award was first presented.
+  web_address: Official website URL of the award.
+person_awards:
+  __table__: Records linking persons from Germany to awards they received.
+  winner: Person who received the award.
+  accolade: Award received by the person.
+  year_of_award: Year the award was received.

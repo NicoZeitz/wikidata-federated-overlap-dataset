@@ -1,0 +1,41 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "Which province is the northernmost province in China?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by province, order by latitude descending, and return the top result as the northernmost province.",
+          "query": "Return all provinces in China together with their latitude.",
+          "to_agent": {
+            "region": [
+              "people_s_republic_of_china"
+            ],
+            "table": "provinces"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT provinces.name FROM provinces ORDER BY CAST( SUBSTR( provinces.coords, INSTR(provinces.coords, ' ') + 1, INSTR(provinces.coords, ')') - INSTR(provinces.coords, ' ') - 1 ) AS REAL ) DESC LIMIT 1",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "max"
+          ],
+          "columns": [
+            "name",
+            "latitude"
+          ],
+          "keys": [
+            "name"
+          ],
+          "value_column": "latitude"
+        },
+        "sql_query": "SELECT provinces.name AS name, CAST( SUBSTR(provinces.coords, INSTR(provinces.coords, ' ') + 1, INSTR(provinces.coords, ')') - INSTR(provinces.coords, ' ') - 1 ) AS REAL ) AS latitude FROM provinces"
+      }
+    }
+  }
+}

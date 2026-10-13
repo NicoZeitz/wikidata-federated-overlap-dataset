@@ -1,0 +1,17 @@
+german_state,country,name,coords,area_km2,population,capital,inception,iso_code,website
+http://www.wikidata.org/entity/Q985,http://www.wikidata.org/entity/Q183,Baden-Württemberg,POINT(9.041111 48.537778),35751.65,8635900.0,http://www.wikidata.org/entity/Q1022,1952-04-25T00:00:00Z,DE-BW,https://www.baden-wuerttemberg.de/
+http://www.wikidata.org/entity/Q980,http://www.wikidata.org/entity/Q183,Bayern,POINT(11.385556 49.078611),70551.0,13038724.0,http://www.wikidata.org/entity/Q1726,1919-01-12T00:00:00Z,DE-BY,https://bayern.de
+http://www.wikidata.org/entity/Q64,http://www.wikidata.org/entity/Q183,Berlin,POINT(13.383333 52.516667),891.12,3782202.0,,1244-01-01T00:00:00Z,DE-BE,https://www.berlin.de/
+http://www.wikidata.org/entity/Q1208,http://www.wikidata.org/entity/Q183,Brandenburg,POINT(13.060333 52.394556),29478.63,2449193.0,http://www.wikidata.org/entity/Q1711,1990-10-03T00:00:00Z,DE-BB,https://www.brandenburg.de/
+http://www.wikidata.org/entity/Q1209,http://www.wikidata.org/entity/Q183,Freie Hansestadt Bremen,POINT(8.733333 53.133333),419.38,693204.0,http://www.wikidata.org/entity/Q24879,,DE-HB,https://www.bremen.de/
+http://www.wikidata.org/entity/Q1055,http://www.wikidata.org/entity/Q183,Hamburg,POINT(10.000000 53.550000),755.09,1910160.0,,,DE-HH,https://www.hamburg.com/
+http://www.wikidata.org/entity/Q1199,http://www.wikidata.org/entity/Q183,Hessen,POINT(9.028472 50.608028),21100.0,6207278.0,http://www.wikidata.org/entity/Q1721,1946-12-01T00:00:00Z,DE-HE,https://hessen.de/
+http://www.wikidata.org/entity/Q1196,http://www.wikidata.org/entity/Q183,Mecklenburg-Vorpommern,POINT(12.500000 53.750000),23174.0,1570817.0,http://www.wikidata.org/entity/Q1709,1990-10-03T00:00:00Z,DE-MV,https://www.regierung-mv.de/
+http://www.wikidata.org/entity/Q1197,http://www.wikidata.org/entity/Q183,Niedersachsen,POINT(9.393056 52.756111),47614.07,7943265.0,http://www.wikidata.org/entity/Q1715,1946-11-01T00:00:00Z,DE-NI,https://www.niedersachsen.de/
+http://www.wikidata.org/entity/Q1198,http://www.wikidata.org/entity/Q183,Nordrhein-Westfalen,POINT(7.550000 51.466667),34112.52,17572000.0,http://www.wikidata.org/entity/Q1718,1946-08-23T00:00:00Z,DE-NW,https://www.land.nrw/
+http://www.wikidata.org/entity/Q1200,http://www.wikidata.org/entity/Q183,Rheinland-Pfalz,POINT(7.449722 49.913056),19853.36,3994000.0,http://www.wikidata.org/entity/Q1720,1946-08-30T00:00:00Z,DE-RP,https://www.rlp.de/
+http://www.wikidata.org/entity/Q1201,http://www.wikidata.org/entity/Q183,Saarland,POINT(6.878378 49.377150),2570.0,986887.0,http://www.wikidata.org/entity/Q1724,1947-12-17T00:00:00Z,DE-SL,https://www.saarland.de/
+http://www.wikidata.org/entity/Q1202,http://www.wikidata.org/entity/Q183,Sachsen,POINT(13.358889 51.026944),18415.66,4089467.0,http://www.wikidata.org/entity/Q1731,1918-11-10T00:00:00Z,DE-SN,https://www.sachsen.de/
+http://www.wikidata.org/entity/Q1206,http://www.wikidata.org/entity/Q183,Sachsen-Anhalt,POINT(11.700000 52.000000),20454.0,2146443.0,http://www.wikidata.org/entity/Q1733,1990-10-03T00:00:00Z,DE-ST,https://www.sachsen-anhalt.de/
+http://www.wikidata.org/entity/Q1194,http://www.wikidata.org/entity/Q183,Schleswig-Holstein,POINT(9.514160 54.470038),15804.28,2806531.0,http://www.wikidata.org/entity/Q1707,1946-08-23T00:00:00Z,DE-SH,https://www.schleswig-holstein.de/
+http://www.wikidata.org/entity/Q1205,http://www.wikidata.org/entity/Q183,Thüringen,POINT(11.000000 51.000000),16171.0,2110396.0,http://www.wikidata.org/entity/Q1729,1920-01-01T00:00:00Z,DE-TH,https://thueringen.de/

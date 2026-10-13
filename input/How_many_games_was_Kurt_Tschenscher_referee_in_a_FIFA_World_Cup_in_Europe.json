@@ -1,0 +1,203 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "How many games was Kurt Tschenscher referee in a FIFA World Cup in Europe?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Return the person id of Kurt Tschenscher as soon as found",
+          "query": "Find the person id of Kurt Tschenscher",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "persons"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s2",
+          "merge_task": "Deduplicated the tournament ids of FIFA World Cups and return them",
+          "query": "Find the tournament ids of FIFA World Cups",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "tournaments"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s3",
+          "merge_task": "Return the continent id of Europe as soon as found",
+          "query": "Find the continent id of Europe",
+          "to_agent": {
+            "region": [
+              "europe"
+            ],
+            "table": "continents"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "Continent id of Europe",
+              "step_id": "s3"
+            }
+          ],
+          "id": "s4",
+          "merge_task": "Return all country ids of countries that are located in Europe",
+          "query": "Find all country ids of countries that are located in Europe",
+          "to_agent": {
+            "region": [
+              "europe"
+            ],
+            "table": "countries"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "Tournament ids of FIFA World Cups",
+              "step_id": "s1"
+            },
+            {
+              "dependency": "Country ids of countries that are located in Europe",
+              "step_id": "s4"
+            }
+          ],
+          "id": "s5",
+          "merge_task": "Deduplicated the tournament ids of FIFA World Cups held in European countries and return them",
+          "query": "Filter all tournament ids of the given FIFA World Cups to only return those that took place in Europe",
+          "to_agent": {
+            "region": [
+              "europe"
+            ],
+            "table": "tournaments"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "Person id of Kurt Tschenscher",
+              "step_id": "s1"
+            },
+            {
+              "dependency": "Tournament ids of FIFA World Cups held in European countries",
+              "step_id": "s5"
+            }
+          ],
+          "id": "s6",
+          "merge_task": "Return the count of matches where Kurt Tschenscher was the referee and the tournament was a FIFA World Cup held in Europe",
+          "query": "Count the number of matches where Kurt Tschenscher was the referee and the tournament was a FIFA World Cup held in Europe",
+          "to_agent": {
+            "region": [
+              "europe"
+            ],
+            "table": "matches"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT COUNT(*) AS amount FROM matches INNER JOIN persons ON persons.person = matches.referee INNER JOIN tournaments ON tournaments.tournament = matches.tournament INNER JOIN countries ON countries.country = tournaments.country INNER JOIN continents ON continents.continent = countries.continent WHERE persons.name = 'Kurt Tschenscher' AND continents.name = 'Europe'",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "person"
+          ],
+          "keys": [
+            "person"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT persons.person FROM persons WHERE persons.name = 'Kurt Tschenscher'"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "tournament"
+          ],
+          "keys": [
+            "tournament"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT tournaments.tournament FROM tournaments WHERE tournaments.tournament IN (101730, 101751, 131075, 131591, 132515, 132529, 132533, 132664, 134202, 1477177, 160813, 166121, 170645, 176883, 284163, 37285, 46934, 46938, 46943, 47735, 48432, 5020214, 79859)"
+      },
+      "s3": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "continent"
+          ],
+          "keys": [
+            "continent"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT continents.continent FROM continents WHERE continents.name = 'Europe'"
+      },
+      "s4": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "country"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT countries.country FROM countries WHERE countries.continent = 46"
+      },
+      "s5": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "tournament"
+          ],
+          "keys": [
+            "tournament"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT tournaments.tournament FROM tournaments WHERE tournaments.tournament IN (101730, 131075, 131591, 132529, 132533, 134202, 1477177, 166121, 170645, 37285, 46934)"
+      },
+      "s6": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "match"
+          ],
+          "keys": [
+            "match"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT matches.match FROM matches WHERE matches.referee = 659465 AND matches.tournament IN (101730, 131075, 131591, 132529, 132533, 134202, 1477177, 166121, 170645, 37285, 46934)"
+      }
+    }
+  }
+}

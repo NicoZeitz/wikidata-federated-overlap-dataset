@@ -1,0 +1,12 @@
+provinces:
+  source: provinces
+  columns:
+    administrative_unit_id: province
+    nation: country
+    division_name: name
+    location: coords
+    surface_area_km2: area_km2
+    residents: population
+    main_city: capital
+    inception: inception
+    region_code: iso_code

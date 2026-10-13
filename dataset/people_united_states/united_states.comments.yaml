@@ -1,0 +1,32 @@
+__database__: People database covering United States, including persons, awards, and
+  prize records.
+public_figures:
+  __table__: Persons from United States.
+  person: Identifier for the person.
+  display_name: Full name of the person.
+  gender: Sex of the person.
+  born: Date of birth.
+  date_of_death: Date of death (null if still living or unknown).
+  forename: Given (first) name of the person.
+  family_name: Family (last) name of the person.
+  nationality: Country of citizenship.
+  birth_nation: Country of birth.
+  country: Country associated with the person (citizenship if known, otherwise country
+    of birth).
+  institution: Name of institution where the person studied.
+  height_metres: Height of the person in centimeters.
+  offspring_count: Number of children the person has.
+  siblings: Number of siblings the person has.
+accolades:
+  __table__: Awards from United States.
+  honor_id: Identifier for the award.
+  distinction_name: Name of the award.
+  origin_country: Country the award originates from.
+  created: Year the award was first presented.
+  namesake: Person or entity the award is named after.
+  official_website: Official website URL of the award.
+person_awards:
+  __table__: Records linking persons from United States to awards they received.
+  person_id: Person who received the award.
+  award: Award received by the person.
+  prize_year: Year the award was received.

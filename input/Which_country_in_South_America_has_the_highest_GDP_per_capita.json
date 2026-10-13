@@ -1,0 +1,75 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "Which country in South America has the highest GDP per capita?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate and return the id for South America",
+          "query": "Return the id for South America",
+          "to_agent": {
+            "region": [
+              "south_america"
+            ],
+            "table": "continents"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "Id of South America",
+              "step_id": "s1"
+            }
+          ],
+          "id": "s2",
+          "merge_task": "Deduplicated by country and return the country with the highest GDP per capita in South America",
+          "query": "Return the country with their according GDP per capita for given South America id",
+          "to_agent": {
+            "region": [
+              "south_america"
+            ],
+            "table": "countries"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT countries.name FROM countries INNER JOIN continents ON continents.continent = countries.continent WHERE continents.name = 'South America' AND countries.gdp_usd / countries.population = ( SELECT MAX(countries.gdp_usd / countries.population) FROM countries INNER JOIN continents ON continents.continent = countries.continent WHERE continents.name = 'South America' AND countries.population > 0 )",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "continent"
+          ],
+          "keys": [
+            "continent"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT continents.continent FROM continents WHERE continents.name = 'South America'"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "max"
+          ],
+          "columns": [
+            "country",
+            "gdp_usd",
+            "population"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": "gdp_usd"
+        },
+        "sql_query": "SELECT countries.country, countries.gdp_usd, countries.population FROM countries WHERE countries.continent = 18"
+      }
+    }
+  }
+}

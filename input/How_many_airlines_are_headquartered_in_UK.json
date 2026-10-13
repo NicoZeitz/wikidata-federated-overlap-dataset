@@ -1,0 +1,73 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "How many airlines are headquartered in UK?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Return the country id of United Kingdom as soon as it is found.",
+          "query": "Return the country id of United Kingdom.",
+          "to_agent": {
+            "region": [
+              "united_kingdom"
+            ],
+            "table": "countries"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "Country id of United Kingdom as soon as it is found.",
+              "step_id": "s1"
+            }
+          ],
+          "id": "s2",
+          "merge_task": "Deduplicate by airline id, return all unique ones.",
+          "query": "Return all airlines that are headquartered in United Kingdom.",
+          "to_agent": {
+            "region": [
+              "united_kingdom"
+            ],
+            "table": "airlines"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT COUNT(*) AS airline_count FROM airlines INNER JOIN countries ON countries.country = airlines.country WHERE countries.name = 'United Kingdom'",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "country"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT countries.country FROM countries WHERE countries.name = 'United Kingdom'"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "airline"
+          ],
+          "keys": [
+            "airline"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT airlines.airline FROM airlines WHERE airlines.country = 145"
+      }
+    }
+  }
+}

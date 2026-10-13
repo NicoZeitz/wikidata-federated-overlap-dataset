@@ -1,0 +1,59 @@
+__database__: UEFA Champions League database covering United Kingdom, including clubs,
+  matches, and venues.
+ucl_teams:
+  __table__: Football clubs based in United Kingdom that participated in the UEFA
+    Champions League.
+  organization_id: Identifier for the football club.
+  label: Full name of the football club.
+  domestic_league: Name of the domestic league the club competes in.
+  base_country: Country the club is based in.
+  founding_year: Date or year the club was founded.
+  home_arena: Name of the club's home stadium.
+  manager: Name of the current head coach or manager.
+  ownership: Name of the current owner or ownership group.
+  nickname: Nickname or informal name of the club.
+  leagueTitles: Number of domestic league titles won by the club.
+  socialFollowers: Number of social media followers of the club.
+  homepage: Official website URL of the club.
+  short_name: Short or abbreviated name of the club.
+  club_founder: Name of the person or entity who founded the club.
+champions_league_games:
+  __table__: UEFA Champions League matches played in United Kingdom.
+  match: Identifier for the UEFA Champions League match.
+  match_name: Name or label of the match.
+  ucl_season_name: Name or label of the season.
+  fixture_date: Date the match was played.
+  stadium: Venue where the match was played.
+  first_team: First participating club.
+  team2: Second participating club.
+  victor: Winning club (null for draws).
+  audience: Number of spectators in attendance.
+  match_referee: Person who refereed the match.
+ucl_venues:
+  __table__: Stadiums and arenas in United Kingdom that hosted UEFA Champions League
+    matches.
+  venue: Identifier for the venue.
+  ground_name: Name of the venue or stadium.
+  venue_country: Country the venue is located in.
+  seating_capacity: Maximum seating capacity of the venue.
+  coords: Geographic coordinates of the venue.
+  construction_completion: Date the venue was officially opened.
+  location_city: City or municipality the venue is located in.
+  resident_team: Teams or organizations that regularly use the venue.
+  designer: Architect who designed the venue.
+football_clubs:
+  __table__: Football clubs based in United Kingdom.
+  organization_id: Identifier for the football club.
+  title: Full name of the football club.
+  league: Name of the domestic league the club competes in.
+  base_country: Country the club is based in.
+  founding_year: Date or year the club was founded.
+  ground: Name of the club's home stadium.
+  head_coach: Name of the current head coach or manager.
+  ownership: Name of the current owner or ownership group.
+  sobriquet: Nickname or informal name of the club.
+  title_count: Number of domestic league titles won by the club.
+  followers: Number of social media followers of the club.
+  url: Official website URL of the club.
+  short_name: Short or abbreviated name of the club.
+  creator: Name of the person or entity who founded the club.

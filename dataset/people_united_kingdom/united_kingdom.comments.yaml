@@ -1,0 +1,32 @@
+__database__: People database covering United Kingdom, including persons, awards,
+  and prize records.
+public_figures:
+  __table__: Persons from United Kingdom.
+  individual_id: Identifier for the person.
+  name: Full name of the person.
+  sex: Sex of the person.
+  birth_date: Date of birth.
+  dod: Date of death (null if still living or unknown).
+  personal_name: Given (first) name of the person.
+  family_name: Family (last) name of the person.
+  passport_country: Country of citizenship.
+  birthplace_country: Country of birth.
+  associated_country: Country associated with the person (citizenship if known, otherwise
+    country of birth).
+  university: Name of institution where the person studied.
+  height: Height of the person in centimeters.
+  child_count: Number of children the person has.
+  brothers_and_sisters: Number of siblings the person has.
+distinctions:
+  __table__: Awards from United Kingdom.
+  award: Identifier for the award.
+  distinction_name: Name of the award.
+  nation: Country the award originates from.
+  created: Year the award was first presented.
+  sponsor: Organization that confers the award.
+  honoree: Person or entity the award is named after.
+person_awards:
+  __table__: Records linking persons from United Kingdom to awards they received.
+  awardee: Person who received the award.
+  award_id: Award received by the person.
+  award_year: Year the award was received.

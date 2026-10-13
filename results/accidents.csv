@@ -1,0 +1,1224 @@
+accident,name,airline,country,date,fatalities,survivors,flight_number
+http://www.wikidata.org/entity/Q100021,PIA Flight 661,http://www.wikidata.org/entity/Q204887,http://www.wikidata.org/entity/Q843,2016-12-07T00:00:00Z,47.0,0.0,PK661
+http://www.wikidata.org/entity/Q100367228,Mamonas Assassinas airplane crash,,http://www.wikidata.org/entity/Q155,1996-03-02T00:00:00Z,9.0,0.0,
+http://www.wikidata.org/entity/Q1012788,Bristow Flight 56C,http://www.wikidata.org/entity/Q4969137,http://www.wikidata.org/entity/Q145,1995-01-19T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q1014658,Andersen Air Force Base B-2 accident,,http://www.wikidata.org/entity/Q30,2008-02-23T00:00:00Z,0.0,2.0,
+http://www.wikidata.org/entity/Q102348101,Snunit aircraft crash in Mishmar Hanegev,,http://www.wikidata.org/entity/Q801,2020-11-24T00:00:00Z,2.0,,
+http://www.wikidata.org/entity/Q10265408,Varig C-46 crash,,http://www.wikidata.org/entity/Q155,1957-04-07T00:00:00Z,40.0,,
+http://www.wikidata.org/entity/Q10356053,1928 Dornier J Santos Dumont crash,,http://www.wikidata.org/entity/Q155,1928-12-03T00:00:00Z,14.0,,
+http://www.wikidata.org/entity/Q10392496,SATA Air Açores Flight 530M,http://www.wikidata.org/entity/Q1243903,http://www.wikidata.org/entity/Q45,1999-12-11T00:00:00Z,35.0,0.0,
+http://www.wikidata.org/entity/Q10392510,Transbrasil Flight 801,,http://www.wikidata.org/entity/Q155,1989-03-21T00:00:00Z,25.0,0.0,
+http://www.wikidata.org/entity/Q104759345,Sriwijaya Air Flight 182,http://www.wikidata.org/entity/Q619089,http://www.wikidata.org/entity/Q252,2021-01-09T00:00:00Z,62.0,,SJ182
+http://www.wikidata.org/entity/Q104776794,Iberia Airlines Flight 1456,http://www.wikidata.org/entity/Q187972,http://www.wikidata.org/entity/Q29,2001-02-07T00:00:00Z,0.0,143.0,
+http://www.wikidata.org/entity/Q104913715,Aviaco Flight 231,,http://www.wikidata.org/entity/Q29,1992-03-30T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q10497090,Oskarshamn air disaster 1989,,http://www.wikidata.org/entity/Q34,1989-05-08T00:00:00Z,16.0,,
+http://www.wikidata.org/entity/Q105009447,Aviaco Flight 331,,http://www.wikidata.org/entity/Q29,1972-07-06T00:00:00Z,10.0,0.0,
+http://www.wikidata.org/entity/Q105099251,Mersey Monoplane crash,,http://www.wikidata.org/entity/Q145,1912-08-13T00:00:00Z,1.0,0.0,
+http://www.wikidata.org/entity/Q105532368,KLM PH-BUF,http://www.wikidata.org/entity/Q181912,http://www.wikidata.org/entity/Q29,1977-03-27T00:00:00Z,14.0,0.0,KL4805
+http://www.wikidata.org/entity/Q105532431,Pan Am N736PA,,http://www.wikidata.org/entity/Q29,1977-03-27T00:00:00Z,9.0,61.0,PA1736
+http://www.wikidata.org/entity/Q105563892,Delta Air Lines Flight 30,http://www.wikidata.org/entity/Q188920,http://www.wikidata.org/entity/Q30,2018-04-18T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q105612231,United Airlines Flight 328,http://www.wikidata.org/entity/Q174769,http://www.wikidata.org/entity/Q30,2021-02-20T00:00:00Z,0.0,241.0,UA328
+http://www.wikidata.org/entity/Q10562735,Linjeflyg Flight 277,,http://www.wikidata.org/entity/Q34,1964-11-20T00:00:00Z,31.0,12.0,
+http://www.wikidata.org/entity/Q105699552,Utair Flight 595,http://www.wikidata.org/entity/Q1065835,http://www.wikidata.org/entity/Q159,2020-02-09T00:00:00Z,,,
+http://www.wikidata.org/entity/Q105756559,2021 TAF AS532 crash,,http://www.wikidata.org/entity/Q43,2021-03-04T00:00:00Z,11.0,,
+http://www.wikidata.org/entity/Q1059245,Cathay Pacific Flight 700Z bombing,http://www.wikidata.org/entity/Q32141,http://www.wikidata.org/entity/Q881,1972-06-15T00:00:00Z,81.0,0.0,CX700Z
+http://www.wikidata.org/entity/Q106238034,2021 Touques Airbus AS350B helicopter crash,,http://www.wikidata.org/entity/Q142,2021-03-07T00:00:00Z,2.0,,
+http://www.wikidata.org/entity/Q106291367,Saab JAS 39D Gripen crash,,http://www.wikidata.org/entity/Q213,2015-05-19T00:00:00Z,,,
+http://www.wikidata.org/entity/Q1064550,PIA Flight 268,http://www.wikidata.org/entity/Q204887,http://www.wikidata.org/entity/Q837,1992-09-28T00:00:00Z,167.0,0.0,
+http://www.wikidata.org/entity/Q106610509,2006 Iranian Dassault Falcon 20E crash,,http://www.wikidata.org/entity/Q794,2006-01-09T00:00:00Z,12.0,0.0,
+http://www.wikidata.org/entity/Q106749482,ELK Airways Flight 1007,,http://www.wikidata.org/entity/Q191,2001-11-23T00:00:00Z,2.0,15.0,ELK1007
+http://www.wikidata.org/entity/Q107008201,Key Lime Air Flight 970,http://www.wikidata.org/entity/Q6398060,http://www.wikidata.org/entity/Q30,2021-05-12T00:00:00Z,0.0,3.0,
+http://www.wikidata.org/entity/Q107308363,2021 Parachute Kemerovo Let L-410UVP-E crash,,http://www.wikidata.org/entity/Q159,2021-06-19T00:00:00Z,5.0,14.0,
+http://www.wikidata.org/entity/Q1073177,China Airlines Flight 642,http://www.wikidata.org/entity/Q51756,http://www.wikidata.org/entity/Q148,1999-08-22T00:00:00Z,3.0,,MDA642
+http://www.wikidata.org/entity/Q107431180,Petropavlovsk-Kamchatsky Air Flight 251 (2021),http://www.wikidata.org/entity/Q2340002,http://www.wikidata.org/entity/Q159,2021-07-06T00:00:00Z,28.0,0.0,PTK251
+http://www.wikidata.org/entity/Q107491621,1944 Aeroflot Lisunov Li-2 crash,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q227,1944-11-25T00:00:00Z,7.0,,
+http://www.wikidata.org/entity/Q107551262,Crash of a Bakhtar Afghan Airlines flight near Ghazni,,http://www.wikidata.org/entity/Q889,1983-03-10T00:00:00Z,19.0,0.0,
+http://www.wikidata.org/entity/Q107570765,1980 Biggin Hill Invader crash,,http://www.wikidata.org/entity/Q145,1980-09-21T00:00:00Z,7.0,0.0,
+http://www.wikidata.org/entity/Q108111717,Ameristar Charters Flight 9363,http://www.wikidata.org/entity/Q4745808,http://www.wikidata.org/entity/Q30,2017-03-08T00:00:00Z,0.0,,7Z9363
+http://www.wikidata.org/entity/Q108564598,Crash of a SEA Colombia flight near Cúcuta,,http://www.wikidata.org/entity/Q739,1965-10-04T00:00:00Z,4.0,0.0,
+http://www.wikidata.org/entity/Q108564603,crash of a TAROM Il-14P near Békéssámson,,http://www.wikidata.org/entity/Q28,1963-06-16T00:00:00Z,31.0,0.0,
+http://www.wikidata.org/entity/Q10860425,Iran Air Flight 742,,http://www.wikidata.org/entity/Q794,2011-10-18T00:00:00Z,0.0,113.0,
+http://www.wikidata.org/entity/Q10865450,Japan Air Lines Flight 301,http://www.wikidata.org/entity/Q213140,http://www.wikidata.org/entity/Q17,1952-04-09T00:00:00Z,37.0,,
+http://www.wikidata.org/entity/Q10878635,September 13 incident,,http://www.wikidata.org/entity/Q711,1971-09-13T00:00:00Z,9.0,0.0,
+http://www.wikidata.org/entity/Q108793584,Omega Aerial Refueling Services Flight 70,http://www.wikidata.org/entity/Q7089975,http://www.wikidata.org/entity/Q30,2011-05-18T00:00:00Z,0.0,3.0,
+http://www.wikidata.org/entity/Q108806791,mid-air collision of Biberach,,http://www.wikidata.org/entity/Q183,1983-06-27T00:00:00Z,3.0,0.0,
+http://www.wikidata.org/entity/Q108858975,crash of an Airtaco L-14 in Stockholm,,http://www.wikidata.org/entity/Q34,1951-07-14T00:00:00Z,4.0,2.0,
+http://www.wikidata.org/entity/Q108859683,crash of a Japan Air Self-Defense Force U-125 at Mt. Takakuma,,http://www.wikidata.org/entity/Q17,2016-04-06T00:00:00Z,6.0,0.0,
+http://www.wikidata.org/entity/Q108860954,2021 Menzelinsk parachute Let L-410UVP-E crash,,http://www.wikidata.org/entity/Q159,2021-10-10T00:00:00Z,16.0,5.0,
+http://www.wikidata.org/entity/Q108862205,ATRAN flight 9655,http://www.wikidata.org/entity/Q1141422,http://www.wikidata.org/entity/Q159,,7.0,0.0,9655
+http://www.wikidata.org/entity/Q10891604,All Nippon Airways Flight 25 (1960),http://www.wikidata.org/entity/Q204284,http://www.wikidata.org/entity/Q17,1960-03-16T00:00:00Z,3.0,,
+http://www.wikidata.org/entity/Q10903028,Lion Air Flight 904,http://www.wikidata.org/entity/Q1056794,http://www.wikidata.org/entity/Q252,2013-04-13T00:00:00Z,0.0,108.0,JT904
+http://www.wikidata.org/entity/Q109376596,2021 Grodno Aviakompania Antonov An-12 crash,,http://www.wikidata.org/entity/Q159,2021-11-03T00:00:00Z,9.0,0.0,GRX1252
+http://www.wikidata.org/entity/Q10940323,Tianjin Airlines Flight 7554,http://www.wikidata.org/entity/Q1436155,http://www.wikidata.org/entity/Q148,2012-06-29T00:00:00Z,2.0,99.0,GS7554
+http://www.wikidata.org/entity/Q109418833,2021 Piedade de Caratinga Beechcraft King Air crash,,http://www.wikidata.org/entity/Q155,2021-11-05T00:00:00Z,5.0,,
+http://www.wikidata.org/entity/Q1094539,Cathay Pacific Flight 780,http://www.wikidata.org/entity/Q32141,http://www.wikidata.org/entity/Q148,2010-04-13T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q109458827,Korean Air Flight 175,,http://www.wikidata.org/entity/Q884,1989-11-25T00:00:00Z,1.0,,
+http://www.wikidata.org/entity/Q109619683,Potez VII F-FRAV aviation accident,,http://www.wikidata.org/entity/Q213,1922-10-30T00:00:00Z,1.0,,
+http://www.wikidata.org/entity/Q109829552,2021 Azerbaijani Mil Mi-17 crash,,http://www.wikidata.org/entity/Q227,2021-11-30T00:00:00Z,14.0,,
+http://www.wikidata.org/entity/Q109996552,2021 Indian Air Force Mi-17 crash,,http://www.wikidata.org/entity/Q843,2021-12-08T00:00:00Z,13.0,1.0,
+http://www.wikidata.org/entity/Q110720743,UPS Airlines Flight 1307,http://www.wikidata.org/entity/Q1318737,http://www.wikidata.org/entity/Q30,2006-02-07T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q111133746,2021 United Aircraft Corporation Il-112 crash,,http://www.wikidata.org/entity/Q159,2021-08-17T00:00:00Z,3.0,0.0,
+http://www.wikidata.org/entity/Q111313251,China Eastern Airlines Flight 5735,http://www.wikidata.org/entity/Q291796,http://www.wikidata.org/entity/Q148,2022-03-21T00:00:00Z,132.0,0.0,MU5735
+http://www.wikidata.org/entity/Q111443581,Aeroméxico Flight 111,http://www.wikidata.org/entity/Q381563,http://www.wikidata.org/entity/Q96,1958-06-02T00:00:00Z,46.0,0.0,
+http://www.wikidata.org/entity/Q111524038,DHL Aero Expreso Flight 7216,http://www.wikidata.org/entity/Q387459,http://www.wikidata.org/entity/Q800,2022-04-07T00:00:00Z,0.0,2.0,D07216
+http://www.wikidata.org/entity/Q1116495,1956 Grand Canyon mid-air collision,http://www.wikidata.org/entity/Q174769,http://www.wikidata.org/entity/Q30,1956-06-30T00:00:00Z,128.0,0.0,
+http://www.wikidata.org/entity/Q111723519,MV-22 crash in Gråtådalen,,http://www.wikidata.org/entity/Q20,2022-03-18T00:00:00Z,4.0,,
+http://www.wikidata.org/entity/Q111948125,American Airlines Flight 102,,http://www.wikidata.org/entity/Q30,1993-04-14T00:00:00Z,0.0,202.0,AA102
+http://www.wikidata.org/entity/Q111973540,Tibet Airlines Flight 9833,http://www.wikidata.org/entity/Q1090978,http://www.wikidata.org/entity/Q148,2022-05-12T00:00:00Z,0.0,122.0,TV9833
+http://www.wikidata.org/entity/Q112163545,Tara Air Flight 197,http://www.wikidata.org/entity/Q774108,http://www.wikidata.org/entity/Q837,2022-05-29T00:00:00Z,22.0,0.0,TRA197
+http://www.wikidata.org/entity/Q112321844,1942 Schallenberg Bf 109E crash,,http://www.wikidata.org/entity/Q39,1942-06-26T00:00:00Z,1.0,,
+http://www.wikidata.org/entity/Q11233547,Korean Air Lines Flight 015,,http://www.wikidata.org/entity/Q884,1980-11-19T00:00:00Z,15.0,211.0,
+http://www.wikidata.org/entity/Q112670467,Red Air Flight 203,,http://www.wikidata.org/entity/Q30,2022-06-21T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q113129372,Meridian Flight 3032,,http://www.wikidata.org/entity/Q41,2022-07-16T00:00:00Z,8.0,0.0,MEM3032
+http://www.wikidata.org/entity/Q113382,1966 Palomares B-52 crash,,http://www.wikidata.org/entity/Q1016,1966-01-17T00:00:00Z,7.0,4.0,
+http://www.wikidata.org/entity/Q11345632,United Air Lines Flight 389,,http://www.wikidata.org/entity/Q30,1965-08-16T00:00:00Z,30.0,0.0,UA389
+http://www.wikidata.org/entity/Q1134591,Ryanair Flight 4102,http://www.wikidata.org/entity/Q170614,http://www.wikidata.org/entity/Q38,2008-11-10T00:00:00Z,0.0,172.0,
+http://www.wikidata.org/entity/Q1135895,Qantas Flight 32,http://www.wikidata.org/entity/Q32491,http://www.wikidata.org/entity/Q252,2010-11-04T00:00:00Z,0.0,469.0,
+http://www.wikidata.org/entity/Q11370223,1968 Kyushu University RF-4C crash,,http://www.wikidata.org/entity/Q17,1968-06-02T00:00:00Z,,,
+http://www.wikidata.org/entity/Q1137047,Hainan Island incident,,http://www.wikidata.org/entity/Q148,2001-04-01T00:00:00Z,1.0,24.0,
+http://www.wikidata.org/entity/Q113876502,1972 Turkish Airlines Adana crash,,http://www.wikidata.org/entity/Q43,1972-01-21T00:00:00Z,1.0,4.0,
+http://www.wikidata.org/entity/Q11390286,All Nippon Airways Flight 391,http://www.wikidata.org/entity/Q204284,http://www.wikidata.org/entity/Q17,2002-01-21T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q11390293,1962 All Nippon Airways Viscount crash,http://www.wikidata.org/entity/Q204284,http://www.wikidata.org/entity/Q17,1962-11-19T00:00:00Z,4.0,,
+http://www.wikidata.org/entity/Q11390298,All Nippon Airways Flight 8254,http://www.wikidata.org/entity/Q204284,http://www.wikidata.org/entity/Q17,2002-06-26T00:00:00Z,,,
+http://www.wikidata.org/entity/Q11390299,All Nippon Airways Flight 802,http://www.wikidata.org/entity/Q204284,http://www.wikidata.org/entity/Q17,1963-05-10T00:00:00Z,,,
+http://www.wikidata.org/entity/Q11390303,All Nippon Airways Flight 908,http://www.wikidata.org/entity/Q204284,http://www.wikidata.org/entity/Q17,2003-01-27T00:00:00Z,,,
+http://www.wikidata.org/entity/Q11390305,All Nippon Airways Flight 64,http://www.wikidata.org/entity/Q204284,http://www.wikidata.org/entity/Q17,1959-01-02T00:00:00Z,1.0,,
+http://www.wikidata.org/entity/Q114069721,2022 Mutiny Bay plane crash,,http://www.wikidata.org/entity/Q30,2022-09-04T00:00:00Z,10.0,0.0,
+http://www.wikidata.org/entity/Q11435740,Japan Airways Kuma-go crash,,http://www.wikidata.org/entity/Q17,1939-05-17T00:00:00Z,6.0,,
+http://www.wikidata.org/entity/Q11475843,LOT Polish Airlines Flight 165 (1969),http://www.wikidata.org/entity/Q204268,http://www.wikidata.org/entity/Q36,1969-04-02T00:00:00Z,6.0,0.0,LO165
+http://www.wikidata.org/entity/Q114836063,Korean Air Flight 631,,http://www.wikidata.org/entity/Q928,2022-10-23T00:00:00Z,0.0,,KE631
+http://www.wikidata.org/entity/Q11501910,1956 Shin-Koiwa Station FJ-2 crash,,http://www.wikidata.org/entity/Q17,1956-02-03T00:00:00Z,,,
+http://www.wikidata.org/entity/Q11508991,Japan Airlines Flight 706,http://www.wikidata.org/entity/Q213140,http://www.wikidata.org/entity/Q17,1997-06-08T00:00:00Z,1.0,,
+http://www.wikidata.org/entity/Q11508994,Japan Air Lines Cargo Flight 1045,http://www.wikidata.org/entity/Q213140,http://www.wikidata.org/entity/Q30,1977-01-13T00:00:00Z,5.0,0.0,
+http://www.wikidata.org/entity/Q11509003,Japan Airlines Flight 108,,http://www.wikidata.org/entity/Q17,1957-09-30T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q11509227,Nihon Kinkyori Airways Flight 497,,http://www.wikidata.org/entity/Q17,1983-03-11T00:00:00Z,,,
+http://www.wikidata.org/entity/Q115102751,Precision Air Flight 494,http://www.wikidata.org/entity/Q957305,http://www.wikidata.org/entity/Q1036,2022-11-06T00:00:00Z,19.0,24.0,PW494
+http://www.wikidata.org/entity/Q115277477,LATAM Perú Flight 2213,http://www.wikidata.org/entity/Q649178,http://www.wikidata.org/entity/Q419,2022-11-18T00:00:00Z,2.0,108.0,LP2213
+http://www.wikidata.org/entity/Q115557630,Rus Flight 9633,,http://www.wikidata.org/entity/Q159,2001-07-14T00:00:00Z,10.0,,
+http://www.wikidata.org/entity/Q116010165,1993 JAS 39 Gripen crash,,http://www.wikidata.org/entity/Q34,1993-08-08T00:00:00Z,,,
+http://www.wikidata.org/entity/Q116151417,Aakenustunturi flight accident,,http://www.wikidata.org/entity/Q33,1944-02-01T00:00:00Z,4.0,0.0,
+http://www.wikidata.org/entity/Q11616908,BOAC Flight 783,,http://www.wikidata.org/entity/Q668,1953-05-02T00:00:00Z,43.0,0.0,
+http://www.wikidata.org/entity/Q116693976,Naryan-Mar United Aviation Squadron Flight 1095/1096,,http://www.wikidata.org/entity/Q159,2023-01-09T00:00:00Z,2.0,10.0,1095
+http://www.wikidata.org/entity/Q117350459,Salsa d'Haiti Flight 112,,http://www.wikidata.org/entity/Q790,2011-09-20T00:00:00Z,3.0,,SO112
+http://www.wikidata.org/entity/Q11737192,Ławica air disaster,,http://www.wikidata.org/entity/Q36,1977-02-14T00:00:00Z,8.0,,
+http://www.wikidata.org/entity/Q11737204,Pe-2 aircraft disaster in Poznań,,http://www.wikidata.org/entity/Q36,1952-06-10T00:00:00Z,9.0,,
+http://www.wikidata.org/entity/Q11737210,Aeroflot Flight 6551,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q232,1973-05-11T00:00:00Z,63.0,0.0,SU6551
+http://www.wikidata.org/entity/Q11737212,Aeroflot Flight 8641,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q184,1982-06-28T00:00:00Z,132.0,0.0,
+http://www.wikidata.org/entity/Q11737221,Tajikistan Airlines Flight 3183,http://www.wikidata.org/entity/Q528978,http://www.wikidata.org/entity/Q878,1997-12-15T00:00:00Z,85.0,1.0,
+http://www.wikidata.org/entity/Q11737237,1973 Szeczecin Antonov An-24 crash,,http://www.wikidata.org/entity/Q36,1973-02-28T00:00:00Z,5.0,0.0,
+http://www.wikidata.org/entity/Q117749447,Vuelo 211 de Transportes Aéreos Guatemaltecos,http://www.wikidata.org/entity/Q930379,http://www.wikidata.org/entity/Q774,2023-04-16T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q118373,Charkhi Dadri mid-air collision,http://www.wikidata.org/entity/Q541179,http://www.wikidata.org/entity/Q668,1996-11-12T00:00:00Z,349.0,0.0,SVA763
+http://www.wikidata.org/entity/Q1184775,Comair Flight 5191,,http://www.wikidata.org/entity/Q30,2006-08-27T00:00:00Z,49.0,1.0,
+http://www.wikidata.org/entity/Q1184780,Delta Air Lines Flight 191,http://www.wikidata.org/entity/Q188920,http://www.wikidata.org/entity/Q30,1985-08-02T00:00:00Z,137.0,29.0,
+http://www.wikidata.org/entity/Q11849999,Ahvenisto helicopter accident,,http://www.wikidata.org/entity/Q33,1984-05-06T00:00:00Z,5.0,,
+http://www.wikidata.org/entity/Q11890853,1978 Finnish Air Force DC-3 crash,,http://www.wikidata.org/entity/Q33,1978-10-03T00:00:00Z,15.0,0.0,
+http://www.wikidata.org/entity/Q1190969,Aeroflot Flight 411,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1982-07-06T00:00:00Z,90.0,0.0,SU-411
+http://www.wikidata.org/entity/Q119293280,2023 Colombia Cessna 206 crash and rescue operation in the Amazon Rainforest,,http://www.wikidata.org/entity/Q142,2023-05-01T00:00:00Z,3.0,4.0,
+http://www.wikidata.org/entity/Q11971365,Førdesveten plane crash,,http://www.wikidata.org/entity/Q20,1948-09-06T00:00:00Z,13.0,2.0,
+http://www.wikidata.org/entity/Q120263543,Aeroflot Flight 411,,http://www.wikidata.org/entity/Q159,1961-07-08T00:00:00Z,9.0,17.0,411
+http://www.wikidata.org/entity/Q120281394,Mount Tom B-17 crash,,http://www.wikidata.org/entity/Q30,1946-07-09T00:00:00Z,,,
+http://www.wikidata.org/entity/Q12033088,1948 Beechcraft Model 18 disappearance,,http://www.wikidata.org/entity/Q145,1948-11-08T00:00:00Z,8.0,0.0,
+http://www.wikidata.org/entity/Q120883212,ČSA Flight 548,,http://www.wikidata.org/entity/Q39,1956-11-24T00:00:00Z,23.0,,
+http://www.wikidata.org/entity/Q12234212,Llandow air disaster,,http://www.wikidata.org/entity/Q145,1950-03-12T00:00:00Z,80.0,3.0,
+http://www.wikidata.org/entity/Q12257020,National Airlines Flight 102,http://www.wikidata.org/entity/Q899774,http://www.wikidata.org/entity/Q889,2013-04-29T00:00:00Z,7.0,0.0,NCR102
+http://www.wikidata.org/entity/Q12271039,Balkan Bulgarian Airlines Flight 130,,http://www.wikidata.org/entity/Q39,1971-01-18T00:00:00Z,45.0,,LZ130
+http://www.wikidata.org/entity/Q122929608,1924 KLM Fokker F.III disappearance,,http://www.wikidata.org/entity/Q145,1924-04-24T00:00:00Z,,,
+http://www.wikidata.org/entity/Q123000837,Northwest Orient Airlines Flight 324,,http://www.wikidata.org/entity/Q16,1952-01-19T00:00:00Z,36.0,7.0,
+http://www.wikidata.org/entity/Q123027175,Nigeria Airways Flight 250,,http://www.wikidata.org/entity/Q1033,1983-11-28T00:00:00Z,53.0,19.0,
+http://www.wikidata.org/entity/Q123242403,2023 Rio Branco Cessna Grand Caravan crash,,http://www.wikidata.org/entity/Q155,2023-10-29T00:00:00Z,12.0,,
+http://www.wikidata.org/entity/Q123332298,Chetak Helicopter Crash at INS Garuda,,http://www.wikidata.org/entity/Q668,2023-11-04T00:00:00Z,,,
+http://www.wikidata.org/entity/Q12382402,Aviaco Flight 260,,http://www.wikidata.org/entity/Q29,1994-03-21T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q12404125,Ma’agan Disaster (1954),,http://www.wikidata.org/entity/Q801,1954-07-29T00:00:00Z,17.0,,
+http://www.wikidata.org/entity/Q124078312,2024 Haneda Airport runway collision,http://www.wikidata.org/entity/Q213140,http://www.wikidata.org/entity/Q17,2024-01-02T00:00:00Z,0.0,1.0,JL516
+http://www.wikidata.org/entity/Q124154410,Alaska Airlines Flight 1282 on 5 January 2024,http://www.wikidata.org/entity/Q822614,http://www.wikidata.org/entity/Q30,2024-01-05T00:00:00Z,0.0,177.0,1282
+http://www.wikidata.org/entity/Q124507203,accident of the Pilatus PC-6 Porter of Air Alpes (HB-FAZ) at the Goûter dome,,http://www.wikidata.org/entity/Q142,1961-09-02T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q124719858,Destruction of an A-50U over the Krasnodar Territory,,http://www.wikidata.org/entity/Q159,2024-02-23T00:00:00Z,10.0,,
+http://www.wikidata.org/entity/Q1251468,1976 Sabah Air GAF Nomad crash,http://www.wikidata.org/entity/Q4048936,http://www.wikidata.org/entity/Q833,1976-06-06T00:00:00Z,11.0,,
+http://www.wikidata.org/entity/Q12592687,Korean Air Cargo Flight 6316,,http://www.wikidata.org/entity/Q148,1999-04-15T00:00:00Z,3.0,0.0,KE6316
+http://www.wikidata.org/entity/Q126010350,Singapore Airlines Flight 321,http://www.wikidata.org/entity/Q32245,http://www.wikidata.org/entity/Q836,2024-05-21T00:00:00Z,1.0,228.0,SQ321
+http://www.wikidata.org/entity/Q126165360,1957 Romanshorn airplane crash,,http://www.wikidata.org/entity/Q183,1957-06-18T00:00:00Z,9.0,0.0,
+http://www.wikidata.org/entity/Q1262739,JAT Flight 367,,http://www.wikidata.org/entity/Q183,1972-01-26T00:00:00Z,27.0,1.0,JU367
+http://www.wikidata.org/entity/Q1268842,1996 Croatia USAF CT-43 crash,,http://www.wikidata.org/entity/Q224,1996-04-03T00:00:00Z,35.0,0.0,
+http://www.wikidata.org/entity/Q1272213,SilkAir Flight 185,,http://www.wikidata.org/entity/Q252,1997-12-19T00:00:00Z,7.0,0.0,
+http://www.wikidata.org/entity/Q127241530,2023 U.S. Army MH-60 Black Hawk helicopter crash,,http://www.wikidata.org/entity/Q1028,2023-11-10T00:00:00Z,5.0,,
+http://www.wikidata.org/entity/Q127241982,2021 Buckland St Mary light aircraft crash,,http://www.wikidata.org/entity/Q145,2021-08-12T00:00:00Z,,,
+http://www.wikidata.org/entity/Q127413252,Gazpromavia Flight 9608,,http://www.wikidata.org/entity/Q159,2024-07-12T00:00:00Z,3.0,0.0,GZP9608
+http://www.wikidata.org/entity/Q1278112,Eastern Air Lines Flight 663,,http://www.wikidata.org/entity/Q30,1965-02-08T00:00:00Z,84.0,0.0,
+http://www.wikidata.org/entity/Q128796456,Voepass Linhas Aéreas Flight 2283,,http://www.wikidata.org/entity/Q155,2024-08-09T00:00:00Z,62.0,0.0,2Z283
+http://www.wikidata.org/entity/Q129573005,Thai Flying Service Flight 209,,http://www.wikidata.org/entity/Q869,2024-08-22T00:00:00Z,9.0,,
+http://www.wikidata.org/entity/Q130215030,2024 Kamchatka Mil Mi-8 crash,,http://www.wikidata.org/entity/Q159,2024-08-31T00:00:00Z,22.0,,
+http://www.wikidata.org/entity/Q130601581,1951 Aradan Aeroflot An-2 crash,,http://www.wikidata.org/entity/Q159,1951-04-21T00:00:00Z,4.0,0.0,
+http://www.wikidata.org/entity/Q130601831,Rocky Mountain Airways Flight 217,,http://www.wikidata.org/entity/Q30,1978-12-04T00:00:00Z,,,
+http://www.wikidata.org/entity/Q13103839,Luxair Flight 8852,http://www.wikidata.org/entity/Q726813,http://www.wikidata.org/entity/Q32,2003-09-23T00:00:00Z,0.0,,LG8852
+http://www.wikidata.org/entity/Q131062047,Trigana Air Flight 273,http://www.wikidata.org/entity/Q2247269,http://www.wikidata.org/entity/Q252,2024-11-05T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q131311,Smolensk air disaster,,http://www.wikidata.org/entity/Q159,2010-04-10T00:00:00Z,7.0,0.0,PLF101
+http://www.wikidata.org/entity/Q131319476,Swiftair Flight 5960,http://www.wikidata.org/entity/Q1613226,http://www.wikidata.org/entity/Q37,2024-11-25T00:00:00Z,1.0,3.0,QY5960
+http://www.wikidata.org/entity/Q131406823,2020 SLAF Y-12 Crash,,http://www.wikidata.org/entity/Q854,2020-01-03T00:00:00Z,4.0,,
+http://www.wikidata.org/entity/Q131406904,2011 Sri Lanka Kfir mid-air collision,,http://www.wikidata.org/entity/Q854,2011-03-01T00:00:00Z,1.0,,
+http://www.wikidata.org/entity/Q131553516,Nationwide Airlines Flight 723,,http://www.wikidata.org/entity/Q258,2007-11-07T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q131581945,Jeju Air Flight 2216,http://www.wikidata.org/entity/Q482642,http://www.wikidata.org/entity/Q884,2024-12-29T00:00:00Z,179.0,2.0,JJA2216
+http://www.wikidata.org/entity/Q131930345,Air Busan Flight 391,http://www.wikidata.org/entity/Q406932,http://www.wikidata.org/entity/Q884,2025-01-28T00:00:00Z,0.0,176.0,BX391
+http://www.wikidata.org/entity/Q131990794,Med Jets Flight 056,,http://www.wikidata.org/entity/Q30,2025-01-31T00:00:00Z,7.0,,
+http://www.wikidata.org/entity/Q1320380,Alitalia Flight 771,,http://www.wikidata.org/entity/Q668,1962-07-07T00:00:00Z,94.0,,
+http://www.wikidata.org/entity/Q132161853,Bering Air Flight 445,http://www.wikidata.org/entity/Q4035042,http://www.wikidata.org/entity/Q30,2025-02-06T00:00:00Z,10.0,,BRG445
+http://www.wikidata.org/entity/Q132197398,2025 Scottsdale Airport plane crash,,http://www.wikidata.org/entity/Q30,2025-02-10T00:00:00Z,,,
+http://www.wikidata.org/entity/Q133067560,2025 FA-50 fighter jet crash,,http://www.wikidata.org/entity/Q928,2025-03-04T00:00:00Z,2.0,0.0,
+http://www.wikidata.org/entity/Q1330826,FedEx Express Flight 80,http://www.wikidata.org/entity/Q782557,http://www.wikidata.org/entity/Q17,2009-03-23T00:00:00Z,2.0,0.0,
+http://www.wikidata.org/entity/Q133274463,American Airlines flight 1006,http://www.wikidata.org/entity/Q32396,http://www.wikidata.org/entity/Q30,2025-03-13T00:00:00Z,,,1006
+http://www.wikidata.org/entity/Q1334888,Iberia Airlines Flight 610,http://www.wikidata.org/entity/Q187972,http://www.wikidata.org/entity/Q29,1985-02-19T00:00:00Z,7.0,0.0,
+http://www.wikidata.org/entity/Q13365876,Nepal Airlines Flight 555,http://www.wikidata.org/entity/Q588909,http://www.wikidata.org/entity/Q837,2013-05-16T00:00:00Z,0.0,21.0,
+http://www.wikidata.org/entity/Q133816164,1996 Barton Aerodrome disaster,,http://www.wikidata.org/entity/Q145,1996-07-21T00:00:00Z,2.0,0.0,
+http://www.wikidata.org/entity/Q133844243,2015 Jalalabad USAF C-130J crash,,http://www.wikidata.org/entity/Q889,2015-10-02T00:00:00Z,11.0,0.0,
+http://www.wikidata.org/entity/Q133852788,2025 Hudson River helicopter crash,http://www.wikidata.org/entity/Q133854672,http://www.wikidata.org/entity/Q30,2025-04-10T00:00:00Z,6.0,0.0,NYO39
+http://www.wikidata.org/entity/Q133934509,The aerial collision at Jervis Bay,,http://www.wikidata.org/entity/Q408,1943-04-14T00:00:00Z,8.0,,
+http://www.wikidata.org/entity/Q13426579,Merpati Nusantara Airlines Flight 6517,,http://www.wikidata.org/entity/Q252,2013-06-10T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q13441139,Intercontinental de Aviación Flight 256,,http://www.wikidata.org/entity/Q739,1995-01-11T00:00:00Z,51.0,1.0,ITC256
+http://www.wikidata.org/entity/Q134734287,Air India VT-CFK,http://www.wikidata.org/entity/Q69906,http://www.wikidata.org/entity/Q668,1950-12-13T00:00:00Z,21.0,0.0,
+http://www.wikidata.org/entity/Q134880537,Air India Flight 171,http://www.wikidata.org/entity/Q69906,http://www.wikidata.org/entity/Q668,2025-06-12T00:00:00Z,229.0,1.0,AI171
+http://www.wikidata.org/entity/Q134882783,1990 East River helicopter crash,,http://www.wikidata.org/entity/Q30,1990-02-10T00:00:00Z,,,
+http://www.wikidata.org/entity/Q134884656,1950 Iwakuni B-29 crash,,http://www.wikidata.org/entity/Q17,1950-09-27T00:00:00Z,4.0,,
+http://www.wikidata.org/entity/Q135287568,2000 Charles de Gaulle runway collision,,http://www.wikidata.org/entity/Q142,2000-05-25T00:00:00Z,1.0,,
+http://www.wikidata.org/entity/Q135297762,Balkan airlines Il-18 Crash (1971),,http://www.wikidata.org/entity/Q219,1971-12-21T00:00:00Z,30.0,,
+http://www.wikidata.org/entity/Q135344921,1962 Air Nautic Boeing 307 crash,,http://www.wikidata.org/entity/Q142,1962-12-29T00:00:00Z,25.0,,
+http://www.wikidata.org/entity/Q135433157,2025 Dhaka fighter jet crash,,http://www.wikidata.org/entity/Q902,2025-07-21T00:00:00Z,34.0,,
+http://www.wikidata.org/entity/Q136018250,1939 Brighton Audax crash,,http://www.wikidata.org/entity/Q145,1939-02-11T00:00:00Z,4.0,,
+http://www.wikidata.org/entity/Q136213694,1941 crash of TB-7 near Kanash,,http://www.wikidata.org/entity/Q159,1941-11-13T00:00:00Z,4.0,6.0,
+http://www.wikidata.org/entity/Q13628966,Asiana Airlines Flight 214,http://www.wikidata.org/entity/Q211165,http://www.wikidata.org/entity/Q30,2013-07-06T00:00:00Z,3.0,304.0,
+http://www.wikidata.org/entity/Q136327675,1977 Praha-Ruzyne Airport collision,,http://www.wikidata.org/entity/Q213,1977-01-02T00:00:00Z,,,
+http://www.wikidata.org/entity/Q13642546,2013 Rediske Air DHC-3 Otter crash,,http://www.wikidata.org/entity/Q30,2013-07-07T00:00:00Z,10.0,,
+http://www.wikidata.org/entity/Q136440330,1945 Beinn Edra air disaster,,http://www.wikidata.org/entity/Q145,1945-03-03T00:00:00Z,,,
+http://www.wikidata.org/entity/Q136537299,Emirates SkyCargo Flight 9788,http://www.wikidata.org/entity/Q288836,http://www.wikidata.org/entity/Q148,2025-10-20T00:00:00Z,2.0,4.0,EK9788
+http://www.wikidata.org/entity/Q136544201,La Atalaya plane crash,,http://www.wikidata.org/entity/Q29,2025-09-26T00:00:00Z,1.0,,
+http://www.wikidata.org/entity/Q136659268,Mombasa Air Safari Flight 203,http://www.wikidata.org/entity/Q6897048,http://www.wikidata.org/entity/Q114,2025-10-28T00:00:00Z,11.0,0.0,
+http://www.wikidata.org/entity/Q136664092,VH-DZJ,,http://www.wikidata.org/entity/Q408,,2.0,2.0,
+http://www.wikidata.org/entity/Q136705120,UPS Airlines Flight 2976,http://www.wikidata.org/entity/Q1318737,http://www.wikidata.org/entity/Q30,2025-11-04T00:00:00Z,14.0,0.0,5X2976
+http://www.wikidata.org/entity/Q137673648,Buddha Air Flight 901,http://www.wikidata.org/entity/Q734942,http://www.wikidata.org/entity/Q837,2026-01-02T00:00:00Z,,,
+http://www.wikidata.org/entity/Q137801147,2026 Indonesia Air Transport ATR 42 crash,http://www.wikidata.org/entity/Q3106812,http://www.wikidata.org/entity/Q252,2026-01-17T00:00:00Z,10.0,0.0,AT45
+http://www.wikidata.org/entity/Q137832719,2026 Kumamoto helicopter crash,,http://www.wikidata.org/entity/Q17,2026-01-20T00:00:00Z,,,
+http://www.wikidata.org/entity/Q137883244,diplomats aircraft,,http://www.wikidata.org/entity/Q805,1973-04-30T00:00:00Z,3.0,,
+http://www.wikidata.org/entity/Q137909857,2026 Smart Air PK-SNS emergency landing,,http://www.wikidata.org/entity/Q252,2026-01-27T00:00:00Z,0.0,13.0,
+http://www.wikidata.org/entity/Q137920366,2026 Baramati Learjet 45 crash,,http://www.wikidata.org/entity/Q668,2026-01-28T00:00:00Z,5.0,0.0,
+http://www.wikidata.org/entity/Q137921022,8849 SATENA flight,http://www.wikidata.org/entity/Q1810636,http://www.wikidata.org/entity/Q739,2026-01-28T00:00:00Z,15.0,0.0,NSE8849
+http://www.wikidata.org/entity/Q138046886,crash of a De Havilland DH.104 Dove 1 in Saint-Bauzile,,http://www.wikidata.org/entity/Q142,1948-05-13T00:00:00Z,4.0,,
+http://www.wikidata.org/entity/Q138298400,1958 Yemen Airlines Douglas C-47 Skytrain crash,http://www.wikidata.org/entity/Q662091,http://www.wikidata.org/entity/Q38,1958-11-03T00:00:00Z,8.0,0.0,
+http://www.wikidata.org/entity/Q138344270,2026 Pelita Air crash in Nunukan,http://www.wikidata.org/entity/Q2197692,http://www.wikidata.org/entity/Q252,2026-02-19T00:00:00Z,1.0,,
+http://www.wikidata.org/entity/Q138502870,2026 Bolivian Air Force Hercules C-130 crash,,http://www.wikidata.org/entity/Q750,2026-02-27T00:00:00Z,22.0,,
+http://www.wikidata.org/entity/Q138766846,Air Canada Express Flight 8646,http://www.wikidata.org/entity/Q1458703,http://www.wikidata.org/entity/Q30,2026-03-22T00:00:00Z,2.0,74.0,AC8646
+http://www.wikidata.org/entity/Q138846527,2026 Crimea Antonov An-26 crash,,http://www.wikidata.org/entity/Q159,2026-03-31T00:00:00Z,29.0,,
+http://www.wikidata.org/entity/Q139601050,1926 Wolvertem Fokker F.VII crash,http://www.wikidata.org/entity/Q181912,http://www.wikidata.org/entity/Q31,1926-07-09T00:00:00Z,2.0,,
+http://www.wikidata.org/entity/Q139925917,1994 Han Kuang 11 Exercise Shootdown Incident,,http://www.wikidata.org/entity/Q865,1994-09-17T00:00:00Z,4.0,,
+http://www.wikidata.org/entity/Q140236513,2026 Edwards Air Force Base B-52 crash,,http://www.wikidata.org/entity/Q30,2026-06-15T00:00:00Z,8.0,,
+http://www.wikidata.org/entity/Q140451977,Crash of a Tupolev TU-134A in Liepaja,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q211,1979-03-22T00:00:00Z,4.0,1.0,
+http://www.wikidata.org/entity/Q140459803,K2 Airways Flight 1732,http://www.wikidata.org/entity/Q138544652,http://www.wikidata.org/entity/Q668,2026-07-07T00:00:00Z,,,
+http://www.wikidata.org/entity/Q140627408,1937 Beert KLM Douglas DC-2 crash,http://www.wikidata.org/entity/Q181912,http://www.wikidata.org/entity/Q31,1937-07-28T00:00:00Z,15.0,0.0,
+http://www.wikidata.org/entity/Q140799586,Kenmore Air Flight 140,http://www.wikidata.org/entity/Q3195152,http://www.wikidata.org/entity/Q30,2026-07-23T00:00:00Z,0.0,,KEN140
+http://www.wikidata.org/entity/Q1412033,The Day the Music Died,,http://www.wikidata.org/entity/Q30,1959-02-03T00:00:00Z,4.0,0.0,
+http://www.wikidata.org/entity/Q1414752,Pacific Air Lines Flight 773,,http://www.wikidata.org/entity/Q30,1964-05-07T00:00:00Z,44.0,0.0,PCF773
+http://www.wikidata.org/entity/Q1419491,2012 Mount Salak Sukhoi Superjet crash,,http://www.wikidata.org/entity/Q252,2012-05-09T00:00:00Z,45.0,0.0,
+http://www.wikidata.org/entity/Q14221532,Southwest Airlines Flight 345,http://www.wikidata.org/entity/Q503308,http://www.wikidata.org/entity/Q30,2013-07-22T00:00:00Z,,,
+http://www.wikidata.org/entity/Q1427211,Flash Airlines Flight 604,,http://www.wikidata.org/entity/Q1049,2004-01-03T00:00:00Z,148.0,0.0,
+http://www.wikidata.org/entity/Q1434037,Sknyliv air show disaster,,http://www.wikidata.org/entity/Q212,2002-07-27T00:00:00Z,77.0,2.0,
+http://www.wikidata.org/entity/Q1434047,1988 Remscheid A-10 crash,,http://www.wikidata.org/entity/Q183,1988-12-08T00:00:00Z,6.0,,
+http://www.wikidata.org/entity/Q1434078,Interflug Flight 450,,http://www.wikidata.org/entity/Q183,1972-08-14T00:00:00Z,156.0,0.0,
+http://www.wikidata.org/entity/Q1434079,1967 Nicosia Britannia disaster,,http://www.wikidata.org/entity/Q229,1967-04-20T00:00:00Z,126.0,4.0,
+http://www.wikidata.org/entity/Q1434082,1945 Empire State Building B-25 crash,,http://www.wikidata.org/entity/Q30,1945-07-28T00:00:00Z,14.0,0.0,
+http://www.wikidata.org/entity/Q1434099,Interflug Flight 102,,http://www.wikidata.org/entity/Q183,1989-06-17T00:00:00Z,21.0,92.0,
+http://www.wikidata.org/entity/Q1434101,1960 Munich Convair 340 crash,,http://www.wikidata.org/entity/Q183,1960-12-17T00:00:00Z,52.0,0.0,
+http://www.wikidata.org/entity/Q1434107,Stockport air disaster,,http://www.wikidata.org/entity/Q145,1967-06-04T00:00:00Z,72.0,12.0,
+http://www.wikidata.org/entity/Q1439744,Alitalia Flight 4128,,http://www.wikidata.org/entity/Q38,1978-12-23T00:00:00Z,108.0,21.0,
+http://www.wikidata.org/entity/Q14566965,UPS Airlines Flight 1354,http://www.wikidata.org/entity/Q1318737,http://www.wikidata.org/entity/Q30,2013-08-14T00:00:00Z,2.0,0.0,UPS 1354
+http://www.wikidata.org/entity/Q1463967,Luxair Flight 9642,http://www.wikidata.org/entity/Q726813,http://www.wikidata.org/entity/Q32,2002-11-06T00:00:00Z,20.0,2.0,LG9642
+http://www.wikidata.org/entity/Q1467946,Malaysian Airline System Flight 653,http://www.wikidata.org/entity/Q308952,http://www.wikidata.org/entity/Q833,1977-12-04T00:00:00Z,100.0,0.0,MAS653
+http://www.wikidata.org/entity/Q14711893,United Airlines Flight 2860,http://www.wikidata.org/entity/Q174769,http://www.wikidata.org/entity/Q16,1977-12-17T00:00:00Z,3.0,0.0,UA2860
+http://www.wikidata.org/entity/Q14712597,Imperial Airlines Flight 201/8,,http://www.wikidata.org/entity/Q30,1961-11-08T00:00:00Z,,2.0,
+http://www.wikidata.org/entity/Q14778492,Aeroflot Flight 528,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q212,1987-06-19T00:00:00Z,8.0,21.0,Н-528
+http://www.wikidata.org/entity/Q14799689,Jeju Air Flight 502,http://www.wikidata.org/entity/Q482642,http://www.wikidata.org/entity/Q884,2007-08-12T00:00:00Z,,,
+http://www.wikidata.org/entity/Q14875706,MK Airlines Flight 1602,,http://www.wikidata.org/entity/Q16,2004-10-14T00:00:00Z,7.0,0.0,
+http://www.wikidata.org/entity/Q1488972,UTA 772 bombing,,http://www.wikidata.org/entity/Q1032,1989-09-19T00:00:00Z,170.0,0.0,UT-772
+http://www.wikidata.org/entity/Q1494794,Garuda Indonesia Flight 200,http://www.wikidata.org/entity/Q512468,http://www.wikidata.org/entity/Q252,2007-03-07T00:00:00Z,21.0,119.0,
+http://www.wikidata.org/entity/Q15040730,1986 Aerovias Guatemala air crash,,http://www.wikidata.org/entity/Q774,1986-01-18T00:00:00Z,93.0,0.0,
+http://www.wikidata.org/entity/Q15063260,Aeroflot Flight 534,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1960-10-30T00:00:00Z,5.0,0.0,
+http://www.wikidata.org/entity/Q15074901,Moe aviation accident,,http://www.wikidata.org/entity/Q191,1977-04-19T00:00:00Z,,,
+http://www.wikidata.org/entity/Q15075468,Lao Airlines Flight 301,http://www.wikidata.org/entity/Q756172,http://www.wikidata.org/entity/Q819,2013-10-16T00:00:00Z,49.0,0.0,
+http://www.wikidata.org/entity/Q15080583,1993 Tehran mid-air collision,,http://www.wikidata.org/entity/Q794,1993-02-08T00:00:00Z,133.0,0.0,962
+http://www.wikidata.org/entity/Q15087637,Aeroflot Flight 2003,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1976-01-03T00:00:00Z,62.0,,2003
+http://www.wikidata.org/entity/Q1514690,1958 Tybee Island mid-air collision,,http://www.wikidata.org/entity/Q30,1958-02-05T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q1516710,TACA Flight 110,http://www.wikidata.org/entity/Q1139145,http://www.wikidata.org/entity/Q30,1988-05-24T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q15198571,Tatarstan Airlines Flight 363,,http://www.wikidata.org/entity/Q159,2013-11-17T00:00:00Z,50.0,0.0,
+http://www.wikidata.org/entity/Q15222832,Aeroflot Flight 51,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q211,1967-12-30T00:00:00Z,43.0,8.0,
+http://www.wikidata.org/entity/Q1524096,Northwest Airlines Flight 6231,,http://www.wikidata.org/entity/Q30,1974-12-01T00:00:00Z,3.0,0.0,
+http://www.wikidata.org/entity/Q1526574,South African Airways Flight 406,http://www.wikidata.org/entity/Q223763,http://www.wikidata.org/entity/Q258,1967-03-13T00:00:00Z,25.0,,
+http://www.wikidata.org/entity/Q152758,Spanair Flight 5022,,http://www.wikidata.org/entity/Q29,2008-08-20T00:00:00Z,154.0,18.0,JK5022
+http://www.wikidata.org/entity/Q1529863,Scandinavian Airlines System Flight 751,http://www.wikidata.org/entity/Q187854,http://www.wikidata.org/entity/Q34,1991-12-27T00:00:00Z,0.0,129.0,SK751
+http://www.wikidata.org/entity/Q15316781,Aeroflot Flight 892,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q183,1986-12-12T00:00:00Z,72.0,10.0,
+http://www.wikidata.org/entity/Q153570,2011 Reno Air Races crash,,http://www.wikidata.org/entity/Q30,2011-09-16T00:00:00Z,11.0,,
+http://www.wikidata.org/entity/Q15401460,CAAC Flight 2311,,http://www.wikidata.org/entity/Q148,1982-12-24T00:00:00Z,25.0,,
+http://www.wikidata.org/entity/Q15402066,1968 Kham Duc C-130 shootdown,,http://www.wikidata.org/entity/Q881,1968-05-12T00:00:00Z,155.0,,
+http://www.wikidata.org/entity/Q15407469,1961 President Airlines Douglas DC-6 crash,,http://www.wikidata.org/entity/Q27,1961-09-10T00:00:00Z,83.0,,
+http://www.wikidata.org/entity/Q15421709,2013 Irkutsk Antonov An-12 crash,,http://www.wikidata.org/entity/Q159,2013-12-26T00:00:00Z,9.0,0.0,
+http://www.wikidata.org/entity/Q15617473,Regional Airlines Flight 9288,,http://www.wikidata.org/entity/Q159,2005-03-16T00:00:00Z,28.0,24.0,РЛ-9288
+http://www.wikidata.org/entity/Q15621133,1952 Moses Lake C-124 crash,,http://www.wikidata.org/entity/Q30,1952-12-20T00:00:00Z,87.0,28.0,
+http://www.wikidata.org/entity/Q15621252,Aeroflot Flight 3603,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1981-11-17T00:00:00Z,99.0,68.0,
+http://www.wikidata.org/entity/Q15642802,Aeroflot Flight 2230,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1967-11-16T00:00:00Z,107.0,0.0,
+http://www.wikidata.org/entity/Q15644223,School of Civil Aviation Flight 111,,http://www.wikidata.org/entity/Q218,2014-01-20T00:00:00Z,2.0,,
+http://www.wikidata.org/entity/Q15644543,Aeroflot Flight 811,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1981-08-24T00:00:00Z,37.0,1.0,
+http://www.wikidata.org/entity/Q15644830,Föhren Citation crash,,http://www.wikidata.org/entity/Q183,2014-01-12T00:00:00Z,4.0,,
+http://www.wikidata.org/entity/Q15678865,Northwest Airlines Flight 421,,http://www.wikidata.org/entity/Q30,1948-08-29T00:00:00Z,37.0,0.0,
+http://www.wikidata.org/entity/Q15700578,Khabarovsk United Air Group Flight 3949,,http://www.wikidata.org/entity/Q159,1995-12-06T00:00:00Z,98.0,0.0,
+http://www.wikidata.org/entity/Q15726692,Mexicana de Aviación Flight 704,,http://www.wikidata.org/entity/Q96,1969-06-04T00:00:00Z,79.0,0.0,MX704
+http://www.wikidata.org/entity/Q15726739,2014 Algerian Air Force C-130 crash,,http://www.wikidata.org/entity/Q262,2014-02-11T00:00:00Z,76.0,1.0,
+http://www.wikidata.org/entity/Q15729274,1951 Miami Airlines C-46 crash,http://www.wikidata.org/entity/Q21498582,http://www.wikidata.org/entity/Q30,1951-12-16T00:00:00Z,58.0,,
+http://www.wikidata.org/entity/Q15733418,2014 748 Air Services HS 748 crash,http://www.wikidata.org/entity/Q15733359,http://www.wikidata.org/entity/Q958,2014-02-17T00:00:00Z,1.0,,
+http://www.wikidata.org/entity/Q1573486,LOT Polish Airlines Flight 007,http://www.wikidata.org/entity/Q204268,http://www.wikidata.org/entity/Q36,1980-03-14T00:00:00Z,10.0,0.0,
+http://www.wikidata.org/entity/Q1574101,Southwest Airlines Flight 1248,http://www.wikidata.org/entity/Q503308,http://www.wikidata.org/entity/Q30,2005-12-08T00:00:00Z,1.0,,
+http://www.wikidata.org/entity/Q1575474,Sabena Flight 548,,http://www.wikidata.org/entity/Q31,1961-02-15T00:00:00Z,72.0,0.0,SN548
+http://www.wikidata.org/entity/Q1576861,Libyan Arab Airlines Flight 114,http://www.wikidata.org/entity/Q1056939,http://www.wikidata.org/entity/Q801,1973-02-21T00:00:00Z,108.0,5.0,
+http://www.wikidata.org/entity/Q1583411,Pacific Southwest Airlines Flight 1771,,http://www.wikidata.org/entity/Q30,1987-12-07T00:00:00Z,43.0,0.0,
+http://www.wikidata.org/entity/Q15883521,Fernelmont air crash,,http://www.wikidata.org/entity/Q31,2013-10-19T00:00:00Z,11.0,,
+http://www.wikidata.org/entity/Q15905450,Johannisthal air disaster,,http://www.wikidata.org/entity/Q183,1913-10-17T00:00:00Z,28.0,,
+http://www.wikidata.org/entity/Q15907860,Dixmude disaster,,http://www.wikidata.org/entity/Q142,1923-12-23T00:00:00Z,52.0,,
+http://www.wikidata.org/entity/Q15907964,crash of the USS Shenandoah,,http://www.wikidata.org/entity/Q30,1925-09-03T00:00:00Z,14.0,,
+http://www.wikidata.org/entity/Q15911326,Malaysia Airlines Flight 2133,http://www.wikidata.org/entity/Q308952,http://www.wikidata.org/entity/Q833,1995-09-15T00:00:00Z,34.0,19.0,
+http://www.wikidata.org/entity/Q15913125,Japan Airlines Flight 792,http://www.wikidata.org/entity/Q213140,http://www.wikidata.org/entity/Q148,1982-09-17T00:00:00Z,0.0,124.0,
+http://www.wikidata.org/entity/Q15913937,2013 Bukavu Mi-8 crash,,http://www.wikidata.org/entity/Q974,2013-03-09T00:00:00Z,4.0,0.0,
+http://www.wikidata.org/entity/Q15916977,Uni Air Flight 873,http://www.wikidata.org/entity/Q701761,http://www.wikidata.org/entity/Q865,1999-01-01T00:00:00Z,1.0,95.0,UIA 873
+http://www.wikidata.org/entity/Q15924516,Alia Royal Jordanian Flight 600,http://www.wikidata.org/entity/Q824225,http://www.wikidata.org/entity/Q846,1979-03-13T00:00:00Z,45.0,19.0,600
+http://www.wikidata.org/entity/Q15940165,Haughey Air AgustaWestland AW139 crash,,http://www.wikidata.org/entity/Q145,2014-03-13T00:00:00Z,4.0,,
+http://www.wikidata.org/entity/Q15944664,Aeroflot Flight 721,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1964-09-02T00:00:00Z,87.0,6.0,
+http://www.wikidata.org/entity/Q15948989,Indian Airlines Flight 171,,http://www.wikidata.org/entity/Q668,1976-10-12T00:00:00Z,95.0,,171
+http://www.wikidata.org/entity/Q15961958,Aeroflot Flight 3519,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1984-12-23T00:00:00Z,110.0,1.0,
+http://www.wikidata.org/entity/Q16002175,Air Mauritanie Flight 625,,http://www.wikidata.org/entity/Q1025,1994-07-01T00:00:00Z,80.0,13.0,
+http://www.wikidata.org/entity/Q16056984,1954 BOAC Lockheed Constellation crash,,http://www.wikidata.org/entity/Q334,1954-03-13T00:00:00Z,33.0,,
+http://www.wikidata.org/entity/Q16057145,1998 Sudan Air Force crash,,http://www.wikidata.org/entity/Q958,1998-02-12T00:00:00Z,26.0,,
+http://www.wikidata.org/entity/Q16152293,Aeroflot Flight 103,,http://www.wikidata.org/entity/Q35,1957-08-15T00:00:00Z,,,
+http://www.wikidata.org/entity/Q16165837,Aeroflot Flight 699,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q874,1988-01-18T00:00:00Z,11.0,137.0,
+http://www.wikidata.org/entity/Q16165848,Aeroflot Flight A-53,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q874,1975-08-15T00:00:00Z,23.0,15.0,
+http://www.wikidata.org/entity/Q1616631,Hewa Bora Airways Flight 952,,http://www.wikidata.org/entity/Q974,2011-07-08T00:00:00Z,74.0,44.0,
+http://www.wikidata.org/entity/Q16202320,Pakistan International Airlines Flight 404,http://www.wikidata.org/entity/Q204887,http://www.wikidata.org/entity/Q148,1989-08-25T00:00:00Z,54.0,,404
+http://www.wikidata.org/entity/Q16219320,Aeroflot Flight 1802,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q212,1976-05-15T00:00:00Z,52.0,0.0,SU1802
+http://www.wikidata.org/entity/Q16261359,Korean Air Flight 2033,,http://www.wikidata.org/entity/Q884,1994-08-10T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q163107,Überlingen mid-air collision,http://www.wikidata.org/entity/Q326794,http://www.wikidata.org/entity/Q183,2002-07-01T00:00:00Z,71.0,0.0,BTC2937
+http://www.wikidata.org/entity/Q16485580,Aeroflot Flight 200,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1959-10-23T00:00:00Z,28.0,1.0,
+http://www.wikidata.org/entity/Q16485896,Aeroflot Flight 2174,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1971-12-01T00:00:00Z,57.0,,2174
+http://www.wikidata.org/entity/Q16486635,1976 Anapa mid-air collision,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q219,1976-09-09T00:00:00Z,70.0,0.0,
+http://www.wikidata.org/entity/Q16487613,Aeroflot Flight 558,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1972-08-31T00:00:00Z,102.0,0.0,
+http://www.wikidata.org/entity/Q16487761,Aeroflot Flight 415,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1962-07-28T00:00:00Z,81.0,0.0,
+http://www.wikidata.org/entity/Q16487764,Aeroflot Flight 1036,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q218,1972-10-01T00:00:00Z,109.0,0.0,1036
+http://www.wikidata.org/entity/Q16487895,Aeroflot Flight 164,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q232,1958-09-07T00:00:00Z,27.0,0.0,164
+http://www.wikidata.org/entity/Q16488139,Aeroflot Flight 98,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q232,1954-12-05T00:00:00Z,,18.0,
+http://www.wikidata.org/entity/Q16488145,Il-18 Accident,,http://www.wikidata.org/entity/Q232,1966-11-22T00:00:00Z,3.0,66.0,
+http://www.wikidata.org/entity/Q16488150,Aeroflot Flight 3843,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q232,1977-01-13T00:00:00Z,90.0,0.0,
+http://www.wikidata.org/entity/Q16488275,Aeroflot Flight 512,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q810,1973-01-01T00:00:00Z,9.0,83.0,SU512
+http://www.wikidata.org/entity/Q16488579,1962 Aral Sea Li-2 crash,,http://www.wikidata.org/entity/Q232,1962-03-09T00:00:00Z,,7.0,
+http://www.wikidata.org/entity/Q16488643,Aeroflot Flight 929,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1976-12-07T00:00:00Z,0.0,29.0,
+http://www.wikidata.org/entity/Q16488738,Aeroflot Flight 3772,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1966-08-27T00:00:00Z,,121.0,3772
+http://www.wikidata.org/entity/Q16495687,Aeroflot Flight 34,,http://www.wikidata.org/entity/Q230,1947-03-05T00:00:00Z,,,
+http://www.wikidata.org/entity/Q16495728,Aeroflot Flight 75,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q212,1974-01-06T00:00:00Z,,,Н-75
+http://www.wikidata.org/entity/Q16495731,Aeroflot Flight 826,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q212,1969-08-03T00:00:00Z,55.0,,Н-826
+http://www.wikidata.org/entity/Q16514461,2014 Jämijärvi Comp Air 8 crash,,http://www.wikidata.org/entity/Q33,2014-04-20T00:00:00Z,8.0,3.0,
+http://www.wikidata.org/entity/Q16532384,Aeroflot Flight 95,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1990-11-21T00:00:00Z,,189.0,95
+http://www.wikidata.org/entity/Q16532402,Malév Flight 641,,http://www.wikidata.org/entity/Q213,1981-10-21T00:00:00Z,0.0,90.0,
+http://www.wikidata.org/entity/Q16565864,Mi-24 helicopter accident in Drawsko Pomorskie,,http://www.wikidata.org/entity/Q36,2003-04-04T00:00:00Z,3.0,,
+http://www.wikidata.org/entity/Q16630128,Aeroflot Flight 773,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1971-10-10T00:00:00Z,25.0,0.0,
+http://www.wikidata.org/entity/Q16647239,Bangkok Airways Flight 125,http://www.wikidata.org/entity/Q806487,http://www.wikidata.org/entity/Q869,1990-11-21T00:00:00Z,38.0,0.0,
+http://www.wikidata.org/entity/Q16662312,1991 Jakarta Indonesian Air Force C-130 crash,,http://www.wikidata.org/entity/Q252,1991-10-05T00:00:00Z,,1.0,
+http://www.wikidata.org/entity/Q16662322,Aeroflot Flight 315 (1959),http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q212,1959-11-16T00:00:00Z,40.0,0.0,315
+http://www.wikidata.org/entity/Q16662323,Aeroflot Flight 315 (1960),http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q212,1960-02-26T00:00:00Z,32.0,1.0,315
+http://www.wikidata.org/entity/Q16662327,Aeroflot Flight 1969,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q212,1971-03-31T00:00:00Z,65.0,,1969
+http://www.wikidata.org/entity/Q16662335,1971 January 31 Surgut Aeroflot Antonov An-12 crash,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1971-01-31T00:00:00Z,7.0,,
+http://www.wikidata.org/entity/Q16662339,Aeroflot Flight 63,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q212,1971-11-12T00:00:00Z,48.0,0.0,Н-63
+http://www.wikidata.org/entity/Q16662341,Aeroflot Flight 928,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1984-01-28T00:00:00Z,4.0,49.0,928
+http://www.wikidata.org/entity/Q16662343,Aeroflot Flight 36 (1976),http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q212,1976-12-17T00:00:00Z,48.0,7.0,36
+http://www.wikidata.org/entity/Q16662353,Aeroflot Flight 227 (1969),http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1969-10-13T00:00:00Z,24.0,32.0,227
+http://www.wikidata.org/entity/Q16662357,Aeroflot Flight 37577,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1989-11-21T00:00:00Z,,8.0,37577
+http://www.wikidata.org/entity/Q16662359,Aeroflot Flight 134,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1977-12-09T00:00:00Z,,6.0,134
+http://www.wikidata.org/entity/Q16662364,1965 Aeroflot Antonov An-24 crash,,http://www.wikidata.org/entity/Q159,1965-03-20T00:00:00Z,43.0,4.0,
+http://www.wikidata.org/entity/Q16662366,Aeroflot Flight 6515,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1978-10-23T00:00:00Z,26.0,,6515
+http://www.wikidata.org/entity/Q16662368,Aeroflot Flight 13,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q227,1973-08-18T00:00:00Z,56.0,8.0,
+http://www.wikidata.org/entity/Q16662370,1970 Batagay An-24 crash,,http://www.wikidata.org/entity/Q159,1970-01-28T00:00:00Z,34.0,0.0,
+http://www.wikidata.org/entity/Q16662372,Aeroflot Flight F-77,,http://www.wikidata.org/entity/Q159,1986-03-02T00:00:00Z,,,Ф-77
+http://www.wikidata.org/entity/Q16662379,Aeroflot Flight 1661,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1970-04-01T00:00:00Z,45.0,0.0,
+http://www.wikidata.org/entity/Q16662381,Aeroflot Flight 1668,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1968-01-06T00:00:00Z,45.0,,
+http://www.wikidata.org/entity/Q16662383,Aeroflot Flight 6263,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1973-01-21T00:00:00Z,39.0,0.0,
+http://www.wikidata.org/entity/Q16662404,Aeroflot Flight 44,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q212,1972-08-11T00:00:00Z,,5.0,
+http://www.wikidata.org/entity/Q16662418,1950 Aeroflot Ilyushin Il-12 crash,,http://www.wikidata.org/entity/Q232,1950-07-30T00:00:00Z,,,
+http://www.wikidata.org/entity/Q16662431,Aeroflot Flight 466,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q265,1958-12-23T00:00:00Z,21.0,,
+http://www.wikidata.org/entity/Q16662433,Aeroflot Flight 498,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1981-06-14T00:00:00Z,48.0,,498
+http://www.wikidata.org/entity/Q16662438,1981 Heiss Island Il-14 crash,,http://www.wikidata.org/entity/Q159,1981-02-12T00:00:00Z,2.0,11.0,
+http://www.wikidata.org/entity/Q16662440,Aeroflot Flight 302,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1966-02-16T00:00:00Z,,,302
+http://www.wikidata.org/entity/Q16662442,Aeroflot Flight 227 (1956),http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q219,1956-04-22T00:00:00Z,,,227
+http://www.wikidata.org/entity/Q16662444,Aeroflot Flight 28,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q232,1969-06-28T00:00:00Z,40.0,0.0,
+http://www.wikidata.org/entity/Q16662446,Aeroflot Flight 40,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q265,1962-07-06T00:00:00Z,11.0,27.0,
+http://www.wikidata.org/entity/Q16662450,Aeroflot Flight 191,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q874,1963-03-05T00:00:00Z,12.0,42.0,
+http://www.wikidata.org/entity/Q16662460,Aeroflot Flight 1770,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1969-08-26T00:00:00Z,16.0,85.0,
+http://www.wikidata.org/entity/Q16662465,Aeroflot Flight 15,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1968-02-29T00:00:00Z,83.0,1.0,SU-15
+http://www.wikidata.org/entity/Q16662469,Aeroflot Flight 25,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1963-04-04T00:00:00Z,67.0,,25
+http://www.wikidata.org/entity/Q16662473,ČSA Flight 511,http://www.wikidata.org/entity/Q192653,http://www.wikidata.org/entity/Q1028,1961-07-12T00:00:00Z,72.0,,
+http://www.wikidata.org/entity/Q16662475,Aeroflot Flight 36 (1960),http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q212,1960-08-17T00:00:00Z,34.0,,036
+http://www.wikidata.org/entity/Q16662477,Aeroflot Flight 3012,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1970-12-31T00:00:00Z,6.0,80.0,SU-3012
+http://www.wikidata.org/entity/Q16662479,1974 Leningrad Aeroflot Il-18 crash,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1974-04-27T00:00:00Z,109.0,0.0,
+http://www.wikidata.org/entity/Q16662481,Aeroflot Flight 245,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1961-12-17T00:00:00Z,59.0,0.0,245
+http://www.wikidata.org/entity/Q16662484,1961 Mineralnye Vody Il-18 crash,,http://www.wikidata.org/entity/Q159,1961-12-31T00:00:00Z,32.0,77.0,
+http://www.wikidata.org/entity/Q16662485,Aeroflot Flight 5003 (1977),http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1977-02-15T00:00:00Z,77.0,21.0,5003
+http://www.wikidata.org/entity/Q16662495,Aeroflot Flight 343,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q32,1982-09-29T00:00:00Z,7.0,70.0,SU343
+http://www.wikidata.org/entity/Q16662497,1988 Soviet Air Force Il-76 crash,,http://www.wikidata.org/entity/Q399,1988-12-11T00:00:00Z,77.0,1.0,
+http://www.wikidata.org/entity/Q16662530,Tu-104 crash at Domodedovo airport,,http://www.wikidata.org/entity/Q159,1973-12-07T00:00:00Z,16.0,59.0,
+http://www.wikidata.org/entity/Q16662533,Aeroflot Flight 1912,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1971-07-25T00:00:00Z,97.0,29.0,1912
+http://www.wikidata.org/entity/Q16662534,Aeroflot Flight 3739 (1976),http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1976-02-09T00:00:00Z,24.0,90.0,3739
+http://www.wikidata.org/entity/Q16662537,Aeroflot Flight 2420,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1973-04-23T00:00:00Z,2.0,55.0,SU2420
+http://www.wikidata.org/entity/Q16662541,Aeroflot Flight 68,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1961-03-16T00:00:00Z,7.0,46.0,068
+http://www.wikidata.org/entity/Q16662545,Aeroflot Flight 12,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1963-07-13T00:00:00Z,33.0,2.0,SU-012
+http://www.wikidata.org/entity/Q16662549,Aeroflot Flight 5,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1960-10-20T00:00:00Z,3.0,65.0,05
+http://www.wikidata.org/entity/Q16662552,Aeroflot Flight 109,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1973-05-18T00:00:00Z,81.0,0.0,
+http://www.wikidata.org/entity/Q16662554,Aeroflot Flight 65,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1966-02-17T00:00:00Z,21.0,45.0,SU-065
+http://www.wikidata.org/entity/Q16662556,Aeroflot Flight 3153,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1968-03-07T00:00:00Z,1.0,48.0,3153
+http://www.wikidata.org/entity/Q16662558,Aeroflot Flight 5385,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1973-07-09T00:00:00Z,2.0,59.0,
+http://www.wikidata.org/entity/Q16662560,Aeroflot Flight 2022,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1973-12-16T00:00:00Z,51.0,0.0,
+http://www.wikidata.org/entity/Q16662562,Aeroflot Flight 3630,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q212,1970-09-02T00:00:00Z,37.0,0.0,3630
+http://www.wikidata.org/entity/Q16662566,Aeroflot Flight 513,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1965-03-08T00:00:00Z,30.0,9.0,
+http://www.wikidata.org/entity/Q16662568,Aeroflot Flight 5398,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q212,1973-12-23T00:00:00Z,17.0,0.0,5398
+http://www.wikidata.org/entity/Q16662570,Aeroflot Flight 99,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1965-11-11T00:00:00Z,32.0,32.0,
+http://www.wikidata.org/entity/Q16662576,1995 Lagos Harka Air Services Tu-134 crash,,http://www.wikidata.org/entity/Q1033,1995-06-24T00:00:00Z,16.0,64.0,
+http://www.wikidata.org/entity/Q16662578,Azerbaijan Airlines Flight 56,http://www.wikidata.org/entity/Q333679,http://www.wikidata.org/entity/Q227,1995-12-05T00:00:00Z,52.0,30.0,A-56
+http://www.wikidata.org/entity/Q16662581,Aeroflot Flight 5569,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1986-06-22T00:00:00Z,,64.0,5569
+http://www.wikidata.org/entity/Q16662583,Aeroflot Flight 7867,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1988-02-27T00:00:00Z,20.0,31.0,SU-7867
+http://www.wikidata.org/entity/Q16662589,Aeroflot Flight 2306,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1986-07-02T00:00:00Z,54.0,38.0,
+http://www.wikidata.org/entity/Q16662594,Aeroflot Flight 8556,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1991-05-23T00:00:00Z,15.0,168.0,SU-8556
+http://www.wikidata.org/entity/Q16662602,Aeroflot Flight 124,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q265,1974-12-14T00:00:00Z,,12.0,124
+http://www.wikidata.org/entity/Q16662611,1976 Aeroflot Yakovlev Yak-40 crash,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1976-12-17T00:00:00Z,7.0,,
+http://www.wikidata.org/entity/Q16662613,1993 Tajik Air Yakovlev Yak-40 incident,http://www.wikidata.org/entity/Q528978,http://www.wikidata.org/entity/Q863,1993-08-28T00:00:00Z,82.0,4.0,
+http://www.wikidata.org/entity/Q16662615,Aeroflot Flight 75 (1977),http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1977-10-13T00:00:00Z,2.0,20.0,75
+http://www.wikidata.org/entity/Q16662621,Aeroflot Flight 608,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1972-05-04T00:00:00Z,18.0,,В-608
+http://www.wikidata.org/entity/Q16662622,Aeroflot Flight 564,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1979-11-16T00:00:00Z,,2.0,564
+http://www.wikidata.org/entity/Q16662626,Aeroflot Flight H-925,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q212,1977-03-30T00:00:00Z,20.0,20.0,
+http://www.wikidata.org/entity/Q16662632,Aeroflot Flight 07,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q230,1985-10-11T00:00:00Z,,,
+http://www.wikidata.org/entity/Q16662637,Aeroflot Flight E-46,,http://www.wikidata.org/entity/Q399,1983-04-19T00:00:00Z,,,
+http://www.wikidata.org/entity/Q16662639,Aeroflot-Yugavia Flight 519,,http://www.wikidata.org/entity/Q159,1991-11-07T00:00:00Z,51.0,0.0,
+http://www.wikidata.org/entity/Q16662641,Aeroflot Flight 29674,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1988-01-24T00:00:00Z,,4.0,
+http://www.wikidata.org/entity/Q16662643,Aeroflot Flight 1080,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1978-10-07T00:00:00Z,38.0,,1080
+http://www.wikidata.org/entity/Q16662652,Aeroflot Flight 8175,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1990-09-14T00:00:00Z,4.0,125.0,
+http://www.wikidata.org/entity/Q16702239,1969 Yukhnov mid-air collision,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1969-06-23T00:00:00Z,120.0,0.0,
+http://www.wikidata.org/entity/Q16702245,1952 Leningrad mid-air collision,,http://www.wikidata.org/entity/Q159,1952-10-05T00:00:00Z,31.0,,376
+http://www.wikidata.org/entity/Q16702251,1981 Zheleznogorsk mid-air collision,,http://www.wikidata.org/entity/Q159,1981-09-18T00:00:00Z,40.0,,В-652
+http://www.wikidata.org/entity/Q16702257,1957 Kiev mid-air collision,,http://www.wikidata.org/entity/Q212,1957-08-17T00:00:00Z,15.0,,
+http://www.wikidata.org/entity/Q16702261,1953 Kemerovo mid-air collision,,http://www.wikidata.org/entity/Q159,1953-05-27T00:00:00Z,27.0,,18
+http://www.wikidata.org/entity/Q1671791,Invicta International Airlines Flight 435,,http://www.wikidata.org/entity/Q39,1973-04-10T00:00:00Z,108.0,37.0,
+http://www.wikidata.org/entity/Q16825829,1946 American Overseas Airlines Douglas DC-4 crash,,http://www.wikidata.org/entity/Q16,1946-10-03T00:00:00Z,39.0,0.0,
+http://www.wikidata.org/entity/Q16852705,Knight Air Flight 816,,http://www.wikidata.org/entity/Q145,1995-05-24T00:00:00Z,12.0,,
+http://www.wikidata.org/entity/Q16891192,2014 Lao People's Liberation Army Air Force An-74 crash,,http://www.wikidata.org/entity/Q819,2014-05-17T00:00:00Z,16.0,1.0,
+http://www.wikidata.org/entity/Q16894153,LIAT Flight 319,,http://www.wikidata.org/entity/Q145,1986-08-03T00:00:00Z,13.0,,
+http://www.wikidata.org/entity/Q16902099,Turkish Airlines Flight 301,http://www.wikidata.org/entity/Q4548,http://www.wikidata.org/entity/Q43,1974-01-26T00:00:00Z,66.0,7.0,
+http://www.wikidata.org/entity/Q16912881,1974 EgyptAir Tupolev Tu-154 crash,,http://www.wikidata.org/entity/Q79,1974-07-10T00:00:00Z,,0.0,
+http://www.wikidata.org/entity/Q16927543,Whyalla Airlines Flight 904,,http://www.wikidata.org/entity/Q408,2000-05-31T00:00:00Z,8.0,0.0,WW904
+http://www.wikidata.org/entity/Q16949343,1962 Turkish Airlines Taurus Mountains crash,http://www.wikidata.org/entity/Q4548,http://www.wikidata.org/entity/Q43,1962-03-08T00:00:00Z,11.0,0.0,
+http://www.wikidata.org/entity/Q16960383,Aeroservicios Ecuatorianos Flight 767-103,,http://www.wikidata.org/entity/Q736,1984-09-18T00:00:00Z,4.0,,
+http://www.wikidata.org/entity/Q16973631,1998 Occidental Petroleum Boeing 737 crash,,http://www.wikidata.org/entity/Q419,1998-05-05T00:00:00Z,75.0,,
+http://www.wikidata.org/entity/Q16974298,Continental Airlines Flight 603,,http://www.wikidata.org/entity/Q30,1978-03-01T00:00:00Z,4.0,196.0,
+http://www.wikidata.org/entity/Q16974827,Flagship Airlines Flight 3379,,http://www.wikidata.org/entity/Q30,1994-12-13T00:00:00Z,15.0,,
+http://www.wikidata.org/entity/Q16982409,National Airlines Flight 16,http://www.wikidata.org/entity/Q899774,http://www.wikidata.org/entity/Q30,1945-10-05T00:00:00Z,,,
+http://www.wikidata.org/entity/Q16983329,Aviogenex Flight 130,,http://www.wikidata.org/entity/Q224,1971-05-23T00:00:00Z,78.0,5.0,
+http://www.wikidata.org/entity/Q16985739,Transocean Air Lines Flight 512,,http://www.wikidata.org/entity/Q30,1953-07-12T00:00:00Z,58.0,0.0,
+http://www.wikidata.org/entity/Q16986203,Inex-Adria Aviopromet Flight 450,,http://www.wikidata.org/entity/Q213,1975-10-30T00:00:00Z,79.0,41.0,JP450
+http://www.wikidata.org/entity/Q16999014,Nigeria Airways Flight 925,,http://www.wikidata.org/entity/Q1033,1969-11-20T00:00:00Z,87.0,0.0,WT825
+http://www.wikidata.org/entity/Q17017873,United Air Lines Flight 553,http://www.wikidata.org/entity/Q174769,http://www.wikidata.org/entity/Q30,1972-12-08T00:00:00Z,45.0,18.0,
+http://www.wikidata.org/entity/Q17027651,United Airlines Flight 2885,http://www.wikidata.org/entity/Q174769,http://www.wikidata.org/entity/Q30,1983-01-11T00:00:00Z,3.0,0.0,UA2885
+http://www.wikidata.org/entity/Q1704625,2012 Kazakhstan Antonov An-72 crash,,http://www.wikidata.org/entity/Q232,2012-12-25T00:00:00Z,27.0,0.0,
+http://www.wikidata.org/entity/Q17069589,2002 Prestige Airlines Boeing 707 crash,,http://www.wikidata.org/entity/Q929,2002-07-04T00:00:00Z,28.0,,
+http://www.wikidata.org/entity/Q17181586,2014 Ukrainian Air Force Il-76 shootdown,,http://www.wikidata.org/entity/Q212,2014-06-14T00:00:00Z,49.0,,
+http://www.wikidata.org/entity/Q17212919,1966 Japan Airlines Convair 880 crash,http://www.wikidata.org/entity/Q213140,http://www.wikidata.org/entity/Q17,1966-08-26T00:00:00Z,5.0,,
+http://www.wikidata.org/entity/Q17228952,All Nippon Airways Flight 25 (1958),http://www.wikidata.org/entity/Q204284,http://www.wikidata.org/entity/Q17,1958-08-12T00:00:00Z,33.0,,
+http://www.wikidata.org/entity/Q17374244,Skyward International Aviation Fokker 50,,http://www.wikidata.org/entity/Q114,2014-07-02T00:00:00Z,4.0,,
+http://www.wikidata.org/entity/Q1739099,Kenya Airways Flight 507,http://www.wikidata.org/entity/Q638900,http://www.wikidata.org/entity/Q1009,2007-05-05T00:00:00Z,114.0,0.0,
+http://www.wikidata.org/entity/Q173973,Swissair Flight 306,,http://www.wikidata.org/entity/Q39,1963-09-04T00:00:00Z,80.0,0.0,
+http://www.wikidata.org/entity/Q17494984,Aeroflot Flight 207,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q230,1960-06-10T00:00:00Z,31.0,,207
+http://www.wikidata.org/entity/Q17496200,Sepahan Airlines Flight 5915,,http://www.wikidata.org/entity/Q794,2014-08-10T00:00:00Z,39.0,9.0,
+http://www.wikidata.org/entity/Q17502291,Japan Airlines Flight 422,http://www.wikidata.org/entity/Q213140,http://www.wikidata.org/entity/Q30,1975-12-16T00:00:00Z,,,
+http://www.wikidata.org/entity/Q17505930,2014 Cessna Citation 560 XLS+ crash,,http://www.wikidata.org/entity/Q155,2014-08-13T00:00:00Z,7.0,,
+http://www.wikidata.org/entity/Q17509619,1952 Mount Gannett C-124 crash,,http://www.wikidata.org/entity/Q30,1952-11-22T00:00:00Z,52.0,0.0,
+http://www.wikidata.org/entity/Q17509912,Commonwealth Commuter Flight 317,,http://www.wikidata.org/entity/Q30,1974-01-06T00:00:00Z,12.0,,
+http://www.wikidata.org/entity/Q17562785,1952 Aeroflot Ilyushin Il-12 crash,,http://www.wikidata.org/entity/Q159,1952-04-25T00:00:00Z,,1.0,
+http://www.wikidata.org/entity/Q17563051,Aeroflot Flight 17,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1949-05-13T00:00:00Z,,,17
+http://www.wikidata.org/entity/Q1762806,RusAir Flight 9605,,http://www.wikidata.org/entity/Q159,2011-06-20T00:00:00Z,47.0,5.0,ЦГИ-9605 (РЛУ-243)
+http://www.wikidata.org/entity/Q1775068,Alitalia Flight 112,,http://www.wikidata.org/entity/Q38,1972-05-05T00:00:00Z,115.0,,
+http://www.wikidata.org/entity/Q1779841,Lufthansa Cargo Flight 8460,http://www.wikidata.org/entity/Q265138,http://www.wikidata.org/entity/Q851,2010-07-27T00:00:00Z,0.0,2.0,LH8460
+http://www.wikidata.org/entity/Q1781104,Southern Airways Flight 242,,http://www.wikidata.org/entity/Q30,1977-04-04T00:00:00Z,63.0,22.0,SO242
+http://www.wikidata.org/entity/Q1797867,LANSA Flight 508,,http://www.wikidata.org/entity/Q419,1971-12-24T00:00:00Z,91.0,1.0,
+http://www.wikidata.org/entity/Q17988809,2014 SOCATA TBM crash,,http://www.wikidata.org/entity/Q145,2014-09-05T00:00:00Z,2.0,0.0,
+http://www.wikidata.org/entity/Q17996734,Aeroflot Flight 542,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1965-03-07T00:00:00Z,,,542
+http://www.wikidata.org/entity/Q17996745,Aeroflot Flight 4,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1958-08-15T00:00:00Z,64.0,0.0,04
+http://www.wikidata.org/entity/Q18091367,Finnair Flight 915 missile explosion incident,http://www.wikidata.org/entity/Q201821,http://www.wikidata.org/entity/Q20,1987-12-23T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q18147604,Aero Flight 217,http://www.wikidata.org/entity/Q201821,http://www.wikidata.org/entity/Q33,1963-11-08T00:00:00Z,22.0,3.0,
+http://www.wikidata.org/entity/Q18207072,FedEx Express Flight 630,http://www.wikidata.org/entity/Q782557,http://www.wikidata.org/entity/Q30,2006-07-28T00:00:00Z,0.0,3.0,
+http://www.wikidata.org/entity/Q182085,2011 Lokomotiv Yaroslavl air disaster,,http://www.wikidata.org/entity/Q159,2011-09-07T00:00:00Z,0.0,78.0,
+http://www.wikidata.org/entity/Q18235521,Aeroflot Flight 11,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1957-01-01T00:00:00Z,,1.0,
+http://www.wikidata.org/entity/Q18236709,1948 Bodaybo Li-2 crash,,http://www.wikidata.org/entity/Q159,1948-04-24T00:00:00Z,,1.0,
+http://www.wikidata.org/entity/Q18237557,1957 Romanian Ilyushin Il-14 crash,,http://www.wikidata.org/entity/Q159,1957-11-04T00:00:00Z,,12.0,
+http://www.wikidata.org/entity/Q1827323,Pan Am Flight 214,,http://www.wikidata.org/entity/Q30,1963-12-08T00:00:00Z,81.0,0.0,
+http://www.wikidata.org/entity/Q18280470,Aeroflot Flight 971,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1954-08-26T00:00:00Z,,1.0,971
+http://www.wikidata.org/entity/Q18337111,1983 Sugashima JASDF C-1 crashes,,http://www.wikidata.org/entity/Q17,1983-04-19T00:00:00Z,14.0,,
+http://www.wikidata.org/entity/Q18338673,2000 Oki Islands C-1 crash,,http://www.wikidata.org/entity/Q17,2000-06-28T00:00:00Z,5.0,,
+http://www.wikidata.org/entity/Q18396270,Aeroflot Flight 846,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,2008-06-30T00:00:00Z,,112.0,SU846
+http://www.wikidata.org/entity/Q18396768,2014 Virgin Galactic crash,http://www.wikidata.org/entity/Q373225,http://www.wikidata.org/entity/Q30,2014-10-31T00:00:00Z,1.0,1.0,
+http://www.wikidata.org/entity/Q18398545,Accidente de un Sud Aviation Caravelle de Royal Air Maroc en 1973,http://www.wikidata.org/entity/Q866103,http://www.wikidata.org/entity/Q1028,1973-12-22T00:00:00Z,106.0,0.0,
+http://www.wikidata.org/entity/Q18398549,1933 Tupolev ANT-7 Podolsk crash,,http://www.wikidata.org/entity/Q159,1933-09-05T00:00:00Z,8.0,,
+http://www.wikidata.org/entity/Q18398551,1931 Tupolev ANT-9 crash,,http://www.wikidata.org/entity/Q159,1931-07-12T00:00:00Z,,0.0,
+http://www.wikidata.org/entity/Q18398577,Aeroflot Flight 414,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q184,1960-07-21T00:00:00Z,8.0,21.0,414
+http://www.wikidata.org/entity/Q18398580,1958 Lazo Il-12 crash,,http://www.wikidata.org/entity/Q159,1957-09-19T00:00:00Z,,,
+http://www.wikidata.org/entity/Q18398581,Aeroflot Flight 10 (1957),http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1957-12-18T00:00:00Z,,,10
+http://www.wikidata.org/entity/Q18398586,Aeroflot Flight 2723,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1966-04-23T00:00:00Z,33.0,0.0,SU2723
+http://www.wikidata.org/entity/Q18398589,Aeroflot Flight 663,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q230,1963-08-24T00:00:00Z,32.0,,663
+http://www.wikidata.org/entity/Q18398591,Aeroflot Flight 213 (1962),http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1962-09-18T00:00:00Z,,,213
+http://www.wikidata.org/entity/Q18398603,1983 Chosonminhang Ilyushin Il-62 crash,,http://www.wikidata.org/entity/Q1006,1983-07-01T00:00:00Z,23.0,,
+http://www.wikidata.org/entity/Q18398605,1996 Abakan Ilyushin Il-76 crash,,http://www.wikidata.org/entity/Q159,1996-11-27T00:00:00Z,23.0,,
+http://www.wikidata.org/entity/Q18398627,Aeroflot Flight 3,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1962-09-03T00:00:00Z,86.0,0.0,03
+http://www.wikidata.org/entity/Q18398632,Malév Flight 110,,http://www.wikidata.org/entity/Q212,1971-09-16T00:00:00Z,49.0,,
+http://www.wikidata.org/entity/Q18398634,TU-134 plane crash,,http://www.wikidata.org/entity/Q159,1966-01-14T00:00:00Z,,,
+http://www.wikidata.org/entity/Q18398637,1980 Nouadhibou Tupolev Tu-154 crash,,http://www.wikidata.org/entity/Q1025,1980-08-07T00:00:00Z,1.0,167.0,
+http://www.wikidata.org/entity/Q18398641,1994 Vanavara air disaster,,http://www.wikidata.org/entity/Q159,1994-09-26T00:00:00Z,28.0,,
+http://www.wikidata.org/entity/Q18409073,Aeroflot Flight 205,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1959-01-18T00:00:00Z,25.0,,205
+http://www.wikidata.org/entity/Q18466708,1976 Lloyd Aéreo Boliviano Boeing 707 crash,,http://www.wikidata.org/entity/Q750,1976-10-13T00:00:00Z,88.0,0.0,
+http://www.wikidata.org/entity/Q18471497,Aerolíneas Argentinas Flight 670,,http://www.wikidata.org/entity/Q414,1957-12-08T00:00:00Z,61.0,,
+http://www.wikidata.org/entity/Q18481765,Milton Verdi case,,http://www.wikidata.org/entity/Q750,1960-08-29T00:00:00Z,2.0,,
+http://www.wikidata.org/entity/Q18510562,Vietnam Airlines Flight 474,http://www.wikidata.org/entity/Q174386,http://www.wikidata.org/entity/Q881,1992-11-14T00:00:00Z,30.0,,
+http://www.wikidata.org/entity/Q1851980,Malév Flight 240,,http://www.wikidata.org/entity/Q1016,1975-09-30T00:00:00Z,60.0,0.0,MA-240
+http://www.wikidata.org/entity/Q18535080,2014 Armenian Mil Mi-24 shootdown,,http://www.wikidata.org/entity/Q227,2014-11-12T00:00:00Z,3.0,0.0,
+http://www.wikidata.org/entity/Q18543266,Pan Am Flight 799,,http://www.wikidata.org/entity/Q30,1968-12-26T00:00:00Z,3.0,,
+http://www.wikidata.org/entity/Q18603229,Sky Airline Flight 101,http://www.wikidata.org/entity/Q1427299,http://www.wikidata.org/entity/Q298,2012-07-18T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q1860910,Yeti Airlines Flight 101,http://www.wikidata.org/entity/Q1480118,http://www.wikidata.org/entity/Q837,2008-10-08T00:00:00Z,18.0,1.0,
+http://www.wikidata.org/entity/Q18635156,1962 Northwest Orient Airlines Sitka Sound ditching,,http://www.wikidata.org/entity/Q30,1962-10-22T00:00:00Z,0.0,102.0,NW293
+http://www.wikidata.org/entity/Q1865863,Cavalese cable car disaster,,http://www.wikidata.org/entity/Q38,1998-02-03T00:00:00Z,20.0,,
+http://www.wikidata.org/entity/Q18696104,Vuelo 324 de Avient Aviation,,http://www.wikidata.org/entity/Q148,2009-11-28T00:00:00Z,3.0,,
+http://www.wikidata.org/entity/Q18816869,Aeroflot Flight 765,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1968-07-29T00:00:00Z,,,795
+http://www.wikidata.org/entity/Q19000000,Jeju Island military aircraft crash,,http://www.wikidata.org/entity/Q884,1982-02-05T00:00:00Z,53.0,,
+http://www.wikidata.org/entity/Q19032749,Alaska Airlines Flight 779,http://www.wikidata.org/entity/Q822614,http://www.wikidata.org/entity/Q30,1961-07-21T00:00:00Z,6.0,0.0,
+http://www.wikidata.org/entity/Q1922654,Henan Airlines Flight 8387,,http://www.wikidata.org/entity/Q148,2010-08-24T00:00:00Z,44.0,54.0,
+http://www.wikidata.org/entity/Q1945321,Pulkovo Aviation Enterprise Flight 612,,http://www.wikidata.org/entity/Q212,2006-08-22T00:00:00Z,170.0,0.0,PLK-612
+http://www.wikidata.org/entity/Q19569675,Delta Air Lines Flight 1086,http://www.wikidata.org/entity/Q188920,http://www.wikidata.org/entity/Q30,2015-03-05T00:00:00Z,0.0,132.0,DL1086
+http://www.wikidata.org/entity/Q19574749,American Airlines Flight 514,http://www.wikidata.org/entity/Q32396,http://www.wikidata.org/entity/Q30,1959-08-15T00:00:00Z,,0.0,
+http://www.wikidata.org/entity/Q19574789,2015 Eglin Air Force Base helicopter crash,,http://www.wikidata.org/entity/Q30,2015-03-10T00:00:00Z,11.0,0.0,
+http://www.wikidata.org/entity/Q19721701,Aeroflot Flight 55,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1969-09-01T00:00:00Z,22.0,5.0,
+http://www.wikidata.org/entity/Q19740658,Sriwijaya Air Flight 62,http://www.wikidata.org/entity/Q619089,http://www.wikidata.org/entity/Q252,2008-08-27T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q1977092,2007 Mogadishu TransAVIAexport Airlines Il-76 crash,,http://www.wikidata.org/entity/Q1045,2007-03-23T00:00:00Z,11.0,0.0,
+http://www.wikidata.org/entity/Q19907679,Aeroflot Flight 120,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q265,1959-12-13T00:00:00Z,30.0,0.0,
+http://www.wikidata.org/entity/Q19907854,Aeroflot Flight 50,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1965-09-04T00:00:00Z,,2.0,
+http://www.wikidata.org/entity/Q19908903,Kuban Airlines Flight 5719,,http://www.wikidata.org/entity/Q399,1993-12-26T00:00:00Z,35.0,1.0,
+http://www.wikidata.org/entity/Q19909326,Aeroflot Flight 35,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1953-04-30T00:00:00Z,1.0,22.0,35
+http://www.wikidata.org/entity/Q19909531,Bagram Il-76 crash of 1979,,http://www.wikidata.org/entity/Q889,1979-12-25T00:00:00Z,43.0,,
+http://www.wikidata.org/entity/Q19909578,1946 Kolpny Li-2 crash,,http://www.wikidata.org/entity/Q159,1946-01-14T00:00:00Z,,0.0,
+http://www.wikidata.org/entity/Q19909685,Aeroflot Flight 637,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1984-12-04T00:00:00Z,10.0,0.0,
+http://www.wikidata.org/entity/Q19909928,Aeroflot Flight 783,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1953-10-27T00:00:00Z,,10.0,105
+http://www.wikidata.org/entity/Q19909934,Aeroflot Flight 105,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1958-06-09T00:00:00Z,,,105
+http://www.wikidata.org/entity/Q19909941,Aeroflot Flight 5 (1953),http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1953-11-04T00:00:00Z,5.0,,
+http://www.wikidata.org/entity/Q19910205,MIAT Mongolian Airlines Flight 557,,http://www.wikidata.org/entity/Q711,1995-09-21T00:00:00Z,,1.0,
+http://www.wikidata.org/entity/Q19910425,Aeroflot Flight 553,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1966-03-26T00:00:00Z,,,553
+http://www.wikidata.org/entity/Q19915374,Olimp Air Flight 4653,,http://www.wikidata.org/entity/Q232,2015-01-20T00:00:00Z,,1.0,
+http://www.wikidata.org/entity/Q19916799,Aeroflot Flight 613,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1960-07-20T00:00:00Z,23.0,0.0,613
+http://www.wikidata.org/entity/Q19917124,Aeroflot Flight 19,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1973-11-02T00:00:00Z,2.0,29.0,Ф-19
+http://www.wikidata.org/entity/Q1993878,1975 Tan Son Nhut C-5 accident,,http://www.wikidata.org/entity/Q881,1975-04-04T00:00:00Z,138.0,586.0,
+http://www.wikidata.org/entity/Q1995382,1963 Aeroflot Tupolev Tu-124 Neva river ditching,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1963-08-21T00:00:00Z,0.0,52.0,366
+http://www.wikidata.org/entity/Q2003519,Air Canada Flight 797,http://www.wikidata.org/entity/Q185339,http://www.wikidata.org/entity/Q30,1983-06-02T00:00:00Z,23.0,23.0,AC797
+http://www.wikidata.org/entity/Q20042820,2015 Ebino OH-6DA crash,,http://www.wikidata.org/entity/Q17,2015-02-12T00:00:00Z,3.0,,
+http://www.wikidata.org/entity/Q20080729,Sierra Pacific Airlines Flight 802,http://www.wikidata.org/entity/Q7511541,http://www.wikidata.org/entity/Q30,1974-03-13T00:00:00Z,,0.0,
+http://www.wikidata.org/entity/Q2010333,2012 Norwegian Air Force C-130 crash,,http://www.wikidata.org/entity/Q34,2012-03-15T00:00:00Z,5.0,0.0,
+http://www.wikidata.org/entity/Q2020397,Aria Air Flight 1525,http://www.wikidata.org/entity/Q654248,http://www.wikidata.org/entity/Q794,2009-07-24T00:00:00Z,5.0,157.0,
+http://www.wikidata.org/entity/Q2025205,Sosoliso Airlines Flight 1145,,http://www.wikidata.org/entity/Q1033,2005-12-10T00:00:00Z,107.0,,
+http://www.wikidata.org/entity/Q20263929,"Aviation accident near Cugir, 1964",,http://www.wikidata.org/entity/Q218,1964-10-09T00:00:00Z,31.0,0.0,
+http://www.wikidata.org/entity/Q2033524,Red Wings Airlines Flight 9268,http://www.wikidata.org/entity/Q1348402,http://www.wikidata.org/entity/Q159,2012-12-29T00:00:00Z,5.0,3.0,
+http://www.wikidata.org/entity/Q2054084,LOT Polish Airlines Flight 16,http://www.wikidata.org/entity/Q204268,http://www.wikidata.org/entity/Q36,2011-11-01T00:00:00Z,0.0,231.0,LO16
+http://www.wikidata.org/entity/Q2062178,Kegworth air disaster,,http://www.wikidata.org/entity/Q145,1989-01-08T00:00:00Z,47.0,79.0,
+http://www.wikidata.org/entity/Q20714105,Loganair Flight 670A,http://www.wikidata.org/entity/Q934983,http://www.wikidata.org/entity/Q145,2001-02-27T00:00:00Z,2.0,0.0,
+http://www.wikidata.org/entity/Q20743315,Capital Airlines Flight 300,,http://www.wikidata.org/entity/Q30,1958-05-20T00:00:00Z,11.0,0.0,
+http://www.wikidata.org/entity/Q2078823,1960 New York air disaster,http://www.wikidata.org/entity/Q174769,http://www.wikidata.org/entity/Q30,1960-12-16T00:00:00Z,134.0,0.0,
+http://www.wikidata.org/entity/Q20811151,Latin Carga Convair CV-880 crash,,http://www.wikidata.org/entity/Q717,1980-11-03T00:00:00Z,4.0,,
+http://www.wikidata.org/entity/Q20823597,Trigana Air Service Flight 267,http://www.wikidata.org/entity/Q2247269,http://www.wikidata.org/entity/Q252,2015-08-16T00:00:00Z,54.0,0.0,IL267
+http://www.wikidata.org/entity/Q20936223,ČSA Flight 523,http://www.wikidata.org/entity/Q192653,http://www.wikidata.org/entity/Q16,1967-09-05T00:00:00Z,37.0,32.0,OK523
+http://www.wikidata.org/entity/Q20937958,EgyptAir Flight 667,http://www.wikidata.org/entity/Q374740,http://www.wikidata.org/entity/Q79,2011-07-29T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q20977783,Crash of Halifax V9977,,http://www.wikidata.org/entity/Q145,1942-06-07T00:00:00Z,11.0,,
+http://www.wikidata.org/entity/Q20986939,Siberia Airlines Flight 852,,http://www.wikidata.org/entity/Q159,2002-01-14T00:00:00Z,0.0,139.0,
+http://www.wikidata.org/entity/Q20986940,1963 Ankara mid-air collision,http://www.wikidata.org/entity/Q859510,http://www.wikidata.org/entity/Q43,1963-02-01T00:00:00Z,,0.0,
+http://www.wikidata.org/entity/Q20986941,1969 La Paz Lloyd Aéreo Boliviano Douglas DC-6 crash,,http://www.wikidata.org/entity/Q750,1969-09-26T00:00:00Z,74.0,0.0,
+http://www.wikidata.org/entity/Q20986944,World Airways Flight 830,,http://www.wikidata.org/entity/Q30,1960-09-19T00:00:00Z,80.0,14.0,WO830/18
+http://www.wikidata.org/entity/Q20986945,1966 Flying Tiger Line Canadair CL-44 crash,,http://www.wikidata.org/entity/Q881,1966-12-24T00:00:00Z,111.0,0.0,
+http://www.wikidata.org/entity/Q20986946,Mexicana de Aviación Flight 801,,http://www.wikidata.org/entity/Q96,1969-09-21T00:00:00Z,,91.0,MX801
+http://www.wikidata.org/entity/Q20986949,1956 Niles Canyon Douglas R5D-2 crash,,http://www.wikidata.org/entity/Q30,1956-02-17T00:00:00Z,,0.0,
+http://www.wikidata.org/entity/Q20986954,Paradise Airlines Flight 901A,,http://www.wikidata.org/entity/Q30,1964-03-01T00:00:00Z,85.0,0.0,PD901A
+http://www.wikidata.org/entity/Q21006061,MASwings Flight 3002,http://www.wikidata.org/entity/Q768164,http://www.wikidata.org/entity/Q833,2013-10-10T00:00:00Z,2.0,,MH3002
+http://www.wikidata.org/entity/Q21012123,1921 SNETA Farman Goliath ditching,,http://www.wikidata.org/entity/Q145,1921-08-26T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q21051163,1943 St. Louis glider accident,,http://www.wikidata.org/entity/Q30,1943-08-01T00:00:00Z,10.0,0.0,
+http://www.wikidata.org/entity/Q211087,Pan Am Flight 103,,http://www.wikidata.org/entity/Q145,1988-12-21T00:00:00Z,11.0,0.0,PA103
+http://www.wikidata.org/entity/Q2112721,Aviastar-TU Flight 1906,http://www.wikidata.org/entity/Q2051563,http://www.wikidata.org/entity/Q159,2010-03-22T00:00:00Z,0.0,8.0,
+http://www.wikidata.org/entity/Q21282782,Metrojet Flight 9268,,http://www.wikidata.org/entity/Q79,2015-10-31T00:00:00Z,7.0,0.0,
+http://www.wikidata.org/entity/Q21400540,Dynamic Airways Flight 405,http://www.wikidata.org/entity/Q17109272,http://www.wikidata.org/entity/Q30,2015-10-29T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q21661984,United States Air Force Flight 441/13,,http://www.wikidata.org/entity/Q30,1956-07-13T00:00:00Z,,20.0,
+http://www.wikidata.org/entity/Q21995232,West Air Sweden Flight 294,http://www.wikidata.org/entity/Q605968,http://www.wikidata.org/entity/Q34,2016-01-08T00:00:00Z,2.0,0.0,PT294
+http://www.wikidata.org/entity/Q2202322,S7 Airlines Flight 778,,http://www.wikidata.org/entity/Q159,2006-07-09T00:00:00Z,125.0,78.0,SBI778
+http://www.wikidata.org/entity/Q22093747,Avia Traffic Company Flight 768,http://www.wikidata.org/entity/Q4034638,http://www.wikidata.org/entity/Q813,2015-11-22T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q22093755,1977 Gary Powers helicopter crash,,http://www.wikidata.org/entity/Q30,1977-08-01T00:00:00Z,2.0,,
+http://www.wikidata.org/entity/Q223288,Tenerife airport disaster,http://www.wikidata.org/entity/Q181912,http://www.wikidata.org/entity/Q29,1977-03-27T00:00:00Z,583.0,,KL4805
+http://www.wikidata.org/entity/Q2239140,Spantax Flight 995,,http://www.wikidata.org/entity/Q29,1982-09-13T00:00:00Z,50.0,344.0,
+http://www.wikidata.org/entity/Q2240494,Turkish Airlines Flight 452,http://www.wikidata.org/entity/Q4548,http://www.wikidata.org/entity/Q43,1976-09-19T00:00:00Z,154.0,0.0,
+http://www.wikidata.org/entity/Q22450721,Daallo Airlines Flight 3159,http://www.wikidata.org/entity/Q1094344,http://www.wikidata.org/entity/Q1045,2016-02-02T00:00:00Z,1.0,80.0,D3159
+http://www.wikidata.org/entity/Q2253960,Wuhan Airlines Flight 343,,http://www.wikidata.org/entity/Q148,2000-06-22T00:00:00Z,42.0,,
+http://www.wikidata.org/entity/Q2254354,Iran Air Flight 291,,http://www.wikidata.org/entity/Q794,1980-01-21T00:00:00Z,128.0,0.0,
+http://www.wikidata.org/entity/Q2254414,ČSA Flight 511 (March 1961),http://www.wikidata.org/entity/Q192653,http://www.wikidata.org/entity/Q183,1961-03-28T00:00:00Z,52.0,,
+http://www.wikidata.org/entity/Q2254436,China Southwest Airlines Flight 4146,,http://www.wikidata.org/entity/Q148,1988-01-18T00:00:00Z,108.0,,4146
+http://www.wikidata.org/entity/Q2254501,Aviaco Flight 118,,http://www.wikidata.org/entity/Q29,1973-08-13T00:00:00Z,85.0,0.0,AO118
+http://www.wikidata.org/entity/Q2254625,Aeroflot Flight 1491,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q212,1972-05-18T00:00:00Z,122.0,0.0,SU-1491
+http://www.wikidata.org/entity/Q2254649,Aeroflot Flight 902,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1962-06-30T00:00:00Z,84.0,0.0,902
+http://www.wikidata.org/entity/Q2254909,Austrian Airlines flight 901,http://www.wikidata.org/entity/Q781770,http://www.wikidata.org/entity/Q159,1960-09-26T00:00:00Z,31.0,6.0,
+http://www.wikidata.org/entity/Q2254919,Pan Am Flight 217,,http://www.wikidata.org/entity/Q717,1968-12-12T00:00:00Z,51.0,0.0,
+http://www.wikidata.org/entity/Q2254949,Air France Flight 1611,http://www.wikidata.org/entity/Q131005,http://www.wikidata.org/entity/Q1016,1968-09-11T00:00:00Z,95.0,0.0,AF1611
+http://www.wikidata.org/entity/Q2254983,Pan Am Flight 759,,http://www.wikidata.org/entity/Q30,1982-07-09T00:00:00Z,153.0,0.0,
+http://www.wikidata.org/entity/Q22727885,American Airlines Flight 1502,http://www.wikidata.org/entity/Q32396,http://www.wikidata.org/entity/Q30,1961-01-28T00:00:00Z,6.0,0.0,
+http://www.wikidata.org/entity/Q22773990,Reeve Aleutian Airways Flight 8,,http://www.wikidata.org/entity/Q30,1983-06-08T00:00:00Z,0.0,15.0,
+http://www.wikidata.org/entity/Q2289446,KLM Flight 607-E,http://www.wikidata.org/entity/Q181912,http://www.wikidata.org/entity/Q27,1958-08-14T00:00:00Z,99.0,0.0,
+http://www.wikidata.org/entity/Q2290851,2010 Filair Let L-410 crash,http://www.wikidata.org/entity/Q2382455,http://www.wikidata.org/entity/Q974,2010-08-25T00:00:00Z,20.0,1.0,
+http://www.wikidata.org/entity/Q22914725,Lion Air Flight 263,http://www.wikidata.org/entity/Q1056794,http://www.wikidata.org/entity/Q252,2016-02-20T00:00:00Z,0.0,215.0,
+http://www.wikidata.org/entity/Q2292497,2001 Linate Airport runway collision,http://www.wikidata.org/entity/Q187854,http://www.wikidata.org/entity/Q38,2001-10-08T00:00:00Z,118.0,0.0,
+http://www.wikidata.org/entity/Q2320123,West Caribbean Airways Flight 708,,http://www.wikidata.org/entity/Q717,2005-08-16T00:00:00Z,160.0,0.0,WCW708
+http://www.wikidata.org/entity/Q23253749,Flydubai Flight 981,http://www.wikidata.org/entity/Q1048495,http://www.wikidata.org/entity/Q159,2016-03-19T00:00:00Z,62.0,0.0,FDB981
+http://www.wikidata.org/entity/Q23257919,2016 True Aviation An-26 crash,,http://www.wikidata.org/entity/Q902,2016-03-09T00:00:00Z,3.0,1.0,TA 21
+http://www.wikidata.org/entity/Q2343232,BOAC Flight 777,,http://www.wikidata.org/entity/Q142,1943-06-01T00:00:00Z,17.0,,
+http://www.wikidata.org/entity/Q2344220,2012 Indonesian Air Force Fokker F27 crash,,http://www.wikidata.org/entity/Q252,2012-06-21T00:00:00Z,7.0,0.0,
+http://www.wikidata.org/entity/Q2360975,2009 Indonesian Air Force C-130H Hercules crash,,http://www.wikidata.org/entity/Q252,2009-05-20T00:00:00Z,101.0,15.0,
+http://www.wikidata.org/entity/Q23663932,2016 Aero Teknic MU-2 crash,,http://www.wikidata.org/entity/Q16,2016-03-29T00:00:00Z,7.0,,
+http://www.wikidata.org/entity/Q2372347,Vladivostok Air Flight 352,,http://www.wikidata.org/entity/Q159,2001-07-04T00:00:00Z,145.0,0.0,
+http://www.wikidata.org/entity/Q2372837,Air Florida Flight 90,,http://www.wikidata.org/entity/Q30,1982-01-13T00:00:00Z,78.0,5.0,FLA90
+http://www.wikidata.org/entity/Q2375128,1979 Dniprodzerzhynsk mid-air collision,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q212,1979-08-11T00:00:00Z,178.0,0.0,SU7880
+http://www.wikidata.org/entity/Q2375246,2004 Russian aircraft bombings,,http://www.wikidata.org/entity/Q159,2004-08-24T00:00:00Z,89.0,0.0,SBI1047
+http://www.wikidata.org/entity/Q2375420,Aeroflot Flight 3352,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1984-10-11T00:00:00Z,174.0,5.0,
+http://www.wikidata.org/entity/Q2381192,Mexicana de Aviación Flight 940,,http://www.wikidata.org/entity/Q96,1986-03-31T00:00:00Z,167.0,0.0,MX940
+http://www.wikidata.org/entity/Q23936619,2016 Turøy helicopter crash,http://www.wikidata.org/entity/Q4579822,http://www.wikidata.org/entity/Q20,2016-04-29T00:00:00Z,13.0,0.0,
+http://www.wikidata.org/entity/Q24039784,Batik Air Flight 7703,http://www.wikidata.org/entity/Q618960,http://www.wikidata.org/entity/Q252,2016-04-04T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q2405347,Kolavia Flight 348,,http://www.wikidata.org/entity/Q159,2011-01-01T00:00:00Z,3.0,113.0,7К-348
+http://www.wikidata.org/entity/Q24091473,EgyptAir Flight 804,http://www.wikidata.org/entity/Q374740,http://www.wikidata.org/entity/Q142,2016-05-19T00:00:00Z,10.0,0.0,MS804
+http://www.wikidata.org/entity/Q24191500,1947 Oregon Beechcraft Bonanza crash,,http://www.wikidata.org/entity/Q30,1947-10-28T00:00:00Z,4.0,,
+http://www.wikidata.org/entity/Q2422134,2010 Austin suicide attack,,http://www.wikidata.org/entity/Q30,2010-02-18T00:00:00Z,2.0,,
+http://www.wikidata.org/entity/Q2422973,Armavia Flight 967,,http://www.wikidata.org/entity/Q218,2006-05-03T00:00:00Z,113.0,0.0,RNV967
+http://www.wikidata.org/entity/Q2424011,Merpati Nusantara Airlines Flight 836,,http://www.wikidata.org/entity/Q252,2010-04-13T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q2440618,Saudia Flight 163,http://www.wikidata.org/entity/Q541179,http://www.wikidata.org/entity/Q851,1980-08-19T00:00:00Z,301.0,0.0,
+http://www.wikidata.org/entity/Q2475745,Siberia Airlines Flight 1812,,http://www.wikidata.org/entity/Q159,2001-10-04T00:00:00Z,78.0,0.0,SBI1812
+http://www.wikidata.org/entity/Q24844462,Singapore Airlines Flight 368,http://www.wikidata.org/entity/Q32245,http://www.wikidata.org/entity/Q334,2016-06-27T00:00:00Z,0.0,,SQ368
+http://www.wikidata.org/entity/Q24884216,Trans-Colorado Airlines Flight 2286,,http://www.wikidata.org/entity/Q30,1988-01-19T00:00:00Z,9.0,8.0,
+http://www.wikidata.org/entity/Q24901131,2016 Colombia army helicopter crash,,http://www.wikidata.org/entity/Q739,2016-06-26T00:00:00Z,17.0,0.0,
+http://www.wikidata.org/entity/Q2497839,Bellview Airlines Flight 210,,http://www.wikidata.org/entity/Q1033,2005-10-22T00:00:00Z,117.0,0.0,
+http://www.wikidata.org/entity/Q25042932,1965 Hong Kong US Marines KC-130F Crash,,http://www.wikidata.org/entity/Q148,1965-08-24T00:00:00Z,59.0,12.0,
+http://www.wikidata.org/entity/Q250439,Adam Air Flight 574,,http://www.wikidata.org/entity/Q252,2007-01-01T00:00:00Z,6.0,0.0,
+http://www.wikidata.org/entity/Q251039,US Airways Flight 1549,,http://www.wikidata.org/entity/Q30,2009-01-15T00:00:00Z,0.0,155.0,AWE1549
+http://www.wikidata.org/entity/Q25230570,1948 Heathrow Disaster,,http://www.wikidata.org/entity/Q145,1948-03-02T00:00:00Z,,,
+http://www.wikidata.org/entity/Q25381541,Transocean Air Lines Flight 942,,http://www.wikidata.org/entity/Q30,1953-03-20T00:00:00Z,,0.0,
+http://www.wikidata.org/entity/Q25382380,1952 Tacoma C-54 crash,,http://www.wikidata.org/entity/Q30,1952-11-28T00:00:00Z,,2.0,
+http://www.wikidata.org/entity/Q2597490,Noar Linhas Aéreas Flight 4896,,http://www.wikidata.org/entity/Q155,2011-07-13T00:00:00Z,16.0,0.0,4896
+http://www.wikidata.org/entity/Q25975805,2016 Indian Air Force An-32 disappearance,,http://www.wikidata.org/entity/Q854,2016-07-22T00:00:00Z,,,
+http://www.wikidata.org/entity/Q2603955,Gulf of Sidra incident,,http://www.wikidata.org/entity/Q1028,1989-01-04T00:00:00Z,,,
+http://www.wikidata.org/entity/Q2604253,Gulf of Sidra incident,,http://www.wikidata.org/entity/Q1016,1981-08-19T00:00:00Z,,,
+http://www.wikidata.org/entity/Q2608588,Cubana Flight 455,http://www.wikidata.org/entity/Q849910,http://www.wikidata.org/entity/Q244,1976-10-06T00:00:00Z,73.0,0.0,
+http://www.wikidata.org/entity/Q2610182,Surinam Airways Flight 764,http://www.wikidata.org/entity/Q1059033,http://www.wikidata.org/entity/Q730,1989-06-07T00:00:00Z,176.0,11.0,PY764
+http://www.wikidata.org/entity/Q2616916,Allied Air Flight 111,http://www.wikidata.org/entity/Q921507,http://www.wikidata.org/entity/Q117,2012-06-02T00:00:00Z,0.0,4.0,DHV111
+http://www.wikidata.org/entity/Q26212179,Emirates Flight 521,http://www.wikidata.org/entity/Q180432,http://www.wikidata.org/entity/Q878,2016-08-03T00:00:00Z,0.0,300.0,EK521
+http://www.wikidata.org/entity/Q2623769,Taban Air Flight 6437,,http://www.wikidata.org/entity/Q794,2010-01-24T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q2626134,British Airtours Flight 28M,,http://www.wikidata.org/entity/Q145,1985-08-22T00:00:00Z,55.0,82.0,KT328
+http://www.wikidata.org/entity/Q26309846,2016 Russian Ministry of Emergency Situations Il-76 crash,,http://www.wikidata.org/entity/Q159,2016-07-01T00:00:00Z,10.0,0.0,
+http://www.wikidata.org/entity/Q2631349,Air Inter Flight 148,,http://www.wikidata.org/entity/Q142,1992-01-20T00:00:00Z,87.0,9.0,
+http://www.wikidata.org/entity/Q2633598,Chalk's Ocean Airways Flight 101,,http://www.wikidata.org/entity/Q30,2005-12-19T00:00:00Z,20.0,0.0,
+http://www.wikidata.org/entity/Q2634895,Nigeria Airways Flight 2120,,http://www.wikidata.org/entity/Q851,1991-07-11T00:00:00Z,261.0,0.0,NG 2120
+http://www.wikidata.org/entity/Q2641872,2011 Royal Moroccan Air Force Lockheed C-130 Hercules crash,,http://www.wikidata.org/entity/Q1028,2011-07-26T00:00:00Z,80.0,0.0,
+http://www.wikidata.org/entity/Q2647284,Alitalia Flight 404,,http://www.wikidata.org/entity/Q39,1990-11-14T00:00:00Z,46.0,0.0,
+http://www.wikidata.org/entity/Q2648885,TANS Perú Flight 204,,http://www.wikidata.org/entity/Q419,2005-08-23T00:00:00Z,40.0,58.0,ELV204
+http://www.wikidata.org/entity/Q265922,KLM Flight 867,http://www.wikidata.org/entity/Q181912,http://www.wikidata.org/entity/Q30,1989-12-15T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q2662518,Vnukovo Airlines Flight 2801,,http://www.wikidata.org/entity/Q20,1996-08-29T00:00:00Z,141.0,0.0,
+http://www.wikidata.org/entity/Q2673524,Sudan Airways Flight 109,http://www.wikidata.org/entity/Q864117,http://www.wikidata.org/entity/Q1049,2008-06-10T00:00:00Z,30.0,184.0,SD109
+http://www.wikidata.org/entity/Q2707543,2008 Mexico City Learjet crash,,http://www.wikidata.org/entity/Q96,2008-11-04T00:00:00Z,16.0,0.0,частный
+http://www.wikidata.org/entity/Q2720667,1982 Mannheim helicopter crash,,http://www.wikidata.org/entity/Q183,1982-09-11T00:00:00Z,46.0,0.0,
+http://www.wikidata.org/entity/Q2746913,Air Canada Flight 621,http://www.wikidata.org/entity/Q185339,http://www.wikidata.org/entity/Q16,1970-07-05T00:00:00Z,109.0,0.0,
+http://www.wikidata.org/entity/Q2753195,Grand Canyon Airlines Flight 6,http://www.wikidata.org/entity/Q2790070,http://www.wikidata.org/entity/Q30,1986-06-18T00:00:00Z,25.0,,
+http://www.wikidata.org/entity/Q27629717,ASL Airlines Hungary Flight 7332,http://www.wikidata.org/entity/Q4038643,http://www.wikidata.org/entity/Q38,2016-08-05T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q27630526,Fedex Express Flight 910,http://www.wikidata.org/entity/Q782557,http://www.wikidata.org/entity/Q30,2016-10-28T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q27925924,LaMia Flight 2933,,http://www.wikidata.org/entity/Q739,2016-11-28T00:00:00Z,71.0,6.0,LMI 2933
+http://www.wikidata.org/entity/Q28043715,Aerosucr Fliht666,http://www.wikidata.org/entity/Q381195,http://www.wikidata.org/entity/Q739,2016-12-20T00:00:00Z,5.0,1.0,KRE157
+http://www.wikidata.org/entity/Q28055770,2016 Russian Defence Ministry Tupolev Tu-154 crash,,http://www.wikidata.org/entity/Q218,2016-12-25T00:00:00Z,92.0,0.0,
+http://www.wikidata.org/entity/Q28100218,American Airlines Flight 383,http://www.wikidata.org/entity/Q32396,http://www.wikidata.org/entity/Q30,2016-10-28T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q28163694,Merpati Nusantara Airlines Flight 724,,http://www.wikidata.org/entity/Q252,1993-07-01T00:00:00Z,41.0,2.0,MNA724
+http://www.wikidata.org/entity/Q2822697,Air France Flight 152,http://www.wikidata.org/entity/Q131005,http://www.wikidata.org/entity/Q43,1953-08-03T00:00:00Z,4.0,38.0,
+http://www.wikidata.org/entity/Q2822699,1955 MacArthur Airport United Airlines crash,http://www.wikidata.org/entity/Q174769,http://www.wikidata.org/entity/Q30,1955-04-04T00:00:00Z,3.0,0.0,
+http://www.wikidata.org/entity/Q2822708,2005 Iranian Air Force C-130 crash,,http://www.wikidata.org/entity/Q794,2005-12-06T00:00:00Z,94.0,0.0,
+http://www.wikidata.org/entity/Q2822718,2012 Sudan Antonov An-26 crash,,http://www.wikidata.org/entity/Q1049,2012-08-19T00:00:00Z,32.0,0.0,
+http://www.wikidata.org/entity/Q2822721,1994 Black Hawk shootdown incident,,http://www.wikidata.org/entity/Q796,1994-04-14T00:00:00Z,26.0,0.0,
+http://www.wikidata.org/entity/Q2822723,1973 Paris Air Show crash,,http://www.wikidata.org/entity/Q142,1973-06-03T00:00:00Z,14.0,,
+http://www.wikidata.org/entity/Q282999,Aero Caribbean Flight 883,,http://www.wikidata.org/entity/Q241,2010-11-04T00:00:00Z,68.0,0.0,CRN833
+http://www.wikidata.org/entity/Q2842206,Eastern Air Lines Flight 66,,http://www.wikidata.org/entity/Q30,1975-06-24T00:00:00Z,113.0,11.0,EA66
+http://www.wikidata.org/entity/Q28450144,1965 USAF KC-135 Wichita crash,,http://www.wikidata.org/entity/Q30,1965-01-16T00:00:00Z,30.0,0.0,
+http://www.wikidata.org/entity/Q28451135,1931 Jinan air crash,,http://www.wikidata.org/entity/Q148,1931-11-19T00:00:00Z,3.0,0.0,
+http://www.wikidata.org/entity/Q2853075,TAP Portugal Flight 425,http://www.wikidata.org/entity/Q208232,http://www.wikidata.org/entity/Q45,1977-11-19T00:00:00Z,131.0,33.0,
+http://www.wikidata.org/entity/Q28682098,1999 Fukue Island F-4EJ Kai crash,,http://www.wikidata.org/entity/Q17,1999-08-15T00:00:00Z,2.0,,
+http://www.wikidata.org/entity/Q28682103,1999 JSDF T-33A crash,,http://www.wikidata.org/entity/Q17,1999-11-22T00:00:00Z,2.0,,
+http://www.wikidata.org/entity/Q2881984,2008 Santiago plane crash,,http://www.wikidata.org/entity/Q298,2008-02-27T00:00:00Z,13.0,0.0,
+http://www.wikidata.org/entity/Q2896309,Southern Airways Flight 932,,http://www.wikidata.org/entity/Q30,1970-11-14T00:00:00Z,75.0,0.0,SO932
+http://www.wikidata.org/entity/Q2896313,2002 Mombasa attacks,,http://www.wikidata.org/entity/Q114,2002-11-28T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q28973748,2017 South Supreme Airlines Antonov An-26 crash,,http://www.wikidata.org/entity/Q958,2017-03-20T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q2907585,Pan Am Flight 73,,http://www.wikidata.org/entity/Q843,1986-09-05T00:00:00Z,43.0,360.0,PA73
+http://www.wikidata.org/entity/Q2907826,Dymshits–Kuznetsov hijacking affair,,http://www.wikidata.org/entity/Q159,1970-06-15T00:00:00Z,,,179
+http://www.wikidata.org/entity/Q2910683,United Airlines Flight 629,http://www.wikidata.org/entity/Q174769,http://www.wikidata.org/entity/Q30,1955-11-01T00:00:00Z,44.0,0.0,UA629
+http://www.wikidata.org/entity/Q2948131,Aeroflot Flight 8381,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q212,1985-05-03T00:00:00Z,94.0,,SU-8381
+http://www.wikidata.org/entity/Q2976024,Georgian Airways Flight 834,http://www.wikidata.org/entity/Q909076,http://www.wikidata.org/entity/Q974,2011-04-04T00:00:00Z,32.0,1.0,
+http://www.wikidata.org/entity/Q30149289,2017 Myanmar Air Force Shaanxi Y-8 crash,,http://www.wikidata.org/entity/Q252,2017-06-07T00:00:00Z,122.0,0.0,
+http://www.wikidata.org/entity/Q3028762,Austral Líneas Aéreas Flight 2553,,http://www.wikidata.org/entity/Q77,1997-10-10T00:00:00Z,74.0,0.0,
+http://www.wikidata.org/entity/Q30632824,Peruvian Airlines Flight 112,,http://www.wikidata.org/entity/Q419,2017-03-28T00:00:00Z,0.0,150.0,P9112
+http://www.wikidata.org/entity/Q30643510,East Coast Jets Flight 81,,http://www.wikidata.org/entity/Q30,2008-07-31T00:00:00Z,8.0,0.0,
+http://www.wikidata.org/entity/Q30689001,Summit Air Flight 409,http://www.wikidata.org/entity/Q16982290,http://www.wikidata.org/entity/Q837,2017-05-27T00:00:00Z,2.0,,
+http://www.wikidata.org/entity/Q3078122,South African Airways Flight 201,http://www.wikidata.org/entity/Q223763,http://www.wikidata.org/entity/Q1028,1954-04-08T00:00:00Z,21.0,0.0,SA201
+http://www.wikidata.org/entity/Q3079315,Trans-Canada Air Lines Flight 831,http://www.wikidata.org/entity/Q185339,http://www.wikidata.org/entity/Q16,1963-11-29T00:00:00Z,118.0,0.0,TCA831
+http://www.wikidata.org/entity/Q3087069,Avianca Flight 410,http://www.wikidata.org/entity/Q308911,http://www.wikidata.org/entity/Q739,1988-03-17T00:00:00Z,143.0,0.0,AV410
+http://www.wikidata.org/entity/Q3087193,Santa Bárbara Airlines Flight 518,,http://www.wikidata.org/entity/Q717,2008-02-21T00:00:00Z,46.0,0.0,BBR518
+http://www.wikidata.org/entity/Q308923,Munich air disaster,,http://www.wikidata.org/entity/Q183,1958-02-06T00:00:00Z,23.0,21.0,BE609
+http://www.wikidata.org/entity/Q3098353,Air India Flight 855,http://www.wikidata.org/entity/Q69906,http://www.wikidata.org/entity/Q668,1978-01-01T00:00:00Z,213.0,0.0,
+http://www.wikidata.org/entity/Q3119385,Avianca Flight 011,http://www.wikidata.org/entity/Q308911,http://www.wikidata.org/entity/Q29,1983-11-27T00:00:00Z,181.0,11.0,AV-011
+http://www.wikidata.org/entity/Q314087,Ramstein air show disaster,,http://www.wikidata.org/entity/Q183,1988-08-28T00:00:00Z,70.0,0.0,
+http://www.wikidata.org/entity/Q3153850,Martinair Flight 495,http://www.wikidata.org/entity/Q426851,http://www.wikidata.org/entity/Q45,1992-12-21T00:00:00Z,56.0,284.0,
+http://www.wikidata.org/entity/Q3156912,Air Philippines Flight 541,http://www.wikidata.org/entity/Q408955,http://www.wikidata.org/entity/Q928,2000-04-19T00:00:00Z,131.0,,GAP 541
+http://www.wikidata.org/entity/Q3177188,TAM Transportes Aéreos Regionais Flight 402,http://www.wikidata.org/entity/Q690789,http://www.wikidata.org/entity/Q155,1996-10-31T00:00:00Z,3.0,0.0,JJ402
+http://www.wikidata.org/entity/Q3180238,Arrow Air Flight 1285R,,http://www.wikidata.org/entity/Q16,1985-12-12T00:00:00Z,256.0,0.0,MF1285R
+http://www.wikidata.org/entity/Q3182723,Hindenburg disaster,,http://www.wikidata.org/entity/Q30,1937-05-06T00:00:00Z,35.0,62.0,
+http://www.wikidata.org/entity/Q3241797,Sita Air Flight 601,http://www.wikidata.org/entity/Q1495905,http://www.wikidata.org/entity/Q837,2012-09-28T00:00:00Z,19.0,,
+http://www.wikidata.org/entity/Q3267305,China Eastern Airlines Flight 5210,http://www.wikidata.org/entity/Q291796,http://www.wikidata.org/entity/Q148,2004-11-21T00:00:00Z,53.0,0.0,
+http://www.wikidata.org/entity/Q3270393,LOT Polish Airlines Flight 5055,http://www.wikidata.org/entity/Q204268,http://www.wikidata.org/entity/Q36,1987-05-09T00:00:00Z,183.0,0.0,
+http://www.wikidata.org/entity/Q3271379,Gulf Air Flight 072,http://www.wikidata.org/entity/Q473231,http://www.wikidata.org/entity/Q794,2000-08-23T00:00:00Z,143.0,0.0,GF072
+http://www.wikidata.org/entity/Q3274581,Garuda Indonesia Flight 865,http://www.wikidata.org/entity/Q512468,http://www.wikidata.org/entity/Q17,1996-06-13T00:00:00Z,3.0,272.0,
+http://www.wikidata.org/entity/Q32900831,2017 United States Marine Corps KC-130 crash,,http://www.wikidata.org/entity/Q30,2017-07-10T00:00:00Z,16.0,0.0,
+http://www.wikidata.org/entity/Q33129387,Zodiac balloon accident,,http://www.wikidata.org/entity/Q142,1913-04-17T00:00:00Z,5.0,,
+http://www.wikidata.org/entity/Q3317347,LAPA Flight 3142,,http://www.wikidata.org/entity/Q414,1999-08-31T00:00:00Z,63.0,37.0,
+http://www.wikidata.org/entity/Q337044,BSAA Star Dust accident,,http://www.wikidata.org/entity/Q414,1947-08-02T00:00:00Z,11.0,,
+http://www.wikidata.org/entity/Q3373219,1977 Convair CV-300 crash,,http://www.wikidata.org/entity/Q30,1977-10-20T00:00:00Z,6.0,20.0,
+http://www.wikidata.org/entity/Q348349,Adam Air Flight 172,,http://www.wikidata.org/entity/Q252,2007-02-21T00:00:00Z,0.0,149.0,
+http://www.wikidata.org/entity/Q3501432,Airlines PNG Flight 1600,http://www.wikidata.org/entity/Q408808,http://www.wikidata.org/entity/Q691,2011-10-13T00:00:00Z,28.0,,
+http://www.wikidata.org/entity/Q3502611,ČSA Flight 001,http://www.wikidata.org/entity/Q192653,http://www.wikidata.org/entity/Q214,1976-07-28T00:00:00Z,76.0,3.0,
+http://www.wikidata.org/entity/Q3503541,Garuda Indonesia Flight 152,http://www.wikidata.org/entity/Q512468,http://www.wikidata.org/entity/Q252,1997-09-26T00:00:00Z,234.0,0.0,
+http://www.wikidata.org/entity/Q3562565,Air Moorea Flight 1121,,http://www.wikidata.org/entity/Q142,2007-08-09T00:00:00Z,0.0,20.0,
+http://www.wikidata.org/entity/Q3562568,Air France Flight 117,http://www.wikidata.org/entity/Q131005,http://www.wikidata.org/entity/Q142,1962-06-22T00:00:00Z,113.0,0.0,AF117
+http://www.wikidata.org/entity/Q3562572,Inex-Adria Aviopromet Flight 1308,,http://www.wikidata.org/entity/Q142,1981-12-01T00:00:00Z,181.0,0.0,JP-1308
+http://www.wikidata.org/entity/Q3562580,Flight 2605 by Western Airlines,,http://www.wikidata.org/entity/Q96,1979-10-31T00:00:00Z,72.0,17.0,
+http://www.wikidata.org/entity/Q3562629,XL Airways Germany Flight 888T,,http://www.wikidata.org/entity/Q142,2008-11-27T00:00:00Z,7.0,0.0,GXL888T
+http://www.wikidata.org/entity/Q3562643,Eastern Air Lines Flight 980,,http://www.wikidata.org/entity/Q750,1985-01-01T00:00:00Z,29.0,0.0,EA980
+http://www.wikidata.org/entity/Q3608354,Garuda Indonesia Flight 421,http://www.wikidata.org/entity/Q512468,http://www.wikidata.org/entity/Q252,2002-01-16T00:00:00Z,1.0,59.0,
+http://www.wikidata.org/entity/Q3610236,1982 British Army Gazelle friendly fire incident,,http://www.wikidata.org/entity/Q145,1982-06-06T00:00:00Z,,,
+http://www.wikidata.org/entity/Q3616208,British Airways Flight 268,http://www.wikidata.org/entity/Q8766,http://www.wikidata.org/entity/Q30,2005-02-20T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q3622449,Argo 16,,http://www.wikidata.org/entity/Q38,1973-11-23T00:00:00Z,4.0,,
+http://www.wikidata.org/entity/Q3646750,Mirosławiec air disaster,,http://www.wikidata.org/entity/Q36,2008-01-23T00:00:00Z,20.0,0.0,
+http://www.wikidata.org/entity/Q3662192,Continental Express Flight 2574,,http://www.wikidata.org/entity/Q30,1991-09-11T00:00:00Z,14.0,0.0,
+http://www.wikidata.org/entity/Q370143,2003 Baghdad DHL attempted shootdown incident,,http://www.wikidata.org/entity/Q796,2003-11-22T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q3737036,Copterline Flight 103,,http://www.wikidata.org/entity/Q191,2005-08-10T00:00:00Z,14.0,0.0,
+http://www.wikidata.org/entity/Q3797640,2002 Pirelli Tower plane crash,,http://www.wikidata.org/entity/Q38,2002-04-18T00:00:00Z,3.0,0.0,
+http://www.wikidata.org/entity/Q3797657,Airbus Industrie Flight 129,,http://www.wikidata.org/entity/Q142,1994-06-30T00:00:00Z,7.0,,
+http://www.wikidata.org/entity/Q381070,Aer Lingus Flight 712,http://www.wikidata.org/entity/Q83716,http://www.wikidata.org/entity/Q145,1968-03-24T00:00:00Z,61.0,0.0,EI712
+http://www.wikidata.org/entity/Q381461,Aeroflot Flight 593,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1994-03-23T00:00:00Z,75.0,0.0,
+http://www.wikidata.org/entity/Q381468,Aeroflot Flight 821,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,2008-09-14T00:00:00Z,88.0,0.0,SU821
+http://www.wikidata.org/entity/Q381558,Aeroméxico Flight 498,http://www.wikidata.org/entity/Q381563,http://www.wikidata.org/entity/Q30,1986-08-31T00:00:00Z,82.0,0.0,
+http://www.wikidata.org/entity/Q381615,Aeroperú Flight 603,,http://www.wikidata.org/entity/Q408,1996-10-02T00:00:00Z,70.0,0.0,
+http://www.wikidata.org/entity/Q384845,American Airlines Flight 587,http://www.wikidata.org/entity/Q32396,http://www.wikidata.org/entity/Q30,2001-11-12T00:00:00Z,265.0,0.0,
+http://www.wikidata.org/entity/Q3866667,SCAT Airlines Flight 760,http://www.wikidata.org/entity/Q650170,http://www.wikidata.org/entity/Q232,2013-01-29T00:00:00Z,21.0,0.0,DV760
+http://www.wikidata.org/entity/Q3975725,1973 Rome airport attack and hijacking,,http://www.wikidata.org/entity/Q38,1973-12-17T00:00:00Z,34.0,147.0,
+http://www.wikidata.org/entity/Q4016228,Air India Flight 101,http://www.wikidata.org/entity/Q69906,http://www.wikidata.org/entity/Q142,1966-01-24T00:00:00Z,117.0,0.0,AI101
+http://www.wikidata.org/entity/Q4016236,Cebu Pacific Flight 387,http://www.wikidata.org/entity/Q995151,http://www.wikidata.org/entity/Q928,1998-02-02T00:00:00Z,104.0,,
+http://www.wikidata.org/entity/Q4016243,RwandAir Flight 205,,http://www.wikidata.org/entity/Q1037,2009-11-12T00:00:00Z,1.0,,
+http://www.wikidata.org/entity/Q4016245,TWA Flight 800,,http://www.wikidata.org/entity/Q38,1964-11-23T00:00:00Z,50.0,,
+http://www.wikidata.org/entity/Q4055377,Alrosa Flight 514,http://www.wikidata.org/entity/Q2573788,http://www.wikidata.org/entity/Q159,2010-09-07T00:00:00Z,0.0,81.0,ЯМ516
+http://www.wikidata.org/entity/Q4055379,IrAero Flight 103,http://www.wikidata.org/entity/Q2033681,http://www.wikidata.org/entity/Q159,2011-08-08T00:00:00Z,0.0,41.0,
+http://www.wikidata.org/entity/Q4055381,Dagestan Airlines Flight 372,,http://www.wikidata.org/entity/Q159,2010-12-04T00:00:00Z,2.0,169.0,ЮХ372
+http://www.wikidata.org/entity/Q4055393,Belavia Flight 1834,http://www.wikidata.org/entity/Q815314,http://www.wikidata.org/entity/Q399,2008-02-14T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q4055748,Ethiopian Airlines Flight 604,http://www.wikidata.org/entity/Q245233,http://www.wikidata.org/entity/Q115,1988-09-15T00:00:00Z,35.0,69.0,
+http://www.wikidata.org/entity/Q4055751,1997 Irkutsk Antonov An-124 crash,,http://www.wikidata.org/entity/Q159,1997-12-06T00:00:00Z,23.0,0.0,
+http://www.wikidata.org/entity/Q4055752,Aeroflot Flight 214,,http://www.wikidata.org/entity/Q159,1955-08-06T00:00:00Z,,0.0,
+http://www.wikidata.org/entity/Q4055754,2007 Africa One Antonov An-26 crash,,http://www.wikidata.org/entity/Q974,2007-10-04T00:00:00Z,52.0,1.0,
+http://www.wikidata.org/entity/Q4055756,Aeroflot Flight 909,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1976-03-06T00:00:00Z,111.0,0.0,
+http://www.wikidata.org/entity/Q4055757,Pulkovo Aviation Enterprise Flight 9560,,http://www.wikidata.org/entity/Q159,2002-07-28T00:00:00Z,14.0,2.0,
+http://www.wikidata.org/entity/Q4055758,1958 Aeroflot Tu-104 crash in Chuvash,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1958-10-17T00:00:00Z,80.0,0.0,
+http://www.wikidata.org/entity/Q4055759,1989 Soviet Air Force Ilyushin Il-76 crash,,http://www.wikidata.org/entity/Q227,1989-10-18T00:00:00Z,57.0,0.0,
+http://www.wikidata.org/entity/Q4055760,1981 Pushkin Tu-104 crash,,http://www.wikidata.org/entity/Q159,1981-02-07T00:00:00Z,50.0,0.0,
+http://www.wikidata.org/entity/Q4055762,Aeroflot Flight 6502,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1986-10-20T00:00:00Z,70.0,24.0,SU-6502
+http://www.wikidata.org/entity/Q4055763,Aeroflot Flight 5463,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q232,1983-08-30T00:00:00Z,90.0,0.0,
+http://www.wikidata.org/entity/Q4055766,UTair Flight 471,http://www.wikidata.org/entity/Q1065835,http://www.wikidata.org/entity/Q159,2007-03-17T00:00:00Z,6.0,51.0,UT-471
+http://www.wikidata.org/entity/Q4055770,Aeroflot Flight 7425,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q265,1985-07-10T00:00:00Z,200.0,0.0,SU5143
+http://www.wikidata.org/entity/Q4055771,2011 Pointe-Noire Trans Air Congo An-12 crash,,http://www.wikidata.org/entity/Q971,2011-03-21T00:00:00Z,23.0,,
+http://www.wikidata.org/entity/Q4055773,Katekavia Flight 9357,http://www.wikidata.org/entity/Q1751278,http://www.wikidata.org/entity/Q159,2010-08-03T00:00:00Z,12.0,3.0,
+http://www.wikidata.org/entity/Q4055774,Sun Way Flight 4412,http://www.wikidata.org/entity/Q21493345,http://www.wikidata.org/entity/Q843,2010-11-28T00:00:00Z,8.0,0.0,
+http://www.wikidata.org/entity/Q4055775,JS Air Flight 201,http://www.wikidata.org/entity/Q21469832,http://www.wikidata.org/entity/Q843,2010-11-05T00:00:00Z,21.0,0.0,
+http://www.wikidata.org/entity/Q4055776,Agni Air Flight 101,,http://www.wikidata.org/entity/Q837,2010-08-24T00:00:00Z,14.0,0.0,
+http://www.wikidata.org/entity/Q4055777,2009 Makhachkala Il-76 collision,,http://www.wikidata.org/entity/Q159,2009-01-15T00:00:00Z,4.0,39.0,
+http://www.wikidata.org/entity/Q4055779,1950 Sverdlovsk air disaster,,http://www.wikidata.org/entity/Q159,1950-01-05T00:00:00Z,19.0,0.0,
+http://www.wikidata.org/entity/Q4055780,1961 Yuba City B-52 crash,,http://www.wikidata.org/entity/Q30,1961-03-14T00:00:00Z,0.0,8.0,
+http://www.wikidata.org/entity/Q4055781,2011 Chinook shootdown in Afghanistan,,http://www.wikidata.org/entity/Q889,2011-08-06T00:00:00Z,38.0,0.0,
+http://www.wikidata.org/entity/Q4055786,1961 Goldsboro B-52 Crash,,http://www.wikidata.org/entity/Q30,1961-01-24T00:00:00Z,3.0,5.0,
+http://www.wikidata.org/entity/Q4055787,Cyprus Airways Flight 284,,http://www.wikidata.org/entity/Q142,1967-10-12T00:00:00Z,66.0,0.0,
+http://www.wikidata.org/entity/Q406486,Air France Flight 296,http://www.wikidata.org/entity/Q131005,http://www.wikidata.org/entity/Q142,1988-06-26T00:00:00Z,3.0,133.0,AF296Q
+http://www.wikidata.org/entity/Q406503,Air France Flight 358,http://www.wikidata.org/entity/Q131005,http://www.wikidata.org/entity/Q16,2005-08-02T00:00:00Z,0.0,,AFR358
+http://www.wikidata.org/entity/Q406535,Air France Flight 4590,http://www.wikidata.org/entity/Q131005,http://www.wikidata.org/entity/Q142,2000-07-25T00:00:00Z,113.0,0.0,
+http://www.wikidata.org/entity/Q406609,Air Transat Flight 236,http://www.wikidata.org/entity/Q407869,http://www.wikidata.org/entity/Q45,2001-08-24T00:00:00Z,0.0,306.0,TSC236
+http://www.wikidata.org/entity/Q4071388,Japan Airlines Flight 2,http://www.wikidata.org/entity/Q213140,http://www.wikidata.org/entity/Q30,1968-11-22T00:00:00Z,0.0,107.0,JAL2
+http://www.wikidata.org/entity/Q40794780,Cristóbal Colón Expedition plane crash,,http://www.wikidata.org/entity/Q739,1937-12-29T00:00:00Z,7.0,0.0,
+http://www.wikidata.org/entity/Q41074076,TWA Flight 6 (1941),,http://www.wikidata.org/entity/Q30,1941-01-23T00:00:00Z,2.0,,
+http://www.wikidata.org/entity/Q4115786,TWA Flight 903,,http://www.wikidata.org/entity/Q79,1950-08-31T00:00:00Z,55.0,,
+http://www.wikidata.org/entity/Q4116581,2012 Turkish F-4 Phantom shootdown,,http://www.wikidata.org/entity/Q43,2012-06-22T00:00:00Z,2.0,0.0,
+http://www.wikidata.org/entity/Q4117937,Libyan Arab Airlines Flight 1103,http://www.wikidata.org/entity/Q1056939,http://www.wikidata.org/entity/Q1016,1992-12-22T00:00:00Z,157.0,0.0,1103
+http://www.wikidata.org/entity/Q4118137,Emirates Flight 407,http://www.wikidata.org/entity/Q180432,http://www.wikidata.org/entity/Q408,2009-03-20T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q4118734,United Airlines Flight 610,http://www.wikidata.org/entity/Q174769,http://www.wikidata.org/entity/Q30,1951-06-30T00:00:00Z,50.0,0.0,
+http://www.wikidata.org/entity/Q4119077,United Air Lines Flight 608,http://www.wikidata.org/entity/Q174769,http://www.wikidata.org/entity/Q30,1947-10-24T00:00:00Z,52.0,0.0,
+http://www.wikidata.org/entity/Q4162202,Pinnacle Airlines Flight 3701,http://www.wikidata.org/entity/Q1145445,http://www.wikidata.org/entity/Q30,2004-10-14T00:00:00Z,2.0,0.0,
+http://www.wikidata.org/entity/Q4163567,Britannia Airways Flight 226A,,http://www.wikidata.org/entity/Q29,1999-09-14T00:00:00Z,1.0,,
+http://www.wikidata.org/entity/Q4188884,2000 Airstan incident,,http://www.wikidata.org/entity/Q889,1995-08-03T00:00:00Z,0.0,7.0,
+http://www.wikidata.org/entity/Q4189392,UTAGE Flight 141,http://www.wikidata.org/entity/Q7886412,http://www.wikidata.org/entity/Q962,2003-12-25T00:00:00Z,141.0,22.0,GIH141
+http://www.wikidata.org/entity/Q4202012,FlyMontserrat Flight 107,http://www.wikidata.org/entity/Q1135063,http://www.wikidata.org/entity/Q781,2012-10-07T00:00:00Z,3.0,1.0,
+http://www.wikidata.org/entity/Q4202304,Moldovan MiG-29 incident (1992),,http://www.wikidata.org/entity/Q217,1992-06-26T00:00:00Z,,,
+http://www.wikidata.org/entity/Q4202305,1981 Armenia mid-air collision,,http://www.wikidata.org/entity/Q399,1981-07-18T00:00:00Z,4.0,0.0,
+http://www.wikidata.org/entity/Q4207735,Caribbean Airlines Flight 523,,http://www.wikidata.org/entity/Q734,2011-07-30T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q4217215,1972 Svetlogorsk An-24 crash,,http://www.wikidata.org/entity/Q159,1972-05-16T00:00:00Z,35.0,0.0,
+http://www.wikidata.org/entity/Q4217216,2008 Chelyabinsk Antonov An-12 crash,,http://www.wikidata.org/entity/Q159,2008-05-26T00:00:00Z,9.0,0.0,
+http://www.wikidata.org/entity/Q4217220,Altaigate Scandal,,http://www.wikidata.org/entity/Q159,2009-01-09T00:00:00Z,7.0,4.0,
+http://www.wikidata.org/entity/Q4217221,Pakistan International Airlines Flight 705,http://www.wikidata.org/entity/Q204887,http://www.wikidata.org/entity/Q79,1965-05-20T00:00:00Z,121.0,6.0,
+http://www.wikidata.org/entity/Q4217224,Aeroflot Flight 2808,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1992-08-27T00:00:00Z,84.0,0.0,SU2808
+http://www.wikidata.org/entity/Q4217225,1992 Azerbaijani Mil Mi-8 shootdown,,http://www.wikidata.org/entity/Q227,1992-01-28T00:00:00Z,44.0,,
+http://www.wikidata.org/entity/Q4217227,2002 Khankala Mi-26 crash,,http://www.wikidata.org/entity/Q159,2002-08-19T00:00:00Z,127.0,20.0,
+http://www.wikidata.org/entity/Q4242619,Aeroflot Flight 6709,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1978-05-19T00:00:00Z,4.0,130.0,SU6709
+http://www.wikidata.org/entity/Q42434799,1988 Hemus Air Yakovlev Yak-40 crash,,http://www.wikidata.org/entity/Q219,1988-08-02T00:00:00Z,29.0,8.0,
+http://www.wikidata.org/entity/Q4261034,Philippine Airlines Flight 137,http://www.wikidata.org/entity/Q846910,http://www.wikidata.org/entity/Q928,1998-03-22T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q4261830,TACA Flight 390,http://www.wikidata.org/entity/Q1139145,http://www.wikidata.org/entity/Q783,2008-05-30T00:00:00Z,3.0,121.0,
+http://www.wikidata.org/entity/Q42924546,TWA Flight 6 (1935),,http://www.wikidata.org/entity/Q30,1935-05-06T00:00:00Z,5.0,,
+http://www.wikidata.org/entity/Q432131,Lady Be Good,,http://www.wikidata.org/entity/Q1016,1943-04-04T00:00:00Z,9.0,0.0,
+http://www.wikidata.org/entity/Q43401556,Emery Worldwide Flight 17,,http://www.wikidata.org/entity/Q30,2000-02-16T00:00:00Z,3.0,0.0,EB17
+http://www.wikidata.org/entity/Q4346080,VASP Flight 168,,http://www.wikidata.org/entity/Q155,1982-06-08T00:00:00Z,137.0,0.0,
+http://www.wikidata.org/entity/Q4355070,TWA 841 (1974),,http://www.wikidata.org/entity/Q222,1974-09-08T00:00:00Z,89.0,0.0,TW841
+http://www.wikidata.org/entity/Q4355704,Carpatair flight 128,http://www.wikidata.org/entity/Q840402,http://www.wikidata.org/entity/Q218,2009-02-28T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q435572,British Airways Flight 5390,http://www.wikidata.org/entity/Q8766,http://www.wikidata.org/entity/Q145,1990-06-10T00:00:00Z,0.0,87.0,
+http://www.wikidata.org/entity/Q4356327,Scandinavian Airlines System Flight 933,http://www.wikidata.org/entity/Q187854,http://www.wikidata.org/entity/Q30,1969-01-13T00:00:00Z,15.0,30.0,
+http://www.wikidata.org/entity/Q435806,China Airlines Flight 611,http://www.wikidata.org/entity/Q51756,http://www.wikidata.org/entity/Q148,2002-05-25T00:00:00Z,225.0,0.0,
+http://www.wikidata.org/entity/Q4372935,Aeroflot Flight 3739,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1988-03-08T00:00:00Z,9.0,75.0,3739
+http://www.wikidata.org/entity/Q4469125,Aeroflot Flight 4076,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1990-08-19T00:00:00Z,,,4076
+http://www.wikidata.org/entity/Q448597,Sabena OO-AUB Ostend crash,,http://www.wikidata.org/entity/Q31,1937-11-16T00:00:00Z,12.0,,
+http://www.wikidata.org/entity/Q45493810,West Wind Aviation Flight 280,http://www.wikidata.org/entity/Q4053058,http://www.wikidata.org/entity/Q16,2017-12-13T00:00:00Z,1.0,24.0,WEW282
+http://www.wikidata.org/entity/Q4554271,South Airlines Flight 8971,,http://www.wikidata.org/entity/Q212,2013-02-13T00:00:00Z,5.0,47.0,
+http://www.wikidata.org/entity/Q4564698,1940 Canberra air disaster,,http://www.wikidata.org/entity/Q408,1940-08-13T00:00:00Z,10.0,0.0,
+http://www.wikidata.org/entity/Q4564700,1940 Brocklesby mid-air collision,,http://www.wikidata.org/entity/Q408,1940-09-29T00:00:00Z,0.0,4.0,
+http://www.wikidata.org/entity/Q4565710,1946 Australian National Airways DC-3 crash,,http://www.wikidata.org/entity/Q408,1946-03-10T00:00:00Z,25.0,,
+http://www.wikidata.org/entity/Q4566545,1949 Exhall mid-air collision,,http://www.wikidata.org/entity/Q145,1949-02-19T00:00:00Z,14.0,,
+http://www.wikidata.org/entity/Q4567449,1952 Farnborough Airshow DH.110 crash,,http://www.wikidata.org/entity/Q145,1952-09-06T00:00:00Z,31.0,,
+http://www.wikidata.org/entity/Q4568376,1955 Hawaii R6D-1 crash,,http://www.wikidata.org/entity/Q30,1955-03-22T00:00:00Z,66.0,,
+http://www.wikidata.org/entity/Q4568649,1956 B-47 disappearance,,http://www.wikidata.org/entity/Q1028,1956-03-10T00:00:00Z,,0.0,
+http://www.wikidata.org/entity/Q4569685,helicopter accident at Heerodden,,http://www.wikidata.org/entity/Q20,2008-03-30T00:00:00Z,3.0,6.0,
+http://www.wikidata.org/entity/Q4569721,TAI Flight 307,,http://www.wikidata.org/entity/Q142,1959-09-24T00:00:00Z,54.0,11.0,TAI307
+http://www.wikidata.org/entity/Q4569938,1960 Danish football air crash,,http://www.wikidata.org/entity/Q34,1960-07-16T00:00:00Z,8.0,1.0,
+http://www.wikidata.org/entity/Q4571624,1964 Savage Mountain B-52 crash,,http://www.wikidata.org/entity/Q30,1964-01-13T00:00:00Z,3.0,2.0,
+http://www.wikidata.org/entity/Q4571641,1964 T-39 shootdown incident,,http://www.wikidata.org/entity/Q183,1964-01-28T00:00:00Z,,,
+http://www.wikidata.org/entity/Q4571879,1965 Carmel mid-air collision,,http://www.wikidata.org/entity/Q30,1965-12-04T00:00:00Z,4.0,58.0,
+http://www.wikidata.org/entity/Q4573472,1969 Aswan Ilyushin Il-18 crash,http://www.wikidata.org/entity/Q374740,http://www.wikidata.org/entity/Q79,1969-03-20T00:00:00Z,100.0,5.0,
+http://www.wikidata.org/entity/Q4573536,1969 EC-121 shootdown incident,,http://www.wikidata.org/entity/Q17,1969-04-15T00:00:00Z,,,
+http://www.wikidata.org/entity/Q4574667,1971 January 22 Surgut Aeroflot Antonov An-12 crash,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1971-01-22T00:00:00Z,14.0,,
+http://www.wikidata.org/entity/Q4575422,Aeroflot Flight 141,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q213,1973-02-19T00:00:00Z,66.0,34.0,
+http://www.wikidata.org/entity/Q4575544,EgyptAir Flight 741,,http://www.wikidata.org/entity/Q229,1973-01-29T00:00:00Z,37.0,0.0,MS741
+http://www.wikidata.org/entity/Q4577581,1977 Benghazi Libyan Arab Airlines Tu-154 crash,http://www.wikidata.org/entity/Q1056939,http://www.wikidata.org/entity/Q1016,1977-12-02T00:00:00Z,59.0,106.0,
+http://www.wikidata.org/entity/Q4577626,1977 Dan-Air Boeing 707 crash,,http://www.wikidata.org/entity/Q953,1977-05-14T00:00:00Z,6.0,0.0,
+http://www.wikidata.org/entity/Q4578073,1978 Balkan Bulgarian Tupolev Tu-134 crash,,http://www.wikidata.org/entity/Q219,1978-03-16T00:00:00Z,73.0,,
+http://www.wikidata.org/entity/Q4578076,1978 British Army Gazelle downing,,http://www.wikidata.org/entity/Q145,1978-02-17T00:00:00Z,,,
+http://www.wikidata.org/entity/Q4580452,1982 Garuda Fokker F28 crash,,http://www.wikidata.org/entity/Q252,1982-03-20T00:00:00Z,,,
+http://www.wikidata.org/entity/Q4580923,1983 Avensa Douglas DC-9 crash,,http://www.wikidata.org/entity/Q717,1983-03-11T00:00:00Z,23.0,27.0,
+http://www.wikidata.org/entity/Q4581582,1984 Balkan Bulgarian Tupolev Tu-134 crash,,http://www.wikidata.org/entity/Q219,1984-01-10T00:00:00Z,50.0,,
+http://www.wikidata.org/entity/Q4582419,1985 Narita International Airport bombing,,http://www.wikidata.org/entity/Q17,1985-06-23T00:00:00Z,2.0,,
+http://www.wikidata.org/entity/Q4582884,1986 British International Helicopters Chinook crash,http://www.wikidata.org/entity/Q4970140,http://www.wikidata.org/entity/Q145,1986-11-06T00:00:00Z,,,
+http://www.wikidata.org/entity/Q458321,Korean Air Lines Flight 902,,http://www.wikidata.org/entity/Q159,1978-04-20T00:00:00Z,2.0,107.0,KE902
+http://www.wikidata.org/entity/Q4583866,1987 Ramada Inn Corsair crash,,http://www.wikidata.org/entity/Q30,1987-10-20T00:00:00Z,9.0,1.0,
+http://www.wikidata.org/entity/Q4587819,1992 Nigerian Air Force C-130 crash,,http://www.wikidata.org/entity/Q1033,1992-09-26T00:00:00Z,159.0,0.0,
+http://www.wikidata.org/entity/Q4589262,1994 British Army Lynx shootdown,,http://www.wikidata.org/entity/Q145,1994-03-20T00:00:00Z,,,
+http://www.wikidata.org/entity/Q4589707,1994 Mull of Kintyre Chinook crash,,http://www.wikidata.org/entity/Q145,1994-06-02T00:00:00Z,29.0,0.0,
+http://www.wikidata.org/entity/Q4590181,1995 Antonov An-70 prototype crash,,http://www.wikidata.org/entity/Q212,1995-02-10T00:00:00Z,7.0,,
+http://www.wikidata.org/entity/Q4593350,1998 Ariana Afghan Airlines crash,http://www.wikidata.org/entity/Q654953,http://www.wikidata.org/entity/Q889,1998-03-19T00:00:00Z,45.0,,
+http://www.wikidata.org/entity/Q4594461,1999 Air Botswana incident,http://www.wikidata.org/entity/Q406896,http://www.wikidata.org/entity/Q963,1999-10-11T00:00:00Z,1.0,0.0,
+http://www.wikidata.org/entity/Q4595096,1999 South Dakota Learjet crash,,http://www.wikidata.org/entity/Q30,1999-10-25T00:00:00Z,6.0,0.0,
+http://www.wikidata.org/entity/Q4600175,Aeromist-Kharkiv Flight 2137,,http://www.wikidata.org/entity/Q794,2002-12-23T00:00:00Z,44.0,0.0,2137
+http://www.wikidata.org/entity/Q4600461,2002 Shelkovskaya Mi-8 crash,,http://www.wikidata.org/entity/Q159,2002-01-27T00:00:00Z,14.0,,
+http://www.wikidata.org/entity/Q4604214,2005 Equatorial Express crash,,http://www.wikidata.org/entity/Q983,2005-07-16T00:00:00Z,,,
+http://www.wikidata.org/entity/Q460476,One-Two-GO Airlines Flight 269,,http://www.wikidata.org/entity/Q869,2007-09-16T00:00:00Z,90.0,40.0,
+http://www.wikidata.org/entity/Q4607112,2006 Vladikavkaz Mi-8 crash,,http://www.wikidata.org/entity/Q159,2006-09-11T00:00:00Z,12.0,3.0,
+http://www.wikidata.org/entity/Q4609257,2007 Shatoy Mi-8 crash,,http://www.wikidata.org/entity/Q159,2007-04-27T00:00:00Z,20.0,,
+http://www.wikidata.org/entity/Q4610566,2008 Aéreo Ruta Maya crash,http://www.wikidata.org/entity/Q85738994,http://www.wikidata.org/entity/Q774,2008-08-24T00:00:00Z,11.0,,
+http://www.wikidata.org/entity/Q4610763,2008 Chișinău Antonov An-32 crash,http://www.wikidata.org/entity/Q21425023,http://www.wikidata.org/entity/Q217,2008-04-11T00:00:00Z,8.0,0.0,
+http://www.wikidata.org/entity/Q4611873,2008 San Diego F/A-18 crash,,http://www.wikidata.org/entity/Q30,2008-12-08T00:00:00Z,4.0,,
+http://www.wikidata.org/entity/Q4611923,2008 South Carolina Learjet 60 crash,,http://www.wikidata.org/entity/Q30,2008-09-19T00:00:00Z,4.0,2.0,
+http://www.wikidata.org/entity/Q4612004,Blue Wing Airlines 2008 plane crash,http://www.wikidata.org/entity/Q885944,http://www.wikidata.org/entity/Q730,2008-04-03T00:00:00Z,19.0,0.0,
+http://www.wikidata.org/entity/Q4613973,2009 Hudson River mid-air collision,,http://www.wikidata.org/entity/Q30,2009-08-08T00:00:00Z,9.0,,
+http://www.wikidata.org/entity/Q4614016,2009 Ilyushin Il-76 crash,,http://www.wikidata.org/entity/Q159,2009-11-01T00:00:00Z,11.0,,
+http://www.wikidata.org/entity/Q4616572,2010 Alaska Turbo Otter crash,,http://www.wikidata.org/entity/Q30,2010-08-09T00:00:00Z,5.0,,
+http://www.wikidata.org/entity/Q4620452,Avis-Amur Flight 9209,,http://www.wikidata.org/entity/Q159,2011-08-09T00:00:00Z,11.0,,
+http://www.wikidata.org/entity/Q4620729,2011 Chilean Air Force CASA 212 crash,,http://www.wikidata.org/entity/Q298,2011-09-02T00:00:00Z,21.0,0.0,
+http://www.wikidata.org/entity/Q462716,Turkish Airlines Flight 981,http://www.wikidata.org/entity/Q4548,http://www.wikidata.org/entity/Q142,1974-03-03T00:00:00Z,346.0,0.0,
+http://www.wikidata.org/entity/Q462847,United Airlines Flight 585,http://www.wikidata.org/entity/Q174769,http://www.wikidata.org/entity/Q30,1991-03-03T00:00:00Z,5.0,0.0,UA585
+http://www.wikidata.org/entity/Q463187,American Airlines Flight 331,http://www.wikidata.org/entity/Q32396,http://www.wikidata.org/entity/Q766,2009-12-22T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q463197,American Airlines Flight 191,http://www.wikidata.org/entity/Q32396,http://www.wikidata.org/entity/Q30,1979-05-25T00:00:00Z,273.0,0.0,
+http://www.wikidata.org/entity/Q4651082,ADC Airlines Flight 86,,http://www.wikidata.org/entity/Q1033,1996-11-07T00:00:00Z,144.0,0.0,ADK086
+http://www.wikidata.org/entity/Q4651994,AIRES Flight 8250,http://www.wikidata.org/entity/Q408655,http://www.wikidata.org/entity/Q739,2010-08-16T00:00:00Z,2.0,,
+http://www.wikidata.org/entity/Q4652401,ALM Flight 980,,http://www.wikidata.org/entity/Q142,1970-05-02T00:00:00Z,23.0,40.0,LM980
+http://www.wikidata.org/entity/Q4655029,AVAir Flight 3378,,http://www.wikidata.org/entity/Q30,1988-02-19T00:00:00Z,12.0,,
+http://www.wikidata.org/entity/Q468754,Lufthansa Flight 2904,http://www.wikidata.org/entity/Q9325,http://www.wikidata.org/entity/Q36,1993-09-14T00:00:00Z,2.0,68.0,
+http://www.wikidata.org/entity/Q4688261,Aeroflot Flight 331,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q241,1977-05-27T00:00:00Z,68.0,2.0,
+http://www.wikidata.org/entity/Q4688263,Aeroflot Flight 3932,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1973-09-30T00:00:00Z,108.0,0.0,
+http://www.wikidata.org/entity/Q4688264,Aeroflot Flight 418,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q983,1976-06-01T00:00:00Z,46.0,0.0,
+http://www.wikidata.org/entity/Q4688265,Aeroflot Flight 505,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q265,1987-01-16T00:00:00Z,9.0,,
+http://www.wikidata.org/entity/Q4688266,Aeroflot Flight 964,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1973-10-13T00:00:00Z,122.0,0.0,
+http://www.wikidata.org/entity/Q4688302,Aerolíneas Argentinas Flight 707,,http://www.wikidata.org/entity/Q414,1970-02-04T00:00:00Z,37.0,,
+http://www.wikidata.org/entity/Q4688331,Aeroméxico Flight 230,http://www.wikidata.org/entity/Q381563,http://www.wikidata.org/entity/Q96,1981-07-27T00:00:00Z,32.0,34.0,
+http://www.wikidata.org/entity/Q4690967,Agadir air disaster,http://www.wikidata.org/entity/Q824225,http://www.wikidata.org/entity/Q1028,1975-08-03T00:00:00Z,188.0,0.0,
+http://www.wikidata.org/entity/Q4697723,Air Algérie Flight 2208,http://www.wikidata.org/entity/Q406764,http://www.wikidata.org/entity/Q38,2006-08-13T00:00:00Z,3.0,,
+http://www.wikidata.org/entity/Q4697779,Air Canada Flight 189,http://www.wikidata.org/entity/Q185339,http://www.wikidata.org/entity/Q16,1978-06-26T00:00:00Z,2.0,,
+http://www.wikidata.org/entity/Q4697990,Air France Flight 212 (1968),http://www.wikidata.org/entity/Q131005,http://www.wikidata.org/entity/Q142,1968-03-06T00:00:00Z,63.0,0.0,AF212
+http://www.wikidata.org/entity/Q4697992,Air France Flight 007,http://www.wikidata.org/entity/Q131005,http://www.wikidata.org/entity/Q142,1962-06-03T00:00:00Z,130.0,2.0,
+http://www.wikidata.org/entity/Q4697993,Air France Flight 212 (1969),http://www.wikidata.org/entity/Q131005,http://www.wikidata.org/entity/Q145,1969-12-03T00:00:00Z,62.0,0.0,AF212
+http://www.wikidata.org/entity/Q4698026,Air Illinois Flight 710,http://www.wikidata.org/entity/Q4698024,http://www.wikidata.org/entity/Q30,1983-10-11T00:00:00Z,10.0,0.0,UX710
+http://www.wikidata.org/entity/Q4698032,Air India Flight 403,http://www.wikidata.org/entity/Q69906,http://www.wikidata.org/entity/Q668,1982-06-21T00:00:00Z,,94.0,AI403
+http://www.wikidata.org/entity/Q4698060,Air Lanka Flight 512,http://www.wikidata.org/entity/Q853293,http://www.wikidata.org/entity/Q854,1986-05-03T00:00:00Z,21.0,,UL512
+http://www.wikidata.org/entity/Q46999137,Barra do Garças air disaster,,http://www.wikidata.org/entity/Q155,1980-06-01T00:00:00Z,7.0,,
+http://www.wikidata.org/entity/Q47008054,Pennsylvania Central Airlines Flight 143,,http://www.wikidata.org/entity/Q30,1941-04-16T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q47008998,American Airlines Flight 29,http://www.wikidata.org/entity/Q32396,http://www.wikidata.org/entity/Q30,1940-09-03T00:00:00Z,0.0,17.0,
+http://www.wikidata.org/entity/Q4708491,Alaska Airlines Flight 1866,http://www.wikidata.org/entity/Q822614,http://www.wikidata.org/entity/Q30,1971-09-04T00:00:00Z,111.0,0.0,
+http://www.wikidata.org/entity/Q4729189,All Nippon Airways Flight 60,http://www.wikidata.org/entity/Q204284,http://www.wikidata.org/entity/Q17,1966-02-04T00:00:00Z,133.0,,
+http://www.wikidata.org/entity/Q4731275,Allegheny Airlines Flight 853,,http://www.wikidata.org/entity/Q30,1969-09-09T00:00:00Z,83.0,,AL853
+http://www.wikidata.org/entity/Q4742940,American Airlines Flight 1572,http://www.wikidata.org/entity/Q32396,http://www.wikidata.org/entity/Q30,1995-11-12T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q4742946,American Airlines Flight 383,http://www.wikidata.org/entity/Q32396,http://www.wikidata.org/entity/Q30,1965-11-08T00:00:00Z,58.0,4.0,AA383
+http://www.wikidata.org/entity/Q4742948,American Airlines Flight 320,http://www.wikidata.org/entity/Q32396,http://www.wikidata.org/entity/Q30,1959-02-03T00:00:00Z,65.0,8.0,AA320
+http://www.wikidata.org/entity/Q4742949,American Airlines Flight 625,http://www.wikidata.org/entity/Q32396,http://www.wikidata.org/entity/Q30,1976-04-27T00:00:00Z,37.0,51.0,AA625
+http://www.wikidata.org/entity/Q4742957,American Airlines Flight 6780,http://www.wikidata.org/entity/Q32396,http://www.wikidata.org/entity/Q30,1952-01-22T00:00:00Z,30.0,0.0,
+http://www.wikidata.org/entity/Q4743649,American Eagle Flight 5452,http://www.wikidata.org/entity/Q15670994,http://www.wikidata.org/entity/Q30,1987-05-08T00:00:00Z,2.0,4.0,
+http://www.wikidata.org/entity/Q4743650,American Eagle Flight 5456,http://www.wikidata.org/entity/Q15670994,http://www.wikidata.org/entity/Q30,1992-06-07T00:00:00Z,5.0,,
+http://www.wikidata.org/entity/Q47485285,Jask air disaster,,http://www.wikidata.org/entity/Q794,1929-09-06T00:00:00Z,1.0,,
+http://www.wikidata.org/entity/Q4749663,"An-24 incident at Gambell, Alaska",,http://www.wikidata.org/entity/Q30,1974-02-27T00:00:00Z,,15.0,
+http://www.wikidata.org/entity/Q4770648,Ansett New Zealand Flight 703,,http://www.wikidata.org/entity/Q664,1995-06-09T00:00:00Z,4.0,17.0,ZQ703
+http://www.wikidata.org/entity/Q478172,Singapore Airlines Flight 006,http://www.wikidata.org/entity/Q32245,http://www.wikidata.org/entity/Q865,2000-10-31T00:00:00Z,83.0,96.0,
+http://www.wikidata.org/entity/Q4816543,Atlantic Southeast Airlines Flight 2254,,http://www.wikidata.org/entity/Q30,1990-04-09T00:00:00Z,2.0,,
+http://www.wikidata.org/entity/Q4816544,Atlantic Southeast Airlines Flight 2311,,http://www.wikidata.org/entity/Q30,1991-04-05T00:00:00Z,3.0,0.0,
+http://www.wikidata.org/entity/Q4820510,East Malling air disaster,,http://www.wikidata.org/entity/Q145,1923-08-27T00:00:00Z,1.0,,
+http://www.wikidata.org/entity/Q4823381,Austral Líneas Aéreas Flight 046,,http://www.wikidata.org/entity/Q414,1988-06-12T00:00:00Z,22.0,0.0,
+http://www.wikidata.org/entity/Q4823384,Austral Líneas Aéreas Flight 901,,http://www.wikidata.org/entity/Q414,1981-05-07T00:00:00Z,31.0,0.0,
+http://www.wikidata.org/entity/Q4828570,Avianca Flight 671,http://www.wikidata.org/entity/Q308911,http://www.wikidata.org/entity/Q766,1960-01-21T00:00:00Z,37.0,9.0,
+http://www.wikidata.org/entity/Q4828576,Avianca Flight 4,http://www.wikidata.org/entity/Q308911,http://www.wikidata.org/entity/Q739,1966-01-14T00:00:00Z,56.0,8.0,
+http://www.wikidata.org/entity/Q4828607,Aviateca Flight 901,,http://www.wikidata.org/entity/Q792,1995-08-09T00:00:00Z,65.0,0.0,
+http://www.wikidata.org/entity/Q4828809,Avient Aviation Flight 324,,http://www.wikidata.org/entity/Q148,2009-11-28T00:00:00Z,3.0,4.0,Z3324
+http://www.wikidata.org/entity/Q4832380,Azerbaijan Airlines Flight 217,http://www.wikidata.org/entity/Q333679,http://www.wikidata.org/entity/Q227,2005-12-23T00:00:00Z,23.0,0.0,AHY217
+http://www.wikidata.org/entity/Q4849260,Bakers Creek air crash,,http://www.wikidata.org/entity/Q408,1943-06-14T00:00:00Z,40.0,,
+http://www.wikidata.org/entity/Q4851066,Balkan Bulgarian Airlines Flight 307,,http://www.wikidata.org/entity/Q159,1973-03-03T00:00:00Z,25.0,0.0,
+http://www.wikidata.org/entity/Q485120,Korean Air Flight 801,,http://www.wikidata.org/entity/Q30,1997-08-06T00:00:00Z,228.0,26.0,KE801
+http://www.wikidata.org/entity/Q4857928,Bar Harbor Airlines Flight 1808,,http://www.wikidata.org/entity/Q30,1985-08-25T00:00:00Z,8.0,0.0,1808
+http://www.wikidata.org/entity/Q486045,Asiana Airlines Flight 991,http://www.wikidata.org/entity/Q211165,http://www.wikidata.org/entity/Q884,2011-07-28T00:00:00Z,2.0,,
+http://www.wikidata.org/entity/Q48789976,2015 Charikot Helicopter Crash,,http://www.wikidata.org/entity/Q837,2015-05-12T00:00:00Z,13.0,,
+http://www.wikidata.org/entity/Q48809903,2017 Sydney Seaplane crash,,http://www.wikidata.org/entity/Q408,2017-12-31T00:00:00Z,6.0,0.0,
+http://www.wikidata.org/entity/Q48817584,Iberia Airlines Flight 933,http://www.wikidata.org/entity/Q187972,http://www.wikidata.org/entity/Q30,1973-12-17T00:00:00Z,0.0,154.0,
+http://www.wikidata.org/entity/Q489904,Air China Flight 129,http://www.wikidata.org/entity/Q51747,http://www.wikidata.org/entity/Q884,2002-04-15T00:00:00Z,129.0,37.0,CA129
+http://www.wikidata.org/entity/Q4914541,Binter Mediterráneo Flight 8261,,http://www.wikidata.org/entity/Q29,2001-08-29T00:00:00Z,4.0,,
+http://www.wikidata.org/entity/Q491520,Korean Air Cargo Flight 8509,,http://www.wikidata.org/entity/Q145,1999-12-22T00:00:00Z,4.0,0.0,KE8509
+http://www.wikidata.org/entity/Q4919790,Thai Airways International Flight 311,http://www.wikidata.org/entity/Q188710,http://www.wikidata.org/entity/Q837,1992-07-31T00:00:00Z,14.0,0.0,
+http://www.wikidata.org/entity/Q4957358,Braniff Flight 250,,http://www.wikidata.org/entity/Q30,1966-08-06T00:00:00Z,42.0,0.0,BN250
+http://www.wikidata.org/entity/Q495953,Korean Air Flight 858,,http://www.wikidata.org/entity/Q252,1987-11-29T00:00:00Z,115.0,0.0,KE858
+http://www.wikidata.org/entity/Q4969273,Britannia Airways Flight 105,,http://www.wikidata.org/entity/Q215,1966-09-01T00:00:00Z,98.0,19.0,
+http://www.wikidata.org/entity/Q4969947,British European Airways Flight 548,,http://www.wikidata.org/entity/Q145,1972-06-18T00:00:00Z,118.0,0.0,BE548
+http://www.wikidata.org/entity/Q497354,Asiana Airlines Flight 733,http://www.wikidata.org/entity/Q211165,http://www.wikidata.org/entity/Q884,1993-07-26T00:00:00Z,68.0,48.0,OZ733
+http://www.wikidata.org/entity/Q4992083,Sterling Airways Flight 296,,http://www.wikidata.org/entity/Q878,1972-03-14T00:00:00Z,112.0,0.0,NB 296
+http://www.wikidata.org/entity/Q501208,1991 Azerbaijani Mil Mi-8 shootdown,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q227,1991-11-20T00:00:00Z,22.0,0.0,N72
+http://www.wikidata.org/entity/Q5019415,Caledonian Airways Flight 153,,http://www.wikidata.org/entity/Q1009,1962-03-04T00:00:00Z,111.0,0.0,
+http://www.wikidata.org/entity/Q5026436,Cameroon Airlines Flight 786,,http://www.wikidata.org/entity/Q1009,1984-08-30T00:00:00Z,2.0,,
+http://www.wikidata.org/entity/Q50356106,2018 Antonov An-26 crash,,http://www.wikidata.org/entity/Q858,2018-03-06T00:00:00Z,6.0,0.0,
+http://www.wikidata.org/entity/Q5060325,Central American Airways Flight 731,,http://www.wikidata.org/entity/Q783,2011-02-14T00:00:00Z,14.0,,
+http://www.wikidata.org/entity/Q5099564,China Airlines Flight 204,http://www.wikidata.org/entity/Q51756,http://www.wikidata.org/entity/Q865,1989-10-26T00:00:00Z,54.0,0.0,
+http://www.wikidata.org/entity/Q5099569,China Airlines Flight 605,http://www.wikidata.org/entity/Q51756,http://www.wikidata.org/entity/Q148,1993-11-04T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q5099661,China Eastern Airlines Flight 5398,http://www.wikidata.org/entity/Q291796,http://www.wikidata.org/entity/Q148,1993-10-26T00:00:00Z,2.0,78.0,
+http://www.wikidata.org/entity/Q5099664,China Eastern Airlines Flight 583,http://www.wikidata.org/entity/Q291796,http://www.wikidata.org/entity/Q30,1993-04-06T00:00:00Z,2.0,253.0,MU583
+http://www.wikidata.org/entity/Q5099822,China Northern Airlines Flight 6901,,http://www.wikidata.org/entity/Q148,1993-11-13T00:00:00Z,12.0,90.0,CJ6901
+http://www.wikidata.org/entity/Q5099824,China Northwest Airlines Flight 2119,,http://www.wikidata.org/entity/Q148,1993-07-23T00:00:00Z,55.0,58.0,WH2119
+http://www.wikidata.org/entity/Q5099909,China Southern Airlines Flight 3456,http://www.wikidata.org/entity/Q291090,http://www.wikidata.org/entity/Q148,1997-05-08T00:00:00Z,35.0,39.0,CZ3456
+http://www.wikidata.org/entity/Q510468,Pacific Southwest Airlines Flight 182,,http://www.wikidata.org/entity/Q30,1978-09-25T00:00:00Z,144.0,0.0,
+http://www.wikidata.org/entity/Q5159340,Condor Flugdienst Flight 3782,http://www.wikidata.org/entity/Q312517,http://www.wikidata.org/entity/Q43,1988-01-02T00:00:00Z,16.0,0.0,DF3782
+http://www.wikidata.org/entity/Q5161732,Connellan air disaster,,http://www.wikidata.org/entity/Q408,1977-01-05T00:00:00Z,5.0,,
+http://www.wikidata.org/entity/Q5165236,Continental Airlines Flight 11,,http://www.wikidata.org/entity/Q30,1962-05-22T00:00:00Z,45.0,0.0,
+http://www.wikidata.org/entity/Q5165240,Continental Airlines Flight 1404,,http://www.wikidata.org/entity/Q30,2008-12-20T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q5166546,Conviasa Flight 2350,http://www.wikidata.org/entity/Q677606,http://www.wikidata.org/entity/Q717,2010-09-13T00:00:00Z,17.0,34.0,
+http://www.wikidata.org/entity/Q5168156,Copa Airlines Flight 201,http://www.wikidata.org/entity/Q849404,http://www.wikidata.org/entity/Q739,1992-06-06T00:00:00Z,47.0,0.0,CMP201
+http://www.wikidata.org/entity/Q5172397,Corporate Airlines Flight 5966,,http://www.wikidata.org/entity/Q30,2004-10-19T00:00:00Z,13.0,2.0,CEA5966
+http://www.wikidata.org/entity/Q519012,1989 Belgium MiG-23 crash,,http://www.wikidata.org/entity/Q31,1989-07-04T00:00:00Z,1.0,,
+http://www.wikidata.org/entity/Q5192131,Cubana de Aviación Flight 310,http://www.wikidata.org/entity/Q849910,http://www.wikidata.org/entity/Q717,1999-12-25T00:00:00Z,22.0,0.0,
+http://www.wikidata.org/entity/Q5192132,Cubana de Aviación Flight 1216,http://www.wikidata.org/entity/Q849910,http://www.wikidata.org/entity/Q774,1999-12-21T00:00:00Z,16.0,,
+http://www.wikidata.org/entity/Q5192133,Cubana de Aviación Flight 493,,http://www.wikidata.org/entity/Q30,1951-04-25T00:00:00Z,43.0,,
+http://www.wikidata.org/entity/Q5192135,Cubana de Aviación Flight 9646,http://www.wikidata.org/entity/Q849910,http://www.wikidata.org/entity/Q241,1989-09-03T00:00:00Z,126.0,0.0,
+http://www.wikidata.org/entity/Q51934238,Southwest Airlines Flight 1380,http://www.wikidata.org/entity/Q503308,http://www.wikidata.org/entity/Q30,2018-04-17T00:00:00Z,1.0,148.0,SWA1380
+http://www.wikidata.org/entity/Q5213023,Dan-Air Flight 1008,,http://www.wikidata.org/entity/Q29,1980-04-25T00:00:00Z,146.0,,
+http://www.wikidata.org/entity/Q5247537,death of Stevie Ray Vaughan,,http://www.wikidata.org/entity/Q30,1990-08-26T00:00:00Z,5.0,0.0,
+http://www.wikidata.org/entity/Q5254563,Delta Air Lines Flight 1288,http://www.wikidata.org/entity/Q188920,http://www.wikidata.org/entity/Q30,1996-07-06T00:00:00Z,2.0,140.0,DL1288
+http://www.wikidata.org/entity/Q5254564,Delta Air Lines Flight 1141,http://www.wikidata.org/entity/Q188920,http://www.wikidata.org/entity/Q30,1988-08-31T00:00:00Z,14.0,94.0,DL1141
+http://www.wikidata.org/entity/Q5254567,Delta Air Lines Flight 723,,http://www.wikidata.org/entity/Q30,1973-07-31T00:00:00Z,89.0,1.0,DL723
+http://www.wikidata.org/entity/Q5254569,Delta Air Lines Flight 9570,http://www.wikidata.org/entity/Q188920,http://www.wikidata.org/entity/Q30,1972-05-30T00:00:00Z,4.0,0.0,DL9570
+http://www.wikidata.org/entity/Q5283989,Divi Divi Air Flight 014,http://www.wikidata.org/entity/Q2068729,http://www.wikidata.org/entity/Q142,2009-10-22T00:00:00Z,1.0,9.0,
+http://www.wikidata.org/entity/Q5288383,1957 Cebu Douglas C-47 crash,,http://www.wikidata.org/entity/Q928,1957-03-17T00:00:00Z,,1.0,
+http://www.wikidata.org/entity/Q5290887,Dominicana DC-9 air disaster,,http://www.wikidata.org/entity/Q142,1970-02-15T00:00:00Z,102.0,0.0,
+http://www.wikidata.org/entity/Q530498,Angara Airlines Flight 9007,http://www.wikidata.org/entity/Q2399163,http://www.wikidata.org/entity/Q159,2011-07-11T00:00:00Z,7.0,30.0,
+http://www.wikidata.org/entity/Q5329956,Eastern Air Lines Flight 212,,http://www.wikidata.org/entity/Q30,1974-09-11T00:00:00Z,72.0,10.0,EA212
+http://www.wikidata.org/entity/Q5329958,Eastern Air Lines Flight 304,,http://www.wikidata.org/entity/Q30,1964-02-25T00:00:00Z,58.0,0.0,EA304
+http://www.wikidata.org/entity/Q5329960,Eastern Air Lines Flight 375,,http://www.wikidata.org/entity/Q30,1960-10-04T00:00:00Z,62.0,10.0,
+http://www.wikidata.org/entity/Q5329961,Eastern Air Lines Flight 512,,http://www.wikidata.org/entity/Q30,1962-11-30T00:00:00Z,25.0,,
+http://www.wikidata.org/entity/Q534358,Lufthansa Flight 540,http://www.wikidata.org/entity/Q9325,http://www.wikidata.org/entity/Q114,1974-11-20T00:00:00Z,59.0,98.0,
+http://www.wikidata.org/entity/Q5348314,EgyptAir Flight 843,http://www.wikidata.org/entity/Q374740,http://www.wikidata.org/entity/Q948,2002-05-07T00:00:00Z,14.0,,
+http://www.wikidata.org/entity/Q5348315,EgyptAir Flight 864,http://www.wikidata.org/entity/Q374740,http://www.wikidata.org/entity/Q869,1976-12-25T00:00:00Z,52.0,,
+http://www.wikidata.org/entity/Q5361613,FedEx Express Flight 647,http://www.wikidata.org/entity/Q782557,http://www.wikidata.org/entity/Q30,2003-12-18T00:00:00Z,0.0,7.0,
+http://www.wikidata.org/entity/Q5381891,2013 Luxor hot air balloon crash,,http://www.wikidata.org/entity/Q79,2013-02-26T00:00:00Z,19.0,2.0,
+http://www.wikidata.org/entity/Q5410510,United Airlines Flight 615,http://www.wikidata.org/entity/Q174769,http://www.wikidata.org/entity/Q30,1951-08-24T00:00:00Z,50.0,0.0,
+http://www.wikidata.org/entity/Q5438057,Faucett Flight 251,,http://www.wikidata.org/entity/Q419,1996-02-29T00:00:00Z,6.0,0.0,CF251
+http://www.wikidata.org/entity/Q5438752,Manx2 Flight 7100,,http://www.wikidata.org/entity/Q27,2011-02-10T00:00:00Z,6.0,6.0,NM7100
+http://www.wikidata.org/entity/Q5439889,FedEx Express Flight 14,http://www.wikidata.org/entity/Q782557,http://www.wikidata.org/entity/Q30,1997-07-31T00:00:00Z,0.0,5.0,
+http://www.wikidata.org/entity/Q5463546,Flying Tiger Line Flight 739,,http://www.wikidata.org/entity/Q30,1962-03-16T00:00:00Z,107.0,0.0,
+http://www.wikidata.org/entity/Q5494346,Freckleton Air Disaster,,http://www.wikidata.org/entity/Q145,1944-08-23T00:00:00Z,61.0,0.0,
+http://www.wikidata.org/entity/Q5514367,GP Express Flight 861,,http://www.wikidata.org/entity/Q30,1992-06-08T00:00:00Z,3.0,,
+http://www.wikidata.org/entity/Q5518110,Galaxy Airlines Flight 203,,http://www.wikidata.org/entity/Q30,1985-01-21T00:00:00Z,70.0,1.0,GX203
+http://www.wikidata.org/entity/Q5524468,Garuda Indonesia Flight 708,http://www.wikidata.org/entity/Q512468,http://www.wikidata.org/entity/Q252,1967-02-16T00:00:00Z,22.0,70.0,708
+http://www.wikidata.org/entity/Q553492,Air Midwest Flight 5481,,http://www.wikidata.org/entity/Q30,2003-01-08T00:00:00Z,21.0,0.0,
+http://www.wikidata.org/entity/Q55658161,1992 Puerto Plata Il-18 crash,,http://www.wikidata.org/entity/Q786,1992-11-15T00:00:00Z,34.0,0.0,
+http://www.wikidata.org/entity/Q5579958,Golden West Airlines Flight 261,,http://www.wikidata.org/entity/Q30,1975-01-09T00:00:00Z,14.0,,
+http://www.wikidata.org/entity/Q5603101,Green Ramp disaster,,http://www.wikidata.org/entity/Q30,1994-03-23T00:00:00Z,24.0,,
+http://www.wikidata.org/entity/Q56073367,Aeroflot Flight 2,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,1977-07-20T00:00:00Z,39.0,1.0,
+http://www.wikidata.org/entity/Q56278825,Xiamen Airlines Flight 8667,http://www.wikidata.org/entity/Q147208,http://www.wikidata.org/entity/Q928,2018-08-16T00:00:00Z,0.0,165.0,MF8667
+http://www.wikidata.org/entity/Q56303254,1992 Cap Skirring air crash,,http://www.wikidata.org/entity/Q1041,1992-02-09T00:00:00Z,30.0,,
+http://www.wikidata.org/entity/Q56308427,American International Airways Flight 808,http://www.wikidata.org/entity/Q1368443,http://www.wikidata.org/entity/Q241,1993-08-18T00:00:00Z,0.0,3.0,
+http://www.wikidata.org/entity/Q56345502,Overseas National Airways Flight 032,,http://www.wikidata.org/entity/Q30,1975-11-12T00:00:00Z,0.0,139.0,ONA032
+http://www.wikidata.org/entity/Q56402771,Laukaa  aviation accident,,http://www.wikidata.org/entity/Q33,2017-07-19T00:00:00Z,1.0,,
+http://www.wikidata.org/entity/Q5656105,Spantax Flight 275,,http://www.wikidata.org/entity/Q29,1972-12-03T00:00:00Z,155.0,,BX275
+http://www.wikidata.org/entity/Q56669989,1945 Brindisi Expeditor crash,,http://www.wikidata.org/entity/Q225,1945-01-23T00:00:00Z,,0.0,
+http://www.wikidata.org/entity/Q56764495,Air Niugini Flight 73,http://www.wikidata.org/entity/Q407675,http://www.wikidata.org/entity/Q702,2018-09-28T00:00:00Z,1.0,46.0,ANG073
+http://www.wikidata.org/entity/Q5685629,Hawthorne Nevada Airlines Flight 708,,http://www.wikidata.org/entity/Q30,1969-02-18T00:00:00Z,35.0,0.0,HNA708
+http://www.wikidata.org/entity/Q5705347,Helikopter Service Flight 451,http://www.wikidata.org/entity/Q4579822,http://www.wikidata.org/entity/Q20,1997-09-08T00:00:00Z,2.0,0.0,
+http://www.wikidata.org/entity/Q580343,United Airlines Flight 232,http://www.wikidata.org/entity/Q174769,http://www.wikidata.org/entity/Q30,1989-07-19T00:00:00Z,111.0,184.0,UA232
+http://www.wikidata.org/entity/Q580867,Space Shuttle Columbia disaster,,http://www.wikidata.org/entity/Q30,2003-02-01T00:00:00Z,7.0,,
+http://www.wikidata.org/entity/Q584131,Dana Air Flight 992,http://www.wikidata.org/entity/Q1159205,http://www.wikidata.org/entity/Q1033,2012-06-03T00:00:00Z,153.0,0.0,9J992
+http://www.wikidata.org/entity/Q5933331,Hughes Airwest Flight 706,,http://www.wikidata.org/entity/Q30,1971-06-06T00:00:00Z,50.0,0.0,
+http://www.wikidata.org/entity/Q59418384,2018 Shirak Su-25 fighter jet crash,,http://www.wikidata.org/entity/Q399,2018-12-04T00:00:00Z,2.0,0.0,
+http://www.wikidata.org/entity/Q5985739,Icelandic Airlines Flight 001,,http://www.wikidata.org/entity/Q854,1978-11-15T00:00:00Z,183.0,79.0,
+http://www.wikidata.org/entity/Q6019789,Indian Airlines Flight 113,,http://www.wikidata.org/entity/Q668,1988-10-19T00:00:00Z,133.0,4.0,
+http://www.wikidata.org/entity/Q6019803,Indian Airlines Flight 257,,http://www.wikidata.org/entity/Q668,1991-08-16T00:00:00Z,69.0,,
+http://www.wikidata.org/entity/Q6019807,Indian Airlines Flight 491,,http://www.wikidata.org/entity/Q668,1993-04-26T00:00:00Z,55.0,,
+http://www.wikidata.org/entity/Q6019809,Indian Airlines Flight 605,,http://www.wikidata.org/entity/Q668,1990-02-14T00:00:00Z,92.0,54.0,
+http://www.wikidata.org/entity/Q60266,United Airlines Flight 173,http://www.wikidata.org/entity/Q174769,http://www.wikidata.org/entity/Q30,1978-12-28T00:00:00Z,10.0,179.0,
+http://www.wikidata.org/entity/Q60323,Viasa Flight 897,http://www.wikidata.org/entity/Q181912,http://www.wikidata.org/entity/Q45,1961-05-30T00:00:00Z,61.0,0.0,
+http://www.wikidata.org/entity/Q6046495,Interflug Flight 1107,,http://www.wikidata.org/entity/Q183,1975-09-01T00:00:00Z,27.0,7.0,
+http://www.wikidata.org/entity/Q6057129,Talia Airways Flight 2H79,,http://www.wikidata.org/entity/Q229,1988-02-27T00:00:00Z,15.0,,
+http://www.wikidata.org/entity/Q60638,Thai Airways International Flight 114,http://www.wikidata.org/entity/Q188710,http://www.wikidata.org/entity/Q869,2001-03-03T00:00:00Z,1.0,7.0,TG114
+http://www.wikidata.org/entity/Q6067958,Iraqi Airways Flight 163,http://www.wikidata.org/entity/Q853937,http://www.wikidata.org/entity/Q851,1986-12-25T00:00:00Z,63.0,43.0,IA163
+http://www.wikidata.org/entity/Q60997030,Toa Domestic Airlines Flight 670,,http://www.wikidata.org/entity/Q17,1988-01-10T00:00:00Z,,,
+http://www.wikidata.org/entity/Q61000232,Air Astana Flight 1388,http://www.wikidata.org/entity/Q406828,http://www.wikidata.org/entity/Q45,2018-11-11T00:00:00Z,0.0,6.0,KC1388
+http://www.wikidata.org/entity/Q6107732,JAT Airways Flight 769,,http://www.wikidata.org/entity/Q236,1973-09-11T00:00:00Z,41.0,0.0,JU769
+http://www.wikidata.org/entity/Q612396,Thai Airways International Flight 261,http://www.wikidata.org/entity/Q188710,http://www.wikidata.org/entity/Q869,1998-12-11T00:00:00Z,101.0,45.0,TG261
+http://www.wikidata.org/entity/Q613025,Independent Air Flight 1851,,http://www.wikidata.org/entity/Q45,1989-02-08T00:00:00Z,144.0,0.0,
+http://www.wikidata.org/entity/Q615020,EAS Airlines Flight 4226,,http://www.wikidata.org/entity/Q1033,2002-05-04T00:00:00Z,71.0,6.0,
+http://www.wikidata.org/entity/Q6156479,Japan Air System Flight 451,,http://www.wikidata.org/entity/Q17,1993-04-18T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q6156486,Japan Airlines Flight 446,http://www.wikidata.org/entity/Q213140,http://www.wikidata.org/entity/Q159,1972-11-28T00:00:00Z,62.0,15.0,JL446
+http://www.wikidata.org/entity/Q6156488,Japan Airlines Flight 471,http://www.wikidata.org/entity/Q213140,http://www.wikidata.org/entity/Q668,1972-06-14T00:00:00Z,82.0,,
+http://www.wikidata.org/entity/Q6156492,Japan Airlines Flight 715,,http://www.wikidata.org/entity/Q833,1977-09-27T00:00:00Z,34.0,45.0,
+http://www.wikidata.org/entity/Q6164937,LAN Chile Flight 1069,http://www.wikidata.org/entity/Q649178,http://www.wikidata.org/entity/Q298,1991-02-20T00:00:00Z,20.0,53.0,
+http://www.wikidata.org/entity/Q6164938,LAN Chile Flight 107,http://www.wikidata.org/entity/Q649178,http://www.wikidata.org/entity/Q298,1965-02-06T00:00:00Z,88.0,,107
+http://www.wikidata.org/entity/Q6164946,KLM Flight 1673,http://www.wikidata.org/entity/Q181912,http://www.wikidata.org/entity/Q29,2004-11-28T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q6164949,RUTACA Airlines Flight 225,http://www.wikidata.org/entity/Q1409875,http://www.wikidata.org/entity/Q717,2001-01-25T00:00:00Z,,,
+http://www.wikidata.org/entity/Q6164961,Cubana de Aviación Flight 389,http://www.wikidata.org/entity/Q849910,http://www.wikidata.org/entity/Q736,1998-08-29T00:00:00Z,70.0,21.0,CU389
+http://www.wikidata.org/entity/Q6164968,Japan Airlines Flight 46E,http://www.wikidata.org/entity/Q213140,http://www.wikidata.org/entity/Q30,1993-03-31T00:00:00Z,0.0,5.0,
+http://www.wikidata.org/entity/Q6164969,TACV Flight 5002,http://www.wikidata.org/entity/Q669686,http://www.wikidata.org/entity/Q1011,1999-08-07T00:00:00Z,,,
+http://www.wikidata.org/entity/Q6164979,Pakistan International Airlines Flight 653,http://www.wikidata.org/entity/Q204887,http://www.wikidata.org/entity/Q843,2012-08-31T00:00:00Z,0.0,46.0,
+http://www.wikidata.org/entity/Q6164982,Corendon Airlines Flight 773,http://www.wikidata.org/entity/Q669002,http://www.wikidata.org/entity/Q43,2012-10-14T00:00:00Z,0.0,196.0,
+http://www.wikidata.org/entity/Q61846653,Atlas Air Flight 3591,http://www.wikidata.org/entity/Q757135,http://www.wikidata.org/entity/Q30,2019-02-23T00:00:00Z,3.0,0.0,
+http://www.wikidata.org/entity/Q61896974,2019 Taplejung helicopter crash,http://www.wikidata.org/entity/Q43449909,http://www.wikidata.org/entity/Q837,2019-02-27T00:00:00Z,7.0,0.0,
+http://www.wikidata.org/entity/Q62015761,2019 Colombia DC-3 crash,,http://www.wikidata.org/entity/Q739,2019-03-09T00:00:00Z,14.0,0.0,
+http://www.wikidata.org/entity/Q6232326,John F. Kennedy Jr. plane crash,,http://www.wikidata.org/entity/Q30,1999-07-16T00:00:00Z,3.0,0.0,
+http://www.wikidata.org/entity/Q626003,Korean Air Flight 803,,http://www.wikidata.org/entity/Q1016,1989-07-27T00:00:00Z,3.0,124.0,
+http://www.wikidata.org/entity/Q629645,Aerocon Flight 238,http://www.wikidata.org/entity/Q2825625,http://www.wikidata.org/entity/Q750,2011-09-06T00:00:00Z,8.0,,
+http://www.wikidata.org/entity/Q633870,UTair Flight 120,http://www.wikidata.org/entity/Q1065835,http://www.wikidata.org/entity/Q159,2012-04-02T00:00:00Z,33.0,12.0,
+http://www.wikidata.org/entity/Q63490143,Aeroflot Flight 1492,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q159,2019-05-05T00:00:00Z,41.0,37.0,SU1492
+http://www.wikidata.org/entity/Q6364195,Kano air disaster,http://www.wikidata.org/entity/Q824225,http://www.wikidata.org/entity/Q1033,1973-01-22T00:00:00Z,176.0,26.0,
+http://www.wikidata.org/entity/Q64532497,2019 New York City helicopter crash,,http://www.wikidata.org/entity/Q30,2019-06-10T00:00:00Z,1.0,,
+http://www.wikidata.org/entity/Q6455722,L'Express Airlines Flight 508,,http://www.wikidata.org/entity/Q30,1991-07-10T00:00:00Z,13.0,,
+http://www.wikidata.org/entity/Q6457042,LANSA Flight 502,,http://www.wikidata.org/entity/Q419,1970-08-09T00:00:00Z,99.0,1.0,502
+http://www.wikidata.org/entity/Q6459604,LOT Flight 703,http://www.wikidata.org/entity/Q204268,http://www.wikidata.org/entity/Q36,1988-11-02T00:00:00Z,1.0,,
+http://www.wikidata.org/entity/Q6475222,Lake Central Flight 527,,http://www.wikidata.org/entity/Q30,1967-03-05T00:00:00Z,38.0,0.0,
+http://www.wikidata.org/entity/Q64846096,Angara Airlines Flight 200,http://www.wikidata.org/entity/Q2399163,http://www.wikidata.org/entity/Q159,2019-06-27T00:00:00Z,2.0,45.0,ИК-200
+http://www.wikidata.org/entity/Q6499997,Aeroflot Flight 7502,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q184,1979-01-15T00:00:00Z,,1.0,7502
+http://www.wikidata.org/entity/Q6500030,Aeroflot Flight 7841,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q184,1985-02-01T00:00:00Z,58.0,22.0,
+http://www.wikidata.org/entity/Q65090430,1985 Teterboro collision,,http://www.wikidata.org/entity/Q30,1985-11-10T00:00:00Z,8.0,,
+http://www.wikidata.org/entity/Q6516946,Widerøe Flight 710,http://www.wikidata.org/entity/Q28344,http://www.wikidata.org/entity/Q20,1988-05-06T00:00:00Z,36.0,0.0,WF710
+http://www.wikidata.org/entity/Q65176926,East African Airways Flight 720,,http://www.wikidata.org/entity/Q115,1972-04-18T00:00:00Z,43.0,64.0,
+http://www.wikidata.org/entity/Q65277758,First Flying Flight 101,http://www.wikidata.org/entity/Q11280963,http://www.wikidata.org/entity/Q17,2015-08-28T00:00:00Z,,,
+http://www.wikidata.org/entity/Q6554197,Linjeflyg Flight 618,,http://www.wikidata.org/entity/Q34,1977-01-15T00:00:00Z,22.0,,LF618
+http://www.wikidata.org/entity/Q6555394,Lion Air Flight 538,http://www.wikidata.org/entity/Q1056794,http://www.wikidata.org/entity/Q252,2004-11-30T00:00:00Z,25.0,156.0,JT538
+http://www.wikidata.org/entity/Q665566,Aloha Airlines Flight 243,,http://www.wikidata.org/entity/Q30,1988-04-28T00:00:00Z,1.0,94.0,
+http://www.wikidata.org/entity/Q6665900,Asiana Airlines Flight 324,http://www.wikidata.org/entity/Q211165,http://www.wikidata.org/entity/Q884,2011-06-17T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q66809713,Continental Express Flight 2733,,http://www.wikidata.org/entity/Q30,1993-04-29T00:00:00Z,0.0,30.0,
+http://www.wikidata.org/entity/Q66936918,"helicopter accident in Alta, Norway, in 2019",,http://www.wikidata.org/entity/Q20,2019-08-31T00:00:00Z,6.0,0.0,
+http://www.wikidata.org/entity/Q67079824,Kato Air Flight 603,,http://www.wikidata.org/entity/Q20,2003-12-04T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q671604,China Southwest Airlines Flight 4509,,http://www.wikidata.org/entity/Q148,1999-02-24T00:00:00Z,61.0,0.0,
+http://www.wikidata.org/entity/Q6728635,Madrid Runway Disaster,http://www.wikidata.org/entity/Q187972,http://www.wikidata.org/entity/Q29,1983-12-07T00:00:00Z,93.0,42.0,IB350
+http://www.wikidata.org/entity/Q673726,Swissair Flight 330,,http://www.wikidata.org/entity/Q39,1970-02-21T00:00:00Z,47.0,0.0,
+http://www.wikidata.org/entity/Q6745203,Malév Flight 262,,http://www.wikidata.org/entity/Q41,2000-07-04T00:00:00Z,0.0,94.0,MAH 262
+http://www.wikidata.org/entity/Q675546,Lauda Air Flight 004,,http://www.wikidata.org/entity/Q869,1991-05-26T00:00:00Z,223.0,0.0,
+http://www.wikidata.org/entity/Q6830431,Korean Air Flight 8702,,http://www.wikidata.org/entity/Q884,1998-08-05T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q689359,Crossair Flight 498,,http://www.wikidata.org/entity/Q39,2000-01-10T00:00:00Z,10.0,0.0,
+http://www.wikidata.org/entity/Q689448,Canadian Pacific Air Lines Flight 402,,http://www.wikidata.org/entity/Q17,1966-03-04T00:00:00Z,64.0,8.0,
+http://www.wikidata.org/entity/Q6952032,2003 Angola Boeing 727 disappearance,,http://www.wikidata.org/entity/Q916,2003-05-25T00:00:00Z,,,
+http://www.wikidata.org/entity/Q6970260,National Airlines Flight 193,,http://www.wikidata.org/entity/Q30,1978-05-08T00:00:00Z,3.0,55.0,
+http://www.wikidata.org/entity/Q6970261,National Airlines Flight 2511,,http://www.wikidata.org/entity/Q30,1960-01-06T00:00:00Z,34.0,0.0,
+http://www.wikidata.org/entity/Q6970262,National Airlines Flight 27,,http://www.wikidata.org/entity/Q30,1973-01-01T00:00:00Z,1.0,127.0,NA27
+http://www.wikidata.org/entity/Q6970264,National Airlines Flight 967,,http://www.wikidata.org/entity/Q241,1959-11-16T00:00:00Z,42.0,0.0,
+http://www.wikidata.org/entity/Q699055,China Airlines Flight 140,http://www.wikidata.org/entity/Q51756,http://www.wikidata.org/entity/Q17,1994-04-26T00:00:00Z,264.0,7.0,
+http://www.wikidata.org/entity/Q699195,Far Eastern Air Transport Flight 103,,http://www.wikidata.org/entity/Q865,1981-08-22T00:00:00Z,110.0,0.0,
+http://www.wikidata.org/entity/Q70141439,Ukraine Air Alliance Flight 4050,http://www.wikidata.org/entity/Q1884782,http://www.wikidata.org/entity/Q212,2019-10-04T00:00:00Z,5.0,3.0,UKL4050
+http://www.wikidata.org/entity/Q7032791,Nigeria Airways Flight 357,,http://www.wikidata.org/entity/Q1033,1995-11-13T00:00:00Z,11.0,127.0,WT357
+http://www.wikidata.org/entity/Q704766,China Airlines Flight 358,http://www.wikidata.org/entity/Q51756,http://www.wikidata.org/entity/Q865,1991-12-29T00:00:00Z,5.0,0.0,CI358
+http://www.wikidata.org/entity/Q7059927,Northwest Airlines Flight 85,,http://www.wikidata.org/entity/Q30,2002-10-09T00:00:00Z,0.0,,NWA85
+http://www.wikidata.org/entity/Q7059928,Northwest Airlink Flight 2268,http://www.wikidata.org/entity/Q874625,http://www.wikidata.org/entity/Q30,1987-03-04T00:00:00Z,9.0,,
+http://www.wikidata.org/entity/Q7060143,Northwest Orient Airlines Flight 293,,http://www.wikidata.org/entity/Q30,1963-06-03T00:00:00Z,101.0,0.0,NW293
+http://www.wikidata.org/entity/Q7060144,Northwest Airlines Flight 705,,http://www.wikidata.org/entity/Q30,1963-02-12T00:00:00Z,43.0,0.0,
+http://www.wikidata.org/entity/Q7060145,Northwest Orient Airlines Flight 710,,http://www.wikidata.org/entity/Q30,1960-03-17T00:00:00Z,63.0,0.0,NW710
+http://www.wikidata.org/entity/Q7060146,Northwest Orient Airlines Flight 706,,http://www.wikidata.org/entity/Q30,1961-09-17T00:00:00Z,37.0,0.0,NW706
+http://www.wikidata.org/entity/Q70632843,crash of airship Italia,,http://www.wikidata.org/entity/Q159,1928-05-25T00:00:00Z,7.0,9.0,
+http://www.wikidata.org/entity/Q707497,China Airlines Flight 120,http://www.wikidata.org/entity/Q51756,http://www.wikidata.org/entity/Q17,2007-08-20T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q709416,China Airlines Flight 676,http://www.wikidata.org/entity/Q51756,http://www.wikidata.org/entity/Q865,1998-02-16T00:00:00Z,196.0,,
+http://www.wikidata.org/entity/Q7116475,Ozark Air Lines Flight 809,,http://www.wikidata.org/entity/Q30,1973-07-23T00:00:00Z,38.0,6.0,OZ809
+http://www.wikidata.org/entity/Q7119310,PIA Flight 688,http://www.wikidata.org/entity/Q204887,http://www.wikidata.org/entity/Q843,2006-07-10T00:00:00Z,45.0,,
+http://www.wikidata.org/entity/Q7119313,PIA Flight 740,http://www.wikidata.org/entity/Q204887,http://www.wikidata.org/entity/Q851,1979-11-26T00:00:00Z,156.0,0.0,PK740
+http://www.wikidata.org/entity/Q7122767,Pacific Western Airlines Flight 314,,http://www.wikidata.org/entity/Q16,1978-02-11T00:00:00Z,42.0,7.0,PW314
+http://www.wikidata.org/entity/Q7122768,Pacific Western Airlines Flight 501,,http://www.wikidata.org/entity/Q16,1984-03-22T00:00:00Z,0.0,119.0,
+http://www.wikidata.org/entity/Q7126582,Palair Macedonian Airlines Flight 301,,http://www.wikidata.org/entity/Q221,1993-03-05T00:00:00Z,83.0,,
+http://www.wikidata.org/entity/Q7129568,Pan Am Flight 708,,http://www.wikidata.org/entity/Q183,1966-11-15T00:00:00Z,3.0,,
+http://www.wikidata.org/entity/Q7129569,Pan Am Flight 6,,http://www.wikidata.org/entity/Q30,1956-10-16T00:00:00Z,0.0,31.0,
+http://www.wikidata.org/entity/Q7129571,Pan Am Flight 806,,http://www.wikidata.org/entity/Q30,1974-01-30T00:00:00Z,97.0,4.0,
+http://www.wikidata.org/entity/Q7129572,Pan Am Flight 812,,http://www.wikidata.org/entity/Q252,1974-04-22T00:00:00Z,107.0,0.0,PA812
+http://www.wikidata.org/entity/Q7129574,Pan Am Flight 845/26,,http://www.wikidata.org/entity/Q30,1955-03-26T00:00:00Z,4.0,19.0,
+http://www.wikidata.org/entity/Q7129577,Pan Am Flight 816,,http://www.wikidata.org/entity/Q142,1973-07-22T00:00:00Z,78.0,1.0,PA816
+http://www.wikidata.org/entity/Q7184944,Philippine Airlines Flight 143,http://www.wikidata.org/entity/Q846910,http://www.wikidata.org/entity/Q928,1990-05-11T00:00:00Z,8.0,,
+http://www.wikidata.org/entity/Q7184949,Philippine Airlines Flight 475,http://www.wikidata.org/entity/Q846910,http://www.wikidata.org/entity/Q928,2007-10-26T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q7191488,Piedmont Airlines Flight 22,,http://www.wikidata.org/entity/Q30,1967-07-19T00:00:00Z,79.0,,PI022
+http://www.wikidata.org/entity/Q722529,EgyptAir Flight 990,http://www.wikidata.org/entity/Q374740,http://www.wikidata.org/entity/Q30,1999-10-31T00:00:00Z,216.0,0.0,MS990
+http://www.wikidata.org/entity/Q72501089,2019 MiG-29 plane crash,,http://www.wikidata.org/entity/Q227,2019-07-24T00:00:00Z,1.0,,
+http://www.wikidata.org/entity/Q7266508,Qantas Flight 1,http://www.wikidata.org/entity/Q32491,http://www.wikidata.org/entity/Q869,1999-09-23T00:00:00Z,0.0,410.0,
+http://www.wikidata.org/entity/Q7266512,Qantas Flight 30,http://www.wikidata.org/entity/Q32491,http://www.wikidata.org/entity/Q252,2008-07-25T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q7269864,Quebecair Flight 255,,http://www.wikidata.org/entity/Q16,1979-03-29T00:00:00Z,17.0,,
+http://www.wikidata.org/entity/Q73736,Petropavlovsk-Kamchatsky Air Flight 251 (2012),http://www.wikidata.org/entity/Q2340002,http://www.wikidata.org/entity/Q159,2012-09-12T00:00:00Z,10.0,4.0,PTK251
+http://www.wikidata.org/entity/Q7373856,Royal Brunei Airlines Flight 238,http://www.wikidata.org/entity/Q1050783,http://www.wikidata.org/entity/Q833,1997-09-06T00:00:00Z,10.0,0.0,
+http://www.wikidata.org/entity/Q737967,1972 Andes flight disaster,,http://www.wikidata.org/entity/Q298,1972-10-13T00:00:00Z,31.0,16.0,
+http://www.wikidata.org/entity/Q7388498,SAETA Flight 232,,http://www.wikidata.org/entity/Q736,1976-08-15T00:00:00Z,59.0,0.0,
+http://www.wikidata.org/entity/Q7388641,SAM Colombia Flight 501,,http://www.wikidata.org/entity/Q739,1993-05-19T00:00:00Z,132.0,,
+http://www.wikidata.org/entity/Q7388664,SANSA Flight 32,http://www.wikidata.org/entity/Q2222528,http://www.wikidata.org/entity/Q800,2011-01-28T00:00:00Z,23.0,,
+http://www.wikidata.org/entity/Q741126,Iran Aseman Airlines Flight 6895,,http://www.wikidata.org/entity/Q813,2008-08-24T00:00:00Z,65.0,25.0,
+http://www.wikidata.org/entity/Q741398,1996 Air Africa crash,,http://www.wikidata.org/entity/Q974,1996-01-08T00:00:00Z,298.0,5.0,
+http://www.wikidata.org/entity/Q7429939,Scandinavian Airlines System Flight 347,http://www.wikidata.org/entity/Q187854,http://www.wikidata.org/entity/Q20,1994-11-03T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q743060,Iran Air Flight 655 shootdown,,http://www.wikidata.org/entity/Q794,1988-07-03T00:00:00Z,16.0,0.0,IR655
+http://www.wikidata.org/entity/Q7453539,Bek Air Flight 2100,,http://www.wikidata.org/entity/Q232,2019-12-27T00:00:00Z,12.0,86.0,Z92100
+http://www.wikidata.org/entity/Q746785,Mandala Airlines Flight 091,http://www.wikidata.org/entity/Q1198815,http://www.wikidata.org/entity/Q252,2005-09-05T00:00:00Z,100.0,16.0,
+http://www.wikidata.org/entity/Q748379,1960 U-2 incident spy aircraft,,http://www.wikidata.org/entity/Q159,1960-05-01T00:00:00Z,,1.0,
+http://www.wikidata.org/entity/Q7493575,Aeroflot Flight 521,http://www.wikidata.org/entity/Q58707,http://www.wikidata.org/entity/Q878,2001-09-21T00:00:00Z,,322.0,SU521
+http://www.wikidata.org/entity/Q752308,Eastern Air Lines Flight 537,,http://www.wikidata.org/entity/Q30,1949-11-01T00:00:00Z,55.0,0.0,
+http://www.wikidata.org/entity/Q7541545,Slovak Police training explosives incident,,http://www.wikidata.org/entity/Q214,2010-01-02T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q7559133,Somali Airlines Flight 40,,http://www.wikidata.org/entity/Q1045,1981-07-20T00:00:00Z,50.0,,40
+http://www.wikidata.org/entity/Q756253,Atlantic Southeast Airlines Flight 529,,http://www.wikidata.org/entity/Q30,1995-08-21T00:00:00Z,9.0,20.0,
+http://www.wikidata.org/entity/Q7565425,South African Airways Flight 228,http://www.wikidata.org/entity/Q223763,http://www.wikidata.org/entity/Q1030,1968-04-20T00:00:00Z,123.0,5.0,
+http://www.wikidata.org/entity/Q7571206,Southwest Airlines Flight 1455,http://www.wikidata.org/entity/Q503308,http://www.wikidata.org/entity/Q30,2000-03-05T00:00:00Z,0.0,,WN1455
+http://www.wikidata.org/entity/Q7604846,Stavropolskaya Aktsionernaya Avia Flight 1023,http://www.wikidata.org/entity/Q21500988,http://www.wikidata.org/entity/Q159,1997-03-18T00:00:00Z,50.0,0.0,
+http://www.wikidata.org/entity/Q76448858,2019 Busy Bee crash,,http://www.wikidata.org/entity/Q974,2019-11-24T00:00:00Z,26.0,1.0,
+http://www.wikidata.org/entity/Q7659034,Swissair Flight 316,,http://www.wikidata.org/entity/Q41,1979-10-08T00:00:00Z,14.0,,
+http://www.wikidata.org/entity/Q7669220,TAESA Flight 725,,http://www.wikidata.org/entity/Q96,1999-11-09T00:00:00Z,18.0,0.0,
+http://www.wikidata.org/entity/Q7669292,1983 TAME 737-200 crash,,http://www.wikidata.org/entity/Q736,1983-07-11T00:00:00Z,119.0,,
+http://www.wikidata.org/entity/Q7669317,TANS Perú Flight 222,,http://www.wikidata.org/entity/Q419,2003-01-09T00:00:00Z,46.0,,
+http://www.wikidata.org/entity/Q7669350,TAROM Flight 3107,,http://www.wikidata.org/entity/Q218,2007-12-30T00:00:00Z,,,
+http://www.wikidata.org/entity/Q7672508,TWA Flight 128,,http://www.wikidata.org/entity/Q30,1967-11-20T00:00:00Z,70.0,12.0,TW128
+http://www.wikidata.org/entity/Q7672515,1994 St. Louis Airport collision,,http://www.wikidata.org/entity/Q30,1994-11-22T00:00:00Z,2.0,,
+http://www.wikidata.org/entity/Q7672517,TWA Flight 514,,http://www.wikidata.org/entity/Q30,1974-12-01T00:00:00Z,92.0,0.0,
+http://www.wikidata.org/entity/Q7672518,TWA Flight 529,,http://www.wikidata.org/entity/Q30,1961-09-01T00:00:00Z,78.0,0.0,TW529
+http://www.wikidata.org/entity/Q7672520,TWA Flight 553,,http://www.wikidata.org/entity/Q30,1967-03-09T00:00:00Z,26.0,0.0,
+http://www.wikidata.org/entity/Q7672524,TWA Flight 840 bombing (1986),,http://www.wikidata.org/entity/Q41,1986-04-02T00:00:00Z,4.0,118.0,TW840
+http://www.wikidata.org/entity/Q7672526,TWA Flight 841,,http://www.wikidata.org/entity/Q30,1979-04-04T00:00:00Z,0.0,,TW841
+http://www.wikidata.org/entity/Q7672527,TWA Flight 843,,http://www.wikidata.org/entity/Q30,1992-07-30T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q7682001,Tan-Sahsa Flight 414,,http://www.wikidata.org/entity/Q783,1989-10-21T00:00:00Z,131.0,15.0,SH414
+http://www.wikidata.org/entity/Q769736,British Airways Flight 38,http://www.wikidata.org/entity/Q8766,http://www.wikidata.org/entity/Q145,2008-01-17T00:00:00Z,0.0,152.0,
+http://www.wikidata.org/entity/Q78069997,2019 Chilean Air Force C-130 accident,,http://www.wikidata.org/entity/Q298,2019-12-09T00:00:00Z,38.0,,
+http://www.wikidata.org/entity/Q783193,Avianca Flight 052,http://www.wikidata.org/entity/Q308911,http://www.wikidata.org/entity/Q30,1990-01-25T00:00:00Z,73.0,85.0,
+http://www.wikidata.org/entity/Q783579,American Airlines Flight 96,http://www.wikidata.org/entity/Q32396,http://www.wikidata.org/entity/Q16,1972-06-12T00:00:00Z,0.0,67.0,
+http://www.wikidata.org/entity/Q783597,American Airlines Flight 1420,http://www.wikidata.org/entity/Q32396,http://www.wikidata.org/entity/Q30,1999-06-01T00:00:00Z,11.0,134.0,
+http://www.wikidata.org/entity/Q784141,Eastern Air Lines Flight 401,,http://www.wikidata.org/entity/Q30,1972-12-29T00:00:00Z,101.0,77.0,
+http://www.wikidata.org/entity/Q784466,Itavia Flight 870,,http://www.wikidata.org/entity/Q38,1980-06-27T00:00:00Z,81.0,0.0,IH870
+http://www.wikidata.org/entity/Q7855224,Turkish Airlines flight 158,http://www.wikidata.org/entity/Q4548,http://www.wikidata.org/entity/Q43,1983-01-16T00:00:00Z,47.0,,
+http://www.wikidata.org/entity/Q7855225,Turkish Airlines flight 345,http://www.wikidata.org/entity/Q4548,http://www.wikidata.org/entity/Q43,1975-01-30T00:00:00Z,42.0,0.0,TK345
+http://www.wikidata.org/entity/Q7855227,Turkish Airlines flight 5904,http://www.wikidata.org/entity/Q4548,http://www.wikidata.org/entity/Q43,1999-04-07T00:00:00Z,6.0,,
+http://www.wikidata.org/entity/Q78552785,1983 Anchorage runway collision,,http://www.wikidata.org/entity/Q30,1983-12-23T00:00:00Z,0.0,3.0,KE084
+http://www.wikidata.org/entity/Q7865889,USAir Flight 5050,,http://www.wikidata.org/entity/Q30,1989-09-20T00:00:00Z,2.0,61.0,
+http://www.wikidata.org/entity/Q7866458,USMC R4Q NROTC crash,,http://www.wikidata.org/entity/Q30,1953-07-17T00:00:00Z,43.0,2.0,
+http://www.wikidata.org/entity/Q7875834,USAir Flight 1016,,http://www.wikidata.org/entity/Q30,1994-07-02T00:00:00Z,37.0,20.0,
+http://www.wikidata.org/entity/Q7887343,United Airlines Flight 227,http://www.wikidata.org/entity/Q174769,http://www.wikidata.org/entity/Q30,1965-11-11T00:00:00Z,43.0,48.0,
+http://www.wikidata.org/entity/Q7887345,United Airlines Flight 266,http://www.wikidata.org/entity/Q174769,http://www.wikidata.org/entity/Q30,1969-01-18T00:00:00Z,38.0,0.0,UA266
+http://www.wikidata.org/entity/Q7887350,United Airlines Flight 409,http://www.wikidata.org/entity/Q174769,http://www.wikidata.org/entity/Q30,1955-10-06T00:00:00Z,66.0,,
+http://www.wikidata.org/entity/Q7887358,United Airlines Flight 624,http://www.wikidata.org/entity/Q174769,http://www.wikidata.org/entity/Q30,1948-06-17T00:00:00Z,43.0,0.0,
+http://www.wikidata.org/entity/Q7887359,United Airlines Flight 663,http://www.wikidata.org/entity/Q174769,http://www.wikidata.org/entity/Q30,2010-04-07T00:00:00Z,0.0,163.0,
+http://www.wikidata.org/entity/Q7887363,United Airlines Flight 823,http://www.wikidata.org/entity/Q174769,http://www.wikidata.org/entity/Q30,1964-07-09T00:00:00Z,39.0,0.0,
+http://www.wikidata.org/entity/Q7887365,United Airlines Flight 826 (1997),http://www.wikidata.org/entity/Q174769,http://www.wikidata.org/entity/Q17,1997-12-28T00:00:00Z,1.0,392.0,UA826
+http://www.wikidata.org/entity/Q7887735,United Express Flight 2415,http://www.wikidata.org/entity/Q1188413,http://www.wikidata.org/entity/Q30,1989-12-26T00:00:00Z,6.0,,
+http://www.wikidata.org/entity/Q7887737,United Express Flight 5925,http://www.wikidata.org/entity/Q945493,http://www.wikidata.org/entity/Q30,1996-11-19T00:00:00Z,14.0,0.0,
+http://www.wikidata.org/entity/Q79030495,Rheintalflug flight 102,,http://www.wikidata.org/entity/Q183,1989-02-23T00:00:00Z,11.0,,
+http://www.wikidata.org/entity/Q7906918,Advance Airlines Flight 4210,,http://www.wikidata.org/entity/Q408,1980-02-21T00:00:00Z,13.0,,
+http://www.wikidata.org/entity/Q794998,1994 Fairchild Air Force Base B-52 crash,,http://www.wikidata.org/entity/Q30,1994-06-24T00:00:00Z,4.0,0.0,
+http://www.wikidata.org/entity/Q796847,BOAC Flight 911,,http://www.wikidata.org/entity/Q17,1966-03-05T00:00:00Z,124.0,0.0,
+http://www.wikidata.org/entity/Q7984763,West Coast Airlines Flight 956,,http://www.wikidata.org/entity/Q30,1966-10-01T00:00:00Z,18.0,0.0,
+http://www.wikidata.org/entity/Q7998696,Widerøe Flight 839,http://www.wikidata.org/entity/Q28344,http://www.wikidata.org/entity/Q20,1990-04-12T00:00:00Z,5.0,,
+http://www.wikidata.org/entity/Q7999112,Wien Consolidated Airlines Flight 55,,http://www.wikidata.org/entity/Q30,1968-12-02T00:00:00Z,39.0,0.0,
+http://www.wikidata.org/entity/Q800043,1990 Guangzhou Baiyun airport collisions,http://www.wikidata.org/entity/Q147208,http://www.wikidata.org/entity/Q148,1990-10-02T00:00:00Z,128.0,20.0,
+http://www.wikidata.org/entity/Q8010114,2013 Berlin helicopter crash,,http://www.wikidata.org/entity/Q183,2013-03-21T00:00:00Z,1.0,,
+http://www.wikidata.org/entity/Q8025209,Wingfoot Air Express crash,,http://www.wikidata.org/entity/Q30,1919-07-21T00:00:00Z,13.0,2.0,
+http://www.wikidata.org/entity/Q8035350,World Airways Flight 30,,http://www.wikidata.org/entity/Q30,1982-01-23T00:00:00Z,2.0,,
+http://www.wikidata.org/entity/Q81360866,Ukraine International Airlines Flight 752,,http://www.wikidata.org/entity/Q794,2020-01-08T00:00:00Z,0.0,176.0,PS752
+http://www.wikidata.org/entity/Q8186776,Medellin plane crash of 1935,,http://www.wikidata.org/entity/Q739,1935-06-24T00:00:00Z,17.0,3.0,
+http://www.wikidata.org/entity/Q8186780,1938 Santa Ana air show disaster,,http://www.wikidata.org/entity/Q739,1938-07-24T00:00:00Z,,0.0,
+http://www.wikidata.org/entity/Q8186788,2012 Taiwan BN-2 Islander accident,,http://www.wikidata.org/entity/Q865,2012-08-30T00:00:00Z,3.0,0.0,
+http://www.wikidata.org/entity/Q8186827,Dan-Air Flight 1903,,http://www.wikidata.org/entity/Q29,1970-07-03T00:00:00Z,112.0,0.0,
+http://www.wikidata.org/entity/Q835929,Kashmir Princess,http://www.wikidata.org/entity/Q69906,http://www.wikidata.org/entity/Q252,1955-04-11T00:00:00Z,16.0,3.0,
+http://www.wikidata.org/entity/Q842026,PMTair Flight 241,,http://www.wikidata.org/entity/Q424,2007-06-25T00:00:00Z,22.0,0.0,
+http://www.wikidata.org/entity/Q84329676,PenAir Flight 3296,http://www.wikidata.org/entity/Q1811285,http://www.wikidata.org/entity/Q30,2019-10-17T00:00:00Z,1.0,41.0,
+http://www.wikidata.org/entity/Q84428052,Pegasus Airlines Flight 2193,http://www.wikidata.org/entity/Q1100424,http://www.wikidata.org/entity/Q43,2020-02-05T00:00:00Z,3.0,180.0,
+http://www.wikidata.org/entity/Q846291,Vietnam Airlines Flight 815,http://www.wikidata.org/entity/Q174386,http://www.wikidata.org/entity/Q424,1997-09-03T00:00:00Z,64.0,2.0,
+http://www.wikidata.org/entity/Q84955168,LAC Colombia Flight 028,,http://www.wikidata.org/entity/Q733,1996-02-04T00:00:00Z,4.0,0.0,
+http://www.wikidata.org/entity/Q855050,Bhoja Air Flight 213,,http://www.wikidata.org/entity/Q843,2012-04-20T00:00:00Z,127.0,,
+http://www.wikidata.org/entity/Q858145,Space Shuttle Challenger disaster,,http://www.wikidata.org/entity/Q30,1986-01-28T00:00:00Z,7.0,,
+http://www.wikidata.org/entity/Q85873206,Pilgrim Airlines Flight 458,,http://www.wikidata.org/entity/Q30,1982-02-21T00:00:00Z,1.0,,
+http://www.wikidata.org/entity/Q858734,Superga air disaster,,http://www.wikidata.org/entity/Q38,1949-05-04T00:00:00Z,4.0,0.0,
+http://www.wikidata.org/entity/Q85880679,Japan Air System Flight 979,,http://www.wikidata.org/entity/Q17,2004-01-01T00:00:00Z,,,
+http://www.wikidata.org/entity/Q85881159,Toa Domestic Airlines Flight 381,,http://www.wikidata.org/entity/Q17,1979-07-21T00:00:00Z,,,
+http://www.wikidata.org/entity/Q865870,TAM Airlines Flight 3054,http://www.wikidata.org/entity/Q690789,http://www.wikidata.org/entity/Q155,2007-07-17T00:00:00Z,187.0,0.0,
+http://www.wikidata.org/entity/Q873485,Colgan Air Flight 3407,,http://www.wikidata.org/entity/Q30,2009-02-12T00:00:00Z,50.0,0.0,
+http://www.wikidata.org/entity/Q8826711,death of Yuri Gagarin,,http://www.wikidata.org/entity/Q159,1968-03-27T00:00:00Z,2.0,,
+http://www.wikidata.org/entity/Q883089,Paninternational Flight 112,,http://www.wikidata.org/entity/Q183,1971-09-06T00:00:00Z,22.0,99.0,
+http://www.wikidata.org/entity/Q890629,American Airlines Flight 1,http://www.wikidata.org/entity/Q32396,http://www.wikidata.org/entity/Q30,1962-03-01T00:00:00Z,95.0,0.0,AA001
+http://www.wikidata.org/entity/Q8929770,2014 Vnukovo Airport Falcon 50 crash,,http://www.wikidata.org/entity/Q159,2014-10-20T00:00:00Z,4.0,,
+http://www.wikidata.org/entity/Q904715,Yemenia Flight 626,http://www.wikidata.org/entity/Q662091,http://www.wikidata.org/entity/Q970,2009-06-30T00:00:00Z,11.0,1.0,
+http://www.wikidata.org/entity/Q90500093,Alitalia Flight 1553,,http://www.wikidata.org/entity/Q38,1999-02-25T00:00:00Z,4.0,,
+http://www.wikidata.org/entity/Q90500139,Garuda Indonesian Airways Flight 892,http://www.wikidata.org/entity/Q512468,http://www.wikidata.org/entity/Q668,1968-05-28T00:00:00Z,30.0,,
+http://www.wikidata.org/entity/Q908717,TWA Flight 800,,http://www.wikidata.org/entity/Q30,1996-07-17T00:00:00Z,230.0,0.0,
+http://www.wikidata.org/entity/Q9094823,TAME Flight 120,,http://www.wikidata.org/entity/Q739,2002-01-28T00:00:00Z,94.0,,
+http://www.wikidata.org/entity/Q909869,China Northern Airlines Flight 6136,,http://www.wikidata.org/entity/Q148,2002-05-07T00:00:00Z,112.0,0.0,
+http://www.wikidata.org/entity/Q91013439,Malév Airlines Flight 731,,http://www.wikidata.org/entity/Q191,1971-08-28T00:00:00Z,31.0,2.0,
+http://www.wikidata.org/entity/Q91282246,Alaska Airlines Flight 60,http://www.wikidata.org/entity/Q822614,http://www.wikidata.org/entity/Q30,1976-04-05T00:00:00Z,,,
+http://www.wikidata.org/entity/Q918595,British Eagle International Airlines Flight 802,,http://www.wikidata.org/entity/Q40,1964-02-29T00:00:00Z,83.0,0.0,
+http://www.wikidata.org/entity/Q921029,2011 Silk Way Airlines Ilyushin Il-76 crash,http://www.wikidata.org/entity/Q1715027,http://www.wikidata.org/entity/Q889,2011-07-06T00:00:00Z,9.0,0.0,
+http://www.wikidata.org/entity/Q926160,Aerolíneas Argentinas Flight 322,,http://www.wikidata.org/entity/Q155,1961-11-23T00:00:00Z,52.0,0.0,AR322
+http://www.wikidata.org/entity/Q929721,USAir Flight 427,,http://www.wikidata.org/entity/Q30,1994-09-08T00:00:00Z,132.0,0.0,
+http://www.wikidata.org/entity/Q935682,Sudan Airways Flight 139,http://www.wikidata.org/entity/Q864117,http://www.wikidata.org/entity/Q1049,2003-07-08T00:00:00Z,117.0,1.0,SD139
+http://www.wikidata.org/entity/Q941612,American Airlines Flight 965,http://www.wikidata.org/entity/Q32396,http://www.wikidata.org/entity/Q739,1995-12-20T00:00:00Z,159.0,4.0,
+http://www.wikidata.org/entity/Q94298268,IAF Nord Crash at Makhtesh Ramon,,http://www.wikidata.org/entity/Q801,1964-04-29T00:00:00Z,9.0,0.0,
+http://www.wikidata.org/entity/Q947452,ValuJet Flight 592,,http://www.wikidata.org/entity/Q30,1996-05-11T00:00:00Z,110.0,0.0,J7592
+http://www.wikidata.org/entity/Q947605,First Air Flight 6560,,http://www.wikidata.org/entity/Q16,2011-08-20T00:00:00Z,12.0,3.0,
+http://www.wikidata.org/entity/Q94774,Pakistan Naval Air Arm Atlantique shootdown,,http://www.wikidata.org/entity/Q668,1999-08-10T00:00:00Z,16.0,,
+http://www.wikidata.org/entity/Q950273,1986 Mozambican Tupolev Tu-134 crash,,http://www.wikidata.org/entity/Q1029,1986-10-19T00:00:00Z,34.0,10.0,
+http://www.wikidata.org/entity/Q951088,Iran Air Flight 277,,http://www.wikidata.org/entity/Q794,2011-01-09T00:00:00Z,77.0,28.0,
+http://www.wikidata.org/entity/Q95472075,Iberia Flight 6463,http://www.wikidata.org/entity/Q187972,http://www.wikidata.org/entity/Q736,2007-11-09T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q96105487,2007 Móstoles Bullring Bell 206 crash,,http://www.wikidata.org/entity/Q29,2005-12-01T00:00:00Z,0.0,,
+http://www.wikidata.org/entity/Q962475,Tuninter Flight 1153,http://www.wikidata.org/entity/Q543645,http://www.wikidata.org/entity/Q1016,2005-08-06T00:00:00Z,16.0,23.0,TUI1153
+http://www.wikidata.org/entity/Q962966,BOAC Flight 781,,http://www.wikidata.org/entity/Q1028,1954-01-10T00:00:00Z,35.0,0.0,
+http://www.wikidata.org/entity/Q96370225,2020 East African Express Airways Brasilia crash,http://www.wikidata.org/entity/Q384068,http://www.wikidata.org/entity/Q1045,2020-05-04T00:00:00Z,6.0,,
+http://www.wikidata.org/entity/Q97174681,Trans-Air Service Flight 671,,http://www.wikidata.org/entity/Q142,1992-03-31T00:00:00Z,0.0,5.0,
+http://www.wikidata.org/entity/Q97329973,Air Inter Flight 696,,http://www.wikidata.org/entity/Q142,1972-10-27T00:00:00Z,60.0,8.0,
+http://www.wikidata.org/entity/Q97376136,Japan Airlines Flight 813,http://www.wikidata.org/entity/Q213140,http://www.wikidata.org/entity/Q30,1965-12-25T00:00:00Z,0.0,,JL813
+http://www.wikidata.org/entity/Q97486352,British Airways Flight 34,http://www.wikidata.org/entity/Q8766,http://www.wikidata.org/entity/Q258,2013-12-22T00:00:00Z,0.0,,BA34
+http://www.wikidata.org/entity/Q97655410,IAF Rapid Crash at the Israeli coastal plain,,http://www.wikidata.org/entity/Q801,1950-12-18T00:00:00Z,8.0,0.0,
+http://www.wikidata.org/entity/Q97694998,Disappearance of the American Congressmen in Alaska,,http://www.wikidata.org/entity/Q30,1972-10-16T00:00:00Z,4.0,0.0,
+http://www.wikidata.org/entity/Q98071413,1973 Aerocondor Lockheed L-188 Electra crash,,http://www.wikidata.org/entity/Q739,1973-08-27T00:00:00Z,42.0,,
+http://www.wikidata.org/entity/Q99134835,Miejsce upadku samolotu pod Wróblikiem,,http://www.wikidata.org/entity/Q36,1945-01-01T00:00:00Z,,,

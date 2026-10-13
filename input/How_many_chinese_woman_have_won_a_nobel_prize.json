@@ -1,0 +1,166 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "How many chinese woman have won a nobel prize?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by award id and return list of award ids for Nobel prize winners",
+          "query": "Find all award ids of Nobel prize winners",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "awards"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "Award ids of Nobel prize winners",
+              "step_id": "s1"
+            }
+          ],
+          "id": "s2",
+          "merge_task": "Return person ids for the given award ids",
+          "query": "Find all person ids of according award ids in chinese region",
+          "to_agent": {
+            "region": [
+              "people_s_republic_of_china"
+            ],
+            "table": "person_awards"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "Person ids of of nobel prize winners",
+              "step_id": "s2"
+            }
+          ],
+          "id": "s3",
+          "merge_task": "Deduplicate by person ids and return with according country ids",
+          "query": "Filter all female persons out of the given person ids and return person id with according country id in chinese region",
+          "to_agent": {
+            "region": [
+              "people_s_republic_of_china"
+            ],
+            "table": "persons"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s4",
+          "merge_task": "Return the country id of China as soon as it is found.",
+          "query": "Find country id of China",
+          "to_agent": {
+            "region": [
+              "people_s_republic_of_china"
+            ],
+            "table": "countries"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "Country id of China",
+              "step_id": "s4"
+            },
+            {
+              "dependency": "Person ids of female nobel prize winners with according country ids",
+              "step_id": "s3"
+            }
+          ],
+          "id": "s5",
+          "query": "Find amount of female nobel prize winners from China by filtering with country id",
+          "to_agent": "Coordinator"
+        }
+      ]
+    },
+    "sql_query": "SELECT COUNT(*) AS amount FROM persons INNER JOIN countries ON countries.country = persons.citizenship INNER JOIN person_awards ON person_awards.person = persons.person INNER JOIN awards ON awards.award = person_awards.award WHERE sex = 'female' AND countries.name = 'People''s Republic of China' AND awards.name LIKE '%nobel%'",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "award"
+          ],
+          "keys": [
+            "award"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT awards.award FROM awards WHERE awards.award IN (35637, 37922, 38104, 44585, 47170, 80061)"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "person"
+          ],
+          "keys": [
+            "person"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT person_awards.person FROM person_awards WHERE person_awards.award IN (35637, 37922, 38104, 44585, 47170, 80061)"
+      },
+      "s3": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "person",
+            "citizenship"
+          ],
+          "keys": [
+            "person"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT persons.person, persons.citizenship FROM persons WHERE persons.sex = 'female'"
+      },
+      "s4": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "country"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT countries.country FROM countries WHERE countries.name = 'People''s Republic of China'"
+      },
+      "s5": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "person"
+          ],
+          "keys": [
+            "person"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT persons.person FROM persons WHERE persons.person = 462843"
+      }
+    }
+  }
+}

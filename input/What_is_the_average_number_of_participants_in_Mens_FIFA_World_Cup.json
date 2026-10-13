@@ -1,0 +1,41 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the average number of participants in Men's FIFA World Cup?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by tournament and calculate the average number of participants.",
+          "query": "Return all Men's FIFA World Cup tournaments and their number of participants.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "tournaments"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT AVG(tournaments.participants) AS avg_participants FROM tournaments WHERE name NOT LIKE '%women%'",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "avg"
+          ],
+          "columns": [
+            "tournament",
+            "participants"
+          ],
+          "keys": [
+            "tournament"
+          ],
+          "value_column": "participants"
+        },
+        "sql_query": "SELECT tournaments.tournament, tournaments.participants FROM tournaments WHERE name NOT LIKE '%women%'"
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "Which country has the highest GDP in Africa?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Return the continent id of Africa as soon as it is found.",
+          "query": "Return the continent id of Africa.",
+          "to_agent": {
+            "region": [
+              "africa"
+            ],
+            "table": "continents"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "The continent id of Africa.",
+              "step_id": "s1"
+            }
+          ],
+          "id": "s2",
+          "merge_task": "Deduplicate by country and return the country with the highest GDP.",
+          "query": "Return all countries in Africa with their GDP if available.",
+          "to_agent": {
+            "region": [
+              "africa"
+            ],
+            "table": "countries"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT countries.name FROM countries INNER JOIN continents ON continents.continent = countries.continent WHERE continents.name = 'Africa' AND countries.gdp_usd = ( SELECT MAX(countries.gdp_usd) FROM countries INNER JOIN continents ON continents.continent = countries.continent WHERE continents.name = 'Africa' )",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "continent"
+          ],
+          "keys": [
+            "continent"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT continents.continent FROM continents WHERE continents.name = 'Africa'"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "max"
+          ],
+          "columns": [
+            "country",
+            "gdp_usd"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": "gdp_usd"
+        },
+        "sql_query": "SELECT countries.country, countries.gdp_usd FROM countries WHERE countries.continent = 15"
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the average attendance of NBA matches?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by match identifier, calculate the average attendance.",
+          "query": "Return all match identifiers together with the attendance for all matches.",
+          "to_agent": {
+            "region": [
+              "northern_america"
+            ],
+            "table": "nba_matches"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT AVG(nba_matches.attendance) AS avg_attendance FROM nba_matches",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "avg"
+          ],
+          "columns": [
+            "game",
+            "attendance"
+          ],
+          "keys": [
+            "game"
+          ],
+          "value_column": "attendance"
+        },
+        "sql_query": "SELECT nba_matches.game, nba_matches.attendance FROM nba_matches"
+      }
+    }
+  }
+}

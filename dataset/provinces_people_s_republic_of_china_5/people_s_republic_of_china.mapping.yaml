@@ -1,0 +1,11 @@
+china_provinces:
+  source: provinces
+  columns:
+    province_id: province
+    country: country
+    administrative_region_name: name
+    coords: coords
+    total_area_km2: area_km2
+    inhabitants: population
+    province_capital: capital
+    founded: inception

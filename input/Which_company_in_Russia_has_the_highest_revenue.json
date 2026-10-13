@@ -1,0 +1,74 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "Which company in Russia has the highest revenue?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Return the country id of Russia as soon as it is found.",
+          "query": "Return the country id of Russia.",
+          "to_agent": {
+            "region": [
+              "russia"
+            ],
+            "table": "countries"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "Country id of Russia.",
+              "step_id": "s1"
+            }
+          ],
+          "id": "s2",
+          "merge_task": "Deduplicate by company, return the company with the higest revenue.",
+          "query": "Return all companies located in Russia with their revenue.",
+          "to_agent": {
+            "region": [
+              "russia"
+            ],
+            "table": "companies"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT companies.name FROM companies INNER JOIN countries ON countries.country = companies.country WHERE countries.name = 'Russia' AND companies.revenue_usd = ( SELECT MAX(revenue_usd) FROM companies INNER JOIN countries ON countries.country = companies.country WHERE countries.name = 'Russia' )",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "country"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT countries.country FROM countries WHERE countries.name = 'Russia'"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "max"
+          ],
+          "columns": [
+            "company",
+            "revenue_usd"
+          ],
+          "keys": [
+            "company"
+          ],
+          "value_column": "revenue_usd"
+        },
+        "sql_query": "SELECT companies.company, companies.revenue_usd FROM companies WHERE companies.country = 159"
+      }
+    }
+  }
+}

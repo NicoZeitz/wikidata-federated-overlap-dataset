@@ -1,0 +1,41 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the average area in square kilometers of Chinese provinces?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by province and calculate the average area.",
+          "query": "Return all provinces and areas in China.",
+          "to_agent": {
+            "region": [
+              "people_s_republic_of_china"
+            ],
+            "table": "provinces"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT AVG(provinces.area_km2) AS avg_area FROM provinces",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "avg"
+          ],
+          "columns": [
+            "province",
+            "area_km2"
+          ],
+          "keys": [
+            "province"
+          ],
+          "value_column": "area_km2"
+        },
+        "sql_query": "SELECT provinces.province, provinces.area_km2 FROM provinces"
+      }
+    }
+  }
+}

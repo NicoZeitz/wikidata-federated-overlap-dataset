@@ -1,0 +1,75 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "Who won the most world cup matches in the last 50 years and how many?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate the matches and count the number of wins for each individual team id, return the team id and the number of wins",
+          "query": "Return all matches of the last 50 years and their winner",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "matches"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "Team id and number of wins for the team with most matches won in the last 50 years",
+              "step_id": "s1"
+            }
+          ],
+          "id": "s2",
+          "merge_task": "Return team name and number of wins for the team with most matches won in the last 50 years",
+          "query": "Return the team name for the team id with the most wins",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "teams"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT t.name, COUNT(*) AS wins FROM teams t INNER JOIN matches m ON t.team = m.winner WHERE m.date >= strftime('%Y-%m-%dT%H:%M:%SZ', 'now', '-50 years') GROUP BY t.team ORDER BY wins DESC LIMIT 1;",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "match",
+            "winner"
+          ],
+          "keys": [
+            "match"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT matches.match, matches.winner FROM matches WHERE matches.date >= '1976-09-24T00:00:00Z'"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "team",
+            "name"
+          ],
+          "keys": [
+            "team"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT teams.team, teams.name FROM teams WHERE teams.team = 83459"
+      }
+    }
+  }
+}

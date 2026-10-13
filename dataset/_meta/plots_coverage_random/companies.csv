@@ -1,0 +1,16 @@
+position,database,coverage_pct,total_rows,new_unique_rows
+0,g7,34.63,62395,62395
+1,czech_republic,37.33,4867,4867
+2,czech_republic,39.58,4879,4050
+3,czech_republic,40.75,4882,2111
+4,czech_republic,42.24,4879,2669
+5,czech_republic,42.77,4885,958
+6,czech_republic,43.64,4886,1574
+7,czech_republic,44.12,4889,869
+8,czech_republic,51.67,28236,13601
+9,worldwide,76.61,69397,44932
+10,worldwide,85.07,69398,15235
+11,czech_republic,85.16,4893,163
+12,czech_republic,85.23,4891,130
+13,czech_republic,85.29,4888,113
+14,oecd,100.0,62395,26493

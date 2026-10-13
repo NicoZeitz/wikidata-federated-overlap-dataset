@@ -1,0 +1,5342 @@
+airports:
+  aviation_canada:
+    name: airports
+    columns:
+      airport: airport_id
+      name: terminal_name
+      iata_code: three_letter_code
+      elevation_m: altitude_m
+      passengers: passenger_count
+      airport_area_km2: area_km2
+      timezone_offset: tz_offset
+      inception: inception
+      coords: lat_lon
+      city: served_city
+      country: airport_country
+  aviation_canada_2:
+    name: aviation_hubs
+    columns:
+      airport: airport
+      name: terminal_name
+      iata_code: airport_code
+      icao_code: icao_code
+      elevation_m: elevation
+      passengers: yearly_passengers
+      airport_area_km2: area_km2
+      timezone_offset: utc_offset
+      inception: opened
+      coords: lat_lon
+      city: city
+      country: country
+  aviation_canada_3:
+    name: flight_hubs
+    columns:
+      airport: aerodrome_id
+      name: name
+      iata_code: iata_identifier
+      icao_code: icao
+      elevation_m: altitude_m
+      passengers: yearly_passengers
+      airport_area_km2: area_km2
+      timezone_offset: timezone_offset
+      inception: established
+      coords: geo_coords
+      city: served_city
+      country: country
+  aviation_christian:
+    name: airfields
+    columns:
+      airport: airport
+      name: aerodrome_name
+      iata_code: airport_code
+      elevation_m: elevation
+      passengers: yearly_passengers
+      airport_area_km2: airport_area
+      timezone_offset: tz_offset
+      inception: start_date
+      coords: location
+      city: city
+      country: host_country
+  aviation_g7:
+    name: airports
+    columns:
+      airport: airport_id
+      name: airport_name
+      iata_code: iata_code
+      icao_code: icao_identifier
+      elevation_m: elevation
+      passengers: pax
+      airport_area_km2: area_km2
+      timezone_offset: timezone_offset
+      inception: start_date
+      coords: location
+      city: city
+      country: nation
+  aviation_global_north:
+    name: terminals
+    columns:
+      airport: aerodrome_id
+      name: airfield_name
+      iata_code: iata_code
+      icao_code: four_letter_code
+      elevation_m: height_metres
+      passengers: throughput
+      airport_area_km2: surface_area_km2
+      timezone_offset: tz_offset
+      inception: founded
+      coords: coords
+      city: city
+      country: airport_country
+  aviation_russia:
+    name: flight_hubs
+    columns:
+      airport: airport
+      name: title
+      iata_code: three_letter_code
+      icao_code: icao_code
+      elevation_m: height_m
+      passengers: passenger_traffic
+      timezone_offset: timezone_offset
+      inception: opened
+      coords: geo_coords
+      city: serving_city
+      country: airport_country
+  aviation_russia_2:
+    name: international_airports
+    columns:
+      airport: aerodrome_id
+      name: label
+      iata_code: iata
+      icao_code: icao_code
+      elevation_m: elevation
+      passengers: pax
+      airport_area_km2: surface_area_km2
+      timezone_offset: tz_offset
+      inception: opening_date
+      coords: location
+      city: city
+      country: host_country
+  aviation_russia_3:
+    name: aviation_hubs
+    columns:
+      airport: aerodrome_id
+      name: name
+      iata_code: three_letter_code
+      icao_code: four_letter_code
+      elevation_m: height_m
+      passengers: passengers
+      airport_area_km2: surface_area_km2
+      timezone_offset: time_zone_offset
+      inception: founded
+      coords: coords
+      city: city_id
+      country: nation
+  aviation_united_states:
+    name: commercial_airports
+    columns:
+      airport: airport
+      name: name
+      iata_code: iata
+      elevation_m: height_metres
+      passengers: passenger_count
+      airport_area_km2: area_km2
+      timezone_offset: tz_offset
+      inception: opened
+      coords: position
+      city: city_id
+      country: country
+  aviation_united_states_2:
+    name: airfields
+    columns:
+      airport: airport
+      name: terminal_name
+      iata_code: iata_code
+      icao_code: icao_code
+      elevation_m: elevation_metres
+      passengers: passenger_traffic
+      airport_area_km2: area_km2
+      timezone_offset: time_zone_offset
+      inception: inception
+      coords: location
+      city: served_city
+      country: host_country
+  aviation_united_states_3:
+    name: aerodromes
+    columns:
+      airport: airport_id
+      name: aerodrome_name
+      iata_code: airport_code
+      icao_code: icao_identifier
+      elevation_m: elevation_m
+      passengers: pax
+      airport_area_km2: total_area_km2
+      timezone_offset: gmt_offset
+      coords: lat_lon
+      city: city
+      country: host_country
+  aviation_united_states_4:
+    name: commercial_airports
+    columns:
+      airport: airport_id
+      name: terminal_name
+      iata_code: airport_code
+      icao_code: icao_code
+      elevation_m: elevation
+      passengers: throughput
+      airport_area_km2: surface_area_km2
+      timezone_offset: gmt_offset
+      coords: coordinates
+      city: nearest_city
+      country: nation
+  aviation_worldwide:
+    name: air_hubs
+    columns:
+      airport: aerodrome_id
+      name: label
+      iata_code: iata_code
+      icao_code: four_letter_code
+      elevation_m: height_m
+      passengers: yearly_passengers
+      airport_area_km2: area_km2
+      timezone_offset: time_zone_offset
+      inception: established
+      coords: coords
+      city: city
+      country: country
+  aviation_worldwide_2:
+    name: aviation_hubs
+    columns:
+      airport: airport_id
+      name: label
+      iata_code: iata_code
+      icao_code: four_letter_code
+      elevation_m: elevation
+      passengers: yearly_passengers
+      airport_area_km2: area_km2
+      timezone_offset: tz_offset
+      inception: established
+      coords: position
+      city: city
+      country: host_country
+airlines:
+  aviation_canada:
+    name: air_transport_companies
+    columns:
+      airline: airline
+      name: name
+      country: headquarters_country
+      inception: founded
+      employees: workforce_size
+      revenue_usd: revenue
+      fleet_size: total_aircraft
+      parent_company: owner
+      iata_code: iata_designator
+      icao_code: icao
+      headquarters: hq_city
+      website: homepage
+      hub_airport: hub_airport
+  aviation_canada_2:
+    name: commercial_airlines
+    columns:
+      airline: airline
+      name: company_name
+      country: home_country
+      inception: start_date
+      employees: staff_count
+      revenue_usd: income_usd
+      fleet_size: fleet_size
+      parent_company: owner
+      iata_code: iata_code
+      icao_code: icao
+      headquarters: hq
+      website: homepage
+      hub_airport: primary_hub
+  aviation_canada_3:
+    name: airlines
+    columns:
+      airline: carrier_id
+      name: airline_name
+      country: nation
+      inception: founding_date
+      employees: employees
+      revenue_usd: revenue_usd
+      fleet_size: planes
+      parent_company: parent_company
+      iata_code: two_letter_code
+      icao_code: icao_code
+      headquarters: hq
+      website: website
+      hub_airport: hub_airport
+  aviation_christian:
+    name: passenger_airlines
+    columns:
+      airline: airline_id
+      name: company_name
+      country: headquarters_country
+      inception: founding_date
+      employees: headcount
+      revenue_usd: total_revenue_usd
+      parent_company: parent_company
+      iata_code: iata
+      icao_code: airline_code_icao
+      headquarters: hq_location
+      website: website
+      hub_airport: base_airport
+  aviation_g7:
+    name: carriers
+    columns:
+      airline: airline
+      name: airline_name
+      country: headquarters_country
+      inception: inception
+      employees: number_of_employees
+      revenue_usd: revenue_usd
+      fleet_size: number_of_aircraft
+      parent_company: parent_company
+      iata_code: two_letter_code
+      icao_code: airline_code_icao
+      headquarters: headquarters
+      website: web_address
+      hub_airport: main_hub
+  aviation_global_north:
+    name: air_transport_companies
+    columns:
+      airline: carrier_id
+      name: name
+      country: nation
+      inception: start_date
+      employees: number_of_employees
+      revenue_usd: annual_revenue_usd
+      parent_company: parent
+      iata_code: iata_designator
+      icao_code: three_letter_code
+      headquarters: hq_city
+      website: official_website
+      hub_airport: hub
+  aviation_russia:
+    name: aviation_companies
+    columns:
+      airline: airline_id
+      name: carrier_name
+      country: hq_country
+      inception: founding_date
+      employees: workforce_size
+      revenue_usd: revenue
+      fleet_size: number_of_aircraft
+      parent_company: parent
+      iata_code: iata
+      icao_code: airline_code_icao
+      headquarters: hq_location
+      website: website
+      hub_airport: primary_hub
+  aviation_russia_2:
+    name: commercial_airlines
+    columns:
+      airline: airline_id
+      name: label
+      country: hq_country
+      inception: founded
+      employees: staff_count
+      revenue_usd: income_usd
+      fleet_size: total_aircraft
+      parent_company: holding_company
+      iata_code: two_letter_code
+      icao_code: three_letter_code
+      headquarters: registered_office
+      website: url
+      hub_airport: hub
+  aviation_russia_3:
+    name: air_transport_companies
+    columns:
+      airline: airline
+      name: title
+      country: nation
+      inception: foundation_date
+      employees: staff
+      revenue_usd: total_revenue_usd
+      fleet_size: number_of_aircraft
+      parent_company: holding_company
+      iata_code: iata
+      icao_code: icao
+      headquarters: base
+      website: web_address
+      hub_airport: hub_airport
+  aviation_united_states:
+    name: air_operators
+    columns:
+      airline: airline
+      name: company_name
+      country: home_country
+      inception: founding_date
+      employees: number_of_employees
+      revenue_usd: revenue_usd
+      fleet_size: fleet_size
+      parent_company: holding_company
+      iata_code: iata
+      icao_code: airline_code_icao
+      headquarters: hq_city
+      website: web_address
+      hub_airport: main_hub
+  aviation_united_states_2:
+    name: carriers
+    columns:
+      airline: carrier_id
+      name: title
+      country: hq_country
+      inception: inception
+      employees: staff_count
+      revenue_usd: total_revenue_usd
+      fleet_size: planes
+      parent_company: parent
+      iata_code: airline_code_iata
+      icao_code: three_letter_code
+      headquarters: head_office
+      website: website
+      hub_airport: hub_airport
+  aviation_united_states_3:
+    name: flight_operators
+    columns:
+      airline: carrier_id
+      name: operator_name
+      country: headquarters_country
+      inception: start_date
+      employees: personnel_count
+      revenue_usd: revenue_usd
+      fleet_size: planes
+      parent_company: parent
+      iata_code: iata_code
+      icao_code: icao_designator
+      headquarters: head_office
+      website: website
+      hub_airport: base_airport
+  aviation_united_states_4:
+    name: airlines
+    columns:
+      airline: airline
+      name: title
+      country: hq_country
+      inception: founded
+      employees: headcount
+      revenue_usd: total_revenue_usd
+      fleet_size: fleet_size
+      parent_company: parent
+      iata_code: iata_designator
+      icao_code: icao
+      headquarters: registered_office
+      website: official_website
+      hub_airport: hub_airport
+  aviation_worldwide:
+    name: air_transport_companies
+    columns:
+      airline: airline
+      name: label
+      country: hq_country
+      inception: foundation_date
+      employees: staff_count
+      revenue_usd: revenue
+      fleet_size: planes
+      parent_company: parent_organization
+      iata_code: airline_code_iata
+      icao_code: icao_code
+      headquarters: registered_office
+      website: url
+      hub_airport: primary_hub
+  aviation_worldwide_2:
+    name: aviation_companies
+    columns:
+      airline: airline_id
+      name: name
+      country: country
+      inception: founded
+      employees: staff_count
+      revenue_usd: gross_revenue_usd
+      fleet_size: planes
+      parent_company: parent_company
+      iata_code: iata_designator
+      icao_code: airline_code_icao
+      headquarters: hq_city
+      website: url
+      hub_airport: hub
+aircraft:
+  aviation_canada:
+    name: aircraft_fleet
+    columns:
+      aircraft: aircraft_id
+      name: label
+      operator: operating_carrier
+      country: operator_country
+      model: plane_type
+      manufacturer: aircraft_manufacturer
+      first_flight: debut_flight
+      max_passengers: max_passengers
+      cruise_speed_kmh: cruise_speed_kmh
+      wingspan_m: wing_width_m
+      length_m: length
+      max_takeoff_weight_kg: gross_weight_kg
+  aviation_canada_2:
+    name: airliners
+    columns:
+      aircraft: aircraft
+      name: aircraft_registration
+      operator: operating_airline
+      country: country
+      model: aircraft_type
+      manufacturer: maker
+      first_flight: debut_flight
+      max_passengers: max_passengers
+      cruise_speed_kmh: speed
+      length_m: body_length_m
+      max_takeoff_weight_kg: mtow_kg
+  aviation_canada_3:
+    name: jets
+    columns:
+      aircraft: aircraft_id
+      name: aircraft_name
+      operator: operating_carrier
+      country: operator_country
+      model: aircraft_model
+      manufacturer: builder
+      first_flight: inaugural_flight
+      max_passengers: capacity
+      cruise_speed_kmh: flight_speed_kmh
+      wingspan_m: wing_width_m
+      length_m: aircraft_length_m
+      max_takeoff_weight_kg: mtow_kg
+  aviation_christian:
+    name: fleet
+    columns:
+      aircraft: aircraft
+      name: label
+      operator: carrier
+      country: nation
+      model: model_type
+      manufacturer: aircraft_manufacturer
+      first_flight: delivery_date
+      max_passengers: seats
+      cruise_speed_kmh: flight_speed_kmh
+      wingspan_m: wingspan_m
+      length_m: length_m
+      max_takeoff_weight_kg: takeoff_weight_kg
+  aviation_g7:
+    name: flying_machines
+    columns:
+      aircraft: plane_id
+      name: aircraft_name
+      operator: operating_airline
+      country: nation
+      model: model_type
+      manufacturer: aircraft_manufacturer
+      first_flight: maiden_flight
+      max_passengers: max_passengers
+      cruise_speed_kmh: cruise_speed_kmh
+      wingspan_m: wing_span_m
+      length_m: fuselage_length_m
+      max_takeoff_weight_kg: max_takeoff_weight_kg
+  aviation_global_north:
+    name: airplanes
+    columns:
+      aircraft: aircraft_id
+      name: aircraft_registration
+      operator: carrier
+      country: operator_country
+      model: aircraft_type
+      manufacturer: maker
+      first_flight: first_flight_date
+      max_passengers: max_passengers
+      cruise_speed_kmh: flight_speed_kmh
+      wingspan_m: wingspan
+      length_m: aircraft_length_m
+      max_takeoff_weight_kg: max_gross_weight_kg
+  aviation_russia:
+    name: planes
+    columns:
+      aircraft: tail_number
+      name: name
+      operator: carrier
+      country: country
+      model: model_type
+      manufacturer: builder
+      first_flight: maiden_flight
+      max_passengers: max_passengers
+      cruise_speed_kmh: speed_kmh
+      length_m: aircraft_length_m
+      max_takeoff_weight_kg: max_gross_weight_kg
+  aviation_russia_2:
+    name: aircraft
+    columns:
+      aircraft: identifier
+      name: label
+      operator: air_operator
+      country: nation
+      model: aircraft_type
+      manufacturer: aircraft_manufacturer
+      first_flight: inaugural_flight
+      max_passengers: max_seats
+      cruise_speed_kmh: speed
+      wingspan_m: wingspan_m
+      length_m: length
+      max_takeoff_weight_kg: gross_weight_kg
+  aviation_russia_3:
+    name: fleet
+    columns:
+      aircraft: identifier
+      name: aircraft_registration
+      operator: operating_airline
+      country: operator_country
+      model: aircraft_type
+      manufacturer: aircraft_manufacturer
+      first_flight: first_flight
+      max_passengers: seating_capacity
+      cruise_speed_kmh: cruise_speed
+      wingspan_m: wing_width_m
+      length_m: body_length_m
+      max_takeoff_weight_kg: max_weight_kg
+  aviation_united_states:
+    name: aircraft_fleet
+    columns:
+      aircraft: tail_number
+      name: aircraft_name
+      operator: operator
+      country: registration_country
+      model: plane_type
+      manufacturer: aircraft_manufacturer
+      first_flight: maiden_flight
+      max_passengers: seat_count
+      cruise_speed_kmh: flight_speed_kmh
+      wingspan_m: wingspan
+      length_m: length_m
+      max_takeoff_weight_kg: gross_weight_kg
+  aviation_united_states_2:
+    name: fleet
+    columns:
+      aircraft: aircraft
+      name: aircraft_registration
+      operator: carrier
+      country: country
+      model: type_designation
+      manufacturer: manufacturer_name
+      first_flight: inaugural_flight
+      max_passengers: seating_capacity
+      cruise_speed_kmh: flight_speed_kmh
+      length_m: length
+      max_takeoff_weight_kg: max_weight_kg
+  aviation_united_states_3:
+    name: aircraft_fleet
+    columns:
+      aircraft: identifier
+      name: name_registration
+      operator: airline
+      country: operator_country
+      model: model_type
+      manufacturer: manufacturer_name
+      first_flight: first_flight_date
+      max_passengers: seat_count
+      cruise_speed_kmh: flight_speed_kmh
+      wingspan_m: wing_width_m
+      length_m: length_m
+      max_takeoff_weight_kg: takeoff_weight_kg
+  aviation_united_states_4:
+    name: flying_machines
+    columns:
+      aircraft: plane_id
+      name: name_registration
+      operator: airline
+      country: operator_country
+      model: type_designation
+      manufacturer: builder
+      first_flight: maiden_flight
+      max_passengers: max_seats
+      cruise_speed_kmh: speed
+      wingspan_m: wing_width_m
+      length_m: length_m
+      max_takeoff_weight_kg: max_gross_weight_kg
+  aviation_worldwide:
+    name: flying_machines
+    columns:
+      aircraft: aircraft_id
+      name: aircraft_name
+      operator: carrier
+      country: country
+      model: model
+      manufacturer: aircraft_manufacturer
+      first_flight: first_flight
+      max_passengers: total_seats
+      cruise_speed_kmh: cruise_speed_kmh
+      length_m: fuselage_length_m
+      max_takeoff_weight_kg: max_takeoff_weight_kg
+  aviation_worldwide_2:
+    name: jets
+    columns:
+      aircraft: identifier
+      name: aircraft_registration
+      operator: air_operator
+      country: operator_country
+      model: aircraft_variant
+      manufacturer: maker
+      first_flight: first_flight_date
+      max_passengers: total_seats
+      cruise_speed_kmh: cruise_speed
+      wingspan_m: wing_span_m
+      length_m: body_length_m
+      max_takeoff_weight_kg: mtow_kg
+accidents:
+  aviation_canada:
+    name: aviation_disasters
+    columns:
+      accident: accident_id
+      name: incident_name
+      airline: operator
+      country: crash_country
+      date: crash_date
+      fatalities: casualties
+      survivors: alive
+      flight_number: flight_code
+  aviation_canada_2:
+    name: plane_crashes
+    columns:
+      accident: accident
+      name: accident_name
+      airline: carrier
+      country: country
+      date: date
+      fatalities: victims
+      survivors: number_of_survivors
+      flight_number: flight_designation
+  aviation_canada_3:
+    name: crashes
+    columns:
+      accident: crash_id
+      name: name
+      airline: air_carrier
+      country: crash_country
+      date: incident_date
+      fatalities: fatality_count
+      survivors: survivor_count
+      flight_number: flight
+  aviation_christian:
+    name: flight_accidents
+    columns:
+      accident: accident_id
+      name: name
+      airline: airline
+      country: nation
+      date: event_date
+      fatalities: fatalities
+      survivors: survivors
+  aviation_g7:
+    name: accidents
+    columns:
+      accident: accident_id
+      name: title
+      airline: flight_operator
+      country: nation
+      date: occurrence_date
+      fatalities: casualties
+      survivors: number_of_survivors
+  aviation_global_north:
+    name: crashes
+    columns:
+      accident: crash_id
+      name: name
+      airline: operator
+      country: crash_country
+      date: accident_date
+      fatalities: dead
+      survivors: survived
+      flight_number: flight_code
+  aviation_russia:
+    name: accidents
+    columns:
+      accident: accident_id
+      name: label
+      airline: operator
+      country: location_country
+      date: accident_date
+      fatalities: fatality_count
+      survivors: survivor_count
+      flight_number: flight
+  aviation_russia_2:
+    name: airplane_accidents
+    columns:
+      accident: incident_id
+      name: description
+      airline: operator
+      country: location_country
+      date: event_date
+      fatalities: death_toll
+      survivors: number_of_survivors
+      flight_number: flight
+  aviation_russia_3:
+    name: incidents
+    columns:
+      accident: crash_id
+      name: description
+      airline: flight_operator
+      country: country
+      date: occurrence_date
+      fatalities: victims
+      survivors: number_of_survivors
+  aviation_united_states:
+    name: accidents
+    columns:
+      accident: accident
+      name: label
+      airline: air_carrier
+      country: nation
+      date: date
+      fatalities: deaths
+      survivors: survivors
+      flight_number: flight_number
+  aviation_united_states_2:
+    name: plane_crashes
+    columns:
+      accident: event_id
+      name: event_name
+      airline: carrier
+      country: country
+      date: event_date
+      fatalities: casualties
+      survivors: survivors
+      flight_number: flight_code
+  aviation_united_states_3:
+    name: aviation_accidents
+    columns:
+      accident: event_id
+      name: description
+      airline: airline
+      country: country
+      date: event_date
+      fatalities: victims
+      survivors: number_of_survivors
+  aviation_united_states_4:
+    name: aviation_accidents
+    columns:
+      accident: incident_id
+      name: event_name
+      airline: air_carrier
+      country: country
+      date: date
+      fatalities: deaths
+      survivors: survived
+      flight_number: flight_code
+  aviation_worldwide:
+    name: air_disasters
+    columns:
+      accident: incident_id
+      name: description
+      airline: airline
+      country: location_country
+      date: accident_date
+      fatalities: victims
+      survivors: number_of_survivors
+      flight_number: flight
+  aviation_worldwide_2:
+    name: plane_crashes
+    columns:
+      accident: accident
+      name: name
+      airline: carrier
+      country: location_country
+      date: accident_date
+      fatalities: death_toll
+      survivors: survivor_count
+nba_teams:
+  basketball_canada_united_states:
+    name: nba_teams
+    columns:
+      team: team
+      name: full_team_name
+      country: home_country
+      city: team_city
+      cityLabel: city_name
+      state: province
+      founded: founding_date
+      website: homepage
+      followers: fan_following
+  basketball_canada_united_states_10:
+    name: basketball_franchises
+    columns:
+      team: team
+      name: franchise_name
+      country: nation
+      city: city
+      state: us_state
+      founded: established
+      venue: stadium
+      coach: coach
+      owner: team_owner
+      website: website
+      followers: socialFollowers
+  basketball_canada_united_states_11:
+    name: nba_clubs
+    columns:
+      team: team_id
+      name: team_name
+      country: home_country
+      city: location
+      cityLabel: cityLabel
+      state: us_state
+      founded: established
+      coach: trainer
+      owner: proprietor
+      followers: online_followers
+  basketball_canada_united_states_12:
+    name: nba_squads
+    columns:
+      team: team
+      name: name
+      country: nation
+      city: city
+      cityLabel: location_name
+      state: us_state
+      founded: founding_year
+      venue: home_venue
+      coach: manager
+      owner: franchise_owner
+      website: web_address
+      followers: fan_following
+  basketball_canada_united_states_13:
+    name: nba_franchises
+    columns:
+      team: team_id
+      name: team_name
+      country: nation
+      city: location
+      cityLabel: location_name
+      state: state
+      founded: founded
+      venue: stadium
+      coach: manager
+      owner: team_owner
+      followers: fan_following
+  basketball_canada_united_states_2:
+    name: nba_squads
+    columns:
+      team: club_id
+      name: name
+      country: base_country
+      city: base_city
+      cityLabel: city_name
+      state: state
+      founded: founding_date
+      coach: coach
+      website: web_address
+      followers: social_media_followers
+  basketball_canada_united_states_3:
+    name: basketball_teams
+    columns:
+      team: franchise_id
+      name: team_name
+      country: base_country
+      city: city
+      cityLabel: home_city_name
+      state: province
+      founded: established
+      venue: home_arena
+      owner: proprietor
+      followers: followers
+  basketball_canada_united_states_4:
+    name: nba_squads
+    columns:
+      team: club_id
+      name: franchise_name
+      country: base_country
+      city: team_city
+      cityLabel: home_city_name
+      state: state
+      founded: founded
+      venue: stadium
+      coach: trainer
+      owner: owner
+      website: homepage
+      followers: online_followers
+  basketball_canada_united_states_5:
+    name: basketball_franchises
+    columns:
+      team: franchise_id
+      name: full_team_name
+      country: home_country
+      city: team_city
+      cityLabel: location_name
+      state: state
+      founded: established
+      venue: home_arena
+      coach: trainer
+      owner: proprietor
+      followers: socialFollowers
+  basketball_canada_united_states_6:
+    name: nba_teams
+    columns:
+      team: franchise_id
+      name: team_name
+      country: nation
+      city: base_city
+      cityLabel: city_name
+      state: state
+      founded: founded
+      coach: coach
+      website: web_address
+      followers: online_followers
+  basketball_canada_united_states_7:
+    name: nba_franchises
+    columns:
+      team: franchise_id
+      name: team_name
+      country: country
+      city: team_city
+      cityLabel: home_city_name
+      state: us_state
+      founded: established
+      venue: home_arena
+      coach: coach
+      owner: franchise_owner
+      website: website
+      followers: social_media_followers
+  basketball_canada_united_states_8:
+    name: basketball_teams
+    columns:
+      team: franchise_id
+      name: label
+      country: home_country
+      city: home_city
+      cityLabel: cityLabel
+      state: province
+      founded: founding_year
+      venue: stadium
+      owner: franchise_owner
+      website: homepage
+      followers: online_followers
+  basketball_canada_united_states_9:
+    name: nba_clubs
+    columns:
+      team: team
+      name: full_team_name
+      country: nation
+      city: home_city
+      cityLabel: location_name
+      state: state
+      founded: founding_date
+      venue: home_venue
+      owner: franchise_owner
+      website: web_address
+      followers: followers
+  basketball_united_states:
+    name: basketball_franchises
+    columns:
+      team: team
+      name: franchise_name
+      country: nation
+      city: base_city
+      state: province
+      founded: founded
+      coach: coach
+      owner: proprietor
+      followers: social_media_followers
+  basketball_united_states_2:
+    name: nba_franchises
+    columns:
+      team: franchise_id
+      name: full_team_name
+      country: nation
+      city: home_city
+      cityLabel: location_name
+      state: province
+      founded: founding_year
+      venue: home_arena
+      coach: coach
+      website: url
+      followers: followers
+nba_matches:
+  basketball_canada_united_states:
+    name: nba_contests
+    columns:
+      game: game
+      country: country
+      team1: team_a
+      team2: away_team
+      team2Label: away_team_name
+      winnerLabel: winnerLabel
+      venueLabel: arena_name
+      date: played_on
+      attendance: crowd
+      seasonLabel: nba_season
+  basketball_canada_united_states_10:
+    name: nba_matches
+    columns:
+      game: contest_id
+      country: country
+      team1: first_team
+      team1Label: home_team_name
+      team2: second_team
+      winnerLabel: victor
+      venueLabel: stadium_name
+      date: date
+      attendance: crowd_size
+      seasonLabel: nba_season
+  basketball_canada_united_states_11:
+    name: nba_games
+    columns:
+      game: contest_id
+      country: host_country
+      team1: first_team
+      team1Label: team1_name
+      team2: away_team
+      winnerLabel: winner
+      venueLabel: venue_name
+      date: played_on
+      attendance: spectators
+      seasonLabel: competition_season
+  basketball_canada_united_states_12:
+    name: nba_fixtures
+    columns:
+      game: game
+      country: country
+      team1: team_a
+      team1Label: team1Label
+      team2: second_team
+      team2Label: second_team_name
+      date: date
+      attendance: crowd
+      seasonLabel: season
+  basketball_canada_united_states_13:
+    name: nba_fixtures
+    columns:
+      game: game_id
+      country: country
+      team1: first_team
+      team1Label: first_team_name
+      team2: second_team
+      team2Label: second_team_name
+      winnerLabel: winning_team_name
+      venueLabel: venueLabel
+      date: played_on
+      attendance: gate
+      seasonLabel: seasonLabel
+  basketball_canada_united_states_2:
+    name: nba_matches
+    columns:
+      game: game_id
+      country: country
+      team1: team1
+      team1Label: first_team_name
+      team2: second_team
+      team2Label: second_team_name
+      winnerLabel: winning_team_name
+      date: kickoff_date
+      attendance: crowd_size
+      seasonLabel: season_name
+  basketball_canada_united_states_3:
+    name: basketball_matches
+    columns:
+      game: game_id
+      country: country
+      team1: first_team
+      team1Label: team1_name
+      team2: team_b
+      winnerLabel: winning_team_name
+      venueLabel: arena_name
+      date: game_date
+      attendance: crowd_size
+      seasonLabel: season
+  basketball_canada_united_states_4:
+    name: nba_matches
+    columns:
+      game: contest_id
+      country: country
+      team1: first_team
+      team1Label: team1Label
+      team2: team2
+      winnerLabel: winner
+      date: date
+      attendance: audience
+      seasonLabel: competition_season
+  basketball_canada_united_states_5:
+    name: basketball_games
+    columns:
+      game: game
+      country: country
+      team1: team1
+      team2: second_team
+      team2Label: second_team_name
+      winnerLabel: victor
+      venueLabel: venueLabel
+      date: date
+      attendance: crowd_size
+      seasonLabel: competition_season
+  basketball_canada_united_states_6:
+    name: nba_fixtures
+    columns:
+      game: game
+      country: nation
+      team1: home_team
+      team1Label: team1Label
+      team2: away_team
+      team2Label: second_team_name
+      winnerLabel: winner
+      venueLabel: venueLabel
+      date: match_date
+      attendance: gate
+      seasonLabel: seasonLabel
+  basketball_canada_united_states_7:
+    name: nba_matches
+    columns:
+      game: game
+      country: nation
+      team1: home_team
+      team1Label: first_team_name
+      team2: team2
+      team2Label: second_team_name
+      winnerLabel: winning_team
+      venueLabel: arena_name
+      date: game_date
+      attendance: attendance
+      seasonLabel: seasonLabel
+  basketball_canada_united_states_8:
+    name: basketball_matches
+    columns:
+      game: match_id
+      country: nation
+      team1: team_a
+      team1Label: team1Label
+      team2: away_team
+      team2Label: team2_name
+      winnerLabel: winning_team
+      venueLabel: stadium_name
+      date: match_date
+      attendance: audience
+      seasonLabel: nba_season
+  basketball_canada_united_states_9:
+    name: basketball_games
+    columns:
+      game: game_id
+      country: nation
+      team1: team1
+      team2: second_team
+      team2Label: team2Label
+      winnerLabel: winnerLabel
+      venueLabel: arena_name
+      date: played_on
+      attendance: crowd_size
+      seasonLabel: competition_season
+  basketball_united_states:
+    name: nba_fixtures
+    columns:
+      game: game_id
+      country: country
+      team1: first_team
+      team1Label: home_team_name
+      team2: team_b
+      team2Label: second_team_name
+      winnerLabel: victor
+      venueLabel: venue_name
+      date: date
+      attendance: attendance
+      seasonLabel: season_name
+  basketball_united_states_2:
+    name: nba_contests
+    columns:
+      game: game
+      country: country
+      team1: team1
+      team2: away_team
+      team2Label: away_team_name
+      venueLabel: stadium_name
+      date: date
+      attendance: crowd
+      seasonLabel: season
+companies:
+  economics_czech_republic:
+    name: firms
+    columns:
+      company: company_id
+      name: trade_name
+      country: home_country
+      types: types
+      industries: business_sector
+      legal_form: legal_form
+      inception: creation_date
+      website: official_website
+      city: base_city
+      ceo_person: executive_director
+      employees: staff
+      revenue_usd: turnover_usd
+      net_income_usd: profit_usd
+      total_assets_usd: asset_value_usd
+      market_cap_usd: stock_market_value_usd
+  economics_czech_republic_10:
+    name: organizations
+    columns:
+      company: company
+      name: business_name
+      country: headquarters_country
+      types: classification
+      industries: field
+      inception: inception
+      website: homepage
+      city: head_office_city
+      ceo_person: ceo
+      employees: staff
+      revenue_usd: annual_revenue_usd
+      net_income_usd: bottom_line_usd
+      total_assets_usd: total_assets_usd
+      operating_income_usd: ebit_usd
+      market_cap_usd: stock_market_value_usd
+  economics_czech_republic_11:
+    name: companies
+    columns:
+      company: corporation_id
+      name: firm_name
+      country: home_country
+      types: entity_types
+      industries: business_sector
+      legal_form: organizational_form
+      inception: inception
+      website: official_website
+      city: headquarters_city
+      ceo_person: chief_executive
+      employees: number_of_employees
+      revenue_usd: total_revenue_usd
+      net_income_usd: profit_usd
+      total_assets_usd: total_assets_usd
+      operating_income_usd: operating_result_usd
+      market_cap_usd: market_cap
+  economics_czech_republic_2:
+    name: enterprises
+    columns:
+      company: corporation_id
+      name: label
+      country: headquarters_country
+      types: classification
+      industries: business_sector
+      legal_form: company_form
+      inception: inception
+      website: homepage
+      city: base_city
+      ceo_person: chief_executive
+      employees: staff_count
+      revenue_usd: total_revenue_usd
+      net_income_usd: profit_usd
+      total_assets_usd: total_assets_usd
+      operating_income_usd: operating_income_usd
+      market_cap_usd: market_value_usd
+  economics_czech_republic_3:
+    name: entities
+    columns:
+      company: firm_id
+      name: title
+      country: headquarters_country
+      types: classification
+      industries: field
+      legal_form: organizational_form
+      inception: inception
+      website: url
+      city: city
+      ceo_person: top_executive
+      employees: workers
+      revenue_usd: revenue_usd
+      net_income_usd: profit_usd
+      total_assets_usd: total_assets_usd
+      market_cap_usd: market_cap_usd
+  economics_czech_republic_4:
+    name: corporations
+    columns:
+      company: company
+      name: trade_name
+      country: country
+      types: company_types
+      industries: sector
+      legal_form: legal_structure
+      inception: creation_date
+      website: website
+      city: headquarters_city
+      ceo_person: top_executive
+      employees: headcount
+      revenue_usd: revenue_usd
+      net_income_usd: net_profit_usd
+      total_assets_usd: total_assets
+      operating_income_usd: operating_result_usd
+      market_cap_usd: market_value_usd
+  economics_czech_republic_5:
+    name: corporations
+    columns:
+      company: corporation_id
+      name: name
+      country: nation
+      types: types
+      industries: industries
+      legal_form: entity_form
+      inception: established
+      website: website
+      city: headquarters_city
+      ceo_person: ceo_person
+      employees: workers
+      revenue_usd: gross_revenue_usd
+      net_income_usd: net_profit_usd
+      total_assets_usd: assets_usd
+      operating_income_usd: trading_profit_usd
+      market_cap_usd: market_cap
+  economics_czech_republic_6:
+    name: companies
+    columns:
+      company: business_id
+      name: trade_name
+      country: country
+      types: company_types
+      industries: business_sector
+      legal_form: legal_structure
+      inception: founding_date
+      city: head_office_city
+      ceo_person: top_executive
+      employees: personnel_count
+      revenue_usd: revenue_usd
+      net_income_usd: earnings_usd
+      total_assets_usd: total_assets_usd
+      market_cap_usd: market_cap
+  economics_czech_republic_7:
+    name: entities
+    columns:
+      company: company
+      name: title
+      country: home_country
+      types: company_types
+      industries: sector
+      legal_form: company_form
+      inception: foundation_year
+      city: base_city
+      ceo_person: chief_executive
+      employees: headcount
+      revenue_usd: gross_revenue_usd
+      net_income_usd: earnings_usd
+      total_assets_usd: assets_usd
+      operating_income_usd: trading_profit_usd
+  economics_czech_republic_8:
+    name: corporations
+    columns:
+      company: firm_id
+      name: business_name
+      country: country
+      types: business_types
+      industries: industry_sector
+      legal_form: legal_form
+      inception: creation_date
+      city: base_city
+      ceo_person: ceo
+      employees: personnel_count
+      revenue_usd: revenue_usd
+      net_income_usd: earnings_usd
+      total_assets_usd: total_assets_usd
+      operating_income_usd: operating_result_usd
+  economics_czech_republic_9:
+    name: businesses
+    columns:
+      company: company
+      name: trade_name
+      country: country
+      types: entity_types
+      industries: business_sector
+      legal_form: legal_structure
+      inception: inception
+      city: city
+      ceo_person: chief_executive
+      employees: workforce_size
+      revenue_usd: revenue
+      net_income_usd: net_profit_usd
+      total_assets_usd: asset_value_usd
+      operating_income_usd: trading_profit_usd
+      market_cap_usd: market_cap
+  economics_g7:
+    name: firms
+    columns:
+      company: company_id
+      name: label
+      country: nation
+      types: classification
+      industries: industry
+      legal_form: legal_structure
+      inception: start_date
+      website: website
+      city: head_office_city
+      ceo_person: chief_executive
+      employees: employee_count
+      revenue_usd: gross_revenue_usd
+      net_income_usd: after_tax_income_usd
+      total_assets_usd: total_assets_usd
+      operating_income_usd: operating_income_usd
+      market_cap_usd: market_cap_usd
+  economics_oecd:
+    name: companies_list
+    columns:
+      company: company_id
+      name: business_name
+      country: home_country
+      types: business_types
+      industries: industry_sector
+      legal_form: entity_form
+      inception: established
+      website: url
+      city: head_office_city
+      ceo_person: ceo_person
+      employees: workers
+      revenue_usd: revenue
+      net_income_usd: after_tax_income_usd
+      total_assets_usd: assets_usd
+      operating_income_usd: operating_profit_usd
+      market_cap_usd: valuation_usd
+  economics_worldwide:
+    name: entities
+    columns:
+      company: firm_id
+      name: trade_name
+      country: country_of_incorporation
+      types: classification
+      industries: industry_sector
+      inception: foundation_year
+      website: official_website
+      city: base_city
+      ceo_person: managing_director
+      employees: employees
+      revenue_usd: total_revenue_usd
+      net_income_usd: after_tax_income_usd
+      total_assets_usd: asset_value_usd
+      operating_income_usd: operating_profit_usd
+      market_cap_usd: market_cap
+  economics_worldwide_2:
+    name: organizations
+    columns:
+      company: company_id
+      name: title
+      country: country_of_incorporation
+      types: business_types
+      industries: field
+      legal_form: entity_form
+      inception: inception
+      website: official_website
+      city: headquarters_city
+      ceo_person: managing_director
+      employees: personnel_count
+      revenue_usd: sales_usd
+      net_income_usd: bottom_line_usd
+      total_assets_usd: total_assets
+      market_cap_usd: stock_market_value_usd
+matches:
+  football_brics:
+    name: soccer_matches
+    columns:
+      match: fixture_id
+      name: fixture_name
+      date: date
+      tournament: event
+      stage_type: tournament_round
+      venue: host_stadium
+      team1: team_a
+      team1_score: score_team1
+      team2: side_two
+      team2_score: away_goals
+      winner: winning_team
+      attendance: fans
+      referee: arbiter
+  football_christian:
+    name: fixtures
+    columns:
+      match: match_id
+      name: name
+      date: kickoff_date
+      tournament: cup_edition
+      stage_type: stage_type
+      venue: host_stadium
+      team1: side_one
+      team1_score: team1_score
+      team2: second_team
+      team2_score: team_b_score
+      winner: winning_team
+      attendance: fans
+      referee: arbiter
+  football_france:
+    name: fixtures
+    columns:
+      match: match
+      name: title
+      date: game_date
+      tournament: competition
+      stage_type: competition_stage
+      venue: stadium
+      team1: team1
+      team1_score: team1_goals
+      team2: away_team
+      team2_score: goals_team2
+      winner: champion
+      attendance: attendance
+      referee: umpire
+  football_france_2:
+    name: world_cup_games
+    columns:
+      match: match
+      name: title
+      date: date
+      tournament: tournament
+      stage_type: phase
+      venue: match_venue
+      team1: side_one
+      team1_score: home_goals
+      team2: side_two
+      team2_score: goals_team2
+      winner: winner
+      attendance: crowd
+      referee: referee
+  football_france_3:
+    name: football_matches
+    columns:
+      match: game_id
+      name: game_name
+      date: game_date
+      tournament: competition
+      stage_type: stage
+      venue: venue
+      team1: team_a
+      team1_score: home_goals
+      team2: away_team
+      team2_score: team2_score
+      winner: champion
+      attendance: audience
+      referee: match_referee
+  football_g20:
+    name: soccer_matches
+    columns:
+      match: match
+      name: label
+      date: match_date
+      tournament: world_cup_edition
+      stage_type: match_stage
+      venue: host_stadium
+      team1: first_team
+      team1_score: team_a_score
+      team2: away_team
+      team2_score: away_goals
+      winner: victor
+      attendance: crowd_size
+      referee: referee
+  football_germany:
+    name: world_cup_fixtures
+    columns:
+      match: fixture_id
+      name: match_name
+      date: kickoff_date
+      tournament: cup_edition
+      stage_type: tournament_round
+      venue: venue
+      team1: team_a
+      team1_score: home_goals
+      team2: team_b
+      team2_score: goals_team2
+      winner: winning_team
+      attendance: spectators
+      referee: umpire
+  football_germany_2:
+    name: matches
+    columns:
+      match: match
+      name: game_name
+      date: played_on
+      tournament: tournament
+      stage_type: tournament_round
+      venue: stadium
+      team1: team1
+      team1_score: home_goals
+      team2: second_team
+      team2_score: team2_score
+      winner: winner
+      attendance: gate
+      referee: arbiter
+  football_germany_3:
+    name: fixtures
+    columns:
+      match: match
+      name: name
+      date: game_date
+      tournament: world_cup_edition
+      stage_type: tournament_round
+      venue: stadium
+      team1: side_one
+      team1_score: team1_score
+      team2: team2
+      team2_score: goals_team2
+      winner: winning_team
+      attendance: crowd
+      referee: umpire
+  football_oecd:
+    name: world_cup_matches
+    columns:
+      match: match_id
+      name: title
+      date: kickoff_date
+      tournament: world_cup_edition
+      stage_type: match_stage
+      venue: venue
+      team1: home_team
+      team1_score: goals_team1
+      team2: away_team
+      team2_score: team2_score
+      winner: winner
+      attendance: audience
+      referee: umpire
+  football_united_states:
+    name: world_cup_fixtures
+    columns:
+      match: match_id
+      name: fixture_name
+      date: date
+      tournament: competition
+      stage_type: competition_stage
+      venue: ground
+      team1: first_team
+      team1_score: team1_goals
+      team2: side_two
+      team2_score: team2_goals
+      winner: match_winner
+      attendance: crowd
+      referee: umpire
+  football_united_states_2:
+    name: world_cup_fixtures
+    columns:
+      match: game_id
+      name: title
+      date: game_date
+      tournament: tournament
+      stage_type: phase
+      venue: ground
+      team1: team_a
+      team1_score: goals_team1
+      team2: second_team
+      team2_score: goals_team2
+      winner: winner
+      attendance: crowd
+      referee: official
+  football_united_states_3:
+    name: world_cup_games
+    columns:
+      match: match
+      name: title
+      date: match_date
+      tournament: competition
+      stage_type: phase
+      venue: host_stadium
+      team1: first_team
+      team1_score: score_team1
+      team2: away_team
+      team2_score: score_team2
+      winner: victor
+      attendance: audience
+      referee: arbiter
+  football_worldwide:
+    name: world_cup_matches
+    columns:
+      match: match_id
+      name: title
+      date: fixture_date
+      tournament: competition
+      stage_type: stage
+      venue: ground
+      team1: team1
+      team1_score: score_team1
+      team2: side_two
+      team2_score: away_goals
+      winner: winner
+      attendance: fans
+      referee: arbiter
+  football_worldwide_2:
+    name: world_cup_fixtures
+    columns:
+      match: match_id
+      name: name
+      date: played_on
+      tournament: cup_edition
+      stage_type: match_stage
+      venue: match_venue
+      team1: team_a
+      team1_score: team_a_score
+      team2: away_team
+      team2_score: team2_goals
+      winner: victor
+      attendance: crowd
+      referee: arbiter
+teams:
+  football_brics:
+    name: teams
+    columns:
+      team: team_id
+      name: title
+      country: country
+      inception: founding_year
+      native_label: local_label
+      nickname: byname
+      ranking: rank
+      competition_class: competition_level
+      head_coach: manager
+      captain: skipper
+  football_christian:
+    name: international_teams
+    columns:
+      team: squad_id
+      name: squad_name
+      country: nation
+      inception: inception
+      ranking: ranking
+      competition_class: league
+      head_coach: coach
+      captain: leader
+  football_france:
+    name: international_teams
+    columns:
+      team: team_id
+      name: national_team_name
+      country: team_country
+      inception: founding_date
+      native_label: native_label
+      nickname: byname
+      ranking: ranking
+      competition_class: tier
+      head_coach: coach
+      captain: skipper
+  football_france_2:
+    name: soccer_teams
+    columns:
+      team: squad_id
+      name: label
+      country: country
+      inception: founding_date
+      native_label: local_name
+      nickname: byname
+      ranking: rank
+      competition_class: league
+      head_coach: coach
+      captain: team_captain
+  football_france_3:
+    name: national_squads
+    columns:
+      team: team_id
+      name: team_name
+      country: team_country
+      inception: established
+      nickname: sobriquet
+      ranking: ranking
+      competition_class: division
+      head_coach: tactician
+      captain: skipper
+  football_g20:
+    name: national_teams
+    columns:
+      team: team
+      name: squad_name
+      country: country
+      inception: founded
+      native_label: native_label
+      nickname: alias
+      ranking: current_ranking
+      competition_class: league
+      head_coach: manager
+      captain: captain
+  football_germany:
+    name: national_football_teams
+    columns:
+      team: team
+      name: title
+      country: team_country
+      inception: inception
+      native_label: official_name
+      nickname: sobriquet
+      ranking: ranking
+      competition_class: division
+      head_coach: head_coach
+      captain: leader
+  football_germany_2:
+    name: international_teams
+    columns:
+      team: team
+      name: title
+      country: represented_country
+      inception: founded
+      native_label: official_name
+      ranking: world_ranking
+      competition_class: division
+      head_coach: tactician
+      captain: leader
+  football_germany_3:
+    name: international_teams
+    columns:
+      team: team_id
+      name: label
+      country: team_country
+      inception: established
+      native_label: local_label
+      ranking: fifa_ranking
+      competition_class: competition_level
+      head_coach: manager
+      captain: leader
+  football_oecd:
+    name: squads
+    columns:
+      team: team_id
+      name: national_team_name
+      country: represented_country
+      inception: founding_year
+      native_label: local_name
+      nickname: nickname
+      ranking: current_ranking
+      competition_class: league
+      head_coach: coach
+      captain: team_captain
+  football_united_states:
+    name: soccer_teams
+    columns:
+      team: team_id
+      name: title
+      country: represented_country
+      inception: inception
+      native_label: official_name
+      ranking: ranking
+      competition_class: league
+      head_coach: head_coach
+      captain: captain
+  football_united_states_2:
+    name: teams
+    columns:
+      team: team
+      name: title
+      country: country
+      inception: inception
+      native_label: local_label
+      ranking: world_ranking
+      competition_class: competition_class
+      head_coach: manager
+      captain: captain
+  football_united_states_3:
+    name: squads
+    columns:
+      team: team_id
+      name: team_name
+      country: home_country
+      inception: inception
+      nickname: nickname
+      ranking: ranking
+      competition_class: tier
+      head_coach: coach
+      captain: leader
+  football_worldwide:
+    name: national_squads
+    columns:
+      team: team_id
+      name: title
+      country: country
+      inception: founded
+      nickname: sobriquet
+      ranking: ranking
+      competition_class: division
+      head_coach: manager
+      captain: team_captain
+  football_worldwide_2:
+    name: teams
+    columns:
+      team: squad_id
+      name: national_team_name
+      country: nation
+      inception: established
+      native_label: local_name
+      nickname: byname
+      ranking: ranking
+      competition_class: league
+      head_coach: head_coach
+      captain: skipper
+venues:
+  football_brics:
+    name: sports_venues
+    columns:
+      venue: arena_id
+      name: arena_name
+      country: venue_country
+      capacity: seats
+      coords: coordinates
+      inception: construction_completion
+      city: venue_city
+      architect: architect
+  football_christian:
+    name: world_cup_venues
+    columns:
+      venue: arena_id
+      name: arena_name
+      country: venue_country
+      capacity: stadium_capacity
+      coords: coords
+      inception: inception
+      city: host_city
+      architect: designer
+  football_france:
+    name: arenas
+    columns:
+      venue: stadium_id
+      name: ground_name
+      country: nation
+      capacity: seating_capacity
+      coords: position
+      inception: opened
+      city: venue_city
+      occupant: home_team
+      architect: architect
+  football_france_2:
+    name: arenas
+    columns:
+      venue: stadium_id
+      name: venue_name
+      country: venue_country
+      capacity: seats
+      coords: location
+      inception: opened
+      city: municipality
+      occupant: occupant
+      architect: structural_designer
+  football_france_3:
+    name: world_cup_venues
+    columns:
+      venue: arena_id
+      name: name
+      country: host_country
+      capacity: stadium_capacity
+      coords: geo_coords
+      inception: construction_completion
+      city: venue_city
+      occupant: occupant
+      architect: venue_architect
+  football_g20:
+    name: world_cup_venues
+    columns:
+      venue: venue
+      name: title
+      country: country
+      capacity: max_capacity
+      coords: coordinates
+      inception: opening_date
+      city: host_city
+      occupant: resident_team
+      architect: building_architect
+  football_germany:
+    name: sports_venues
+    columns:
+      venue: venue_id
+      name: venue_name
+      country: venue_country
+      capacity: seats
+      coords: lat_lon
+      inception: opening_year
+      city: location_city
+      occupant: home_team
+      architect: building_architect
+  football_germany_2:
+    name: world_cup_venues
+    columns:
+      venue: venue_id
+      name: title
+      country: country
+      capacity: seating_capacity
+      coords: coords
+      inception: inception
+      city: municipality
+      occupant: primary_occupant
+      architect: venue_architect
+  football_germany_3:
+    name: arenas
+    columns:
+      venue: venue
+      name: title
+      country: host_country
+      capacity: seating_capacity
+      coords: coords
+      inception: opened
+      city: municipality
+      occupant: primary_occupant
+      architect: architect
+  football_oecd:
+    name: arenas
+    columns:
+      venue: arena_id
+      name: name
+      country: country
+      capacity: capacity
+      coords: coords
+      inception: built
+      city: municipality
+      occupant: resident_team
+      architect: venue_architect
+  football_united_states:
+    name: sports_venues
+    columns:
+      venue: venue
+      name: label
+      country: nation
+      capacity: seats
+      coords: lat_lon
+      inception: construction_completion
+      city: location_city
+      architect: designer
+  football_united_states_2:
+    name: grounds
+    columns:
+      venue: venue
+      name: stadium_name
+      country: venue_country
+      capacity: capacity
+      coords: position
+      inception: built
+      city: location_city
+      occupant: occupant
+      architect: building_architect
+  football_united_states_3:
+    name: sports_venues
+    columns:
+      venue: stadium_id
+      name: ground_name
+      country: venue_country
+      capacity: capacity
+      coords: location
+      inception: inception
+      city: city
+      architect: architect
+  football_worldwide:
+    name: venues
+    columns:
+      venue: stadium_id
+      name: ground_name
+      country: host_country
+      capacity: seats
+      coords: coordinates
+      inception: opening_year
+      city: host_city
+      architect: architect
+  football_worldwide_2:
+    name: football_stadiums
+    columns:
+      venue: stadium_id
+      name: stadium_name
+      country: venue_country
+      capacity: total_capacity
+      coords: lat_lon
+      inception: built
+      city: city
+      architect: building_architect
+tournaments:
+  football_brics:
+    name: competitions
+    columns:
+      tournament: edition_id
+      name: tournament_name
+      year: year
+      country: host_country
+      edition_number: ordinal_edition
+      mascot: tournament_mascot
+      participants: qualified_teams
+      winner: champion
+      matches_played: games_played
+      goals_scored: goals
+  football_christian:
+    name: cups
+    columns:
+      tournament: edition_id
+      name: tournament_name
+      year: year
+      country: hosting_country
+      edition_number: edition_count
+      mascot: mascot
+      participants: num_participants
+      winner: tournament_winner
+      matches_played: matches_played
+      goals_scored: goals_scored
+  football_france:
+    name: world_cups
+    columns:
+      tournament: edition_id
+      name: title
+      year: edition_year
+      country: host_country
+      edition_number: ordinal_edition
+      mascot: tournament_mascot
+      participants: teams
+      winner: winner
+      matches_played: matches_played
+      goals_scored: goal_count
+  football_france_2:
+    name: competitions
+    columns:
+      tournament: tournament
+      name: title
+      year: edition_year
+      country: venue_country
+      edition_number: ordinal_edition
+      mascot: mascot
+      participants: participating_teams
+      winner: champion
+      matches_played: matches_played
+      goals_scored: total_goals_scored
+  football_france_3:
+    name: cups
+    columns:
+      tournament: tournament
+      name: competition_name
+      year: host_year
+      country: hosting_country
+      edition_number: edition_count
+      mascot: mascot
+      participants: num_participants
+      winner: cup_winner
+      matches_played: match_count
+      goals_scored: goals_scored
+  football_g20:
+    name: tournaments
+    columns:
+      tournament: tournament
+      name: label
+      year: tournament_year
+      country: venue_country
+      edition_number: ordinal_edition
+      participants: participants
+      winner: champion
+      matches_played: games_played
+      goals_scored: total_goals
+  football_germany:
+    name: championships
+    columns:
+      tournament: tournament
+      name: competition_name
+      year: tournament_year
+      country: nation
+      edition_number: edition_no
+      participants: participating_teams
+      winner: champion
+      matches_played: matches_played
+      goals_scored: goal_count
+  football_germany_2:
+    name: world_cup_editions
+    columns:
+      tournament: competition_id
+      name: label
+      year: competition_year
+      country: host_country
+      edition_number: edition
+      participants: num_participants
+      winner: winner
+      matches_played: match_count
+      goals_scored: goal_count
+  football_germany_3:
+    name: editions
+    columns:
+      tournament: tournament
+      name: label
+      year: competition_year
+      country: country
+      edition_number: ordinal_edition
+      mascot: official_mascot
+      participants: teams
+      winner: champion
+      matches_played: match_count
+      goals_scored: goals
+  football_oecd:
+    name: world_cup_editions
+    columns:
+      tournament: competition_id
+      name: event_name
+      year: host_year
+      country: venue_country
+      edition_number: edition
+      participants: participants
+      winner: winner
+      matches_played: games_played
+      goals_scored: goals_scored
+  football_united_states:
+    name: championships
+    columns:
+      tournament: tournament_id
+      name: tournament_name
+      year: competition_year
+      country: hosting_country
+      edition_number: ordinal_edition
+      participants: teams
+      winner: champion
+      matches_played: games_played
+      goals_scored: goal_count
+  football_united_states_2:
+    name: world_cups
+    columns:
+      tournament: tournament
+      name: name
+      year: host_year
+      country: nation
+      edition_number: edition_count
+      mascot: event_mascot
+      participants: teams
+      winner: cup_winner
+      matches_played: num_matches
+      goals_scored: goals
+  football_united_states_3:
+    name: tournaments
+    columns:
+      tournament: edition_id
+      name: event_name
+      year: tournament_year
+      country: host_country
+      edition_number: edition_count
+      mascot: mascot
+      participants: participating_teams
+      winner: champion
+      matches_played: total_matches
+      goals_scored: total_goals_scored
+  football_worldwide:
+    name: championships
+    columns:
+      tournament: tournament_id
+      name: title
+      year: host_year
+      country: nation
+      edition_number: ordinal_edition
+      mascot: official_mascot
+      participants: num_participants
+      winner: cup_winner
+      matches_played: games_played
+      goals_scored: total_goals_scored
+  football_worldwide_2:
+    name: cups
+    columns:
+      tournament: competition_id
+      name: label
+      year: competition_year
+      country: country
+      edition_number: ordinal_edition
+      participants: participants
+      winner: tournament_winner
+      matches_played: total_matches
+      goals_scored: total_goals_scored
+countries:
+  geography_temperate:
+    name: states
+    columns:
+      country: country_id
+      name: title
+      iso2: iso2
+      iso3: three_letter_country_code
+      continent: geographic_region
+      area_km2: total_area_km2
+      population: total_population
+      gdp_usd: gdp
+      capital: governmental_center
+      currency_name: official_currency
+      coords: coordinates
+      inception: inception
+      official_name: full_name
+      telephone_code: phone_code
+      population_male: men_population
+      population_female: population_female
+      life_expectancy: life_exp
+      human_development_index: human_development_index
+      unemployment_rate: unemployment
+      gini_coefficient: gini_index
+      total_fertility_rate: total_fertility_rate
+      birth_rate: birth_rate
+      death_rate: mortality_rate
+      suicide_rate: suicides_per_100k
+      democracy_index: democracy_index
+      central_bank: central_bank
+      highest_point: highest_point
+      highest_point_m: summit_height_m
+      lowest_point: depression
+      lowest_point_m: min_elevation_m
+      northernmost_point: northernmost_point
+      southernmost_point: southernmost_coords
+      easternmost_point: eastern_extreme
+      westernmost_point: westernmost_point
+      demonym: citizen_name
+      languages: official_languages
+      head_of_state: president
+      head_of_government: chancellor
+  geography_united_states:
+    name: kingdoms
+    columns:
+      country: state_id
+      name: nation
+      iso2: iso2
+      iso3: iso3
+      continent: world_region
+      area_km2: size_km2
+      population: population_count
+      gdp_usd: gross_domestic_product
+      capital: capital
+      currency_name: official_currency
+      coords: geo_coords
+      inception: inception
+      official_name: official_name
+      telephone_code: international_dialing_code
+      population_male: number_of_males
+      population_female: female_count
+      life_expectancy: average_life_expectancy
+      human_development_index: hdi
+      unemployment_rate: unemployment_pct
+      gini_coefficient: gini
+      total_fertility_rate: birth_rate_per_woman
+      birth_rate: births_per_thousand
+      death_rate: deaths_per_1000
+      suicide_rate: suicides_per_100k
+      median_income_usd: median_household_income_usd
+      democracy_index: democratic_index
+      central_bank: reserve_bank
+      highest_point: highest_peak
+      highest_point_m: summit_height_m
+      lowest_point: nadir
+      lowest_point_m: nadir_elevation_m
+      northernmost_point: northernmost_coords
+      southernmost_point: southernmost_coords
+      easternmost_point: easternmost_point
+      westernmost_point: westernmost_coords
+      demonym: demonym
+      languages: state_languages
+      head_of_state: head_of_state
+      head_of_government: prime_minister
+  geography_worldwide:
+    name: countries
+    columns:
+      country: nation_id
+      name: name
+      iso2: country_code
+      iso3: alpha3
+      continent: continent
+      area_km2: land_area_km2
+      population: pop
+      gdp_usd: economic_output_usd
+      capital: capital_city_id
+      currency_name: legal_tender
+      coords: location
+      inception: independence_date
+      official_name: long_name
+      telephone_code: phone_code
+      population_male: number_of_males
+      population_female: number_of_females
+      life_expectancy: life_expectancy
+      human_development_index: development_index
+      unemployment_rate: out_of_work_rate
+      gini_coefficient: gini_coefficient
+      total_fertility_rate: children_per_woman
+      birth_rate: births_per_thousand
+      death_rate: deaths_per_thousand
+      suicide_rate: suicides_per_100k
+      median_income_usd: median_income
+      democracy_index: democracy_index
+      central_bank: central_bank_name
+      highest_point: highest_point
+      highest_point_m: max_elevation_m
+      lowest_point: lowest_elevation
+      lowest_point_m: nadir_elevation_m
+      northernmost_point: northern_extreme
+      southernmost_point: southernmost_coords
+      easternmost_point: eastmost_coords
+      westernmost_point: westernmost_coords
+      demonym: inhabitant_name
+      languages: spoken_languages
+      head_of_state: president
+      head_of_government: head_of_government_name
+  geography_worldwide_10:
+    name: nations
+    columns:
+      country: country_id
+      name: label
+      iso2: country_code
+      iso3: alpha3
+      continent: world_region
+      area_km2: area_km2
+      population: number_of_inhabitants
+      gdp_usd: gross_domestic_product
+      capital: capital_city_id
+      currency_name: legal_tender
+      coords: centroid
+      inception: founding_date
+      official_name: formal_name
+      telephone_code: dial_code
+      population_male: population_male
+      population_female: female_count
+      life_expectancy: longevity
+      human_development_index: development_index
+      unemployment_rate: unemployment_rate
+      gini_coefficient: inequality_index
+      birth_rate: natality_rate
+      death_rate: deaths_per_thousand
+      suicide_rate: self_harm_mortality_rate
+      median_income_usd: average_household_income_usd
+      democracy_index: political_freedom_score
+      central_bank: reserve_bank
+      highest_point: highest_peak
+      highest_point_m: highest_elevation_m
+      lowest_point: lowest_area
+      lowest_point_m: min_elevation_m
+      northernmost_point: northern_extreme
+      southernmost_point: southernmost_coords
+      easternmost_point: eastmost_coords
+      westernmost_point: western_extreme
+      demonym: inhabitant_name
+      head_of_state: chief_of_state
+      head_of_government: government_leader
+  geography_worldwide_11:
+    name: sovereign_states
+    columns:
+      country: nation_id
+      name: state_name
+      iso2: country_code
+      iso3: three_letter_country_code
+      continent: geographic_region
+      area_km2: size_km2
+      population: pop
+      gdp_usd: gdp
+      capital: capital_city
+      currency_name: monetary_unit
+      coords: coordinates
+      inception: creation_date
+      official_name: formal_title
+      population_male: number_of_males
+      population_female: female_count
+      life_expectancy: life_exp
+      human_development_index: hdi
+      unemployment_rate: joblessness_rate
+      gini_coefficient: gini_index
+      total_fertility_rate: children_per_woman
+      birth_rate: natality_rate
+      death_rate: deaths_per_1000
+      suicide_rate: self_harm_mortality_rate
+      democracy_index: eiu_democracy_index
+      central_bank: monetary_authority
+      highest_point: highest_mountain
+      highest_point_m: max_elevation_m
+      lowest_point: lowest_point
+      lowest_point_m: lowest_point_m
+      northernmost_point: northern_extreme
+      southernmost_point: southernmost_point
+      easternmost_point: eastmost_coords
+      westernmost_point: westernmost_coords
+      demonym: citizen_name
+      head_of_state: head_of_state_name
+      head_of_government: government_leader
+  geography_worldwide_12:
+    name: states
+    columns:
+      country: country_id
+      name: nation
+      continent: continent
+      area_km2: area
+      population: population_count
+      gdp_usd: gross_domestic_product
+      capital: capital_city
+      currency_name: official_currency
+      coords: lat_lon
+      inception: founded
+      official_name: official_name
+      telephone_code: phone_code
+      population_male: men_population
+      population_female: population_female
+      life_expectancy: longevity
+      human_development_index: hdi_score
+      unemployment_rate: unemployment
+      gini_coefficient: income_inequality
+      total_fertility_rate: birth_rate_per_woman
+      birth_rate: live_births_per_1000
+      death_rate: death_rate
+      suicide_rate: suicide_mortality_rate
+      democracy_index: eiu_democracy_index
+      central_bank: national_bank
+      highest_point: tallest_mountain
+      highest_point_m: summit_height_m
+      lowest_point: lowest_point
+      lowest_point_m: depression_m
+      northernmost_point: northernmost_point
+      southernmost_point: southern_extreme
+      easternmost_point: eastern_extreme
+      westernmost_point: westernmost_point
+      languages: spoken_languages
+      head_of_state: president
+      head_of_government: head_of_government_name
+  geography_worldwide_13:
+    name: nations
+    columns:
+      country: state_id
+      name: label
+      iso2: iso2_code
+      iso3: alpha3
+      continent: geographic_region
+      area_km2: territory_size_km2
+      population: population_count
+      gdp_usd: gdp_usd
+      capital: capital_city
+      currency_name: currency_name
+      coords: geo_coords
+      inception: founded
+      telephone_code: dial_code
+      population_male: number_of_males
+      population_female: number_of_females
+      life_expectancy: longevity
+      human_development_index: hdi
+      unemployment_rate: unemployment_rate
+      gini_coefficient: gini_index
+      birth_rate: birth_rate
+      death_rate: deaths_per_1000
+      suicide_rate: suicides_per_100k
+      median_income_usd: median_income_usd
+      democracy_index: eiu_democracy_index
+      central_bank: national_bank
+      highest_point: highest_point
+      highest_point_m: peak_height_m
+      lowest_point: lowest_point
+      lowest_point_m: depression_m
+      northernmost_point: northmost_coords
+      southernmost_point: southernmost_coords
+      easternmost_point: eastern_extreme
+      westernmost_point: western_extreme
+      demonym: nationality_name
+      languages: official_languages
+      head_of_state: sovereign
+      head_of_government: government_leader
+  geography_worldwide_2:
+    name: territories
+    columns:
+      country: nation_id
+      name: country_name
+      iso2: country_code
+      iso3: iso3_code
+      continent: geographic_region
+      area_km2: surface_area_km2
+      population: population_count
+      gdp_usd: total_gdp_usd
+      capital: capital
+      currency_name: currency
+      coords: location
+      inception: independence_date
+      official_name: formal_name
+      telephone_code: dial_code
+      population_male: number_of_males
+      population_female: number_of_females
+      life_expectancy: expected_lifespan
+      human_development_index: human_development_score
+      unemployment_rate: unemployment_rate
+      gini_coefficient: gini
+      birth_rate: live_births_per_1000
+      death_rate: deaths_per_thousand
+      suicide_rate: suicide_mortality_rate
+      democracy_index: democratic_index
+      central_bank: reserve_bank
+      highest_point: summit
+      highest_point_m: highest_elevation_m
+      lowest_point: depression
+      lowest_point_m: min_elevation_m
+      northernmost_point: northernmost_point
+      southernmost_point: southmost_coords
+      easternmost_point: eastmost_coords
+      westernmost_point: western_extreme
+      demonym: inhabitant_name
+      languages: languages
+      head_of_state: chief_of_state
+      head_of_government: premier
+  geography_worldwide_3:
+    name: republics
+    columns:
+      country: nation_id
+      name: territory_name
+      iso2: iso2
+      iso3: alpha3
+      continent: geographic_region
+      area_km2: territory_size_km2
+      population: population
+      gdp_usd: total_gdp_usd
+      capital: seat_of_government
+      currency_name: legal_tender
+      coords: centroid
+      inception: established
+      official_name: formal_name
+      population_male: male_count
+      population_female: female_count
+      life_expectancy: life_expectancy
+      human_development_index: human_development_index
+      unemployment_rate: unemployment_rate
+      gini_coefficient: gini_index
+      total_fertility_rate: tfr
+      birth_rate: live_births_per_1000
+      death_rate: death_rate
+      suicide_rate: suicides_per_100k
+      democracy_index: democracy_index
+      central_bank: national_bank
+      highest_point: highest_mountain
+      highest_point_m: peak_height_m
+      lowest_point: depression
+      lowest_point_m: lowest_elevation_m
+      northernmost_point: northernmost_coords
+      southernmost_point: southmost_coords
+      easternmost_point: easternmost_coords
+      westernmost_point: western_extreme
+      languages: spoken_languages
+      head_of_state: sovereign
+      head_of_government: head_of_government_name
+  geography_worldwide_4:
+    name: republics
+    columns:
+      country: state_id
+      name: country_name
+      iso2: iso2_code
+      iso3: iso_alpha3
+      continent: geographic_region
+      area_km2: total_area_km2
+      population: population_count
+      gdp_usd: gdp_nominal_usd
+      capital: capital
+      currency_name: currency_name
+      coords: geo_coords
+      inception: creation_date
+      official_name: long_name
+      population_male: number_of_males
+      population_female: population_female
+      life_expectancy: expected_lifespan
+      human_development_index: hdi_score
+      unemployment_rate: jobless_rate
+      gini_coefficient: inequality_index
+      birth_rate: births_per_thousand
+      death_rate: death_rate
+      suicide_rate: suicide_rate
+      median_income_usd: median_income
+      democracy_index: political_freedom_score
+      central_bank: national_bank
+      highest_point: summit
+      highest_point_m: peak_height_m
+      lowest_point: lowest_point
+      lowest_point_m: lowest_elevation_m
+      northernmost_point: northern_extreme
+      southernmost_point: southernmost_coords
+      easternmost_point: easternmost_point
+      westernmost_point: westmost_coords
+      demonym: nationality_name
+      languages: official_languages
+      head_of_state: state_leader
+      head_of_government: premier
+  geography_worldwide_5:
+    name: territories
+    columns:
+      country: country
+      name: country_name
+      iso3: alpha3
+      continent: geographic_region
+      area_km2: territory_size_km2
+      population: population
+      gdp_usd: total_gdp_usd
+      capital: capital_city_id
+      currency_name: currency
+      coords: location
+      inception: founded
+      telephone_code: phone_code
+      population_male: male_count
+      population_female: female_population
+      life_expectancy: life_exp
+      human_development_index: hdi
+      unemployment_rate: unemployment
+      gini_coefficient: gini_coefficient
+      total_fertility_rate: fertility_rate
+      birth_rate: live_births_per_1000
+      death_rate: mortality_rate
+      suicide_rate: suicides_per_100k
+      median_income_usd: median_income
+      democracy_index: democracy_index
+      central_bank: central_bank
+      highest_point: highest_mountain
+      highest_point_m: highest_elevation_m
+      lowest_point: lowest_point
+      lowest_point_m: min_elevation_m
+      northernmost_point: northernmost_coords
+      southernmost_point: southmost_coords
+      easternmost_point: eastmost_coords
+      westernmost_point: western_extreme
+      demonym: nationality_name
+      head_of_state: chief_of_state
+      head_of_government: government_leader
+  geography_worldwide_6:
+    name: sovereign_states
+    columns:
+      country: country
+      name: country_name
+      iso2: country_code
+      iso3: iso3_code
+      continent: geographic_region
+      area_km2: area
+      population: pop
+      gdp_usd: gdp_nominal_usd
+      capital: capital_city_id
+      currency_name: monetary_unit
+      coords: lat_lon
+      inception: independence_date
+      official_name: long_name
+      telephone_code: country_code_phone
+      population_male: male_count
+      population_female: number_of_females
+      life_expectancy: average_lifespan
+      human_development_index: hdi
+      unemployment_rate: unemployment_rate
+      gini_coefficient: gini_coefficient
+      total_fertility_rate: children_per_woman
+      birth_rate: births_per_thousand
+      death_rate: deaths_per_thousand
+      suicide_rate: suicides_per_100000
+      median_income_usd: average_household_income_usd
+      democracy_index: eiu_index
+      central_bank: central_bank_name
+      highest_point: highest_point
+      highest_point_m: peak_height_m
+      lowest_point: lowest_elevation
+      lowest_point_m: lowest_point_m
+      northernmost_point: northernmost_coords
+      southernmost_point: southmost_coords
+      easternmost_point: easternmost_coords
+      westernmost_point: western_extreme
+      demonym: gentilic
+      languages: national_languages
+      head_of_state: head_of_state
+      head_of_government: head_of_government
+  geography_worldwide_7:
+    name: countries
+    columns:
+      country: country_id
+      name: country_name
+      iso3: iso3_code
+      continent: world_region
+      area_km2: total_area_km2
+      population: people
+      gdp_usd: gross_domestic_product
+      capital: governmental_center
+      currency_name: currency
+      coords: coordinates
+      inception: creation_date
+      official_name: formal_title
+      population_male: male_count
+      population_female: number_of_females
+      life_expectancy: life_exp
+      human_development_index: human_development_index
+      unemployment_rate: unemployment
+      gini_coefficient: gini_coefficient
+      total_fertility_rate: tfr
+      birth_rate: natality_rate
+      death_rate: deaths_per_thousand
+      suicide_rate: self_harm_mortality_rate
+      democracy_index: eiu_index
+      central_bank: monetary_authority
+      highest_point: summit
+      highest_point_m: highest_point_m
+      lowest_point: lowest_area
+      lowest_point_m: depression_m
+      northernmost_point: northmost_coords
+      southernmost_point: southernmost_point
+      easternmost_point: eastmost_coords
+      westernmost_point: western_extreme
+      languages: languages
+      head_of_state: sovereign
+      head_of_government: head_of_government
+  geography_worldwide_8:
+    name: states
+    columns:
+      country: nation_id
+      name: nation
+      iso2: country_code
+      iso3: iso3
+      continent: geographic_region
+      area_km2: size_km2
+      population: population_count
+      gdp_usd: gdp_nominal_usd
+      capital: capital_city_id
+      currency_name: currency
+      coords: coordinates
+      inception: founding_date
+      official_name: full_name
+      telephone_code: country_code_phone
+      population_male: number_of_males
+      population_female: female_population
+      life_expectancy: life_expectancy
+      human_development_index: hdi_score
+      unemployment_rate: jobless_rate
+      gini_coefficient: gini_coefficient
+      total_fertility_rate: fertility_rate
+      birth_rate: crude_birth_rate
+      death_rate: deaths_per_1000
+      suicide_rate: self_harm_mortality_rate
+      median_income_usd: average_household_income_usd
+      democracy_index: eiu_democracy_index
+      central_bank: central_bank_name
+      highest_point: highest_point
+      highest_point_m: max_elevation_m
+      lowest_point: lowest_area
+      lowest_point_m: depression_m
+      northernmost_point: northernmost_coords
+      southernmost_point: southern_extreme
+      easternmost_point: easternmost_coords
+      westernmost_point: westernmost_point
+      languages: languages
+      head_of_state: head_of_state
+      head_of_government: government_leader
+  geography_worldwide_9:
+    name: territories
+    columns:
+      country: country_id
+      name: title
+      iso2: iso2
+      continent: continent_id
+      area_km2: surface_area_km2
+      population: people
+      gdp_usd: total_gdp_usd
+      capital: seat_of_government
+      currency_name: currency_name
+      coords: lat_lon
+      inception: established
+      official_name: formal_title
+      telephone_code: telephone_code
+      population_male: population_male
+      population_female: number_of_females
+      life_expectancy: life_expectancy
+      human_development_index: human_development_score
+      unemployment_rate: out_of_work_rate
+      gini_coefficient: gini_index
+      total_fertility_rate: children_per_woman
+      birth_rate: live_births_per_1000
+      death_rate: mortality_rate
+      suicide_rate: suicide_mortality_rate
+      median_income_usd: median_household_income_usd
+      democracy_index: eiu_democracy_index
+      central_bank: reserve_bank
+      highest_point: tallest_mountain
+      highest_point_m: max_elevation_m
+      lowest_point: lowest_point
+      lowest_point_m: min_elevation_m
+      northernmost_point: northern_extreme
+      southernmost_point: southern_extreme
+      easternmost_point: easternmost_point
+      westernmost_point: westernmost_point
+      demonym: inhabitant_name
+      languages: national_languages
+      head_of_state: head_of_state_name
+      head_of_government: premier
+continents:
+  geography_temperate:
+    name: landmasses
+    columns:
+      continent: continent_id
+      name: region_name
+      area_km2: area_km2
+      population: residents
+      coords: coords
+      highest_point: highest_peak
+      highest_point_m: max_elevation_m
+      lowest_point: lowest_depression
+      lowest_point_m: nadir_elevation_m
+      most_populous_urban_area: most_populous_city
+      out_of_school_children: children_out_of_school
+      m49_code: un_code
+      demonym: demonym
+      northernmost_point: northmost_coords
+      southernmost_point: southmost_coords
+      easternmost_point: eastern_tip_coords
+      westernmost_point: western_extreme
+  geography_united_states:
+    name: world_divisions
+    columns:
+      continent: continent_id
+      name: region_name
+      area_km2: land_area_km2
+      population: inhabitants
+      coords: centroid
+      highest_point: summit
+      highest_point_m: highest_altitude_m
+      lowest_point: lowest_elevation
+      lowest_point_m: depression_depth_m
+      most_populous_urban_area: most_populous_urban_area
+      out_of_school_children: unenrolled_children
+      m49_code: un_region_code
+      demonym: gentilic
+      northernmost_point: northmost_coords
+      southernmost_point: southern_extreme
+      easternmost_point: eastern_extreme
+      westernmost_point: western_tip_coords
+  geography_worldwide:
+    name: geographic_regions
+    columns:
+      continent: id
+      name: label
+      area_km2: area
+      population: inhabitants
+      coords: location
+      highest_point: maximum_elevation_point
+      highest_point_m: highest_elevation_m
+      lowest_point: minimum_elevation_point
+      lowest_point_m: lowest_elevation_m
+      most_populous_urban_area: most_populous_urban_area
+      out_of_school_children: school_dropout_children
+      m49_code: un_code
+      demonym: inhabitant_name
+      northernmost_point: northernmost_point
+      southernmost_point: southern_extreme
+      easternmost_point: eastern_extreme
+      westernmost_point: western_extreme
+  geography_worldwide_10:
+    name: landmasses
+    columns:
+      continent: id
+      name: label
+      area_km2: area_km2
+      population: total_population
+      coords: lat_lon
+      highest_point: highest_point
+      highest_point_m: max_elevation_m
+      lowest_point: depression
+      lowest_point_m: depression_depth_m
+      most_populous_urban_area: most_populous_urban_area
+      out_of_school_children: non_enrolled_children
+      m49_code: un_region_code
+      demonym: resident_name
+      northernmost_point: northmost_coords
+      southernmost_point: southern_extreme
+      easternmost_point: eastern_extreme
+      westernmost_point: westmost_coords
+  geography_worldwide_11:
+    name: continents
+    columns:
+      continent: id
+      name: name
+      area_km2: area_km2
+      population: residents
+      coords: coords
+      highest_point: highest_peak
+      highest_point_m: highest_elevation_m
+      lowest_point: lowest_elevation
+      lowest_point_m: lowest_elevation_m
+      most_populous_urban_area: most_populous_urban_area
+      out_of_school_children: school_dropout_children
+      m49_code: m49_code
+      demonym: resident_name
+      northernmost_point: northernmost_point
+      southernmost_point: southern_extreme
+      easternmost_point: eastern_extreme
+      westernmost_point: western_tip_coords
+  geography_worldwide_12:
+    name: landmasses
+    columns:
+      continent: identifier
+      name: label
+      area_km2: total_area_km2
+      population: total_population
+      coords: centroid
+      highest_point: highest_point
+      highest_point_m: highest_point_m
+      lowest_point: depression
+      lowest_point_m: lowest_elevation_m
+      most_populous_urban_area: largest_urban_area
+      out_of_school_children: school_dropout_children
+      m49_code: un_code
+      demonym: demonym
+      northernmost_point: northmost_coords
+      southernmost_point: southern_tip_coords
+      easternmost_point: easternmost_point
+      westernmost_point: western_tip_coords
+  geography_worldwide_13:
+    name: major_regions
+    columns:
+      continent: identifier
+      name: region_name
+      area_km2: size_km2
+      population: inhabitants
+      coords: coordinates
+      highest_point: tallest_point
+      highest_point_m: max_elevation_m
+      lowest_point: minimum_elevation_point
+      lowest_point_m: depression_depth_m
+      most_populous_urban_area: most_populated_city
+      out_of_school_children: children_out_of_school
+      m49_code: un_code
+      demonym: gentilic
+      northernmost_point: northern_extreme
+      southernmost_point: southmost_coords
+      easternmost_point: eastern_tip_coords
+      westernmost_point: westernmost_point
+  geography_worldwide_2:
+    name: continents
+    columns:
+      continent: continent
+      name: label
+      area_km2: land_area_km2
+      population: population_count
+      coords: centroid
+      highest_point: highest_mountain
+      highest_point_m: max_elevation_m
+      lowest_point: nadir
+      lowest_point_m: nadir_elevation_m
+      most_populous_urban_area: largest_urban_area
+      out_of_school_children: non_enrolled_children
+      m49_code: un_code
+      demonym: adjectival
+      northernmost_point: northmost_coords
+      southernmost_point: southern_extreme
+      easternmost_point: eastmost_coords
+      westernmost_point: western_tip_coords
+  geography_worldwide_3:
+    name: continents
+    columns:
+      continent: continent
+      name: name
+      area_km2: surface_area_km2
+      population: pop
+      coords: location
+      highest_point: highest_mountain
+      highest_point_m: highest_point_m
+      lowest_point: lowest_elevation
+      lowest_point_m: lowest_elevation_m
+      most_populous_urban_area: largest_city
+      out_of_school_children: children_out_of_school
+      m49_code: un_numeric_code
+      demonym: gentilic
+      northernmost_point: northmost_coords
+      southernmost_point: southernmost_point
+      easternmost_point: eastmost_coords
+      westernmost_point: western_tip_coords
+  geography_worldwide_4:
+    name: continents
+    columns:
+      continent: identifier
+      name: landmass_name
+      area_km2: surface_area_km2
+      population: inhabitants
+      coords: geo_coords
+      highest_point: tallest_point
+      highest_point_m: max_elevation_m
+      lowest_point: minimum_elevation_point
+      lowest_point_m: lowest_elevation_m
+      most_populous_urban_area: most_populated_city
+      out_of_school_children: out_of_school_children
+      m49_code: un_numeric_code
+      demonym: gentilic
+      northernmost_point: northmost_coords
+      southernmost_point: southernmost_point
+      easternmost_point: eastmost_coords
+      westernmost_point: westernmost_point
+  geography_worldwide_5:
+    name: world_regions
+    columns:
+      continent: id
+      name: name
+      area_km2: surface_area_km2
+      population: inhabitants
+      coords: coords
+      highest_point: highest_peak
+      highest_point_m: highest_altitude_m
+      lowest_point: depression
+      lowest_point_m: lowest_altitude_m
+      most_populous_urban_area: most_populous_city
+      out_of_school_children: children_out_of_school
+      m49_code: m49_code
+      demonym: adjectival
+      northernmost_point: northern_extreme
+      southernmost_point: southern_tip_coords
+      easternmost_point: eastern_tip_coords
+      westernmost_point: westernmost_point
+  geography_worldwide_6:
+    name: geographic_regions
+    columns:
+      continent: identifier
+      name: region_name
+      area_km2: area_km2
+      population: population_count
+      coords: coords
+      highest_point: summit
+      highest_point_m: max_elevation_m
+      lowest_point: lowest_point
+      lowest_point_m: lowest_altitude_m
+      most_populous_urban_area: most_populous_urban_area
+      out_of_school_children: out_of_school_children
+      m49_code: un_code
+      demonym: gentilic
+      northernmost_point: northmost_coords
+      southernmost_point: southernmost_point
+      easternmost_point: eastern_tip_coords
+      westernmost_point: western_tip_coords
+  geography_worldwide_7:
+    name: world_divisions
+    columns:
+      continent: id
+      name: landmass_name
+      area_km2: area_km2
+      population: population
+      coords: geo_coords
+      highest_point: maximum_elevation_point
+      highest_point_m: highest_point_m
+      lowest_point: lowest_depression
+      lowest_point_m: depression_depth_m
+      most_populous_urban_area: most_populated_city
+      out_of_school_children: unenrolled_children
+      m49_code: un_region_code
+      demonym: resident_name
+      northernmost_point: north_pole_coords
+      southernmost_point: southern_tip_coords
+      easternmost_point: eastern_extreme
+      westernmost_point: western_extreme
+  geography_worldwide_8:
+    name: world_regions
+    columns:
+      continent: continent
+      name: continent_name
+      area_km2: area
+      population: inhabitants
+      coords: lat_lon
+      highest_point: summit
+      highest_point_m: summit_elevation_m
+      lowest_point: nadir
+      lowest_point_m: depression_depth_m
+      most_populous_urban_area: largest_city
+      out_of_school_children: non_enrolled_children
+      m49_code: m49_code
+      demonym: demonym
+      northernmost_point: northern_extreme
+      southernmost_point: southmost_coords
+      easternmost_point: eastmost_coords
+      westernmost_point: westmost_coords
+  geography_worldwide_9:
+    name: world_divisions
+    columns:
+      continent: continent
+      name: landmass_name
+      area_km2: size_km2
+      population: residents
+      coords: coordinates
+      highest_point: summit
+      highest_point_m: max_elevation_m
+      lowest_point: lowest_depression
+      lowest_point_m: nadir_elevation_m
+      most_populous_urban_area: most_populated_city
+      out_of_school_children: school_dropout_children
+      m49_code: m49_code
+      demonym: resident_name
+      northernmost_point: north_pole_coords
+      southernmost_point: southern_extreme
+      easternmost_point: eastmost_coords
+      westernmost_point: westernmost_point
+cities:
+  geography_temperate:
+    name: urban_areas
+    columns:
+      city: settlement_id
+      name: city_name
+      country: city_country
+      population: city_population
+      coords: position
+      inception: founded
+      nickname: alias
+      postal_code: postal_code
+      demonym: citizen_name
+      gdp_usd: economic_output
+      per_capita_income_usd: mean_income_usd
+      elevation_m: height_m
+      area_km2: area_km2
+  geography_united_states:
+    name: municipalities
+    columns:
+      city: city_id
+      name: municipality_name
+      country: nation
+      population: population
+      coords: location
+      inception: inception
+      postal_code: postal_code
+      demonym: gentilic
+      gdp_usd: economic_output
+      per_capita_income_usd: per_capita_income_usd
+      elevation_m: altitude
+      area_km2: size_km2
+      vehicles_per_thousand: cars_per_thousand
+  geography_worldwide:
+    name: urban_areas
+    columns:
+      city: city
+      name: locality
+      country: country
+      population: city_population
+      coords: coordinates
+      inception: founding_year
+      nickname: nickname
+      gdp_usd: total_output_usd
+      per_capita_income_usd: per_capita_income_usd
+      elevation_m: height_m
+      area_km2: city_area_km2
+      vehicles_per_thousand: vehicle_density
+  geography_worldwide_10:
+    name: towns
+    columns:
+      city: municipality_id
+      name: settlement_name
+      country: country
+      population: inhabitants
+      coords: lat_lon
+      inception: founding_date
+      postal_code: postcode
+      per_capita_income_usd: mean_income_usd
+      elevation_m: altitude
+      area_km2: surface_area_km2
+      vehicles_per_thousand: cars_per_thousand
+  geography_worldwide_11:
+    name: conurbations
+    columns:
+      city: settlement_id
+      name: city_name
+      country: home_country
+      population: population
+      coords: location
+      inception: creation_date
+      nickname: sobriquet
+      postal_code: zip
+      gdp_usd: total_output_usd
+      per_capita_income_usd: average_income_usd
+      elevation_m: altitude
+      area_km2: surface_area_km2
+  geography_worldwide_12:
+    name: municipalities
+    columns:
+      city: municipality_id
+      name: city_name
+      country: home_country
+      population: number_of_inhabitants
+      coords: location
+      inception: established
+      nickname: alias
+      demonym: resident_name
+      gdp_usd: total_output_usd
+      per_capita_income_usd: per_capita_income_usd
+      elevation_m: elevation
+      area_km2: total_area_km2
+      vehicles_per_thousand: car_ownership_rate
+  geography_worldwide_13:
+    name: cities
+    columns:
+      city: municipality_id
+      name: place_name
+      country: home_country
+      population: population_count
+      coords: position
+      inception: founded
+      nickname: alias
+      postal_code: postcode
+      demonym: gentilic
+      gdp_usd: total_output_usd
+      per_capita_income_usd: per_capita_income_usd
+      elevation_m: altitude_m
+      area_km2: size_km2
+      vehicles_per_thousand: cars_per_thousand
+  geography_worldwide_2:
+    name: urban_areas
+    columns:
+      city: city_id
+      name: name
+      country: city_country
+      population: city_population
+      coords: coordinates
+      inception: founding_date
+      postal_code: zip_code
+      gdp_usd: gdp_usd
+      per_capita_income_usd: income_per_capita
+      elevation_m: elevation_m
+      area_km2: surface_area_km2
+      vehicles_per_thousand: cars_per_thousand
+  geography_worldwide_3:
+    name: urban_areas
+    columns:
+      city: city_id
+      name: settlement_name
+      country: country
+      population: residents
+      coords: coordinates
+      inception: creation_date
+      postal_code: zip_code
+      gdp_usd: economic_output
+      per_capita_income_usd: per_person_income_usd
+      elevation_m: altitude_m
+      area_km2: size_km2
+  geography_worldwide_4:
+    name: towns
+    columns:
+      city: city
+      name: settlement_name
+      country: nation
+      population: city_population
+      coords: geo_coords
+      inception: founding_date
+      nickname: nickname
+      postal_code: mailing_code
+      demonym: resident_name
+      gdp_usd: total_output_usd
+      per_capita_income_usd: average_income_usd
+      elevation_m: altitude
+      area_km2: land_area_km2
+      vehicles_per_thousand: cars_per_thousand
+  geography_worldwide_5:
+    name: towns
+    columns:
+      city: settlement_id
+      name: place_name
+      country: country
+      population: population
+      coords: position
+      inception: founded
+      postal_code: mailing_code
+      demonym: inhabitant_name
+      gdp_usd: economic_output
+      per_capita_income_usd: per_person_income_usd
+      elevation_m: height_m
+      area_km2: total_area_km2
+      vehicles_per_thousand: vehicles_per_thousand
+  geography_worldwide_6:
+    name: settlements
+    columns:
+      city: city_id
+      name: place_name
+      country: nation
+      population: city_population
+      coords: lat_lon
+      inception: founded
+      nickname: sobriquet
+      postal_code: post_code
+      demonym: gentilic
+      gdp_usd: economic_output
+      per_capita_income_usd: average_income_usd
+      elevation_m: altitude
+      area_km2: area_km2
+      vehicles_per_thousand: motor_vehicles_per_1000
+  geography_worldwide_7:
+    name: settlements
+    columns:
+      city: city_id
+      name: label
+      country: country
+      population: pop
+      coords: coords
+      inception: founded
+      nickname: byname
+      postal_code: mailing_code
+      demonym: inhabitant_name
+      gdp_usd: economic_output
+      per_capita_income_usd: mean_income_usd
+      elevation_m: elevation_m
+      area_km2: area_km2
+      vehicles_per_thousand: car_ownership_rate
+  geography_worldwide_8:
+    name: populated_places
+    columns:
+      city: settlement_id
+      name: settlement_name
+      country: city_country
+      population: population
+      coords: coords
+      inception: established
+      nickname: byname
+      demonym: demonym
+      gdp_usd: gross_domestic_product
+      per_capita_income_usd: per_person_income_usd
+      elevation_m: elevation_m
+      area_km2: city_area_km2
+      vehicles_per_thousand: car_ownership_rate
+  geography_worldwide_9:
+    name: cities
+    columns:
+      city: city_id
+      name: name
+      country: city_country
+      population: population_count
+      coords: coords
+      inception: established
+      postal_code: mailing_code
+      demonym: citizen_name
+      gdp_usd: gdp_usd
+      per_capita_income_usd: per_person_income_usd
+      elevation_m: elevation
+      area_km2: area_km2
+      vehicles_per_thousand: vehicle_density
+german_states:
+  german_states_germany:
+    name: german_states
+    columns:
+      german_state: bundesland_id
+      country: country
+      name: bundesland
+      coords: location
+      area_km2: area_km2
+      population: residents
+      capital: landeshauptstadt
+      inception: founding_date
+  german_states_germany_10:
+    name: german_bundeslaender
+    columns:
+      german_state: state_id
+      country: country
+      name: federal_state_name
+      coords: location
+      area_km2: total_area_km2
+      population: residents
+      capital: capital_city
+      inception: inception
+      website: url
+  german_states_germany_11:
+    name: german_bundeslaender
+    columns:
+      german_state: region_id
+      country: nation
+      name: label
+      coords: coords
+      area_km2: area_km2
+      population: pop
+      capital: capital_city
+      inception: creation_date
+      iso_code: iso
+      website: url
+  german_states_germany_12:
+    name: german_administrative_regions
+    columns:
+      german_state: bundesland_id
+      country: parent_country
+      name: federal_state_name
+      coords: location
+      area_km2: area
+      population: residents
+      capital: administrative_center
+      inception: creation_date
+      website: website
+  german_states_germany_13:
+    name: german_administrative_regions
+    columns:
+      german_state: german_state
+      country: country
+      name: federal_state_name
+      coords: geo_coords
+      area_km2: size_km2
+      population: residents
+      capital: capital
+      inception: founding_date
+      iso_code: iso
+  german_states_germany_14:
+    name: german_regions
+    columns:
+      german_state: state_id
+      country: nation
+      name: name
+      coords: geo_coords
+      area_km2: surface_area_km2
+      population: inhabitants
+      capital: capital_city
+      inception: creation_date
+      iso_code: iso_code
+  german_states_germany_15:
+    name: german_regions
+    columns:
+      german_state: german_state
+      country: parent_country
+      name: federal_state_name
+      coords: geo_coords
+      area_km2: surface_area_km2
+      population: pop
+      capital: landeshauptstadt
+      inception: established
+      iso_code: iso_code
+      website: official_website
+  german_states_germany_2:
+    name: german_states
+    columns:
+      german_state: german_state
+      country: parent_country
+      name: federal_state_name
+      coords: location
+      area_km2: area_km2
+      population: population
+      capital: main_city
+      inception: established
+      iso_code: region_code
+      website: url
+  german_states_germany_3:
+    name: german_administrative_regions
+    columns:
+      german_state: bundesland_id
+      country: nation
+      name: name
+      coords: centroid
+      area_km2: total_area_km2
+      population: population
+      capital: landeshauptstadt
+      inception: founded
+      iso_code: state_code
+      website: url
+  german_states_germany_4:
+    name: german_regions
+    columns:
+      german_state: region_id
+      country: parent_country
+      name: bundesland
+      coords: coords
+      area_km2: area
+      population: population_count
+      capital: main_city
+      inception: founding_date
+      iso_code: iso_code
+  german_states_germany_5:
+    name: german_states
+    columns:
+      german_state: bundesland_id
+      country: nation
+      name: region_name
+      coords: location
+      area_km2: total_area_km2
+      population: pop
+      capital: capital
+      inception: creation_date
+      iso_code: iso_code
+  german_states_germany_6:
+    name: german_administrative_regions
+    columns:
+      german_state: german_state
+      country: parent_country
+      name: name
+      coords: location
+      area_km2: total_area_km2
+      population: pop
+      capital: administrative_center
+      inception: inception
+  german_states_germany_7:
+    name: bundesland_table
+    columns:
+      german_state: region_id
+      country: country
+      name: region_name
+      coords: location
+      area_km2: size_km2
+      population: residents
+      capital: administrative_center
+      inception: established
+  german_states_germany_8:
+    name: german_bundeslaender
+    columns:
+      german_state: state_id
+      country: country
+      name: federal_state_name
+      coords: coords
+      area_km2: size_km2
+      population: number_of_inhabitants
+      capital: capital
+      inception: established
+      website: homepage
+  german_states_germany_9:
+    name: german_states
+    columns:
+      german_state: state_id
+      country: nation
+      name: bundesland
+      coords: location
+      area_km2: area
+      population: number_of_inhabitants
+      capital: capital_city
+      inception: founding_date
+      iso_code: state_code
+      website: website
+persons:
+  people_france:
+    name: notable_persons
+    columns:
+      person: individual_id
+      name: label
+      sex: biological_sex
+      birth_date: dob
+      death_date: date_of_death
+      given_name: given_name
+      family_name: surname
+      citizenship: country_of_citizenship
+      birth_country: birth_nation
+      country: home_country
+      educated_at: alma_mater
+      height_cm: stature
+      number_of_children: offspring_count
+      number_of_siblings: sibling_count
+  people_france_2:
+    name: famous_people
+    columns:
+      person: person_id
+      name: label
+      sex: sex
+      birth_date: birth_day
+      death_date: death_date
+      given_name: personal_name
+      family_name: family_name
+      citizenship: citizenship
+      birth_country: country_of_birth
+      country: nation
+      educated_at: institution
+      number_of_children: number_of_children
+      number_of_siblings: sibling_count
+  people_france_3:
+    name: public_figures
+    columns:
+      person: human_id
+      name: display_name
+      sex: sex_at_birth
+      birth_date: dob
+      death_date: died
+      given_name: given_name
+      family_name: last_name
+      citizenship: passport_country
+      birth_country: native_country
+      country: home_country
+      number_of_children: number_of_children
+      number_of_siblings: siblings
+  people_g20:
+    name: individuals
+    columns:
+      person: individual_id
+      name: label
+      sex: biological_sex
+      birth_date: dob
+      death_date: dod
+      given_name: given_name
+      family_name: last
+      citizenship: passport_country
+      birth_country: country_of_birth
+      country: nation
+      educated_at: educated_at
+      height_cm: height
+      number_of_children: number_of_children
+      number_of_siblings: number_of_siblings
+  people_germany:
+    name: celebrities
+    columns:
+      person: human_id
+      name: display_name
+      sex: sex_at_birth
+      birth_date: birth_date
+      death_date: date_of_death
+      given_name: first_name
+      family_name: last
+      citizenship: citizenship
+      birth_country: birth_country
+      country: nation
+      educated_at: school
+      height_cm: height_cm
+      number_of_children: kids
+      number_of_siblings: siblings
+  people_nato:
+    name: notable_persons
+    columns:
+      person: person
+      name: label
+      sex: sex
+      birth_date: born
+      death_date: death_date
+      given_name: forename
+      family_name: surname
+      citizenship: nationality
+      birth_country: birthplace_country
+      country: home_country
+      educated_at: educated_at
+      number_of_children: child_count
+      number_of_siblings: number_of_siblings
+  people_p5:
+    name: persons
+    columns:
+      person: human_id
+      name: complete_name
+      sex: biological_sex
+      birth_date: birth_day
+      death_date: died
+      given_name: given_name
+      family_name: surname
+      citizenship: passport_country
+      birth_country: birth_country
+      country: nation
+      educated_at: college
+      number_of_siblings: brothers_and_sisters
+  people_united_kingdom:
+    name: public_figures
+    columns:
+      person: individual_id
+      name: name
+      sex: sex
+      birth_date: birth_date
+      death_date: dod
+      given_name: personal_name
+      family_name: family_name
+      citizenship: passport_country
+      birth_country: birthplace_country
+      country: associated_country
+      educated_at: university
+      height_cm: height
+      number_of_children: child_count
+      number_of_siblings: brothers_and_sisters
+  people_united_kingdom_2:
+    name: individuals
+    columns:
+      person: human_id
+      name: person_name
+      sex: gender
+      birth_date: date_of_birth
+      death_date: death_day
+      given_name: christian_name
+      family_name: paternal_name
+      citizenship: nationality
+      birth_country: native_country
+      country: country
+      educated_at: university
+      number_of_children: kids
+      number_of_siblings: siblings
+  people_united_kingdom_3:
+    name: persons
+    columns:
+      person: person_id
+      name: person_name
+      sex: sex_at_birth
+      birth_date: date_of_birth
+      death_date: date_of_death
+      given_name: personal_name
+      family_name: paternal_name
+      citizenship: passport_country
+      birth_country: birth_country
+      country: nation
+      educated_at: school
+      height_cm: height_cm
+      number_of_children: children
+      number_of_siblings: brothers_and_sisters
+  people_united_states:
+    name: public_figures
+    columns:
+      person: person
+      name: display_name
+      sex: gender
+      birth_date: born
+      death_date: date_of_death
+      given_name: forename
+      family_name: family_name
+      citizenship: nationality
+      birth_country: birth_nation
+      country: country
+      educated_at: institution
+      height_cm: height_metres
+      number_of_children: offspring_count
+      number_of_siblings: siblings
+  people_united_states_2:
+    name: individuals
+    columns:
+      person: person_id
+      name: full_name
+      sex: sex_at_birth
+      birth_date: date_of_birth
+      death_date: dod
+      given_name: christian_name
+      family_name: last
+      citizenship: passport_country
+      birth_country: birthplace_country
+      country: nation
+      educated_at: educated_at
+      height_cm: height
+      number_of_siblings: number_of_siblings
+  people_united_states_3:
+    name: celebrities
+    columns:
+      person: person_id
+      name: complete_name
+      sex: biological_sex
+      birth_date: birth_date
+      death_date: death_date
+      given_name: christian_name
+      family_name: last
+      citizenship: nationality
+      birth_country: birthplace_country
+      country: nation
+      educated_at: school
+      number_of_children: children
+      number_of_siblings: number_of_siblings
+  people_worldwide:
+    name: celebrities
+    columns:
+      person: individual_id
+      name: display_name
+      sex: biological_sex
+      birth_date: date_of_birth
+      death_date: death_date
+      given_name: given_name
+      family_name: paternal_name
+      citizenship: citizenship
+      birth_country: birth_nation
+      country: home_country
+      educated_at: college
+      height_cm: body_height
+      number_of_children: kids
+      number_of_siblings: siblings
+  people_worldwide_2:
+    name: personalities
+    columns:
+      person: individual_id
+      name: label
+      sex: sex_at_birth
+      birth_date: birthday
+      death_date: dod
+      given_name: first_name
+      family_name: family_name
+      citizenship: nationality
+      birth_country: native_country
+      country: home_country
+      educated_at: institution
+      number_of_siblings: siblings
+awards:
+  people_france:
+    name: accolades
+    columns:
+      award: honor_id
+      name: label
+      country: awarding_country
+      inception: first_awarded
+      named_after: honoree
+  people_france_2:
+    name: honors
+    columns:
+      award: award_id
+      name: label
+      country: country
+      inception: established
+      named_after: namesake
+  people_france_3:
+    name: distinctions
+    columns:
+      award: award_id
+      name: prize_name
+      country: origin_country
+      inception: inception
+      named_after: named_after
+  people_g20:
+    name: distinctions
+    columns:
+      award: prize_id
+      name: prize_name
+      country: awarding_country
+      inception: founding_year
+      conferred_by: granting_organization
+      named_after: namesake
+      official_website: url
+  people_germany:
+    name: prizes
+    columns:
+      award: honor_id
+      name: distinction_name
+      country: nation
+      inception: founding_year
+      official_website: web_address
+  people_nato:
+    name: trophies
+    columns:
+      award: honor_id
+      name: label
+      country: origin_country
+      inception: created
+      conferred_by: awarding_body
+      official_website: web_address
+  people_p5:
+    name: honors
+    columns:
+      award: prize_id
+      name: distinction_name
+      country: awarding_country
+      inception: first_awarded
+      conferred_by: granting_organization
+  people_united_kingdom:
+    name: distinctions
+    columns:
+      award: award
+      name: distinction_name
+      country: nation
+      inception: created
+      conferred_by: sponsor
+      named_after: honoree
+  people_united_kingdom_2:
+    name: decorations
+    columns:
+      award: honor_id
+      name: label
+      country: country_of_origin
+      inception: founded
+      conferred_by: organizer
+      official_website: web_address
+  people_united_kingdom_3:
+    name: awards
+    columns:
+      award: prize_id
+      name: prize_name
+      country: origin_country
+      inception: first_awarded
+      conferred_by: organizer
+      named_after: eponym
+      official_website: official_website
+  people_united_states:
+    name: accolades
+    columns:
+      award: honor_id
+      name: distinction_name
+      country: origin_country
+      inception: created
+      named_after: namesake
+      official_website: official_website
+  people_united_states_2:
+    name: prizes
+    columns:
+      award: award
+      name: name
+      country: origin_country
+      inception: inception
+      conferred_by: awarding_body
+      named_after: honoree
+      official_website: official_website
+  people_united_states_3:
+    name: decorations
+    columns:
+      award: award
+      name: name
+      country: origin_country
+      inception: founded
+      named_after: namesake
+      official_website: url
+  people_worldwide:
+    name: honors
+    columns:
+      award: honor_id
+      name: prize_name
+      country: country_of_origin
+      inception: established
+      conferred_by: sponsor
+      named_after: honoree
+  people_worldwide_2:
+    name: honors
+    columns:
+      award: award
+      name: label
+      country: origin_country
+      inception: inception
+      conferred_by: issuer
+      named_after: namesake
+person_awards:
+  people_france:
+    name: person_awards
+    columns:
+      person: person_id
+      award: prize
+      award_year: year_of_award
+  people_france_2:
+    name: person_awards
+    columns:
+      person: person_id
+      award: distinction
+      award_year: award_year
+  people_france_3:
+    name: person_awards
+    columns:
+      person: awardee
+      award: award_id
+      award_year: award_year
+  people_g20:
+    name: person_awards
+    columns:
+      person: honoree
+      award: honor
+      award_year: year_won
+  people_germany:
+    name: person_awards
+    columns:
+      person: winner
+      award: accolade
+      award_year: year_of_award
+  people_nato:
+    name: person_awards
+    columns:
+      person: person_id
+      award: accolade
+      award_year: reception_year
+  people_p5:
+    name: person_awards
+    columns:
+      person: person_id
+      award: award
+      award_year: year_won
+  people_united_kingdom:
+    name: person_awards
+    columns:
+      person: awardee
+      award: award_id
+      award_year: award_year
+  people_united_kingdom_2:
+    name: person_awards
+    columns:
+      person: person
+      award: distinction
+      award_year: year_awarded
+  people_united_kingdom_3:
+    name: person_awards
+    columns:
+      person: honoree
+      award: award
+      award_year: year_of_award
+  people_united_states:
+    name: person_awards
+    columns:
+      person: person_id
+      award: award
+      award_year: prize_year
+  people_united_states_2:
+    name: person_awards
+    columns:
+      person: person
+      award: accolade
+      award_year: year_of_award
+  people_united_states_3:
+    name: person_awards
+    columns:
+      person: recipient
+      award: accolade
+      award_year: prize_year
+  people_worldwide:
+    name: person_awards
+    columns:
+      person: person_id
+      award: award
+      award_year: award_year
+  people_worldwide_2:
+    name: person_awards
+    columns:
+      person: honoree
+      award: prize
+      award_year: year_awarded
+provinces:
+  provinces_people_s_republic_of_china:
+    name: china_provinces
+    columns:
+      province: administrative_unit_id
+      country: country
+      name: region_name
+      coords: centroid
+      area_km2: area_km2
+      population: inhabitants
+      capital: capital_city
+      inception: founded
+      iso_code: iso_code
+      website: government_website
+  provinces_people_s_republic_of_china_10:
+    name: chinese_administrative_divisions
+    columns:
+      province: administrative_unit_id
+      country: nation
+      name: province_name
+      coords: coordinates
+      area_km2: area
+      population: number_of_inhabitants
+      capital: capital_city
+      inception: established
+      website: government_website
+  provinces_people_s_republic_of_china_11:
+    name: china_states
+    columns:
+      province: province
+      country: nation
+      name: administrative_region_name
+      coords: location
+      area_km2: area_km2
+      population: inhabitants
+      capital: main_city
+      inception: inception
+      iso_code: region_code
+      website: official_website
+  provinces_people_s_republic_of_china_12:
+    name: china_provinces
+    columns:
+      province: administrative_unit_id
+      country: parent_country
+      name: label
+      coords: coords
+      area_km2: size_km2
+      population: number_of_inhabitants
+      capital: capital_city
+      inception: established
+      iso_code: iso_3166_code
+      website: url
+  provinces_people_s_republic_of_china_13:
+    name: provinces
+    columns:
+      province: administrative_unit_id
+      country: nation
+      name: division_name
+      coords: location
+      area_km2: surface_area_km2
+      population: residents
+      capital: main_city
+      inception: inception
+      iso_code: region_code
+  provinces_people_s_republic_of_china_14:
+    name: china_states
+    columns:
+      province: administrative_unit_id
+      country: country
+      name: name
+      coords: lat_lon
+      area_km2: area_km2
+      population: pop
+      capital: provincial_capital
+      inception: founded
+  provinces_people_s_republic_of_china_15:
+    name: administrative_regions
+    columns:
+      province: province
+      country: nation
+      name: province_name
+      coords: location
+      area_km2: area
+      population: population
+      capital: provincial_capital
+      inception: creation_date
+      iso_code: region_code
+      website: homepage
+  provinces_people_s_republic_of_china_2:
+    name: china_states
+    columns:
+      province: region_id
+      country: nation
+      name: province_name
+      coords: lat_lon
+      area_km2: size_km2
+      population: inhabitants
+      capital: province_capital
+      inception: creation_date
+      iso_code: region_code
+      website: website
+  provinces_people_s_republic_of_china_3:
+    name: china_regions
+    columns:
+      province: region_id
+      country: parent_country
+      name: division_name
+      coords: coords
+      area_km2: surface_area_km2
+      population: number_of_inhabitants
+      capital: administrative_center
+      inception: established
+      iso_code: province_code
+      website: government_website
+  provinces_people_s_republic_of_china_4:
+    name: china_provinces
+    columns:
+      province: province
+      country: nation
+      name: name
+      coords: coordinates
+      area_km2: total_area_km2
+      population: number_of_inhabitants
+      capital: provincial_capital
+      inception: founding_date
+      website: government_website
+  provinces_people_s_republic_of_china_5:
+    name: china_provinces
+    columns:
+      province: province_id
+      country: country
+      name: administrative_region_name
+      coords: coords
+      area_km2: total_area_km2
+      population: inhabitants
+      capital: province_capital
+      inception: founded
+  provinces_people_s_republic_of_china_6:
+    name: china_provinces
+    columns:
+      province: region_id
+      country: nation
+      name: administrative_region_name
+      coords: coords
+      area_km2: area_km2
+      population: number_of_inhabitants
+      capital: administrative_center
+      inception: inception
+      iso_code: iso
+      website: homepage
+  provinces_people_s_republic_of_china_7:
+    name: china_regions
+    columns:
+      province: province
+      country: country
+      name: province_name
+      coords: coords
+      area_km2: area_km2
+      population: population
+      capital: main_city
+      inception: creation_date
+      iso_code: iso_3166_code
+      website: url
+  provinces_people_s_republic_of_china_8:
+    name: administrative_regions
+    columns:
+      province: province
+      country: nation
+      name: region_name
+      coords: coords
+      area_km2: size_km2
+      population: residents
+      capital: main_city
+      inception: inception
+      iso_code: iso
+      website: homepage
+  provinces_people_s_republic_of_china_9:
+    name: provinces
+    columns:
+      province: province
+      country: parent_country
+      name: label
+      coords: geo_coords
+      area_km2: total_area_km2
+      population: pop
+      capital: capital_city
+      inception: established
+      iso_code: region_code
+states:
+  states_united_states:
+    name: states
+    columns:
+      state: state
+      country: nation
+      name: name
+      coords: lat_lon
+      area_km2: area_km2
+      population: number_of_inhabitants
+      capital: capital_city
+      inception: admitted
+      iso_code: state_code
+      nickname: alias
+      website: website
+  states_united_states_10:
+    name: united_states_states
+    columns:
+      state: state_id
+      country: country
+      name: label
+      coords: coordinates
+      area_km2: total_area_km2
+      population: pop
+      capital: capital_city
+      inception: statehood_date
+      iso_code: state_code
+      nickname: state_nickname
+  states_united_states_11:
+    name: american_regions
+    columns:
+      state: state
+      country: nation
+      name: us_state_name
+      coords: coordinates
+      area_km2: land_area_km2
+      population: population_count
+      capital: state_capital
+      inception: statehood_date
+      iso_code: iso_3166_code
+      nickname: informal_name
+      website: official_website
+  states_united_states_12:
+    name: american_states
+    columns:
+      state: state_id
+      country: country
+      name: us_state_name
+      coords: geo_coords
+      area_km2: area
+      population: residents
+      capital: capital_city
+      inception: admitted
+      iso_code: iso
+      nickname: state_nickname
+      website: website
+  states_united_states_13:
+    name: american_regions
+    columns:
+      state: us_state_id
+      country: country
+      name: state_name
+      coords: location
+      area_km2: surface_area_km2
+      population: population
+      capital: main_city
+      inception: admitted
+      iso_code: iso
+  states_united_states_14:
+    name: american_regions
+    columns:
+      state: state
+      country: country
+      name: name
+      coords: centroid
+      area_km2: surface_area_km2
+      population: number_of_inhabitants
+      capital: capital_city
+      inception: founding_date
+      iso_code: iso
+      nickname: state_nickname
+      website: official_website
+  states_united_states_15:
+    name: usa_states
+    columns:
+      state: us_state_id
+      country: nation
+      name: label
+      coords: coordinates
+      area_km2: size_km2
+      population: population_count
+      capital: state_capital
+      inception: statehood_date
+      iso_code: iso_code
+      nickname: sobriquet
+      website: official_website
+  states_united_states_2:
+    name: american_regions
+    columns:
+      state: state
+      country: nation
+      name: us_state_name
+      coords: coordinates
+      area_km2: land_area_km2
+      population: inhabitants
+      capital: main_city
+      inception: inception
+      iso_code: iso
+      nickname: state_nickname
+      website: homepage
+  states_united_states_3:
+    name: american_regions
+    columns:
+      state: us_state_id
+      country: parent_country
+      name: name
+      coords: location
+      area_km2: total_area_km2
+      population: number_of_inhabitants
+      capital: state_capital
+      inception: statehood_date
+      iso_code: iso_3166_code
+      website: url
+  states_united_states_4:
+    name: united_states_states
+    columns:
+      state: state
+      country: nation
+      name: label
+      coords: location
+      area_km2: surface_area_km2
+      population: number_of_inhabitants
+      capital: administrative_center
+      inception: admission_date
+      iso_code: state_code
+      nickname: informal_name
+      website: official_website
+  states_united_states_5:
+    name: states
+    columns:
+      state: state_id
+      country: parent_country
+      name: name
+      coords: location
+      area_km2: total_area_km2
+      population: number_of_inhabitants
+      capital: state_capital
+      inception: inception
+      iso_code: abbreviation
+      nickname: alias
+      website: website
+  states_united_states_6:
+    name: usa_states
+    columns:
+      state: state
+      country: country
+      name: name
+      coords: location
+      area_km2: total_area_km2
+      population: residents
+      capital: administrative_center
+      inception: statehood_date
+      iso_code: state_code
+      nickname: nickname
+      website: website
+  states_united_states_7:
+    name: usa_states
+    columns:
+      state: state
+      country: nation
+      name: american_state_name
+      coords: centroid
+      area_km2: size_km2
+      population: number_of_inhabitants
+      capital: capital
+      inception: inception
+      iso_code: abbreviation
+      website: website
+  states_united_states_8:
+    name: american_regions
+    columns:
+      state: state_id
+      country: country
+      name: name
+      coords: coords
+      area_km2: total_area_km2
+      population: pop
+      capital: administrative_center
+      inception: admission_date
+      iso_code: abbreviation
+      nickname: alias
+      website: website
+  states_united_states_9:
+    name: states
+    columns:
+      state: state_id
+      country: country
+      name: us_state_name
+      coords: location
+      area_km2: area_km2
+      population: pop
+      capital: main_city
+      inception: inception
+      iso_code: iso_code
+      nickname: alias
+      website: homepage
+ucl_clubs:
+  ucl_g7:
+    name: champions_league_teams
+    columns:
+      team: team_id
+      name: full_club_name
+      league: home_league
+      country: home_country
+      founded: inception
+      coach: manager
+      owner: ownership
+      nickname: informal_name
+      leagueTitles: league_wins
+      socialFollowers: social_media_followers
+      website: web_address
+      shortName: short_name
+      founder: founder
+  ucl_germany:
+    name: champions_league_teams
+    columns:
+      team: organization_id
+      name: name
+      league: domestic_league
+      country: home_country
+      founded: founding_date
+      stadium: home_arena
+      leagueTitles: league_titles
+      socialFollowers: socialFollowers
+      shortName: shortName
+      founder: creator
+  ucl_italy:
+    name: champions_league_clubs
+    columns:
+      team: team
+      name: title
+      league: home_league
+      country: base_country
+      founded: founded
+      stadium: stadium
+      owner: owner
+      leagueTitles: championships
+      socialFollowers: socialFollowers
+      website: website
+      founder: founder
+  ucl_italy_2:
+    name: champions_league_clubs
+    columns:
+      team: club_id
+      name: title
+      league: competition
+      country: base_country
+      founded: founded
+      stadium: home_ground
+      nickname: informal_name
+      leagueTitles: leagueTitles
+      socialFollowers: socialFollowers
+      website: homepage
+      shortName: short_name
+      founder: creator
+  ucl_italy_3:
+    name: champions_league_teams
+    columns:
+      team: organization_id
+      name: club_name
+      league: competition
+      country: club_country
+      founded: founding_year
+      stadium: home_stadium
+      nickname: sobriquet
+      leagueTitles: title_count
+      socialFollowers: social_media_followers
+      shortName: abbreviation
+      founder: founding_person
+  ucl_nato:
+    name: ucl_clubs
+    columns:
+      team: club_id
+      name: label
+      league: home_league
+      country: nation
+      founded: start_year
+      stadium: home_stadium
+      coach: head_coach
+      nickname: nickname
+      leagueTitles: leagueTitles
+      socialFollowers: socialFollowers
+      website: website
+      shortName: short_name
+      founder: club_founder
+  ucl_palearctic:
+    name: ucl_participants
+    columns:
+      team: team_id
+      name: title
+      league: home_league
+      country: nation
+      founded: founding_date
+      stadium: home_ground
+      coach: manager
+      nickname: alias
+      leagueTitles: championships
+      socialFollowers: fan_base_size
+  ucl_spain:
+    name: european_clubs
+    columns:
+      team: organization_id
+      name: team_name
+      league: domestic_league
+      country: country
+      founded: founding_date
+      owner: proprietor
+      leagueTitles: title_count
+      socialFollowers: social_media_followers
+      website: official_website
+      shortName: club_abbreviation
+      founder: established_by
+  ucl_spain_2:
+    name: champions_league_clubs
+    columns:
+      team: club_id
+      name: club_name
+      league: home_league
+      country: home_country
+      founded: founding_date
+      stadium: ground
+      coach: trainer
+      owner: owner
+      nickname: byname
+      leagueTitles: championships
+      socialFollowers: online_followers
+      founder: founding_person
+  ucl_spain_3:
+    name: ucl_clubs
+    columns:
+      team: organization_id
+      name: title
+      league: home_league
+      country: club_country
+      founded: start_year
+      stadium: home_ground
+      coach: coach
+      owner: owner
+      nickname: byname
+      leagueTitles: title_count
+      socialFollowers: fan_base_size
+      founder: founding_person
+  ucl_united_kingdom:
+    name: champions_league_clubs
+    columns:
+      team: team
+      name: title
+      league: league
+      country: nation
+      founded: start_year
+      stadium: ground
+      coach: trainer
+      owner: investor
+      nickname: sobriquet
+      leagueTitles: league_titles
+      socialFollowers: followers
+      website: url
+      shortName: shortName
+      founder: club_founder
+  ucl_united_kingdom_2:
+    name: ucl_teams
+    columns:
+      team: organization_id
+      name: label
+      league: domestic_league
+      country: base_country
+      founded: founding_year
+      stadium: home_arena
+      coach: manager
+      owner: ownership
+      nickname: nickname
+      leagueTitles: leagueTitles
+      socialFollowers: socialFollowers
+      website: homepage
+      shortName: short_name
+      founder: club_founder
+  ucl_united_kingdom_3:
+    name: ucl_participants
+    columns:
+      team: club_id
+      name: title
+      league: domestic_league
+      country: nation
+      founded: founded
+      stadium: home_stadium
+      coach: coach
+      owner: investor
+      nickname: informal_name
+      leagueTitles: leagueTitles
+      socialFollowers: social_media_followers
+      website: website
+      shortName: club_abbreviation
+      founder: established_by
+  ucl_western_europe:
+    name: champions_league_teams
+    columns:
+      team: organization_id
+      name: title
+      league: domestic_league
+      country: country
+      founded: founding_year
+      stadium: home_arena
+      coach: trainer
+      nickname: informal_name
+      leagueTitles: championships
+      socialFollowers: social_media_followers
+      website: website
+      shortName: abbreviation
+      founder: creator
+  ucl_worldwide:
+    name: champions_league_teams
+    columns:
+      team: team_id
+      name: name
+      league: division
+      country: base_country
+      founded: founding_date
+      stadium: home_stadium
+      coach: manager
+      nickname: byname
+      leagueTitles: domestic_titles
+      socialFollowers: followers
+      website: official_website
+      shortName: short_name
+ucl_matches:
+  ucl_g7:
+    name: champions_league_matches
+    columns:
+      match: match
+      matchLabel: label
+      seasonLabel: competition_season
+      date: played_on
+      venue: venue
+      team1: team_a
+      team2: second_team
+      winner: winner
+      attendance: attendance
+      referee: match_referee
+  ucl_germany:
+    name: european_football_matches
+    columns:
+      match: game_id
+      matchLabel: title
+      seasonLabel: season_name
+      date: played_on
+      venue: stadium
+      team1: home_team
+      team2: away_team
+      winner: winner
+      attendance: audience
+      referee: arbiter
+  ucl_italy:
+    name: ucl_fixtures
+    columns:
+      match: game_id
+      matchLabel: fixture_name
+      season: season
+      date: played_on
+      venue: ground
+      team1: team1
+      team2: team2
+      winner: winning_team
+      attendance: attendance
+      referee: referee
+  ucl_italy_2:
+    name: european_football_matches
+    columns:
+      match: fixture_id
+      matchLabel: label
+      season: season_id
+      seasonLabel: ucl_season_name
+      date: game_date
+      venue: arena
+      team1: home_team
+      team2: away_team
+      winner: winner
+      attendance: crowd
+      referee: official
+  ucl_italy_3:
+    name: european_football_matches
+    columns:
+      match: fixture_id
+      matchLabel: fixture_name
+      season: competition_season_id
+      seasonLabel: competition_season
+      date: fixture_date
+      venue: stadium
+      team1: team1
+      team2: team2
+      winner: winning_team
+      attendance: attendance
+      referee: arbiter
+  ucl_nato:
+    name: european_football_matches
+    columns:
+      match: match_id
+      matchLabel: label
+      season: season
+      seasonLabel: competition_season
+      date: fixture_date
+      venue: ground
+      team1: team_a
+      team2: away_team
+      winner: winner
+      attendance: attendance
+      referee: official
+  ucl_palearctic:
+    name: ucl_games
+    columns:
+      match: match
+      matchLabel: game_name
+      season: season
+      date: fixture_date
+      venue: match_venue
+      team1: first_team
+      team2: team2
+      winner: winning_team
+      attendance: crowd
+      referee: arbiter
+  ucl_spain:
+    name: champions_league_games
+    columns:
+      match: fixture_id
+      matchLabel: game_name
+      season: ucl_season
+      date: fixture_date
+      venue: venue
+      team1: first_team
+      team2: team2
+      winner: winner
+      attendance: spectators
+      referee: official
+  ucl_spain_2:
+    name: ucl_games
+    columns:
+      match: game_id
+      matchLabel: game_name
+      season: competition_season_id
+      seasonLabel: seasonLabel
+      date: game_date
+      venue: match_venue
+      team1: team_a
+      team2: team_b
+      winner: match_winner
+      attendance: gate
+      referee: arbiter
+  ucl_spain_3:
+    name: ucl_matches
+    columns:
+      match: game_id
+      matchLabel: game_name
+      season: competition_season_id
+      date: fixture_date
+      venue: venue
+      team1: team_a
+      team2: team_b
+      winner: victor
+      attendance: crowd_size
+      referee: official
+  ucl_united_kingdom:
+    name: ucl_games
+    columns:
+      match: match_id
+      matchLabel: label
+      season: season_id
+      date: match_date
+      venue: arena
+      team1: team_a
+      team2: second_team
+      winner: winning_team
+      attendance: gate
+      referee: referee
+  ucl_united_kingdom_2:
+    name: champions_league_games
+    columns:
+      match: match
+      matchLabel: match_name
+      seasonLabel: ucl_season_name
+      date: fixture_date
+      venue: stadium
+      team1: first_team
+      team2: team2
+      winner: victor
+      attendance: audience
+      referee: match_referee
+  ucl_united_kingdom_3:
+    name: champions_league_games
+    columns:
+      match: match
+      matchLabel: label
+      season: ucl_season
+      seasonLabel: ucl_season_name
+      date: match_date
+      venue: arena
+      team1: team_a
+      team2: team2
+      winner: match_winner
+      attendance: crowd
+      referee: referee
+  ucl_western_europe:
+    name: european_football_matches
+    columns:
+      match: match
+      matchLabel: match_name
+      seasonLabel: competition_season
+      date: date
+      venue: venue
+      team1: team_a
+      team2: team2
+      winner: winning_team
+      attendance: spectators
+      referee: arbiter
+  ucl_worldwide:
+    name: ucl_matches
+    columns:
+      match: game_id
+      matchLabel: game_name
+      season: season_id
+      seasonLabel: competition_season
+      date: game_date
+      venue: arena
+      team1: first_team
+      team2: away_team
+      winner: match_winner
+      attendance: spectators
+      referee: arbiter
+ucl_venues:
+  ucl_g7:
+    name: champions_league_venues
+    columns:
+      venue: arena_id
+      name: ground_name
+      country: nation
+      capacity: spectator_capacity
+      coords: geo_coords
+      inception: construction_completion
+      city: venue_city
+      occupant: regular_users
+      architect: structural_designer
+  ucl_germany:
+    name: cl_venues
+    columns:
+      venue: venue
+      name: name
+      country: nation
+      capacity: seating_capacity
+      coords: coords
+      inception: built
+      city: municipality
+      occupant: primary_occupant
+      architect: building_architect
+  ucl_italy:
+    name: cl_venues
+    columns:
+      venue: arena_id
+      name: title
+      country: nation
+      capacity: max_capacity
+      coords: geo_coords
+      inception: opened
+      city: municipality
+      occupant: tenants
+      architect: architect
+  ucl_italy_2:
+    name: ucl_venues
+    columns:
+      venue: arena_id
+      name: label
+      country: host_country
+      capacity: seating_capacity
+      coords: location
+      inception: opened
+      city: city
+      occupant: tenants
+      architect: building_architect
+  ucl_italy_3:
+    name: ucl_venues
+    columns:
+      venue: arena_id
+      name: venue_name
+      country: country
+      capacity: max_capacity
+      coords: coordinates
+      inception: construction_completion
+      city: venue_city
+      occupant: tenants
+      architect: structural_designer
+  ucl_nato:
+    name: champions_league_venues
+    columns:
+      venue: stadium_id
+      name: name
+      country: host_country
+      capacity: seating_capacity
+      coords: coordinates
+      inception: opening_date
+      city: city
+      occupant: home_team
+      architect: venue_architect
+  ucl_palearctic:
+    name: ucl_arenas
+    columns:
+      venue: venue_id
+      name: stadium_name
+      country: nation
+      capacity: stadium_capacity
+      coords: coordinates
+      inception: opened
+      city: city
+      occupant: primary_occupant
+      architect: structural_designer
+  ucl_spain:
+    name: champions_league_stadiums
+    columns:
+      venue: venue
+      name: arena_name
+      country: country
+      capacity: spectator_capacity
+      coords: location
+      inception: construction_completion
+      city: location_city
+      architect: architect
+  ucl_spain_2:
+    name: ucl_venues
+    columns:
+      venue: stadium_id
+      name: label
+      country: host_country
+      capacity: seats
+      coords: coordinates
+      inception: built
+      city: venue_city
+      architect: designer
+  ucl_spain_3:
+    name: champions_league_venues
+    columns:
+      venue: venue
+      name: stadium_name
+      country: venue_country
+      capacity: seating_capacity
+      coords: position
+      inception: opened
+      city: city
+      architect: venue_architect
+  ucl_united_kingdom:
+    name: champions_league_stadiums
+    columns:
+      venue: stadium_id
+      name: name
+      country: venue_country
+      capacity: spectator_capacity
+      coords: location
+      inception: inception
+      city: location_city
+      occupant: regular_users
+      architect: architect
+  ucl_united_kingdom_2:
+    name: ucl_venues
+    columns:
+      venue: venue
+      name: ground_name
+      country: venue_country
+      capacity: seating_capacity
+      coords: coords
+      inception: construction_completion
+      city: location_city
+      occupant: resident_team
+      architect: designer
+  ucl_united_kingdom_3:
+    name: champions_league_stadiums
+    columns:
+      venue: venue
+      name: title
+      country: nation
+      capacity: capacity
+      coords: position
+      inception: inception
+      city: municipality
+      architect: venue_architect
+  ucl_western_europe:
+    name: champions_league_stadiums
+    columns:
+      venue: venue
+      name: arena_name
+      country: nation
+      capacity: stadium_capacity
+      coords: position
+      inception: built
+      city: host_city
+      occupant: primary_occupant
+      architect: venue_architect
+  ucl_worldwide:
+    name: cl_venues
+    columns:
+      venue: venue_id
+      name: name
+      country: host_country
+      capacity: max_capacity
+      coords: position
+      inception: inception
+      city: city
+      architect: venue_architect
+football_clubs:
+  ucl_g7:
+    name: association_football_clubs
+    columns:
+      team: team_id
+      name: label
+      league: division
+      country: home_country
+      founded: founded
+      coach: head_coach
+      owner: owner
+      leagueTitles: league_titles
+      socialFollowers: online_followers
+      shortName: acronym
+      founder: founder
+  ucl_germany:
+    name: soccer_clubs
+    columns:
+      team: team_id
+      name: team_name
+      league: domestic_league
+      country: home_country
+      founded: founding_date
+      stadium: arena
+      owner: ownership
+      nickname: byname
+      leagueTitles: championships
+      socialFollowers: online_followers
+      website: official_website
+      shortName: abbreviation
+      founder: established_by
+  ucl_italy:
+    name: association_football_clubs
+    columns:
+      team: organization_id
+      name: club_name
+      league: home_league
+      country: club_country
+      founded: founding_date
+      stadium: home_arena
+      owner: owner
+      nickname: nickname
+      leagueTitles: championships
+      socialFollowers: socialFollowers
+      website: official_website
+      founder: founding_person
+  ucl_italy_2:
+    name: clubs
+    columns:
+      team: team_id
+      name: label
+      league: league
+      country: base_country
+      founded: founding_date
+      stadium: home_arena
+      coach: trainer
+      owner: investor
+      nickname: informal_name
+      leagueTitles: leagueTitles
+      socialFollowers: social_media_followers
+      website: web_address
+      shortName: abbreviation
+      founder: founding_person
+  ucl_italy_3:
+    name: soccer_clubs
+    columns:
+      team: organization_id
+      name: name
+      league: league
+      country: base_country
+      founded: start_year
+      stadium: stadium
+      coach: manager
+      owner: investor
+      leagueTitles: title_count
+      socialFollowers: online_followers
+      website: website
+      shortName: shortName
+      founder: established_by
+  ucl_nato:
+    name: football_clubs
+    columns:
+      team: organization_id
+      name: club_name
+      league: division
+      country: nation
+      founded: founding_date
+      stadium: home_arena
+      coach: coach
+      nickname: sobriquet
+      leagueTitles: league_wins
+      socialFollowers: fan_base_size
+      website: homepage
+      shortName: abbreviation
+      founder: creator
+  ucl_palearctic:
+    name: clubs
+    columns:
+      team: team_id
+      name: team_name
+      league: division
+      country: nation
+      founded: founding_year
+      stadium: stadium
+      nickname: alias
+      leagueTitles: title_count
+      socialFollowers: socialFollowers
+      website: website
+  ucl_spain:
+    name: soccer_teams
+    columns:
+      team: organization_id
+      name: club_name
+      league: division
+      country: club_country
+      founded: established
+      stadium: home_ground
+      coach: head_coach
+      owner: club_owner
+      nickname: alias
+      leagueTitles: domestic_titles
+      socialFollowers: social_media_followers
+      website: official_website
+      shortName: club_abbreviation
+      founder: founding_person
+  ucl_spain_2:
+    name: association_football_clubs
+    columns:
+      team: team
+      name: team_name
+      league: league
+      country: base_country
+      founded: founding_year
+      stadium: ground
+      coach: tactician
+      owner: club_owner
+      leagueTitles: championships
+      socialFollowers: socialFollowers
+      website: official_website
+      founder: founding_person
+  ucl_spain_3:
+    name: football_clubs
+    columns:
+      team: club_id
+      name: team_name
+      league: division
+      country: home_country
+      founded: founding_year
+      stadium: arena
+      coach: head_coach
+      owner: investor
+      nickname: nickname
+      leagueTitles: championships
+      socialFollowers: socialFollowers
+      website: web_address
+      shortName: abbreviation
+      founder: established_by
+  ucl_united_kingdom:
+    name: club_teams
+    columns:
+      team: team_id
+      name: team_name
+      league: competition
+      country: country
+      founded: start_year
+      stadium: home_arena
+      coach: coach
+      owner: proprietor
+      leagueTitles: title_count
+      socialFollowers: socialFollowers
+      shortName: acronym
+      founder: founding_person
+  ucl_united_kingdom_2:
+    name: football_clubs
+    columns:
+      team: organization_id
+      name: title
+      league: league
+      country: base_country
+      founded: founding_year
+      stadium: ground
+      coach: head_coach
+      owner: ownership
+      nickname: sobriquet
+      leagueTitles: title_count
+      socialFollowers: followers
+      website: url
+      shortName: short_name
+      founder: creator
+  ucl_united_kingdom_3:
+    name: soccer_clubs
+    columns:
+      team: team
+      name: name
+      league: competition
+      country: nation
+      founded: established
+      stadium: home_ground
+      coach: head_coach
+      leagueTitles: domestic_titles
+      socialFollowers: socialFollowers
+      website: homepage
+      founder: founding_person
+  ucl_western_europe:
+    name: soccer_teams
+    columns:
+      team: club_id
+      name: club_name
+      league: league
+      country: nation
+      founded: established
+      coach: tactician
+      owner: ownership
+      nickname: informal_name
+      leagueTitles: championships
+      socialFollowers: social_media_followers
+      website: web_address
+      shortName: shortName
+  ucl_worldwide:
+    name: association_football_clubs
+    columns:
+      team: team
+      name: club_name
+      league: competition
+      country: home_country
+      founded: established
+      stadium: home_stadium
+      coach: trainer
+      nickname: sobriquet
+      leagueTitles: league_wins
+      socialFollowers: socialFollowers
+      website: homepage
+      shortName: short_name
+      founder: creator

@@ -1,0 +1,19 @@
+__database__: Economics database covering Czech Republic, including companies.
+corporations:
+  __table__: Business enterprises headquartered in Czech Republic.
+  company: Identifier for the company.
+  trade_name: Name of the company.
+  country: Country where the company is headquartered.
+  company_types: Types or classifications of the company (comma-separated).
+  sector: Industries the company operates in (comma-separated).
+  legal_structure: Legal form or structure of the company.
+  creation_date: Date the company was founded.
+  website: Official website URL of the company.
+  headquarters_city: City where the company is headquartered.
+  top_executive: Current chief executive officer.
+  headcount: Number of employees (most recent reported value).
+  revenue_usd: Annual revenue in US dollars (most recent reported value).
+  net_profit_usd: Net income in US dollars (most recent reported value).
+  total_assets: Total assets in US dollars (most recent reported value).
+  operating_result_usd: Operating income in US dollars (most recent reported value).
+  market_value_usd: Market capitalization in US dollars (most recent reported value).

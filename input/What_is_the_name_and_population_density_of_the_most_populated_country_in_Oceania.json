@@ -1,0 +1,75 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the name and population density of the most populated country in Oceania?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Return the continent id of Oceania as soon as it is found.",
+          "query": "Return the continent id of Oceania.",
+          "to_agent": {
+            "region": [
+              "oceania"
+            ],
+            "table": "continents"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "The continent id of Oceania.",
+              "step_id": "s1"
+            }
+          ],
+          "id": "s2",
+          "merge_task": "Deduplicate by country and return the country with the highest population density.",
+          "query": "Return all countries in Oceania with their population density.",
+          "to_agent": {
+            "region": [
+              "oceania"
+            ],
+            "table": "countries"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT countries.name, countries.population / countries.area_km2 AS population_density FROM countries INNER JOIN continents ON continents.continent = countries.continent WHERE continents.name = 'Oceania' AND countries.population = ( SELECT MAX(countries.population) FROM countries INNER JOIN continents ON continents.continent = countries.continent WHERE continents.name = 'Oceania' )",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "continent"
+          ],
+          "keys": [
+            "continent"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT continents.continent FROM continents WHERE continents.name = 'Oceania'"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "max"
+          ],
+          "columns": [
+            "country",
+            "population",
+            "area_km2"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": "population"
+        },
+        "sql_query": "SELECT countries.country, countries.population, countries.area_km2 FROM countries WHERE countries.continent = 55643"
+      }
+    }
+  }
+}

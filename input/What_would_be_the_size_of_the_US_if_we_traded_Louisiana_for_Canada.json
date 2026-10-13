@@ -1,0 +1,103 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What would be the size of the U.S. if we traded Louisiana for Canada?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by country and return the size of the U.S. and Canada",
+          "query": "Find the size of U.S. and Canada",
+          "to_agent": {
+            "region": [
+              "canada",
+              "united_states"
+            ],
+            "table": "countries"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s2",
+          "merge_task": "Return the size of Lousiana",
+          "query": "Find the size of Louisiana",
+          "to_agent": {
+            "region": [
+              "united_states"
+            ],
+            "table": "states"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "Size of the U.S. and Canada",
+              "step_id": "s1"
+            },
+            {
+              "dependency": "Size of Louisiana",
+              "step_id": "s2"
+            }
+          ],
+          "id": "s3",
+          "query": "Calculate the size of the U.S. if Louisiana would be exchanged for Canada",
+          "to_agent": "Coordinator"
+        }
+      ]
+    },
+    "sql_query": "SELECT countries.area_km2 - ( SELECT states.area_km2 FROM states WHERE name = 'Louisiana' ) + ( SELECT countries.area_km2 FROM countries WHERE countries.name = 'Canada' ) AS area FROM countries WHERE countries.name = 'United States'",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "sum"
+          ],
+          "columns": [
+            "country",
+            "area_km2"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": "area_km2"
+        },
+        "sql_query": "SELECT countries.country, countries.area_km2 FROM countries WHERE countries.name IN ('United States', 'Canada')"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "sum"
+          ],
+          "columns": [
+            "state",
+            "area_km2"
+          ],
+          "keys": [
+            "state"
+          ],
+          "value_column": "area_km2"
+        },
+        "sql_query": "SELECT states.state, states.area_km2 FROM states WHERE states.name = 'Louisiana'"
+      },
+      "s3": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "sum"
+          ],
+          "columns": [
+            "country",
+            "area_km2"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": "area_km2"
+        },
+        "sql_query": "SELECT countries.country, countries.area_km2 FROM countries WHERE countries.country IN (30, 16)"
+      }
+    }
+  }
+}

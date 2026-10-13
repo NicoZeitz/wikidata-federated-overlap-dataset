@@ -1,0 +1,54 @@
+__database__: Aviation database covering Canada, including airports, airlines, aircraft,
+  and accidents.
+aviation_hubs:
+  __table__: Airports located in Canada.
+  airport: Identifier for the airport.
+  terminal_name: Name of the airport.
+  airport_code: IATA three-letter airport code.
+  icao_code: ICAO four-letter airport code.
+  elevation: Elevation of the airport above sea level in meters.
+  yearly_passengers: Annual passenger count (most recent reported value).
+  area_km2: Total area of the airport in square kilometers.
+  utc_offset: UTC offset of the airport's timezone in hours.
+  opened: Date the airport was opened or established.
+  lat_lon: Geographic coordinates of the airport.
+  city: City the airport serves.
+  country: Country the airport is located in.
+commercial_airlines:
+  __table__: Airlines headquartered in Canada.
+  airline: Identifier for the airline.
+  company_name: Name of the airline.
+  home_country: Country where the airline is headquartered.
+  start_date: Date the airline was founded.
+  staff_count: Number of employees (most recent reported value).
+  income_usd: Annual revenue in US dollars (most recent reported value).
+  fleet_size: Number of aircraft in the fleet.
+  owner: Parent company or holding group.
+  iata_code: IATA airline designator code (2-letter).
+  icao: ICAO airline designator code (3-letter).
+  hq: City or location where the airline is headquartered.
+  homepage: Official website of the airline.
+  primary_hub: A hub airport of the airline.
+airliners:
+  __table__: Individual aircraft operated by airlines based in Canada.
+  aircraft: Identifier for the aircraft.
+  aircraft_registration: Name or registration of the aircraft.
+  operating_airline: Airline operating the aircraft.
+  country: Country of the operating airline.
+  aircraft_type: Aircraft model type (e.g. Boeing 737-800).
+  maker: Manufacturer of the aircraft.
+  debut_flight: Date of the aircraft's first flight.
+  max_passengers: Maximum passenger capacity.
+  speed: Cruise speed in kilometers per hour.
+  body_length_m: Length of the aircraft in meters.
+  mtow_kg: Maximum takeoff weight in kilograms.
+plane_crashes:
+  __table__: Aviation accidents involving airlines that occurred in Canada.
+  accident: Identifier for the aviation accident.
+  accident_name: Name or description of the accident.
+  carrier: Airline involved in the accident.
+  country: Country where the accident occurred.
+  date: Date of the accident.
+  victims: Number of fatalities in the accident.
+  number_of_survivors: Number of survivors.
+  flight_designation: Flight number of the aircraft involved.

@@ -1,0 +1,32 @@
+public_figures:
+  source: persons
+  columns:
+    person: person
+    display_name: name
+    gender: sex
+    born: birth_date
+    date_of_death: death_date
+    forename: given_name
+    family_name: family_name
+    nationality: citizenship
+    birth_nation: birth_country
+    country: country
+    institution: educated_at
+    height_metres: height_cm
+    offspring_count: number_of_children
+    siblings: number_of_siblings
+accolades:
+  source: awards
+  columns:
+    honor_id: award
+    distinction_name: name
+    origin_country: country
+    created: inception
+    namesake: named_after
+    official_website: official_website
+person_awards:
+  source: person_awards
+  columns:
+    person_id: person
+    award: award
+    prize_year: award_year

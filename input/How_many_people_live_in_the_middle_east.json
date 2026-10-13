@@ -1,0 +1,41 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "How many people live in the middle east?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by country, sum the populations of the remaining entries to a total population.",
+          "query": "Return all countries and populations",
+          "to_agent": {
+            "region": [
+              "middle_east"
+            ],
+            "table": "countries"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT SUM(countries.population) AS population FROM countries WHERE countries.name IN ('West Bank', 'Egypt', 'Bahrain', 'Iran', 'Iraq', 'Israel', 'Jordan', 'Kuwait', 'Lebanon', 'Oman', 'Palestine', 'Qatar', 'Saudi Arabia', 'Syria', 'Turkey', 'United Arab Emirates', 'Yemen')",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "sum"
+          ],
+          "columns": [
+            "country",
+            "population"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": "population"
+        },
+        "sql_query": "SELECT countries.country, countries.population FROM countries WHERE countries.name IN ('West Bank', 'Egypt', 'Bahrain', 'Iran', 'Iraq', 'Israel', 'Jordan', 'Kuwait', 'Lebanon', 'Oman', 'Palestine', 'Qatar', 'Saudi Arabia', 'Syria', 'Turkey', 'United Arab Emirates', 'Yemen')"
+      }
+    }
+  }
+}

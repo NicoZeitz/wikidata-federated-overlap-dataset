@@ -1,0 +1,67 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+
+SELECT
+  ?team
+  (SAMPLE(?name_v)        AS ?name)
+  (SAMPLE(?country_v)     AS ?country)
+  (SAMPLE(?inception_v)   AS ?inception)
+  (SAMPLE(?native_label_v) AS ?native_label)
+  (GROUP_CONCAT(DISTINCT ?nickname_v; SEPARATOR=", ") AS ?nickname)
+  (SAMPLE(?ranking_v)     AS ?ranking)
+  (GROUP_CONCAT(DISTINCT ?compClass_v; SEPARATOR=", ") AS ?competition_class)
+  (SAMPLE(?head_coach_v)  AS ?head_coach)
+  (SAMPLE(?captain_v)     AS ?captain)
+WHERE {
+  # Teams that participated in any FIFA World Cup (men's, women's, youth)
+  ?match wdt:P31 wd:Q17315159 .
+  ?match wdt:P361 ?stage .
+  ?stage wdt:P361 ?tournament .
+  VALUES ?competition { wd:Q19317 wd:Q19323 }
+  ?tournament wdt:P3450 ?competition .
+  ?match wdt:P1923 ?team .
+
+  ?team rdfs:label ?name_v .
+  FILTER(lang(?name_v) = "en")
+
+  ?team wdt:P17/wdt:P17? ?country_v .
+  ?country_v wdt:P31/wdt:P279* wd:Q3624078 .
+  ?country_v wdt:P297 ?ciso2 .
+  FILTER NOT EXISTS { ?country_v wdt:P576 ?cdiss . }
+  FILTER NOT EXISTS { ?country_v wdt:P31 wd:Q3024240 . }
+  OPTIONAL { ?team wdt:P571  ?inception_v . }
+  OPTIONAL { ?team wdt:P1705 ?native_label_v . }
+  OPTIONAL { ?team wdt:P1352 ?ranking_v . }
+
+  OPTIONAL {
+    ?team wdt:P1449 ?nickname_v .
+    FILTER(lang(?nickname_v) = "en")
+  }
+
+  OPTIONAL {
+    ?team wdt:P2094 ?compClassEntity .
+    ?compClassEntity rdfs:label ?compClass_v .
+    FILTER(lang(?compClass_v) = "en")
+  }
+
+  OPTIONAL {
+    ?team p:P286 ?coachStmt .
+    ?coachStmt ps:P286 ?head_coach_v .
+    FILTER NOT EXISTS { ?coachStmt pq:P582 ?coachEnd . }
+    ?head_coach_v wdt:P31 wd:Q5 .
+    FILTER EXISTS { { ?head_coach_v wdt:P27 ?_cc . } UNION { ?head_coach_v wdt:P19 ?_cbp . } }
+  }
+
+  OPTIONAL {
+    ?team p:P634 ?captainStmt .
+    ?captainStmt ps:P634 ?captain_v .
+    FILTER NOT EXISTS { ?captainStmt pq:P582 ?captainEnd . }
+    ?captain_v wdt:P31 wd:Q5 .
+    FILTER EXISTS { { ?captain_v wdt:P27 ?_capcc . } UNION { ?captain_v wdt:P19 ?_capbp . } }
+  }
+}
+GROUP BY ?team

@@ -1,0 +1,16 @@
+position,database,coverage_pct,total_rows,new_unique_rows
+0,christian,31.69,417,417
+1,united_states,36.93,86,69
+2,germany,40.2,58,43
+3,oecd,55.7,372,204
+4,united_states,56.99,85,17
+5,germany,58.21,57,16
+6,brics,65.81,147,100
+7,germany,66.49,60,9
+8,g20,80.62,418,186
+9,france,82.52,61,25
+10,france,83.28,63,10
+11,united_states,83.74,83,6
+12,france,84.88,64,15
+13,worldwide,88.6,397,49
+14,worldwide,100.0,402,150

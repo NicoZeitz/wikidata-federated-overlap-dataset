@@ -1,0 +1,73 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "How many FIFA World Cup games did England play?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Return the first Id that was found.",
+          "query": "Find out the Id of the English men's football team",
+          "to_agent": {
+            "region": [
+              "united_kingdom"
+            ],
+            "table": "teams"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "The id of the English men's football team",
+              "step_id": "s1"
+            }
+          ],
+          "id": "s2",
+          "merge_task": "Deduplicate rows by match identifier. Then count the total number of distinct matches.",
+          "query": "Query all FIFA World Cup matches where England was one of the teams. Return the match identifier and the names of the two teams.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "matches"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT COUNT(*) AS amount FROM matches INNER JOIN teams t1 ON t1.team = matches.team1 INNER JOIN teams t2 ON t2.team = matches.team2 WHERE t1.name = 'England men''s national association football team' OR t2.name = 'England men''s national association football team'",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "team"
+          ],
+          "keys": [
+            "team"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT teams.team FROM teams WHERE teams.name = 'England men''s national association football team'"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "match"
+          ],
+          "keys": [
+            "match"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT matches.match FROM matches WHERE matches.team1 = 47762 OR matches.team2 = 47762"
+      }
+    }
+  }
+}

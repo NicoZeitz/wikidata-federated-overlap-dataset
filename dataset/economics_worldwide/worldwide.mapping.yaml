@@ -1,0 +1,18 @@
+entities:
+  source: companies
+  columns:
+    firm_id: company
+    trade_name: name
+    country_of_incorporation: country
+    classification: types
+    industry_sector: industries
+    foundation_year: inception
+    official_website: website
+    base_city: city
+    managing_director: ceo_person
+    employees: employees
+    total_revenue_usd: revenue_usd
+    after_tax_income_usd: net_income_usd
+    asset_value_usd: total_assets_usd
+    operating_profit_usd: operating_income_usd
+    market_cap: market_cap_usd

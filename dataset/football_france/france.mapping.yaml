@@ -1,0 +1,54 @@
+fixtures:
+  source: matches
+  columns:
+    match: match
+    title: name
+    game_date: date
+    competition: tournament
+    competition_stage: stage_type
+    stadium: venue
+    team1: team1
+    team1_goals: team1_score
+    away_team: team2
+    goals_team2: team2_score
+    champion: winner
+    attendance: attendance
+    umpire: referee
+international_teams:
+  source: teams
+  columns:
+    team_id: team
+    national_team_name: name
+    team_country: country
+    founding_date: inception
+    native_label: native_label
+    byname: nickname
+    ranking: ranking
+    tier: competition_class
+    coach: head_coach
+    skipper: captain
+arenas:
+  source: venues
+  columns:
+    stadium_id: venue
+    ground_name: name
+    nation: country
+    seating_capacity: capacity
+    position: coords
+    opened: inception
+    venue_city: city
+    home_team: occupant
+    architect: architect
+world_cups:
+  source: tournaments
+  columns:
+    edition_id: tournament
+    title: name
+    edition_year: year
+    host_country: country
+    ordinal_edition: edition_number
+    tournament_mascot: mascot
+    teams: participants
+    winner: winner
+    matches_played: matches_played
+    goal_count: goals_scored

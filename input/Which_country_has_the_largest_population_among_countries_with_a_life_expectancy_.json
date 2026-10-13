@@ -1,0 +1,41 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "Which country has the largest population among countries with a life expectancy above 80 years?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by country, return the country with the maximum population.",
+          "query": "Return all countries with their population if the live expectancy in that country is above 80 years.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "countries"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT countries.name FROM countries WHERE countries.life_expectancy > 80 AND countries.population = ( SELECT MAX(countries.population) FROM countries WHERE countries.life_expectancy > 80 )",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "max"
+          ],
+          "columns": [
+            "name",
+            "population"
+          ],
+          "keys": [
+            "name"
+          ],
+          "value_column": "population"
+        },
+        "sql_query": "SELECT countries.name, countries.population FROM countries WHERE countries.life_expectancy > 80"
+      }
+    }
+  }
+}

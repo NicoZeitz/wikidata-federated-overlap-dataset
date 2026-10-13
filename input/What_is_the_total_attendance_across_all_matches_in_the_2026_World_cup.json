@@ -1,0 +1,74 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the total attendance across all matches in the 2026 World cup?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Return the tournament id of the 2026 World cup as soon as it is found.",
+          "query": "Return the tournament id of the 2026 World cup",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "tournaments"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "The tournament id of the 2026 World cup.",
+              "step_id": "s1"
+            }
+          ],
+          "id": "s2",
+          "merge_task": "Deduplicate by match, then sum all the attendance of the matches to a total attendance.",
+          "query": "Return all matches with their attendance, that are part of the 2026 World cup.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "matches"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT SUM(matches.attendance) AS total_attendance FROM matches INNER JOIN tournaments ON tournaments.tournament = matches.tournament WHERE tournaments.\"year\" = '2026' AND tournaments.name NOT LIKE '%women%'",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "tournament"
+          ],
+          "keys": [
+            "tournament"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT tournaments.tournament FROM tournaments WHERE tournaments.year = 2026 AND LOWER(tournaments.name) NOT LIKE '%women%'"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "sum"
+          ],
+          "columns": [
+            "match",
+            "attendance"
+          ],
+          "keys": [
+            "match"
+          ],
+          "value_column": "attendance"
+        },
+        "sql_query": "SELECT matches.match, matches.attendance FROM matches WHERE matches.tournament = 5020214"
+      }
+    }
+  }
+}

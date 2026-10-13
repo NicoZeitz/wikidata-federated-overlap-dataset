@@ -1,0 +1,55 @@
+__database__: UEFA Champions League database covering Italy, including clubs, matches,
+  and venues.
+champions_league_teams:
+  __table__: Football clubs based in Italy that participated in the UEFA Champions
+    League.
+  organization_id: Identifier for the football club.
+  club_name: Full name of the football club.
+  competition: Name of the domestic league the club competes in.
+  club_country: Country the club is based in.
+  founding_year: Date or year the club was founded.
+  home_stadium: Name of the club's home stadium.
+  sobriquet: Nickname or informal name of the club.
+  title_count: Number of domestic league titles won by the club.
+  social_media_followers: Number of social media followers of the club.
+  abbreviation: Short or abbreviated name of the club.
+  founding_person: Name of the person or entity who founded the club.
+european_football_matches:
+  __table__: UEFA Champions League matches played in Italy.
+  fixture_id: Identifier for the UEFA Champions League match.
+  fixture_name: Name or label of the match.
+  competition_season_id: Season the match was played in.
+  competition_season: Name or label of the season.
+  fixture_date: Date the match was played.
+  stadium: Venue where the match was played.
+  team1: First participating club.
+  team2: Second participating club.
+  winning_team: Winning club (null for draws).
+  attendance: Number of spectators in attendance.
+  arbiter: Person who refereed the match.
+ucl_venues:
+  __table__: Stadiums and arenas in Italy that hosted UEFA Champions League matches.
+  arena_id: Identifier for the venue.
+  venue_name: Name of the venue or stadium.
+  country: Country the venue is located in.
+  max_capacity: Maximum seating capacity of the venue.
+  coordinates: Geographic coordinates of the venue.
+  construction_completion: Date the venue was officially opened.
+  venue_city: City or municipality the venue is located in.
+  tenants: Teams or organizations that regularly use the venue.
+  structural_designer: Architect who designed the venue.
+soccer_clubs:
+  __table__: Football clubs based in Italy.
+  organization_id: Identifier for the football club.
+  name: Full name of the football club.
+  league: Name of the domestic league the club competes in.
+  base_country: Country the club is based in.
+  start_year: Date or year the club was founded.
+  stadium: Name of the club's home stadium.
+  manager: Name of the current head coach or manager.
+  investor: Name of the current owner or ownership group.
+  title_count: Number of domestic league titles won by the club.
+  online_followers: Number of social media followers of the club.
+  website: Official website URL of the club.
+  shortName: Short or abbreviated name of the club.
+  established_by: Name of the person or entity who founded the club.

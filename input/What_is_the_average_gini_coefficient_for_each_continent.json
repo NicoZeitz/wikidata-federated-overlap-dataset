@@ -1,0 +1,75 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the average gini coefficient for each continent?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by continent, return as soon as the list is complete.",
+          "query": "Return all continents with name and id.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "continents"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "Names and id of all continents.",
+              "step_id": "s1"
+            }
+          ],
+          "id": "s2",
+          "merge_task": "Deduplicate the list by country, then group by continent and calculate the average gini coefficient for each continent.",
+          "query": "Return all countries with gini coefficient and continent name and id.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "countries"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT continents.name, AVG(countries.gini_coefficient) AS gini FROM countries INNER JOIN continents ON continents.continent = countries.continent GROUP BY continents.name",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "continent"
+          ],
+          "keys": [
+            "continent"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT continents.continent FROM continents"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "avg"
+          ],
+          "columns": [
+            "country",
+            "continent",
+            "gini_coefficient"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": "gini_coefficient"
+        },
+        "sql_query": "SELECT countries.country, countries.continent, countries.gini_coefficient FROM countries"
+      }
+    }
+  }
+}

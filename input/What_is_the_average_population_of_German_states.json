@@ -1,0 +1,41 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the average population of German states?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by state, then calculate the average population of the states.",
+          "query": "Return all german states together with their population.",
+          "to_agent": {
+            "region": [
+              "germany"
+            ],
+            "table": "german_states"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT AVG(german_states.population) AS avg_population FROM german_states",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "avg"
+          ],
+          "columns": [
+            "german_state",
+            "population"
+          ],
+          "keys": [
+            "german_state"
+          ],
+          "value_column": "population"
+        },
+        "sql_query": "SELECT german_states.german_state, german_states.population FROM german_states"
+      }
+    }
+  }
+}

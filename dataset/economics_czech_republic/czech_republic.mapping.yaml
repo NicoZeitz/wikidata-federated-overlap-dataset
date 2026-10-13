@@ -1,0 +1,18 @@
+firms:
+  source: companies
+  columns:
+    company_id: company
+    trade_name: name
+    home_country: country
+    types: types
+    business_sector: industries
+    legal_form: legal_form
+    creation_date: inception
+    official_website: website
+    base_city: city
+    executive_director: ceo_person
+    staff: employees
+    turnover_usd: revenue_usd
+    profit_usd: net_income_usd
+    asset_value_usd: total_assets_usd
+    stock_market_value_usd: market_cap_usd

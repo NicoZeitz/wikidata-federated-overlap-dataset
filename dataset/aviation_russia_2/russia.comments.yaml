@@ -1,0 +1,55 @@
+__database__: Aviation database covering Russia, including airports, airlines, aircraft,
+  and accidents.
+international_airports:
+  __table__: Airports located in Russia.
+  aerodrome_id: Identifier for the airport.
+  label: Name of the airport.
+  iata: IATA three-letter airport code.
+  icao_code: ICAO four-letter airport code.
+  elevation: Elevation of the airport above sea level in meters.
+  pax: Annual passenger count (most recent reported value).
+  surface_area_km2: Total area of the airport in square kilometers.
+  tz_offset: UTC offset of the airport's timezone in hours.
+  opening_date: Date the airport was opened or established.
+  location: Geographic coordinates of the airport.
+  city: City the airport serves.
+  host_country: Country the airport is located in.
+commercial_airlines:
+  __table__: Airlines headquartered in Russia.
+  airline_id: Identifier for the airline.
+  label: Name of the airline.
+  hq_country: Country where the airline is headquartered.
+  founded: Date the airline was founded.
+  staff_count: Number of employees (most recent reported value).
+  income_usd: Annual revenue in US dollars (most recent reported value).
+  total_aircraft: Number of aircraft in the fleet.
+  holding_company: Parent company or holding group.
+  two_letter_code: IATA airline designator code (2-letter).
+  three_letter_code: ICAO airline designator code (3-letter).
+  registered_office: City or location where the airline is headquartered.
+  url: Official website of the airline.
+  hub: A hub airport of the airline.
+aircraft:
+  __table__: Individual aircraft operated by airlines based in Russia.
+  identifier: Identifier for the aircraft.
+  label: Name or registration of the aircraft.
+  air_operator: Airline operating the aircraft.
+  nation: Country of the operating airline.
+  aircraft_type: Aircraft model type (e.g. Boeing 737-800).
+  aircraft_manufacturer: Manufacturer of the aircraft.
+  inaugural_flight: Date of the aircraft's first flight.
+  max_seats: Maximum passenger capacity.
+  speed: Cruise speed in kilometers per hour.
+  wingspan_m: Wingspan in meters.
+  length: Length of the aircraft in meters.
+  gross_weight_kg: Maximum takeoff weight in kilograms.
+airplane_accidents:
+  __table__: Aviation accidents involving airlines that occurred in Russia.
+  incident_id: Identifier for the aviation accident.
+  description: Name or description of the accident.
+  operator: Airline involved in the accident.
+  location_country: Country where the accident occurred.
+  event_date: Date of the accident.
+  death_toll: Number of fatalities in the accident.
+  number_of_survivors: Number of survivors.
+  flight: Flight number of the aircraft involved.

@@ -1,0 +1,16 @@
+position,database,coverage_pct,total_rows,new_unique_rows
+0,germany,31.25,5,5
+1,germany,56.25,5,4
+2,germany,81.25,5,4
+3,germany,87.5,2,1
+4,germany,93.75,2,1
+5,germany,100.0,2,1
+6,germany,100.0,2,0
+7,germany,100.0,2,0
+8,germany,100.0,2,0
+9,germany,100.0,2,0
+10,germany,100.0,2,0
+11,germany,100.0,2,0
+12,germany,100.0,2,0
+13,germany,100.0,2,0
+14,germany,100.0,2,0

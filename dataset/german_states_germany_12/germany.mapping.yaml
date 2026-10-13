@@ -1,0 +1,12 @@
+german_administrative_regions:
+  source: german_states
+  columns:
+    bundesland_id: german_state
+    parent_country: country
+    federal_state_name: name
+    location: coords
+    area: area_km2
+    residents: population
+    administrative_center: capital
+    creation_date: inception
+    website: website

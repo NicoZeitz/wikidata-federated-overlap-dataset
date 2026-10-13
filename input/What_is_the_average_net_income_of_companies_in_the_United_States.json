@@ -1,0 +1,74 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the average net income of companies in the United States?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Return the country id of the United States as soon as it is found.",
+          "query": "Return the country id of the United States.",
+          "to_agent": {
+            "region": [
+              "united_states"
+            ],
+            "table": "countries"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "The country id of the United States.",
+              "step_id": "s1"
+            }
+          ],
+          "id": "s2",
+          "merge_task": "Deduplicate by company, then calculate the average net income across all companies.",
+          "query": "Return all companies that are located in the United States with their net income.",
+          "to_agent": {
+            "region": [
+              "united_states"
+            ],
+            "table": "companies"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT AVG(companies.net_income_usd) AS avg_net_income FROM companies INNER JOIN countries ON countries.country = companies.country WHERE countries.name = 'United States'",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "country"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT countries.country FROM countries WHERE countries.name = 'United States'"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "avg"
+          ],
+          "columns": [
+            "company",
+            "net_income_usd"
+          ],
+          "keys": [
+            "company"
+          ],
+          "value_column": "net_income_usd"
+        },
+        "sql_query": "SELECT companies.company, companies.net_income_usd FROM companies WHERE companies.country = 30"
+      }
+    }
+  }
+}

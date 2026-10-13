@@ -1,0 +1,41 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "Which aircraft has the highest maximum passenger capacity?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by aircraft, select the one with the highest maximum passenger capacity.",
+          "query": "Return all aircraft together with the maximum passenger capacity.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "aircraft"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT aircraft.name FROM aircraft WHERE aircraft.max_passengers = ( SELECT MAX(max_passengers) FROM aircraft )",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "max"
+          ],
+          "columns": [
+            "aircraft",
+            "max_passengers"
+          ],
+          "keys": [
+            "aircraft"
+          ],
+          "value_column": "max_passengers"
+        },
+        "sql_query": "SELECT aircraft.aircraft, aircraft.max_passengers FROM aircraft"
+      }
+    }
+  }
+}

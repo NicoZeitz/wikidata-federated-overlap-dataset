@@ -1,0 +1,16 @@
+position,database,coverage_pct,total_rows,new_unique_rows
+0,worldwide,35.48,2114,2114
+1,p5,59.75,1477,1446
+2,g20,79.72,1476,1190
+3,worldwide,88.96,1850,550
+4,nato,93.07,1512,245
+5,united_states,95.4,576,139
+6,united_states,96.54,568,68
+7,united_kingdom,97.3,209,45
+8,france,97.99,137,41
+9,united_states,98.66,566,40
+10,united_kingdom,99.06,206,24
+11,germany,99.4,234,20
+12,france,99.71,135,19
+13,united_kingdom,99.87,202,9
+14,france,100.0,132,8

@@ -1,0 +1,74 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the average elevation of airports in Germany?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Return the country id of Germany as soon as it is found.",
+          "query": "Return the country id of Germany.",
+          "to_agent": {
+            "region": [
+              "germany"
+            ],
+            "table": "countries"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "Country id of Germany.",
+              "step_id": "s1"
+            }
+          ],
+          "id": "s2",
+          "merge_task": "Deduplicate by airport, return the average elevation.",
+          "query": "Return airports in Germany with their elevation.",
+          "to_agent": {
+            "region": [
+              "germany"
+            ],
+            "table": "airports"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT AVG(elevation_m) AS avg_elevation FROM airports INNER JOIN countries ON countries.country = airports.country WHERE countries.name = 'Germany'",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "country"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT countries.country FROM countries WHERE countries.name = 'Germany'"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "avg"
+          ],
+          "columns": [
+            "airport",
+            "elevation_m"
+          ],
+          "keys": [
+            "airport"
+          ],
+          "value_column": "elevation_m"
+        },
+        "sql_query": "SELECT airports.airport, airports.elevation_m FROM airports WHERE airports.country = 183"
+      }
+    }
+  }
+}

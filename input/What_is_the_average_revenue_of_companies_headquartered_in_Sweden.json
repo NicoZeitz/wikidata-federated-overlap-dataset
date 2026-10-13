@@ -1,0 +1,74 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the average revenue of companies headquartered in Sweden?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Return the country id of the Sweden as soon as it is found.",
+          "query": "Return the country id of the Sweden.",
+          "to_agent": {
+            "region": [
+              "sweden"
+            ],
+            "table": "countries"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "The country id of Sweden.",
+              "step_id": "s1"
+            }
+          ],
+          "id": "s2",
+          "merge_task": "Deduplicate by company, then calculate the average revenue across all companies.",
+          "query": "Return all companies headquartered in Sweden together with their revenue.",
+          "to_agent": {
+            "region": [
+              "sweden"
+            ],
+            "table": "companies"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT AVG(companies.revenue_usd) AS avg_revenue FROM companies INNER JOIN countries ON countries.country = companies.country WHERE countries.name = 'Sweden'",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "country"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT countries.country FROM countries WHERE countries.name = 'Sweden'"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "avg"
+          ],
+          "columns": [
+            "company",
+            "revenue_usd"
+          ],
+          "keys": [
+            "company"
+          ],
+          "value_column": "revenue_usd"
+        },
+        "sql_query": "SELECT companies.company, companies.revenue_usd FROM companies WHERE companies.country = 34"
+      }
+    }
+  }
+}

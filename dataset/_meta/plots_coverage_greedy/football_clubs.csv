@@ -1,0 +1,16 @@
+position,database,coverage_pct,total_rows,new_unique_rows
+0,palearctic,39.57,93,93
+1,g7,58.72,67,45
+2,nato,76.6,66,42
+3,western_europe,90.21,67,32
+4,worldwide,94.47,85,10
+5,united_kingdom,97.02,14,6
+6,germany,97.87,13,2
+7,spain,98.72,12,2
+8,united_kingdom,99.15,14,1
+9,spain,99.57,11,1
+10,italy,100.0,9,1
+11,united_kingdom,100.0,13,0
+12,spain,100.0,12,0
+13,italy,100.0,9,0
+14,italy,100.0,9,0

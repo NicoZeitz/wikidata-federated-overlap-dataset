@@ -1,0 +1,16 @@
+position,database,coverage_pct,total_rows,new_unique_rows
+0,christian,32.38,396,396
+1,worldwide,50.86,385,226
+2,worldwide,68.44,378,215
+3,g7,91.41,334,281
+4,global_north,94.36,331,36
+5,united_states,96.16,98,22
+6,united_states,97.06,94,11
+7,united_states,97.3,91,3
+8,united_states,97.47,91,2
+9,russia,98.86,82,17
+10,russia,99.43,82,7
+11,russia,99.75,81,4
+12,canada,99.84,8,1
+13,canada,100.0,8,2
+14,canada,100.0,7,0

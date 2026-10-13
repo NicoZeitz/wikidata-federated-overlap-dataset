@@ -1,0 +1,77 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "When and where did the highest attendance at a FIFA world cup stadium occur and how many people attended?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate matches, then return only the match with the highest attendance.",
+          "query": "Find all matches with their attendance, date and venue.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "matches"
+          }
+        },
+        {
+          "answer": null,
+          "dependencies": [
+            {
+              "dependency": "The FIFA world cup match with the highest attendance with attendance, date and venue.",
+              "step_id": "s1"
+            }
+          ],
+          "id": "s2",
+          "merge_task": "Return the given match with attendance, date and venue name and location as soon as it is found.",
+          "query": "Return the given match with attendance, date and venue name and location",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "venues"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT venues.name AS venue_name, matches.attendance, matches.date, matches.name FROM matches INNER JOIN venues ON venues.venue = matches.venue WHERE matches.attendance = (SELECT MAX(attendance) FROM matches)",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "max"
+          ],
+          "columns": [
+            "match",
+            "attendance",
+            "venue"
+          ],
+          "keys": [
+            "match"
+          ],
+          "value_column": "attendance"
+        },
+        "sql_query": "SELECT matches.match, matches.attendance, matches.venue FROM matches"
+      },
+      "s2": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "venue",
+            "name",
+            "country"
+          ],
+          "keys": [
+            "venue"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT venues.venue, venues.name, venues.country FROM venues WHERE venues.venue = 155174"
+      }
+    }
+  }
+}

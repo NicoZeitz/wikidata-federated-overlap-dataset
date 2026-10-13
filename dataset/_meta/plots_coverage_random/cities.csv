@@ -1,0 +1,16 @@
+position,database,coverage_pct,total_rows,new_unique_rows
+0,united_states,7.76,120159,120159
+1,temperate,43.27,550315,550315
+2,worldwide,51.9,216231,133661
+3,worldwide,57.86,216209,92414
+4,worldwide,60.82,216282,45831
+5,worldwide,64.68,216132,59791
+6,worldwide,69.99,216366,82228
+7,worldwide,72.66,216188,41394
+8,worldwide,75.62,216310,45911
+9,worldwide,78.91,216304,50936
+10,worldwide,81.01,216240,32470
+11,worldwide,82.6,216278,24750
+12,worldwide,84.07,216297,22749
+13,worldwide,99.34,569045,236580
+14,worldwide,100.0,216259,10210

@@ -1,0 +1,31 @@
+__database__: People database covering France, including persons, awards, and prize
+  records.
+notable_persons:
+  __table__: Persons from France.
+  individual_id: Identifier for the person.
+  label: Full name of the person.
+  biological_sex: Sex of the person.
+  dob: Date of birth.
+  date_of_death: Date of death (null if still living or unknown).
+  given_name: Given (first) name of the person.
+  surname: Family (last) name of the person.
+  country_of_citizenship: Country of citizenship.
+  birth_nation: Country of birth.
+  home_country: Country associated with the person (citizenship if known, otherwise
+    country of birth).
+  alma_mater: Name of institution where the person studied.
+  stature: Height of the person in centimeters.
+  offspring_count: Number of children the person has.
+  sibling_count: Number of siblings the person has.
+accolades:
+  __table__: Awards from France.
+  honor_id: Identifier for the award.
+  label: Name of the award.
+  awarding_country: Country the award originates from.
+  first_awarded: Year the award was first presented.
+  honoree: Person or entity the award is named after.
+person_awards:
+  __table__: Records linking persons from France to awards they received.
+  person_id: Person who received the award.
+  prize: Award received by the person.
+  year_of_award: Year the award was received.

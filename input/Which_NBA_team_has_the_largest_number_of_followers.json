@@ -1,0 +1,41 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "Which NBA team has the largest number of followers?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by team, select the team with the maximum number of followers.",
+          "query": "Return all nba teams together with their number of followers.",
+          "to_agent": {
+            "region": [
+              "northern_america"
+            ],
+            "table": "nba_teams"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT nba_teams.name FROM nba_teams WHERE nba_teams.followers = ( SELECT MAX(nba_teams.followers) FROM nba_teams )",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "max"
+          ],
+          "columns": [
+            "name",
+            "followers"
+          ],
+          "keys": [
+            "name"
+          ],
+          "value_column": "followers"
+        },
+        "sql_query": "SELECT nba_teams.name, nba_teams.followers FROM nba_teams"
+      }
+    }
+  }
+}

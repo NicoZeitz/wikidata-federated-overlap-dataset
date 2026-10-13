@@ -1,0 +1,54 @@
+__database__: Aviation database covering G7 countries, including airports, airlines,
+  aircraft, and accidents.
+airports:
+  __table__: Airports located in G7 countries.
+  airport_id: Identifier for the airport.
+  airport_name: Name of the airport.
+  iata_code: IATA three-letter airport code.
+  icao_identifier: ICAO four-letter airport code.
+  elevation: Elevation of the airport above sea level in meters.
+  pax: Annual passenger count (most recent reported value).
+  area_km2: Total area of the airport in square kilometers.
+  timezone_offset: UTC offset of the airport's timezone in hours.
+  start_date: Date the airport was opened or established.
+  location: Geographic coordinates of the airport.
+  city: City the airport serves.
+  nation: Country the airport is located in.
+carriers:
+  __table__: Airlines headquartered in G7 countries.
+  airline: Identifier for the airline.
+  airline_name: Name of the airline.
+  headquarters_country: Country where the airline is headquartered.
+  inception: Date the airline was founded.
+  number_of_employees: Number of employees (most recent reported value).
+  revenue_usd: Annual revenue in US dollars (most recent reported value).
+  number_of_aircraft: Number of aircraft in the fleet.
+  parent_company: Parent company or holding group.
+  two_letter_code: IATA airline designator code (2-letter).
+  airline_code_icao: ICAO airline designator code (3-letter).
+  headquarters: City or location where the airline is headquartered.
+  web_address: Official website of the airline.
+  main_hub: A hub airport of the airline.
+flying_machines:
+  __table__: Individual aircraft operated by airlines based in G7 countries.
+  plane_id: Identifier for the aircraft.
+  aircraft_name: Name or registration of the aircraft.
+  operating_airline: Airline operating the aircraft.
+  nation: Country of the operating airline.
+  model_type: Aircraft model type (e.g. Boeing 737-800).
+  aircraft_manufacturer: Manufacturer of the aircraft.
+  maiden_flight: Date of the aircraft's first flight.
+  max_passengers: Maximum passenger capacity.
+  cruise_speed_kmh: Cruise speed in kilometers per hour.
+  wing_span_m: Wingspan in meters.
+  fuselage_length_m: Length of the aircraft in meters.
+  max_takeoff_weight_kg: Maximum takeoff weight in kilograms.
+accidents:
+  __table__: Aviation accidents involving airlines that occurred in G7 countries.
+  accident_id: Identifier for the aviation accident.
+  title: Name or description of the accident.
+  flight_operator: Airline involved in the accident.
+  nation: Country where the accident occurred.
+  occurrence_date: Date of the accident.
+  casualties: Number of fatalities in the accident.
+  number_of_survivors: Number of survivors.

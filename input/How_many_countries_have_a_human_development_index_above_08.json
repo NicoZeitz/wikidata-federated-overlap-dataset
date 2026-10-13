@@ -1,0 +1,40 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "How many countries have a human development index above 0.8?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by country, then count the number of countries.",
+          "query": "Return all countries if their human development index is above 0.8?",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "countries"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT COUNT(*) AS country_amount FROM countries WHERE countries.human_development_index > 0.8",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "country"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT countries.country FROM countries WHERE countries.human_development_index > 0.8"
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+
+# One row per award with country (P17 direct, fallback P276→P17), inception,
+# conferring organisation, namesake, and official website.
+SELECT
+  ?award
+  (SAMPLE(?name_v)         AS ?name)
+  (SAMPLE(?country_v)      AS ?country)
+  (SAMPLE(?inception_v)    AS ?inception)
+  (SAMPLE(?conf_by_v)      AS ?conferred_by)
+  (SAMPLE(?named_after_v)  AS ?named_after)
+  (SAMPLE(?website_v)      AS ?official_website)
+WHERE {
+  VALUES ?award {
+    wd:Q38104  wd:Q44585  wd:Q80061  wd:Q35637  wd:Q37922  wd:Q47170
+    wd:Q185667 wd:Q179808 wd:Q28835  wd:Q46525  wd:Q160082 wd:Q133160
+    wd:Q188184
+    wd:Q166177  # Ballon d'Or             (France)
+    wd:Q41254   # Grammy Awards           (United States)
+    wd:Q19020   # Academy Awards          (United States)
+    wd:Q209459  # Golden Lion             (Italy)
+    wd:Q603631  # Templeton Prize         (United States)
+    wd:Q284500  # Turner Prize            (United Kingdom)
+    wd:Q921415  # Lasker Award            (United States)
+    wd:Q739936  # Wolf Prize              (Israel)
+    wd:Q658444  # Kyoto Prize             (Japan)
+  }
+
+  ?award rdfs:label ?name_v .
+  FILTER(lang(?name_v) = "en")
+
+  OPTIONAL { ?award wdt:P17 ?directCountry . }
+  OPTIONAL {
+    ?award wdt:P276 ?location .
+    ?location wdt:P17 ?locCountry .
+  }
+  BIND(COALESCE(?directCountry, ?locCountry) AS ?country_v)
+
+  OPTIONAL { ?award wdt:P571 ?inception_v . }
+  OPTIONAL { ?award wdt:P856 ?website_v . }
+
+  OPTIONAL {
+    ?award wdt:P1027 ?confByEntity .
+    ?confByEntity rdfs:label ?conf_by_v .
+    FILTER(lang(?conf_by_v) = "en")
+  }
+
+  OPTIONAL {
+    ?award wdt:P138 ?namedAfterEntity .
+    ?namedAfterEntity rdfs:label ?named_after_v .
+    FILTER(lang(?named_after_v) = "en")
+  }
+}
+GROUP BY ?award

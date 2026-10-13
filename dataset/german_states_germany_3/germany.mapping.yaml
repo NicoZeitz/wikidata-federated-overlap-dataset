@@ -1,0 +1,13 @@
+german_administrative_regions:
+  source: german_states
+  columns:
+    bundesland_id: german_state
+    nation: country
+    name: name
+    centroid: coords
+    total_area_km2: area_km2
+    population: population
+    landeshauptstadt: capital
+    founded: inception
+    state_code: iso_code
+    url: website
