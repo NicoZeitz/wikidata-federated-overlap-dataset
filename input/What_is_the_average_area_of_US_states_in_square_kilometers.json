@@ -1,0 +1,42 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the average area of US states in square kilometers?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by state id, calculate the average area.",
+          "query": "Return all US states together with their area, with their state id and state name.",
+          "to_agent": {
+            "region": [
+              "united_states"
+            ],
+            "table": "states"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT AVG(area_km2) AS avg_area FROM states",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "avg"
+          ],
+          "columns": [
+            "state",
+            "name",
+            "area_km2"
+          ],
+          "keys": [
+            "state"
+          ],
+          "value_column": "area_km2"
+        },
+        "sql_query": "SELECT states.state, states.name, states.area_km2 FROM states"
+      }
+    }
+  }
+}

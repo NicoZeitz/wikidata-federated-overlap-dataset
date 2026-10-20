@@ -1,0 +1,43 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the average attendance of UCL matches?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by match id, calculate the average attendance.",
+          "query": "Return all UCL matches together with their attendance.",
+          "to_agent": {
+            "region": [
+              "europe",
+              "azerbaijan",
+              "kazakhstan"
+            ],
+            "table": "ucl_matches"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT AVG(attendance) AS avg_attendance FROM ucl_matches",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "avg"
+          ],
+          "columns": [
+            "match",
+            "attendance"
+          ],
+          "keys": [
+            "match"
+          ],
+          "value_column": "attendance"
+        },
+        "sql_query": "SELECT ucl_matches.match, ucl_matches.attendance FROM ucl_matches"
+      }
+    }
+  }
+}

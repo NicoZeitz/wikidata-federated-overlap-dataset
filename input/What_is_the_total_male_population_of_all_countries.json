@@ -1,0 +1,42 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the total male population of all countries?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by country id, sum the male populations to a total.",
+          "query": "Return all countries together with their male population, with their country id and country name.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "countries"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT SUM(population_male) AS total_male_population FROM countries",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "sum"
+          ],
+          "columns": [
+            "country",
+            "name",
+            "population_male"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": "population_male"
+        },
+        "sql_query": "SELECT countries.country, countries.name, countries.population_male FROM countries"
+      }
+    }
+  }
+}

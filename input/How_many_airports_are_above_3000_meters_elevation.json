@@ -1,0 +1,42 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "How many airports are above 3000 meters elevation?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by airport id, count the amount.",
+          "query": "Return all airports above 3000 meters elevation, with their airport id and airport name.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "airports"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT COUNT(*) AS airport_count FROM airports WHERE elevation_m > 3000",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "airport",
+            "name",
+            "elevation_m"
+          ],
+          "keys": [
+            "airport"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT airports.airport, airports.name, airports.elevation_m FROM airports WHERE airports.elevation_m > 3000"
+      }
+    }
+  }
+}

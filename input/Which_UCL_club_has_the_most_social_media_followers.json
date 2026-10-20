@@ -1,0 +1,44 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "Which UCL club has the most social media followers?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by club id, select the club with the highest number of social media followers.",
+          "query": "Return all UCL clubs together with their number of social media followers.",
+          "to_agent": {
+            "region": [
+              "europe",
+              "azerbaijan",
+              "kazakhstan"
+            ],
+            "table": "ucl_clubs"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT name FROM ucl_clubs WHERE socialFollowers = (SELECT MAX(socialFollowers) FROM ucl_clubs)",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "max"
+          ],
+          "columns": [
+            "team",
+            "name",
+            "socialFollowers"
+          ],
+          "keys": [
+            "team"
+          ],
+          "value_column": "socialFollowers"
+        },
+        "sql_query": "SELECT ucl_clubs.team, ucl_clubs.name, ucl_clubs.socialFollowers FROM ucl_clubs"
+      }
+    }
+  }
+}

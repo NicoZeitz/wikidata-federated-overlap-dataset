@@ -1,0 +1,42 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the average total assets of companies?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by company id, calculate the average total assets.",
+          "query": "Return all companies together with their total assets, with their company id and company name.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "companies"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT AVG(total_assets_usd) AS avg_total_assets FROM companies",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "avg"
+          ],
+          "columns": [
+            "company",
+            "name",
+            "total_assets_usd"
+          ],
+          "keys": [
+            "company"
+          ],
+          "value_column": "total_assets_usd"
+        },
+        "sql_query": "SELECT companies.company, companies.name, companies.total_assets_usd FROM companies"
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "How many airlines have more than ten thousand employees?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by airline id, count the amount.",
+          "query": "Return all airlines with more than ten thousand employees, with their airline id and airline name.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "airlines"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT COUNT(*) AS airline_count FROM airlines WHERE employees > 10000 AND employees IS NOT NULL",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "airline",
+            "name",
+            "employees"
+          ],
+          "keys": [
+            "airline"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT airlines.airline, airlines.name, airlines.employees FROM airlines WHERE airlines.employees > 10000 AND airlines.employees IS NOT NULL"
+      }
+    }
+  }
+}

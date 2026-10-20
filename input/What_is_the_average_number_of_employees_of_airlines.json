@@ -1,0 +1,42 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the average number of employees of airlines?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by airline id, calculate the average number of employees.",
+          "query": "Return all airlines together with their number of employees, with their airline id and airline name.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "airlines"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT AVG(employees) AS avg_employees FROM airlines",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "avg"
+          ],
+          "columns": [
+            "airline",
+            "name",
+            "employees"
+          ],
+          "keys": [
+            "airline"
+          ],
+          "value_column": "employees"
+        },
+        "sql_query": "SELECT airlines.airline, airlines.name, airlines.employees FROM airlines"
+      }
+    }
+  }
+}

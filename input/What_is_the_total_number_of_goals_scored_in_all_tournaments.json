@@ -1,0 +1,42 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the total number of goals scored in all tournaments?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by tournament id, sum the goals scored to a total.",
+          "query": "Return all tournaments together with their goals scored, with their tournament id and tournament name.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "tournaments"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT SUM(goals_scored) AS total_goals FROM tournaments",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "sum"
+          ],
+          "columns": [
+            "tournament",
+            "name",
+            "goals_scored"
+          ],
+          "keys": [
+            "tournament"
+          ],
+          "value_column": "goals_scored"
+        },
+        "sql_query": "SELECT tournaments.tournament, tournaments.name, tournaments.goals_scored FROM tournaments"
+      }
+    }
+  }
+}

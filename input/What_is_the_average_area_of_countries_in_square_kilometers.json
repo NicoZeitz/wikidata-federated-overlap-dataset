@@ -1,0 +1,42 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the average area of countries in square kilometers?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by country id, calculate the average area.",
+          "query": "Return all countries together with their area, with their country id and country name.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "countries"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT AVG(area_km2) AS avg_area FROM countries",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "avg"
+          ],
+          "columns": [
+            "country",
+            "name",
+            "area_km2"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": "area_km2"
+        },
+        "sql_query": "SELECT countries.country, countries.name, countries.area_km2 FROM countries"
+      }
+    }
+  }
+}

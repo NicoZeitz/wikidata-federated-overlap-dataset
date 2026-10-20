@@ -1,0 +1,42 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the average elevation of airports in meters?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by airport id, calculate the average elevation.",
+          "query": "Return all airports together with their elevation, with their airport id and airport name.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "airports"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT AVG(elevation_m) AS avg_elevation FROM airports",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "avg"
+          ],
+          "columns": [
+            "airport",
+            "name",
+            "elevation_m"
+          ],
+          "keys": [
+            "airport"
+          ],
+          "value_column": "elevation_m"
+        },
+        "sql_query": "SELECT airports.airport, airports.name, airports.elevation_m FROM airports"
+      }
+    }
+  }
+}

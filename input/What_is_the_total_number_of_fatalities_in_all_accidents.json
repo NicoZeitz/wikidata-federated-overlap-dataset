@@ -1,0 +1,42 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "What is the total number of fatalities in all accidents?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by accident id, sum the fatalities to a total.",
+          "query": "Return all accidents together with their number of fatalities, with their accident id and accident name.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "accidents"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT SUM(fatalities) AS total_fatalities FROM accidents",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "sum"
+          ],
+          "columns": [
+            "accident",
+            "name",
+            "fatalities"
+          ],
+          "keys": [
+            "accident"
+          ],
+          "value_column": "fatalities"
+        },
+        "sql_query": "SELECT accidents.accident, accidents.name, accidents.fatalities FROM accidents"
+      }
+    }
+  }
+}

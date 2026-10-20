@@ -1,0 +1,42 @@
+{
+  "extra": {
+    "query_plan": {
+      "query": "How many countries have a population below fifty million?",
+      "steps": [
+        {
+          "answer": null,
+          "dependencies": [],
+          "id": "s1",
+          "merge_task": "Deduplicate by country id, count the amount.",
+          "query": "Return all countries with a population below fifty million, with their country id and country name.",
+          "to_agent": {
+            "region": [
+              "worldwide"
+            ],
+            "table": "countries"
+          }
+        }
+      ]
+    },
+    "sql_query": "SELECT COUNT(*) AS country_count FROM countries WHERE population < 50000000",
+    "steps_metadata": {
+      "s1": {
+        "aligned_schema_metadata": {
+          "aggregation_types": [
+            "count"
+          ],
+          "columns": [
+            "country",
+            "name",
+            "population"
+          ],
+          "keys": [
+            "country"
+          ],
+          "value_column": null
+        },
+        "sql_query": "SELECT countries.country, countries.name, countries.population FROM countries WHERE countries.population < 50000000"
+      }
+    }
+  }
+}
