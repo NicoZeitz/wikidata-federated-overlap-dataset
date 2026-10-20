@@ -69,8 +69,8 @@
             }
           ],
           "id": "s2",
-          "merge_task": "Return person ids and person names for the given award ids",
-          "query": "Find all person ids of according award ids in chinese region, with their person name.",
+          "merge_task": "Return person ids for the given award ids",
+          "query": "Find all person ids of according award ids in chinese region",
           "to_agent": [
             "A94",
             "A97",
@@ -82,7 +82,7 @@
           "answer": null,
           "dependencies": [
             {
-              "dependency": "person ids and person names of nobel prize winners",
+              "dependency": "Person ids of nobel prize winners",
               "step_id": "s2"
             }
           ],
@@ -160,15 +160,14 @@
             "count"
           ],
           "columns": [
-            "person",
-            "name"
+            "person"
           ],
           "keys": [
             "person"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT sub.*, persons.name FROM (SELECT person_awards.person FROM person_awards WHERE person_awards.award IN (35637, 37922, 38104, 44585, 47170, 80061)) AS sub LEFT JOIN persons ON persons.person = sub.person"
+        "sql_query": "SELECT person_awards.person FROM person_awards WHERE person_awards.award IN (35637, 37922, 38104, 44585, 47170, 80061)"
       },
       "s3": {
         "aligned_schema_metadata": {
