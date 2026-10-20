@@ -27,14 +27,15 @@
           ],
           "columns": [
             "country",
-            "population"
+            "population",
+            "name"
           ],
           "keys": [
             "country"
           ],
           "value_column": "population"
         },
-        "sql_query": "SELECT countries.country, countries.population FROM countries WHERE countries.name IN ('West Bank', 'Egypt', 'Bahrain', 'Iran', 'Iraq', 'Israel', 'Jordan', 'Kuwait', 'Lebanon', 'Oman', 'Palestine', 'Qatar', 'Saudi Arabia', 'Syria', 'Turkey', 'United Arab Emirates', 'Yemen')"
+        "sql_query": "SELECT countries.country, countries.population, countries.name FROM countries WHERE countries.name IN ('West Bank', 'Egypt', 'Bahrain', 'Iran', 'Iraq', 'Israel', 'Jordan', 'Kuwait', 'Lebanon', 'Oman', 'Palestine', 'Qatar', 'Saudi Arabia', 'Syria', 'Turkey', 'United Arab Emirates', 'Yemen')"
       }
     }
   }

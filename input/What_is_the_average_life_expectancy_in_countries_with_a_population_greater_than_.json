@@ -27,14 +27,15 @@
           ],
           "columns": [
             "country",
-            "life_expectancy"
+            "life_expectancy",
+            "name"
           ],
           "keys": [
             "country"
           ],
           "value_column": "life_expectancy"
         },
-        "sql_query": "SELECT countries.country, countries.life_expectancy FROM countries WHERE countries.population > 50000000"
+        "sql_query": "SELECT countries.country, countries.life_expectancy, countries.name FROM countries WHERE countries.population > 50000000"
       }
     }
   }

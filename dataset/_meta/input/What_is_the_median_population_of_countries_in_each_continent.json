@@ -109,14 +109,15 @@
             "count"
           ],
           "columns": [
-            "continent"
+            "continent",
+            "name"
           ],
           "keys": [
             "continent"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT continents.continent FROM continents"
+        "sql_query": "SELECT continents.continent, continents.name FROM continents"
       },
       "s2": {
         "aligned_schema_metadata": {
@@ -126,14 +127,15 @@
           "columns": [
             "country",
             "continent",
-            "population"
+            "population",
+            "name"
           ],
           "keys": [
             "country"
           ],
           "value_column": "population"
         },
-        "sql_query": "SELECT countries.country, countries.continent, countries.population FROM countries"
+        "sql_query": "SELECT countries.country, countries.continent, countries.population, countries.name FROM countries"
       }
     }
   },

@@ -8,7 +8,7 @@
           "dependencies": [],
           "id": "s1",
           "merge_task": "Deduplicate by aircraft, find the average maximum passenger capacity of all aircraft.",
-          "query": "Return all aircrafts together with their maximum passenger capacity.",
+          "query": "Return all aircrafts together with their maximum passenger capacity, with their aircraft id and aircraft name.",
           "to_agent": {
             "region": [
               "worldwide"
@@ -27,14 +27,15 @@
           ],
           "columns": [
             "aircraft",
-            "max_passengers"
+            "max_passengers",
+            "name"
           ],
           "keys": [
             "aircraft"
           ],
           "value_column": "max_passengers"
         },
-        "sql_query": "SELECT aircraft.aircraft, aircraft.max_passengers FROM aircraft"
+        "sql_query": "SELECT aircraft.aircraft, aircraft.max_passengers, aircraft.name FROM aircraft"
       }
     }
   }

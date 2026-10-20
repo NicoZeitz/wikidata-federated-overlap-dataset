@@ -78,14 +78,15 @@
           ],
           "columns": [
             "german_state",
-            "area_km2"
+            "area_km2",
+            "name"
           ],
           "keys": [
             "german_state"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT german_states.german_state, german_states.area_km2 FROM german_states WHERE german_states.german_state = 1201"
+        "sql_query": "SELECT german_states.german_state, german_states.area_km2, german_states.name FROM german_states WHERE german_states.german_state = 1201"
       },
       "s3": {
         "aligned_schema_metadata": {
@@ -94,14 +95,15 @@
           ],
           "columns": [
             "country",
-            "continent"
+            "continent",
+            "name"
           ],
           "keys": [
             "country"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT countries.country, countries.continent FROM countries WHERE countries.area_km2 < 2570.0"
+        "sql_query": "SELECT countries.country, countries.continent, countries.name FROM countries WHERE countries.area_km2 < 2570.0"
       }
     }
   }

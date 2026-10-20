@@ -7,8 +7,8 @@
           "answer": null,
           "dependencies": [],
           "id": "s1",
-          "merge_task": "Deduplicate and return the id for South America",
-          "query": "Return the id for South America",
+          "merge_task": "Deduplicate and return the continent id and continent name for South America",
+          "query": "Return the continent id and continent name for South America",
           "to_agent": {
             "region": [
               "south_america"
@@ -20,13 +20,13 @@
           "answer": null,
           "dependencies": [
             {
-              "dependency": "Id of South America",
+              "dependency": "Continent id and continent name of South America",
               "step_id": "s1"
             }
           ],
           "id": "s2",
           "merge_task": "Deduplicated by country and return the country with the highest GDP per capita in South America",
-          "query": "Return the country with their according GDP per capita for given South America id",
+          "query": "Return the country with their according GDP per capita for given South America id, with their country name.",
           "to_agent": {
             "region": [
               "south_america"
@@ -44,14 +44,15 @@
             "count"
           ],
           "columns": [
-            "continent"
+            "continent",
+            "name"
           ],
           "keys": [
             "continent"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT continents.continent FROM continents WHERE continents.name = 'South America'"
+        "sql_query": "SELECT continents.continent, continents.name FROM continents WHERE continents.name = 'South America'"
       },
       "s2": {
         "aligned_schema_metadata": {
@@ -61,14 +62,15 @@
           "columns": [
             "country",
             "gdp_usd",
-            "population"
+            "population",
+            "name"
           ],
           "keys": [
             "country"
           ],
           "value_column": "gdp_usd"
         },
-        "sql_query": "SELECT countries.country, countries.gdp_usd, countries.population FROM countries WHERE countries.continent = 18"
+        "sql_query": "SELECT countries.country, countries.gdp_usd, countries.population, countries.name FROM countries WHERE countries.continent = 18"
       }
     }
   }

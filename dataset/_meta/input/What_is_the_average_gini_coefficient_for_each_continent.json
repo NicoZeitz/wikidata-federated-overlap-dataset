@@ -109,14 +109,15 @@
             "count"
           ],
           "columns": [
-            "continent"
+            "continent",
+            "name"
           ],
           "keys": [
             "continent"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT continents.continent FROM continents"
+        "sql_query": "SELECT continents.continent, continents.name FROM continents"
       },
       "s2": {
         "aligned_schema_metadata": {
@@ -126,14 +127,15 @@
           "columns": [
             "country",
             "continent",
-            "gini_coefficient"
+            "gini_coefficient",
+            "name"
           ],
           "keys": [
             "country"
           ],
           "value_column": "gini_coefficient"
         },
-        "sql_query": "SELECT countries.country, countries.continent, countries.gini_coefficient FROM countries"
+        "sql_query": "SELECT countries.country, countries.continent, countries.gini_coefficient, countries.name FROM countries"
       }
     }
   },

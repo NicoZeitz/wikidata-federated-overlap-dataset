@@ -8,7 +8,7 @@
           "dependencies": [],
           "id": "s1",
           "merge_task": "Deduplicate by venue, then compute the average capacity.",
-          "query": "Return all venues together with their capacities.",
+          "query": "Return all venues together with their capacities, with their venue id and venue name.",
           "to_agent": {
             "region": [
               "europe",
@@ -29,14 +29,15 @@
           ],
           "columns": [
             "venue",
-            "capacity"
+            "capacity",
+            "name"
           ],
           "keys": [
             "venue"
           ],
           "value_column": "capacity"
         },
-        "sql_query": "SELECT ucl_venues.venue, ucl_venues.capacity FROM ucl_venues"
+        "sql_query": "SELECT ucl_venues.venue, ucl_venues.capacity, ucl_venues.name FROM ucl_venues"
       }
     }
   }

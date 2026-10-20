@@ -7,8 +7,8 @@
           "answer": null,
           "dependencies": [],
           "id": "s1",
-          "merge_task": "Return the country id of the United States as soon as it is found.",
-          "query": "Return the country id of the United States.",
+          "merge_task": "Return the country id and country name of the United States as soon as it is found.",
+          "query": "Return the country id and country name of the United States.",
           "to_agent": {
             "region": [
               "united_states"
@@ -20,7 +20,7 @@
           "answer": null,
           "dependencies": [
             {
-              "dependency": "The country id of the United States.",
+              "dependency": "the country id and country name of the United States.",
               "step_id": "s1"
             }
           ],
@@ -44,14 +44,15 @@
             "count"
           ],
           "columns": [
-            "country"
+            "country",
+            "name"
           ],
           "keys": [
             "country"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT countries.country FROM countries WHERE countries.name = 'United States'"
+        "sql_query": "SELECT countries.country, countries.name FROM countries WHERE countries.name = 'United States'"
       },
       "s2": {
         "aligned_schema_metadata": {
@@ -60,14 +61,15 @@
           ],
           "columns": [
             "company",
-            "net_income_usd"
+            "net_income_usd",
+            "name"
           ],
           "keys": [
             "company"
           ],
           "value_column": "net_income_usd"
         },
-        "sql_query": "SELECT companies.company, companies.net_income_usd FROM companies WHERE companies.country = 30"
+        "sql_query": "SELECT companies.company, companies.net_income_usd, companies.name FROM companies WHERE companies.country = 30"
       }
     }
   }

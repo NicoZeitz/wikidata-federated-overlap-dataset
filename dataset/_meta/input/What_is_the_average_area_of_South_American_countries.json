@@ -25,8 +25,8 @@
           "answer": null,
           "dependencies": [],
           "id": "s1",
-          "merge_task": "Return the continent id of South America as soon as it is found.",
-          "query": "Return the continent id of South America.",
+          "merge_task": "Return the continent id and continent name of South America as soon as it is found.",
+          "query": "Return the continent id and continent name of South America.",
           "to_agent": [
             "A61",
             "A63",
@@ -48,7 +48,7 @@
           "answer": null,
           "dependencies": [
             {
-              "dependency": "Continent id of South America",
+              "dependency": "continent ids and continent names of South America",
               "step_id": "s1"
             }
           ],
@@ -81,14 +81,15 @@
             "count"
           ],
           "columns": [
-            "continent"
+            "continent",
+            "name"
           ],
           "keys": [
             "continent"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT continents.continent FROM continents WHERE continents.name = 'South America'"
+        "sql_query": "SELECT continents.continent, continents.name FROM continents WHERE continents.name = 'South America'"
       },
       "s2": {
         "aligned_schema_metadata": {
@@ -97,14 +98,15 @@
           ],
           "columns": [
             "country",
-            "area_km2"
+            "area_km2",
+            "name"
           ],
           "keys": [
             "country"
           ],
           "value_column": "area_km2"
         },
-        "sql_query": "SELECT countries.country, countries.area_km2 FROM countries WHERE countries.continent = 18"
+        "sql_query": "SELECT countries.country, countries.area_km2, countries.name FROM countries WHERE countries.continent = 18"
       }
     }
   },

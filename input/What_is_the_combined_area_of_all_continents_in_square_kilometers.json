@@ -8,7 +8,7 @@
           "dependencies": [],
           "id": "s1",
           "merge_task": "Deduplicate by continent and sum the areas in square kilometers.",
-          "query": "Return all continents and their areas in square kilometers.",
+          "query": "Return all continents and their areas in square kilometers, with their continent id and continent name.",
           "to_agent": {
             "region": [
               "worldwide"
@@ -27,14 +27,15 @@
           ],
           "columns": [
             "continent",
-            "area_km2"
+            "area_km2",
+            "name"
           ],
           "keys": [
             "continent"
           ],
           "value_column": "area_km2"
         },
-        "sql_query": "SELECT continents.continent, continents.area_km2 FROM continents"
+        "sql_query": "SELECT continents.continent, continents.area_km2, continents.name FROM continents"
       }
     }
   }

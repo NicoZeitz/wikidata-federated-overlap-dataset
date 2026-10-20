@@ -46,7 +46,7 @@
           "answer": null,
           "dependencies": [],
           "id": "s1",
-          "merge_task": "Deduplicate by match id and return the id of the venue where the most matches were hosted",
+          "merge_task": "Deduplicate by match id and return the id of the venue where the most matches were hosted along with their match names.",
           "query": "Return all matches with id and their venue",
           "to_agent": [
             "A46",
@@ -70,13 +70,13 @@
           "answer": null,
           "dependencies": [
             {
-              "dependency": "Venue id where the most matches were hosted",
+              "dependency": "Venue id and venue name where the most matches were hosted",
               "step_id": "s1"
             }
           ],
           "id": "s2",
-          "merge_task": "Return as soon as the country id of the according venue id is found",
-          "query": "Find the according country id for the venue id where the most matches were hosted",
+          "merge_task": "Return as soon as the country id of the according venue ids and venue names is found",
+          "query": "Find the according country id for the venue id and venue name where the most matches were hosted",
           "to_agent": [
             "A46",
             "A47",
@@ -99,7 +99,7 @@
           "answer": null,
           "dependencies": [
             {
-              "dependency": "Country id where the most matches were hosted",
+              "dependency": "Country id and country name where the most matches were hosted",
               "step_id": "s2"
             }
           ],
@@ -134,14 +134,15 @@
           ],
           "columns": [
             "match",
-            "venue"
+            "venue",
+            "name"
           ],
           "keys": [
             "match"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT matches.match, matches.venue FROM matches"
+        "sql_query": "SELECT matches.match, matches.venue, matches.name FROM matches"
       },
       "s2": {
         "aligned_schema_metadata": {
@@ -150,14 +151,15 @@
           ],
           "columns": [
             "venue",
-            "country"
+            "country",
+            "name"
           ],
           "keys": [
             "venue"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT venues.venue, venues.country FROM venues"
+        "sql_query": "SELECT venues.venue, venues.country, venues.name FROM venues"
       },
       "s3": {
         "aligned_schema_metadata": {

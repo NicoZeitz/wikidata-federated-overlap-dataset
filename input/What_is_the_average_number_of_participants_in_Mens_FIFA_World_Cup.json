@@ -8,7 +8,7 @@
           "dependencies": [],
           "id": "s1",
           "merge_task": "Deduplicate by tournament and calculate the average number of participants.",
-          "query": "Return all Men's FIFA World Cup tournaments and their number of participants.",
+          "query": "Return all Men's FIFA World Cup tournaments and their number of participants, with their tournament id and tournament name.",
           "to_agent": {
             "region": [
               "worldwide"
@@ -27,14 +27,15 @@
           ],
           "columns": [
             "tournament",
-            "participants"
+            "participants",
+            "name"
           ],
           "keys": [
             "tournament"
           ],
           "value_column": "participants"
         },
-        "sql_query": "SELECT tournaments.tournament, tournaments.participants FROM tournaments WHERE name NOT LIKE '%women%'"
+        "sql_query": "SELECT tournaments.tournament, tournaments.participants, tournaments.name FROM tournaments WHERE name NOT LIKE '%women%'"
       }
     }
   }

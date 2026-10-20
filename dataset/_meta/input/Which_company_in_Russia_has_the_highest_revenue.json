@@ -27,8 +27,8 @@
           "answer": null,
           "dependencies": [],
           "id": "s1",
-          "merge_task": "Return the country id of Russia as soon as it is found.",
-          "query": "Return the country id of Russia.",
+          "merge_task": "Return the country id and country name of Russia as soon as it is found.",
+          "query": "Return the country id and country name of Russia.",
           "to_agent": [
             "A61",
             "A63",
@@ -50,7 +50,7 @@
           "answer": null,
           "dependencies": [
             {
-              "dependency": "Country id of Russia.",
+              "dependency": "country ids and country names of Russia.",
               "step_id": "s1"
             }
           ],
@@ -71,14 +71,15 @@
             "count"
           ],
           "columns": [
-            "country"
+            "country",
+            "name"
           ],
           "keys": [
             "country"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT countries.country FROM countries WHERE countries.name = 'Russia'"
+        "sql_query": "SELECT countries.country, countries.name FROM countries WHERE countries.name = 'Russia'"
       },
       "s2": {
         "aligned_schema_metadata": {
@@ -87,14 +88,15 @@
           ],
           "columns": [
             "company",
-            "revenue_usd"
+            "revenue_usd",
+            "name"
           ],
           "keys": [
             "company"
           ],
           "value_column": "revenue_usd"
         },
-        "sql_query": "SELECT companies.company, companies.revenue_usd FROM companies WHERE companies.country = 159"
+        "sql_query": "SELECT companies.company, companies.revenue_usd, companies.name FROM companies WHERE companies.country = 159"
       }
     }
   },

@@ -7,8 +7,8 @@
           "answer": null,
           "dependencies": [],
           "id": "s1",
-          "merge_task": "Deduplicate by award id and return list of award ids for Nobel prize winners",
-          "query": "Find all award ids of Nobel prize winners",
+          "merge_task": "Deduplicate by award id and return list of award ids for Nobel prize winners along with their award names.",
+          "query": "Find all award ids of Nobel prize winners, with their award name.",
           "to_agent": {
             "region": [
               "worldwide"
@@ -20,13 +20,13 @@
           "answer": null,
           "dependencies": [
             {
-              "dependency": "Award ids of Nobel prize winners",
+              "dependency": "award ids and award names of Nobel prize winners",
               "step_id": "s1"
             }
           ],
           "id": "s2",
-          "merge_task": "Return person ids for the given award ids",
-          "query": "Find all person ids of according award ids in chinese region",
+          "merge_task": "Return person ids and person names for the given award ids",
+          "query": "Find all person ids of according award ids in chinese region, with their person name.",
           "to_agent": {
             "region": [
               "people_s_republic_of_china"
@@ -38,13 +38,13 @@
           "answer": null,
           "dependencies": [
             {
-              "dependency": "Person ids of of nobel prize winners",
+              "dependency": "person ids and person names of nobel prize winners",
               "step_id": "s2"
             }
           ],
           "id": "s3",
-          "merge_task": "Deduplicate by person ids and return with according country ids",
-          "query": "Filter all female persons out of the given person ids and return person id with according country id in chinese region",
+          "merge_task": "Deduplicate by person ids and return with according country ids along with their person names.",
+          "query": "Filter all female persons out of the given person ids and return person id and person name with according country id in chinese region",
           "to_agent": {
             "region": [
               "people_s_republic_of_china"
@@ -56,8 +56,8 @@
           "answer": null,
           "dependencies": [],
           "id": "s4",
-          "merge_task": "Return the country id of China as soon as it is found.",
-          "query": "Find country id of China",
+          "merge_task": "Return the country id and country name of China as soon as it is found.",
+          "query": "Find country id and country name of China",
           "to_agent": {
             "region": [
               "people_s_republic_of_china"
@@ -69,11 +69,11 @@
           "answer": null,
           "dependencies": [
             {
-              "dependency": "Country id of China",
+              "dependency": "country ids and country names of China",
               "step_id": "s4"
             },
             {
-              "dependency": "Person ids of female nobel prize winners with according country ids",
+              "dependency": "person ids and person names of female nobel prize winners with according country ids",
               "step_id": "s3"
             }
           ],
@@ -91,14 +91,15 @@
             "count"
           ],
           "columns": [
-            "award"
+            "award",
+            "name"
           ],
           "keys": [
             "award"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT awards.award FROM awards WHERE awards.award IN (35637, 37922, 38104, 44585, 47170, 80061)"
+        "sql_query": "SELECT awards.award, awards.name FROM awards WHERE awards.award IN (35637, 37922, 38104, 44585, 47170, 80061)"
       },
       "s2": {
         "aligned_schema_metadata": {
@@ -106,14 +107,15 @@
             "count"
           ],
           "columns": [
-            "person"
+            "person",
+            "name"
           ],
           "keys": [
             "person"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT person_awards.person FROM person_awards WHERE person_awards.award IN (35637, 37922, 38104, 44585, 47170, 80061)"
+        "sql_query": "SELECT sub.*, persons.name FROM (SELECT person_awards.person FROM person_awards WHERE person_awards.award IN (35637, 37922, 38104, 44585, 47170, 80061)) AS sub LEFT JOIN persons ON persons.person = sub.person"
       },
       "s3": {
         "aligned_schema_metadata": {
@@ -122,14 +124,15 @@
           ],
           "columns": [
             "person",
-            "citizenship"
+            "citizenship",
+            "name"
           ],
           "keys": [
             "person"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT persons.person, persons.citizenship FROM persons WHERE persons.sex = 'female'"
+        "sql_query": "SELECT persons.person, persons.citizenship, persons.name FROM persons WHERE persons.sex = 'female'"
       },
       "s4": {
         "aligned_schema_metadata": {
@@ -137,14 +140,15 @@
             "count"
           ],
           "columns": [
-            "country"
+            "country",
+            "name"
           ],
           "keys": [
             "country"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT countries.country FROM countries WHERE countries.name = 'People''s Republic of China'"
+        "sql_query": "SELECT countries.country, countries.name FROM countries WHERE countries.name = 'People''s Republic of China'"
       },
       "s5": {
         "aligned_schema_metadata": {
@@ -152,14 +156,15 @@
             "count"
           ],
           "columns": [
-            "person"
+            "person",
+            "name"
           ],
           "keys": [
             "person"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT persons.person FROM persons WHERE persons.person = 462843"
+        "sql_query": "SELECT persons.person, persons.name FROM persons WHERE persons.person = 462843"
       }
     }
   }

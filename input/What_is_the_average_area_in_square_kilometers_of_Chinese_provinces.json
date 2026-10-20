@@ -8,7 +8,7 @@
           "dependencies": [],
           "id": "s1",
           "merge_task": "Deduplicate by province and calculate the average area.",
-          "query": "Return all provinces and areas in China.",
+          "query": "Return all provinces and areas in China, with their province id and province name.",
           "to_agent": {
             "region": [
               "people_s_republic_of_china"
@@ -27,14 +27,15 @@
           ],
           "columns": [
             "province",
-            "area_km2"
+            "area_km2",
+            "name"
           ],
           "keys": [
             "province"
           ],
           "value_column": "area_km2"
         },
-        "sql_query": "SELECT provinces.province, provinces.area_km2 FROM provinces"
+        "sql_query": "SELECT provinces.province, provinces.area_km2, provinces.name FROM provinces"
       }
     }
   }

@@ -55,14 +55,15 @@
             "count"
           ],
           "columns": [
-            "country"
+            "country",
+            "name"
           ],
           "keys": [
             "country"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT countries.country FROM countries WHERE countries.name IN ('Albania', 'Belgium', 'Bulgaria', 'Croatia', 'Czech Republic', 'Denmark', 'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Iceland', 'Italy', 'Latvia', 'Lithuania', 'Luxembourg', 'Montenegro', 'Netherlands', 'North Macedonia', 'Norway', 'Poland', 'Portugal', 'Romania', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'Thuringia', 'United Kingdom', 'Kingdom of Denmark', 'Kingdom of the Netherlands', 'Canada', 'United States', 'Turkey') AND countries.gdp_usd < 50000000000"
+        "sql_query": "SELECT countries.country, countries.name FROM countries WHERE countries.name IN ('Albania', 'Belgium', 'Bulgaria', 'Croatia', 'Czech Republic', 'Denmark', 'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Iceland', 'Italy', 'Latvia', 'Lithuania', 'Luxembourg', 'Montenegro', 'Netherlands', 'North Macedonia', 'Norway', 'Poland', 'Portugal', 'Romania', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'Thuringia', 'United Kingdom', 'Kingdom of Denmark', 'Kingdom of the Netherlands', 'Canada', 'United States', 'Turkey') AND countries.gdp_usd < 50000000000"
       }
     }
   },

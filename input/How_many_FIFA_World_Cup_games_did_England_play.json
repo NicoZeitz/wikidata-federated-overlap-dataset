@@ -7,8 +7,8 @@
           "answer": null,
           "dependencies": [],
           "id": "s1",
-          "merge_task": "Return the first Id that was found.",
-          "query": "Find out the Id of the English men's football team",
+          "merge_task": "Return the first team id and team name that was found.",
+          "query": "Find out the id and team name of the English men's football team",
           "to_agent": {
             "region": [
               "united_kingdom"
@@ -20,7 +20,7 @@
           "answer": null,
           "dependencies": [
             {
-              "dependency": "The id of the English men's football team",
+              "dependency": "The id and team name of the English men's football team",
               "step_id": "s1"
             }
           ],
@@ -44,14 +44,15 @@
             "count"
           ],
           "columns": [
-            "team"
+            "team",
+            "name"
           ],
           "keys": [
             "team"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT teams.team FROM teams WHERE teams.name = 'England men''s national association football team'"
+        "sql_query": "SELECT teams.team, teams.name FROM teams WHERE teams.name = 'England men''s national association football team'"
       },
       "s2": {
         "aligned_schema_metadata": {
@@ -59,14 +60,15 @@
             "count"
           ],
           "columns": [
-            "match"
+            "match",
+            "name"
           ],
           "keys": [
             "match"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT matches.match FROM matches WHERE matches.team1 = 47762 OR matches.team2 = 47762"
+        "sql_query": "SELECT matches.match, matches.name FROM matches WHERE matches.team1 = 47762 OR matches.team2 = 47762"
       }
     }
   }

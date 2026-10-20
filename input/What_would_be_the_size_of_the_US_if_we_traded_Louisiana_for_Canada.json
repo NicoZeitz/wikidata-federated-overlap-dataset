@@ -57,14 +57,15 @@
           ],
           "columns": [
             "country",
-            "area_km2"
+            "area_km2",
+            "name"
           ],
           "keys": [
             "country"
           ],
           "value_column": "area_km2"
         },
-        "sql_query": "SELECT countries.country, countries.area_km2 FROM countries WHERE countries.name IN ('United States', 'Canada')"
+        "sql_query": "SELECT countries.country, countries.area_km2, countries.name FROM countries WHERE countries.name IN ('United States', 'Canada')"
       },
       "s2": {
         "aligned_schema_metadata": {
@@ -73,14 +74,15 @@
           ],
           "columns": [
             "state",
-            "area_km2"
+            "area_km2",
+            "name"
           ],
           "keys": [
             "state"
           ],
           "value_column": "area_km2"
         },
-        "sql_query": "SELECT states.state, states.area_km2 FROM states WHERE states.name = 'Louisiana'"
+        "sql_query": "SELECT states.state, states.area_km2, states.name FROM states WHERE states.name = 'Louisiana'"
       },
       "s3": {
         "aligned_schema_metadata": {
@@ -89,14 +91,15 @@
           ],
           "columns": [
             "country",
-            "area_km2"
+            "area_km2",
+            "name"
           ],
           "keys": [
             "country"
           ],
           "value_column": "area_km2"
         },
-        "sql_query": "SELECT countries.country, countries.area_km2 FROM countries WHERE countries.country IN (30, 16)"
+        "sql_query": "SELECT countries.country, countries.area_km2, countries.name FROM countries WHERE countries.country IN (30, 16)"
       }
     }
   }

@@ -7,8 +7,8 @@
           "answer": null,
           "dependencies": [],
           "id": "s1",
-          "merge_task": "Return the country ids of USA, Canada and Mexico as soon as all of them are found.",
-          "query": "Return the country ids of USA, Canada, Mexico.",
+          "merge_task": "Return the country ids and country names of USA, Canada and Mexico as soon as all of them are found.",
+          "query": "Return the country ids of USA, Canada, Mexico, with their country name.",
           "to_agent": {
             "region": [
               "canada",
@@ -22,7 +22,7 @@
           "answer": null,
           "dependencies": [
             {
-              "dependency": "Country ids of USA, Canada and Mexico.",
+              "dependency": "country ids and country names of USA, Canada and Mexico.",
               "step_id": "s1"
             }
           ],
@@ -48,14 +48,15 @@
             "count"
           ],
           "columns": [
-            "country"
+            "country",
+            "name"
           ],
           "keys": [
             "country"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT countries.country FROM countries WHERE countries.name IN ('United States', 'Canada', 'Mexico')"
+        "sql_query": "SELECT countries.country, countries.name FROM countries WHERE countries.name IN ('United States', 'Canada', 'Mexico')"
       },
       "s2": {
         "aligned_schema_metadata": {
@@ -63,14 +64,15 @@
             "count"
           ],
           "columns": [
-            "company"
+            "company",
+            "name"
           ],
           "keys": [
             "company"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT companies.company FROM companies WHERE companies.country IN (30, 16, 96) AND companies.industries LIKE '%mining%'"
+        "sql_query": "SELECT companies.company, companies.name FROM companies WHERE companies.country IN (30, 16, 96) AND companies.industries LIKE '%mining%'"
       }
     }
   }

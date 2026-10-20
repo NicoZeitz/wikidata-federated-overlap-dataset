@@ -26,14 +26,15 @@
             "count"
           ],
           "columns": [
-            "country"
+            "country",
+            "name"
           ],
           "keys": [
             "country"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT countries.country FROM countries WHERE countries.human_development_index > 0.8"
+        "sql_query": "SELECT countries.country, countries.name FROM countries WHERE countries.human_development_index > 0.8"
       }
     }
   }

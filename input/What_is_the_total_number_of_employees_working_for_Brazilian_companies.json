@@ -7,8 +7,8 @@
           "answer": null,
           "dependencies": [],
           "id": "s1",
-          "merge_task": "Return the country id of the Brazil as soon as it is found.",
-          "query": "Return the country id of the Brazil.",
+          "merge_task": "Return the country id and country name of Brazil as soon as it is found.",
+          "query": "Return the country id and country name of Brazil.",
           "to_agent": {
             "region": [
               "brazil"
@@ -20,7 +20,7 @@
           "answer": null,
           "dependencies": [
             {
-              "dependency": "The country id of Brazil.",
+              "dependency": "the country id and country name of Brazil.",
               "step_id": "s1"
             }
           ],
@@ -44,14 +44,15 @@
             "count"
           ],
           "columns": [
-            "country"
+            "country",
+            "name"
           ],
           "keys": [
             "country"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT countries.country FROM countries WHERE countries.name = 'Brazil'"
+        "sql_query": "SELECT countries.country, countries.name FROM countries WHERE countries.name = 'Brazil'"
       },
       "s2": {
         "aligned_schema_metadata": {
@@ -60,14 +61,15 @@
           ],
           "columns": [
             "company",
-            "employees"
+            "employees",
+            "name"
           ],
           "keys": [
             "company"
           ],
           "value_column": "employees"
         },
-        "sql_query": "SELECT companies.company, companies.employees FROM companies WHERE companies.country = 155"
+        "sql_query": "SELECT companies.company, companies.employees, companies.name FROM companies WHERE companies.country = 155"
       }
     }
   }

@@ -34,8 +34,8 @@
           "answer": null,
           "dependencies": [],
           "id": "s1",
-          "merge_task": "Return the continent id of Africa as soon as it is found.",
-          "query": "Return the continent id of Africa.",
+          "merge_task": "Return the continent id and continent name of Africa as soon as it is found.",
+          "query": "Return the continent id and continent name of Africa.",
           "to_agent": [
             "A61",
             "A63",
@@ -57,13 +57,13 @@
           "answer": null,
           "dependencies": [
             {
-              "dependency": "The continent id of Africa.",
+              "dependency": "the continent id and continent name of Africa.",
               "step_id": "s1"
             }
           ],
           "id": "s2",
-          "merge_task": "Deduplicate by country id, return the deduplicated list of country ids.",
-          "query": "Return all country ids that are located in Africa.",
+          "merge_task": "Deduplicate by country id, return the deduplicated list of country ids along with their country names.",
+          "query": "Return all country ids that are located in Africa, with their country name.",
           "to_agent": [
             "A61",
             "A63",
@@ -85,13 +85,13 @@
           "answer": null,
           "dependencies": [
             {
-              "dependency": "List of country ids located in Africa.",
+              "dependency": "List of country ids and country names located in Africa.",
               "step_id": "s2"
             }
           ],
           "id": "s3",
           "merge_task": "Deduplicate by airport, return the airport with the highest passenger count together with its passenger count.",
-          "query": "Return all airports in Africa with their passenger count if available.",
+          "query": "Return all airports in Africa with their passenger count if available, with their airport id and airport name.",
           "to_agent": [
             "A4",
             "A6",
@@ -108,14 +108,15 @@
             "count"
           ],
           "columns": [
-            "continent"
+            "continent",
+            "name"
           ],
           "keys": [
             "continent"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT continents.continent FROM continents WHERE continents.name = 'Africa'"
+        "sql_query": "SELECT continents.continent, continents.name FROM continents WHERE continents.name = 'Africa'"
       },
       "s2": {
         "aligned_schema_metadata": {
@@ -123,14 +124,15 @@
             "count"
           ],
           "columns": [
-            "country"
+            "country",
+            "name"
           ],
           "keys": [
             "country"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT countries.country FROM countries WHERE countries.continent = 15"
+        "sql_query": "SELECT countries.country, countries.name FROM countries WHERE countries.continent = 15"
       },
       "s3": {
         "aligned_schema_metadata": {
@@ -139,14 +141,15 @@
           ],
           "columns": [
             "airport",
-            "passengers"
+            "passengers",
+            "name"
           ],
           "keys": [
             "airport"
           ],
           "value_column": "passengers"
         },
-        "sql_query": "SELECT airports.airport, airports.passengers FROM airports WHERE airports.country IN (1000, 1005, 1006, 1007, 1008, 1009, 1011, 1013, 1014, 1016, 1019, 1020, 1025, 1027, 1028, 1029, 1030, 1032, 1033, 1036, 1037, 1039, 1041, 1042, 1044, 1045, 1049, 1050, 114, 115, 117, 258, 262, 657, 79, 912, 916, 924, 929, 945, 948, 953, 954, 958, 962, 963, 965, 967, 970, 971, 974, 977, 983, 986)"
+        "sql_query": "SELECT airports.airport, airports.passengers, airports.name FROM airports WHERE airports.country IN (1000, 1005, 1006, 1007, 1008, 1009, 1011, 1013, 1014, 1016, 1019, 1020, 1025, 1027, 1028, 1029, 1030, 1032, 1033, 1036, 1037, 1039, 1041, 1042, 1044, 1045, 1049, 1050, 114, 115, 117, 258, 262, 657, 79, 912, 916, 924, 929, 945, 948, 953, 954, 958, 962, 963, 965, 967, 970, 971, 974, 977, 983, 986)"
       }
     }
   },

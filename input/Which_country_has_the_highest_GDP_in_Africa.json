@@ -7,8 +7,8 @@
           "answer": null,
           "dependencies": [],
           "id": "s1",
-          "merge_task": "Return the continent id of Africa as soon as it is found.",
-          "query": "Return the continent id of Africa.",
+          "merge_task": "Return the continent id and continent name of Africa as soon as it is found.",
+          "query": "Return the continent id and continent name of Africa.",
           "to_agent": {
             "region": [
               "africa"
@@ -20,7 +20,7 @@
           "answer": null,
           "dependencies": [
             {
-              "dependency": "The continent id of Africa.",
+              "dependency": "the continent id and continent name of Africa.",
               "step_id": "s1"
             }
           ],
@@ -44,14 +44,15 @@
             "count"
           ],
           "columns": [
-            "continent"
+            "continent",
+            "name"
           ],
           "keys": [
             "continent"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT continents.continent FROM continents WHERE continents.name = 'Africa'"
+        "sql_query": "SELECT continents.continent, continents.name FROM continents WHERE continents.name = 'Africa'"
       },
       "s2": {
         "aligned_schema_metadata": {
@@ -60,14 +61,15 @@
           ],
           "columns": [
             "country",
-            "gdp_usd"
+            "gdp_usd",
+            "name"
           ],
           "keys": [
             "country"
           ],
           "value_column": "gdp_usd"
         },
-        "sql_query": "SELECT countries.country, countries.gdp_usd FROM countries WHERE countries.continent = 15"
+        "sql_query": "SELECT countries.country, countries.gdp_usd, countries.name FROM countries WHERE countries.continent = 15"
       }
     }
   }

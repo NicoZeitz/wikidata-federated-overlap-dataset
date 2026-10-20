@@ -7,8 +7,8 @@
           "answer": null,
           "dependencies": [],
           "id": "s1",
-          "merge_task": "Return the country id of United Kingdom as soon as it is found.",
-          "query": "Return the country id of United Kingdom.",
+          "merge_task": "Return the country id and country name of United Kingdom as soon as it is found.",
+          "query": "Return the country id and country name of United Kingdom.",
           "to_agent": {
             "region": [
               "united_kingdom"
@@ -20,13 +20,13 @@
           "answer": null,
           "dependencies": [
             {
-              "dependency": "Country id of United Kingdom as soon as it is found.",
+              "dependency": "country ids and country names of United Kingdom as soon as it is found.",
               "step_id": "s1"
             }
           ],
           "id": "s2",
-          "merge_task": "Deduplicate by airline id, return all unique ones.",
-          "query": "Return all airlines that are headquartered in United Kingdom.",
+          "merge_task": "Deduplicate by airline id, return all unique ones along with their airline names.",
+          "query": "Return all airlines that are headquartered in United Kingdom, with their airline id and airline name.",
           "to_agent": {
             "region": [
               "united_kingdom"
@@ -44,14 +44,15 @@
             "count"
           ],
           "columns": [
-            "country"
+            "country",
+            "name"
           ],
           "keys": [
             "country"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT countries.country FROM countries WHERE countries.name = 'United Kingdom'"
+        "sql_query": "SELECT countries.country, countries.name FROM countries WHERE countries.name = 'United Kingdom'"
       },
       "s2": {
         "aligned_schema_metadata": {
@@ -59,14 +60,15 @@
             "count"
           ],
           "columns": [
-            "airline"
+            "airline",
+            "name"
           ],
           "keys": [
             "airline"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT airlines.airline FROM airlines WHERE airlines.country = 145"
+        "sql_query": "SELECT airlines.airline, airlines.name FROM airlines WHERE airlines.country = 145"
       }
     }
   }

@@ -27,14 +27,15 @@
           ],
           "columns": [
             "team",
-            "years_existing"
+            "years_existing",
+            "name"
           ],
           "keys": [
             "team"
           ],
           "value_column": "years_existing"
         },
-        "sql_query": "SELECT football_clubs.team AS team, CAST(strftime('%Y','2032-02-20') - strftime('%Y', football_clubs.founded) AS REAL) AS years_existing FROM football_clubs WHERE football_clubs.league = 'Bundesliga'"
+        "sql_query": "SELECT football_clubs.team AS team, CAST(strftime('%Y','2032-02-20') - strftime('%Y', football_clubs.founded) AS REAL) AS years_existing, football_clubs.name FROM football_clubs WHERE football_clubs.league = 'Bundesliga'"
       }
     }
   }

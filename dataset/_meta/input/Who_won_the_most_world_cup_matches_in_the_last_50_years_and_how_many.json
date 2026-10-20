@@ -55,7 +55,7 @@
           "answer": null,
           "dependencies": [
             {
-              "dependency": "Team id and number of wins for the team with most matches won in the last 50 years",
+              "dependency": "Team id and team name and number of wins for the team with most matches won in the last 50 years",
               "step_id": "s1"
             }
           ],
@@ -90,14 +90,15 @@
           ],
           "columns": [
             "match",
-            "winner"
+            "winner",
+            "name"
           ],
           "keys": [
             "match"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT matches.match, matches.winner FROM matches WHERE matches.date >= '1976-09-24T00:00:00Z'"
+        "sql_query": "SELECT matches.match, matches.winner, matches.name FROM matches WHERE matches.date >= '1976-09-24T00:00:00Z'"
       },
       "s2": {
         "aligned_schema_metadata": {

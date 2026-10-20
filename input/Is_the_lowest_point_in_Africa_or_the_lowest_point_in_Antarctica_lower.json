@@ -8,7 +8,7 @@
           "dependencies": [],
           "id": "s1",
           "merge_task": "Deduplicate by continent, return Africa and Antarctica with their lowest points.",
-          "query": "Return all continents with their lowest points.",
+          "query": "Return all continents with their lowest points, with their continent id and continent name.",
           "to_agent": {
             "region": [
               "africa",
@@ -40,14 +40,15 @@
           ],
           "columns": [
             "continent",
-            "lowest_point_m"
+            "lowest_point_m",
+            "name"
           ],
           "keys": [
             "continent"
           ],
           "value_column": "lowest_point_m"
         },
-        "sql_query": "SELECT continents.continent, continents.lowest_point_m FROM continents WHERE continents.name IN ('Africa', 'Antarctica')"
+        "sql_query": "SELECT continents.continent, continents.lowest_point_m, continents.name FROM continents WHERE continents.name IN ('Africa', 'Antarctica')"
       },
       "s2": {
         "aligned_schema_metadata": {

@@ -46,14 +46,15 @@
           "columns": [
             "match",
             "attendance",
-            "venue"
+            "venue",
+            "name"
           ],
           "keys": [
             "match"
           ],
           "value_column": "attendance"
         },
-        "sql_query": "SELECT matches.match, matches.attendance, matches.venue FROM matches"
+        "sql_query": "SELECT matches.match, matches.attendance, matches.venue, matches.name FROM matches"
       },
       "s2": {
         "aligned_schema_metadata": {

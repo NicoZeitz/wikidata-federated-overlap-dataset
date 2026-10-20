@@ -27,14 +27,15 @@
           ],
           "columns": [
             "country",
-            "population"
+            "population",
+            "name"
           ],
           "keys": [
             "country"
           ],
           "value_column": "population"
         },
-        "sql_query": "SELECT countries.country, countries.population FROM countries WHERE countries.gdp_usd > 1000000000000"
+        "sql_query": "SELECT countries.country, countries.population, countries.name FROM countries WHERE countries.gdp_usd > 1000000000000"
       }
     }
   }

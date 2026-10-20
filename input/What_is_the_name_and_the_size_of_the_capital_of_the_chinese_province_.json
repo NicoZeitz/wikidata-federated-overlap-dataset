@@ -8,7 +8,7 @@
           "dependencies": [],
           "id": "s1",
           "merge_task": "Deduplicate by province. Then return the province with capital, that has the biggest population.",
-          "query": "Find chinese provinces with their capital and population.",
+          "query": "Find chinese provinces with their capital and population, with their province id and province name.",
           "to_agent": {
             "region": [
               "people_s_republic_of_china"
@@ -46,14 +46,15 @@
           "columns": [
             "province",
             "population",
-            "capital"
+            "capital",
+            "name"
           ],
           "keys": [
             "province"
           ],
           "value_column": "population"
         },
-        "sql_query": "SELECT provinces.province, provinces.population, provinces.capital FROM provinces WHERE provinces.country = 148"
+        "sql_query": "SELECT provinces.province, provinces.population, provinces.capital, provinces.name FROM provinces WHERE provinces.country = 148"
       },
       "s2": {
         "aligned_schema_metadata": {

@@ -7,8 +7,8 @@
           "answer": null,
           "dependencies": [],
           "id": "s1",
-          "merge_task": "Return the country id of Spain as soon as it is found.",
-          "query": "Return the country id of Spain.",
+          "merge_task": "Return the country id and country name of Spain as soon as it is found.",
+          "query": "Return the country id and country name of Spain.",
           "to_agent": {
             "region": [
               "spain"
@@ -20,7 +20,7 @@
           "answer": null,
           "dependencies": [
             {
-              "dependency": "Country id of Spain.",
+              "dependency": "country ids and country names of Spain.",
               "step_id": "s1"
             }
           ],
@@ -44,14 +44,15 @@
             "count"
           ],
           "columns": [
-            "country"
+            "country",
+            "name"
           ],
           "keys": [
             "country"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT countries.country FROM countries WHERE countries.name = 'Spain'"
+        "sql_query": "SELECT countries.country, countries.name FROM countries WHERE countries.name = 'Spain'"
       },
       "s2": {
         "aligned_schema_metadata": {
@@ -60,14 +61,15 @@
           ],
           "columns": [
             "city",
-            "population"
+            "population",
+            "name"
           ],
           "keys": [
             "city"
           ],
           "value_column": "population"
         },
-        "sql_query": "SELECT cities.city, cities.population FROM cities WHERE cities.country = 29"
+        "sql_query": "SELECT cities.city, cities.population, cities.name FROM cities WHERE cities.country = 29"
       }
     }
   }

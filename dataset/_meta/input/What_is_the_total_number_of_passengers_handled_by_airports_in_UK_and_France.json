@@ -30,8 +30,8 @@
           "answer": null,
           "dependencies": [],
           "id": "s1",
-          "merge_task": "Return the country id of the United Kingdom and France as soon as they are found.",
-          "query": "Return the country id of the United Kingdom and France.",
+          "merge_task": "Return the country id and country name of the United Kingdom and France as soon as they are found.",
+          "query": "Return the country id and country name of the United Kingdom and France.",
           "to_agent": [
             "A61",
             "A63",
@@ -53,13 +53,13 @@
           "answer": null,
           "dependencies": [
             {
-              "dependency": "The country ids of the United Kingdom and France.",
+              "dependency": "The country ids and country names of the United Kingdom and France.",
               "step_id": "s1"
             }
           ],
           "id": "s2",
           "merge_task": "Deduplicate by airport, then sum the number of passengers across all airports for a total passenger amount.",
-          "query": "Return all airports located in either the United Kingdom or France with their passengers.",
+          "query": "Return all airports located in either the United Kingdom or France with their passengers, with their airport id and airport name.",
           "to_agent": [
             "A4",
             "A5",
@@ -77,14 +77,15 @@
             "count"
           ],
           "columns": [
-            "country"
+            "country",
+            "name"
           ],
           "keys": [
             "country"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT countries.country FROM countries WHERE countries.name IN ('United Kingdom', 'France')"
+        "sql_query": "SELECT countries.country, countries.name FROM countries WHERE countries.name IN ('United Kingdom', 'France')"
       },
       "s2": {
         "aligned_schema_metadata": {
@@ -93,14 +94,15 @@
           ],
           "columns": [
             "airport",
-            "passengers"
+            "passengers",
+            "name"
           ],
           "keys": [
             "airport"
           ],
           "value_column": "passengers"
         },
-        "sql_query": "SELECT airports.airport, airports.passengers FROM airports WHERE airports.country IN (145, 142)"
+        "sql_query": "SELECT airports.airport, airports.passengers, airports.name FROM airports WHERE airports.country IN (145, 142)"
       }
     }
   },

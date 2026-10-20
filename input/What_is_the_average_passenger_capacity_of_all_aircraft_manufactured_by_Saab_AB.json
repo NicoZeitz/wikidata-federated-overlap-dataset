@@ -8,7 +8,7 @@
           "dependencies": [],
           "id": "s1",
           "merge_task": "Deduplicate by aircraft model and calculate the average passenger capacity.",
-          "query": "Return all aircraft manufactured by Saab AB together with their passenger capacity.",
+          "query": "Return all aircraft manufactured by Saab AB together with their passenger capacity, with their aircraft id and aircraft name.",
           "to_agent": {
             "region": [
               "worldwide"
@@ -27,14 +27,15 @@
           ],
           "columns": [
             "aircraft",
-            "max_passengers"
+            "max_passengers",
+            "name"
           ],
           "keys": [
             "aircraft"
           ],
           "value_column": "max_passengers"
         },
-        "sql_query": "SELECT aircraft.aircraft, aircraft.max_passengers FROM aircraft WHERE aircraft.manufacturer = 'Saab Group'"
+        "sql_query": "SELECT aircraft.aircraft, aircraft.max_passengers, aircraft.name FROM aircraft WHERE aircraft.manufacturer = 'Saab Group'"
       }
     }
   }

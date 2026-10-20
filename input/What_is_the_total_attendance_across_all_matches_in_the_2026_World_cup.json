@@ -7,8 +7,8 @@
           "answer": null,
           "dependencies": [],
           "id": "s1",
-          "merge_task": "Return the tournament id of the 2026 World cup as soon as it is found.",
-          "query": "Return the tournament id of the 2026 World cup",
+          "merge_task": "Return the tournament id and tournament name of the 2026 World cup as soon as it is found.",
+          "query": "Return the tournament id and tournament name of the 2026 World cup",
           "to_agent": {
             "region": [
               "worldwide"
@@ -20,7 +20,7 @@
           "answer": null,
           "dependencies": [
             {
-              "dependency": "The tournament id of the 2026 World cup.",
+              "dependency": "the tournament id and tournament name of the 2026 World cup.",
               "step_id": "s1"
             }
           ],
@@ -44,14 +44,15 @@
             "count"
           ],
           "columns": [
-            "tournament"
+            "tournament",
+            "name"
           ],
           "keys": [
             "tournament"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT tournaments.tournament FROM tournaments WHERE tournaments.year = 2026 AND LOWER(tournaments.name) NOT LIKE '%women%'"
+        "sql_query": "SELECT tournaments.tournament, tournaments.name FROM tournaments WHERE tournaments.year = 2026 AND LOWER(tournaments.name) NOT LIKE '%women%'"
       },
       "s2": {
         "aligned_schema_metadata": {
@@ -60,14 +61,15 @@
           ],
           "columns": [
             "match",
-            "attendance"
+            "attendance",
+            "name"
           ],
           "keys": [
             "match"
           ],
           "value_column": "attendance"
         },
-        "sql_query": "SELECT matches.match, matches.attendance FROM matches WHERE matches.tournament = 5020214"
+        "sql_query": "SELECT matches.match, matches.attendance, matches.name FROM matches WHERE matches.tournament = 5020214"
       }
     }
   }

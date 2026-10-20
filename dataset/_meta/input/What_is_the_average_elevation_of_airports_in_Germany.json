@@ -30,8 +30,8 @@
           "answer": null,
           "dependencies": [],
           "id": "s1",
-          "merge_task": "Return the country id of Germany as soon as it is found.",
-          "query": "Return the country id of Germany.",
+          "merge_task": "Return the country id and country name of Germany as soon as it is found.",
+          "query": "Return the country id and country name of Germany.",
           "to_agent": [
             "A61",
             "A63",
@@ -53,13 +53,13 @@
           "answer": null,
           "dependencies": [
             {
-              "dependency": "Country id of Germany.",
+              "dependency": "country ids and country names of Germany.",
               "step_id": "s1"
             }
           ],
           "id": "s2",
           "merge_task": "Deduplicate by airport, return the average elevation.",
-          "query": "Return airports in Germany with their elevation.",
+          "query": "Return airports in Germany with their elevation, with their airport id and airport name.",
           "to_agent": [
             "A4",
             "A5",
@@ -77,14 +77,15 @@
             "count"
           ],
           "columns": [
-            "country"
+            "country",
+            "name"
           ],
           "keys": [
             "country"
           ],
           "value_column": null
         },
-        "sql_query": "SELECT countries.country FROM countries WHERE countries.name = 'Germany'"
+        "sql_query": "SELECT countries.country, countries.name FROM countries WHERE countries.name = 'Germany'"
       },
       "s2": {
         "aligned_schema_metadata": {
@@ -93,14 +94,15 @@
           ],
           "columns": [
             "airport",
-            "elevation_m"
+            "elevation_m",
+            "name"
           ],
           "keys": [
             "airport"
           ],
           "value_column": "elevation_m"
         },
-        "sql_query": "SELECT airports.airport, airports.elevation_m FROM airports WHERE airports.country = 183"
+        "sql_query": "SELECT airports.airport, airports.elevation_m, airports.name FROM airports WHERE airports.country = 183"
       }
     }
   },

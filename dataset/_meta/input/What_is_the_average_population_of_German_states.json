@@ -27,7 +27,7 @@
           "dependencies": [],
           "id": "s1",
           "merge_task": "Deduplicate by state, then calculate the average population of the states.",
-          "query": "Return all german states together with their population.",
+          "query": "Return all german states together with their population, with their german state id and german state name.",
           "to_agent": [
             "A76",
             "A77",
@@ -56,14 +56,15 @@
           ],
           "columns": [
             "german_state",
-            "population"
+            "population",
+            "name"
           ],
           "keys": [
             "german_state"
           ],
           "value_column": "population"
         },
-        "sql_query": "SELECT german_states.german_state, german_states.population FROM german_states"
+        "sql_query": "SELECT german_states.german_state, german_states.population, german_states.name FROM german_states"
       }
     }
   },
