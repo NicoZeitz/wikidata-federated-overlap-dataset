@@ -11,7 +11,9 @@
           "query": "Return the tournament id and tournament name of the 2026 World cup",
           "to_agent": {
             "region": [
-              "worldwide"
+              "united_states",
+              "canada",
+              "mexico"
             ],
             "table": "tournaments"
           }
