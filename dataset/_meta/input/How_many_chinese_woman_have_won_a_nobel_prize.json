@@ -15,19 +15,9 @@
       "A73",
       "A74",
       "A75",
-      "A91",
-      "A92",
-      "A93",
       "A94",
-      "A95",
       "A96",
       "A97",
-      "A98",
-      "A99",
-      "A100",
-      "A101",
-      "A102",
-      "A103",
       "A104",
       "A105"
     ],
@@ -40,22 +30,10 @@
           "answer": null,
           "dependencies": [],
           "id": "s1",
-          "merge_task": "Deduplicate by award id and return list of award ids for Nobel prize winners along with their award names.",
-          "query": "Find all award ids of Nobel prize winners, with their award name.",
+          "merge_task": "Deduplicate by award id and return list of award ids for Nobel prizes",
+          "query": "Find all award ids of Nobel prizes",
           "to_agent": [
-            "A91",
-            "A92",
-            "A93",
-            "A94",
-            "A95",
             "A96",
-            "A97",
-            "A98",
-            "A99",
-            "A100",
-            "A101",
-            "A102",
-            "A103",
             "A104",
             "A105"
           ]
@@ -64,7 +42,7 @@
           "answer": null,
           "dependencies": [
             {
-              "dependency": "award ids and award names of Nobel prize winners",
+              "dependency": "Award ids of Nobel prizes",
               "step_id": "s1"
             }
           ],
@@ -87,8 +65,8 @@
             }
           ],
           "id": "s3",
-          "merge_task": "Deduplicate by person ids and return with according country ids along with their person names.",
-          "query": "Filter all female persons out of the given person ids and return person id and person name with according country id in chinese region",
+          "merge_task": "Deduplicate by person ids and return with according country ids",
+          "query": "Return all female persons out of the given person ids and return person id with according country id in chinese region",
           "to_agent": [
             "A94",
             "A97",

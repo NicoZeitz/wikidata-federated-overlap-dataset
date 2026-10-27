@@ -2,9 +2,9 @@
 
 ## Global
 
-- 75 inputs, 116 steps (113 agent steps, 3 coordinator steps), 1235 relevant-agent slots
-- agents per query (union over steps): avg 16.5, median 15, min 6, max 44
-- agents per step, micro average (coordinator steps ignored): avg 13.3, median 15, min 2, max 15
+- 75 inputs, 116 steps (113 agent steps, 3 coordinator steps), 1225 relevant-agent slots
+- agents per query (union over steps): avg 16.3, median 15, min 6, max 44
+- agents per step, micro average (coordinator steps ignored): avg 13.2, median 15, min 2, max 15
 
 ## Per query
 
@@ -15,7 +15,7 @@
 | How many airlines are headquartered in UK? | 2 | 19 | 14, 5 |
 | How many airlines have more than ten thousand employees? | 1 | 15 | 15 |
 | How many airports are above 3000 meters elevation? | 1 | 15 | 15 |
-| How many chinese woman have won a nobel prize? | 5 | 29 | 15, 4, 4, 14, 0 |
+| How many chinese woman have won a nobel prize? | 5 | 19 | 3, 4, 4, 14, 0 |
 | How many countries have a human development index above 0.8? | 1 | 15 | 15 |
 | How many countries have a population below fifty million? | 1 | 15 | 15 |
 | How many games was Kurt Tschenscher referee in a FIFA World Cup in Europe? | 6 | 44 | 15, 15, 14, 14, 12, 12 |
