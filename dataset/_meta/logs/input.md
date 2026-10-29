@@ -2,8 +2,8 @@
 
 ## Global
 
-- 75 inputs, 116 steps (113 agent steps, 3 coordinator steps), 1225 relevant-agent slots
-- agents per query (union over steps): avg 16.3, median 15, min 6, max 44
+- 75 inputs, 116 steps (113 agent steps, 3 coordinator steps), 1218 relevant-agent slots
+- agents per query (union over steps): avg 16.2, median 15, min 6, max 44
 - agents per step, micro average (coordinator steps ignored): avg 13.1, median 15, min 2, max 15
 
 ## Per query
@@ -56,7 +56,7 @@
 | What is the name and the size of the capital of the chinese province with the biggest population? | 2 | 29 | 15, 14 |
 | What is the total GDP of all countries in Asia? | 2 | 14 | 14, 14 |
 | What is the total area in square kilometers of all west german states? | 1 | 15 | 15 |
-| What is the total attendance across all matches in the 2026 World cup? | 2 | 15 | 8, 15 |
+| What is the total attendance across all matches in the 2026 World cup? | 2 | 8 | 8, 8 |
 | What is the total male population of all countries? | 1 | 15 | 15 |
 | What is the total number of employees working for Brazilian companies? | 2 | 15 | 13, 2 |
 | What is the total number of fatalities in all accidents? | 1 | 15 | 15 |

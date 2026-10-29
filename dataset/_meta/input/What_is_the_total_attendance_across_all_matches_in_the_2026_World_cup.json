@@ -1,15 +1,8 @@
 {
   "extra": {
     "relevant_data_agents": [
-      "A46",
       "A47",
-      "A48",
-      "A49",
-      "A50",
       "A51",
-      "A52",
-      "A53",
-      "A54",
       "A55",
       "A56",
       "A57",
@@ -51,15 +44,8 @@
           "merge_task": "Deduplicate by match, then sum all the attendance of the matches to a total attendance.",
           "query": "Return all matches with their attendance, that are part of the 2026 World cup.",
           "to_agent": [
-            "A46",
             "A47",
-            "A48",
-            "A49",
-            "A50",
             "A51",
-            "A52",
-            "A53",
-            "A54",
             "A55",
             "A56",
             "A57",

@@ -31,7 +31,9 @@
           "query": "Return all matches with their attendance, that are part of the 2026 World cup.",
           "to_agent": {
             "region": [
-              "worldwide"
+              "united_states",
+              "canada",
+              "mexico"
             ],
             "table": "matches"
           }
