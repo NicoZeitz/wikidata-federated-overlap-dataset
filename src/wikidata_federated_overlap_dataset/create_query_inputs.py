@@ -17,6 +17,9 @@ with the same structure as the old inputs:
   ``sql_query`` against the ground truth database (1x1 result -> scalar,
   otherwise a list of dicts keyed by the result column names).
 - ``extra.sql_query`` / ``extra.steps_metadata``: copied from the template.
+
+It also writes one single-step ``SELECT * FROM <table>`` input per table into
+dataset/_meta/input_tables/table_<table>.json (all agents holding the table).
 """
 
 from __future__ import annotations
@@ -27,7 +30,9 @@ import sqlite3
 from dataclasses import dataclass
 from pathlib import Path
 
-from wikidata_federated_overlap_dataset.config import load_config
+import yaml
+
+from wikidata_federated_overlap_dataset.config import TableConfig, load_config
 from wikidata_federated_overlap_dataset.ground_truth import load_ground_truth
 from wikidata_federated_overlap_dataset.regions import Region, RegionCatalog, build_region_catalog
 
@@ -80,28 +85,29 @@ def collect_agents(dataset_dir: Path) -> list[dict]:
 
 
 def agent_region_slug(folder_name: str, topics: tuple[str, ...]) -> str:
-    """Extract the region slug from a database folder name.
+    """Extract the region part of a database folder name (``<topic>_<region_slug>[_<k>]``).
 
-    Folder names are ``<topic>_<region_slug>`` with an optional ``_<k>``
-    duplicate counter; the region slug itself may contain underscores, so the
-    topic prefix (one of the configured topics) is stripped first.
+    The region slug itself may contain underscores and digits, so the topic
+    prefix (one of the configured topics) is stripped and the optional ``_<k>``
+    duplicate counter is left for :func:`resolve_folder_region` to resolve.
     """
     for topic in sorted(topics, key=len, reverse=True):
         if folder_name.startswith(f"{topic}_"):
-            slug = folder_name[len(topic) + 1 :]
-            stem, _, last = slug.rpartition("_")
-            return stem if last.isdigit() and stem else slug
+            return folder_name[len(topic) + 1 :]
     msg = f"cannot derive topic from folder name: {folder_name!r}"
     raise SystemExit(msg)
 
 
 def resolve_folder_region(slug: str, catalog: RegionCatalog) -> Region:
-    """Look up the catalog region of a database folder's region slug."""
-    region = catalog.by_slug.get(slug)
-    if region is None:
-        msg = f"database folder region {slug!r} is not in the region catalog"
-        raise SystemExit(msg)
-    return region
+    """Look up the catalog region of a database folder's region part (with or without a duplicate counter)."""
+    stem, _, last = slug.rpartition("_")
+    candidates = [slug, stem] if last.isdigit() and stem else [slug]
+    for candidate in candidates:
+        region = catalog.by_slug.get(candidate)
+        if region is not None:
+            return region
+    msg = f"database folder region {slug!r} is not in the region catalog"
+    raise SystemExit(msg)
 
 
 def table_to_topic(topics: list) -> dict[str, str]:
@@ -263,8 +269,77 @@ def print_stats(stats: list[InputStats]) -> None:
         print(line)
 
 
+def build_table_input(
+    table: str,
+    holders: dict[str, dict],
+    agents: list[dict],
+    table_config: TableConfig | None,
+) -> dict | None:
+    """Single-step ``SELECT * FROM <table>`` input over every agent holding the table.
+
+    Keys are the table's primary key, or all columns when it has none; tables
+    held by fewer than two agents are skipped (None).
+    """
+    names = [agent["name"] for agent in agents if Path(agent["path"]).parent.name in holders]
+    if len(names) < 2:
+        return None
+    columns = list(dict.fromkeys(col for holder in holders.values() for col in holder.get("columns", {})))
+    primary_key = table_config.primary_key if table_config is not None else None
+    keys = [primary_key] if primary_key in columns else columns
+    sql = f"SELECT * FROM {table}"
+    query = f"Return all rows from {table}."
+    step = {
+        "answer": None,
+        "dependencies": [],
+        "id": "s1",
+        "merge_task": f"Deduplicate by {', '.join(keys)}, keep all columns.",
+        "query": f"Return all rows from {table}, with all columns.",
+        "to_agent": names,
+    }
+    return {
+        "extra": {
+            "relevant_data_agents": names,
+            "sql_query": sql,
+            "query_plan": {"query": query, "steps": [step]},
+            "steps_metadata": {
+                "s1": {
+                    "aligned_schema_metadata": {
+                        "aggregation_types": ["count"],
+                        "columns": columns,
+                        "keys": keys,
+                        "value_column": None,
+                    },
+                    "sql_query": sql,
+                }
+            },
+        },
+        "value": {
+            "__type__": "CollaborativeQueryAnswering",
+            "query": query,
+            "data_agents": agents,
+        },
+    }
+
+
+def write_table_inputs(dataset_dir: Path, agents: list[dict], tables_config: dict[str, TableConfig]) -> int:
+    """Write one table input per table of the meta mapping into dataset/_meta/input_tables."""
+    meta_mapping = yaml.safe_load((dataset_dir / "_meta" / "meta_mapping.yaml").read_text()) or {}
+    out_dir = dataset_dir / "_meta" / "input_tables"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for stale in out_dir.glob("*.json"):
+        stale.unlink()
+    written = 0
+    for table, holders in meta_mapping.items():
+        filled = build_table_input(table, holders or {}, agents, tables_config.get(table))
+        if filled is None:
+            continue
+        (out_dir / f"table_{table}.json").write_text(json.dumps(filled, indent=2) + "\n")
+        written += 1
+    return written
+
+
 def main(argv: list[str] | None = None) -> None:
-    """Generate one input file per template into dataset/_meta/input."""
+    """Generate the query inputs into dataset/_meta/input and the table inputs into dataset/_meta/input_tables."""
     parser = argparse.ArgumentParser(prog="create-query-inputs")
     parser.add_argument("--dataset-dir", type=Path, default=Path("dataset"))
     parser.add_argument("--template-dir", type=Path, default=TEMPLATE_DIR)
@@ -313,6 +388,8 @@ def main(argv: list[str] | None = None) -> None:
     log_dir.mkdir(parents=True, exist_ok=True)
     report = "\n".join(stats_lines(stats)) + "\n"
     (log_dir / "input.md").write_text(report)
+    tables_written = write_table_inputs(args.dataset_dir, agents, tables_config)
+    print(f"\nWrote {tables_written} table inputs to {args.dataset_dir / '_meta' / 'input_tables'}")
 
 
 if __name__ == "__main__":

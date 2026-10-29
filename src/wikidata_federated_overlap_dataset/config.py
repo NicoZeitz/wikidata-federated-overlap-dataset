@@ -46,6 +46,7 @@ class BuildConfig:
     output_dir: Path
     topics: tuple[str, ...]
     skew_limit: float = 3.0
+    band_half_width: float = 0.05
 
 
 @dataclass(frozen=True)
@@ -110,6 +111,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--output-dir", type=Path, default=Path("dataset"))
     parser.add_argument("--topics", type=str, default=None, help="comma-separated topic subset")
     parser.add_argument("--skew-limit", type=float, default=3.0)
+    parser.add_argument(
+        "--band-half-width",
+        type=float,
+        default=0.05,
+        help="half width of the 80/20 head band: the head must cover [0.8 - w, 0.8 + w] of each table's rows",
+    )
     return parser.parse_args(argv)
 
 
@@ -248,5 +255,6 @@ def load_config(
         output_dir=args.output_dir,
         topics=tuple(t.name for t in topics),
         skew_limit=args.skew_limit,
+        band_half_width=args.band_half_width,
     )
     return config, topics, tables, groups, labels

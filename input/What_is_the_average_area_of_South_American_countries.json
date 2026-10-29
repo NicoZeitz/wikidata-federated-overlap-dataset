@@ -25,7 +25,7 @@
             }
           ],
           "id": "s2",
-          "merge_task": "Deduplicate by country, calculate the average area across all countries.",
+          "merge_task": "Deduplicate by country id so each country appears once, then return a single value: the average area over all countries.",
           "query": "Return countries with their area.",
           "to_agent": {
             "region": [

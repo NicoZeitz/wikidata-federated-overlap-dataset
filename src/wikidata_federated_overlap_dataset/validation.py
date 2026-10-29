@@ -66,7 +66,7 @@ def validate_plan(
                     report.error(
                         f"{name}: row {r} in db {db} ({region.slug}) violates region assignment"
                     )
-        order = greedy_order(data, plan.databases, table_plan.instances)
+        order = greedy_order(plan.databases, table_plan.instances)
         front = order[: head_size(target)]
         coverage = len(set().union(*(set(table_plan.instances[db]) for db in front)))
         lower, upper = band_bounds(len(data.rows))

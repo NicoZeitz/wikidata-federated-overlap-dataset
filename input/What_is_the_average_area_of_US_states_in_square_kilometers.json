@@ -7,7 +7,7 @@
           "answer": null,
           "dependencies": [],
           "id": "s1",
-          "merge_task": "Deduplicate by state id, calculate the average area.",
+          "merge_task": "Deduplicate by state id so each state appears once, then return a single value: the average area over all states.",
           "query": "Return all US states together with their area, with their state id and state name.",
           "to_agent": {
             "region": [

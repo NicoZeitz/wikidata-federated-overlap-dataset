@@ -3,6 +3,7 @@ placement (4e), repair (4f), merge (4g), orders + band check (4h)."""
 
 from __future__ import annotations
 
+import itertools
 import math
 import random
 from collections import deque
@@ -92,9 +93,19 @@ def head_size(target: int) -> int:
     return math.ceil(target * 0.2)
 
 
+# Half width of the 80/20 head band around 0.8; set per process from BuildConfig.band_half_width.
+_band_half_width = 0.05
+
+
+def set_band_half_width(half_width: float) -> None:
+    """Set the half width of the 80/20 head band for this process."""
+    global _band_half_width
+    _band_half_width = half_width
+
+
 def band_bounds(n: int) -> tuple[int, int]:
-    """Widened 80/20 band: [ceil(0.75n), floor(0.85n)] or the two integers around 0.8n."""
-    lower, upper = math.ceil(0.75 * n), math.floor(0.85 * n)
+    """Widened 80/20 band: [ceil((0.8 - w)n), floor((0.8 + w)n)] or the two integers around 0.8n."""
+    lower, upper = math.ceil((0.80 - _band_half_width) * n), math.floor((0.80 + _band_half_width) * n)
     if lower <= upper:
         return lower, upper
     return math.floor(0.80 * n), math.ceil(0.80 * n)
@@ -623,7 +634,7 @@ def plan_table(
         repaired, _moves = repair_coverage(
             data, databases, assigned, head_rows, instances, head_dbs
         )
-        order = greedy_order(data, databases, repaired)
+        order = greedy_order(databases, repaired)
         front = set(order[: head_size(len(databases))])
         coverage = len(set().union(*(set(repaired[db]) for db in front)))
         if lower <= coverage <= upper:
@@ -1273,9 +1284,12 @@ def _seed_dbs_from_flow(context: _PlacementContext, state: _PlacementState) -> N
     into the head union.
     """
     assignment = _flow_assignment(context.data, context.databases, context.assigned)
+    set_to_rows: dict[frozenset[int], list[int]] = {}
+    for r, cs in enumerate(context.data.row_country_sets):
+        set_to_rows.setdefault(cs, []).append(r)
     for db, country_set in assignment.items():
         wants_head = db in context.head_dbs
-        candidates = _seed_candidates(context, state, country_set, db, wants_head)
+        candidates = _seed_candidates(context, state, country_set, db, wants_head, set_to_rows)
         if not candidates:
             continue
         row = _pick_seed_row(context, state, candidates, db, wants_head)
@@ -1290,6 +1304,7 @@ def _seed_candidates(
     country_set: frozenset[int],
     db: int,
     wants_head: bool,
+    set_to_rows: dict[frozenset[int], list[int]],
 ) -> list[int]:
     """Rows of the flow-assigned country set the database may seed.
 
@@ -1299,12 +1314,12 @@ def _seed_candidates(
     the set's supply covers exactly the dbs routed to it, so this never
     steals supply from other dbs (R7).
     """
-    data, assigned = context.data, context.assigned
+    assigned = context.assigned
+    rows = set_to_rows.get(country_set, [])
     candidates = [
         r
-        for r in range(len(assigned))
-        if data.row_country_sets[r] == country_set
-        and state.remaining_counts[r] > 0
+        for r in rows
+        if state.remaining_counts[r] > 0
         and not (context.strict_head and wants_head and r not in context.head_rows)
         and not (
             not wants_head
@@ -1316,9 +1331,8 @@ def _seed_candidates(
         return candidates
     return [
         r
-        for r in range(len(assigned))
-        if data.row_country_sets[r] == country_set
-        and state.remaining_counts[r] > 0
+        for r in rows
+        if state.remaining_counts[r] > 0
         and r not in state.held[db]
         and not (context.strict_head and wants_head and r not in context.head_rows)
     ]
@@ -1639,11 +1653,11 @@ def _is_head_guarded(row: int, db: int, head_dbs: set[int], head_rows: set[int])
 
 
 def _front_coverage(
-    data: TableData, databases: list[DatabasePlan], instances: dict[int, list[int]], head_count: int
+    databases: list[DatabasePlan], instances: dict[int, list[int]], head_count: int
 ) -> int:
     """Distinct rows held by the greedy front (the first head_count dbs)."""
-    order = greedy_order(data, databases, instances)
-    return len(set().union(*(set(instances[db]) for db in order[:head_count])))
+    order = greedy_order(databases, instances, limit=head_count)
+    return len(set().union(*(set(instances[db]) for db in order)))
 
 
 def merge_balanced(plan: TopicPlan, tables_data: dict[str, TableData], config: BuildConfig) -> None:
@@ -1663,6 +1677,9 @@ def merge_balanced(plan: TopicPlan, tables_data: dict[str, TableData], config: B
     total_load = [sum(len(plan.tables[t].instances[i]) for t in plan.tables) for i in range(target)]
     table_names = sorted(plan.tables)
     eligible_cache: dict[tuple[str, int], list[int]] = {}
+    row_sets: dict[str, dict[int, set[int]]] = {
+        t: {i: set(rows) for i, rows in plan.tables[t].instances.items()} for t in table_names
+    }
     while True:
         max_load = max(total_load)
         median_load = sorted(total_load)[target // 2]
@@ -1687,7 +1704,7 @@ def merge_balanced(plan: TopicPlan, tables_data: dict[str, TableData], config: B
                     for db in eligible_cache[cache_key]
                     if db != x
                     and db not in head_dbs
-                    and r not in table_plan.instances[db]
+                    and r not in row_sets[t][db]
                     and total_load[db] <= total_load[x] - 2
                 ]
                 if not pool:
@@ -1695,10 +1712,14 @@ def merge_balanced(plan: TopicPlan, tables_data: dict[str, TableData], config: B
                 y = min(pool, key=lambda db: (total_load[db], db))
                 table_plan.instances[x].remove(r)
                 table_plan.instances[y].append(r)
-                coverage = _front_coverage(data, plan.databases, table_plan.instances, head_count)
+                row_sets[t][x].discard(r)
+                row_sets[t][y].add(r)
+                coverage = _front_coverage(plan.databases, table_plan.instances, head_count)
                 if coverage < lower:
                     table_plan.instances[y].remove(r)
                     table_plan.instances[x].append(r)
+                    row_sets[t][y].discard(r)
+                    row_sets[t][x].add(r)
                     continue
                 total_load[x] -= 1
                 total_load[y] += 1
@@ -1718,7 +1739,7 @@ def verify_band(plan: TopicPlan, tables_data: dict[str, TableData], config: Buil
     """
     for name, table_plan in plan.tables.items():
         data = tables_data[name]
-        order = greedy_order(data, plan.databases, table_plan.instances)
+        order = greedy_order(plan.databases, table_plan.instances)
         covered: set[int] = set()
         for db in order[: head_size(config.target)]:
             covered.update(table_plan.instances[db])
@@ -1731,18 +1752,56 @@ def verify_band(plan: TopicPlan, tables_data: dict[str, TableData], config: Buil
 
 
 def greedy_order(
-    data: TableData,
     databases: list[DatabasePlan],
     instances: dict[int, list[int]],
+    limit: int | None = None,
 ) -> list[int]:
-    """R6 greedy order: repeatedly take the db adding the most new unique rows."""
-    row_sets = [set(instances[i]) for i in range(len(databases))]
-    remaining = list(range(len(databases)))
-    covered: set[int] = set()
-    order = []
-    while remaining:
-        best = max(remaining, key=lambda db: (len(row_sets[db] - covered), -db))
+    """R6 greedy order: repeatedly take the db adding the most new unique rows.
+
+    Uses an inverted index (row -> dbs holding it) so each round only updates
+    the dbs that actually lose rows, instead of re-differencing every set.
+    With ``limit``, stops after that many picks; the first ``limit`` picks are
+    identical to a full run (greedy is myopic), so callers that only need the
+    front can skip the tail.
+    """
+    n = len(databases)
+    not_seen = [set(instances[i]) for i in range(n)]
+    not_seen_total = [len(s) for s in not_seen]
+    inverted: dict[int, list[int]] = {}
+    for i, rows in enumerate(instances.values()):
+        for r in rows:
+            inverted.setdefault(r, []).append(i)
+    remaining = [True] * n
+    order: list[int] = []
+    for _ in range(n):
+        if limit is not None and len(order) >= limit:
+            break
+        best, best_key = -1, None
+        for i in range(n):
+            if not remaining[i]:
+                continue
+            key = (not_seen_total[i], -i)
+            if best_key is None or key > best_key:
+                best, best_key = i, key
+        remaining[best] = False
         order.append(best)
-        remaining.remove(best)
-        covered |= row_sets[best]
+        best_rows = not_seen[best]
+        not_seen[best] = set()
+        not_seen_total[best] = 0
+        if not best_rows:
+            rest = (i for i in range(n) if remaining[i])
+            if limit is None:
+                order.extend(rest)
+            else:
+                order.extend(itertools.islice(rest, limit - len(order)))
+            break
+        touched: set[int] = set()
+        for r in best_rows:
+            for i in inverted.get(r, ()):
+                if remaining[i]:
+                    touched.add(i)
+        for i in touched:
+            if not_seen[i] & best_rows:
+                not_seen[i] -= best_rows
+                not_seen_total[i] = len(not_seen[i])
     return order

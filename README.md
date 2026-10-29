@@ -15,7 +15,7 @@ Individual steps:
 bash fetch-all.sh            # fetch CSVs from the QLever Wikidata endpoint
 uv run build-ground-truth    # results/*.csv -> results/ground_truth.db
 uv run dataset-builder       # results/ground_truth.db -> dataset/<topic>_<region>/
-uv run create-query-inputs   # input/*.json templates -> dataset/_meta/input/
+uv run create-query-inputs   # input/*.json templates -> dataset/_meta/input/ (+ dataset/_meta/input_tables/)
 ```
 
 ## Pipeline
@@ -26,10 +26,10 @@ uv run create-query-inputs   # input/*.json templates -> dataset/_meta/input/
    - 10 topics (geography, aviation, economics, football, ucl, basketball, people, german_states, states, provinces), each with exactly `--target` (default 15) databases.
    - Each database gets a tight region: a single country, a country group (`config/group_countries.yaml`), a neighbor pair/triple (haversine-based), or worldwide as a last resort.
    - Every row is duplicated across databases by an overlap distribution (`--overlap-distribution {uniform,pareto,exponential,gpd,zipf}`, default exponential rate 0.5), capped at `--overlap-cap` (default 2/3 of the target).
-   - The greedy 80/20 rule holds: the first 20% of databases in greedy order cover ~80% of each table's distinct rows.
+   - The greedy 80/20 rule holds: the first 20% of databases in greedy order cover ~80% of each table's distinct rows (verified within ±`--band-half-width`, default 0.05; widen it for large `--target`).
    - Tables and columns are randomly renamed (synonyms from `config/columns.yaml`) or dropped (`--drop-probability`, default 0.25).
    - Writes per-database `<name>.mapping.yaml` (source->chosen names) and `<name>.comments.yaml` (human-readable descriptions), plus logs, plots, and validation reports under `dataset/_meta/`.
-4. **`uv run create-query-inputs`** — fills the `input/*.json` templates against the built dataset: one agent per database, per step the agents whose region fits the step's region descriptor, the reconstructed `full_answer` (executing the ground-truth SQL), and statistics written to `dataset/_meta/logs/input.md`.
+4. **`uv run create-query-inputs`** — fills the `input/*.json` templates against the built dataset: one agent per database, per step the agents whose region fits the step's region descriptor, the reconstructed `full_answer` (executing the ground-truth SQL), and statistics written to `dataset/_meta/logs/input.md`. It also writes one single-step `SELECT * FROM <table>` input per table (all databases holding it, keyed by the primary key) into `dataset/_meta/input_tables/`.
 
 ## Directory structure
 

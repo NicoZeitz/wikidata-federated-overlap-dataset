@@ -7,7 +7,7 @@
           "answer": null,
           "dependencies": [],
           "id": "s1",
-          "merge_task": "Deduplicate by country id, calculate the average area.",
+          "merge_task": "Deduplicate by country id so each country appears once, then return a single value: the average area over all countries.",
           "query": "Return all countries together with their area, with their country id and country name.",
           "to_agent": {
             "region": [

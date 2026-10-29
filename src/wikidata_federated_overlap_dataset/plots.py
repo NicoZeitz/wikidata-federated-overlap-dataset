@@ -53,7 +53,7 @@ def plot_coverage(
     out_dir.mkdir(parents=True, exist_ok=True)
     row_sets = [set(instances[i]) for i in range(len(databases))]
     if ordering == "greedy":
-        order = greedy_order(data, [DatabasePlan(region=r) for r in databases], instances)
+        order = greedy_order([DatabasePlan(region=r) for r in databases], instances)
     elif ordering == "total_rows":
         # Higher db index wins ties: identical-content databases (single-country
         # topics) then order opposite to the greedy tie-break (lowest index

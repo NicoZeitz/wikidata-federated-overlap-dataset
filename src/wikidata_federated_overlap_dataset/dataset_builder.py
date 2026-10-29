@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import gc
 import time
 from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
@@ -14,7 +15,7 @@ from wikidata_federated_overlap_dataset.logging_utils import (
     write_topic_log,
 )
 from wikidata_federated_overlap_dataset.overlap import OverlapSampler, default_distribution_curves
-from wikidata_federated_overlap_dataset.planner import plan_topic
+from wikidata_federated_overlap_dataset.planner import plan_topic, set_band_half_width
 from wikidata_federated_overlap_dataset.plots import (
     plot_coverage,
     plot_distribution,
@@ -30,6 +31,7 @@ def main(argv: list[str] | None = None) -> int:
     """Entry point: run the full build pipeline."""
     start = time.time()
     config, topics, tables_config, groups, labels = load_config(argv)
+    set_band_half_width(config.band_half_width)
     output_dir = config.output_dir
     output_dir.mkdir(parents=True, exist_ok=True)
     meta_dir = output_dir / "_meta"
@@ -92,7 +94,9 @@ def main(argv: list[str] | None = None) -> int:
 
 def _process_topic(payload: tuple) -> tuple:
     """Worker: plan, write, validate, log, plot one topic (runs in its own process)."""
+    gc.disable()
     topic, tables_data, tables_config, catalog, config, country_labels, country_names = payload
+    set_band_half_width(config.band_half_width)
     topic_start = time.time()
     log = TopicLog(topic_name=topic.name)
     sampler = OverlapSampler.from_config(config)
