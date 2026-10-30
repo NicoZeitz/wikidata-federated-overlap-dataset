@@ -1652,12 +1652,70 @@ def _is_head_guarded(row: int, db: int, head_dbs: set[int], head_rows: set[int])
     return db in head_dbs and row in head_rows
 
 
-def _front_coverage(
-    databases: list[DatabasePlan], instances: dict[int, list[int]], head_count: int
-) -> int:
-    """Distinct rows held by the greedy front (the first head_count dbs)."""
-    order = greedy_order(databases, instances, limit=head_count)
-    return len(set().union(*(set(instances[db]) for db in order)))
+class _FrontTracker:
+    """Exact greedy-front coverage maintained across single-row moves.
+
+    A full greedy run yields the front set and a stability margin: the front
+    is provably unchanged for at least (gap - 1) // 2 single-row moves, since
+    each move shifts any db's not-seen count by at most 1, degrading the
+    winner/challenger gap by at most 2. Within that window the coverage is
+    updated exactly from the moved row alone instead of re-running greedy.
+    """
+
+    def __init__(
+        self,
+        databases: list[DatabasePlan],
+        instances: dict[int, list[int]],
+        row_sets: dict[int, set[int]],
+        head_count: int,
+        inverted: dict[int, list[int]],
+    ) -> None:
+        self.databases = databases
+        self.instances = instances
+        self.row_sets = row_sets
+        self.head_count = head_count
+        self.inverted = inverted
+        self.front: set[int] = set()
+        self.coverage = 0
+        self.budget = 0
+        self._refreshed = False
+        self._refresh()
+
+    def _refresh(self) -> None:
+        gap = [0]
+        order = greedy_order(
+            self.databases, self.instances, limit=self.head_count, inverted=self.inverted, gap_out=gap
+        )
+        self.front = set(order)
+        self.coverage = len(set().union(*(set(self.instances[db]) for db in order)))
+        self.budget = (gap[0] - 1) // 2
+
+    def apply_move(self, x: int, y: int, r: int) -> int:
+        """Coverage after moving row r from x to y; instances must already reflect the move."""
+        self.budget -= 1
+        if self.budget < 0:
+            self._refresh()
+            self._refreshed = True
+            return self.coverage
+        self._refreshed = False
+        after = any(r in self.row_sets[db] for db in self.front)
+        before = (x in self.front) or any(
+            r in self.row_sets[db] for db in self.front if db not in (x, y)
+        )
+        self.coverage += (1 if after else 0) - (1 if before else 0)
+        return self.coverage
+
+    def revert_move(self, x: int, y: int, r: int) -> None:
+        """Restore coverage after undoing a move; instances must already be restored."""
+        if self._refreshed:
+            self._refresh()
+            return
+        self.budget += 1
+        now = any(r in self.row_sets[db] for db in self.front)
+        prev = (y in self.front) or any(
+            r in self.row_sets[db] for db in self.front if db not in (x, y)
+        )
+        self.coverage += (1 if now else 0) - (1 if prev else 0)
 
 
 def merge_balanced(plan: TopicPlan, tables_data: dict[str, TableData], config: BuildConfig) -> None:
@@ -1679,6 +1737,13 @@ def merge_balanced(plan: TopicPlan, tables_data: dict[str, TableData], config: B
     eligible_cache: dict[tuple[str, int], list[int]] = {}
     row_sets: dict[str, dict[int, set[int]]] = {
         t: {i: set(rows) for i, rows in plan.tables[t].instances.items()} for t in table_names
+    }
+    inverted_by_table = {t: _build_inverted(plan.tables[t].instances) for t in table_names}
+    trackers = {
+        t: _FrontTracker(
+            plan.databases, plan.tables[t].instances, row_sets[t], head_count, inverted_by_table[t]
+        )
+        for t in table_names
     }
     while True:
         max_load = max(total_load)
@@ -1714,12 +1779,17 @@ def merge_balanced(plan: TopicPlan, tables_data: dict[str, TableData], config: B
                 table_plan.instances[y].append(r)
                 row_sets[t][x].discard(r)
                 row_sets[t][y].add(r)
-                coverage = _front_coverage(plan.databases, table_plan.instances, head_count)
+                inverted_by_table[t][r].remove(x)
+                inverted_by_table[t][r].append(y)
+                coverage = trackers[t].apply_move(x, y, r)
                 if coverage < lower:
                     table_plan.instances[y].remove(r)
                     table_plan.instances[x].append(r)
                     row_sets[t][y].discard(r)
                     row_sets[t][x].add(r)
+                    inverted_by_table[t][r].remove(y)
+                    inverted_by_table[t][r].append(x)
+                    trackers[t].revert_move(x, y, r)
                     continue
                 total_load[x] -= 1
                 total_load[y] += 1
@@ -1751,10 +1821,21 @@ def verify_band(plan: TopicPlan, tables_data: dict[str, TableData], config: Buil
             raise RuntimeError(msg)
 
 
+def _build_inverted(instances: dict[int, list[int]]) -> dict[int, list[int]]:
+    """Inverted index row -> dbs holding it, for greedy_order."""
+    inverted: dict[int, list[int]] = {}
+    for i, rows in enumerate(instances.values()):
+        for r in rows:
+            inverted.setdefault(r, []).append(i)
+    return inverted
+
+
 def greedy_order(
     databases: list[DatabasePlan],
     instances: dict[int, list[int]],
     limit: int | None = None,
+    inverted: dict[int, list[int]] | None = None,
+    gap_out: list[int] | None = None,
 ) -> list[int]:
     """R6 greedy order: repeatedly take the db adding the most new unique rows.
 
@@ -1762,17 +1843,20 @@ def greedy_order(
     the dbs that actually lose rows, instead of re-differencing every set.
     With ``limit``, stops after that many picks; the first ``limit`` picks are
     identical to a full run (greedy is myopic), so callers that only need the
-    front can skip the tail.
+    front can skip the tail. A caller that mutates ``instances`` across calls
+    may pass a maintained ``inverted`` to skip rebuilding it. If ``gap_out``
+    is given, it is filled with the min margin by which each round's winner
+    beat the best remaining challenger; the front stays unchanged for at least
+    ``(gap - 1) // 2`` single-row moves, so callers can skip recomputation.
     """
     n = len(databases)
     not_seen = [set(instances[i]) for i in range(n)]
     not_seen_total = [len(s) for s in not_seen]
-    inverted: dict[int, list[int]] = {}
-    for i, rows in enumerate(instances.values()):
-        for r in rows:
-            inverted.setdefault(r, []).append(i)
+    if inverted is None:
+        inverted = _build_inverted(instances)
     remaining = [True] * n
     order: list[int] = []
+    min_gap = math.inf
     for _ in range(n):
         if limit is not None and len(order) >= limit:
             break
@@ -1783,6 +1867,15 @@ def greedy_order(
             key = (not_seen_total[i], -i)
             if best_key is None or key > best_key:
                 best, best_key = i, key
+        challenger, challenger_key = -1, None
+        for i in range(n):
+            if not remaining[i] or i == best:
+                continue
+            key = (not_seen_total[i], -i)
+            if challenger_key is None or key > challenger_key:
+                challenger, challenger_key = i, key
+        if challenger >= 0:
+            min_gap = min(min_gap, not_seen_total[best] - not_seen_total[challenger])
         remaining[best] = False
         order.append(best)
         best_rows = not_seen[best]
@@ -1804,4 +1897,6 @@ def greedy_order(
             if not_seen[i] & best_rows:
                 not_seen[i] -= best_rows
                 not_seen_total[i] = len(not_seen[i])
+    if gap_out is not None:
+        gap_out[0] = 0 if min_gap == math.inf else int(min_gap)
     return order
