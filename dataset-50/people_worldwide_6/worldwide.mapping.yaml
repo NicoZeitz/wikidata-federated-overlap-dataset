@@ -1,0 +1,32 @@
+humans:
+  source: persons
+  columns:
+    human_id: person
+    label: name
+    sex: sex
+    birth_date: birth_date
+    dod: death_date
+    christian_name: given_name
+    last: family_name
+    citizenship: citizenship
+    country_of_birth: birth_country
+    country: country
+    alma_mater: educated_at
+    height_cm: height_cm
+    brothers_and_sisters: number_of_siblings
+trophies:
+  source: awards
+  columns:
+    prize_id: award
+    name: name
+    origin_country: country
+    founded: inception
+    awarding_body: conferred_by
+    dedicated_to: named_after
+    web_address: official_website
+person_awards:
+  source: person_awards
+  columns:
+    recipient: person
+    accolade: award
+    prize_year: award_year

@@ -1,0 +1,51 @@
+__database__: Aviation database covering NATO countries, including airports, airlines,
+  aircraft, and accidents.
+terminals:
+  __table__: Airports located in NATO countries.
+  airport: Identifier for the airport.
+  airport_name: Name of the airport.
+  iata_identifier: IATA three-letter airport code.
+  elevation_m: Elevation of the airport above sea level in meters.
+  passengers: Annual passenger count (most recent reported value).
+  timezone_offset: UTC offset of the airport's timezone in hours.
+  established: Date the airport was opened or established.
+  location: Geographic coordinates of the airport.
+  city: City the airport serves.
+  airport_country: Country the airport is located in.
+flight_operators:
+  __table__: Airlines headquartered in NATO countries.
+  airline: Identifier for the airline.
+  operator_name: Name of the airline.
+  country: Country where the airline is headquartered.
+  foundation_date: Date the airline was founded.
+  number_of_employees: Number of employees (most recent reported value).
+  turnover_usd: Annual revenue in US dollars (most recent reported value).
+  fleet_count: Number of aircraft in the fleet.
+  parent_organization: Parent company or holding group.
+  airline_code_iata: IATA airline designator code (2-letter).
+  icao_designator: ICAO airline designator code (3-letter).
+  headquarters: City or location where the airline is headquartered.
+  official_website: Official website of the airline.
+  home_airport: A hub airport of the airline.
+planes:
+  __table__: Individual aircraft operated by airlines based in NATO countries.
+  identifier: Identifier for the aircraft.
+  name: Name or registration of the aircraft.
+  carrier: Airline operating the aircraft.
+  operator_country: Country of the operating airline.
+  type_designation: Aircraft model type (e.g. Boeing 737-800).
+  manufacturer: Manufacturer of the aircraft.
+  first_flight_date: Date of the aircraft's first flight.
+  passenger_capacity: Maximum passenger capacity.
+  wing_span_m: Wingspan in meters.
+  aircraft_length_m: Length of the aircraft in meters.
+  max_takeoff_weight_kg: Maximum takeoff weight in kilograms.
+accidents:
+  __table__: Aviation accidents involving airlines that occurred in NATO countries.
+  accident_id: Identifier for the aviation accident.
+  incident_name: Name or description of the accident.
+  airline_name: Airline involved in the accident.
+  nation: Country where the accident occurred.
+  accident_date: Date of the accident.
+  casualties: Number of fatalities in the accident.
+  alive: Number of survivors.

@@ -1,0 +1,13 @@
+bundesland_table:
+  source: german_states
+  columns:
+    bundesland_id: german_state
+    country: country
+    region_name: name
+    coordinates: coords
+    area: area_km2
+    population: population
+    main_city: capital
+    established: inception
+    iso_3166_code: iso_code
+    government_website: website

@@ -1,0 +1,53 @@
+__database__: Aviation database covering Worldwide, including airports, airlines,
+  aircraft, and accidents.
+aerodromes:
+  __table__: Airports located in Worldwide.
+  aerodrome_id: Identifier for the airport.
+  name: Name of the airport.
+  iata_code: IATA three-letter airport code.
+  height_metres: Elevation of the airport above sea level in meters.
+  passenger_traffic: Annual passenger count (most recent reported value).
+  airport_area_km2: Total area of the airport in square kilometers.
+  gmt_offset: UTC offset of the airport's timezone in hours.
+  opening_date: Date the airport was opened or established.
+  coordinates: Geographic coordinates of the airport.
+  city: City the airport serves.
+  country: Country the airport is located in.
+air_transport_companies:
+  __table__: Airlines headquartered in Worldwide.
+  airline: Identifier for the airline.
+  title: Name of the airline.
+  hq_country: Country where the airline is headquartered.
+  start_date: Date the airline was founded.
+  staff: Number of employees (most recent reported value).
+  total_revenue_usd: Annual revenue in US dollars (most recent reported value).
+  fleet_size: Number of aircraft in the fleet.
+  holding_company: Parent company or holding group.
+  iata_designator: IATA airline designator code (2-letter).
+  airline_code_icao: ICAO airline designator code (3-letter).
+  registered_office: City or location where the airline is headquartered.
+  web_address: Official website of the airline.
+  hub_airport: A hub airport of the airline.
+airliners:
+  __table__: Individual aircraft operated by airlines based in Worldwide.
+  aircraft: Identifier for the aircraft.
+  aircraft_name: Name or registration of the aircraft.
+  operator: Airline operating the aircraft.
+  operator_country: Country of the operating airline.
+  aircraft_model: Aircraft model type (e.g. Boeing 737-800).
+  aircraft_manufacturer: Manufacturer of the aircraft.
+  debut_flight: Date of the aircraft's first flight.
+  capacity: Maximum passenger capacity.
+  cruise_speed_kmh: Cruise speed in kilometers per hour.
+  wing_span_m: Wingspan in meters.
+  length: Length of the aircraft in meters.
+  takeoff_weight_kg: Maximum takeoff weight in kilograms.
+plane_crashes:
+  __table__: Aviation accidents involving airlines that occurred in Worldwide.
+  event_id: Identifier for the aviation accident.
+  name: Name or description of the accident.
+  flight_operator: Airline involved in the accident.
+  country_of_occurrence: Country where the accident occurred.
+  incident_date: Date of the accident.
+  number_of_deaths: Number of fatalities in the accident.
+  alive: Number of survivors.

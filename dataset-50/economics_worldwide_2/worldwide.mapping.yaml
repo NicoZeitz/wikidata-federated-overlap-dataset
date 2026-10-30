@@ -1,0 +1,18 @@
+organizations:
+  source: companies
+  columns:
+    company_id: company
+    title: name
+    country_of_incorporation: country
+    business_types: types
+    field: industries
+    entity_form: legal_form
+    inception: inception
+    official_website: website
+    headquarters_city: city
+    managing_director: ceo_person
+    personnel_count: employees
+    sales_usd: revenue_usd
+    bottom_line_usd: net_income_usd
+    total_assets: total_assets_usd
+    stock_market_value_usd: market_cap_usd

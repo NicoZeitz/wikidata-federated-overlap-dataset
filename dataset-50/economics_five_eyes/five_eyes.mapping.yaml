@@ -1,0 +1,17 @@
+firms:
+  source: companies
+  columns:
+    firm_id: company
+    company_name: name
+    headquarters_country: country
+    business_types: types
+    industry: industries
+    organizational_form: legal_form
+    start_date: inception
+    city: city
+    chief_executive: ceo_person
+    personnel_count: employees
+    revenue_usd: revenue_usd
+    bottom_line_usd: net_income_usd
+    balance_sheet_total_usd: total_assets_usd
+    operating_profit_usd: operating_income_usd

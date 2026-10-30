@@ -1,0 +1,75 @@
+territories:
+  source: countries
+  columns:
+    country: country
+    country_name: name
+    alpha3: iso3
+    geographic_region: continent
+    territory_size_km2: area_km2
+    population: population
+    total_gdp_usd: gdp_usd
+    capital_city_id: capital
+    currency: currency_name
+    location: coords
+    founded: inception
+    phone_code: telephone_code
+    male_count: population_male
+    female_population: population_female
+    life_exp: life_expectancy
+    hdi: human_development_index
+    unemployment: unemployment_rate
+    gini_coefficient: gini_coefficient
+    fertility_rate: total_fertility_rate
+    live_births_per_1000: birth_rate
+    mortality_rate: death_rate
+    suicides_per_100k: suicide_rate
+    median_income: median_income_usd
+    democracy_index: democracy_index
+    central_bank: central_bank
+    highest_mountain: highest_point
+    highest_elevation_m: highest_point_m
+    lowest_point: lowest_point
+    min_elevation_m: lowest_point_m
+    northernmost_coords: northernmost_point
+    southmost_coords: southernmost_point
+    eastmost_coords: easternmost_point
+    western_extreme: westernmost_point
+    nationality_name: demonym
+    chief_of_state: head_of_state
+    government_leader: head_of_government
+world_regions:
+  source: continents
+  columns:
+    id: continent
+    name: name
+    surface_area_km2: area_km2
+    inhabitants: population
+    coords: coords
+    highest_peak: highest_point
+    highest_altitude_m: highest_point_m
+    depression: lowest_point
+    lowest_altitude_m: lowest_point_m
+    most_populous_city: most_populous_urban_area
+    children_out_of_school: out_of_school_children
+    m49_code: m49_code
+    adjectival: demonym
+    northern_extreme: northernmost_point
+    southern_tip_coords: southernmost_point
+    eastern_tip_coords: easternmost_point
+    westernmost_point: westernmost_point
+towns:
+  source: cities
+  columns:
+    settlement_id: city
+    place_name: name
+    country: country
+    population: population
+    position: coords
+    founded: inception
+    mailing_code: postal_code
+    inhabitant_name: demonym
+    economic_output: gdp_usd
+    per_person_income_usd: per_capita_income_usd
+    height_m: elevation_m
+    total_area_km2: area_km2
+    vehicles_per_thousand: vehicles_per_thousand

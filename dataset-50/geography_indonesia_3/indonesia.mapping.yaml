@@ -1,0 +1,75 @@
+territories:
+  source: countries
+  columns:
+    country_id: country
+    nation: name
+    iso_alpha3: iso3
+    continent: continent
+    area_km2: area_km2
+    population: population
+    gdp: gdp_usd
+    seat_of_government: capital
+    currency_name: currency_name
+    lat_lon: coords
+    founded: inception
+    formal_name: official_name
+    phone_code: telephone_code
+    number_of_males: population_male
+    women_population: population_female
+    average_life_expectancy: life_expectancy
+    human_development_score: human_development_index
+    out_of_work_rate: unemployment_rate
+    income_inequality: gini_coefficient
+    crude_birth_rate: birth_rate
+    deaths_per_1000: death_rate
+    suicides_per_100000: suicide_rate
+    political_freedom_score: democracy_index
+    national_bank: central_bank
+    highest_mountain: highest_point
+    peak_height_m: highest_point_m
+    lowest_point: lowest_point
+    min_elevation_m: lowest_point_m
+    northernmost_point: northernmost_point
+    southernmost_point: southernmost_point
+    easternmost_coords: easternmost_point
+    western_extreme: westernmost_point
+    citizen_name: demonym
+    state_languages: languages
+    president: head_of_state
+    premier: head_of_government
+geographic_regions:
+  source: continents
+  columns:
+    continent_id: continent
+    landmass_name: name
+    area: area_km2
+    inhabitants: population
+    lat_lon: coords
+    tallest_point: highest_point
+    highest_point_m: highest_point_m
+    nadir: lowest_point
+    min_elevation_m: lowest_point_m
+    largest_urban_area: most_populous_urban_area
+    children_out_of_school: out_of_school_children
+    un_region_code: m49_code
+    demonym: demonym
+    north_pole_coords: northernmost_point
+    southmost_coords: southernmost_point
+    easternmost_point: easternmost_point
+    western_extreme: westernmost_point
+communities:
+  source: cities
+  columns:
+    municipality_id: city
+    locality: name
+    country: country
+    number_of_inhabitants: population
+    lat_lon: coords
+    founding_year: inception
+    zip: postal_code
+    demonym: demonym
+    city_gdp: gdp_usd
+    per_capita_income_usd: per_capita_income_usd
+    height_m: elevation_m
+    total_area_km2: area_km2
+    vehicle_density: vehicles_per_thousand

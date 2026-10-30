@@ -1,0 +1,17 @@
+firms:
+  source: companies
+  columns:
+    firm_id: company
+    title: name
+    country_of_incorporation: country
+    types: types
+    industries: industries
+    organizational_form: legal_form
+    creation_date: inception
+    homepage: website
+    base_city: city
+    chief_executive: ceo_person
+    staff_count: employees
+    revenue: revenue_usd
+    after_tax_income_usd: net_income_usd
+    asset_value_usd: total_assets_usd

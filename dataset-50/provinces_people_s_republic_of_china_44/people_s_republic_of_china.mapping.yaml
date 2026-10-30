@@ -1,0 +1,13 @@
+administrative_regions:
+  source: provinces
+  columns:
+    region_id: province
+    parent_country: country
+    label: name
+    coordinates: coords
+    size_km2: area_km2
+    residents: population
+    capital: capital
+    established: inception
+    region_code: iso_code
+    government_website: website

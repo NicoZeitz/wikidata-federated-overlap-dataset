@@ -1,0 +1,51 @@
+__database__: Football database covering Qatar + United Arab Emirates, including matches,
+  teams, venues, and tournaments.
+football_matches:
+  __table__: FIFA World Cup matches played in Qatar + United Arab Emirates.
+  game_id: Identifier for the FIFA World Cup match.
+  name: Name or label of the match.
+  date: Date the match was played.
+  tournament: Tournament this match belongs to.
+  stage: Stage of the tournament (e.g. group stage, quarterfinal, final).
+  venue: Venue where the match was played.
+  first_team: First participating team.
+  team1_score: Goals scored by team1.
+  side_two: Second participating team.
+  team2_score: Goals scored by team2.
+  victor: Winning team (null for draws).
+  spectators: Number of spectators in attendance.
+  match_referee: Person who refereed the match.
+teams:
+  __table__: National football teams from Qatar + United Arab Emirates.
+  team_id: Identifier for the national football team.
+  title: Name of the team.
+  represented_country: Country the team represents.
+  founding_date: Year the team was founded.
+  local_name: Official name of the team in its native language.
+  rank: FIFA world ranking of the team.
+  league: Competition class or league the team participates in.
+  trainer: Current head coach of the team.
+  skipper: Current team captain.
+arenas:
+  __table__: Stadiums and arenas in Qatar + United Arab Emirates that hosted FIFA
+    World Cup matches.
+  stadium_id: Identifier for the venue.
+  ground_name: Name of the venue or stadium.
+  venue_country: Country the venue is located in.
+  max_capacity: Maximum seating capacity of the venue.
+  coords: Geographic coordinates of the venue.
+  built: Date the venue was officially opened.
+  venue_city: City or municipality the venue is located in.
+  tenants: Teams or organizations that regularly use the venue.
+  venue_architect: Architect who designed the venue.
+cups:
+  __table__: FIFA World Cup tournaments held in Qatar + United Arab Emirates.
+  competition_id: Identifier for the FIFA World Cup tournament edition.
+  title: Name of the tournament (e.g. 1966 FIFA World Cup).
+  host_year: Year the tournament was held.
+  country: Host country of the tournament.
+  edition: Ordinal edition number of the tournament (e.g. 23 for the 23rd World Cup).
+  participating_teams: Number of teams participating in the tournament.
+  winner: Winning team of the tournament.
+  matches_played: Total number of matches played in the tournament.
+  goals: Total number of goals scored across all matches.

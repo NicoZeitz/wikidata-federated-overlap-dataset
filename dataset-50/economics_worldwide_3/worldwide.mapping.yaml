@@ -1,0 +1,17 @@
+entities:
+  source: companies
+  columns:
+    firm_id: company
+    firm_name: name
+    headquarters_country: country
+    classification: types
+    industry: industries
+    legal_form: legal_form
+    foundation_year: inception
+    web_address: website
+    headquarters_city: city
+    executive_director: ceo_person
+    personnel_count: employees
+    total_revenue_usd: revenue_usd
+    net_income_usd: net_income_usd
+    balance_sheet_total_usd: total_assets_usd

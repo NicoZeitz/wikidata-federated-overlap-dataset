@@ -1,0 +1,29 @@
+__database__: NBA basketball database covering United States, including teams and
+  games.
+nba_teams:
+  __table__: NBA basketball teams based in United States.
+  franchise_id: Identifier for the NBA team.
+  label: Full name of the NBA team.
+  nation: Country the team is based in.
+  home_city: City the team is based in.
+  cityLabel: Name of the city the team is based in.
+  us_state: US state or province the team is based in.
+  founding_date: Year the team was founded or established.
+  stadium: Home arena or venue of the team.
+  manager: Current head coach of the team.
+  owner: Name of the current owner or ownership group.
+  official_website: Official website URL of the team.
+  followers: Number of social media followers of the team.
+nba_contests:
+  __table__: NBA basketball games played in United States.
+  game_id: Identifier for the NBA game.
+  country: Country the game was played in (always United States).
+  home_team: First participating team.
+  team1Label: Name of the first participating team.
+  second_team: Second participating team.
+  second_team_name: Name of the second participating team.
+  victor: Name of the winning team.
+  arena_name: Name of the venue where the game was played.
+  played_on: Date the game was played.
+  gate: Number of spectators in attendance.
+  season_name: Name or label of the NBA season the game belongs to.

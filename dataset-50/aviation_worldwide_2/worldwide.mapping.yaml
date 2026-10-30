@@ -1,0 +1,56 @@
+aviation_hubs:
+  source: airports
+  columns:
+    airport_id: airport
+    label: name
+    iata_code: iata_code
+    four_letter_code: icao_code
+    elevation: elevation_m
+    yearly_passengers: passengers
+    area_km2: airport_area_km2
+    tz_offset: timezone_offset
+    established: inception
+    position: coords
+    city: city
+    host_country: country
+aviation_companies:
+  source: airlines
+  columns:
+    airline_id: airline
+    name: name
+    country: country
+    founded: inception
+    staff_count: employees
+    gross_revenue_usd: revenue_usd
+    planes: fleet_size
+    parent_company: parent_company
+    iata_designator: iata_code
+    airline_code_icao: icao_code
+    hq_city: headquarters
+    url: website
+    hub: hub_airport
+jets:
+  source: aircraft
+  columns:
+    identifier: aircraft
+    aircraft_registration: name
+    air_operator: operator
+    operator_country: country
+    aircraft_variant: model
+    maker: manufacturer
+    first_flight_date: first_flight
+    total_seats: max_passengers
+    cruise_speed: cruise_speed_kmh
+    wing_span_m: wingspan_m
+    body_length_m: length_m
+    mtow_kg: max_takeoff_weight_kg
+plane_crashes:
+  source: accidents
+  columns:
+    accident: accident
+    name: name
+    carrier: airline
+    location_country: country
+    accident_date: date
+    death_toll: fatalities
+    survivor_count: survivors

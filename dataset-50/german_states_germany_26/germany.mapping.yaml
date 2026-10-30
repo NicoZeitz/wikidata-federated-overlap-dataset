@@ -1,0 +1,12 @@
+german_bundeslaender:
+  source: german_states
+  columns:
+    german_state: german_state
+    nation: country
+    bundesland: name
+    coordinates: coords
+    area: area_km2
+    population: population
+    state_capital: capital
+    creation_date: inception
+    url: website

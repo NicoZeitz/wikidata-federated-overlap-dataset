@@ -1,0 +1,55 @@
+__database__: Aviation database covering Anglophone countries, including airports,
+  airlines, aircraft, and accidents.
+airports:
+  __table__: Airports located in Anglophone countries.
+  airport_id: Identifier for the airport.
+  airport_name: Name of the airport.
+  airport_code: IATA three-letter airport code.
+  four_letter_code: ICAO four-letter airport code.
+  elevation_above_sea_level_m: Elevation of the airport above sea level in meters.
+  throughput: Annual passenger count (most recent reported value).
+  total_area_km2: Total area of the airport in square kilometers.
+  gmt_offset: UTC offset of the airport's timezone in hours.
+  inception: Date the airport was opened or established.
+  lat_lon: Geographic coordinates of the airport.
+  serving_city: City the airport serves.
+  nation: Country the airport is located in.
+air_transport_companies:
+  __table__: Airlines headquartered in Anglophone countries.
+  airline: Identifier for the airline.
+  name: Name of the airline.
+  nation: Country where the airline is headquartered.
+  creation_date: Date the airline was founded.
+  staff_count: Number of employees (most recent reported value).
+  revenue_usd: Annual revenue in US dollars (most recent reported value).
+  fleet_size: Number of aircraft in the fleet.
+  holding_company: Parent company or holding group.
+  iata: IATA airline designator code (2-letter).
+  airline_code_icao: ICAO airline designator code (3-letter).
+  hq_location: City or location where the airline is headquartered.
+  homepage: Official website of the airline.
+  main_hub: A hub airport of the airline.
+flying_machines:
+  __table__: Individual aircraft operated by airlines based in Anglophone countries.
+  aircraft_id: Identifier for the aircraft.
+  name: Name or registration of the aircraft.
+  operating_airline: Airline operating the aircraft.
+  registration_country: Country of the operating airline.
+  type_designation: Aircraft model type (e.g. Boeing 737-800).
+  producer: Manufacturer of the aircraft.
+  first_flight: Date of the aircraft's first flight.
+  seating_capacity: Maximum passenger capacity.
+  flight_speed_kmh: Cruise speed in kilometers per hour.
+  wing_span_m: Wingspan in meters.
+  length_m: Length of the aircraft in meters.
+  takeoff_weight_kg: Maximum takeoff weight in kilograms.
+crashes:
+  __table__: Aviation accidents involving airlines that occurred in Anglophone countries.
+  incident_id: Identifier for the aviation accident.
+  description: Name or description of the accident.
+  operator: Airline involved in the accident.
+  nation: Country where the accident occurred.
+  crash_date: Date of the accident.
+  dead: Number of fatalities in the accident.
+  survivor_count: Number of survivors.
+  flight: Flight number of the aircraft involved.

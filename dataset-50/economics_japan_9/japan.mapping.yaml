@@ -1,0 +1,18 @@
+organizations:
+  source: companies
+  columns:
+    corporation_id: company
+    trade_name: name
+    country: country
+    company_types: types
+    sector: industries
+    creation_date: inception
+    homepage: website
+    city: city
+    executive_director: ceo_person
+    personnel_count: employees
+    total_revenue_usd: revenue_usd
+    after_tax_income_usd: net_income_usd
+    balance_sheet_total_usd: total_assets_usd
+    operating_profit_usd: operating_income_usd
+    market_cap: market_cap_usd

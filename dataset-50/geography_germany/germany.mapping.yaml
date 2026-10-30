@@ -1,0 +1,77 @@
+kingdoms:
+  source: countries
+  columns:
+    country_id: country
+    title: name
+    two_letter_country_code: iso2
+    three_letter_country_code: iso3
+    geographic_region: continent
+    area_km2: area_km2
+    pop: population
+    gdp: gdp_usd
+    seat_of_government: capital
+    monetary_unit: currency_name
+    coords: coords
+    founded: inception
+    formal_title: official_name
+    international_dialing_code: telephone_code
+    men_population: population_male
+    population_female: population_female
+    life_expectancy: life_expectancy
+    human_development_score: human_development_index
+    jobless_rate: unemployment_rate
+    gini: gini_coefficient
+    fertility_rate: total_fertility_rate
+    births_per_thousand: birth_rate
+    deaths_per_thousand: death_rate
+    suicide_rate: suicide_rate
+    political_freedom_score: democracy_index
+    national_bank: central_bank
+    tallest_mountain: highest_point
+    highest_point_m: highest_point_m
+    lowest_point: lowest_point
+    lowest_point_m: lowest_point_m
+    northernmost_coords: northernmost_point
+    southern_extreme: southernmost_point
+    eastmost_coords: easternmost_point
+    western_extreme: westernmost_point
+    nationality_name: demonym
+    official_languages: languages
+    chief_of_state: head_of_state
+    head_of_government_name: head_of_government
+landmasses:
+  source: continents
+  columns:
+    id: continent
+    continent_name: name
+    area_km2: area_km2
+    pop: population
+    coordinates: coords
+    tallest_point: highest_point
+    peak_height_m: highest_point_m
+    nadir: lowest_point
+    lowest_elevation_m: lowest_point_m
+    most_populated_city: most_populous_urban_area
+    non_enrolled_children: out_of_school_children
+    m49_code: m49_code
+    inhabitant_name: demonym
+    northmost_coords: northernmost_point
+    southern_tip_coords: southernmost_point
+    eastern_extreme: easternmost_point
+    westmost_coords: westernmost_point
+municipalities:
+  source: cities
+  columns:
+    settlement_id: city
+    town_name: name
+    city_country: country
+    city_population: population
+    coordinates: coords
+    creation_date: inception
+    informal_name: nickname
+    postal_code: postal_code
+    resident_name: demonym
+    per_capita_income_usd: per_capita_income_usd
+    altitude: elevation_m
+    city_area_km2: area_km2
+    motor_vehicles_per_1000: vehicles_per_thousand

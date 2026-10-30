@@ -1,0 +1,52 @@
+matches:
+  source: matches
+  columns:
+    fixture_id: match
+    label: name
+    kickoff_date: date
+    competition: tournament
+    match_stage: stage_type
+    stadium: venue
+    team1: team1
+    goals_team1: team1_score
+    side_two: team2
+    score_team2: team2_score
+    winner: winner
+    audience: attendance
+    official: referee
+teams:
+  source: teams
+  columns:
+    squad_id: team
+    title: name
+    country: country
+    founded: inception
+    alias: nickname
+    fifa_ranking: ranking
+    division: competition_class
+    coach: head_coach
+    team_captain: captain
+grounds:
+  source: venues
+  columns:
+    stadium_id: venue
+    label: name
+    nation: country
+    stadium_capacity: capacity
+    lat_lon: coords
+    opening_date: inception
+    municipality: city
+    occupant: occupant
+    designer: architect
+competitions:
+  source: tournaments
+  columns:
+    edition_id: tournament
+    title: name
+    year: year
+    host_country: country
+    edition: edition_number
+    participants: participants
+    tournament_winner: winner
+    match_count: matches_played
+    total_goals: goals_scored

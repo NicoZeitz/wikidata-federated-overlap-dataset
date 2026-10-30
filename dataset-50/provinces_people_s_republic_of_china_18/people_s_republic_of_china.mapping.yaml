@@ -1,0 +1,13 @@
+china_states:
+  source: provinces
+  columns:
+    region_id: province
+    country: country
+    region_name: name
+    centroid: coords
+    area: area_km2
+    inhabitants: population
+    main_city: capital
+    inception: inception
+    province_code: iso_code
+    website: website

@@ -1,0 +1,84 @@
+__database__: Geographic database covering India, including countries, continents,
+  and cities.
+kingdoms:
+  __table__: Sovereign countries in India.
+  nation_id: Identifier for the country.
+  country_name: Name of the country.
+  country_code: ISO 3166-1 alpha-2 two-letter country code.
+  iso3_code: ISO 3166-1 alpha-3 three-letter country code.
+  geographic_region: Continent the country belongs to.
+  size_km2: Total area of the country in square kilometers.
+  inhabitants: Population of the country (most recent estimate).
+  gross_domestic_product: Nominal GDP of the country in US dollars (most recent reported
+    value).
+  capital_city: Capital city.
+  monetary_unit: Name of the official currency.
+  geo_coords: Geographic coordinates of the country centroid.
+  inception: Date the country was founded or became independent.
+  formal_title: Official name of the country in English.
+  calling_code: International telephone dialling code (e.g. +49).
+  number_of_males: Male population count (most recent estimate).
+  female_population: Female population count (most recent estimate).
+  longevity: Average life expectancy at birth in years.
+  human_development_score: Human Development Index score (0–1).
+  jobless_rate: Unemployment rate as a percentage of the labour force.
+  income_inequality: Gini coefficient measuring income inequality (0–1).
+  total_fertility_rate: Average number of children born per woman.
+  natality_rate: Number of live births per 1000 inhabitants per year.
+  mortality_rate: Number of deaths per 1000 inhabitants per year.
+  suicides_per_100k: Suicide rate per 100,000 inhabitants per year.
+  typical_income_usd: Median household or personal income in US dollars.
+  eiu_democracy_index: Democracy Index score (0–10) from the Economist Intelligence
+    Unit.
+  national_bank: Name of the central bank.
+  highest_peak: Name of the highest geographical point in the country.
+  highest_elevation_m: Elevation of the highest point above sea level in meters.
+  lowest_point: Name of the lowest geographical point in the country.
+  nadir_elevation_m: Elevation of the lowest point above sea level in meters (negative
+    if below sea level).
+  northernmost_point: Geographic coordinates of the northernmost point of the country.
+  southernmost_point: Geographic coordinates of the southernmost point of the country.
+  eastern_extreme: Geographic coordinates of the easternmost point of the country.
+  westernmost_point: Geographic coordinates of the westernmost point of the country.
+  nationality_name: Comma-separated adjectives or nouns used to describe inhabitants
+    of the country.
+  president: Current head of state of the country.
+  premier: Current head of government of the country.
+major_regions:
+  __table__: Continents covering India.
+  identifier: Identifier for the continent.
+  landmass_name: Name of the continent.
+  land_area_km2: Total land area of the continent in square kilometers.
+  total_population: Total population of the continent (most recent estimate).
+  geo_coords: Geographic coordinates of the continent centroid.
+  highest_mountain: Name of the highest geographical point on the continent.
+  max_elevation_m: Elevation of the highest point above sea level in meters.
+  nadir: Name of the lowest geographical point on the continent.
+  min_elevation_m: Elevation of the lowest point above sea level in meters (negative
+    if below sea level).
+  largest_city: Most populous urban area on the continent.
+  out_of_school_children: Estimated number of school-age children not enrolled in
+    school.
+  m49_code: UN M49 numeric region code assigned to the continent.
+  adjectival: Comma-separated adjectives or nouns used to describe inhabitants of
+    the continent.
+  north_pole_coords: Geographic coordinates of the northernmost point of the continent.
+  southern_tip_coords: Geographic coordinates of the southernmost point of the continent.
+  eastmost_coords: Geographic coordinates of the easternmost point of the continent.
+  westmost_coords: Geographic coordinates of the westernmost point of the continent.
+settlements:
+  __table__: Cities and human settlements located in India.
+  municipality_id: Identifier for the city.
+  city_name: Name of the city.
+  nation: Country the city is located in.
+  city_population: Population of the city (most recent estimate).
+  lat_lon: Geographic coordinates of the city.
+  founding_date: Date or year the city was founded or first recorded.
+  sobriquet: Comma-separated informal names or nicknames of the city.
+  mailing_code: Postal or ZIP code of the city.
+  demonym: Comma-separated adjectives or nouns used to describe inhabitants of the
+    city.
+  total_output_usd: Nominal GDP of the city in US dollars.
+  per_person_income_usd: Per capita income of the city in US dollars.
+  altitude_m: Elevation of the city above sea level in meters.
+  land_area_km2: Total area of the city in square kilometers.

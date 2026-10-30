@@ -1,0 +1,18 @@
+firms:
+  source: companies
+  columns:
+    business_id: company
+    business_name: name
+    nation: country
+    business_types: types
+    sector: industries
+    legal_form: legal_form
+    founded: inception
+    website: website
+    base_city: city
+    top_executive: ceo_person
+    workforce_size: employees
+    total_revenue_usd: revenue_usd
+    bottom_line_usd: net_income_usd
+    assets_usd: total_assets_usd
+    ebit_usd: operating_income_usd

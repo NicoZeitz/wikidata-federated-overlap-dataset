@@ -1,0 +1,52 @@
+__database__: Football database covering Worldwide, including matches, teams, venues,
+  and tournaments.
+world_cup_fixtures:
+  __table__: FIFA World Cup matches played in Worldwide.
+  match: Identifier for the FIFA World Cup match.
+  game_name: Name or label of the match.
+  played_on: Date the match was played.
+  tournament: Tournament this match belongs to.
+  tournament_round: Stage of the tournament (e.g. group stage, quarterfinal, final).
+  arena: Venue where the match was played.
+  team_a: First participating team.
+  home_goals: Goals scored by team1.
+  side_two: Second participating team.
+  team2_goals: Goals scored by team2.
+  winner: Winning team (null for draws).
+  attendance: Number of spectators in attendance.
+  referee: Person who refereed the match.
+national_football_teams:
+  __table__: National football teams from Worldwide.
+  squad_id: Identifier for the national football team.
+  title: Name of the team.
+  home_country: Country the team represents.
+  founded: Year the team was founded.
+  official_name: Official name of the team in its native language.
+  informal_name: Comma-separated nicknames of the team.
+  world_ranking: FIFA world ranking of the team.
+  competition_class: Competition class or league the team participates in.
+  coach: Current head coach of the team.
+  team_captain: Current team captain.
+world_cup_venues:
+  __table__: Stadiums and arenas in Worldwide that hosted FIFA World Cup matches.
+  stadium_id: Identifier for the venue.
+  venue_name: Name of the venue or stadium.
+  country: Country the venue is located in.
+  max_capacity: Maximum seating capacity of the venue.
+  position: Geographic coordinates of the venue.
+  built: Date the venue was officially opened.
+  municipality: City or municipality the venue is located in.
+  structural_designer: Architect who designed the venue.
+world_cups:
+  __table__: FIFA World Cup tournaments held in Worldwide.
+  tournament: Identifier for the FIFA World Cup tournament edition.
+  competition_name: Name of the tournament (e.g. 1966 FIFA World Cup).
+  tournament_year: Year the tournament was held.
+  venue_country: Host country of the tournament.
+  edition_number: Ordinal edition number of the tournament (e.g. 23 for the 23rd World
+    Cup).
+  event_mascot: Official mascot of the tournament.
+  qualified_teams: Number of teams participating in the tournament.
+  winner: Winning team of the tournament.
+  total_matches: Total number of matches played in the tournament.
+  goals_scored: Total number of goals scored across all matches.

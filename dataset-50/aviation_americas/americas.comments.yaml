@@ -1,0 +1,53 @@
+__database__: Aviation database covering Americas, including airports, airlines, aircraft,
+  and accidents.
+terminals:
+  __table__: Airports located in Americas.
+  airport: Identifier for the airport.
+  airport_name: Name of the airport.
+  iata: IATA three-letter airport code.
+  icao_code: ICAO four-letter airport code.
+  height_metres: Elevation of the airport above sea level in meters.
+  annual_passengers: Annual passenger count (most recent reported value).
+  area_km2: Total area of the airport in square kilometers.
+  utc_offset: UTC offset of the airport's timezone in hours.
+  geo_coords: Geographic coordinates of the airport.
+  serving_city: City the airport serves.
+  host_country: Country the airport is located in.
+air_operators:
+  __table__: Airlines headquartered in Americas.
+  carrier_id: Identifier for the airline.
+  airline_name: Name of the airline.
+  nation: Country where the airline is headquartered.
+  foundation_date: Date the airline was founded.
+  number_of_employees: Number of employees (most recent reported value).
+  revenue_usd: Annual revenue in US dollars (most recent reported value).
+  number_of_aircraft: Number of aircraft in the fleet.
+  parent_company: Parent company or holding group.
+  iata: IATA airline designator code (2-letter).
+  three_letter_code: ICAO airline designator code (3-letter).
+  hq_city: City or location where the airline is headquartered.
+  homepage: Official website of the airline.
+  base_airport: A hub airport of the airline.
+jets:
+  __table__: Individual aircraft operated by airlines based in Americas.
+  aircraft_id: Identifier for the aircraft.
+  aircraft_name: Name or registration of the aircraft.
+  airline: Airline operating the aircraft.
+  operator_country: Country of the operating airline.
+  aircraft_model: Aircraft model type (e.g. Boeing 737-800).
+  manufacturer: Manufacturer of the aircraft.
+  maiden_flight: Date of the aircraft's first flight.
+  seating_capacity: Maximum passenger capacity.
+  wingspan_m: Wingspan in meters.
+  length: Length of the aircraft in meters.
+  max_takeoff_weight_kg: Maximum takeoff weight in kilograms.
+airplane_accidents:
+  __table__: Aviation accidents involving airlines that occurred in Americas.
+  event_id: Identifier for the aviation accident.
+  crash_name: Name or description of the accident.
+  flight_operator: Airline involved in the accident.
+  location_country: Country where the accident occurred.
+  event_date: Date of the accident.
+  victims: Number of fatalities in the accident.
+  alive: Number of survivors.
+  flight: Flight number of the aircraft involved.

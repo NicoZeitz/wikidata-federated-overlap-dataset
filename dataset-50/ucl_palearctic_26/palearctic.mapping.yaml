@@ -1,0 +1,58 @@
+european_clubs:
+  source: ucl_clubs
+  columns:
+    team: team
+    club_name: name
+    competition: league
+    home_country: country
+    inception: founded
+    home_arena: stadium
+    manager: coach
+    proprietor: owner
+    alias: nickname
+    league_titles: leagueTitles
+    fan_base_size: socialFollowers
+    website: website
+    founding_person: founder
+champions_league_matches:
+  source: ucl_matches
+  columns:
+    game_id: match
+    matchLabel: matchLabel
+    season_name: seasonLabel
+    played_on: date
+    venue: venue
+    first_team: team1
+    away_team: team2
+    match_winner: winner
+    gate: attendance
+    match_referee: referee
+ucl_stadiums:
+  source: ucl_venues
+  columns:
+    venue_id: venue
+    stadium_name: name
+    venue_country: country
+    stadium_capacity: capacity
+    geo_coords: coords
+    construction_completion: inception
+    host_city: city
+    regular_users: occupant
+    building_architect: architect
+football_clubs:
+  source: football_clubs
+  columns:
+    organization_id: team
+    full_club_name: name
+    league: league
+    nation: country
+    established: founded
+    ground: stadium
+    tactician: coach
+    ownership: owner
+    nickname: nickname
+    league_titles: leagueTitles
+    socialFollowers: socialFollowers
+    website: website
+    short_name: shortName
+    established_by: founder

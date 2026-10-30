@@ -1,0 +1,55 @@
+__database__: UEFA Champions League database covering Palearctic ecozone, including
+  clubs, matches, and venues.
+ucl_participants:
+  __table__: Football clubs based in Palearctic ecozone that participated in the UEFA
+    Champions League.
+  organization_id: Identifier for the football club.
+  name: Full name of the football club.
+  league: Name of the domestic league the club competes in.
+  nation: Country the club is based in.
+  founding_year: Date or year the club was founded.
+  home_ground: Name of the club's home stadium.
+  tactician: Name of the current head coach or manager.
+  nickname: Nickname or informal name of the club.
+  championships: Number of domestic league titles won by the club.
+  followers: Number of social media followers of the club.
+  short_name: Short or abbreviated name of the club.
+  founding_person: Name of the person or entity who founded the club.
+ucl_games:
+  __table__: UEFA Champions League matches played in Palearctic ecozone.
+  match: Identifier for the UEFA Champions League match.
+  matchLabel: Name or label of the match.
+  season_id: Season the match was played in.
+  played_on: Date the match was played.
+  stadium: Venue where the match was played.
+  first_team: First participating club.
+  second_team: Second participating club.
+  winner: Winning club (null for draws).
+  attendance: Number of spectators in attendance.
+  umpire: Person who refereed the match.
+ucl_arenas:
+  __table__: Stadiums and arenas in Palearctic ecozone that hosted UEFA Champions
+    League matches.
+  venue: Identifier for the venue.
+  name: Name of the venue or stadium.
+  host_country: Country the venue is located in.
+  capacity: Maximum seating capacity of the venue.
+  geo_coords: Geographic coordinates of the venue.
+  opening_date: Date the venue was officially opened.
+  venue_city: City or municipality the venue is located in.
+  tenants: Teams or organizations that regularly use the venue.
+  structural_designer: Architect who designed the venue.
+association_football_clubs:
+  __table__: Football clubs based in Palearctic ecozone.
+  club_id: Identifier for the football club.
+  club_name: Full name of the football club.
+  home_league: Name of the domestic league the club competes in.
+  club_country: Country the club is based in.
+  established: Date or year the club was founded.
+  trainer: Name of the current head coach or manager.
+  proprietor: Name of the current owner or ownership group.
+  informal_name: Nickname or informal name of the club.
+  league_titles: Number of domestic league titles won by the club.
+  fan_base_size: Number of social media followers of the club.
+  official_website: Official website URL of the club.
+  acronym: Short or abbreviated name of the club.

@@ -1,0 +1,30 @@
+individuals:
+  source: persons
+  columns:
+    individual_id: person
+    display_name: name
+    biological_sex: sex
+    date_of_birth: birth_date
+    died: death_date
+    given_name: given_name
+    paternal_name: family_name
+    country_of_citizenship: citizenship
+    birth_nation: birth_country
+    country: country
+    college: educated_at
+    height_metres: height_cm
+    sibling_count: number_of_siblings
+prizes:
+  source: awards
+  columns:
+    award_id: award
+    distinction_name: name
+    nation: country
+    first_awarded: inception
+    granting_organization: conferred_by
+person_awards:
+  source: person_awards
+  columns:
+    honoree: person
+    prize: award
+    year_awarded: award_year

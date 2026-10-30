@@ -1,0 +1,33 @@
+__database__: People database covering G7 countries, including persons, awards, and
+  prize records.
+famous_people:
+  __table__: Persons from G7 countries.
+  person_id: Identifier for the person.
+  display_name: Full name of the person.
+  gender: Sex of the person.
+  born: Date of birth.
+  date_of_death: Date of death (null if still living or unknown).
+  christian_name: Given (first) name of the person.
+  surname: Family (last) name of the person.
+  citizenship: Country of citizenship.
+  native_country: Country of birth.
+  associated_country: Country associated with the person (citizenship if known, otherwise
+    country of birth).
+  university: Name of institution where the person studied.
+  height_metres: Height of the person in centimeters.
+  children: Number of children the person has.
+  brothers_and_sisters: Number of siblings the person has.
+recognitions:
+  __table__: Awards from G7 countries.
+  award: Identifier for the award.
+  label: Name of the award.
+  country_of_origin: Country the award originates from.
+  first_awarded: Year the award was first presented.
+  granting_organization: Organization that confers the award.
+  namesake: Person or entity the award is named after.
+  web_address: Official website URL of the award.
+person_awards:
+  __table__: Records linking persons from G7 countries to awards they received.
+  person: Person who received the award.
+  honor: Award received by the person.
+  year_of_award: Year the award was received.

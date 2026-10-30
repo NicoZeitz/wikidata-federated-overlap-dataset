@@ -1,0 +1,15 @@
+companies_list:
+  source: companies
+  columns:
+    company_id: company
+    name: name
+    nation: country
+    classification: types
+    industries: industries
+    creation_date: inception
+    head_office_city: city
+    ceo: ceo_person
+    workforce_size: employees
+    revenue_usd: revenue_usd
+    bottom_line_usd: net_income_usd
+    total_assets: total_assets_usd

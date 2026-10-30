@@ -1,0 +1,32 @@
+__database__: People database covering Norway + Sweden, including persons, awards,
+  and prize records.
+people:
+  __table__: Persons from Norway + Sweden.
+  human_id: Identifier for the person.
+  person_name: Full name of the person.
+  sex_at_birth: Sex of the person.
+  date_of_birth: Date of birth.
+  dod: Date of death (null if still living or unknown).
+  personal_name: Given (first) name of the person.
+  family_name: Family (last) name of the person.
+  citizenship: Country of citizenship.
+  native_country: Country of birth.
+  nation: Country associated with the person (citizenship if known, otherwise country
+    of birth).
+  college: Name of institution where the person studied.
+  kids: Number of children the person has.
+  brothers_and_sisters: Number of siblings the person has.
+accolades:
+  __table__: Awards from Norway + Sweden.
+  honor_id: Identifier for the award.
+  distinction_name: Name of the award.
+  awarding_country: Country the award originates from.
+  founded: Year the award was first presented.
+  conferred_by: Organization that confers the award.
+  dedicated_to: Person or entity the award is named after.
+  url: Official website URL of the award.
+person_awards:
+  __table__: Records linking persons from Norway + Sweden to awards they received.
+  winner: Person who received the award.
+  accolade: Award received by the person.
+  reception_year: Year the award was received.

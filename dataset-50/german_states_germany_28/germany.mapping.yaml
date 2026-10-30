@@ -1,0 +1,13 @@
+laender:
+  source: german_states
+  columns:
+    german_state: german_state
+    parent_country: country
+    bundesland: name
+    coordinates: coords
+    total_area_km2: area_km2
+    residents: population
+    state_capital: capital
+    founded: inception
+    state_code: iso_code
+    government_website: website

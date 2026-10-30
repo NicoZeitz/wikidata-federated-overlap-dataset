@@ -1,0 +1,13 @@
+__database__: German states database covering Germany.
+german_regions:
+  __table__: The 16 German federal states (Bundesländer).
+  german_state: Identifier for the German federal state.
+  country: Country the federal state belongs to.
+  name: Name of the German federal state.
+  lat_lon: Geographic coordinates of the state centroid.
+  area: Total area of the state in square kilometers.
+  pop: Population of the state (most recent estimate).
+  landeshauptstadt: Capital city of the state.
+  creation_date: Date the state was established or re-established.
+  iso: ISO 3166-2 code of the state (e.g. DE-BY).
+  homepage: Official website of the state government.

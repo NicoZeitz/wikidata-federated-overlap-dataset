@@ -1,0 +1,12 @@
+chinese_administrative_divisions:
+  source: provinces
+  columns:
+    administrative_unit_id: province
+    nation: country
+    province_name: name
+    coordinates: coords
+    area: area_km2
+    number_of_inhabitants: population
+    capital_city: capital
+    established: inception
+    government_website: website

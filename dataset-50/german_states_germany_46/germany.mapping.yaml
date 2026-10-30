@@ -1,0 +1,13 @@
+german_regions:
+  source: german_states
+  columns:
+    german_state: german_state
+    country: country
+    name: name
+    lat_lon: coords
+    area: area_km2
+    pop: population
+    landeshauptstadt: capital
+    creation_date: inception
+    iso: iso_code
+    homepage: website

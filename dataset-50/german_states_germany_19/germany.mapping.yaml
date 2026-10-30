@@ -1,0 +1,13 @@
+german_states:
+  source: german_states
+  columns:
+    state_id: german_state
+    nation: country
+    bundesland: name
+    location: coords
+    area: area_km2
+    pop: population
+    state_capital: capital
+    inception: inception
+    state_code: iso_code
+    official_website: website

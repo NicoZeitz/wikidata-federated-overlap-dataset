@@ -1,0 +1,19 @@
+__database__: Economics database covering G7 countries, including companies.
+firms:
+  __table__: Business enterprises headquartered in G7 countries.
+  company_id: Identifier for the company.
+  label: Name of the company.
+  nation: Country where the company is headquartered.
+  classification: Types or classifications of the company (comma-separated).
+  industry: Industries the company operates in (comma-separated).
+  legal_structure: Legal form or structure of the company.
+  start_date: Date the company was founded.
+  website: Official website URL of the company.
+  head_office_city: City where the company is headquartered.
+  chief_executive: Current chief executive officer.
+  employee_count: Number of employees (most recent reported value).
+  gross_revenue_usd: Annual revenue in US dollars (most recent reported value).
+  after_tax_income_usd: Net income in US dollars (most recent reported value).
+  total_assets_usd: Total assets in US dollars (most recent reported value).
+  operating_income_usd: Operating income in US dollars (most recent reported value).
+  market_cap_usd: Market capitalization in US dollars (most recent reported value).

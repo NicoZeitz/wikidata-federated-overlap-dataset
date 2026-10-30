@@ -1,0 +1,17 @@
+__database__: Economics database covering Central Europe, including companies.
+companies_list:
+  __table__: Business enterprises headquartered in Central Europe.
+  company: Identifier for the company.
+  company_name: Name of the company.
+  nation: Country where the company is headquartered.
+  entity_types: Types or classifications of the company (comma-separated).
+  field: Industries the company operates in (comma-separated).
+  founded: Date the company was founded.
+  hq_city: City where the company is headquartered.
+  ceo_person: Current chief executive officer.
+  workforce_size: Number of employees (most recent reported value).
+  sales_usd: Annual revenue in US dollars (most recent reported value).
+  net_profit_usd: Net income in US dollars (most recent reported value).
+  assets_usd: Total assets in US dollars (most recent reported value).
+  trading_profit_usd: Operating income in US dollars (most recent reported value).
+  valuation_usd: Market capitalization in US dollars (most recent reported value).

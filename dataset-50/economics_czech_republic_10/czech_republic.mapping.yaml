@@ -1,0 +1,18 @@
+organizations:
+  source: companies
+  columns:
+    company: company
+    business_name: name
+    headquarters_country: country
+    classification: types
+    field: industries
+    inception: inception
+    homepage: website
+    head_office_city: city
+    ceo: ceo_person
+    staff: employees
+    annual_revenue_usd: revenue_usd
+    bottom_line_usd: net_income_usd
+    total_assets_usd: total_assets_usd
+    ebit_usd: operating_income_usd
+    stock_market_value_usd: market_cap_usd

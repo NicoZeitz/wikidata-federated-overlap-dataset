@@ -1,0 +1,17 @@
+__database__: Economics database covering Japan, including companies.
+organizations:
+  __table__: Business enterprises headquartered in Japan.
+  firm_id: Identifier for the company.
+  label: Name of the company.
+  headquarters_country: Country where the company is headquartered.
+  classification: Types or classifications of the company (comma-separated).
+  industry: Industries the company operates in (comma-separated).
+  legal_structure: Legal form or structure of the company.
+  start_date: Date the company was founded.
+  headquarters_city: City where the company is headquartered.
+  chief_executive: Current chief executive officer.
+  employees: Number of employees (most recent reported value).
+  total_revenue_usd: Annual revenue in US dollars (most recent reported value).
+  after_tax_income_usd: Net income in US dollars (most recent reported value).
+  assets_usd: Total assets in US dollars (most recent reported value).
+  operating_result_usd: Operating income in US dollars (most recent reported value).

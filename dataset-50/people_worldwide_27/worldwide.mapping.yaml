@@ -1,0 +1,32 @@
+notable_persons:
+  source: persons
+  columns:
+    individual_id: person
+    complete_name: name
+    sex: sex
+    date_of_birth: birth_date
+    died: death_date
+    given_name: given_name
+    surname: family_name
+    passport_country: citizenship
+    country_of_birth: birth_country
+    nation: country
+    school: educated_at
+    body_height: height_cm
+    kids: number_of_children
+    brothers_and_sisters: number_of_siblings
+recognitions:
+  source: awards
+  columns:
+    prize_id: award
+    name: name
+    nation: country
+    first_awarded: inception
+    awarding_body: conferred_by
+    namesake: named_after
+person_awards:
+  source: person_awards
+  columns:
+    honoree: person
+    prize: award
+    award_year: award_year

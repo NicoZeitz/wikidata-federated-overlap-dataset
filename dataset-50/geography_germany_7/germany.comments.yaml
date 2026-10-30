@@ -1,0 +1,81 @@
+__database__: Geographic database covering Germany, including countries, continents,
+  and cities.
+territories:
+  __table__: Sovereign countries in Germany.
+  nation_id: Identifier for the country.
+  state_name: Name of the country.
+  iso2_code: ISO 3166-1 alpha-2 two-letter country code.
+  continent_id: Continent the country belongs to.
+  territory_size_km2: Total area of the country in square kilometers.
+  total_population: Population of the country (most recent estimate).
+  gdp_nominal_usd: Nominal GDP of the country in US dollars (most recent reported
+    value).
+  capital_city_id: Capital city.
+  official_currency: Name of the official currency.
+  coordinates: Geographic coordinates of the country centroid.
+  independence_date: Date the country was founded or became independent.
+  formal_name: Official name of the country in English.
+  country_code_phone: International telephone dialling code (e.g. +49).
+  population_male: Male population count (most recent estimate).
+  female_population: Female population count (most recent estimate).
+  average_life_expectancy: Average life expectancy at birth in years.
+  hdi: Human Development Index score (0–1).
+  jobless_rate: Unemployment rate as a percentage of the labour force.
+  gini: Gini coefficient measuring income inequality (0–1).
+  tfr: Average number of children born per woman.
+  live_births_per_1000: Number of live births per 1000 inhabitants per year.
+  crude_death_rate: Number of deaths per 1000 inhabitants per year.
+  suicides_per_100000: Suicide rate per 100,000 inhabitants per year.
+  democracy_index: Democracy Index score (0–10) from the Economist Intelligence Unit.
+  central_bank: Name of the central bank.
+  highest_peak: Name of the highest geographical point in the country.
+  max_elevation_m: Elevation of the highest point above sea level in meters.
+  lowest_area: Name of the lowest geographical point in the country.
+  lowest_elevation_m: Elevation of the lowest point above sea level in meters (negative
+    if below sea level).
+  northmost_coords: Geographic coordinates of the northernmost point of the country.
+  southernmost_coords: Geographic coordinates of the southernmost point of the country.
+  eastmost_coords: Geographic coordinates of the easternmost point of the country.
+  westmost_coords: Geographic coordinates of the westernmost point of the country.
+  nationality_name: Comma-separated adjectives or nouns used to describe inhabitants
+    of the country.
+  official_languages: Comma-separated official languages of the country.
+  head_of_state: Current head of state of the country.
+  prime_minister: Current head of government of the country.
+landmasses:
+  __table__: Continents covering Germany.
+  continent: Identifier for the continent.
+  label: Name of the continent.
+  size_km2: Total land area of the continent in square kilometers.
+  inhabitants: Total population of the continent (most recent estimate).
+  centroid: Geographic coordinates of the continent centroid.
+  highest_mountain: Name of the highest geographical point on the continent.
+  max_elevation_m: Elevation of the highest point above sea level in meters.
+  lowest_point: Name of the lowest geographical point on the continent.
+  min_elevation_m: Elevation of the lowest point above sea level in meters (negative
+    if below sea level).
+  largest_urban_area: Most populous urban area on the continent.
+  out_of_school_children: Estimated number of school-age children not enrolled in
+    school.
+  un_region_code: UN M49 numeric region code assigned to the continent.
+  inhabitant_name: Comma-separated adjectives or nouns used to describe inhabitants
+    of the continent.
+  north_pole_coords: Geographic coordinates of the northernmost point of the continent.
+  southern_tip_coords: Geographic coordinates of the southernmost point of the continent.
+  eastern_tip_coords: Geographic coordinates of the easternmost point of the continent.
+  westmost_coords: Geographic coordinates of the westernmost point of the continent.
+populated_places:
+  __table__: Cities and human settlements located in Germany.
+  city_id: Identifier for the city.
+  settlement_name: Name of the city.
+  home_country: Country the city is located in.
+  number_of_inhabitants: Population of the city (most recent estimate).
+  geo_coords: Geographic coordinates of the city.
+  founding_year: Date or year the city was founded or first recorded.
+  alias: Comma-separated informal names or nicknames of the city.
+  zip: Postal or ZIP code of the city.
+  gross_domestic_product: Nominal GDP of the city in US dollars.
+  income_per_capita: Per capita income of the city in US dollars.
+  altitude: Elevation of the city above sea level in meters.
+  size_km2: Total area of the city in square kilometers.
+  cars_per_thousand: Number of registered motor vehicles per thousand inhabitants.

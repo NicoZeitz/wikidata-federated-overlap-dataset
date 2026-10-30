@@ -1,0 +1,74 @@
+states:
+  source: countries
+  columns:
+    nation_id: country
+    title: name
+    continent: continent
+    area_km2: area_km2
+    pop: population
+    economic_output_usd: gdp_usd
+    seat_of_government: capital
+    currency: currency_name
+    coords: coords
+    established: inception
+    phone_code: telephone_code
+    population_male: population_male
+    female_count: population_female
+    average_life_expectancy: life_expectancy
+    human_development_index: human_development_index
+    unemployment_pct: unemployment_rate
+    income_inequality: gini_coefficient
+    total_fertility_rate: total_fertility_rate
+    birth_rate: birth_rate
+    death_rate: death_rate
+    suicide_mortality_rate: suicide_rate
+    political_freedom_score: democracy_index
+    reserve_bank: central_bank
+    highest_mountain: highest_point
+    highest_point_m: highest_point_m
+    depression: lowest_point
+    nadir_elevation_m: lowest_point_m
+    northernmost_point: northernmost_point
+    southmost_coords: southernmost_point
+    eastern_extreme: easternmost_point
+    westmost_coords: westernmost_point
+    nationality_name: demonym
+    national_languages: languages
+    president: head_of_state
+    chancellor: head_of_government
+world_divisions:
+  source: continents
+  columns:
+    id: continent
+    label: name
+    size_km2: area_km2
+    population_count: population
+    geo_coords: coords
+    highest_mountain: highest_point
+    max_elevation_m: highest_point_m
+    lowest_elevation: lowest_point
+    nadir_elevation_m: lowest_point_m
+    largest_urban_area: most_populous_urban_area
+    non_enrolled_children: out_of_school_children
+    un_code: m49_code
+    resident_name: demonym
+    north_pole_coords: northernmost_point
+    southmost_coords: southernmost_point
+    eastern_extreme: easternmost_point
+    western_tip_coords: westernmost_point
+populated_places:
+  source: cities
+  columns:
+    city_id: city
+    city_name: name
+    nation: country
+    city_population: population
+    location: coords
+    founding_date: inception
+    zip: postal_code
+    resident_name: demonym
+    city_gdp: gdp_usd
+    average_income_usd: per_capita_income_usd
+    height_m: elevation_m
+    surface_area_km2: area_km2
+    vehicle_density: vehicles_per_thousand

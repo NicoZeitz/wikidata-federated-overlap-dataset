@@ -1,0 +1,31 @@
+celebrities:
+  source: persons
+  columns:
+    individual_id: person
+    label: name
+    biological_sex: sex
+    date_of_birth: birth_date
+    death_date: death_date
+    christian_name: given_name
+    paternal_name: family_name
+    nationality: citizenship
+    birthplace_country: birth_country
+    country: country
+    school: educated_at
+    height: height_cm
+    children: number_of_children
+    sibling_count: number_of_siblings
+recognitions:
+  source: awards
+  columns:
+    honor_id: award
+    title: name
+    country: country
+    inception: inception
+    website: official_website
+person_awards:
+  source: person_awards
+  columns:
+    winner: person
+    award_id: award
+    award_year: award_year

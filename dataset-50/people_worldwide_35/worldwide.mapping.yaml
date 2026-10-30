@@ -1,0 +1,32 @@
+notable_persons:
+  source: persons
+  columns:
+    person: person
+    display_name: name
+    biological_sex: sex
+    birth_day: birth_date
+    death_date: death_date
+    first_name: given_name
+    last_name: family_name
+    citizenship: citizenship
+    country_of_birth: birth_country
+    associated_country: country
+    university: educated_at
+    height_cm: height_cm
+    child_count: number_of_children
+    brothers_and_sisters: number_of_siblings
+decorations:
+  source: awards
+  columns:
+    award: award
+    distinction_name: name
+    origin_country: country
+    first_awarded: inception
+    namesake: named_after
+    url: official_website
+person_awards:
+  source: person_awards
+  columns:
+    person: person
+    distinction: award
+    award_year: award_year

@@ -1,0 +1,12 @@
+administrative_regions:
+  source: provinces
+  columns:
+    province: province
+    country: country
+    division_name: name
+    centroid: coords
+    land_area_km2: area_km2
+    population_count: population
+    provincial_capital: capital
+    creation_date: inception
+    region_code: iso_code

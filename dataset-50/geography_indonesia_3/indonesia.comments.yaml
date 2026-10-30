@@ -1,0 +1,81 @@
+__database__: Geographic database covering Indonesia, including countries, continents,
+  and cities.
+territories:
+  __table__: Sovereign countries in Indonesia.
+  country_id: Identifier for the country.
+  nation: Name of the country.
+  iso_alpha3: ISO 3166-1 alpha-3 three-letter country code.
+  continent: Continent the country belongs to.
+  area_km2: Total area of the country in square kilometers.
+  population: Population of the country (most recent estimate).
+  gdp: Nominal GDP of the country in US dollars (most recent reported value).
+  seat_of_government: Capital city.
+  currency_name: Name of the official currency.
+  lat_lon: Geographic coordinates of the country centroid.
+  founded: Date the country was founded or became independent.
+  formal_name: Official name of the country in English.
+  phone_code: International telephone dialling code (e.g. +49).
+  number_of_males: Male population count (most recent estimate).
+  women_population: Female population count (most recent estimate).
+  average_life_expectancy: Average life expectancy at birth in years.
+  human_development_score: Human Development Index score (0–1).
+  out_of_work_rate: Unemployment rate as a percentage of the labour force.
+  income_inequality: Gini coefficient measuring income inequality (0–1).
+  crude_birth_rate: Number of live births per 1000 inhabitants per year.
+  deaths_per_1000: Number of deaths per 1000 inhabitants per year.
+  suicides_per_100000: Suicide rate per 100,000 inhabitants per year.
+  political_freedom_score: Democracy Index score (0–10) from the Economist Intelligence
+    Unit.
+  national_bank: Name of the central bank.
+  highest_mountain: Name of the highest geographical point in the country.
+  peak_height_m: Elevation of the highest point above sea level in meters.
+  lowest_point: Name of the lowest geographical point in the country.
+  min_elevation_m: Elevation of the lowest point above sea level in meters (negative
+    if below sea level).
+  northernmost_point: Geographic coordinates of the northernmost point of the country.
+  southernmost_point: Geographic coordinates of the southernmost point of the country.
+  easternmost_coords: Geographic coordinates of the easternmost point of the country.
+  western_extreme: Geographic coordinates of the westernmost point of the country.
+  citizen_name: Comma-separated adjectives or nouns used to describe inhabitants of
+    the country.
+  state_languages: Comma-separated official languages of the country.
+  president: Current head of state of the country.
+  premier: Current head of government of the country.
+geographic_regions:
+  __table__: Continents covering Indonesia.
+  continent_id: Identifier for the continent.
+  landmass_name: Name of the continent.
+  area: Total land area of the continent in square kilometers.
+  inhabitants: Total population of the continent (most recent estimate).
+  lat_lon: Geographic coordinates of the continent centroid.
+  tallest_point: Name of the highest geographical point on the continent.
+  highest_point_m: Elevation of the highest point above sea level in meters.
+  nadir: Name of the lowest geographical point on the continent.
+  min_elevation_m: Elevation of the lowest point above sea level in meters (negative
+    if below sea level).
+  largest_urban_area: Most populous urban area on the continent.
+  children_out_of_school: Estimated number of school-age children not enrolled in
+    school.
+  un_region_code: UN M49 numeric region code assigned to the continent.
+  demonym: Comma-separated adjectives or nouns used to describe inhabitants of the
+    continent.
+  north_pole_coords: Geographic coordinates of the northernmost point of the continent.
+  southmost_coords: Geographic coordinates of the southernmost point of the continent.
+  easternmost_point: Geographic coordinates of the easternmost point of the continent.
+  western_extreme: Geographic coordinates of the westernmost point of the continent.
+communities:
+  __table__: Cities and human settlements located in Indonesia.
+  municipality_id: Identifier for the city.
+  locality: Name of the city.
+  country: Country the city is located in.
+  number_of_inhabitants: Population of the city (most recent estimate).
+  lat_lon: Geographic coordinates of the city.
+  founding_year: Date or year the city was founded or first recorded.
+  zip: Postal or ZIP code of the city.
+  demonym: Comma-separated adjectives or nouns used to describe inhabitants of the
+    city.
+  city_gdp: Nominal GDP of the city in US dollars.
+  per_capita_income_usd: Per capita income of the city in US dollars.
+  height_m: Elevation of the city above sea level in meters.
+  total_area_km2: Total area of the city in square kilometers.
+  vehicle_density: Number of registered motor vehicles per thousand inhabitants.

@@ -1,0 +1,54 @@
+__database__: Aviation database covering G20 countries, including airports, airlines,
+  aircraft, and accidents.
+terminals:
+  __table__: Airports located in G20 countries.
+  airport: Identifier for the airport.
+  terminal_name: Name of the airport.
+  iata_identifier: IATA three-letter airport code.
+  icao_identifier: ICAO four-letter airport code.
+  height_m: Elevation of the airport above sea level in meters.
+  throughput: Annual passenger count (most recent reported value).
+  airport_area: Total area of the airport in square kilometers.
+  timezone_offset: UTC offset of the airport's timezone in hours.
+  geo_coords: Geographic coordinates of the airport.
+  nearest_city: City the airport serves.
+  airport_country: Country the airport is located in.
+carriers:
+  __table__: Airlines headquartered in G20 countries.
+  airline_id: Identifier for the airline.
+  operator_name: Name of the airline.
+  country: Country where the airline is headquartered.
+  start_date: Date the airline was founded.
+  employees: Number of employees (most recent reported value).
+  total_revenue_usd: Annual revenue in US dollars (most recent reported value).
+  aircraft_count: Number of aircraft in the fleet.
+  holding_company: Parent company or holding group.
+  iata_code: IATA airline designator code (2-letter).
+  icao: ICAO airline designator code (3-letter).
+  hq_location: City or location where the airline is headquartered.
+  homepage: Official website of the airline.
+  primary_hub: A hub airport of the airline.
+flying_machines:
+  __table__: Individual aircraft operated by airlines based in G20 countries.
+  aircraft: Identifier for the aircraft.
+  label: Name or registration of the aircraft.
+  carrier: Airline operating the aircraft.
+  operator_country: Country of the operating airline.
+  aircraft_variant: Aircraft model type (e.g. Boeing 737-800).
+  producer: Manufacturer of the aircraft.
+  debut_flight: Date of the aircraft's first flight.
+  total_seats: Maximum passenger capacity.
+  cruise_speed: Cruise speed in kilometers per hour.
+  wing_width_m: Wingspan in meters.
+  body_length_m: Length of the aircraft in meters.
+  gross_weight_kg: Maximum takeoff weight in kilograms.
+flight_accidents:
+  __table__: Aviation accidents involving airlines that occurred in G20 countries.
+  accident: Identifier for the aviation accident.
+  label: Name or description of the accident.
+  carrier: Airline involved in the accident.
+  crash_country: Country where the accident occurred.
+  incident_date: Date of the accident.
+  killed: Number of fatalities in the accident.
+  survivor_count: Number of survivors.
+  flight_code: Flight number of the aircraft involved.

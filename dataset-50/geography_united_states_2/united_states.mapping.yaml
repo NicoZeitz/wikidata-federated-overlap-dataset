@@ -1,0 +1,77 @@
+territories:
+  source: countries
+  columns:
+    state_id: country
+    name: name
+    three_letter_country_code: iso3
+    continent: continent
+    total_area_km2: area_km2
+    number_of_inhabitants: population
+    gdp_nominal_usd: gdp_usd
+    seat_of_government: capital
+    currency_name: currency_name
+    location: coords
+    founding_date: inception
+    long_name: official_name
+    phone_code: telephone_code
+    male_population: population_male
+    women_population: population_female
+    life_exp: life_expectancy
+    human_development_index: human_development_index
+    unemployment_rate: unemployment_rate
+    gini: gini_coefficient
+    children_per_woman: total_fertility_rate
+    crude_birth_rate: birth_rate
+    deaths_per_1000: death_rate
+    suicide_mortality_rate: suicide_rate
+    median_income_usd: median_income_usd
+    democracy_index: democracy_index
+    reserve_bank: central_bank
+    highest_peak: highest_point
+    summit_height_m: highest_point_m
+    lowest_area: lowest_point
+    depression_m: lowest_point_m
+    northernmost_point: northernmost_point
+    southernmost_point: southernmost_point
+    easternmost_coords: easternmost_point
+    westmost_coords: westernmost_point
+    nationality_name: demonym
+    spoken_languages: languages
+    head_of_state: head_of_state
+    head_of_government: head_of_government
+geographic_regions:
+  source: continents
+  columns:
+    continent: continent
+    region_name: name
+    total_area_km2: area_km2
+    pop: population
+    lat_lon: coords
+    tallest_point: highest_point
+    peak_height_m: highest_point_m
+    nadir: lowest_point
+    min_elevation_m: lowest_point_m
+    largest_city: most_populous_urban_area
+    out_of_school_children: out_of_school_children
+    un_region_code: m49_code
+    gentilic: demonym
+    northernmost_point: northernmost_point
+    southern_tip_coords: southernmost_point
+    eastern_extreme: easternmost_point
+    western_extreme: westernmost_point
+municipalities:
+  source: cities
+  columns:
+    municipality_id: city
+    name: name
+    city_country: country
+    number_of_inhabitants: population
+    coordinates: coords
+    established: inception
+    informal_name: nickname
+    zip: postal_code
+    city_gdp: gdp_usd
+    average_income_usd: per_capita_income_usd
+    altitude_m: elevation_m
+    area_km2: area_km2
+    vehicles_per_thousand: vehicles_per_thousand

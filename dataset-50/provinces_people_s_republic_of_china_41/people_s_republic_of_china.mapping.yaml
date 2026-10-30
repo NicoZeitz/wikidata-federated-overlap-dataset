@@ -1,0 +1,12 @@
+provinces:
+  source: provinces
+  columns:
+    province_id: province
+    parent_country: country
+    name: name
+    location: coords
+    area_km2: area_km2
+    pop: population
+    provincial_capital: capital
+    founding_date: inception
+    province_code: iso_code

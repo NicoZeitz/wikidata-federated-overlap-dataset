@@ -1,0 +1,53 @@
+games:
+  source: matches
+  columns:
+    match: match
+    title: name
+    played_on: date
+    world_cup_edition: tournament
+    round: stage_type
+    ground: venue
+    first_team: team1
+    home_goals: team1_score
+    second_team: team2
+    team2_goals: team2_score
+    winner: winner
+    fans: attendance
+    umpire: referee
+international_teams:
+  source: teams
+  columns:
+    team: team
+    title: name
+    country: country
+    established: inception
+    official_name: native_label
+    sobriquet: nickname
+    world_ranking: ranking
+    competition_class: competition_class
+    trainer: head_coach
+    skipper: captain
+grounds:
+  source: venues
+  columns:
+    venue: venue
+    label: name
+    host_country: country
+    total_capacity: capacity
+    coordinates: coords
+    opening_year: inception
+    venue_city: city
+    architect: architect
+competitions:
+  source: tournaments
+  columns:
+    tournament_id: tournament
+    label: name
+    tournament_year: year
+    host_country: country
+    edition_number: edition_number
+    tournament_mascot: mascot
+    qualified_teams: participants
+    winner: winner
+    match_count: matches_played
+    goals_scored: goals_scored

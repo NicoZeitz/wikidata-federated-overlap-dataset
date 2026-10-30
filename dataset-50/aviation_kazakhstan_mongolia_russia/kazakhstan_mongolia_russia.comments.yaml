@@ -1,0 +1,55 @@
+__database__: Aviation database covering Kazakhstan + Mongolia + Russia, including
+  airports, airlines, aircraft, and accidents.
+air_hubs:
+  __table__: Airports located in Kazakhstan + Mongolia + Russia.
+  airport_id: Identifier for the airport.
+  airfield_name: Name of the airport.
+  iata: IATA three-letter airport code.
+  elevation: Elevation of the airport above sea level in meters.
+  annual_passengers: Annual passenger count (most recent reported value).
+  tz_offset: UTC offset of the airport's timezone in hours.
+  inception: Date the airport was opened or established.
+  position: Geographic coordinates of the airport.
+  served_city: City the airport serves.
+  country: Country the airport is located in.
+air_transport_companies:
+  __table__: Airlines headquartered in Kazakhstan + Mongolia + Russia.
+  airline: Identifier for the airline.
+  company_name: Name of the airline.
+  headquarters_country: Country where the airline is headquartered.
+  founding_date: Date the airline was founded.
+  number_of_employees: Number of employees (most recent reported value).
+  revenue_usd: Annual revenue in US dollars (most recent reported value).
+  total_aircraft: Number of aircraft in the fleet.
+  parent: Parent company or holding group.
+  airline_code_iata: IATA airline designator code (2-letter).
+  airline_code_icao: ICAO airline designator code (3-letter).
+  hq_city: City or location where the airline is headquartered.
+  official_website: Official website of the airline.
+  base_airport: A hub airport of the airline.
+jets:
+  __table__: Individual aircraft operated by airlines based in Kazakhstan + Mongolia
+    + Russia.
+  identifier: Identifier for the aircraft.
+  name_registration: Name or registration of the aircraft.
+  operator: Airline operating the aircraft.
+  nation: Country of the operating airline.
+  model: Aircraft model type (e.g. Boeing 737-800).
+  maker: Manufacturer of the aircraft.
+  first_flight_date: Date of the aircraft's first flight.
+  capacity: Maximum passenger capacity.
+  speed: Cruise speed in kilometers per hour.
+  wingspan: Wingspan in meters.
+  body_length_m: Length of the aircraft in meters.
+  max_gross_weight_kg: Maximum takeoff weight in kilograms.
+aviation_accidents:
+  __table__: Aviation accidents involving airlines that occurred in Kazakhstan + Mongolia
+    + Russia.
+  event_id: Identifier for the aviation accident.
+  description: Name or description of the accident.
+  flight_operator: Airline involved in the accident.
+  country: Country where the accident occurred.
+  date: Date of the accident.
+  number_of_deaths: Number of fatalities in the accident.
+  survivors: Number of survivors.
+  flight_code: Flight number of the aircraft involved.

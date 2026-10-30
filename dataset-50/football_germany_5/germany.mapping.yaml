@@ -1,0 +1,53 @@
+matches:
+  source: matches
+  columns:
+    fixture_id: match
+    label: name
+    game_date: date
+    event: tournament
+    stage: stage_type
+    host_stadium: venue
+    team1: team1
+    goals_team1: team1_score
+    side_two: team2
+    team2_goals: team2_score
+    winner: winner
+    gate: attendance
+    official: referee
+teams:
+  source: teams
+  columns:
+    team_id: team
+    label: name
+    home_country: country
+    founding_date: inception
+    local_name: native_label
+    nickname: nickname
+    current_ranking: ranking
+    league: competition_class
+    coach: head_coach
+    captain: captain
+arenas:
+  source: venues
+  columns:
+    venue: venue
+    venue_name: name
+    nation: country
+    seats: capacity
+    coordinates: coords
+    opened: inception
+    city: city
+    tenants: occupant
+    architect: architect
+editions:
+  source: tournaments
+  columns:
+    competition_id: tournament
+    event_name: name
+    edition_year: year
+    host_country: country
+    edition: edition_number
+    participants: participants
+    winning_team: winner
+    match_count: matches_played
+    total_goals: goals_scored

@@ -1,0 +1,53 @@
+__database__: Aviation database covering OECD, including airports, airlines, aircraft,
+  and accidents.
+aerodromes:
+  __table__: Airports located in OECD.
+  airport: Identifier for the airport.
+  aerodrome_name: Name of the airport.
+  iata: IATA three-letter airport code.
+  elevation_m: Elevation of the airport above sea level in meters.
+  yearly_passengers: Annual passenger count (most recent reported value).
+  surface_area_km2: Total area of the airport in square kilometers.
+  time_zone_offset: UTC offset of the airport's timezone in hours.
+  established: Date the airport was opened or established.
+  coordinates: Geographic coordinates of the airport.
+  nearest_city: City the airport serves.
+  host_country: Country the airport is located in.
+commercial_airlines:
+  __table__: Airlines headquartered in OECD.
+  airline: Identifier for the airline.
+  title: Name of the airline.
+  country: Country where the airline is headquartered.
+  founded: Date the airline was founded.
+  employees: Number of employees (most recent reported value).
+  income_usd: Annual revenue in US dollars (most recent reported value).
+  aircraft_count: Number of aircraft in the fleet.
+  parent_company: Parent company or holding group.
+  two_letter_code: IATA airline designator code (2-letter).
+  airline_code_icao: ICAO airline designator code (3-letter).
+  hq_location: City or location where the airline is headquartered.
+  homepage: Official website of the airline.
+  primary_hub: A hub airport of the airline.
+airliners:
+  __table__: Individual aircraft operated by airlines based in OECD.
+  tail_number: Identifier for the aircraft.
+  name: Name or registration of the aircraft.
+  airline: Airline operating the aircraft.
+  country: Country of the operating airline.
+  aircraft_model: Aircraft model type (e.g. Boeing 737-800).
+  producer: Manufacturer of the aircraft.
+  maiden_flight: Date of the aircraft's first flight.
+  seats: Maximum passenger capacity.
+  cruise_speed: Cruise speed in kilometers per hour.
+  wingspan_m: Wingspan in meters.
+  fuselage_length_m: Length of the aircraft in meters.
+  gross_weight_kg: Maximum takeoff weight in kilograms.
+incidents:
+  __table__: Aviation accidents involving airlines that occurred in OECD.
+  accident: Identifier for the aviation accident.
+  label: Name or description of the accident.
+  airline: Airline involved in the accident.
+  crash_country: Country where the accident occurred.
+  event_date: Date of the accident.
+  death_toll: Number of fatalities in the accident.
+  survivor_count: Number of survivors.

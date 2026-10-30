@@ -1,0 +1,54 @@
+__database__: UEFA Champions League database covering Ukraine, including clubs, matches,
+  and venues.
+cl_clubs:
+  __table__: Football clubs based in Ukraine that participated in the UEFA Champions
+    League.
+  club_id: Identifier for the football club.
+  label: Full name of the football club.
+  competition: Name of the domestic league the club competes in.
+  country: Country the club is based in.
+  established: Date or year the club was founded.
+  arena: Name of the club's home stadium.
+  coach: Name of the current head coach or manager.
+  investor: Name of the current owner or ownership group.
+  alias: Nickname or informal name of the club.
+  leagueTitles: Number of domestic league titles won by the club.
+  fan_base_size: Number of social media followers of the club.
+  url: Official website URL of the club.
+  shortName: Short or abbreviated name of the club.
+  established_by: Name of the person or entity who founded the club.
+ucl_matches:
+  __table__: UEFA Champions League matches played in Ukraine.
+  fixture_id: Identifier for the UEFA Champions League match.
+  game_name: Name or label of the match.
+  season_id: Season the match was played in.
+  fixture_date: Date the match was played.
+  ground: Venue where the match was played.
+  team1: First participating club.
+  team_b: Second participating club.
+  match_winner: Winning club (null for draws).
+  attendance: Number of spectators in attendance.
+  match_referee: Person who refereed the match.
+ucl_stadiums:
+  __table__: Stadiums and arenas in Ukraine that hosted UEFA Champions League matches.
+  venue_id: Identifier for the venue.
+  arena_name: Name of the venue or stadium.
+  country: Country the venue is located in.
+  stadium_capacity: Maximum seating capacity of the venue.
+  geo_coords: Geographic coordinates of the venue.
+  inception: Date the venue was officially opened.
+  location_city: City or municipality the venue is located in.
+  primary_occupant: Teams or organizations that regularly use the venue.
+  architect: Architect who designed the venue.
+football_clubs:
+  __table__: Football clubs based in Ukraine.
+  team_id: Identifier for the football club.
+  label: Full name of the football club.
+  competition: Name of the domestic league the club competes in.
+  home_country: Country the club is based in.
+  founded: Date or year the club was founded.
+  byname: Nickname or informal name of the club.
+  domestic_titles: Number of domestic league titles won by the club.
+  social_media_followers: Number of social media followers of the club.
+  web_address: Official website URL of the club.
+  club_founder: Name of the person or entity who founded the club.

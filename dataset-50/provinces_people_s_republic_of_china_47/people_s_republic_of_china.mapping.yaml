@@ -1,0 +1,12 @@
+administrative_regions:
+  source: provinces
+  columns:
+    administrative_unit_id: province
+    nation: country
+    label: name
+    centroid: coords
+    total_area_km2: area_km2
+    number_of_inhabitants: population
+    capital: capital
+    established: inception
+    homepage: website

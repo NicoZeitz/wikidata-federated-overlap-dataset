@@ -1,0 +1,13 @@
+__database__: US states database covering United States.
+usa_states:
+  __table__: The 50 US states.
+  us_state_id: Identifier for the US state.
+  parent_country: Country the state belongs to.
+  state_name: Name of the US state.
+  centroid: Geographic coordinates of the state centroid.
+  size_km2: Total area of the state in square kilometers.
+  population_count: Population of the state (most recent estimate).
+  capital: Capital city of the state.
+  admitted: Date the state was admitted to the Union.
+  abbreviation: ISO 3166-2 code of the state (e.g. US-CA).
+  homepage: Official website of the state government.

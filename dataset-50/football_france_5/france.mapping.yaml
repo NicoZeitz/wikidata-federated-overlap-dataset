@@ -1,0 +1,54 @@
+matches:
+  source: matches
+  columns:
+    match_id: match
+    label: name
+    played_on: date
+    world_cup_edition: tournament
+    tournament_round: stage_type
+    venue: venue
+    team1: team1
+    team1_score: team1_score
+    second_team: team2
+    team2_score: team2_score
+    winning_team: winner
+    crowd_size: attendance
+    official: referee
+national_football_teams:
+  source: teams
+  columns:
+    squad_id: team
+    national_team_name: name
+    team_country: country
+    founded: inception
+    official_name: native_label
+    informal_name: nickname
+    fifa_ranking: ranking
+    competition_class: competition_class
+    trainer: head_coach
+    leader: captain
+sports_venues:
+  source: venues
+  columns:
+    arena_id: venue
+    arena_name: name
+    host_country: country
+    capacity: capacity
+    coords: coords
+    construction_completion: inception
+    host_city: city
+    regular_users: occupant
+    structural_designer: architect
+competitions:
+  source: tournaments
+  columns:
+    tournament: tournament
+    event_name: name
+    year: year
+    host_country: country
+    edition_count: edition_number
+    official_mascot: mascot
+    qualified_teams: participants
+    champion: winner
+    matches_played: matches_played
+    total_goals: goals_scored

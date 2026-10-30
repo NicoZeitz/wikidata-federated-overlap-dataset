@@ -1,0 +1,54 @@
+__database__: Football database covering UTC-5 countries (Eastern / Peru / Colombia),
+  including matches, teams, venues, and tournaments.
+football_matches:
+  __table__: FIFA World Cup matches played in UTC-5 countries (Eastern / Peru / Colombia).
+  match: Identifier for the FIFA World Cup match.
+  match_name: Name or label of the match.
+  fixture_date: Date the match was played.
+  competition: Tournament this match belongs to.
+  competition_stage: Stage of the tournament (e.g. group stage, quarterfinal, final).
+  stadium: Venue where the match was played.
+  side_one: First participating team.
+  team_a_score: Goals scored by team1.
+  second_team: Second participating team.
+  team2_score: Goals scored by team2.
+  champion: Winning team (null for draws).
+  audience: Number of spectators in attendance.
+  arbiter: Person who refereed the match.
+national_teams:
+  __table__: National football teams from UTC-5 countries (Eastern / Peru / Colombia).
+  squad_id: Identifier for the national football team.
+  squad_name: Name of the team.
+  team_country: Country the team represents.
+  founded: Year the team was founded.
+  local_name: Official name of the team in its native language.
+  nickname: Comma-separated nicknames of the team.
+  current_ranking: FIFA world ranking of the team.
+  division: Competition class or league the team participates in.
+  trainer: Current head coach of the team.
+  team_captain: Current team captain.
+venues:
+  __table__: Stadiums and arenas in UTC-5 countries (Eastern / Peru / Colombia) that
+    hosted FIFA World Cup matches.
+  venue_id: Identifier for the venue.
+  title: Name of the venue or stadium.
+  venue_country: Country the venue is located in.
+  seating_capacity: Maximum seating capacity of the venue.
+  geo_coords: Geographic coordinates of the venue.
+  opening_year: Date the venue was officially opened.
+  location_city: City or municipality the venue is located in.
+  tenants: Teams or organizations that regularly use the venue.
+  structural_designer: Architect who designed the venue.
+competitions:
+  __table__: FIFA World Cup tournaments held in UTC-5 countries (Eastern / Peru /
+    Colombia).
+  tournament: Identifier for the FIFA World Cup tournament edition.
+  tournament_name: Name of the tournament (e.g. 1966 FIFA World Cup).
+  tournament_year: Year the tournament was held.
+  nation: Host country of the tournament.
+  edition_count: Ordinal edition number of the tournament (e.g. 23 for the 23rd World
+    Cup).
+  participating_teams: Number of teams participating in the tournament.
+  winning_team: Winning team of the tournament.
+  total_matches: Total number of matches played in the tournament.
+  total_goals_scored: Total number of goals scored across all matches.

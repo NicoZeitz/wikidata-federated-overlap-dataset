@@ -1,0 +1,19 @@
+__database__: Economics database covering Worldwide, including companies.
+companies:
+  __table__: Business enterprises headquartered in Worldwide.
+  business_id: Identifier for the company.
+  title: Name of the company.
+  country_of_incorporation: Country where the company is headquartered.
+  entity_types: Types or classifications of the company (comma-separated).
+  industries: Industries the company operates in (comma-separated).
+  legal_form: Legal form or structure of the company.
+  creation_date: Date the company was founded.
+  head_office_city: City where the company is headquartered.
+  managing_director: Current chief executive officer.
+  staff_count: Number of employees (most recent reported value).
+  sales_usd: Annual revenue in US dollars (most recent reported value).
+  after_tax_income_usd: Net income in US dollars (most recent reported value).
+  asset_value_usd: Total assets in US dollars (most recent reported value).
+  operating_result_usd: Operating income in US dollars (most recent reported value).
+  stock_market_value_usd: Market capitalization in US dollars (most recent reported
+    value).

@@ -1,0 +1,12 @@
+chinese_provinces:
+  source: provinces
+  columns:
+    administrative_unit_id: province
+    nation: country
+    label: name
+    centroid: coords
+    area_km2: area_km2
+    residents: population
+    capital: capital
+    inception: inception
+    province_code: iso_code

@@ -1,0 +1,75 @@
+__database__: Geographic database covering India, including countries, continents,
+  and cities.
+territories:
+  __table__: Sovereign countries in India.
+  nation_id: Identifier for the country.
+  state_name: Name of the country.
+  continent_id: Continent the country belongs to.
+  area: Total area of the country in square kilometers.
+  number_of_inhabitants: Population of the country (most recent estimate).
+  national_income_usd: Nominal GDP of the country in US dollars (most recent reported
+    value).
+  seat_of_government: Capital city.
+  official_currency: Name of the official currency.
+  lat_lon: Geographic coordinates of the country centroid.
+  founded: Date the country was founded or became independent.
+  official_name: Official name of the country in English.
+  international_dialing_code: International telephone dialling code (e.g. +49).
+  men_population: Male population count (most recent estimate).
+  women_population: Female population count (most recent estimate).
+  average_life_expectancy: Average life expectancy at birth in years.
+  human_development_score: Human Development Index score (0–1).
+  joblessness_rate: Unemployment rate as a percentage of the labour force.
+  gini: Gini coefficient measuring income inequality (0–1).
+  live_births_per_1000: Number of live births per 1000 inhabitants per year.
+  mortality_rate: Number of deaths per 1000 inhabitants per year.
+  self_harm_mortality_rate: Suicide rate per 100,000 inhabitants per year.
+  median_income_usd: Median household or personal income in US dollars.
+  eiu_democracy_index: Democracy Index score (0–10) from the Economist Intelligence
+    Unit.
+  central_bank: Name of the central bank.
+  highest_peak: Name of the highest geographical point in the country.
+  peak_height_m: Elevation of the highest point above sea level in meters.
+  lowest_elevation: Name of the lowest geographical point in the country.
+  lowest_point_m: Elevation of the lowest point above sea level in meters (negative
+    if below sea level).
+  northernmost_point: Geographic coordinates of the northernmost point of the country.
+  southmost_coords: Geographic coordinates of the southernmost point of the country.
+  eastmost_coords: Geographic coordinates of the easternmost point of the country.
+  western_extreme: Geographic coordinates of the westernmost point of the country.
+  spoken_languages: Comma-separated official languages of the country.
+  president: Current head of state of the country.
+  premier: Current head of government of the country.
+world_regions:
+  __table__: Continents covering India.
+  continent: Identifier for the continent.
+  name: Name of the continent.
+  area_km2: Total land area of the continent in square kilometers.
+  inhabitants: Total population of the continent (most recent estimate).
+  location: Geographic coordinates of the continent centroid.
+  summit: Name of the highest geographical point on the continent.
+  summit_elevation_m: Elevation of the highest point above sea level in meters.
+  lowest_depression: Name of the lowest geographical point on the continent.
+  nadir_elevation_m: Elevation of the lowest point above sea level in meters (negative
+    if below sea level).
+  most_populous_urban_area: Most populous urban area on the continent.
+  non_enrolled_children: Estimated number of school-age children not enrolled in school.
+  un_region_code: UN M49 numeric region code assigned to the continent.
+  demonym: Comma-separated adjectives or nouns used to describe inhabitants of the
+    continent.
+  northmost_coords: Geographic coordinates of the northernmost point of the continent.
+  southern_tip_coords: Geographic coordinates of the southernmost point of the continent.
+  eastern_tip_coords: Geographic coordinates of the easternmost point of the continent.
+  westmost_coords: Geographic coordinates of the westernmost point of the continent.
+towns:
+  __table__: Cities and human settlements located in India.
+  settlement_id: Identifier for the city.
+  town_name: Name of the city.
+  country: Country the city is located in.
+  pop: Population of the city (most recent estimate).
+  lat_lon: Geographic coordinates of the city.
+  creation_date: Date or year the city was founded or first recorded.
+  gdp_usd: Nominal GDP of the city in US dollars.
+  mean_income_usd: Per capita income of the city in US dollars.
+  elevation: Elevation of the city above sea level in meters.
+  land_area_km2: Total area of the city in square kilometers.

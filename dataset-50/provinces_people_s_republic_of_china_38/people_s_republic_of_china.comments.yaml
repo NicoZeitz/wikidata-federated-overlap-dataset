@@ -1,0 +1,13 @@
+__database__: Provinces database covering China.
+chinese_provinces:
+  __table__: Administrative divisions of China.
+  province: Identifier for the Chinese province or administrative region.
+  nation: Country the province belongs to.
+  name: Name of the Chinese province or administrative region.
+  geo_coords: Geographic coordinates of the province centroid.
+  land_area_km2: Total area of the province in square kilometers.
+  number_of_inhabitants: Population of the province (most recent estimate).
+  capital_city: Capital city of the province.
+  founded: Date the province was established.
+  iso_3166_code: ISO 3166-2 code of the province (e.g. CN-HE).
+  url: Official website of the provincial government.

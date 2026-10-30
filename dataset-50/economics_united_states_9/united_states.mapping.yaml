@@ -1,0 +1,19 @@
+entities:
+  source: companies
+  columns:
+    business_id: company
+    trade_name: name
+    country: country
+    company_types: types
+    industry_sector: industries
+    entity_form: legal_form
+    founded: inception
+    homepage: website
+    city: city
+    ceo: ceo_person
+    staff: employees
+    revenue_usd: revenue_usd
+    after_tax_income_usd: net_income_usd
+    total_assets_usd: total_assets_usd
+    operating_income_usd: operating_income_usd
+    stock_market_value_usd: market_cap_usd

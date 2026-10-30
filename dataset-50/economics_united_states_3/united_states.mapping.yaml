@@ -1,0 +1,18 @@
+entities:
+  source: companies
+  columns:
+    company: company
+    business_name: name
+    nation: country
+    entity_types: types
+    industries: industries
+    legal_structure: legal_form
+    start_date: inception
+    homepage: website
+    base_city: city
+    ceo_person: ceo_person
+    number_of_employees: employees
+    total_revenue_usd: revenue_usd
+    net_profit_usd: net_income_usd
+    balance_sheet_total_usd: total_assets_usd
+    ebit_usd: operating_income_usd

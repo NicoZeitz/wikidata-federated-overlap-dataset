@@ -1,0 +1,84 @@
+__database__: Geographic database covering United States, including countries, continents,
+  and cities.
+territories:
+  __table__: Sovereign countries in United States.
+  country_id: Identifier for the country.
+  territory_name: Name of the country.
+  country_code: ISO 3166-1 alpha-2 two-letter country code.
+  geographic_region: Continent the country belongs to.
+  territory_size_km2: Total area of the country in square kilometers.
+  inhabitants: Population of the country (most recent estimate).
+  gdp_nominal_usd: Nominal GDP of the country in US dollars (most recent reported
+    value).
+  seat_of_government: Capital city.
+  currency_name: Name of the official currency.
+  lat_lon: Geographic coordinates of the country centroid.
+  inception: Date the country was founded or became independent.
+  full_name: Official name of the country in English.
+  calling_code: International telephone dialling code (e.g. +49).
+  number_of_males: Male population count (most recent estimate).
+  number_of_females: Female population count (most recent estimate).
+  average_life_expectancy: Average life expectancy at birth in years.
+  human_development_score: Human Development Index score (0–1).
+  out_of_work_rate: Unemployment rate as a percentage of the labour force.
+  income_inequality: Gini coefficient measuring income inequality (0–1).
+  total_fertility_rate: Average number of children born per woman.
+  births_per_thousand: Number of live births per 1000 inhabitants per year.
+  crude_death_rate: Number of deaths per 1000 inhabitants per year.
+  suicide_rate: Suicide rate per 100,000 inhabitants per year.
+  average_household_income_usd: Median household or personal income in US dollars.
+  eiu_democracy_index: Democracy Index score (0–10) from the Economist Intelligence
+    Unit.
+  national_bank: Name of the central bank.
+  summit: Name of the highest geographical point in the country.
+  peak_height_m: Elevation of the highest point above sea level in meters.
+  lowest_point: Name of the lowest geographical point in the country.
+  lowest_point_m: Elevation of the lowest point above sea level in meters (negative
+    if below sea level).
+  northmost_coords: Geographic coordinates of the northernmost point of the country.
+  southmost_coords: Geographic coordinates of the southernmost point of the country.
+  easternmost_point: Geographic coordinates of the easternmost point of the country.
+  western_extreme: Geographic coordinates of the westernmost point of the country.
+  inhabitant_name: Comma-separated adjectives or nouns used to describe inhabitants
+    of the country.
+  official_languages: Comma-separated official languages of the country.
+  sovereign: Current head of state of the country.
+  chancellor: Current head of government of the country.
+geographic_regions:
+  __table__: Continents covering United States.
+  continent: Identifier for the continent.
+  name: Name of the continent.
+  area_km2: Total land area of the continent in square kilometers.
+  residents: Total population of the continent (most recent estimate).
+  lat_lon: Geographic coordinates of the continent centroid.
+  highest_point: Name of the highest geographical point on the continent.
+  highest_altitude_m: Elevation of the highest point above sea level in meters.
+  lowest_point: Name of the lowest geographical point on the continent.
+  depression_depth_m: Elevation of the lowest point above sea level in meters (negative
+    if below sea level).
+  most_populous_urban_area: Most populous urban area on the continent.
+  children_out_of_school: Estimated number of school-age children not enrolled in
+    school.
+  un_code: UN M49 numeric region code assigned to the continent.
+  demonym: Comma-separated adjectives or nouns used to describe inhabitants of the
+    continent.
+  north_pole_coords: Geographic coordinates of the northernmost point of the continent.
+  southern_extreme: Geographic coordinates of the southernmost point of the continent.
+  eastmost_coords: Geographic coordinates of the easternmost point of the continent.
+  westernmost_point: Geographic coordinates of the westernmost point of the continent.
+cities:
+  __table__: Cities and human settlements located in United States.
+  city_id: Identifier for the city.
+  locality: Name of the city.
+  city_country: Country the city is located in.
+  city_population: Population of the city (most recent estimate).
+  location: Geographic coordinates of the city.
+  founded: Date or year the city was founded or first recorded.
+  informal_name: Comma-separated informal names or nicknames of the city.
+  zip_code: Postal or ZIP code of the city.
+  gentilic: Comma-separated adjectives or nouns used to describe inhabitants of the
+    city.
+  per_person_income_usd: Per capita income of the city in US dollars.
+  elevation_m: Elevation of the city above sea level in meters.
+  land_area_km2: Total area of the city in square kilometers.
+  cars_per_thousand: Number of registered motor vehicles per thousand inhabitants.

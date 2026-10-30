@@ -1,0 +1,33 @@
+personalities:
+  source: persons
+  columns:
+    person: person
+    label: name
+    gender: sex
+    birth_date: birth_date
+    death_date: death_date
+    given_name: given_name
+    last_name: family_name
+    passport_country: citizenship
+    birth_nation: birth_country
+    associated_country: country
+    university: educated_at
+    stature: height_cm
+    kids: number_of_children
+    sibling_count: number_of_siblings
+accolades:
+  source: awards
+  columns:
+    award: award
+    title: name
+    nation: country
+    first_awarded: inception
+    awarding_organization: conferred_by
+    named_after: named_after
+    url: official_website
+person_awards:
+  source: person_awards
+  columns:
+    awardee: person
+    award: award
+    year_awarded: award_year

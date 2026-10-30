@@ -1,0 +1,26 @@
+nba_franchises:
+  source: nba_teams
+  columns:
+    franchise_id: team
+    full_team_name: name
+    nation: country
+    home_city: city
+    location_name: cityLabel
+    province: state
+    founding_year: founded
+    home_arena: venue
+    coach: coach
+    url: website
+    followers: followers
+nba_contests:
+  source: nba_matches
+  columns:
+    game: game
+    country: country
+    team1: team1
+    away_team: team2
+    away_team_name: team2Label
+    stadium_name: venueLabel
+    date: date
+    crowd: attendance
+    season: seasonLabel

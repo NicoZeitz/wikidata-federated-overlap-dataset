@@ -1,0 +1,27 @@
+nba_squads:
+  source: nba_teams
+  columns:
+    team_id: team
+    full_team_name: name
+    country: country
+    location: city
+    cityLabel: cityLabel
+    us_state: state
+    founded: founded
+    arena: venue
+    proprietor: owner
+    homepage: website
+    online_followers: followers
+nba_matches:
+  source: nba_matches
+  columns:
+    match_id: game
+    country: country
+    home_team: team1
+    first_team_name: team1Label
+    team_b: team2
+    team2Label: team2Label
+    winnerLabel: winnerLabel
+    kickoff_date: date
+    spectators: attendance
+    season_name: seasonLabel

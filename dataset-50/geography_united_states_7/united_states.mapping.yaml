@@ -1,0 +1,75 @@
+states:
+  source: countries
+  columns:
+    country: country
+    country_name: name
+    iso2_code: iso2
+    continent_id: continent
+    territory_size_km2: area_km2
+    population_count: population
+    economic_output_usd: gdp_usd
+    capital: capital
+    official_currency: currency_name
+    geo_coords: coords
+    founded: inception
+    long_name: official_name
+    population_male: population_male
+    number_of_females: population_female
+    average_life_expectancy: life_expectancy
+    development_index: human_development_index
+    unemployment: unemployment_rate
+    gini_index: gini_coefficient
+    children_per_woman: total_fertility_rate
+    natality_rate: birth_rate
+    deaths_per_thousand: death_rate
+    suicides_per_100000: suicide_rate
+    democracy_index: democracy_index
+    central_bank_name: central_bank
+    highest_point: highest_point
+    highest_point_m: highest_point_m
+    lowest_area: lowest_point
+    depression_m: lowest_point_m
+    northern_extreme: northernmost_point
+    southern_extreme: southernmost_point
+    easternmost_point: easternmost_point
+    westmost_coords: westernmost_point
+    gentilic: demonym
+    national_languages: languages
+    sovereign: head_of_state
+    government_leader: head_of_government
+continents:
+  source: continents
+  columns:
+    identifier: continent
+    region_name: name
+    area: area_km2
+    residents: population
+    coordinates: coords
+    tallest_point: highest_point
+    max_elevation_m: highest_point_m
+    lowest_elevation: lowest_point
+    lowest_point_m: lowest_point_m
+    largest_city: most_populous_urban_area
+    children_out_of_school: out_of_school_children
+    un_region_code: m49_code
+    adjectival: demonym
+    north_pole_coords: northernmost_point
+    southernmost_point: southernmost_point
+    eastern_extreme: easternmost_point
+    western_tip_coords: westernmost_point
+settlements:
+  source: cities
+  columns:
+    city_id: city
+    settlement_name: name
+    nation: country
+    residents: population
+    coords: coords
+    founding_date: inception
+    informal_name: nickname
+    postcode: postal_code
+    resident_name: demonym
+    gross_domestic_product: gdp_usd
+    average_income_usd: per_capita_income_usd
+    altitude_m: elevation_m
+    city_area_km2: area_km2

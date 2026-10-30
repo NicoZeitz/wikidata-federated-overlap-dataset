@@ -1,0 +1,12 @@
+laender:
+  source: german_states
+  columns:
+    state_id: german_state
+    country: country
+    federal_state_name: name
+    centroid: coords
+    surface_area_km2: area_km2
+    pop: population
+    main_city: capital
+    founding_date: inception
+    website: website

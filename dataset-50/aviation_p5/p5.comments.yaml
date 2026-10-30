@@ -1,0 +1,55 @@
+__database__: Aviation database covering UN Security Council P5, including airports,
+  airlines, aircraft, and accidents.
+flight_hubs:
+  __table__: Airports located in UN Security Council P5.
+  airport_id: Identifier for the airport.
+  aerodrome_name: Name of the airport.
+  iata: IATA three-letter airport code.
+  icao: ICAO four-letter airport code.
+  elevation_m: Elevation of the airport above sea level in meters.
+  pax: Annual passenger count (most recent reported value).
+  utc_offset: UTC offset of the airport's timezone in hours.
+  start_date: Date the airport was opened or established.
+  lat_lon: Geographic coordinates of the airport.
+  nearest_city: City the airport serves.
+  nation: Country the airport is located in.
+carriers:
+  __table__: Airlines headquartered in UN Security Council P5.
+  airline: Identifier for the airline.
+  title: Name of the airline.
+  headquarters_country: Country where the airline is headquartered.
+  founded: Date the airline was founded.
+  staff_count: Number of employees (most recent reported value).
+  total_revenue_usd: Annual revenue in US dollars (most recent reported value).
+  fleet_count: Number of aircraft in the fleet.
+  parent: Parent company or holding group.
+  iata_code: IATA airline designator code (2-letter).
+  three_letter_code: ICAO airline designator code (3-letter).
+  headquarters: City or location where the airline is headquartered.
+  official_website: Official website of the airline.
+  hub: A hub airport of the airline.
+aircraft:
+  __table__: Individual aircraft operated by airlines based in UN Security Council
+    P5.
+  aircraft_id: Identifier for the aircraft.
+  name: Name or registration of the aircraft.
+  operating_airline: Airline operating the aircraft.
+  registration_country: Country of the operating airline.
+  plane_type: Aircraft model type (e.g. Boeing 737-800).
+  producer: Manufacturer of the aircraft.
+  first_flight_date: Date of the aircraft's first flight.
+  seating_capacity: Maximum passenger capacity.
+  cruising_speed: Cruise speed in kilometers per hour.
+  length_m: Length of the aircraft in meters.
+  mtow_kg: Maximum takeoff weight in kilograms.
+flight_accidents:
+  __table__: Aviation accidents involving airlines that occurred in UN Security Council
+    P5.
+  accident: Identifier for the aviation accident.
+  crash_name: Name or description of the accident.
+  carrier: Airline involved in the accident.
+  country_of_occurrence: Country where the accident occurred.
+  event_date: Date of the accident.
+  killed: Number of fatalities in the accident.
+  number_of_survivors: Number of survivors.
+  flight_designation: Flight number of the aircraft involved.

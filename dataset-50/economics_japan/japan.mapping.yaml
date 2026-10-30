@@ -1,0 +1,17 @@
+companies:
+  source: companies
+  columns:
+    company_id: company
+    firm_name: name
+    nation: country
+    types: types
+    industry: industries
+    legal_structure: legal_form
+    inception: inception
+    hq_city: city
+    executive_director: ceo_person
+    workers: employees
+    turnover_usd: revenue_usd
+    net_profit_usd: net_income_usd
+    assets_usd: total_assets_usd
+    operating_income_usd: operating_income_usd

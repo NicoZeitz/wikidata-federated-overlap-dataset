@@ -1,0 +1,12 @@
+bundesland_table:
+  source: german_states
+  columns:
+    bundesland_id: german_state
+    parent_country: country
+    region_name: name
+    centroid: coords
+    area: area_km2
+    number_of_inhabitants: population
+    landeshauptstadt: capital
+    founded: inception
+    url: website

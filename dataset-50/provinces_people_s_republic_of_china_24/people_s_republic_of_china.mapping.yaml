@@ -1,0 +1,13 @@
+chinese_provinces:
+  source: provinces
+  columns:
+    province_id: province
+    country: country
+    region_name: name
+    geo_coords: coords
+    area: area_km2
+    pop: population
+    main_city: capital
+    established: inception
+    iso_code: iso_code
+    url: website

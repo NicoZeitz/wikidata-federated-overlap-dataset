@@ -1,0 +1,50 @@
+__database__: Football database covering Germany, including matches, teams, venues,
+  and tournaments.
+world_cup_games:
+  __table__: FIFA World Cup matches played in Germany.
+  match: Identifier for the FIFA World Cup match.
+  fixture_name: Name or label of the match.
+  date: Date the match was played.
+  competition: Tournament this match belongs to.
+  competition_stage: Stage of the tournament (e.g. group stage, quarterfinal, final).
+  venue: Venue where the match was played.
+  home_team: First participating team.
+  home_goals: Goals scored by team1.
+  side_two: Second participating team.
+  score_team2: Goals scored by team2.
+  victor: Winning team (null for draws).
+  spectators: Number of spectators in attendance.
+  umpire: Person who refereed the match.
+teams:
+  __table__: National football teams from Germany.
+  team_id: Identifier for the national football team.
+  title: Name of the team.
+  team_country: Country the team represents.
+  established: Year the team was founded.
+  local_name: Official name of the team in its native language.
+  rank: FIFA world ranking of the team.
+  league: Competition class or league the team participates in.
+  head_coach: Current head coach of the team.
+  skipper: Current team captain.
+arenas:
+  __table__: Stadiums and arenas in Germany that hosted FIFA World Cup matches.
+  arena_id: Identifier for the venue.
+  venue_name: Name of the venue or stadium.
+  country: Country the venue is located in.
+  stadium_capacity: Maximum seating capacity of the venue.
+  geo_coords: Geographic coordinates of the venue.
+  opening_year: Date the venue was officially opened.
+  city: City or municipality the venue is located in.
+  designer: Architect who designed the venue.
+world_cup_editions:
+  __table__: FIFA World Cup tournaments held in Germany.
+  tournament: Identifier for the FIFA World Cup tournament edition.
+  competition_name: Name of the tournament (e.g. 1966 FIFA World Cup).
+  year: Year the tournament was held.
+  country: Host country of the tournament.
+  edition_no: Ordinal edition number of the tournament (e.g. 23 for the 23rd World
+    Cup).
+  team_count: Number of teams participating in the tournament.
+  winning_team: Winning team of the tournament.
+  match_count: Total number of matches played in the tournament.
+  goal_count: Total number of goals scored across all matches.

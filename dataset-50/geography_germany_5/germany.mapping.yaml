@@ -1,0 +1,75 @@
+countries:
+  source: countries
+  columns:
+    country_id: country
+    territory_name: name
+    two_letter_country_code: iso2
+    iso_alpha3: iso3
+    world_region: continent
+    area: area_km2
+    pop: population
+    gdp_usd: gdp_usd
+    governmental_center: capital
+    monetary_unit: currency_name
+    coords: coords
+    founding_date: inception
+    formal_name: official_name
+    men_population: population_male
+    population_female: population_female
+    expected_lifespan: life_expectancy
+    hdi: human_development_index
+    out_of_work_rate: unemployment_rate
+    gini_index: gini_coefficient
+    births_per_thousand: birth_rate
+    deaths_per_1000: death_rate
+    suicides_per_100000: suicide_rate
+    typical_income_usd: median_income_usd
+    eiu_democracy_index: democracy_index
+    central_bank_name: central_bank
+    highest_mountain: highest_point
+    max_elevation_m: highest_point_m
+    lowest_point: lowest_point
+    lowest_point_m: lowest_point_m
+    northernmost_point: northernmost_point
+    southernmost_coords: southernmost_point
+    easternmost_point: easternmost_point
+    western_extreme: westernmost_point
+    inhabitant_name: demonym
+    national_languages: languages
+    head_of_state_name: head_of_state
+    premier: head_of_government
+continents:
+  source: continents
+  columns:
+    continent_id: continent
+    continent_name: name
+    total_area_km2: area_km2
+    population_count: population
+    lat_lon: coords
+    maximum_elevation_point: highest_point
+    peak_height_m: highest_point_m
+    lowest_depression: lowest_point
+    depression_depth_m: lowest_point_m
+    largest_city: most_populous_urban_area
+    out_of_school_children: out_of_school_children
+    un_m49: m49_code
+    inhabitant_name: demonym
+    northern_extreme: northernmost_point
+    southmost_coords: southernmost_point
+    eastmost_coords: easternmost_point
+    western_tip_coords: westernmost_point
+municipalities:
+  source: cities
+  columns:
+    municipality_id: city
+    label: name
+    city_country: country
+    residents: population
+    coords: coords
+    founding_year: inception
+    alias: nickname
+    demonym: demonym
+    mean_income_usd: per_capita_income_usd
+    elevation: elevation_m
+    surface_area_km2: area_km2
+    vehicles_per_thousand: vehicles_per_thousand

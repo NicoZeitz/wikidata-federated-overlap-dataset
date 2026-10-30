@@ -1,0 +1,18 @@
+enterprises:
+  source: companies
+  columns:
+    company: company
+    business_name: name
+    home_country: country
+    company_types: types
+    sector: industries
+    company_form: legal_form
+    founded: inception
+    url: website
+    head_office_city: city
+    executive_director: ceo_person
+    number_of_employees: employees
+    revenue: revenue_usd
+    net_profit_usd: net_income_usd
+    balance_sheet_total_usd: total_assets_usd
+    stock_market_value_usd: market_cap_usd

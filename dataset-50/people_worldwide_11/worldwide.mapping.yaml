@@ -1,0 +1,31 @@
+people:
+  source: persons
+  columns:
+    person_id: person
+    complete_name: name
+    biological_sex: sex
+    dob: birth_date
+    died: death_date
+    christian_name: given_name
+    last_name: family_name
+    citizenship: citizenship
+    birth_nation: birth_country
+    home_country: country
+    college: educated_at
+    stature: height_cm
+    brothers_and_sisters: number_of_siblings
+honors:
+  source: awards
+  columns:
+    award_id: award
+    distinction_name: name
+    nation: country
+    inception: inception
+    granting_organization: conferred_by
+    web_address: official_website
+person_awards:
+  source: person_awards
+  columns:
+    person: person
+    award_id: award
+    reception_year: award_year

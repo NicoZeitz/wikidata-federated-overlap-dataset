@@ -1,0 +1,31 @@
+__database__: People database covering Worldwide, including persons, awards, and prize
+  records.
+public_figures:
+  __table__: Persons from Worldwide.
+  individual_id: Identifier for the person.
+  display_name: Full name of the person.
+  gender: Sex of the person.
+  dob: Date of birth.
+  death_day: Date of death (null if still living or unknown).
+  christian_name: Given (first) name of the person.
+  last_name: Family (last) name of the person.
+  country_of_citizenship: Country of citizenship.
+  birth_nation: Country of birth.
+  home_country: Country associated with the person (citizenship if known, otherwise
+    country of birth).
+  school: Name of institution where the person studied.
+  children: Number of children the person has.
+  brothers_and_sisters: Number of siblings the person has.
+trophies:
+  __table__: Awards from Worldwide.
+  award_id: Identifier for the award.
+  name: Name of the award.
+  nation: Country the award originates from.
+  founding_year: Year the award was first presented.
+  awarding_body: Organization that confers the award.
+  web_address: Official website URL of the award.
+person_awards:
+  __table__: Records linking persons from Worldwide to awards they received.
+  awardee: Person who received the award.
+  accolade: Award received by the person.
+  year_of_award: Year the award was received.

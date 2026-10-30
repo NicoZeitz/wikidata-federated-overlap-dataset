@@ -1,0 +1,17 @@
+businesses:
+  source: companies
+  columns:
+    company: company
+    business_name: name
+    country: country
+    classification: types
+    industries: industries
+    organizational_form: legal_form
+    founding_date: inception
+    homepage: website
+    base_city: city
+    top_executive: ceo_person
+    headcount: employees
+    annual_revenue_usd: revenue_usd
+    bottom_line_usd: net_income_usd
+    total_assets: total_assets_usd

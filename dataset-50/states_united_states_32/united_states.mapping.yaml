@@ -1,0 +1,14 @@
+us_states:
+  source: states
+  columns:
+    state_id: state
+    nation: country
+    name: name
+    lat_lon: coords
+    area: area_km2
+    population_count: population
+    state_capital: capital
+    admitted: inception
+    abbreviation: iso_code
+    nickname: nickname
+    url: website

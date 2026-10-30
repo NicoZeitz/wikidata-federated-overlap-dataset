@@ -1,0 +1,27 @@
+__database__: NBA basketball database covering Canada + United States, including teams
+  and games.
+nba_teams:
+  __table__: NBA basketball teams based in Canada + United States.
+  team_id: Identifier for the NBA team.
+  label: Full name of the NBA team.
+  nation: Country the team is based in.
+  base_city: City the team is based in.
+  state: US state or province the team is based in.
+  founding_year: Year the team was founded or established.
+  stadium: Home arena or venue of the team.
+  trainer: Current head coach of the team.
+  proprietor: Name of the current owner or ownership group.
+  official_website: Official website URL of the team.
+  social_media_followers: Number of social media followers of the team.
+nba_matches:
+  __table__: NBA basketball games played in Canada + United States.
+  contest_id: Identifier for the NBA game.
+  host_country: Country the game was played in (always United States).
+  home_team: First participating team.
+  team1_name: Name of the first participating team.
+  team2: Second participating team.
+  away_team_name: Name of the second participating team.
+  victor: Name of the winning team.
+  date: Date the game was played.
+  gate: Number of spectators in attendance.
+  nba_season: Name or label of the NBA season the game belongs to.

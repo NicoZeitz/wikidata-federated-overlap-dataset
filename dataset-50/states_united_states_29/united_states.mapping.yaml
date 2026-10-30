@@ -1,0 +1,13 @@
+usa_states:
+  source: states
+  columns:
+    us_state_id: state
+    parent_country: country
+    state_name: name
+    centroid: coords
+    size_km2: area_km2
+    population_count: population
+    capital: capital
+    admitted: inception
+    abbreviation: iso_code
+    homepage: website

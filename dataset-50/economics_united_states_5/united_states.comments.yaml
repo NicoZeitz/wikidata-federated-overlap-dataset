@@ -1,0 +1,18 @@
+__database__: Economics database covering United States, including companies.
+corporations:
+  __table__: Business enterprises headquartered in United States.
+  company_id: Identifier for the company.
+  firm_name: Name of the company.
+  nation: Country where the company is headquartered.
+  classification: Types or classifications of the company (comma-separated).
+  sector: Industries the company operates in (comma-separated).
+  creation_date: Date the company was founded.
+  url: Official website URL of the company.
+  headquarters_city: City where the company is headquartered.
+  managing_director: Current chief executive officer.
+  staff_count: Number of employees (most recent reported value).
+  gross_revenue_usd: Annual revenue in US dollars (most recent reported value).
+  net_profit_usd: Net income in US dollars (most recent reported value).
+  assets_usd: Total assets in US dollars (most recent reported value).
+  operating_result_usd: Operating income in US dollars (most recent reported value).
+  market_cap: Market capitalization in US dollars (most recent reported value).

@@ -1,0 +1,19 @@
+enterprises:
+  source: companies
+  columns:
+    corporation_id: company
+    corporation_name: name
+    nation: country
+    classification: types
+    sector: industries
+    company_form: legal_form
+    inception: inception
+    website: website
+    headquarters_city: city
+    ceo_person: ceo_person
+    workers: employees
+    annual_revenue_usd: revenue_usd
+    net_income_usd: net_income_usd
+    total_assets_usd: total_assets_usd
+    operating_income_usd: operating_income_usd
+    market_capitalization_usd: market_cap_usd

@@ -1,0 +1,17 @@
+organizations:
+  source: companies
+  columns:
+    company: company
+    name: name
+    headquarters_country: country
+    company_types: types
+    industry: industries
+    start_date: inception
+    web_address: website
+    head_office_city: city
+    managing_director: ceo_person
+    employee_count: employees
+    turnover_usd: revenue_usd
+    bottom_line_usd: net_income_usd
+    total_assets_usd: total_assets_usd
+    operating_result_usd: operating_income_usd

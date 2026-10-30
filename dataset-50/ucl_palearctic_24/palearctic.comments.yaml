@@ -1,0 +1,54 @@
+__database__: UEFA Champions League database covering Palearctic ecozone, including
+  clubs, matches, and venues.
+ucl_participants:
+  __table__: Football clubs based in Palearctic ecozone that participated in the UEFA
+    Champions League.
+  organization_id: Identifier for the football club.
+  title: Full name of the football club.
+  domestic_league: Name of the domestic league the club competes in.
+  base_country: Country the club is based in.
+  founding_date: Date or year the club was founded.
+  head_coach: Name of the current head coach or manager.
+  alias: Nickname or informal name of the club.
+  league_titles: Number of domestic league titles won by the club.
+  online_followers: Number of social media followers of the club.
+  homepage: Official website URL of the club.
+  established_by: Name of the person or entity who founded the club.
+ucl_matches:
+  __table__: UEFA Champions League matches played in Palearctic ecozone.
+  fixture_id: Identifier for the UEFA Champions League match.
+  game_name: Name or label of the match.
+  season_name: Name or label of the season.
+  played_on: Date the match was played.
+  arena: Venue where the match was played.
+  home_team: First participating club.
+  team2: Second participating club.
+  winner: Winning club (null for draws).
+  gate: Number of spectators in attendance.
+  referee: Person who refereed the match.
+champions_league_venues:
+  __table__: Stadiums and arenas in Palearctic ecozone that hosted UEFA Champions
+    League matches.
+  arena_id: Identifier for the venue.
+  title: Name of the venue or stadium.
+  venue_country: Country the venue is located in.
+  seating_capacity: Maximum seating capacity of the venue.
+  location: Geographic coordinates of the venue.
+  built: Date the venue was officially opened.
+  municipality: City or municipality the venue is located in.
+  designer: Architect who designed the venue.
+clubs:
+  __table__: Football clubs based in Palearctic ecozone.
+  team: Identifier for the football club.
+  title: Full name of the football club.
+  home_league: Name of the domestic league the club competes in.
+  home_country: Country the club is based in.
+  founded: Date or year the club was founded.
+  trainer: Name of the current head coach or manager.
+  proprietor: Name of the current owner or ownership group.
+  nickname: Nickname or informal name of the club.
+  championships: Number of domestic league titles won by the club.
+  online_followers: Number of social media followers of the club.
+  web_address: Official website URL of the club.
+  shortName: Short or abbreviated name of the club.
+  club_founder: Name of the person or entity who founded the club.

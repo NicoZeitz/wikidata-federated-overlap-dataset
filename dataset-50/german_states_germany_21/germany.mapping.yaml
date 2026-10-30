@@ -1,0 +1,12 @@
+bundesland_table:
+  source: german_states
+  columns:
+    german_state: german_state
+    parent_country: country
+    federal_state_name: name
+    coordinates: coords
+    surface_area_km2: area_km2
+    inhabitants: population
+    administrative_center: capital
+    creation_date: inception
+    iso_3166_code: iso_code

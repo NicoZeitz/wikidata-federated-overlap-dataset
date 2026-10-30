@@ -1,0 +1,13 @@
+china_states:
+  source: provinces
+  columns:
+    administrative_unit_id: province
+    parent_country: country
+    administrative_region_name: name
+    lat_lon: coords
+    surface_area_km2: area_km2
+    population: population
+    province_capital: capital
+    founded: inception
+    iso_3166_code: iso_code
+    url: website

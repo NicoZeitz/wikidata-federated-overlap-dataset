@@ -1,0 +1,11 @@
+administrative_regions:
+  source: provinces
+  columns:
+    province: province
+    parent_country: country
+    division_name: name
+    coordinates: coords
+    size_km2: area_km2
+    population: population
+    main_city: capital
+    founding_date: inception

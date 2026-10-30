@@ -1,0 +1,11 @@
+laender:
+  source: german_states
+  columns:
+    state_id: german_state
+    parent_country: country
+    region_name: name
+    location: coords
+    area_km2: area_km2
+    population: population
+    state_capital: capital
+    creation_date: inception

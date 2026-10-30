@@ -1,0 +1,13 @@
+states:
+  source: states
+  columns:
+    state_id: state
+    parent_country: country
+    name: name
+    centroid: coords
+    surface_area_km2: area_km2
+    inhabitants: population
+    capital_city: capital
+    founding_date: inception
+    abbreviation: iso_code
+    alias: nickname
